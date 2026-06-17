@@ -1,0 +1,54 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$cpuDirs_delegate$lambda$0$$inlined$sortedBy$1;->compare(Ljava/lang/Object; Ljava/lang/Object;)I [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.Object
+# - v3:java.lang.Object
+#
+# - return:int
+
+compare-BB@0x0 : [ compare-BB@0x30 compare-BB@0x3a ]
+	0       (00000000) check-cast           v2, Ljava/io/File;
+	1       (00000004) invoke-virtual       v2, Ljava/io/File;->getName()Ljava/lang/String;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	4       (00000012) const-string         v2, "cpu"
+	5       (00000016) invoke-static        v1, v2, Lhh3;->D0(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	6       (0000001c) move-result-object   v1
+	7       (0000001e) invoke-static        v1, Loh3;->k0(Ljava/lang/String;)Ljava/lang/Integer;
+	8       (00000024) move-result-object   v1
+	9       (00000026) const                v0, 2147483647
+	10      (0000002c) if-eqz               v1, +007h
+
+compare-BB@0x30 : [ compare-BB@0x3c ]
+	11      (00000030) invoke-virtual       v1, Ljava/lang/Integer;->intValue()I
+	12      (00000036) move-result          v1
+	13      (00000038) goto                 +2h
+
+compare-BB@0x3a : [ compare-BB@0x3c ]
+	14      (0000003a) move                 v1, v0
+
+compare-BB@0x3c : [ compare-BB@0x6a compare-BB@0x72 ]
+	15      (0000003c) invoke-static        v1, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	16      (00000042) move-result-object   v1
+	17      (00000044) check-cast           v3, Ljava/io/File;
+	18      (00000048) invoke-virtual       v3, Ljava/io/File;->getName()Ljava/lang/String;
+	19      (0000004e) move-result-object   v3
+	20      (00000050) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	21      (00000056) invoke-static        v3, v2, Lhh3;->D0(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	22      (0000005c) move-result-object   v2
+	23      (0000005e) invoke-static        v2, Loh3;->k0(Ljava/lang/String;)Ljava/lang/Integer;
+	24      (00000064) move-result-object   v2
+	25      (00000066) if-eqz               v2, +006h
+
+compare-BB@0x6a : [ compare-BB@0x72 ]
+	26      (0000006a) invoke-virtual       v2, Ljava/lang/Integer;->intValue()I
+	27      (00000070) move-result          v0
+
+compare-BB@0x72 : 
+	28      (00000072) invoke-static        v0, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	29      (00000078) move-result-object   v2
+	30      (0000007a) invoke-static        v1, v2, Ll02;->m(Ljava/lang/Comparable; Ljava/lang/Comparable;)I
+	31      (00000080) move-result          v1
+	32      (00000082) return               v1
+

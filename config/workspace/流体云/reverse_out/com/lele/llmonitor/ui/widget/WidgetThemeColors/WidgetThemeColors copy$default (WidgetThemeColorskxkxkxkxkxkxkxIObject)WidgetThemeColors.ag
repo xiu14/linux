@@ -1,0 +1,79 @@
+# Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->copy$default(Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; Lkx; Lkx; Lkx; Lkx; Lkx; Lkx; Lkx; I Ljava/lang/Object;)Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.ui.widget.WidgetThemeColors
+# - v1:kx
+# - v2:kx
+# - v3:kx
+# - v4:kx
+# - v5:kx
+# - v6:kx
+# - v7:kx
+# - v8:int
+# - v9:java.lang.Object
+#
+# - return:com.lele.llmonitor.ui.widget.WidgetThemeColors
+
+copy$default-BB@0x0 : [ copy$default-BB@0x8 copy$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v9, v8, 1
+	1       (00000004) if-eqz               v9, +004h
+
+copy$default-BB@0x8 : [ copy$default-BB@0xc ]
+	2       (00000008) iget-object          v1, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->background Lkx;
+
+copy$default-BB@0xc : [ copy$default-BB@0x14 copy$default-BB@0x18 ]
+	3       (0000000c) and-int/lit8         v9, v8, 2
+	4       (00000010) if-eqz               v9, +004h
+
+copy$default-BB@0x14 : [ copy$default-BB@0x18 ]
+	5       (00000014) iget-object          v2, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->primary Lkx;
+
+copy$default-BB@0x18 : [ copy$default-BB@0x20 copy$default-BB@0x24 ]
+	6       (00000018) and-int/lit8         v9, v8, 4
+	7       (0000001c) if-eqz               v9, +004h
+
+copy$default-BB@0x20 : [ copy$default-BB@0x24 ]
+	8       (00000020) iget-object          v3, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->secondary Lkx;
+
+copy$default-BB@0x24 : [ copy$default-BB@0x2c copy$default-BB@0x30 ]
+	9       (00000024) and-int/lit8         v9, v8, 8
+	10      (00000028) if-eqz               v9, +004h
+
+copy$default-BB@0x2c : [ copy$default-BB@0x30 ]
+	11      (0000002c) iget-object          v4, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->onSurface Lkx;
+
+copy$default-BB@0x30 : [ copy$default-BB@0x38 copy$default-BB@0x3c ]
+	12      (00000030) and-int/lit8         v9, v8, 16
+	13      (00000034) if-eqz               v9, +004h
+
+copy$default-BB@0x38 : [ copy$default-BB@0x3c ]
+	14      (00000038) iget-object          v5, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->onSurfaceVariant Lkx;
+
+copy$default-BB@0x3c : [ copy$default-BB@0x44 copy$default-BB@0x48 ]
+	15      (0000003c) and-int/lit8         v9, v8, 32
+	16      (00000040) if-eqz               v9, +004h
+
+copy$default-BB@0x44 : [ copy$default-BB@0x48 ]
+	17      (00000044) iget-object          v6, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->outline Lkx;
+
+copy$default-BB@0x48 : [ copy$default-BB@0x50 copy$default-BB@0x54 ]
+	18      (00000048) and-int/lit8         v8, v8, 64
+	19      (0000004c) if-eqz               v8, +004h
+
+copy$default-BB@0x50 : [ copy$default-BB@0x54 ]
+	20      (00000050) iget-object          v7, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->progressTrack Lkx;
+
+copy$default-BB@0x54 : 
+	21      (00000054) move-object          v8, v6
+	22      (00000056) move-object          v9, v7
+	23      (00000058) move-object          v6, v4
+	24      (0000005a) move-object          v7, v5
+	25      (0000005c) move-object          v4, v2
+	26      (0000005e) move-object          v5, v3
+	27      (00000060) move-object          v2, v0
+	28      (00000062) move-object          v3, v1
+	29      (00000064) invoke-virtual/range v2 ... v9, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->copy(Lkx; Lkx; Lkx; Lkx; Lkx; Lkx; Lkx;)Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;
+	30      (0000006a) move-result-object   v0
+	31      (0000006c) return-object        v0
+

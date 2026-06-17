@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <English26Layout name="input_kbd_english26" class="cls_input_kbd"
+        can_slide_cursor="true">
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonEnglishChar text="q" class="cls_keyboard_button" keycode="Q" commitstr="q"
+                ficon_text="1" fusiyin_keycode="0x0031"
+                fusiyin_bubble_text="1 Q q" fusiyin_bubble_keycode="0x0031 0x1051 0x0051"
+                long_press_bubble_text="Q q" long_press_bubble_keycode="0x1051 0x0051"/>
+            <ButtonEnglishChar text="w" class="cls_keyboard_button" keycode="W" commitstr="w"
+                ficon_text="2" fusiyin_keycode="0x0032"
+                fusiyin_bubble_text="W 2 w" fusiyin_bubble_keycode="0x1057 0x0032 0x0057"
+                long_press_bubble_text="W w" long_press_bubble_keycode="0x1057 0x0057" />
+            <ButtonEnglishChar text="e" class="cls_keyboard_button" keycode="E" commitstr="e"
+                ficon_text="3" fusiyin_keycode="0x0033"
+                fusiyin_bubble_text="E 3 e" fusiyin_bubble_keycode="0x1045 0x0033 0x0045"
+                long_press_bubble_text="E e" long_press_bubble_keycode="0x1045 0x0045" />
+            <ButtonEnglishChar text="r" class="cls_keyboard_button" keycode="R" commitstr="r"
+                ficon_text="4" fusiyin_keycode="0x0034"
+                fusiyin_bubble_text="R 4 r" fusiyin_bubble_keycode="0x1052 0x0034 0x0052"
+                long_press_bubble_text="R r" long_press_bubble_keycode="0x1052 0x0052" />
+            <ButtonEnglishChar text="t" class="cls_keyboard_button" keycode="T" commitstr="t"
+                ficon_text="5" fusiyin_keycode="0x0035"
+                fusiyin_bubble_text="T 5 t" fusiyin_bubble_keycode="0x1054 0x0035 0x0054"
+                long_press_bubble_text="T t" long_press_bubble_keycode="0x1054 0x0054" />
+            <ButtonEnglishChar text="y" class="cls_keyboard_button" keycode="Y" commitstr="y"
+                ficon_text="6" fusiyin_keycode="0x0036"
+                fusiyin_bubble_text="Y 6 y" fusiyin_bubble_keycode="0x1059 0x0036 0x0059"
+                long_press_bubble_text="Y y" long_press_bubble_keycode="0x1059 0x0059" />
+            <ButtonEnglishChar text="u" class="cls_keyboard_button" keycode="U" commitstr="u"
+                ficon_text="7" fusiyin_keycode="0x0037"
+                fusiyin_bubble_text="U 7 u" fusiyin_bubble_keycode="0x1055 0x0037 0x0055"
+                long_press_bubble_text="U u" long_press_bubble_keycode="0x1055 0x0055" />
+            <ButtonEnglishChar text="i" class="cls_keyboard_button" keycode="I" commitstr="i"
+                ficon_text="8" fusiyin_keycode="0x0038"
+                fusiyin_bubble_text="I 8 i" fusiyin_bubble_keycode="0x1049 0x0038 0x0049"
+                long_press_bubble_text="I i" long_press_bubble_keycode="0x1049 0x0049" />
+            <ButtonEnglishChar text="o" class="cls_keyboard_button" keycode="O" commitstr="o"
+                ficon_text="9" fusiyin_keycode="0x0039"
+                fusiyin_bubble_text="O 9 o" fusiyin_bubble_keycode="0x104F 0x0039 0x004F"
+                long_press_bubble_text="O o" long_press_bubble_keycode="0x104F 0x004F" />
+            <ButtonEnglishChar text="p" class="cls_keyboard_button" keycode="P" commitstr="p"
+                ficon_text="0" fusiyin_keycode="0x0030"
+                fusiyin_bubble_text="P p 0" fusiyin_bubble_keycode="0x1050 0x0050 0x0030"
+                long_press_bubble_text="P p" long_press_bubble_keycode="0x1050 0x0050" />
+        </HorizontalLayout>
+
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonEnglishChar text="a" class="cls_keyboard_button" width_weight="15" loc_in_left="true" keycode="A" commitstr="a"
+                ficon_text="-" fusiyin_keycode="0x00BD"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="- A a" fusiyin_bubble_keycode="0x00BD 0x1041 0x0041"
+                long_press_bubble_text="A a" long_press_bubble_keycode="0x1041 0x0041" />
+            <ButtonEnglishChar text="s" class="cls_keyboard_button" keycode="S" commitstr="s"
+                ficon_text="/" fusiyin_keycode="0x00BF"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="S / s" fusiyin_bubble_keycode="0x1053 0x00BF 0x0053"
+                long_press_bubble_text="S s" long_press_bubble_keycode="0x1053 0x0053" />
+            <ButtonEnglishChar text="d" class="cls_keyboard_button" keycode="D" commitstr="d"
+                ficon_text=":" fusiyin_keycode="0x10BA" ficon_text_offset_tobox="0,-1"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="D : d" fusiyin_bubble_keycode="0x1044 0x10BA 0x0044"
+                long_press_bubble_text="D d" long_press_bubble_keycode="0x1044 0x0044" />
+            <ButtonEnglishChar text="f" class="cls_keyboard_button" keycode="F" commitstr="f"
+                ficon_text=";" fusiyin_keycode="0x00BA" ficon_text_offset_tobox="0,-2"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="F ; f" fusiyin_bubble_keycode="0x1046 0x00BA 0x0046"
+                long_press_bubble_text="F f" long_press_bubble_keycode="0x1046 0x0046" />
+            <ButtonEnglishChar text="g" class="cls_keyboard_button" keycode="G" commitstr="g"
+                ficon_text="(" fusiyin_keycode="0x1039" ficon_text_offset_tobox="0,0"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="G ( g" fusiyin_bubble_keycode="0x1047 0x1039 0x0047"
+                long_press_bubble_text="G g" long_press_bubble_keycode="0x1047 0x0047" />
+            <ButtonEnglishChar text="h" class="cls_keyboard_button" keycode="H" commitstr="h"
+                ficon_text=")" fusiyin_keycode="0x1030" ficon_text_offset_tobox="0,0"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="H ) h" fusiyin_bubble_keycode="0x1048 0x1030 0x0048"
+                long_press_bubble_text="H h" long_press_bubble_keycode="0x1048 0x0048" />
+            <ButtonEnglishChar text="j" class="cls_keyboard_button" keycode="J" commitstr="j"
+                ficon_text="~" fusiyin_keycode="0x10C0"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="J ~ j" fusiyin_bubble_keycode="0x104A 0x10C0 0x004A"
+                long_press_bubble_text="J j" long_press_bubble_keycode="0x104A 0x004A" />
+            <ButtonEnglishChar text="k" class="cls_keyboard_button" keycode="K" commitstr="k"
+                ficon_text="'" fusiyin_keycode="0x00DE" ficon_font="ficon_text_big" ficon_text_offset_tobox="0,2"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="K ' k" fusiyin_bubble_keycode="0x104B 0x00DE 0x004B"
+                long_press_bubble_text="K k" long_press_bubble_keycode="0x104B 0x004B" />
+            <ButtonEnglishChar text="l" class="cls_keyboard_button" width_weight="15" loc_in_right="true" keycode="L" commitstr="l"
+                ficon_text="&quot;" fusiyin_keycode="0x10DE" ficon_text_offset_tobox="0,2"
+                font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                fusiyin_bubble_text="L l &quot;" fusiyin_bubble_keycode="0x104C 0x004C 0x10DE"
+                long_press_bubble_text="L l" long_press_bubble_keycode="0x104C 0x004C" />
+        </HorizontalLayout>
+
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonKey class="cls_button_shift, cls_button_left_big" name="shift" />
+            <!--      这个HorizontalLayout不是多余的，是为了对齐符号页该行的计算方式，否则因为四舍五入会导致删除按键位置不一样      -->
+            <HorizontalLayout width_weight="70" height="match_parent">
+                <ButtonEnglishChar text="z" class="cls_keyboard_button" keycode="Z" commitstr="z"
+                    ficon_text="@" fusiyin_keycode="0x1032"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="Z @ z" fusiyin_bubble_keycode="0x105A 0x1032 0x005A"
+                    long_press_bubble_text="Z z" long_press_bubble_keycode="0x105A 0x005A" />
+                <ButtonEnglishChar text="x" class="cls_keyboard_button" keycode="X" commitstr="x"
+                    ficon_text="_" fusiyin_keycode="0x10BD" ficon_text_offset_tobox="0,-2"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="X _ x" fusiyin_bubble_keycode="0x1058 0x10BD 0x0058"
+                    long_press_bubble_text="X x" long_press_bubble_keycode="0x1058 0x0058" />
+                <ButtonEnglishChar text="c" class="cls_keyboard_button" keycode="C" commitstr="c"
+                    ficon_text="#" fusiyin_keycode="0x1033"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="C # c" fusiyin_bubble_keycode="0x1043 0x1033 0x0043"
+                    long_press_bubble_text="C c" long_press_bubble_keycode="0x1043 0x0043" />
+                <ButtonEnglishChar text="v" class="cls_keyboard_button" keycode="V" commitstr="v"
+                    ficon_text="&amp;" fusiyin_keycode="0x1037"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="V &amp; v" fusiyin_bubble_keycode="0x1056 0x1037 0x0056"
+                    long_press_bubble_text="V v" long_press_bubble_keycode="0x1056 0x0056" />
+                <ButtonEnglishChar text="b" class="cls_keyboard_button" keycode="B" commitstr="b"
+                    ficon_text="?" fusiyin_keycode="0x10BF"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="B ? b" fusiyin_bubble_keycode="0x1042 0x10BF 0x0042"
+                    long_press_bubble_text="B b" long_press_bubble_keycode="0x1042 0x0042" />
+                <ButtonEnglishChar text="n" class="cls_keyboard_button" keycode="N" commitstr="n"
+                    ficon_text="!" fusiyin_keycode="0x1031" name="btn_n"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="N ! n" fusiyin_bubble_keycode="0x104E 0x1031 0x004E"
+                    long_press_bubble_text="N n" long_press_bubble_keycode="0x104E 0x004E" />
+                <ButtonEnglishChar text="m" class="cls_keyboard_button" keycode="M" commitstr="m"
+                    ficon_text="…" fusiyin_keycode="0x1036" name="btn_m"
+                    font="key_letter_english" font_lowercase="key_letter_english" font_uppercase = "key_letter"
+                    fusiyin_bubble_text="M … m" fusiyin_bubble_keycode="0x104D 0x1036 0x004D"
+                    long_press_bubble_text="M m" long_press_bubble_keycode="0x104D 0x004D" />
+            </HorizontalLayout>
+            <ButtonBackspace class="cls_button_backspace, cls_button_right_big" name="backspace"  />
+        </HorizontalLayout>
+
+        <HorizontalLayout width="match_parent" height_weight="48" name="26key_bottom_line">
+            <ButtonSwitchBoard text="符号" target="3" class="cls_keyboard_button_func" class_adaptive="cls_26key_button_symble_width_adaptive_s" name="button_symbol" visible="false"/>
+            <ButtonSwitchBoard class="cls_button_123" target="8" name="button_switch_123" />
+            <ButtonPeriodComma text="." class="cls_period_comma_button_en" keycode="." commitstr="."
+                textpadding="0,0,0,5" name="button_period_comma"
+                ficon_visible_type="always_visible"
+                ficon_text="," fusiyin_keycode="0x002C"
+                class_adaptive="cls_button_period_comma_width_adaptive"
+                fusiyin_bubble_text=", ." fusiyin_bubble_keycode="0x002C 0x002E"
+                long_press_bubble_text=", ." long_press_bubble_keycode="0x002C 0x002E"
+                 />
+            <ButtonEnglishPushCommit
+                class="cls_keyboard_button_comma, cls_keyboard_button_encomma_textpadding"
+                uri_adapter_symbol="/" text="," name="button_comma"/>
+            <Container class_adaptive="cls_26key_button_space_width_adaptive" mouse="false" >
+                <ButtonSpace name="space_speech" class="cls_button_space" />
+                <Button name="space_speech_loading" visible="false" mouse="false" float="true"
+                    width="33" height="20" gravity="center|vcenter"
+                    normalimage="file='drawable/voice_space.gif'" />
+            </Container>
+            <ButtonEnglishPushCommit name="button_period"
+                class="cls_keyboard_button_period, cls_keyboard_button_enperiod_textpadding" text="."/>
+            <ButtonSwitchChineseEnglish target="chinese" name="button_en2ch" width_weight="38.6"
+                class="cls_button_en2cn" class_adaptive="cls_26key_button_cn2en_width_adaptive" />
+            <ButtonEnter class="cls_button_enter26" name="button_enter"/>
+        </HorizontalLayout>
+    </English26Layout>
+</Window>

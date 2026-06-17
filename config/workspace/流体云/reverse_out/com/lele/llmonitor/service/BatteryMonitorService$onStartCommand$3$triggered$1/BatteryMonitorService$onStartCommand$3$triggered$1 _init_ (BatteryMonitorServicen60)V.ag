@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.service.BatteryMonitorService
+# - v2:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1       (00000004) const/4              v1, 2
+	2       (00000006) invoke-direct        v0, v1, v2, Ljj3;-><init>(I Ln60;)V
+	3       (0000000c) return-void          
+

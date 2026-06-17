@@ -1,0 +1,47 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->toAppIconPalette(Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)Lcom/lele/llmonitor/data/AppIconPalette; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.ui.theme.ThemePalettePreset
+#
+# - return:com.lele.llmonitor.data.AppIconPalette
+
+toAppIconPalette-BB@0x0 : [ D:toAppIconPalette-BB@0x16 1:toAppIconPalette-BB@0x3e 2:toAppIconPalette-BB@0x38 3:toAppIconPalette-BB@0x32 4:toAppIconPalette-BB@0x2c 5:toAppIconPalette-BB@0x26 6:toAppIconPalette-BB@0x20 ]
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/AppIconPaletteManagerKt$WhenMappings;->$EnumSwitchMapping$0 [I
+	1       (00000004) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	2       (0000000a) move-result          v1
+	3       (0000000c) aget                 v1, v0, v1
+	4       (00000010) packed-switch        v1, +000001ah
+
+toAppIconPalette-BB@0x16 : 
+	5       (00000016) invoke-static        Lh;->b()V
+	6       (0000001c) const/4              v1, 0
+	7       (0000001e) return-object        v1
+
+toAppIconPalette-BB@0x20 : 
+	8       (00000020) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->JIZI Lcom/lele/llmonitor/data/AppIconPalette;
+	9       (00000024) return-object        v1
+
+toAppIconPalette-BB@0x26 : 
+	10      (00000026) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->BLOSSOM Lcom/lele/llmonitor/data/AppIconPalette;
+	11      (0000002a) return-object        v1
+
+toAppIconPalette-BB@0x2c : 
+	12      (0000002c) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->SUNSET Lcom/lele/llmonitor/data/AppIconPalette;
+	13      (00000030) return-object        v1
+
+toAppIconPalette-BB@0x32 : 
+	14      (00000032) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->FOREST Lcom/lele/llmonitor/data/AppIconPalette;
+	15      (00000036) return-object        v1
+
+toAppIconPalette-BB@0x38 : 
+	16      (00000038) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->OCEAN Lcom/lele/llmonitor/data/AppIconPalette;
+	17      (0000003c) return-object        v1
+
+toAppIconPalette-BB@0x3e : 
+	18      (0000003e) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->DYNAMIC Lcom/lele/llmonitor/data/AppIconPalette;
+	19      (00000042) return-object        v1
+
+toAppIconPalette-BB@0x44 : 
+	20      (00000044) packed-switch-payload 1 2 3 4 5 6
+

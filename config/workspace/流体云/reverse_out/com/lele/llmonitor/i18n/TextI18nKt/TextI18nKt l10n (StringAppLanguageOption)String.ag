@@ -1,0 +1,26 @@
+# Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String; Lcom/lele/llmonitor/data/AppLanguageOption;)Ljava/lang/String; [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.String
+# - v2:com.lele.llmonitor.data.AppLanguageOption
+#
+# - return:java.lang.String
+
+l10n-BB@0x0 : [ l10n-BB@0x20 l10n-BB@0x22 ]
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-static        v2, Lcom/lele/llmonitor/i18n/TextI18nKt;->resolveAppTextLocale(Lcom/lele/llmonitor/data/AppLanguageOption;)Lcom/lele/llmonitor/i18n/AppTextLocale;
+	3       (00000012) move-result-object   v2
+	4       (00000014) invoke-static        v1, v2, Lcom/lele/llmonitor/i18n/TextI18nKt;->translateDynamic(Ljava/lang/String; Lcom/lele/llmonitor/i18n/AppTextLocale;)Ljava/lang/String;
+	5       (0000001a) move-result-object   v0
+	6       (0000001c) if-eqz               v0, +003h
+
+l10n-BB@0x20 : 
+	7       (00000020) return-object        v0
+
+l10n-BB@0x22 : 
+	8       (00000022) invoke-static        v1, v2, Lcom/lele/llmonitor/i18n/TextI18nKt;->translateStatic(Ljava/lang/String; Lcom/lele/llmonitor/i18n/AppTextLocale;)Ljava/lang/String;
+	9       (00000028) move-result-object   v1
+	10      (0000002a) return-object        v1
+

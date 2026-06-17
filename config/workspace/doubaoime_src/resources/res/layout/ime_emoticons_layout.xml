@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.common_biz.ui.widget.ImeEmptyLayout
+        android:id="@+id/emoticons_empty_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/ime_dp_11"
+        android:layout_marginEnd="@dimen/ime_dp_11"
+        android:layout_marginVertical="@dimen/ime_dp_7"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/emoticons_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/ime_dp_11"
+        android:layout_marginEnd="@dimen/ime_dp_11"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

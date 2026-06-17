@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;->onOpen(Lmy2;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:my2
+#
+# - return:void
+
+onOpen-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) iget-object          v0, v0, Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;->this$0 Lcom/lele/llmonitor/data/local/AppDatabase_Impl;
+	2       (0000000a) invoke-static        v0, v1, Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->access$internalInitInvalidationTracker(Lcom/lele/llmonitor/data/local/AppDatabase_Impl; Lmy2;)V
+	3       (00000010) return-void          
+

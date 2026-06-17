@@ -1,0 +1,39 @@
+{
+  "id": "gray-elephant",
+  "name": "Gray Elephant",
+  "version": "0.1.0",
+  "description": "A cute gray elephant desktop pet inspired by the simplicity of an elephant emoji, with original generated artwork.",
+  "source": {
+    "type": "ai-generated",
+    "tool": "Codex image generation",
+    "createdDate": "2026-05-04"
+  },
+  "assets": {
+    "idle": "gif/idle.gif",
+    "happy": "transparent/happy.png",
+    "breakPrompt": "transparent/breakPrompt.png",
+    "hydrationPrompt": "transparent/hydrationPrompt.png",
+    "focusAlert": "transparent/focusAlert.png"
+  },
+  "frames": {
+    "idle": [
+      "frames/idle/idle-01.png",
+      "frames/idle/idle-02.png",
+      "frames/idle/idle-03.png",
+      "frames/idle/idle-04.png",
+      "frames/idle/idle-05.png",
+      "frames/idle/idle-06.png"
+    ]
+  },
+  "fallbacks": {
+    "sitting": "idle",
+    "breakRunning": "breakPrompt",
+    "breakDone": "happy",
+    "drinking": "hydrationPrompt",
+    "hydrationDone": "happy",
+    "focusGuard": "focusAlert",
+    "focusDone": "happy",
+    "sad": "idle",
+    "sleeping": "idle"
+  }
+}

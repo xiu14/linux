@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$1;-><init>(Lcom/lele/llmonitor/data/BatteryRepository; Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.data.BatteryRepository
+# - v2:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$1;->this$0 Lcom/lele/llmonitor/data/BatteryRepository;
+	1       (00000004) invoke-direct        v0, v2, Lp60;-><init>(Ln60;)V
+	2       (0000000a) return-void          
+

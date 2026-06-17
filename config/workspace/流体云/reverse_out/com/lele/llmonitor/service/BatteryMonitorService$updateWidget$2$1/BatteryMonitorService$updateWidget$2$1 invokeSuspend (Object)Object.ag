@@ -1,0 +1,70 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x10 invokeSuspend-BB@0xea ]
+	0       (00000000) iget-object          v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->L$0 Ljava/lang/Object;
+	1       (00000004) check-cast           v0, La52;
+	2       (00000008) iget                 v1, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->label I
+	3       (0000000c) if-nez               v1, +06fh
+
+invokeSuspend-BB@0x10 : 
+	4       (00000010) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	5       (00000016) sget-object          v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->INSTANCE Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;
+	6       (0000001a) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getPOWER()Lgo2;
+	7       (00000020) move-result-object   v1
+	8       (00000022) iget                 v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$displayPower F
+	9       (00000026) new-instance         v3, Ljava/lang/Float;
+	10      (0000002a) invoke-direct        v3, v2, Ljava/lang/Float;-><init>(F)V
+	11      (00000030) invoke-virtual       v0, v1, v3, La52;->d(Lgo2; Ljava/lang/Object;)V
+	12      (00000036) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getCURRENT()Lgo2;
+	13      (0000003c) move-result-object   v1
+	14      (0000003e) iget                 v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$displayCurrent F
+	15      (00000042) new-instance         v3, Ljava/lang/Float;
+	16      (00000046) invoke-direct        v3, v2, Ljava/lang/Float;-><init>(F)V
+	17      (0000004c) invoke-virtual       v0, v1, v3, La52;->d(Lgo2; Ljava/lang/Object;)V
+	18      (00000052) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getCAPACITY()Lgo2;
+	19      (00000058) move-result-object   v1
+	20      (0000005a) iget                 v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$currentCapacity I
+	21      (0000005e) new-instance         v3, Ljava/lang/Integer;
+	22      (00000062) invoke-direct        v3, v2, Ljava/lang/Integer;-><init>(I)V
+	23      (00000068) invoke-virtual       v0, v1, v3, La52;->d(Lgo2; Ljava/lang/Object;)V
+	24      (0000006e) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getTOTAL_CAPACITY()Lgo2;
+	25      (00000074) move-result-object   v1
+	26      (00000076) iget-object          v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	27      (0000007a) invoke-static        v2, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDesignCapacity$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)I
+	28      (00000080) move-result          v2
+	29      (00000082) new-instance         v3, Ljava/lang/Integer;
+	30      (00000086) invoke-direct        v3, v2, Ljava/lang/Integer;-><init>(I)V
+	31      (0000008c) invoke-virtual       v0, v1, v3, La52;->d(Lgo2; Ljava/lang/Object;)V
+	32      (00000092) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getTEMP()Lgo2;
+	33      (00000098) move-result-object   v1
+	34      (0000009a) iget                 v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$temp F
+	35      (0000009e) new-instance         v3, Ljava/lang/Float;
+	36      (000000a2) invoke-direct        v3, v2, Ljava/lang/Float;-><init>(F)V
+	37      (000000a8) invoke-virtual       v0, v1, v3, La52;->d(Lgo2; Ljava/lang/Object;)V
+	38      (000000ae) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getTEMP_FRACTION_DIGITS()Lgo2;
+	39      (000000b4) move-result-object   v1
+	40      (000000b6) iget-object          v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	41      (000000ba) invoke-static        v2, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getLastBatteryTempFractionDigits$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)I
+	42      (000000c0) move-result          v2
+	43      (000000c2) new-instance         v3, Ljava/lang/Integer;
+	44      (000000c6) invoke-direct        v3, v2, Ljava/lang/Integer;-><init>(I)V
+	45      (000000cc) invoke-virtual       v0, v1, v3, La52;->d(Lgo2; Ljava/lang/Object;)V
+	46      (000000d2) invoke-virtual       v5, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeys;->getUPDATE_TIME()Lgo2;
+	47      (000000d8) move-result-object   v5
+	48      (000000da) iget-object          v4, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$updateTimeStr Ljava/lang/String;
+	49      (000000de) invoke-virtual       v0, v5, v4, La52;->d(Lgo2; Ljava/lang/Object;)V
+	50      (000000e4) sget-object          v4, Lbw3;->a Lbw3;
+	51      (000000e8) return-object        v4
+
+invokeSuspend-BB@0xea : 
+	52      (000000ea) const-string         v4, "call to 'resume' before 'invoke' with coroutine"
+	53      (000000ee) invoke-static        v4, Lh;->m(Ljava/lang/String;)V
+	54      (000000f4) const/4              v4, 0
+	55      (000000f6) return-object        v4
+

@@ -1,0 +1,59 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->applyRenderNodeBlur(Landroid/graphics/Bitmap; F)Landroid/graphics/Bitmap; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.graphics.Bitmap
+# - v6:float
+#
+# - return:android.graphics.Bitmap
+
+applyRenderNodeBlur-BB@0x0 : [ applyRenderNodeBlur-BB@0x8e ]
+	0       (00000000) invoke-virtual       v5, Landroid/graphics/Bitmap;->getWidth()I
+	1       (00000006) move-result          v4
+	2       (00000008) invoke-virtual       v5, Landroid/graphics/Bitmap;->getHeight()I
+	3       (0000000e) move-result          v0
+	4       (00000010) invoke-static        Lt41;->i()V
+	5       (00000016) invoke-static        Lt41;->f()Landroid/graphics/RenderNode;
+	6       (0000001c) move-result-object   v1
+	7       (0000001e) invoke-static        v1, v4, v0, Lt41;->r(Landroid/graphics/RenderNode; I I)V
+	8       (00000024) sget-object          v2, Landroid/graphics/Shader$TileMode;->CLAMP Landroid/graphics/Shader$TileMode;
+	9       (00000028) invoke-static        v6, v6, Lk6;->d(F F)Landroid/graphics/RenderEffect;
+	10      (0000002e) move-result-object   v6
+	11      (00000030) invoke-static        v1, v6, Lk6;->u(Landroid/graphics/RenderNode; Landroid/graphics/RenderEffect;)V
+	12      (00000036) invoke-static        v1, v4, v0, Lt41;->e(Landroid/graphics/RenderNode; I I)Landroid/graphics/RecordingCanvas;
+	13      (0000003c) move-result-object   v6
+	14      (0000003e) invoke-virtual       v6, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	15      (00000044) new-instance         v2, Landroid/graphics/Paint;
+	16      (00000048) const/4              v3, 3
+	17      (0000004a) invoke-direct        v2, v3, Landroid/graphics/Paint;-><init>(I)V
+	18      (00000050) invoke-static        v6, v5, v2, Lt41;->n(Landroid/graphics/RecordingCanvas; Landroid/graphics/Bitmap; Landroid/graphics/Paint;)V
+	19      (00000056) invoke-static        v1, Lt41;->y(Landroid/graphics/RenderNode;)V
+	20      (0000005c) sget-object          v5, Landroid/graphics/Bitmap$Config;->ARGB_8888 Landroid/graphics/Bitmap$Config;
+	21      (00000060) invoke-static        v4, v0, v5, Landroid/graphics/Bitmap;->createBitmap(I I Landroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+	22      (00000066) move-result-object   v4
+	23      (00000068) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	24      (0000006e) new-instance         v5, Landroid/graphics/Canvas;
+	25      (00000072) invoke-direct        v5, v4, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+	26      (00000078) invoke-static        v5, v1, Lt41;->l(Landroid/graphics/Canvas; Landroid/graphics/RenderNode;)V
+	27      (0000007e) goto                 +8h
+	0:7d
+	(Ljava/lang/Throwable; -> 80 applyRenderNodeBlur-BB@0x80)
+
+applyRenderNodeBlur-BB@0x80 : [ applyRenderNodeBlur-BB@0x8e ]
+	28      (00000080) move-exception       v4
+	29      (00000082) new-instance         v5, Lcw2;
+	30      (00000086) invoke-direct        v5, v4, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	31      (0000008c) move-object          v4, v5
+
+applyRenderNodeBlur-BB@0x8e : [ applyRenderNodeBlur-BB@0x98 applyRenderNodeBlur-BB@0x9a ]
+	32      (0000008e) nop                  
+	33      (00000090) instance-of          v5, v4, Lcw2;
+	34      (00000094) if-eqz               v5, +003h
+
+applyRenderNodeBlur-BB@0x98 : [ applyRenderNodeBlur-BB@0x9a ]
+	35      (00000098) const/4              v4, 0
+
+applyRenderNodeBlur-BB@0x9a : 
+	36      (0000009a) check-cast           v4, Landroid/graphics/Bitmap;
+	37      (0000009e) return-object        v4
+

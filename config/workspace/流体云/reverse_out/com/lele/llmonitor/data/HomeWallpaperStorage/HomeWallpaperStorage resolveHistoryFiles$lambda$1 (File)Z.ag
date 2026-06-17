@@ -1,0 +1,28 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles$lambda$1(Ljava/io/File;)Z [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.io.File
+#
+# - return:boolean
+
+resolveHistoryFiles$lambda$1-BB@0x0 : [ resolveHistoryFiles$lambda$1-BB@0xc resolveHistoryFiles$lambda$1-BB@0x24 ]
+	0       (00000000) invoke-virtual       v4, Ljava/io/File;->isFile()Z
+	1       (00000006) move-result          v0
+	2       (00000008) if-eqz               v0, +00eh
+
+resolveHistoryFiles$lambda$1-BB@0xc : [ resolveHistoryFiles$lambda$1-BB@0x20 resolveHistoryFiles$lambda$1-BB@0x24 ]
+	3       (0000000c) invoke-virtual       v4, Ljava/io/File;->length()J
+	4       (00000012) move-result-wide     v0
+	5       (00000014) const-wide/16        v2, 0
+	6       (00000018) cmp-long             v4, v0, v2
+	7       (0000001c) if-lez               v4, +004h
+
+resolveHistoryFiles$lambda$1-BB@0x20 : 
+	8       (00000020) const/4              v4, 1
+	9       (00000022) return               v4
+
+resolveHistoryFiles$lambda$1-BB@0x24 : 
+	10      (00000024) const/4              v4, 0
+	11      (00000026) return               v4
+

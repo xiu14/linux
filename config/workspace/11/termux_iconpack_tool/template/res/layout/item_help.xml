@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/faq_card" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:focusable="false" android:clickable="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight" android:animateLayoutChanges="true" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/help_question" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/TextStyle.Frames.Subtitle1" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0sp" android:id="@id/help_answer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="4.0dip" style="@style/TextStyle.Frames.Caption" />
+</LinearLayout>

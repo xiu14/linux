@@ -1,0 +1,169 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLong(Ljava/io/File; Ljava/lang/String;)Ljava/lang/Long; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.io.File
+# - v7:java.lang.String
+#
+# - return:java.lang.Long
+
+readLong-BB@0x0 : [ readLong-BB@0x32 ]
+	0       (00000000) new-instance         v5, Ljava/io/File;
+	1       (00000004) invoke-direct        v5, v6, v7, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	2       (0000000a) invoke-static        v5, Lwt0;->V(Ljava/io/File;)Ljava/lang/String;
+	3       (00000010) move-result-object   v5
+	4       (00000012) invoke-static        v5, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	5       (00000018) move-result-object   v5
+	6       (0000001a) invoke-virtual       v5, Ljava/lang/Object;->toString()Ljava/lang/String;
+	7       (00000020) move-result-object   v5
+	8       (00000022) goto                 +8h
+	0:21
+	(Ljava/lang/Throwable; -> 24 readLong-BB@0x24)
+
+readLong-BB@0x24 : [ readLong-BB@0x32 ]
+	9       (00000024) move-exception       v5
+	10      (00000026) new-instance         v6, Lcw2;
+	11      (0000002a) invoke-direct        v6, v5, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	12      (00000030) move-object          v5, v6
+
+readLong-BB@0x32 : [ readLong-BB@0x3e readLong-BB@0x40 ]
+	13      (00000032) nop                  
+	14      (00000034) instance-of          v6, v5, Lcw2;
+	15      (00000038) const/4              v7, 0
+	16      (0000003a) if-eqz               v6, +003h
+
+readLong-BB@0x3e : [ readLong-BB@0x40 ]
+	17      (0000003e) move-object          v5, v7
+
+readLong-BB@0x40 : [ readLong-BB@0x48 readLong-BB@0x4a ]
+	18      (00000040) check-cast           v5, Ljava/lang/String;
+	19      (00000044) if-nez               v5, +003h
+
+readLong-BB@0x48 : [ readLong-BB@0xe4 ]
+	20      (00000048) goto                 +4eh
+
+readLong-BB@0x4a : [ readLong-BB@0x56 readLong-BB@0x68 ]
+	21      (0000004a) invoke-static        v5, Loh3;->l0(Ljava/lang/String;)Ljava/lang/Long;
+	22      (00000050) move-result-object   v6
+	23      (00000052) if-eqz               v6, +00bh
+
+readLong-BB@0x56 : 
+	24      (00000056) invoke-virtual       v6, Ljava/lang/Number;->longValue()J
+	25      (0000005c) move-result-wide     v5
+	26      (0000005e) invoke-static        v5, v6, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	27      (00000064) move-result-object   v5
+	28      (00000066) return-object        v5
+
+readLong-BB@0x68 : [ readLong-BB@0x82 readLong-BB@0x180 ]
+	29      (00000068) new-instance         v6, Lyt2;
+	30      (0000006c) const-string         v0, "-?\d+"
+	31      (00000070) invoke-direct        v6, v0, Lyt2;-><init>(Ljava/lang/String;)V
+	32      (00000076) invoke-virtual       v5, Ljava/lang/String;->length()I
+	33      (0000007c) move-result          v0
+	34      (0000007e) if-ltz               v0, +081h
+
+readLong-BB@0x82 : [ readLong-BB@0xe4 readLong-BB@0xe6 ]
+	35      (00000082) new-instance         v0, Ln2;
+	36      (00000086) const/16             v1, 27
+	37      (0000008a) invoke-direct        v0, v1, v6, v5, Ln2;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	38      (00000090) sget-object          v5, Lxt2;->d Lxt2;
+	39      (00000094) new-instance         v6, Lm21;
+	40      (00000098) const/4              v1, 0
+	41      (0000009a) invoke-direct        v6, v1, v0, v5, Lm21;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	42      (000000a0) new-instance         v5, Ltk1;
+	43      (000000a4) const/16             v0, 9
+	44      (000000a8) invoke-direct        v5, v0, Ltk1;-><init>(I)V
+	45      (000000ae) new-instance         v0, Lgs3;
+	46      (000000b2) invoke-direct        v0, v6, v5, Lgs3;-><init>(Lz53; Ld11;)V
+	47      (000000b8) new-instance         v5, Lyz2;
+	48      (000000bc) const/16             v6, 28
+	49      (000000c0) invoke-direct        v5, v6, Lyz2;-><init>(I)V
+	50      (000000c6) new-instance         v6, Lbu0;
+	51      (000000ca) invoke-direct        v6, v0, v1, v5, Lbu0;-><init>(Lz53; Z Ld11;)V
+	52      (000000d0) invoke-static        v6, Lb63;->e0(Lz53;)Ljava/util/List;
+	53      (000000d6) move-result-object   v5
+	54      (000000d8) invoke-interface     v5, Ljava/util/List;->isEmpty()Z
+	55      (000000de) move-result          v6
+	56      (000000e0) if-eqz               v6, +003h
+
+readLong-BB@0xe4 : 
+	57      (000000e4) return-object        v7
+
+readLong-BB@0xe6 : [ readLong-BB@0xf4 readLong-BB@0x102 ]
+	58      (000000e6) invoke-interface     v5, Ljava/util/List;->size()I
+	59      (000000ec) move-result          v6
+	60      (000000ee) const/4              v0, 1
+	61      (000000f0) if-ne                v6, v0, +009h
+
+readLong-BB@0xf4 : 
+	62      (000000f4) invoke-static        v5, Lyw;->z0(Ljava/util/List;)Ljava/lang/Object;
+	63      (000000fa) move-result-object   v5
+	64      (000000fc) check-cast           v5, Ljava/lang/Long;
+	65      (00000100) return-object        v5
+
+readLong-BB@0x102 : [ readLong-BB@0x116 readLong-BB@0x118 ]
+	66      (00000102) invoke-interface     v5, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	67      (00000108) move-result-object   v6
+	68      (0000010a) invoke-interface     v6, Ljava/util/Iterator;->hasNext()Z
+	69      (00000110) move-result          v5
+	70      (00000112) if-nez               v5, +003h
+
+readLong-BB@0x116 : [ readLong-BB@0x17a ]
+	71      (00000116) goto                 +32h
+
+readLong-BB@0x118 : [ readLong-BB@0x12c readLong-BB@0x12e ]
+	72      (00000118) invoke-interface     v6, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	73      (0000011e) move-result-object   v7
+	74      (00000120) invoke-interface     v6, Ljava/util/Iterator;->hasNext()Z
+	75      (00000126) move-result          v5
+	76      (00000128) if-nez               v5, +003h
+
+readLong-BB@0x12c : [ readLong-BB@0x17a ]
+	77      (0000012c) goto                 +27h
+
+readLong-BB@0x12e : [ readLong-BB@0x144 ]
+	78      (0000012e) move-object          v5, v7
+	79      (00000130) check-cast           v5, Ljava/lang/Number;
+	80      (00000134) invoke-virtual       v5, Ljava/lang/Number;->longValue()J
+	81      (0000013a) move-result-wide     v0
+	82      (0000013c) invoke-static        v0, v1, Ljava/lang/Math;->abs(J)J
+	83      (00000142) move-result-wide     v0
+
+readLong-BB@0x144 : [ readLong-BB@0x16a readLong-BB@0x16e ]
+	84      (00000144) invoke-interface     v6, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	85      (0000014a) move-result-object   v5
+	86      (0000014c) move-object          v2, v5
+	87      (0000014e) check-cast           v2, Ljava/lang/Number;
+	88      (00000152) invoke-virtual       v2, Ljava/lang/Number;->longValue()J
+	89      (00000158) move-result-wide     v2
+	90      (0000015a) invoke-static        v2, v3, Ljava/lang/Math;->abs(J)J
+	91      (00000160) move-result-wide     v2
+	92      (00000162) cmp-long             v4, v0, v2
+	93      (00000166) if-gez               v4, +004h
+
+readLong-BB@0x16a : [ readLong-BB@0x16e ]
+	94      (0000016a) move-object          v7, v5
+	95      (0000016c) move-wide            v0, v2
+
+readLong-BB@0x16e : [ readLong-BB@0x17a readLong-BB@0x144 ]
+	96      (0000016e) invoke-interface     v6, Ljava/util/Iterator;->hasNext()Z
+	97      (00000174) move-result          v5
+	98      (00000176) if-nez               v5, -019h
+
+readLong-BB@0x17a : 
+	99      (0000017a) check-cast           v7, Ljava/lang/Long;
+	100     (0000017e) return-object        v7
+
+readLong-BB@0x180 : 
+	101     (00000180) new-instance         v6, Ljava/lang/IndexOutOfBoundsException;
+	102     (00000184) invoke-virtual       v5, Ljava/lang/String;->length()I
+	103     (0000018a) move-result          v5
+	104     (0000018c) new-instance         v7, Ljava/lang/StringBuilder;
+	105     (00000190) const-string         v0, "Start index out of bounds: 0, input length: "
+	106     (00000194) invoke-direct        v7, v0, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	107     (0000019a) invoke-virtual       v7, v5, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	108     (000001a0) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	109     (000001a6) move-result-object   v5
+	110     (000001a8) invoke-direct        v6, v5, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+	111     (000001ae) throw                v6
+

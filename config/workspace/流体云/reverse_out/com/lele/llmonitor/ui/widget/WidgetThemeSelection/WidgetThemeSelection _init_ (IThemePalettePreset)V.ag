@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;-><init>(I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+# - v2:com.lele.llmonitor.ui.theme.ThemePalettePreset
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	2       (0000000c) iput                 v1, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;->themeMode I
+	3       (00000010) iput-object          v2, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;->palettePreset Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	4       (00000014) return-void          
+

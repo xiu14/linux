@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    app:oui_radius="@dimen/oui_r_l3_rect"
+    style="@style/aiwritng_btn_background">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ai_btn_rewrite_menu_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ai_writing_icon_rewrite"/>
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_text_1"
+            android:gravity="center_horizontal"
+            android:id="@+id/ai_btn_rewrite_menu_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="重写"
+            style="@style/Label_M"/>
+    </LinearLayout>
+</com.obric.oui.layout.OUIFrameLayout>

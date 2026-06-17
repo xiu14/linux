@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; F Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.service.BatteryMonitorService
+# - v2:com.lele.llmonitor.data.local.BatteryEntity
+# - v3:float
+# - v4:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1       (00000004) iput-object          v2, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->$entry Lcom/lele/llmonitor/data/local/BatteryEntity;
+	2       (00000008) iput                 v3, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->$tempC F
+	3       (0000000c) const/4              v1, 2
+	4       (0000000e) invoke-direct        v0, v1, v4, Ljj3;-><init>(I Ln60;)V
+	5       (00000014) return-void          
+

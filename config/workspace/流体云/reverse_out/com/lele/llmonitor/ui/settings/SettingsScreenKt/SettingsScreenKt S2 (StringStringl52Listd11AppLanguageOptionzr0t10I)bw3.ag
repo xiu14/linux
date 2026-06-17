@@ -1,0 +1,21 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->S2(Ljava/lang/String; Ljava/lang/String; Ll52; Ljava/util/List; Ld11; Lcom/lele/llmonitor/data/AppLanguageOption; Lzr0; Lt10; I)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:java.lang.String
+# - v1:java.lang.String
+# - v2:l52
+# - v3:java.util.List
+# - v4:d11
+# - v5:com.lele.llmonitor.data.AppLanguageOption
+# - v6:zr0
+# - v7:t10
+# - v8:int
+#
+# - return:bw3
+
+S2-BB@0x0 : 
+	0       (00000000) invoke-static/range  v0 ... v8, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LanguageSelectorItem$lambda$4(Ljava/lang/String; Ljava/lang/String; Ll52; Ljava/util/List; Ld11; Lcom/lele/llmonitor/data/AppLanguageOption; Lzr0; Lt10; I)Lbw3;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

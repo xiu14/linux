@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="@dimen/ime_dp_12"
+                android:bottomRightRadius="@dimen/ime_dp_12"/>
+            <solid android:color="@color/word_segmentation_add_to_common_phrase_bg_disabled"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="@dimen/ime_dp_12"
+                android:bottomRightRadius="@dimen/ime_dp_12"/>
+            <solid android:color="@color/ime_word_segmentation_label_clickable_bg_color"/>
+        </shape>
+    </item>
+</selector>

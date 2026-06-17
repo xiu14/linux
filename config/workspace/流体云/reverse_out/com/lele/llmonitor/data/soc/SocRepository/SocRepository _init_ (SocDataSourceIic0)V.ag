@@ -1,0 +1,22 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository;-><init>(Lcom/lele/llmonitor/data/soc/SocDataSource; I Lic0;)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.data.soc.SocDataSource
+# - v2:int
+# - v3:ic0
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x8 <init>-BB@0x12 ]
+	0       (00000000) and-int/lit8         v2, v2, 1
+	1       (00000004) if-eqz               v2, +007h
+
+<init>-BB@0x8 : [ <init>-BB@0x12 ]
+	2       (00000008) new-instance         v1, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;
+	3       (0000000c) invoke-direct        v1, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;-><init>()V
+
+<init>-BB@0x12 : 
+	4       (00000012) invoke-direct        v0, v1, Lcom/lele/llmonitor/data/soc/SocRepository;-><init>(Lcom/lele/llmonitor/data/soc/SocDataSource;)V
+	5       (00000018) return-void          
+

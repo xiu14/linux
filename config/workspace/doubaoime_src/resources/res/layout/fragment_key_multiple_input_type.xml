@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/ime_color_setting_bg"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.common_biz.ui.widget.ImeTitleBar
+        android:id="@+id/settings_title_bar"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ime_dp_56"
+        app:ime_back_arrow_icon="@drawable/ic_arrow_left"
+        app:ime_title_text="@string/kbd_layout_multiple_input_type_title"/>
+    <com.bytedance.android.input.fragment.settings.KeyboardLayoutSelectView
+        android:id="@+id/settings_multiple_input_type_select_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ime_dp_20"
+        android:layout_marginTop="@dimen/ime_dp_12"
+        android:layout_marginRight="@dimen/ime_dp_20"/>
+</LinearLayout>

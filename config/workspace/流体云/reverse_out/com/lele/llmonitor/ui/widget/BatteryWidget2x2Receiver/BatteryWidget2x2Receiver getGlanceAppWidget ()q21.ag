@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidget2x2Receiver;->getGlanceAppWidget()Lq21; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:q21
+
+getGlanceAppWidget-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidget2x2Receiver;->glanceAppWidget Lq21;
+	1       (00000004) return-object        v0
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="collections_columns_count">2</integer>
+    <integer name="icons_columns_count">6</integer>
+    <integer name="launchers_columns_count">5</integer>
+    <integer name="mtrl_calendar_header_orientation">0</integer>
+    <integer name="mtrl_calendar_selection_text_lines">6</integer>
+    <integer name="wallpapers_columns_count">4</integer>
+</resources>

@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/data/soc/LoadAvgResult;->copy(Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/util/List;)Lcom/lele/llmonitor/data/soc/LoadAvgResult; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.Float
+# - v2:java.lang.Float
+# - v3:java.lang.Float
+# - v4:java.util.List
+#
+# - return:com.lele.llmonitor.data.soc.LoadAvgResult
+
+copy-BB@0x0 : 
+	0       (00000000) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) new-instance         v0, Lcom/lele/llmonitor/data/soc/LoadAvgResult;
+	2       (0000000a) invoke-direct        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/soc/LoadAvgResult;-><init>(Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/util/List;)V
+	3       (00000010) return-object        v0
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <TabLayout name="toolbar_tip_layout" width="match_parent" height="match_parent">
+        <!--    键盘功能引导    -->
+        <HorizontalLayout class="cls_toolbar_tip_container">
+            <HorizontalLayout width="match_parent" height="match_parent">
+                <Control class_adaptive="cls_toolbar_tip_leading_space_adaptive" />
+                <Label name="tip_label" class="cls_toolbar_tip_label" />
+                <ButtonKey name="tip_settings" text="去设置" class="cls_toolbar_tip_action_button" />
+                <ButtonKey name="btn_tip_close" class="cls_toolbar_tip_close_button" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+
+        <!--    AI聊天助手引导    -->
+        <HorizontalLayout class="cls_toolbar_tip_container">
+            <HorizontalLayout width="match_parent" height="match_parent">
+                <Control class_adaptive="cls_toolbar_tip_leading_space_adaptive" />
+                <Label class="cls_toolbar_tip_label" text="快来体验“聊天 AI 助手”吧" />
+                <ButtonKey name="aichat_tip_settings" text="去试试" class="cls_toolbar_tip_action_button" />
+                <ButtonKey name="btn_tip_aichat_close" class="cls_toolbar_tip_close_button" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+
+        <!--    登录引导    -->
+        <HorizontalLayout class="cls_toolbar_tip_container">
+            <HorizontalLayout width="match_parent" height="match_parent">
+                <Control class_adaptive="cls_toolbar_tip_leading_space_adaptive" />
+                <Label class="cls_toolbar_tip_label" text="登录系统账号，体验智能输入法" />
+                <ButtonKey name="tip_login" text="去登录" class="cls_toolbar_tip_action_button"/>
+                <ButtonKey name="btn_tip_login_close" class="cls_toolbar_tip_close_button" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+
+        <!-- TODO: remove it -->
+        <!--    快捷回复    -->
+        <HorizontalLayout width="match_parent" height="match_parent" inset_decimal="0.02,0.2,0.05,0.15" class_adaptive="cls_toolbar_tip_quick_adaptive">
+            <HorizontalLayout name="quick_reply_container" width_weight="1" height="match_parent" sliderenable="true" childpadding="12"/>
+            <Control height="match_parent" width="3" padding_decimal="0.05,0,0.05,0" bkcolormargin="0.00,0.2,0.00,0.2" bkcolor="@color/toolbar_tip_split"/>
+            <ButtonKey name="btn_quick_reply_close" class="cls_toolbar_tip_close_button" font="fi_toolbar_reply_button"
+                textpaddingdecimalmode="true" textpadding="0.02,0,0.01,0"/>
+        </HorizontalLayout>
+
+        <!--    悬浮键盘    -->
+        <HorizontalLayout class="cls_toolbar_tip_container">
+            <HorizontalLayout width="match_parent" height="match_parent">
+                <Control class_adaptive="cls_toolbar_tip_leading_space_adaptive" />
+                <Label name="test" class="cls_toolbar_tip_label" text="拖拽至底部可恢复默认键盘"/>
+                <ButtonKey name="btn_tip_close" class="cls_toolbar_tip_close_button" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+
+        <!-- app升级提示   -->
+        <HorizontalLayout class="cls_toolbar_tip_container">
+            <HorizontalLayout width="match_parent" height="match_parent">
+                <Control class_adaptive="cls_toolbar_tip_leading_space_adaptive" />
+                <Label class="cls_toolbar_tip_leading_icon" text="\ue35b" />
+                <Label class="cls_toolbar_tip_label" text="发现新版本，快来升级体验" />
+                <ButtonKey name="tip_show_upgrade_dialog" text="查看" class="cls_toolbar_tip_action_button" />
+                <ButtonKey name="btn_tip_show_upgrade_close" class="cls_toolbar_tip_close_button" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+
+    </TabLayout>
+</Window>

@@ -1,0 +1,9 @@
+services:
+  r2-video-player:
+    build: .
+    container_name: r2-video-player
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-3210}:${PORT:-3210}"

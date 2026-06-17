@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/itv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/distance_icon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+    <TextView
+        android:id="@+id/itv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/stretch_view_button_text_style"/>
+</merge>

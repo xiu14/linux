@@ -1,0 +1,91 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->buildLaunchAppearanceSnapshot(Landroid/content/Context; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String;)Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v15
+# - v16:android.content.Context
+# - v17:int
+# - v18:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v19:boolean
+# - v20:float
+# - v21:float
+# - v22:long
+# - v23:long
+# - v24:java.lang.String
+#
+# - return:com.lele.llmonitor.data.LaunchAppearanceSnapshot
+
+buildLaunchAppearanceSnapshot-BB@0x0 : [ buildLaunchAppearanceSnapshot-BB@0x18 buildLaunchAppearanceSnapshot-BB@0x2c ]
+	0       (00000000) invoke-virtual       v14, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual/range v16, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-virtual/range v24, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	3       (00000012) const/4              v0, 1
+	4       (00000014) if-eq                v15, v0, +00ch
+
+buildLaunchAppearanceSnapshot-BB@0x18 : [ buildLaunchAppearanceSnapshot-BB@0x1e buildLaunchAppearanceSnapshot-BB@0x26 ]
+	5       (00000018) const/4              v1, 2
+	6       (0000001a) if-eq                v15, v1, +006h
+
+buildLaunchAppearanceSnapshot-BB@0x1e : [ buildLaunchAppearanceSnapshot-BB@0x26 ]
+	7       (0000001e) invoke-static        v14, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->isSystemDarkModeEnabled(Landroid/content/Context;)Z
+	8       (00000024) move-result          v0
+
+buildLaunchAppearanceSnapshot-BB@0x26 : [ buildLaunchAppearanceSnapshot-BB@0x30 ]
+	9       (00000026) move-object/from16   v3, v16
+	10      (0000002a) goto                 +3h
+
+buildLaunchAppearanceSnapshot-BB@0x2c : [ buildLaunchAppearanceSnapshot-BB@0x26 ]
+	11      (0000002c) const/4              v0, 0
+	12      (0000002e) goto                 -4h
+
+buildLaunchAppearanceSnapshot-BB@0x30 : [ buildLaunchAppearanceSnapshot-BB@0x72 buildLaunchAppearanceSnapshot-BB@0x76 ]
+	13      (00000030) invoke-static        v14, v0, v3, Lcom/lele/llmonitor/ui/theme/ThemeKt;->resolveAppColorScheme(Landroid/content/Context; Z Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)Lmx;
+	14      (00000036) move-result-object   v0
+	15      (00000038) iget-wide            v0, v0, Lmx;->n J
+	16      (0000003c) invoke-static        v0, v1, Ljn;->Q(J)I
+	17      (00000042) move-result          v1
+	18      (00000044) new-instance         v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	19      (00000048) const/4              v4, 0
+	20      (0000004a) const/high16         v5, 1065353216
+	21      (0000004e) move/from16          v6, v18
+	22      (00000052) invoke-static        v6, v4, v5, Lib1;->k(F F F)F
+	23      (00000058) move-result          v6
+	24      (0000005a) move/from16          v7, v19
+	25      (0000005e) invoke-static        v7, v4, v5, Lib1;->k(F F F)F
+	26      (00000064) move-result          v4
+	27      (00000066) const-wide/16        v7, 0
+	28      (0000006a) cmp-long             v5, v20, v7
+	29      (0000006e) if-gez               v5, +004h
+
+buildLaunchAppearanceSnapshot-BB@0x72 : [ buildLaunchAppearanceSnapshot-BB@0x7a ]
+	30      (00000072) move-wide            v9, v7
+	31      (00000074) goto                 +3h
+
+buildLaunchAppearanceSnapshot-BB@0x76 : [ buildLaunchAppearanceSnapshot-BB@0x7a ]
+	32      (00000076) move-wide/from16     v9, v20
+
+buildLaunchAppearanceSnapshot-BB@0x7a : [ buildLaunchAppearanceSnapshot-BB@0x82 buildLaunchAppearanceSnapshot-BB@0x98 ]
+	33      (0000007a) cmp-long             v5, v22, v7
+	34      (0000007e) if-gez               v5, +00dh
+
+buildLaunchAppearanceSnapshot-BB@0x82 : [ buildLaunchAppearanceSnapshot-BB@0x88 ]
+	35      (00000082) move-wide            v12, v9
+	36      (00000084) move-wide            v9, v7
+	37      (00000086) move-wide            v7, v12
+
+buildLaunchAppearanceSnapshot-BB@0x88 : [ buildLaunchAppearanceSnapshot-BB@0xa0 ]
+	38      (00000088) move                 v2, v15
+	39      (0000008a) move-object/from16   v11, v24
+	40      (0000008e) move                 v5, v6
+	41      (00000090) move                 v6, v4
+	42      (00000092) move/from16          v4, v17
+	43      (00000096) goto                 +5h
+
+buildLaunchAppearanceSnapshot-BB@0x98 : [ buildLaunchAppearanceSnapshot-BB@0x88 ]
+	44      (00000098) move-wide            v7, v9
+	45      (0000009a) move-wide/from16     v9, v22
+	46      (0000009e) goto                 -bh
+
+buildLaunchAppearanceSnapshot-BB@0xa0 : 
+	47      (000000a0) invoke-direct/range  v0 ... v11, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;-><init>(I I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String;)V
+	48      (000000a6) return-object        v0
+

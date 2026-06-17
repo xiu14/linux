@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Symbols>
+    <Category comment="常用-中文" lock="false" name="\ue34c">
+        <Symbol text="_" />
+        <Symbol text="—" />
+        <Symbol text="；" />
+        <Symbol text="#" />
+        <Symbol text="%" label="英" />
+        <Symbol text="&amp;" label="英" />
+        <Symbol text="^" />
+        <Symbol text="*" />
+        <Symbol text="+" />
+        <Symbol text="=" />
+        <Symbol text="-" />
+        <Symbol text="/" />
+        <Symbol text="：" />
+        <Symbol text="～" />
+        <Symbol text="（" right="）" />
+        <Symbol text="）" left="（" />
+        <Symbol text="…" />
+        <Symbol text="@" />
+        <Symbol text="“" right="”" />
+        <Symbol text="”" left="“" />
+        <Symbol text="。" />
+        <Symbol text="，" />
+        <Symbol text="、" />
+        <Symbol text="？" />
+        <Symbol text="！" />
+        <Symbol text="." />
+    </Category>
+    <Category comment="常用-英文" lock="false" name="\ue34c" mode="2">
+        <Symbol text="[" right="]" />
+        <Symbol text="]" left="[" />
+        <Symbol text="{" right="}" />
+        <Symbol text="}" left="{" />
+        <Symbol text="÷" />
+        <Symbol text="%" label="英" />
+        <Symbol text="^" />
+        <Symbol text="*" />
+        <Symbol text="+" />
+        <Symbol text="=" />
+        <Symbol text="-" />
+        <Symbol text="\" />
+        <Symbol text=":" label="英" />
+        <Symbol text="_" />
+        <Symbol text="(" label="英" right=")" />
+        <Symbol text=")" label="英" left="(" />
+        <Symbol text="#" />
+        <Symbol text="&amp;" label="英" />
+        <Symbol text="@" />
+        <Symbol text="&quot;" right="&quot;" />
+        <Symbol text="·" />
+        <Symbol text="." />
+        <Symbol text="," />
+        <Symbol text="?" label="英" />
+        <Symbol text="!" label="英" />
+        <Symbol text="…" />
+        <Symbol text="'" label="英" />
+    </Category>
+    <Category comment="中文" lock="false" name="中">
+        <Symbol text="-" />
+        <Symbol text="／" />
+        <Symbol text="｜" />
+        <Symbol text="＼" />
+        <Symbol text="【" right="】" />
+        <Symbol text="】" left="【" />
+        <Symbol text="“" right="”" />
+        <Symbol text="”" left="“" />
+        <Symbol text="「" right="」" />
+        <Symbol text="」" left="「" />
+        <Symbol text="～" />
+        <Symbol text="—" />
+        <Symbol text="：" />
+        <Symbol text="；" />
+        <Symbol text="《" right="》" />
+        <Symbol text="》" left="《" />
+        <Symbol text="¥" label="英" />
+        <Symbol text="#" /> 
+        <Symbol text="@" />
+        <Symbol text="·" />
+        <Symbol text="，" />
+        <Symbol text="、" />
+        <Symbol text="。" />
+        <Symbol text="？" />
+        <Symbol text="！" />
+        <Symbol text="…" />
+    </Category>
+    <Category comment="英文" lock="false" name="EN">
+        <Symbol text="-" />
+        <Symbol text="_" />
+        <Symbol text="|" label="英" />
+        <Symbol text="#" label="英" />
+        <Symbol text="%" label="英" />
+        <Symbol text="&amp;" label="英" />
+        <Symbol text="^" />
+        <Symbol text="*" />
+        <Symbol text="+" />
+        <Symbol text="=" />
+        <Symbol text="~" label="英" />
+        <Symbol text="/" />
+        <Symbol text=":" label="英" />
+        <Symbol text=";" label="英" />
+        <Symbol text="(" label="英" right=")" />
+        <Symbol text=")" label="英" left="(" />
+        <Symbol text="$" />
+        <Symbol text="@" />
+        <Symbol text="&quot;" right="&quot;" />
+        <Symbol text="·" />
+        <Symbol text="." />
+        <Symbol text="," />
+        <Symbol text="?" label="英" />
+        <Symbol text="!" label="英" />
+        <Symbol text="…" />
+        <Symbol text="'" label="英" />
+    </Category>
+    <Category comment="括号" lock="false" name="\ue34d">
+        <Symbol text="【" right="】" />
+        <Symbol text="】" left="【" />
+        <Symbol text="「" right="」" />
+        <Symbol text="」" left="「" />
+        <Symbol text="（" right="）" />
+        <Symbol text="）" left="（" />
+        <Symbol text="［" right="］" />
+        <Symbol text="］" left="［" />
+        <Symbol text="｛" right="｝" />
+        <Symbol text="｝" left="｛" />
+        <Symbol text="〖" right="〗" />
+        <Symbol text="〗" left="〖" />
+        <Symbol text="『" right="』" />
+        <Symbol text="』" left="『" />
+        <Symbol text="〈" right="〉" />
+        <Symbol text="〉" left="〈" />
+        <Symbol text="〔" right="〕" />
+        <Symbol text="〕" left="〔" />
+        <Symbol text="《" right="》" />
+        <Symbol text="》" left="《" />
+        <Symbol text="«" right="»" />
+        <Symbol text="»" left="«" />
+        <Symbol text="‘" right="’" />
+        <Symbol text="’" left="‘" />
+        <Symbol text="“" right="”" />
+        <Symbol text="”" left="“" />
+    </Category>
+    <Category comment="货币" lock="false" name="¥">
+        <Symbol text="$" />
+        <Symbol text="¥" label="英" />
+        <Symbol text="£" />
+        <Symbol text="€" />
+        <Symbol text="¢" />
+        <Symbol text="฿" />
+        <Symbol text="¤" />
+        <Symbol text="♀" />
+        <Symbol text="♂" />
+        <Symbol text="¦" />
+        <Symbol text="{" right="}" />
+        <Symbol text="}" left="{" />
+        <Symbol text="[" right="]" />
+        <Symbol text="]" left="[" />
+        <Symbol text="&lt;" right=">" />
+        <Symbol text=">" left="&lt;" />
+        <Symbol text="`" />
+        <Symbol text="´" />
+        <Symbol text="¶" />
+        <Symbol text="§" />
+        <Symbol text="¡" />
+        <Symbol text="¿" />
+        <Symbol text="¨" />
+        <Symbol text="″" />
+        <Symbol text="‖" />
+        <Symbol text="→" />
+    </Category>
+    <Category comment="数学" lock="false" name="数">
+        <Symbol text="+" />
+        <Symbol text="-" />
+        <Symbol text="×" />
+        <Symbol text="÷" />
+        <Symbol text="/" />
+        <Symbol text="=" />
+        <Symbol text="≠" />
+        <Symbol text="≈" />
+        <Symbol text="＞" />
+        <Symbol text="＜" />
+        <Symbol text="·" />
+        <Symbol text="±" />
+        <Symbol text="^" />
+        <Symbol text="%" label="英" />
+        <Symbol text="‰" />
+        <Symbol text="℅" />
+        <Symbol text="≥" />
+        <Symbol text="≤" />
+        <Symbol text="≮" />
+        <Symbol text="≯" />
+        <Symbol text="√" />
+        <Symbol text="∛" />
+        <Symbol text="∜" />
+        <Symbol text="°" />
+        <Symbol text="℃" />
+        <Symbol text="℉" />
+    </Category>
+    <Category comment="序号1" lock="false" name="㈠" is_large="true">
+        <Symbol text="㈠" />
+        <Symbol text="㈡" />
+        <Symbol text="㈢" />
+        <Symbol text="㈣" />
+        <Symbol text="㈤" />
+        <Symbol text="㈥" />
+        <Symbol text="㈦" />
+        <Symbol text="㈧" />
+        <Symbol text="㈨" />
+        <Symbol text="㈩" />
+        <Symbol text="壹" />
+        <Symbol text="贰" />
+        <Symbol text="叁" />
+        <Symbol text="肆" />
+        <Symbol text="伍" />
+        <Symbol text="陆" />
+        <Symbol text="柒" />
+        <Symbol text="捌" />
+        <Symbol text="玖" />
+        <Symbol text="拾" />
+        <Symbol text="Ⅶ" />
+        <Symbol text="Ⅷ" />
+        <Symbol text="Ⅸ" />
+        <Symbol text="Ⅹ" />
+        <Symbol text="Ⅺ" />
+        <Symbol text="Ⅻ" />
+    </Category>
+    <Category comment="序号2" lock="false" name="\ue34e" is_large="true">
+        <Symbol text="①" />
+        <Symbol text="②" />
+        <Symbol text="③" />
+        <Symbol text="④" />
+        <Symbol text="⑤" />
+        <Symbol text="⑥" />
+        <Symbol text="⑦" />
+        <Symbol text="⑧" />
+        <Symbol text="⑨" />
+        <Symbol text="⑩" />
+        <Symbol text="❶" />
+        <Symbol text="❷" />
+        <Symbol text="❸" />
+        <Symbol text="❹" />
+        <Symbol text="❺" />
+        <Symbol text="❻" />
+        <Symbol text="❼" />
+        <Symbol text="❽" />
+        <Symbol text="❾" />
+        <Symbol text="❿" />
+        <Symbol text="Ⅰ" />
+        <Symbol text="Ⅱ" />
+        <Symbol text="Ⅲ" />
+        <Symbol text="Ⅳ" />
+        <Symbol text="Ⅴ" />
+        <Symbol text="Ⅵ" />
+    </Category>
+    <Category comment="序号3" lock="false" name="X²">
+        <Symbol text="⁰" />
+        <Symbol text="¹" />
+        <Symbol text="²" />
+        <Symbol text="³" />
+        <Symbol text="⁴" />
+        <Symbol text="⁵" />
+        <Symbol text="⁶" />
+        <Symbol text="⁷" />
+        <Symbol text="⁸" />
+        <Symbol text="⁹" />
+        <Symbol text="₀" />
+        <Symbol text="₁" />
+        <Symbol text="₂" />
+        <Symbol text="₃" />
+        <Symbol text="₄" />
+        <Symbol text="₅" />
+        <Symbol text="₆" />
+        <Symbol text="₇" />
+        <Symbol text="₈" />
+        <Symbol text="₉" />
+        <Symbol text="ₐ" />
+        <Symbol text="ₑ" />
+        <Symbol text="ₒ" />
+        <Symbol text="ₓ" />
+        <Symbol text="ₔ" />
+        <Symbol text="ⁱ" />
+        <Symbol text="ⁿ" />
+    </Category>
+    <Category comment="拼音" lock="false" name="ǎ" is_large="true">
+        <Symbol text="ā" />
+        <Symbol text="á" />
+        <Symbol text="ǎ" />
+        <Symbol text="à" />
+        <Symbol text="ō" />
+        <Symbol text="ó" />
+        <Symbol text="ǒ" />
+        <Symbol text="ò" />
+        <Symbol text="ǖ" />
+        <Symbol text="ǘ" />
+        <Symbol text="ē" />
+        <Symbol text="é" />
+        <Symbol text="ě" />
+        <Symbol text="è" />
+        <Symbol text="ī" />
+        <Symbol text="í" />
+        <Symbol text="ǐ" />
+        <Symbol text="ì" />
+        <Symbol text="ǚ" />
+        <Symbol text="ǜ" />
+        <Symbol text="ū" />
+        <Symbol text="ú" />
+        <Symbol text="ǔ" />
+        <Symbol text="ù" />
+    </Category>
+    <Category comment="日语1" lock="false" name="あ" is_large="true">
+        <Symbol text="あ" />
+        <Symbol text="い" />
+        <Symbol text="う" />
+        <Symbol text="え" />
+        <Symbol text="お" />
+        <Symbol text="か" />
+        <Symbol text="き" />
+        <Symbol text="く" />
+        <Symbol text="け" />
+        <Symbol text="こ" />
+        <Symbol text="さ" />
+        <Symbol text="し" />
+        <Symbol text="す" />
+        <Symbol text="せ" />
+        <Symbol text="そ" />
+        <Symbol text="た" />
+        <Symbol text="ち" />
+        <Symbol text="つ" />
+        <Symbol text="て" />
+        <Symbol text="と" />
+        <Symbol text="ぁ" />
+        <Symbol text="ぃ" />
+        <Symbol text="ぅ" />
+        <Symbol text="ぇ" />
+        <Symbol text="ぉ" />
+        <Symbol text="っ" />
+        <Symbol text="ゎ" />
+    </Category>
+    <Category comment="日语2" lock="false" name="な" is_large="true">
+        <Symbol text="な" />
+        <Symbol text="に" />
+        <Symbol text="ぬ" />
+        <Symbol text="ね" />
+        <Symbol text="の" />
+        <Symbol text="は" />
+        <Symbol text="ひ" />
+        <Symbol text="ふ" />
+        <Symbol text="へ" />
+        <Symbol text="ほ" />
+        <Symbol text="ま" />
+        <Symbol text="み" />
+        <Symbol text="む" />
+        <Symbol text="め" />
+        <Symbol text="も" />
+        <Symbol text="ら" />
+        <Symbol text="り" />
+        <Symbol text="る" />
+        <Symbol text="れ" />
+        <Symbol text="ろ" />
+        <Symbol text="や" />
+        <Symbol text="ゆ" />
+        <Symbol text="よ" />
+        <Symbol text="ゃ" />
+        <Symbol text="ゅ" />
+        <Symbol text="ょ" />
+        <Symbol text="わ" />
+    </Category>
+    <Category comment="日语3" lock="false" name="が" is_large="true">
+        <Symbol text="が" />
+        <Symbol text="ぎ" />
+        <Symbol text="ぐ" />
+        <Symbol text="げ" />
+        <Symbol text="ご" />
+        <Symbol text="ざ" />
+        <Symbol text="じ" />
+        <Symbol text="ず" />
+        <Symbol text="ぜ" />
+        <Symbol text="ぞ" />
+        <Symbol text="だ" />
+        <Symbol text="ぢ" />
+        <Symbol text="づ" />
+        <Symbol text="で" />
+        <Symbol text="ど" />
+        <Symbol text="ば" />
+        <Symbol text="び" />
+        <Symbol text="ぶ" />
+        <Symbol text="べ" />
+        <Symbol text="ぼ" />
+        <Symbol text="ぱ" />
+        <Symbol text="ぴ" />
+        <Symbol text="ぷ" />
+        <Symbol text="ぺ" />
+        <Symbol text="ぽ" />
+        <Symbol text="を" />
+        <Symbol text="ん" />
+    </Category>
+    <Category comment="日语4" lock="false" name="サ" is_large="true">
+        <Symbol text="ア" />
+        <Symbol text="イ" />
+        <Symbol text="ウ" />
+        <Symbol text="エ" />
+        <Symbol text="オ" />
+        <Symbol text="カ" />
+        <Symbol text="キ" />
+        <Symbol text="ク" />
+        <Symbol text="ケ" />
+        <Symbol text="コ" />
+        <Symbol text="サ" />
+        <Symbol text="シ" />
+        <Symbol text="ス" />
+        <Symbol text="セ" />
+        <Symbol text="ソ" />
+        <Symbol text="タ" />
+        <Symbol text="チ" />
+        <Symbol text="ツ" />
+        <Symbol text="テ" />
+        <Symbol text="ト" />
+        <Symbol text="ァ" />
+        <Symbol text="ィ" />
+        <Symbol text="ゥ" />
+        <Symbol text="ェ" />
+        <Symbol text="ォ" />
+        <Symbol text="ワ" />
+        <Symbol text="ヮ" />
+    </Category>
+    <Category comment="日语5" lock="false" name="ヲ" is_large="true">
+        <Symbol text="ナ" />
+        <Symbol text="ニ" />
+        <Symbol text="ヌ" />
+        <Symbol text="ネ" />
+        <Symbol text="ノ" />
+        <Symbol text="ハ" />
+        <Symbol text="ヒ" />
+        <Symbol text="フ" />
+        <Symbol text="ヘ" />
+        <Symbol text="ホ" />
+        <Symbol text="マ" />
+        <Symbol text="ミ" />
+        <Symbol text="ム" />
+        <Symbol text="メ" />
+        <Symbol text="モ" />
+        <Symbol text="ラ" />
+        <Symbol text="リ" />
+        <Symbol text="ル" />
+        <Symbol text="レ" />
+        <Symbol text="ロ" />
+        <Symbol text="ヤ" />
+        <Symbol text="ユ" />
+        <Symbol text="ヨ" />
+        <Symbol text="ャ" />
+        <Symbol text="ュ" />
+        <Symbol text="ョ" />
+        <Symbol text="ヲ" />
+    </Category>
+    <Category comment="日语6" lock="false" name="ガ" is_large="true">
+        <Symbol text="ガ" />
+        <Symbol text="ギ" />
+        <Symbol text="グ" />
+        <Symbol text="ゲ" />
+        <Symbol text="ゴ" />
+        <Symbol text="ザ" />
+        <Symbol text="ジ" />
+        <Symbol text="ズ" />
+        <Symbol text="ゼ" />
+        <Symbol text="ゾ" />
+        <Symbol text="ダ" />
+        <Symbol text="ジ" />
+        <Symbol text="ズ" />
+        <Symbol text="デ" />
+        <Symbol text="ド" />
+        <Symbol text="バ" />
+        <Symbol text="ビ" />
+        <Symbol text="ブ" />
+        <Symbol text="ベ" />
+        <Symbol text="ボ" />
+        <Symbol text="パ" />
+        <Symbol text="ピ" />
+        <Symbol text="プ" />
+        <Symbol text="ペ" />
+        <Symbol text="ポ" />
+        <Symbol text="ッ" />
+        <Symbol text="ン" />
+    </Category>
+    <Category comment="希腊1" lock="false" name="Ω" is_large="true">
+        <Symbol text="Α" />
+        <Symbol text="Β" />
+        <Symbol text="Γ" />
+        <Symbol text="Δ" />
+        <Symbol text="Ε" />
+        <Symbol text="Ζ" />
+        <Symbol text="Η" />
+        <Symbol text="Θ" />
+        <Symbol text="Ι" />
+        <Symbol text="Κ" />
+        <Symbol text="Λ" />
+        <Symbol text="Μ" />
+        <Symbol text="Ν" />
+        <Symbol text="Ξ" />
+        <Symbol text="Ο" />
+        <Symbol text="Π" />
+        <Symbol text="Ρ" />
+        <Symbol text="Σ" />
+        <Symbol text="Τ" />
+        <Symbol text="Υ" />
+        <Symbol text="Φ" />
+        <Symbol text="Χ" />
+        <Symbol text="Ψ" />
+        <Symbol text="Ω" />
+    </Category>
+    <Category comment="希腊2" lock="false" name="β" is_large="true">
+        <Symbol text="α" />
+        <Symbol text="β" />
+        <Symbol text="γ" />
+        <Symbol text="δ" />
+        <Symbol text="ε" />
+        <Symbol text="ζ" />
+        <Symbol text="η" />
+        <Symbol text="θ" />
+        <Symbol text="ι" />
+        <Symbol text="κ" />
+        <Symbol text="λ" />
+        <Symbol text="μ" />
+        <Symbol text="ν" />
+        <Symbol text="ξ" />
+        <Symbol text="ο" />
+        <Symbol text="π" />
+        <Symbol text="ρ" />
+        <Symbol text="σ" />
+        <Symbol text="τ" />
+        <Symbol text="υ" />
+        <Symbol text="φ" />
+        <Symbol text="χ" />
+        <Symbol text="ψ" />
+        <Symbol text="ω" />
+        <Symbol text="ς" />
+    </Category>
+    <Category comment="拉丁1" lock="false" name="Ä" is_large="true">
+        <Symbol text="Á" />
+        <Symbol text="É" />
+        <Symbol text="Í" />
+        <Symbol text="Ó" />
+        <Symbol text="Ú" />
+        <Symbol text="À" />
+        <Symbol text="È" />
+        <Symbol text="Ì" />
+        <Symbol text="Ò" />
+        <Symbol text="Ù" />
+        <Symbol text="Â" />
+        <Symbol text="Ê" />
+        <Symbol text="Î" />
+        <Symbol text="Ô" />
+        <Symbol text="Û" />
+        <Symbol text="Ä" />
+        <Symbol text="Ë" />
+        <Symbol text="Ï" />
+        <Symbol text="Ö" />
+        <Symbol text="Ü" />
+        <Symbol text="Ą" />
+        <Symbol text="Ę" />
+        <Symbol text="Į" />
+        <Symbol text="Ų" />
+    </Category>
+    <Category comment="拉丁2" lock="false" name="ä" is_large="true">
+        <Symbol text="á" />
+        <Symbol text="é" />
+        <Symbol text="í" />
+        <Symbol text="ó" />
+        <Symbol text="ú" />
+        <Symbol text="à" />
+        <Symbol text="è" />
+        <Symbol text="ì" />
+        <Symbol text="ò" />
+        <Symbol text="ù" />
+        <Symbol text="â" />
+        <Symbol text="ê" />
+        <Symbol text="î" />
+        <Symbol text="ô" />
+        <Symbol text="û" />
+        <Symbol text="ä" />
+        <Symbol text="ë" />
+        <Symbol text="ï" />
+        <Symbol text="ö" />
+        <Symbol text="ü" />
+        <Symbol text="ą" />
+        <Symbol text="ę" />
+        <Symbol text="į" />
+        <Symbol text="ų" />
+    </Category>
+    <Category comment="拉丁3" lock="false" name="Æ" is_large="true">
+        <Symbol text="Ç" />
+        <Symbol text="Ş" />
+        <Symbol text="Ã" />
+        <Symbol text="Õ" />
+        <Symbol text="Ñ" />
+        <Symbol text="Æ" />
+        <Symbol text="Œ" />
+        <Symbol text="Ø" />
+        <Symbol text="Ĳ" />
+        <Symbol text="ẞ" />
+        <Symbol text="ç" />
+        <Symbol text="ş" />
+        <Symbol text="ã" />
+        <Symbol text="õ" />
+        <Symbol text="ñ" />
+        <Symbol text="æ" />
+        <Symbol text="œ" />
+        <Symbol text="ø" />
+        <Symbol text="ĳ" />
+        <Symbol text="ß" />
+        <Symbol text="Þ" />
+        <Symbol text="þ" />
+        <Symbol text="Ý" />
+        <Symbol text="ý" />
+        <Symbol text="Ÿ" />
+        <Symbol text="ÿ" />
+    </Category>
+    <Category comment="注音1" lock="false" name="ㄌ" is_large="true">
+        <Symbol text="ㄅ" />
+        <Symbol text="ㄆ" />
+        <Symbol text="ㄇ" />
+        <Symbol text="ㄈ" />
+        <Symbol text="ㄉ" />
+        <Symbol text="ㄊ" />
+        <Symbol text="ㄋ" />
+        <Symbol text="ㄌ" />
+        <Symbol text="ㄍ" />
+        <Symbol text="ㄎ" />
+        <Symbol text="ㄏ" />
+        <Symbol text="ㄐ" />
+        <Symbol text="ㄑ" />
+        <Symbol text="ㄒ" />
+        <Symbol text="ㄓ" />
+        <Symbol text="ㄔ" />
+        <Symbol text="ㄕ" />
+        <Symbol text="ㄖ" />
+        <Symbol text="ㄗ" />
+        <Symbol text="ㄘ" />
+        <Symbol text="ㄙ" />
+        <Symbol text="ㄚ" />
+        <Symbol text="ㄛ" />
+        <Symbol text="ㄜ" />
+        <Symbol text="ㄝ" />
+    </Category>
+    <Category comment="注音2" lock="false" name="ㄞ" is_large="true">
+        <Symbol text="ㄞ" />
+        <Symbol text="ㄟ" />
+        <Symbol text="ㄠ" />
+        <Symbol text="ㄡ" />
+        <Symbol text="ㄢ" />
+        <Symbol text="ㄣ" />
+        <Symbol text="ㄤ" />
+        <Symbol text="ㄥ" />
+        <Symbol text="ㄦ" />
+        <Symbol text="ㄧ" />
+        <Symbol text="ㄨ" />
+        <Symbol text="ㄩ" />
+        <Symbol text="ㄪ" />
+        <Symbol text="ㄫ" />
+        <Symbol text="ㄬ" />
+        <Symbol text="ㄭ" />
+        <Symbol text="ㄮ" />
+        <Symbol text="ㄯ" />
+        <Symbol text="ㆬ" />
+        <Symbol text="ㆭ" />
+        <Symbol text="ㆴ" />
+        <Symbol text="ㆵ" />
+        <Symbol text="ㆶ" />
+        <Symbol text="ㆷ" />
+        <Symbol text="ㆻ" />
+    </Category>
+    <Category comment="偏旁1" lock="false" name="廴" is_large="true">
+        <Symbol text="一" />
+        <Symbol text="丨" />
+        <Symbol text="丶" />
+        <Symbol text="丿" />
+        <Symbol text="乙" />
+        <Symbol text="亅" />
+        <Symbol text="乚" />
+        <Symbol text="乛" />
+        <Symbol text="冫" />
+        <Symbol text="丷" />
+        <Symbol text="亻" />
+        <Symbol text="亠" />
+        <Symbol text="刂" />
+        <Symbol text="勹" />
+        <Symbol text="匕" />
+        <Symbol text="冂" />
+        <Symbol text="冖" />
+        <Symbol text="匚" />
+        <Symbol text="匸" />
+        <Symbol text="凵" />
+        <Symbol text="讠" />
+        <Symbol text="宀" />
+        <Symbol text="屮" />
+        <Symbol text="廴" />
+        <Symbol text="厶" />
+        <Symbol text="卩" />
+    </Category>
+    <Category comment="偏旁2" lock="false" name="疒" is_large="true">
+        <Symbol text="彡" />
+        <Symbol text="彳" />
+        <Symbol text="忄" />
+        <Symbol text="扌" />
+        <Symbol text="攵" />
+        <Symbol text="饣" />
+        <Symbol text="囗" />
+        <Symbol text="⻍" />
+        <Symbol text="氵" />
+        <Symbol text="灬" />
+        <Symbol text="巛" />
+        <Symbol text="廾" />
+        <Symbol text="爫" />
+        <Symbol text="爿" />
+        <Symbol text="犭" />
+        <Symbol text="⺩" />
+        <Symbol text="疋" />
+        <Symbol text="疒" />
+        <Symbol text="夊" />
+        <Symbol text="艹" />
+<!--        <Symbol text="⺵" />-->
+        <Symbol text="罓" />
+        <Symbol text="彐" />
+        <Symbol text="罒" />
+        <Symbol text="⺼" />
+        <Symbol text="⻏" />
+        <Symbol text="夂" />
+    </Category>
+    <Category comment="偏旁3" lock="false" name="旡" is_large="true">
+        <Symbol text="舛" />
+        <Symbol text="歺" />
+        <Symbol text="艸" />
+        <Symbol text="殳" />
+        <Symbol text="虍" />
+        <Symbol text="礻" />
+        <Symbol text="衤" />
+        <Symbol text="耂" />
+        <Symbol text="牜" />
+        <Symbol text="钅" />
+        <Symbol text="辵" />
+        <Symbol text="皿" />
+        <Symbol text="隹" />
+        <Symbol text="肀" />
+        <Symbol text="卝" />
+        <Symbol text="襾" />
+        <Symbol text="聿" />
+        <Symbol text="氺" />
+        <Symbol text="禸" />
+        <Symbol text="臼" />
+        <Symbol text="癶" />
+        <Symbol text="戶" />
+        <Symbol text="⺔" />
+        <Symbol text="尢" />
+        <Symbol text="旡" />
+        <Symbol text="尣" />
+        <Symbol text="𡯂" />
+    </Category>
+    <Category comment="特殊1" lock="false" name="\ue34f">
+        <Symbol text="△" />
+        <Symbol text="▽" />
+        <Symbol text="◁" />
+        <Symbol text="▷" />
+        <Symbol text="○" />
+        <Symbol text="□" />
+        <Symbol text="♢" />
+        <Symbol text="♡" />
+        <Symbol text="♤" />
+        <Symbol text="♧" />
+        <Symbol text="▲" />
+        <Symbol text="▼" />
+        <Symbol text="◀︎" />
+        <Symbol text="▶︎" />
+        <Symbol text="︎●" />
+        <Symbol text="■" />
+        <Symbol text="♦︎" />
+        <Symbol text="♥︎" />
+        <Symbol text="♠︎" />
+        <Symbol text="♣︎" />
+        <Symbol text="◇" />
+        <Symbol text="☆" />
+        <Symbol text="☼" />
+        <Symbol text="◆" />
+        <Symbol text="★" />
+        <Symbol text="☀︎" />
+    </Category>
+    <Category comment="特殊2" lock="false" name="\ue350">
+        <Symbol text="︵" />
+        <Symbol text="︿" />
+        <Symbol text="﹃" />
+        <Symbol text="︷" />
+        <Symbol text="︻" />
+        <Symbol text="↑" />
+        <Symbol text="←" />
+        <Symbol text="↖" />
+        <Symbol text="↗" />
+        <Symbol text="☑︎" />
+        <Symbol text="︶" />
+        <Symbol text="﹀" />
+        <Symbol text="﹄" />
+        <Symbol text="︸" />
+        <Symbol text="︼" />
+        <Symbol text="↓" />
+        <Symbol text="→" />
+        <Symbol text="↘" />
+        <Symbol text="↙" />
+        <Symbol text="☒" />
+        <Symbol text="℗" />
+        <Symbol text="®" />
+        <Symbol text="©" />
+        <Symbol text="℡" />
+        <Symbol text="™" />
+        <Symbol text="㏇" />
+    </Category>
+    <Category comment="特殊3" lock="false" name="\ue351">
+        <Symbol text="ʚ" />
+        <Symbol text="ɞ" />
+        <Symbol text="⊱" />
+        <Symbol text="⊰" />
+        <Symbol text="༺" />
+        <Symbol text="༻" />
+        <Symbol text="⋋" />
+        <Symbol text="⋌" />
+        <Symbol text="ઇ" />
+        <Symbol text="ଓ" />
+        <Symbol text="╯" />
+        <Symbol text="╰" />
+        <Symbol text="꧁" />
+        <Symbol text="꧂" />
+        <Symbol text="❝" />
+        <Symbol text="❞" />
+        <Symbol text="⋛" />
+        <Symbol text="⋚" />
+        <Symbol text="☜" />
+        <Symbol text="☞" />
+        <Symbol text="✿" />
+        <Symbol text="❀" />
+        <Symbol text="❁" />
+        <Symbol text="๑" />
+        <Symbol text="এ" />
+        <Symbol text="ঞ" />
+    </Category>
+    <Category comment="特殊4" lock="false" name="\ue352">
+        <Symbol text="♔" />
+        <Symbol text="♕" />
+        <Symbol text="♖" />
+        <Symbol text="♗" />
+        <Symbol text="♘" />
+        <Symbol text="♙" />
+        <Symbol text="༊" />
+        <Symbol text="๓" />
+        <Symbol text="დ" />
+        <Symbol text="ღ" />
+        <Symbol text="♚" />
+        <Symbol text="♛" />
+        <Symbol text="♜" />
+        <Symbol text="♝" />
+        <Symbol text="♞" />
+        <Symbol text="♟︎" />
+        <Symbol text="❥" />
+        <Symbol text="☙" />
+        <Symbol text="❦" />
+        <Symbol text="❧" />
+        <Symbol text="⚀" />
+        <Symbol text="⚁" />
+        <Symbol text="⚂" />
+        <Symbol text="⚃" />
+        <Symbol text="⚄" />
+        <Symbol text="⚅" />
+    </Category>
+    <Category comment="特殊5" lock="false" name="\ue353">
+        <Symbol text="✦" />
+        <Symbol text="✧" />
+        <Symbol text="❅" />
+        <Symbol text="❆" />
+        <Symbol text="༄" />
+        <Symbol text="࿓" />
+        <Symbol text="↯" />
+        <Symbol text="☼" />
+        <Symbol text="☽" />
+        <Symbol text="☾" />
+        <Symbol text="♩" />
+        <Symbol text="♪" />
+        <Symbol text="♫" />
+        <Symbol text="♬" />
+        <Symbol text="♭" />
+        <Symbol text="♮" />
+        <Symbol text="♯" />
+        <Symbol text="𝄞" />
+        <Symbol text="𝄡" />
+        <Symbol text="𝄢" />
+        <Symbol text="𝄪" />
+        <Symbol text="𝄫" />
+        <Symbol text="𓏢" />
+        <Symbol text="◔" />
+        <Symbol text="◕" />
+        <Symbol text="☉" />
+    </Category>
+</Symbols>

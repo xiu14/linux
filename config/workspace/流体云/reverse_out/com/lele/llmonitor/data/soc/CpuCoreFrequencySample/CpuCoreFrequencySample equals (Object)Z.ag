@@ -1,0 +1,73 @@
+# Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->equals(Ljava/lang/Object;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:boolean
+
+equals-BB@0x0 : [ equals-BB@0x6 equals-BB@0x8 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-ne                v4, v5, +003h
+
+equals-BB@0x6 : 
+	2       (00000006) return               v0
+
+equals-BB@0x8 : [ equals-BB@0x12 equals-BB@0x14 ]
+	3       (00000008) instance-of          v1, v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;
+	4       (0000000c) const/4              v2, 0
+	5       (0000000e) if-nez               v1, +003h
+
+equals-BB@0x12 : 
+	6       (00000012) return               v2
+
+equals-BB@0x14 : [ equals-BB@0x24 equals-BB@0x26 ]
+	7       (00000014) check-cast           v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;
+	8       (00000018) iget                 v1, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->coreId I
+	9       (0000001c) iget                 v3, v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->coreId I
+	10      (00000020) if-eq                v1, v3, +003h
+
+equals-BB@0x24 : 
+	11      (00000024) return               v2
+
+equals-BB@0x26 : [ equals-BB@0x32 equals-BB@0x34 ]
+	12      (00000026) iget-boolean         v1, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->online Z
+	13      (0000002a) iget-boolean         v3, v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->online Z
+	14      (0000002e) if-eq                v1, v3, +003h
+
+equals-BB@0x32 : 
+	15      (00000032) return               v2
+
+equals-BB@0x34 : [ equals-BB@0x48 equals-BB@0x4a ]
+	16      (00000034) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->policy Ljava/lang/String;
+	17      (00000038) iget-object          v3, v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->policy Ljava/lang/String;
+	18      (0000003c) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	19      (00000042) move-result          v1
+	20      (00000044) if-nez               v1, +003h
+
+equals-BB@0x48 : 
+	21      (00000048) return               v2
+
+equals-BB@0x4a : [ equals-BB@0x5e equals-BB@0x60 ]
+	22      (0000004a) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->currentMHz Ljava/lang/Integer;
+	23      (0000004e) iget-object          v3, v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->currentMHz Ljava/lang/Integer;
+	24      (00000052) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	25      (00000058) move-result          v1
+	26      (0000005a) if-nez               v1, +003h
+
+equals-BB@0x5e : 
+	27      (0000005e) return               v2
+
+equals-BB@0x60 : [ equals-BB@0x74 equals-BB@0x76 ]
+	28      (00000060) iget-object          v4, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->maxMHz Ljava/lang/Integer;
+	29      (00000064) iget-object          v5, v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->maxMHz Ljava/lang/Integer;
+	30      (00000068) invoke-static        v4, v5, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	31      (0000006e) move-result          v4
+	32      (00000070) if-nez               v4, +003h
+
+equals-BB@0x74 : 
+	33      (00000074) return               v2
+
+equals-BB@0x76 : 
+	34      (00000076) return               v0
+

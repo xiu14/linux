@@ -1,0 +1,52 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLoadAvg1FromUptime()Ljava/lang/Float; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:java.lang.Float
+
+readLoadAvg1FromUptime-BB@0x0 : [ readLoadAvg1FromUptime-BB@0x22 readLoadAvg1FromUptime-BB@0x24 ]
+	0       (00000000) const-string         v0, "/system/bin/uptime"
+	1       (00000004) filled-new-array     v0, [Ljava/lang/String;
+	2       (0000000a) move-result-object   v2
+	3       (0000000c) const/4              v5, 2
+	4       (0000000e) const/4              v6, 0
+	5       (00000010) const-wide/16        v3, 0
+	6       (00000014) move-object          v1, v7
+	7       (00000016) invoke-static/range  v1 ... v6, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->runCommand$default(Lcom/lele/llmonitor/data/soc/LinuxSocDataSource; [Ljava/lang/String; J I Ljava/lang/Object;)Ljava/lang/String;
+	8       (0000001c) move-result-object   v7
+	9       (0000001e) if-nez               v7, +003h
+
+readLoadAvg1FromUptime-BB@0x22 : [ readLoadAvg1FromUptime-BB@0x56 ]
+	10      (00000022) goto                 +1ah
+
+readLoadAvg1FromUptime-BB@0x24 : [ readLoadAvg1FromUptime-BB@0x56 readLoadAvg1FromUptime-BB@0x5a ]
+	11      (00000024) const-string         v0, "load averages?:\s*([0-9]+(?:\.[0-9]+)?)[,\s]+([0-9]+(?:\.[0-9]+)?)[,\s]+([0-9]+(?:\.[0-9]+)?)"
+	12      (00000028) const/16             v1, 66
+	13      (0000002c) invoke-static        v0, v1, Ljava/util/regex/Pattern;->compile(Ljava/lang/String; I)Ljava/util/regex/Pattern;
+	14      (00000032) move-result-object   v0
+	15      (00000034) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	16      (0000003a) invoke-virtual       v0, v7, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+	17      (00000040) move-result-object   v0
+	18      (00000042) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	19      (00000048) const/4              v1, 0
+	20      (0000004a) invoke-static        v0, v1, v7, Ldf2;->h(Ljava/util/regex/Matcher; I Ljava/lang/CharSequence;)Lg02;
+	21      (00000050) move-result-object   v7
+	22      (00000052) if-nez               v7, +004h
+
+readLoadAvg1FromUptime-BB@0x56 : 
+	23      (00000056) const/4              v7, 0
+	24      (00000058) return-object        v7
+
+readLoadAvg1FromUptime-BB@0x5a : 
+	25      (0000005a) invoke-virtual       v7, Lg02;->a()Ljava/util/List;
+	26      (00000060) move-result-object   v7
+	27      (00000062) const/4              v0, 1
+	28      (00000064) check-cast           v7, Le02;
+	29      (00000068) invoke-virtual       v7, v0, Le02;->get(I)Ljava/lang/Object;
+	30      (0000006e) move-result-object   v7
+	31      (00000070) check-cast           v7, Ljava/lang/String;
+	32      (00000074) invoke-static        v7, Lnh3;->a0(Ljava/lang/String;)Ljava/lang/Float;
+	33      (0000007a) move-result-object   v7
+	34      (0000007c) return-object        v7
+

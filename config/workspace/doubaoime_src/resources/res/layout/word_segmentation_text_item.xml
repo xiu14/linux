@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.input.fragment.custom_symbol.ui.SymbolTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/ime_dp_16"
+    android:textColor="@color/ime_word_segmentation_item_text_color"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:id="@+id/word_segmentation_text_item"
+    android:background="@drawable/bg_word_seg_item_unselect"
+    android:padding="@dimen/ime_dp_5"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/ime_dp_34"
+    android:layout_marginTop="7dp"
+    android:minWidth="@dimen/ime_dp_26"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:includeFontPadding="false"
+    android:layout_marginEnd="@dimen/ime_dp_3"/>

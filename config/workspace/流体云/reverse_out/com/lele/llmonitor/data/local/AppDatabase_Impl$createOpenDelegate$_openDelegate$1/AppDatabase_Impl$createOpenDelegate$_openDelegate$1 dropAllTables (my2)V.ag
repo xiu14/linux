@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;->dropAllTables(Lmy2;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:my2
+#
+# - return:void
+
+dropAllTables-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) const-string         v0, "DROP TABLE IF EXISTS `battery_history`"
+	2       (0000000a) invoke-static        v0, v1, Lqc1;->r(Ljava/lang/String; Lmy2;)V
+	3       (00000010) return-void          
+

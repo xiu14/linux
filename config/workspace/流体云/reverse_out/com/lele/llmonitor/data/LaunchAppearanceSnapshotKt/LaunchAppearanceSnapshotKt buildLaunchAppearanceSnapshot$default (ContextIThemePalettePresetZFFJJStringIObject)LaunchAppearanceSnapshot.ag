@@ -1,0 +1,45 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->buildLaunchAppearanceSnapshot$default(Landroid/content/Context; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String; I Ljava/lang/Object;)Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.Context
+# - v5:int
+# - v6:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v7:boolean
+# - v8:float
+# - v9:float
+# - v10:long
+# - v11:long
+# - v12:java.lang.String
+# - v13:int
+# - v14:java.lang.Object
+#
+# - return:com.lele.llmonitor.data.LaunchAppearanceSnapshot
+
+buildLaunchAppearanceSnapshot$default-BB@0x0 : [ buildLaunchAppearanceSnapshot$default-BB@0xc buildLaunchAppearanceSnapshot$default-BB@0xe ]
+	0       (00000000) and-int/lit8         v14, v13, 64
+	1       (00000004) const-wide/16        v0, 0
+	2       (00000008) if-eqz               v14, +003h
+
+buildLaunchAppearanceSnapshot$default-BB@0xc : [ buildLaunchAppearanceSnapshot$default-BB@0xe ]
+	3       (0000000c) move-wide            v8, v0
+
+buildLaunchAppearanceSnapshot$default-BB@0xe : [ buildLaunchAppearanceSnapshot$default-BB@0x16 buildLaunchAppearanceSnapshot$default-BB@0x18 ]
+	4       (0000000e) and-int/lit16        v14, v13, 128
+	5       (00000012) if-eqz               v14, +003h
+
+buildLaunchAppearanceSnapshot$default-BB@0x16 : [ buildLaunchAppearanceSnapshot$default-BB@0x18 ]
+	6       (00000016) move-wide            v10, v0
+
+buildLaunchAppearanceSnapshot$default-BB@0x18 : [ buildLaunchAppearanceSnapshot$default-BB@0x20 buildLaunchAppearanceSnapshot$default-BB@0x24 ]
+	7       (00000018) and-int/lit16        v13, v13, 256
+	8       (0000001c) if-eqz               v13, +004h
+
+buildLaunchAppearanceSnapshot$default-BB@0x20 : [ buildLaunchAppearanceSnapshot$default-BB@0x24 ]
+	9       (00000020) const-string         v12, ""
+
+buildLaunchAppearanceSnapshot$default-BB@0x24 : 
+	10      (00000024) invoke-static/range  v2 ... v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->buildLaunchAppearanceSnapshot(Landroid/content/Context; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String;)Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	11      (0000002a) move-result-object   v2
+	12      (0000002c) return-object        v2
+

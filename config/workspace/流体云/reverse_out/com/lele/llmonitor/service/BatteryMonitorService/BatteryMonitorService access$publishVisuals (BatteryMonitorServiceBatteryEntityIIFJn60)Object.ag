@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$publishVisuals(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; I I F J Ln60;)Ljava/lang/Object; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.service.BatteryMonitorService
+# - v2:com.lele.llmonitor.data.local.BatteryEntity
+# - v3:int
+# - v4:int
+# - v5:float
+# - v6:long
+# - v7:n60
+#
+# - return:java.lang.Object
+
+access$publishVisuals-BB@0x0 : 
+	0       (00000000) invoke-direct/range  v0 ... v7, Lcom/lele/llmonitor/service/BatteryMonitorService;->publishVisuals(Lcom/lele/llmonitor/data/local/BatteryEntity; I I F J Ln60;)Ljava/lang/Object;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

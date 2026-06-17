@@ -1,0 +1,21 @@
+# Lcom/lele/llmonitor/ui/widget/a;-><init>(I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; I I I)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+# - v2:com.lele.llmonitor.ui.widget.WidgetThemeColors
+# - v3:int
+# - v4:int
+# - v5:int
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput                 v5, v0, Lcom/lele/llmonitor/ui/widget/a;->d I
+	1       (00000004) iput                 v1, v0, Lcom/lele/llmonitor/ui/widget/a;->e I
+	2       (00000008) iput-object          v2, v0, Lcom/lele/llmonitor/ui/widget/a;->f Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;
+	3       (0000000c) iput                 v3, v0, Lcom/lele/llmonitor/ui/widget/a;->g I
+	4       (00000010) iput                 v4, v0, Lcom/lele/llmonitor/ui/widget/a;->h I
+	5       (00000014) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	6       (0000001a) return-void          
+

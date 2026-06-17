@@ -1,0 +1,32 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->applyAppIconPalette$default(Landroid/content/Context; Lcom/lele/llmonitor/data/AppIconPalette; Z Ljava/util/Set; Z I Ljava/lang/Object;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:android.content.Context
+# - v1:com.lele.llmonitor.data.AppIconPalette
+# - v2:boolean
+# - v3:java.util.Set
+# - v4:boolean
+# - v5:int
+# - v6:java.lang.Object
+#
+# - return:void
+
+applyAppIconPalette$default-BB@0x0 : [ applyAppIconPalette$default-BB@0x8 applyAppIconPalette$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v6, v5, 8
+	1       (00000004) if-eqz               v6, +004h
+
+applyAppIconPalette$default-BB@0x8 : [ applyAppIconPalette$default-BB@0xc ]
+	2       (00000008) sget-object          v3, Lzo0;->d Lzo0;
+
+applyAppIconPalette$default-BB@0xc : [ applyAppIconPalette$default-BB@0x14 applyAppIconPalette$default-BB@0x16 ]
+	3       (0000000c) and-int/lit8         v5, v5, 16
+	4       (00000010) if-eqz               v5, +003h
+
+applyAppIconPalette$default-BB@0x14 : [ applyAppIconPalette$default-BB@0x16 ]
+	5       (00000014) const/4              v4, 1
+
+applyAppIconPalette$default-BB@0x16 : 
+	6       (00000016) invoke-static        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->applyAppIconPalette(Landroid/content/Context; Lcom/lele/llmonitor/data/AppIconPalette; Z Ljava/util/Set; Z)V
+	7       (0000001c) return-void          
+

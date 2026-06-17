@@ -1,0 +1,60 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x24 ]
+	0       (00000000) iget                 v0, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->label I
+	1       (00000004) const/4              v1, 1
+	2       (00000006) if-eqz               v0, +00fh
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0xe invokeSuspend-BB@0x16 ]
+	3       (0000000a) if-ne                v0, v1, +006h
+
+invokeSuspend-BB@0xe : [ invokeSuspend-BB@0x50 ]
+	4       (0000000e) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	5       (00000014) goto                 +1eh
+
+invokeSuspend-BB@0x16 : 
+	6       (00000016) const-string         v4, "call to 'resume' before 'invoke' with coroutine"
+	7       (0000001a) invoke-static        v4, Lh;->m(Ljava/lang/String;)V
+	8       (00000020) const/4              v4, 0
+	9       (00000022) return-object        v4
+
+invokeSuspend-BB@0x24 : [ invokeSuspend-BB@0x4e invokeSuspend-BB@0x50 ]
+	10      (00000024) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	11      (0000002a) sget-object          v5, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperStorage;
+	12      (0000002e) iget-object          v0, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->$context Landroid/content/Context;
+	13      (00000032) iget-object          v2, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->$uri Landroid/net/Uri;
+	14      (00000036) iget-boolean         v3, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->$deleteSourceAfterImport Z
+	15      (0000003a) iput                 v1, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->label I
+	16      (0000003e) invoke-virtual       v5, v0, v2, v3, v4, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->importWallpaper(Landroid/content/Context; Landroid/net/Uri; Z Ln60;)Ljava/lang/Object;
+	17      (00000044) move-result-object   v5
+	18      (00000046) sget-object          v0, Le80;->d Le80;
+	19      (0000004a) if-ne                v5, v0, +003h
+
+invokeSuspend-BB@0x4e : 
+	20      (0000004e) return-object        v0
+
+invokeSuspend-BB@0x50 : [ invokeSuspend-BB@0x60 invokeSuspend-BB@0x70 ]
+	21      (00000050) check-cast           v5, Ljava/lang/Boolean;
+	22      (00000054) invoke-virtual       v5, Ljava/lang/Boolean;->booleanValue()Z
+	23      (0000005a) move-result          v5
+	24      (0000005c) if-eqz               v5, +00ah
+
+invokeSuspend-BB@0x60 : [ invokeSuspend-BB@0x70 ]
+	25      (00000060) sget-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperManager;
+	26      (00000064) invoke-virtual       v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->refreshState()V
+	27      (0000006a) invoke-virtual       v0, v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->setEnabled(Z)V
+
+invokeSuspend-BB@0x70 : 
+	28      (00000070) iget-object          v4, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;->$onCompleted Ld11;
+	29      (00000074) invoke-static        v5, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	30      (0000007a) move-result-object   v5
+	31      (0000007c) invoke-interface     v4, v5, Ld11;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+	32      (00000082) sget-object          v4, Lbw3;->a Lbw3;
+	33      (00000086) return-object        v4
+

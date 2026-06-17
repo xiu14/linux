@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">R2 Player</string>
+    <string name="shortcut_settings_short">R2 设置</string>
+    <string name="shortcut_settings_long">打开 R2 Player 设置</string>
+</resources>

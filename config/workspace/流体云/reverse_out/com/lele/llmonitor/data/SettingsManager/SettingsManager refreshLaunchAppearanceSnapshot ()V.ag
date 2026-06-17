@@ -1,0 +1,197 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->refreshLaunchAppearanceSnapshot()V [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v37
+#
+# - return:void
+
+refreshLaunchAppearanceSnapshot-BB@0x0 : [ refreshLaunchAppearanceSnapshot-BB@0x8 refreshLaunchAppearanceSnapshot-BB@0xc ]
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->appContext Landroid/content/Context;
+	1       (00000004) if-nez               v0, +004h
+
+refreshLaunchAppearanceSnapshot-BB@0x8 : [ refreshLaunchAppearanceSnapshot-BB@0x1ee ]
+	2       (00000008) goto/16              +0f3h
+
+refreshLaunchAppearanceSnapshot-BB@0xc : [ refreshLaunchAppearanceSnapshot-BB@0x14 refreshLaunchAppearanceSnapshot-BB@0x18 ]
+	3       (0000000c) sget-object          v13, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	4       (00000010) if-nez               v13, +004h
+
+refreshLaunchAppearanceSnapshot-BB@0x14 : [ refreshLaunchAppearanceSnapshot-BB@0x1ee ]
+	5       (00000014) goto/16              +0edh
+
+refreshLaunchAppearanceSnapshot-BB@0x18 : [ refreshLaunchAppearanceSnapshot-BB@0x36 refreshLaunchAppearanceSnapshot-BB@0x48 ]
+	6       (00000018) sget-object          v1, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperStorage;
+	7       (0000001c) invoke-virtual       v1, v0, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveWallpaperFile(Landroid/content/Context;)Ljava/io/File;
+	8       (00000022) move-result-object   v1
+	9       (00000024) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	10      (0000002a) move-result          v2
+	11      (0000002c) const/4              v14, 0
+	12      (0000002e) const-wide/16        v15, 0
+	13      (00000032) if-eqz               v2, +00bh
+
+refreshLaunchAppearanceSnapshot-BB@0x36 : [ refreshLaunchAppearanceSnapshot-BB@0x46 refreshLaunchAppearanceSnapshot-BB@0x48 ]
+	14      (00000036) invoke-virtual       v1, Ljava/io/File;->length()J
+	15      (0000003c) move-result-wide     v2
+	16      (0000003e) cmp-long             v2, v2, v15
+	17      (00000042) if-lez               v2, +003h
+
+refreshLaunchAppearanceSnapshot-BB@0x46 : [ refreshLaunchAppearanceSnapshot-BB@0x4a ]
+	18      (00000046) goto                 +2h
+
+refreshLaunchAppearanceSnapshot-BB@0x48 : [ refreshLaunchAppearanceSnapshot-BB@0x4a ]
+	19      (00000048) move-object          v1, v14
+
+refreshLaunchAppearanceSnapshot-BB@0x4a : [ refreshLaunchAppearanceSnapshot-BB@0x4e refreshLaunchAppearanceSnapshot-BB@0x64 ]
+	20      (0000004a) if-eqz               v1, +00dh
+
+refreshLaunchAppearanceSnapshot-BB@0x4e : [ refreshLaunchAppearanceSnapshot-BB@0x5e refreshLaunchAppearanceSnapshot-BB@0x60 ]
+	21      (0000004e) invoke-virtual       v1, Ljava/io/File;->lastModified()J
+	22      (00000054) move-result-wide     v1
+	23      (00000056) cmp-long             v3, v1, v15
+	24      (0000005a) if-gez               v3, +003h
+
+refreshLaunchAppearanceSnapshot-BB@0x5e : [ refreshLaunchAppearanceSnapshot-BB@0x60 ]
+	25      (0000005e) move-wide            v1, v15
+
+refreshLaunchAppearanceSnapshot-BB@0x60 : [ refreshLaunchAppearanceSnapshot-BB@0x66 ]
+	26      (00000060) move-wide            v6, v1
+	27      (00000062) goto                 +2h
+
+refreshLaunchAppearanceSnapshot-BB@0x64 : [ refreshLaunchAppearanceSnapshot-BB@0x66 ]
+	28      (00000064) move-wide            v6, v15
+
+refreshLaunchAppearanceSnapshot-BB@0x66 : [ refreshLaunchAppearanceSnapshot-BB@0x78 refreshLaunchAppearanceSnapshot-BB@0x82 ]
+	29      (00000066) const-string         v1, "home_wallpaper_enabled"
+	30      (0000006a) const/4              v2, 0
+	31      (0000006c) invoke-interface     v13, v1, v2, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String; Z)Z
+	32      (00000072) move-result          v1
+	33      (00000074) if-eqz               v1, +007h
+
+refreshLaunchAppearanceSnapshot-BB@0x78 : [ refreshLaunchAppearanceSnapshot-BB@0x80 refreshLaunchAppearanceSnapshot-BB@0x82 ]
+	34      (00000078) cmp-long             v1, v6, v15
+	35      (0000007c) if-lez               v1, +003h
+
+refreshLaunchAppearanceSnapshot-BB@0x80 : [ refreshLaunchAppearanceSnapshot-BB@0x82 ]
+	36      (00000080) const/4              v2, 1
+
+refreshLaunchAppearanceSnapshot-BB@0x82 : [ refreshLaunchAppearanceSnapshot-BB@0x128 refreshLaunchAppearanceSnapshot-BB@0x13e ]
+	37      (00000082) move                 v3, v2
+	38      (00000084) const-string         v1, "home_wallpaper_alpha"
+	39      (00000088) const                v2, 1051931443
+	40      (0000008e) invoke-interface     v13, v1, v2, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String; F)F
+	41      (00000094) move-result          v1
+	42      (00000096) const/4              v2, 0
+	43      (00000098) const/high16         v4, 1065353216
+	44      (0000009c) invoke-static        v1, v2, v4, Lib1;->k(F F F)F
+	45      (000000a2) move-result          v1
+	46      (000000a4) const-string         v5, "home_wallpaper_blur"
+	47      (000000a8) invoke-interface     v13, v5, v2, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String; F)F
+	48      (000000ae) move-result          v5
+	49      (000000b0) invoke-static        v5, v2, v4, Lib1;->k(F F F)F
+	50      (000000b6) move-result          v4
+	51      (000000b8) invoke-virtual       v0, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	52      (000000be) move-result-object   v2
+	53      (000000c0) invoke-virtual       v2, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	54      (000000c6) move-result-object   v2
+	55      (000000c8) iget                 v2, v2, Landroid/util/DisplayMetrics;->density F
+	56      (000000cc) sget-object          v5, Lcom/lele/llmonitor/data/SettingsManager;->themeMode Ll52;
+	57      (000000d0) invoke-interface     v5, Lcg3;->getValue()Ljava/lang/Object;
+	58      (000000d6) move-result-object   v5
+	59      (000000d8) check-cast           v5, Ljava/lang/Number;
+	60      (000000dc) invoke-virtual       v5, Ljava/lang/Number;->intValue()I
+	61      (000000e2) move-result          v5
+	62      (000000e4) sget-object          v8, Lcom/lele/llmonitor/data/SettingsManager;->themePalettePreset Ll52;
+	63      (000000e8) invoke-interface     v8, Lcg3;->getValue()Ljava/lang/Object;
+	64      (000000ee) move-result-object   v8
+	65      (000000f0) check-cast           v8, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	66      (000000f4) const/16             v11, 384
+	67      (000000f8) const/4              v12, 0
+	68      (000000fa) move                 v10, v2
+	69      (000000fc) move-object          v2, v8
+	70      (000000fe) const-wide/16        v8, 0
+	71      (00000102) move/from16          v17, v10
+	72      (00000106) const/4              v10, 0
+	73      (00000108) move/from16          v18, v4
+	74      (0000010c) move                 v4, v1
+	75      (0000010e) move                 v1, v5
+	76      (00000110) move/from16          v5, v18
+	77      (00000114) move-wide/from16     v18, v15
+	78      (00000118) move/from16          v15, v17
+	79      (0000011c) invoke-static/range  v0 ... v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->buildLaunchAppearanceSnapshot$default(Landroid/content/Context; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String; I Ljava/lang/Object;)Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	80      (00000122) move-result-object   v2
+	81      (00000124) if-eqz               v3, +00dh
+
+refreshLaunchAppearanceSnapshot-BB@0x128 : [ refreshLaunchAppearanceSnapshot-BB@0x138 ]
+	82      (00000128) invoke-virtual       v2, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getBackgroundArgb()I
+	83      (0000012e) move-result          v1
+	84      (00000130) invoke-static        v1, v4, v5, v15, Lcom/lele/llmonitor/data/HomeWallpaperBlurSupportKt;->resolveHomeWallpaperStartupPreviewRenderSpec(I F F F)Ljava/lang/String;
+	85      (00000136) move-result-object   v1
+
+refreshLaunchAppearanceSnapshot-BB@0x138 : [ refreshLaunchAppearanceSnapshot-BB@0x144 ]
+	86      (00000138) move-object/from16   v31, v1
+	87      (0000013c) goto                 +4h
+
+refreshLaunchAppearanceSnapshot-BB@0x13e : [ refreshLaunchAppearanceSnapshot-BB@0x138 ]
+	88      (0000013e) const-string         v1, ""
+	89      (00000142) goto                 -5h
+
+refreshLaunchAppearanceSnapshot-BB@0x144 : [ refreshLaunchAppearanceSnapshot-BB@0x19a refreshLaunchAppearanceSnapshot-BB@0x1ee ]
+	90      (00000144) sget-wide            v8, Lcom/lele/llmonitor/data/SettingsManager;->launchSnapshotRefreshGeneration J
+	91      (00000148) const-wide/16        v10, 1
+	92      (0000014c) add-long/2addr       v8, v10
+	93      (0000014e) sput-wide            v8, Lcom/lele/llmonitor/data/SettingsManager;->launchSnapshotRefreshGeneration J
+	94      (00000152) const/16             v32, 127
+	95      (00000156) const/16             v33, 0
+	96      (0000015a) const/16             v21, 0
+	97      (0000015e) const/16             v22, 0
+	98      (00000162) const/16             v23, 0
+	99      (00000166) const/16             v24, 0
+	100     (0000016a) const/16             v25, 0
+	101     (0000016e) const/16             v26, 0
+	102     (00000172) const-wide/16        v27, 0
+	103     (00000176) const-wide/16        v29, 0
+	104     (0000017a) move-object/from16   v20, v2
+	105     (0000017e) invoke-static/range  v20 ... v33, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->copy$default(Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; I I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String; I Ljava/lang/Object;)Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	106     (00000184) move-result-object   v1
+	107     (00000186) sget-object          v10, Lcom/lele/llmonitor/data/SettingsManager;->launchAppearanceSnapshot Ll52;
+	108     (0000018a) invoke-interface     v10, v1, Ll52;->setValue(Ljava/lang/Object;)V
+	109     (00000190) invoke-static        v13, v1, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->persistLaunchAppearanceSnapshot(Landroid/content/SharedPreferences; Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;)V
+	110     (00000196) if-eqz               v3, +02ch
+
+refreshLaunchAppearanceSnapshot-BB@0x19a : [ refreshLaunchAppearanceSnapshot-BB@0x1a2 refreshLaunchAppearanceSnapshot-BB@0x1a4 ]
+	111     (0000019a) cmp-long             v3, v6, v18
+	112     (0000019e) if-gtz               v3, +003h
+
+refreshLaunchAppearanceSnapshot-BB@0x1a2 : [ refreshLaunchAppearanceSnapshot-BB@0x1ee ]
+	113     (000001a2) goto                 +26h
+
+refreshLaunchAppearanceSnapshot-BB@0x1a4 : [ refreshLaunchAppearanceSnapshot-BB@0x1ac refreshLaunchAppearanceSnapshot-BB@0x1b2 ]
+	114     (000001a4) sget-object          v3, Lcom/lele/llmonitor/data/SettingsManager;->launchSnapshotRefreshJob Lpj1;
+	115     (000001a8) if-eqz               v3, +005h
+
+refreshLaunchAppearanceSnapshot-BB@0x1ac : [ refreshLaunchAppearanceSnapshot-BB@0x1b2 ]
+	116     (000001ac) invoke-interface     v3, v14, Lpj1;->k(Ljava/util/concurrent/CancellationException;)V
+
+refreshLaunchAppearanceSnapshot-BB@0x1b2 : [ refreshLaunchAppearanceSnapshot-BB@0x1ee ]
+	117     (000001b2) sget-object          v12, Lcom/lele/llmonitor/data/SettingsManager;->backgroundScope Ld80;
+	118     (000001b6) sget-object          v15, Lbd0;->f Lbd0;
+	119     (000001ba) move                 v3, v4
+	120     (000001bc) move                 v4, v5
+	121     (000001be) move-object/from16   v34, v1
+	122     (000001c2) move-object          v1, v0
+	123     (000001c4) move-wide/from16     v35, v6
+	124     (000001c8) move-object/from16   v7, v34
+	125     (000001cc) move-wide            v5, v8
+	126     (000001ce) move-wide/from16     v8, v35
+	127     (000001d2) new-instance         v0, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;
+	128     (000001d6) const/4              v11, 0
+	129     (000001d8) move-object          v10, v13
+	130     (000001da) invoke-direct/range  v0 ... v11, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;-><init>(Landroid/content/Context; Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; F F J Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; J Landroid/content/SharedPreferences; Ln60;)V
+	131     (000001e0) const/4              v1, 2
+	132     (000001e2) invoke-static        v12, v15, v14, v0, v1, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	133     (000001e8) move-result-object   v0
+	134     (000001ea) sput-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->launchSnapshotRefreshJob Lpj1;
+
+refreshLaunchAppearanceSnapshot-BB@0x1ee : 
+	135     (000001ee) return-void          
+

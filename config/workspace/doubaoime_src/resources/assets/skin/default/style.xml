@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <!--misans_medium_adaptive vs misans_medium，前者支持跟随系统字体适配。-->
+    <Font name="key_letter" facename="qihei" weight="380" size="57" />
+    <Font name="key_letter_english" facename="misans_medium" weight="380" size="60" />
+    <Font name="key_letter9" facename="misans_medium" weight="380" size="48" />
+    <Font name="key_letter9_at_symbol" facename="misans_medium" weight="380" size="54" />
+    <Font name="key_number9" facename="misans_medium" weight="380" size="54" />
+    <Font name="key_func" facename="misans_medium" size="44" />
+    <Font name="key_letter9_split" facename="misans_medium" size="46" />
+    <Font name="key_func_adaptive" facename="misans_medium_adaptive" size="42" />
+    <Font name="key_cnen_light" facename="misans_medium" size="46" weight="600" />
+    <Font name="key_cnen_gray" facename="misans_medium" size="39" weight="500" />
+    <Font name="key_123sym_gray" facename="misans_medium" size="33" weight="600" />
+    <Font name="fi_symbol_text" facename="misans_medium" size="48" weight="380" />
+    <Font name="fi_symbol_icon" facename="oimeui2023" size="75" weight="400" /><!--废弃-->
+    <Font name="fi_symbol_tab_text" facename="misans_medium" size="48" weight="500" />
+    <Font name="fi_symbol_tab_icon" facename="oimeui2023" size="60" weight="500" />
+    <Font name="fi_cnen_ficon" facename="oimeui2023" size="75" weight="500" />
+    <Font name="cand_voice_btn" facename="oimeui2023" size="50" weight="500" />
+    <Font name="recommend_footer_font" facename="misans_medium" size="46" weight="600" />
+    <Font name="recommend_retry_font" facename="misans_medium" size="46" weight="600" />
+    <Font name="recommends_drawer_send_font" facename="misans_medium" size="44" />
+    <Font name="comp_font" facename="misans_medium" size="40" weight="400" />
+    <Font name="ai_title_font" facename="misans_medium" size="52" weight="600" />
+    <Font name="secondd_title_font" facename="misans_medium" size="44" />
+    <Font name="recommend_item_font" facename="misans_medium" weight="600" size="46" />
+    <Font name="cand_font" facename="misans_medium_adaptive" size="56" weight="400" />
+    <Font name="cand_font13" facename="misans_medium_adaptive" size="39" weight="400" />
+    <Font name="cand_font15" facename="misans_medium_adaptive" size="45" weight="400" />
+    <Font name="cand_font17" facename="misans_medium_adaptive" size="51" weight="400" />
+    <Font name="cand_font21" facename="misans_medium_adaptive" size="63" weight="400" />
+    <Font name="cand_font23" facename="misans_medium_adaptive" size="69" weight="400" />
+    <Font name="cand_font25" facename="misans_medium_adaptive" size="75" weight="400" />
+    <Font name="cand_pinyin_font" facename="misans_medium_adaptive" size="42" weight="400" />
+    <Font name="cand_pinyin_font11" facename="misans_medium_adaptive" size="33" weight="400" />
+    <Font name="cand_pinyin_font12" facename="misans_medium_adaptive" size="36" weight="400" />
+    <Font name="cand_pinyin_font13" facename="misans_medium_adaptive" size="39" weight="400" />
+    <Font name="cand_pinyin_font15" facename="misans_medium_adaptive" size="45" weight="400" />
+    <Font name="cand_pinyin_font16" facename="misans_medium_adaptive" size="48" weight="400" />
+    <Font name="cand_pinyin_font17" facename="misans_medium_adaptive" size="51" weight="400" />
+    <Font name="pinyin9_symbol_first_font" facename="misans_medium_adaptive" size="54" weight="500" />
+    <Font name="first_cand_font" facename="misans_medium_adaptive" size="56" weight="500" />
+    <Font name="first_cand_font13" facename="misans_medium_adaptive" size="39" weight="500" />
+    <Font name="first_cand_font15" facename="misans_medium_adaptive" size="45" weight="500" />
+    <Font name="first_cand_font17" facename="misans_medium_adaptive" size="51" weight="500" />
+    <Font name="first_cand_font21" facename="misans_medium_adaptive" size="63" weight="500" />
+    <Font name="first_cand_font23" facename="misans_medium_adaptive" size="69" weight="500" />
+    <Font name="first_cand_font25" facename="misans_medium_adaptive" size="75" weight="500" />
+    <Font name="first_cand_pinyin_font" facename="misans_medium_adaptive" size="42" weight="500" />
+    <Font name="first_cand_pinyin_font11" facename="misans_medium_adaptive" size="33" weight="500" />
+    <Font name="first_cand_pinyin_font12" facename="misans_medium_adaptive" size="36" weight="500" />
+    <Font name="first_cand_pinyin_font13" facename="misans_medium_adaptive" size="39" weight="500" />
+    <Font name="first_cand_pinyin_font15" facename="misans_medium_adaptive" size="45" weight="500" />
+    <Font name="first_cand_pinyin_font16" facename="misans_medium_adaptive" size="48" weight="500" />
+    <Font name="first_cand_pinyin_font17" facename="misans_medium_adaptive" size="51" weight="500" />
+    <Font name="fi_vertical_symbol_list_text" facename="misans_medium" size="47"/>
+    <Font name="fi_vertical_add_custom_symbol_list_text" facename="misans_medium" size="30"/>
+    <Font name="filter_button_selectedfont" facename="misans_medium_adaptive" size="42" weight="640" />
+    <Font name="filter_button_font" facename="misans_medium_adaptive" size="42" weight="400" />
+    <Font name="llm_font" facename="misans_medium" size="30" />
+    <Font name="tip" facename="misans_medium" size="29" />
+    <Font name="correct" facename="misans_medium" size="44" bold="true" />
+    <Font name="fi_setting_button_text" facename="misans_regular_adaptive" size="31" />
+    <Font name="cloud_cand_font" facename="misans_medium" size="41" />
+    <Font name="pinyin9_filter_punc" facename="misans_medium" size="46" weight="500" />
+    <Font name="pinyin9_filter_syllable" facename="misans_medium" size="46" weight="600" />
+    <Font name="ficon_text" facename="misans_medium" size="26" />
+    <Font name="ficon_text_big" facename="misans_medium" size="36" />
+    <Font name="ficon_text_period_comma" facename="misans_medium" size="55" />
+    <Font name="ficon_text_period_cn" facename="misans_medium" size="45" />
+    <Font name="text_comma_cn" facename="misans_medium" weight="380" size="72" />
+    <Font name="ficon_icon" facename="oimeui2023" size="30" />
+    <Font name="key_touch_tip" facename="misans_medium" weight="440" size="87" />
+    <Font name="fi_fusiyin_bubble_button" facename="misans_medium" weight="440" size="60" />
+    <Font name="fi_toolbar_button" facename="oimeui2023" size="63" />
+    <Font name="fi_empty_icon" facename="misans_medium" size="36" />
+    <Font name="fi_toolbar_second_page_button" facename="oimeui2023" size="72" />
+    <Font name="fi_toolbar_tip_text" facename="misans_medium" weight="500" size="42" />
+    <Font name="fi_toolbar_tip_button_text" facename="misans_medium" weight="600" size="42" />
+    <Font name="fi_toolbar_tip_button_icon" facename="oimeui2023" size="60" />
+    <Font name="fi_toolbar_tip_superscript" facename="oimeui2023" size="30" />
+    <Font name="fi_toolbar_reply_button" facename="oimeui2023" size="60" />
+    <Font name="fi_setting_button_icon" facename="oimeui2023" size="87" />
+    <Font name="fi_setting_button_text_right_icon" facename="oimeui2023" size="21" />
+    <Font name="fi_add_custom_symbol_button_icon" facename="oimeui2023" size="33" />
+    <Font name="fi_toolbar_expand_asr_button" facename="oimeui2023" size="50" />
+    <Font name="fi_cand_cloud_button" facename="oimeui2023" size="40" />
+    <Font name="fi_cand_button" facename="oimeui2023" size="58" />
+    <Font name="fi_ai_cand_button" facename="oimeui2023" size="72" />
+    <Font name="fi_emoticons_cand_button" facename="oimeui2023" size="60" />
+    <Font name="fi_board_button" facename="oimeui2023" size="60" />
+    <Font name="fi_back_button" facename="oimeui2023" size="75" />
+    <Font name="fi_backspace_button" facename="oimeui2023" size="72" />
+    <Font name="fi_close_icon" facename="oimeui2023" size="69" />
+    <Font name="fi_shift_button" facename="oimeui2023" size="57" />
+    <Font name="fi_trans_lang_button_ficon" facename="oimeui2023" size="61" />
+    <Font name="fi_trans_reset_button_icon" facename="oimeui2023" size="58" />
+    <Font name="fi_trans_text" facename="misans_medium_adaptive" weight="400" size="42" />
+    <Font name="fi_trans_action_button" facename="misans_medium_adaptive" weight="640" size="42" />
+    <Font name="fi_space_text" facename="oimeui2023" size="74" />
+    <Font name="fi_space_text1" facename="oimeui2023" size="80" />
+    <Font name="fi_space_text2" facename="oimeui2023" size="66" />
+    <Font name="fi_space_text3" facename="misans_medium" size="42" />
+    <Font name="fi_space_text4" facename="oimeui2023" size="170" />
+    <Font name="fi_space_fusiyin" facename="oimeui2023" size="60" />
+    <Font name="symbol_fusiyin_tip_font" facename="misans_medium" size="20" />
+    <Font name="quickinput_label_font" facename="misans_medium" size="40" />
+    <Font name="tip_label_font" facename="misans_medium" size="46" />
+    <Font name="tip_label_font_small" facename="misans_medium" weight="600" size="38" />
+    <Font name="fail_label_font_small" facename="misans_medium" weight="400" size="38" />
+    <Font name="reply_label_font" facename="misans_medium" size="48" />
+    <Font name="speech_tip" facename="misans_medium" size="34" />
+    <Font name="ai_fi_refresh" facename="oimeui2023" size="50" />
+    <Font name="ai_common_tip_font" facename="misans_medium" size="35" />
+    <Font name="ai_common_title_font" facename="misans_medium" size="40" bold="true" />
+    <Font name="ai_common_big1_font" facename="misans_medium" size="40" />
+    <Font name="ai_common_fi_font" facename="oimeui2023" size="40" />
+    <Font name="fi_swipe_clear_arrow" facename="oimeui2023" size="45" />
+    <Font name="fi_swipe_clear_label" facename="oimeui2023" size="35" />
+    <Font name="fi_recommend_fail" facename="oimeui2023" size="35" />
+    <Font name="recommend_fail" facename="misans_medium" weight="600" size="59" />
+    <Font name="ai_interaction_fail" facename="misans_medium" weight="600" size="42" />
+    <Font name="ai_interaction_option" facename="misans_medium" weight="600" size="45" />
+    <Font name="fi_recommand_fail" facename="oimeui2023" size="150" />
+    <Font name="recommend_loading_tip" facename="misans_medium" weight="600" size="52" />
+    <Font name="ai_entrance_button_icon" facename="oimeui2023" size="60" />
+    <Font name="ai_entrance_button_text" facename="misans_medium" weight="600" size="42" />
+    <Font name="cand_lefttop_font" facename="oimeui2023" size="16" />
+    <Font name="cand_righttop_font" facename="oimeui2023" weight="600" size="22" />
+    <Font name="cand_righttop_font_big" facename="oimeui2023" weight="600" size="24" />
+    <Font name="comp_font_underline" facename="misans_medium" size="38" weight="400" underline="true" />
+
+    <Class name="cls_use_fix_scale_except_float" usefixscale="true" />
+    <Class name="cls_cand_margin_in_editor_type" margin_decimal="0,0.224,0,0.102" />
+    <Class name="cls_cand_margin_in_keyboard_type" margin_decimal="0,0.055,0,0" />
+    <Class name="cls_cand_symbol_margin_in_editor_type" margin_decimal="0,0,0,0" />
+
+    <Class name="cls_use_fix_scale_recursively_except_float" usefixscale_recursively="true" />
+
+    <Class name="cls_keybutton_fusiyin"
+        ficon_width="-14.5"
+        ficon_height="15"
+        ficon_textcolor="@color/keybutton_text_2"
+        ficon_textcolor_hot="@color/keybutton_text_2"
+        ficon_textcolor_pushed="@color/keybutton_text_2"
+        ficon_font="ficon_text" />
+
+    <Class name="cls_period_comma_fusiyin"
+        ficon_width="-2.5"
+        ficon_height="15"
+        ficon_textcolor="@color/keybutton_text_2"
+        ficon_textcolor_hot="@color/keybutton_text_2"
+        ficon_textcolor_pushed="@color/keybutton_text_2"
+        ficon_font="ficon_text_period_comma" />
+
+
+    <Class name="cls_bk_white_circle"
+        shadow_y_offset="1" shadow_color="@color/keybutton_white_shadow"
+        bkround="6" bkcolor="@color/keybutton_bk"
+        pushedbkcolor="@color/keybutton_pushed_bk" />
+
+
+    <!-- 工具栏按钮的背景- -->
+    <Class name="cls_bk_toolbar_button"
+        width="match_height" height="match_parent" keytype="kCommand"
+        bkround="111" usefixscale="true"
+        bkcolor="@color/transparent"
+        pushedbkcolor="@color/canditem_pushedbk" />
+
+    <Class name="cls_toolbar_idle_button"
+        class_adaptive="cls_toolbar_idle_button_adaptive"
+        btnfixedscale="true"
+        width="40" height="match_parent"
+        bkcircle="true"
+        bkcolor="@color/toolbar_idle_button_bk" bkround="999"
+        pushedbkcolor="@color/toolbar_idle_button_pushedbk"
+        font="fi_toolbar_button"
+        disabledbkcolor="@color/toolbar_idle_button_disabled_bk"
+        disabledtextcolor="@color/toolbar_idle_button_text_disabled"
+        textcolor="@color/toolbar_idle_button_text"  key_vibrate="Function" />
+
+    <Class name="cls_toolbar_idle_speech_button"
+        class_adaptive="cls_toolbar_idle_speech_button_adaptive"
+        inset="13,0,13,0" width="auto" height="match_parent"
+        bkcolor="@color/toolbar_idle_button_bk" bkround="999"
+        pushedbkcolor="@color/toolbar_idle_button_pushedbk" />
+
+    <Class name="cld_toolbar_second_page_button_adaptive" padding_decimal="0.023,0.22,0.023,0.06564" />
+
+    <Class name="cld_toolbar_second_page_button"
+        width="match_height" height="match_parent" bkround="999"
+        class_adaptive="cld_toolbar_second_page_button_adaptive"
+        bkcolor="@color/transparent"
+        pushedbkcolor="@color/toolbar_idle_button_pushedbk"
+        font="fi_toolbar_second_page_button"
+        textcolor="@color/keybutton_text"/>
+
+    <!--更多功能的返回按钮使用-->
+    <Class name="cld_toolbar_close_button"
+            class_adaptive="cls_toolbar_idle_button_adaptive"
+            width="match_height" height="match_parent"
+            bkcircle="true"
+            bkcolor="@color/toolbar_idle_button_bk" bkround="999"
+            pushedbkcolor="@color/toolbar_idle_button_pushedbk"
+            font="fi_toolbar_second_page_button"
+            textcolor="@color/action_button_pushedtext"  key_vibrate="Function" />
+
+    <!-- 背景-灰-圆角 -->
+    <Class name="cls_bk_gray_circle"
+        shadow_y_offset="1" shadow_color="@color/keybutton_gray_shadow"
+        bkround="6" bordersize="1" borderround="6" bordercolor="@color/keybutton_func_border"
+        bkcolor="@color/keybutton_func_bk"
+        pushedbkcolor="@color/keybutton_func_pushed_bk" />
+
+    <Class name="cls_bk_theme_circle"
+        shadow_y_offset="1" shadow_color="@color/keybutton_gray_shadow"
+        bkround="8"
+        bkcolor="@color/theme_color"
+        pushedbkcolor="@color/keybutton_bk" />
+
+    <!-- 26键盘-按键留白 -->
+    <Class name="cls_keyboard_button_margin"
+        margin="2.25,4.75,2.25,4.75" />
+
+    <!-- 主键盘-字母按键 -->
+    <!--  宽度权重10 是 10个按键 100/10得到  -->
+    <!--  26键盘-副丝印居中显示，显示时按钮文字向下偏移2个像素 class_adaptive="cls_keyboard_button_adaptive" -->
+    <Class name="cls_keyboard_button"
+        class="cls_bk_white_circle, cls_keybutton_fusiyin, cls_keyboard_button_margin"
+        ficon_width="0" ficon_height="0.40625"
+        ficon_text_offset="0,0.042" ficon_based_on_textrc="false"
+        textcolor="@color/keybutton_text" font="key_letter"
+        width_weight="10" height="match_parent" havelongpressaction="true"
+        key_sound="Keyboard" key_vibrate="Standard" />
+
+    <Class name="cls_period_comma_button_en"
+        class="cls_bk_white_circle, cls_period_comma_fusiyin, cls_keyboard_button_margin"
+        ficon_width="0"
+        ficon_text_offset="0,3" ficon_based_on_textrc="false"
+        textcolor="@color/keybutton_text" font="key_letter"
+        width_weight="10" height="match_parent" havelongpressaction="true"
+        key_sound="Keyboard" key_vibrate="Function"/>
+
+    <Class name="cls_period_comma_button_cn"
+        class="cls_bk_white_circle, cls_period_comma_fusiyin, cls_keyboard_button_margin"
+        ficon_font="ficon_text_period_cn"
+        ficon_width="0" ficon_based_on_textrc="true"
+        textcolor="@color/keybutton_text" font="text_comma_cn"
+        width_weight="10" height="match_parent" havelongpressaction="true"
+        key_sound="Keyboard" key_vibrate="Function"
+        />
+
+    <!-- 主键盘-特殊按键 逗号 -->
+    <Class name="cls_keyboard_button_comma_textpadding"
+        textpadding="0,-3,0,3" />
+    <!--九键 符号过滤列表偏移-->
+    <Class name="cls_keyboard_button_9_filter_adaptive"
+        textpadding="5,0,0,0" />
+    <Class name="cls_keyboard_button_9_right_filter_adaptive"
+        textpadding="0,0,5,0" />
+    <!-- 主键盘英文-特殊按键 逗号 -->
+    <Class name="cls_keyboard_button_encomma_textpadding"
+        textpadding="0,0,0,10" />
+
+    <Class name="cls_keyboard_button_perioad_comma_textpadding"
+        textpadding="0,0,1,6" />
+
+    <Class name="cls_keyboard_button_comma"
+        class="cls_keyboard_button, cls_keyboard_button_comma_textpadding"
+        class_adaptive="cls_keyboard_button_comma_width_adaptive"
+        text="，"
+        keycode="0xBC" push_commit="true"
+        key_vibrate="Function"/>
+
+    <!-- 主键盘-特殊按键 反斜杠/ -->
+    <Class name="cls_keyboard_button_backslash_adaptive"
+        textpadding="0,0,0,0" />
+    <!-- 主键盘-特殊按键 句号 -->
+    <Class name="cls_keyboard_button_period_textpadding"
+        textpadding="0,-4,0,4" />
+    <!-- 主键盘英文-特殊按键 句号 -->
+    <Class name="cls_keyboard_button_enperiod_textpadding"
+        textpadding="0,0,0,10" />
+
+    <Class name="cls_keyboard_button_period"
+        class="cls_keyboard_button, cls_keyboard_button_period_textpadding"
+        class_adaptive="cls_keyboard_button_comma_width_adaptive"
+        text="。" keycode="0xBE" push_commit="true"
+        key_vibrate="Function"/>
+
+    <!-- 主键盘-功能按键 -->
+    <Class name="cls_keyboard_button_func"
+        class="cls_bk_gray_circle, cls_keyboard_button_margin"
+        textcolor="@color/keybutton_text" font="key_func"
+        width_weight="15" height="match_parent"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 主键盘-功能按键，白色底 -->
+    <Class name="cls_keyboard_button_func_white_circle"
+        class="cls_bk_white_circle, cls_keyboard_button_margin"
+        textcolor="@color/keybutton_text" font="key_func"
+        width_weight="15" height="match_parent"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 9键盘-按键留白 -->
+    <Class name="cls_keyboard9_button_margin"
+        margin="2.5,2.75,2.5,2.75"  width="match_parent" height_weight="1"/>
+
+    <!-- 9键盘-字母按键 -->
+    <Class name="cls_keyboard9_button"
+        class="cls_bk_white_circle, cls_keyboard9_button_margin, cls_keybutton_fusiyin"
+        textcolor="@color/keybutton_text" font="key_letter9"
+        letterspacing="0.05"
+        havelongpressaction="true"
+        key_sound="Keyboard" key_vibrate="Standard" />
+
+    <!-- 9键盘-数字按键 -->
+    <Class name="cls_keyboard_number9_button"
+        class="cls_keyboard9_button" font="key_number9" />
+
+    <!-- 9键盘-功能按键 -->
+    <Class name="cls_keyboard9_button_func"
+        class="cls_bk_gray_circle, cls_keyboard9_button_margin"
+        textcolor="@color/keybutton_text" font="key_func"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 9键盘-功能按键 白色底 -->
+    <Class name="cls_keyboard9_button_func_white_circle"
+        class="cls_bk_white_circle, cls_keyboard9_button_margin"
+        textcolor="@color/keybutton_text" font="key_func"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 9键盘-返回功能按键 -->
+    <Class name="cls_keyboard9_button_back"
+        class="cls_bk_white_circle, cls_keyboard9_button_margin"
+        textcolor="@color/keybutton_text" font="key_func"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <Class name="cls_keyboard_toast_container"
+        width="match_parent" height="auto"
+        gravity="bottom" float="true" mouse="false" />
+
+    <!-- 主视图背景 -->
+    <Class name="cls_default_bk" bkcolor="@color/transparent" />
+
+    <!-- 子页面背景 -->
+    <Class name="cls_child_bk" bkcolor="@color/default_bk" />
+
+    <Class name="cls_toolbar_adaptive" inset_decimal="0,0,0,0" />
+    <!-- 工具栏区域-无输入 -->
+    <Class name="cls_toolbar_no_typing_adaptive" inset_decimal="0,0.3571,0,0" />
+    <Class name="cls_toolbar_no_typing_adaptive_editor" inset_decimal="0,0.2,0,0.2" />
+    <!-- 工具栏区域-更多候选 -->
+    <Class name="cls_toolbar_more_cand_adaptive" inset_decimal="0.0222,0.3214,0.0222,0.10714" />
+    <Class name="cls_toolbar_more_cand_adaptive_editor" inset_decimal="0.0222,0.27,0.0222,0.09" />
+
+    <Class name="cls_toolbar_bk_adaptive" height1x="56" />
+    <Class name="cls_toolbar_bk_adaptive_editor" height1x="50" />
+
+    <Class name="cls_toolbar_bk"
+        class_adaptive="cls_toolbar_bk_adaptive, cls_use_fix_scale_recursively_except_float"
+        bkcolor="@color/transparent"
+        width="match_parent" />
+
+    <Class name="cls_toolbar_idle_adaptive" inset_decimal="0.0166,0,0.0166,0" />
+    <Class name="cls_toolbar_tip_adaptive" padding_decimal="0.03333,0.17857,0.03333,0.10714" />
+    <Class name="cls_toolbar_tip_quick_adaptive" padding_decimal="0,0.34,0,0" />
+
+    <!-- 语音面板展开按钮 padding- 204，12，12，12 -->
+    <Class name="cls_toolbar_expand_speech_adaptive" padding_decimal="0,0.3,0.052,0.3"/>
+    <Class name="cls_toolbar_expand_speech"
+        width="120" height="120"
+        pushedbkcolor="@color/toolbar_idle_button_pushedbk"
+        font="fi_toolbar_expand_asr_button"
+        textcolor="@color/keybutton_text_2" />
+
+    <!-- 工具栏语音按钮 padding- 106，10，106，10 -->
+    <Class name="cls_toolbar_big_speech_adaptive" padding_decimal="0.457,0.25,0.336,0.25" />
+    <Class name="cls_toolbar_big_speech"
+        height="match_parent"
+        font="fi_toolbar_tip_button_icon"
+        align="center"
+        textcolor="@color/keybutton_text" />
+    <!-- 工具栏按钮 - 打开翻译 -->
+    <Class name="cls_translate_container_adaptive" inset_decimal="0.033,0.16667,0.033,0" />
+
+    <!-- 二级页面标题 -->
+    <Class name="cls_secondpage_left_title"
+        font="secondd_title_font" textcolor="@color/keybutton_text" align="left" />
+
+    <!-- 按钮 - 进入更多候选 -->
+    <Class name="cls_btn_more_cand_button_adaptive" width_weight="40"
+        margin_decimal="0,0.5,0,0.5" margin_center="0,30"/>
+    <Class name="cls_btn_more_cand_button_adaptive_editor" width_weight="40"
+        margin_decimal="0,0.6154,0,0.3846" margin_center="0,30"/>
+
+    <Class name="cls_btn_voice_cand_button_adaptive" width_weight="40"
+        margin_decimal="0,0.5,0,0.5" margin_center="0,24"/>
+    <Class name="cls_btn_voice_cand_button_adaptive_editor" width_weight="40"
+        margin_decimal="0,0.6154,0,0.3846" margin_center="0,24"/>
+
+    <!-- 按钮 - 关闭历史 -->
+    <Class name="cls_btn_close_history_adaptive"
+        margin_decimal="0,0.5,0.160,0.5" margin_center="0,30"/>
+
+    <Class name="cls_btn_morecand"
+        class="cls_bk_toolbar_button"
+        class_adaptive="cls_btn_more_cand_button_adaptive"
+        bindtablayoutname="input_kbd_table"
+        text="\ue365"  font="fi_cand_button"
+        textcolor="@color/keybutton_text"
+        key_vibrate="Function"/>
+
+    <Class name="cls_btn_cand_voice"
+        height="match_parent"
+        class_adaptive="cls_btn_voice_cand_button_adaptive"
+        bkcircle="true"
+        bkcolor="@color/toolbar_idle_button_bk" bkround="999"
+        pushedbkcolor="@color/toolbar_idle_button_pushedbk"
+        text="\ue367" font="cand_voice_btn"
+        textpadding="0,1,0,0"
+        textcolor="@color/toolbar_idle_button_text" />
+
+    <!-- 分割线 - 候选 -->
+    <Class name="cls_candidate_split_adaptive" margin_decimal="0,0.5,0,0.5" margin_center="0,20" />
+    <Class name="cls_candidate_split_adaptive_editor" margin_decimal="0,0.5488,0,0.4512" margin_center="0,20" />
+
+    <Class name="cls_candidate_split"
+        class_adaptive="cls_candidate_split_adaptive"
+        width_weight="1" height="match_parent" bkcolor="@color/canditem_split"/>
+
+    <!-- 按钮 - 关闭候选 -->
+    <Class name="cls_close_button_fonticon"
+        text="\ue314" font="fi_close_icon" textcolor="@color/keybutton_text" />
+
+    <Class name="cls_btn_closecand"
+        class="cls_bk_toolbar_button, cls_close_button_fonticon"
+        class_adaptive="cls_btn_more_cand_button_adaptive"
+        keytype="kInputFunc" functype="reset"
+        key_vibrate="Function" />
+
+    <!-- 按钮 - 退出更多候选 -->
+    <Class name="cls_btn_morecand_back_adaptive"
+        width_weight="1" margin_decimal="0.55,0,0,0" />
+
+    <Class name="cls_btn_morecand_back"
+        class="cls_bk_toolbar_button"
+        text="\ue373" font="fi_board_button" textcolor="@color/keybutton_text"
+        key_vibrate="Function" />
+
+    // 在候选区域有语音按钮和没有语音按钮时，候选区域宽度比例
+    <Class name="cls_cand_list_weight_have_speech"
+        width_weight="272"/>
+    <Class name="cls_cand_list_weight_no_speech"
+        width_weight="308"/>
+    <Class name="cls_cand_list"
+        class="cls_cand_list_weight_no_speech" height="match_parent" childpadding="4"
+        sliderenable="true" sliderstopslowdown="true" />
+
+    <!-- 候选项 推荐 loading-->
+    <Class name="cls_option_canditem_loading_adaptive" textpadding="0.11,0,0.04,0"
+        ficon_width="0.36" />
+
+    <Class name="cls_option_canditem_loading"
+        class="cls_option_canditem" text="助聊"
+        class_adaptive="cls_option_canditem_loading_adaptive"
+        ficon_textcolor="@color/canditem_text"
+        ficon_text_style="center|vcenter"
+        ficon_based_on_textrc="false"
+        ficon_font="fi_ai_cand_button"
+        ficon_text_offset_tobox="0,0"
+        ficon_visible_type="0"
+        ficon_text="\ue322" />
+
+    <Class name="cls_option_canditem_emoticons"
+        class="cls_option_canditem"
+        textpadding="31,0,0.027,0"
+        ficon_textcolor="@color/canditem_text"
+        ficon_text_style="left|vcenter"
+        ficon_based_on_textrc="false"
+        ficon_font="fi_emoticons_cand_button"
+        ficon_text_offset_tobox="8,1"
+        ficon_visible_type="0"
+        ficon_text="\ue387" />
+
+    <!-- 候选项(第一个) 每次刷新变更属性-->
+    <Class name="cls_option_first_canditem"
+        font="first_cand_font"
+        textcolor="@color/first_cand_text_color"
+        textpadding="0.027,0,0.027,0" />
+
+    <Class name="cls_option_first_canditem_no_font"
+        textcolor="@color/first_cand_text_color"
+        textpadding="0.027,0,0.027,0" />
+
+    <!-- 联想 候选项(第一个) 每次刷新变更属性-->
+    <Class name="cls_option_associate_first_canditem"
+        font="cand_font"
+        bkcolor="@color/transparent"
+        textcolor="@color/canditem_text"
+        textpadding="0.027,0,0.027,0"/>
+
+    <!-- 9键符号列表(第一个) -->
+    <Class name="cls_pinyin9_symbol_first_item"
+        font="pinyin9_symbol_first_font"
+        bkcolor="@color/canditem_pushedbk"
+        textcolor="@color/theme_color"
+        textpadding="0.027,0,0.027,0" />
+
+    <Class name="cls_comp_container"
+        sliderenable="true" sliderstopslowdown="true"
+        pushedbkcolor="@color/comp_pushedbk" />
+
+    <!-- 拼音串: 半选&9键已选filter -->
+    <Class name="cls_comp_half"
+        text="" width="auto" height="match_parent" font="comp_font"
+        textcolor="@color/theme_color" align="right" />
+
+    <!-- 拼音串: 未转换的串 -->
+    <Class name="cls_comp_right"
+        text="" width="auto" height="match_parent" font="comp_font"
+        textcolor="@color/keybutton_text" align="left" />
+
+    <!-- 拼音串光标 -->
+    <Class name="cls_comp_cursor"
+        width="1" height="match_parent" />
+
+    <!-- 用户反馈容器-->
+    <!-- 用户反馈容器 左侧文字绘制向左偏移 -->
+    <Class name="cls_feedback_icon"
+        ficon_based_on_textrc="false"
+        ficon_font="ai_fi_refresh"
+        ficon_visible_type="0"
+        ficon_height="0"
+        ficon_text_style="right|vcenter"
+        ficon_width="0.4"
+        ficon_text_offset="0.4,0"
+        ficon_textcolor="@color/keybutton_text"
+        ficon_text="\ue349"
+        ficon_text_offset_tobox="-4,0"
+        width="70"
+        textcolor="@color/keybutton_text"
+        align="left|vcenter"
+        font="comp_font"
+        text="反馈"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- start 键盘切换页面的大按钮 -->
+
+    <!-- Settings -->"
+    <Class name="cls_settings_bk_adaptive"
+        width_weight="0.88888" padding_decimal="0.05555,0.0721,0.05555,0.10096"
+        columns="4" rows="2" maxheight="192"
+        childpadding_decimal="0.05" childvpadding_decimal="0.11111"/>
+
+    <Class name="cls_settings_bk"
+        class="cls_default_bk" class_adaptive="cls_settings_bk_adaptive"
+        height="match_parent" mouse="false" />
+
+    <!-- settings页面大按钮 -->
+    <Class name="cls_settings_button"
+        ficon_textcolor="@color/keybutton_text"
+        ficon_textcolor_disable="@color/setting_button_icon_disabled"
+        ficon_textcolor_pushed="@color/keybutton_text"
+        ficon_textcolor_selected="@color/setting_button_icon_selected"
+        ficon_based_on_textrc="false"
+        ficon_font="fi_setting_button_icon"
+        ficon_visible_type="0"
+        ficon_height="0.7647"
+        font="fi_setting_button_text"
+        textpadding="0,0.2745,0,0" textpaddingdecimalmode="true"
+        textcolor="@color/keybutton_text_3" align="top"
+        pushedtextcolor="@color/keybutton_text_3"
+        selectedtextcolor="@color/setting_button_selectedtext"
+        disabledtextcolor="@color/setting_button_disabledtext"
+        group="switch_keyboard"
+        width="parent_average" height="parent_average"
+        bkcolor="@color/setting_button_bk" bkround="14"
+        pushedbkcolor="@color/setting_button_pushedbk"
+        selectedbkcolor="@color/theme_color"
+        disabledbkcolor="@color/setting_button_disabledbk"
+        key_vibrate="Function"/>
+
+    <Class name="cls_settings_option_mode_switch_button"
+        ficon_textcolor="@color/keybutton_text"
+        ficon_textcolor_disable="@color/setting_button_icon_disabled"
+        ficon_textcolor_pushed="@color/keybutton_text"
+        ficon_textcolor_selected="@color/theme_color"
+        ficon_based_on_textrc="false"
+        ficon_font="fi_setting_button_icon"
+        ficon_visible_type="0"
+        ficon_height="0.7647"
+        font="fi_setting_button_text"
+        textpadding="0,0.2745,0,0" textpaddingdecimalmode="true"
+        textcolor="@color/keybutton_text_3" align="top"
+        pushedtextcolor="@color/keybutton_text_3"
+        selectedtextcolor="@color/theme_color"
+        disabledtextcolor="@color/setting_button_disabledtext"
+        group="switch_keyboard"
+        width="parent_average" height="parent_average"
+        bkcolor="@color/setting_button_bk" bkround="14"
+        pushedbkcolor="@color/setting_button_pushedbk"
+        key_vibrate="Function"/>
+
+    <Class name="cls_settings_tab_point_container"
+        height_weight="0.05769"
+        inset_decimal="0,0.1525,0,0.1525"
+        padding_decimal="0,0,0,0.03365"/>
+
+    <Class name="cls_settings_tab_point"
+        width="match_height" height="match_parent" bkround="999"
+        margin_decimal="0.24,0.24,0.24,0.24" />
+
+    <!-- start 使用bindtabindex切换tab的cls -->
+    <Class name="cls_to_input_kbd_pinyin26" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_pinyin9" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_double_spell" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_english26" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_symbol" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_more_symbol" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_number" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_bihua" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_input_kbd_wubi" bindtablayoutname="input_kbd_table" />
+
+    <Class name="cls_to_switch_keyboard" bindtablayoutname="input_kbd_table" />
+
+    <!-- end 使用bindtabindex切换tab的cls -->
+
+    <!-- 符号页 列表项 -->
+    <Class name="cls_symbol_tab_container_adaptive"
+        padding_decimal="0.006,0,0,0" inset_decimal="0.02,0,0,0" />
+
+    <Class name="cls_symbol_tab_container"
+        class_adaptive="cls_symbol_tab_container_adaptive"
+        width_weight="85" height="match_parent"
+        sliderenable="true" sliderstopslowdown="true" />
+
+    <Class name="cls_input_kbd_symbol_option_adaptive"
+        padding_decimal="0.006,0.183,0.006,0.183" />
+
+    <Class name="cls_input_kbd_symbol_option"
+        class="cls_input_kbd_symbol_option_adaptive"
+        width="match_height" height="match_parent" group="symbol_type"
+        textcolor="@color/keybutton_text_2"
+        pushedtextcolor="@color/keybutton_text"
+        selectedtextcolor="@color/keybutton_text"
+        bkcolor="@color/transparent" bkround="999"
+        pushedbkcolor="@color/symbol_option_pushedbk"
+        selectedbkcolor="@color/symbol_option_pushedbk"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 26键键盘区域上部分没有空隙 57都给了padding，为了兼容26键按键margin设置了-4.75 -->
+    <Class name="cls_input_kbd_inset_adaptive"
+        inset_decimal="0,0,0,0"
+        inset="2.5,-4.75,2.5,0"/>
+
+    <Class name="cls_input_kbd_morecand_inset_adaptive"
+        inset_decimal="0,0,0,0"
+        inset="2.5,0,2.5,0"/>
+
+    <!-- 9键键盘区域上部分没有空隙 57都给了padding，为了兼容9键按键margin设置了-2.75 -->
+    <Class name="cls_input_kbd9_inset_adaptive"
+        inset_decimal="0,0,0,0"
+        inset="1.5,-2.75,1.5,0"/>
+
+    <!-- 26键键盘区域下面溜了6的空隙，减去26键按键margin，底部设置为1.25 -->
+    <Class name="cls_input_kbd_adaptive"
+        padding_decimal="0,0,0,0"
+        padding1x="0,57,0,1.25" />
+
+    <Class name="cls_input_kbd_adaptive_editor"
+        padding_decimal="0,0,0,0"
+        padding1x="0,51,0,1.25" />
+
+    <!-- 9键键盘区域下面溜了6的空隙，减去9键按键margin，底部设置为3.25 -->
+    <Class name="cls_input_kbd9_adaptive"
+        padding_decimal="0,0,0,0"
+        padding1x="0,57,0,3.25" />
+
+    <Class name="cls_input_kbd9_adaptive_editor"
+        padding_decimal="0,0,0,0"
+        padding1x="0,51,0,3.25" />
+
+    <Class name="cls_toolbar_idle_button_adaptive"
+        margin_decimal="0,0.5,0,0.5" margin_center="0,30"/>
+
+    <Class name="cls_toolbar_idle_speech_button_adaptive"
+        margin_decimal="5,0.5,5,0.5" margin_center="0,30"/>
+
+    <Class name="cls_input_kbd" mouse="false"
+        class="cls_default_bk" width="match_parent" height="match_parent"
+        class_adaptive="cls_input_kbd_adaptive, cls_input_kbd_inset_adaptive"  />
+
+    <Class name="cls_input_kbd9" mouse="false"
+        class="cls_default_bk" width="match_parent" height="match_parent"
+        class_adaptive="cls_input_kbd9_adaptive, cls_input_kbd9_inset_adaptive" />
+
+    <!-- 工具栏 - 单字全部过滤按钮 -->
+    <Class name="cls_filter_button"
+        height="match_parent"
+        width_weight="86" bkround="20"
+        font="filter_button_font"
+        textcolor="@color/keybutton_text_2"
+        selectedtextcolor="@color/filter_button_selecttext"
+        selectedbkcolor="@color/filter_button_selectedbk"
+        group="cands_type" keytype="kCommand"
+        />
+
+    <!-- ai writing btn -->
+    <Class name="cls_ai_writing_btn_base"
+        height="match_parent" bkround="999"
+        textcolor="@color/keybutton_text" textpaddingdecimalmode="true"
+        ficon_font="ai_entrance_button_icon" ficon_textcolor="@color/toolbar_tip_option"
+        ficon_visible_type="0" ficon_based_on_textrc="false"
+        key_sound="Entrance" key_vibrate="Function" />
+
+    <!-- ai writing btn func -->
+    <Class name="cls_ai_writing_btn_func_adaptive"
+        width_weight="0.21111" padding_decimal="0.01666,0.28571,0.01666,0.14285" textpadding="0.068,0,0,0" />
+
+    <Class name="cls_ai_writing_btn_func" class="cls_ai_writing_btn_base"
+        class_adaptive="cls_ai_writing_btn_func_adaptive"
+        bkcolor="@color/entrance_selectedbk" pushedbkcolor="@color/entrance_bk"
+        font="ai_entrance_button_text" ficon_width="0.5" ficon_height="-0.95" />
+
+    <Class name="cls_ai_writing_btn_close_adaptive"
+        width_weight="0.12222" padding_decimal="0.01666,0.28571,0.01666,0.14285" />
+
+    <!-- ai writing btn close -->
+    <Class name="cls_ai_writing_btn_close"
+        class="cls_ai_writing_btn_base" class_adaptive="cls_ai_writing_btn_close_adaptive"
+        bkcolor="@color/entrance_bk" pushedbkcolor="@color/entrance_selectedbk"
+        textcolor="@color/keybutton_text" font="ai_entrance_button_icon" />
+
+    <!-- 确定按钮 -->
+    <Class name="cls_button_enter"
+        actiontextcolor="@color/action_button_text"
+        actionpushedtextcolor="@color/action_button_pushedtext"
+        actionbkcolor="@color/theme_color"
+        actionpushedbkcolor="@color/action_button_pushedbk"
+        disabledtextcolor="@color/action_button_text_disable"
+        havelongpressaction="true"
+        font="key_func"
+        keycode="0x0D" keytype="kInputFunc" />
+
+    <Class name="cls_button_enter26"
+        class="cls_keyboard_button_func, cls_button_enter"
+        class_adaptive="cls_26key_button_enter_width_adaptive"/>
+
+    <Class name="cls_button_enter9"
+        class="cls_keyboard9_button_func, cls_button_enter" />
+
+    <!-- 前删按钮 -->
+    <Class name="cls_button_backspace"
+        class="cls_bk_gray_circle"
+        havelongpressaction="true"
+        width_weight="15" pushedtext="\ue316"
+        text="\ue30b" font="fi_backspace_button" textcolor="@color/keybutton_text"
+        btnmovestateunchange="true"
+        keycode="0x08" functype="delete"
+        key_sound="Delete" key_vibrate="Function" />
+
+    <!-- 返回按钮 -->
+    <Class name="cls_button_back"
+        class="cls_bk_theme_circle"
+        text="\ue31a" font="fi_back_button"
+        textcolor="@color/keybutton_back"
+        pushedtextcolor="@color/keybutton_text"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 符号页 返回按钮 -->
+    <Class name="cls_button_back_symbol"
+        class="cls_keyboard_button_margin, cls_button_back"
+        width_weight="15" height="match_parent" />
+
+    <!-- 26键返回按钮 -->
+    <Class name="cls_button_back_26key"
+        class="cls_button_back, cls_keyboard9_button_margin" />
+
+    <Class name="cls_button_space"
+        class="cls_keyboard_button"
+        ficon_width="-18" ficon_height="18"
+        ficon_text_offset="0,0"
+        width="match_parent" keycode="0x20"
+        text="\ue368" font="fi_space_text1"
+        textcolor="@color/keybutton_text_2"
+        usedoubleclick="true" enable_speech="true"
+        key_vibrate="Function"/>
+
+    <!-- 空格按钮  9键数字页面 -->
+    <Class name="cls_button_space_number9"
+        class="cls_button_space, cls_bk_white_circle, cls_keyboard9_button_margin"
+        textcolor="@color/keybutton_text" font="fi_space_text" textpadding="0,0,0,9"
+        text="\ue31c" ficon_text="" enable_speech="false"/>
+
+    <Class name="cls_keyboard9_button_space_func"
+        class="cls_button_space,cls_bk_gray_circle, cls_keyboard9_button_margin"
+        textcolor="@color/keybutton_text" font="key_func" enable_speech="false" text="空格"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 中文 → 英文 按钮 -->
+    <Class name="cls_button_cn2en"
+        class="cls_keyboard_button_func_white_circle"
+        textpaddingdecimalmode="true"
+        ficon_based_on_textrc="false"
+        ficon_width="0" ficon_height="0"
+        ficon_visible_type="0" ficon_text="\ue359"
+        ficon_font="fi_cnen_ficon" ficon_textcolor="@color/cnen_button_light"
+        text="\ue360" font="fi_cnen_ficon" textcolor="@color/keybutton_text"
+        key_vibrate="Function"/>
+
+    <Class name="cls_button_en2cn"
+        class="cls_keyboard_button_func_white_circle"
+        textpaddingdecimalmode="true"
+        ficon_based_on_textrc="false"
+        ficon_width="0" ficon_height="0"
+        ficon_visible_type="0" ficon_text="\ue358"
+        ficon_font="fi_cnen_ficon" ficon_textcolor="@color/cnen_button_light"
+        text="\ue361" font="fi_cnen_ficon" textcolor="@color/keyboard_current_english"/>
+
+    <!-- 最左边大按钮 和 margin设置 -->
+    <Class name="cls_button_left_big"
+        margin="2.25,4.75,8,4.75" width_weight="15"/>
+
+    <!-- 最右边大按钮 和 margin设置 -->
+    <Class name="cls_button_right_big"
+        margin="8,4.75,2.25,4.75" width_weight="15"/>
+
+    <!-- shift 按钮 -->
+    <Class name="cls_button_shift"
+        class="cls_bk_gray_circle, cls_keyboard_button_margin"
+        text="\ue310" toggletext="\ue30e" lockedtext="\ue30f"
+        font="fi_shift_button" textcolor="@color/keybutton_text"
+        height="match_parent" usedoubleclick="true"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 26键 中文切英文/123 按钮 -->
+    <Class name="cls_button_123_width_adaptive" width_weight="44" />
+
+    <!-- 26键 符号123分开模式中，符号 按钮-->
+    <Class name="cls_26key_button_symble_width_adaptive_s" width_weight="47.5" />
+
+    <!-- 26键 符号123分开模式中，123 按钮 -->
+    <Class name="cls_26key_button_123_width_adaptive_s" width_weight="41.5" target="5"/>
+
+    <Class name="cls_26key_button_123_width_adaptive_s_period_comma_s" width_weight="41.25" target="5"/>
+
+    <!-- 26键 符号123分开模式中, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_width_adaptive_s" width_weight="35.5" />
+
+    <Class name="cls_button_comma_width_adaptive_s" width_weight="35.5" />
+
+    <Class name="cls_button_period_width_adaptive_s" width_weight="35.5" />
+
+    <!-- 26键 符号123分开模式中，空格 按钮 -->
+    <Class name="cls_26key_button_space_width_adaptive_s" width_weight="106.5" />
+
+    <Class name="cls_26key_button_space_width_adaptive_s_period_comma_s" width_weight="106.5" />
+
+    <!-- 26键 符号123分开模式中，中英 按钮 -->
+    <Class name="cls_26key_button_cn2en_width_adaptive_s" width_weight="44.5" />
+
+    <Class name="cls_26key_button_cn2en_width_adaptive_s_period_comma_s" width_weight="41.5" />
+
+
+    <!-- 26键 符号123分开模式中，enter 按钮 -->
+    <Class name="cls_26key_button_enter_width_adaptive_s" width_weight="79.5" />
+
+
+    <Class name="cls_26key_button_enter_width_adaptive_s_period_comma_s" width_weight="47.5"  margin="2,4.75,2.25,4.75"/>
+
+    <!-- 26键 符号123合并模式中，123 按钮 -->
+    <Class name="cls_26key_button_123_width_adaptive" width_weight="70.6"/>
+
+    <Class name="cls_26key_button_123_width_adaptive_period_comma_s" width_weight="60.5"/>
+
+    <Class name="cls_button_comma_width_adaptive_period_comma_s" width_weight="35.5" />
+    <Class name="cls_button_period_width_adaptive_period_comma_s" width_weight="35.5" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_26key_button_space_width_adaptive" width_weight="133.6" />
+
+    <Class name="cls_26key_button_space_width_adaptive_period_comma_s" width_weight="124.5" />
+
+    <!-- 26键 符号123合并模式中，中英 按钮 -->
+    <Class name="cls_26key_button_cn2en_width_adaptive" width_weight="38.6" />
+
+    <Class name="cls_26key_button_cn2en_width_adaptive_period_comma_s" width_weight="38.5" />
+
+    <!-- 26键 符号123合并模式中，enter 按钮 -->
+    <Class name="cls_26key_button_enter_width_adaptive" width_weight="74.6" />
+
+    <Class name="cls_26key_button_enter_width_adaptive_period_comma_s" width_weight="60.5" />
+
+    <!-- 26键 符号123合并模式中，返回按钮 -->
+    <Class name="cls_123symbol_button_back_width_adaptive" width_weight="66.5" />
+
+    <!-- 26键 符号123合并模式中，123 按钮 -->
+    <Class name="cls_123symbol_button_123_width_adaptive" width_weight="41.3" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_123symbol_button_space_width_adaptive" width_weight="172.5" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_123symbol_button_cn2en_width_adaptive" width_weight="38.6" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_123symbol_button_enter_width_adaptive" width_weight="74.5" />
+
+    <!-- 26键 符号123合并模式中, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_width_adaptive" width_weight="37.6" />
+
+    <Class name="cls_button_comma_width_adaptive" width_weight="35.5" />
+
+    <Class name="cls_button_period_width_adaptive" width_weight="35.5" />
+
+    <!-- 26键 中文逗号句号, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_cn_text_adaptive"  ficon_text_offset_tobox="0,-4" textpadding="0,5,0,6"/>
+
+    <!-- 26键 句号、逗号 按钮 -->
+    <Class name="cls_keyboard_button_comma_width_adaptive"
+        width_weight="35.6" />
+
+    <!-- 26键 空格按钮 -->
+    <Class name="cls_button_space26_adaptive"
+        width_weight="90"/>
+
+    <!-- 26键 123按钮 -->
+    <Class name="cls_button_123"
+        class="cls_keyboard_button_func, cls_to_input_kbd_number"
+        class_adaptive="cls_26key_button_123_width_adaptive"
+        text="123" target="5" key_vibrate="Function"/>
+
+    <!-- 26键数字符号键盘 1234按钮 -->
+    <Class name="cls_button_1234"
+        class="cls_keyboard_button_func_white_circle, cls_to_input_kbd_number"
+        text="123" target="5" key_vibrate="Function"/>
+
+
+    <Class name="cls_vertical_symbol_list_button" width="match_parent" height_weight="0.2"
+        textcolor="@color/keybutton_text" font="fi_vertical_symbol_list_text"
+        pushedbkcolor="@color/keybutton_bk"
+        bordercolor="@color/vertical_symbol_list_button_border" bordersize="1"
+        key_sound="Keyboard" key_vibrate="Function" key_play_time="ButtonUp" />
+
+    <Class name="cls_pinyin9_filter_button" class="cls_vertical_symbol_list_button"
+        height_weight="0.25" />
+
+    <Class name="cls_vertical_symbol_list"
+        class="cls_bk_gray_circle"
+        margin="2.5,2.75,2.5,2.75" bkround="6" inset="-3,-1,-3,-1"
+        item_style="cls_vertical_symbol_list_button"
+        sliderenable="true" sliderstopslowdown="true" clip_children_to_rounds="true" />
+
+    <!-- 历史符号列表 关闭按钮 -->
+    <Class name="cls_history_close_button"
+        class="cls_bk_toolbar_button, cls_close_button_fonticon"
+        key_sound="Keyboard" key_vibrate="Function" key_play_time="ButtonUp" />
+
+    <!-- 历史符号列表 -->
+    <Class name="cls_history_symbollist"
+        height="match_parent"
+        childpadding="4"
+        sliderenable="true" sliderstopslowdown="true" />
+
+    <!-- 符号键盘 历史符号列表项 -->
+    <Class name="cls_history_symbollist_button"
+        width1x="36" height="match_parent" font="cand_font"
+        textcolor="@color/canditem_text"
+        pushedbkcolor="@color/canditem_pushedbk"
+        bkround="6"
+        textpadding="0.027,0,0.027,0" textpaddingdecimalmode="true"
+        ficon_height="10"
+        ficon_width="-10"
+        ficon_text_style="center|vcenter"
+        ficon_font="cand_righttop_font"
+        ficon_visible_type="0"
+        ficon_based_on_textrc="false"
+        ficon_textcolor="@color/keybutton_text_2"
+        key_sound="Keyboard" key_vibrate="Standard" key_play_time="ButtonUp" />
+
+    <Class name="cls_option_canditem"
+        class_adaptive="cls_use_fix_scale_except_float"
+        width="auto" height="match_parent" font="cand_font"
+        align="left" textcolor="@color/canditem_text"
+        pushedbkcolor="@color/canditem_pushedbk"
+        selectedbkcolor="@color/canditem_selectedbk"
+        bkround="6"
+        textpadding="0.027,0,0.027,0" textpaddingdecimalmode="true"
+        ficon_height="0"
+        ficon_width="0"
+        ficon_text_style="left|top"
+        ficon_font="cand_righttop_font"
+        ficon_visible_type="0"
+        ficon_based_on_textrc="true"
+        ficon_based_on_textrc_outside="true"
+        key_sound="Keyboard" key_vibrate="Standard" />
+
+    <Class name="cls_option_canditem_split"
+        class_adaptive="cls_use_fix_scale_except_float"
+        width="auto" height="match_parent" />
+
+    <Class name="cls_option_canditem_split_cand_padding_left"
+        textpadding="0.027,0,0,0" textpaddingdecimalmode="true"/>
+    <Class name="cls_option_canditem_split_cand_padding_right"
+        textpadding="0,0,0.027,0" textpaddingdecimalmode="true"/>
+    <Class name="cls_option_canditem_split_cand_pinyin_padding_middle"
+        textpadding="3,0,6,0" textpaddingdecimalmode="true"/>
+    <Class name="cls_option_canditem_split_cand_pinyin_padding_right"
+        textpadding="3,0,0.027,0" textpaddingdecimalmode="true"/>
+    <!-- 长按弹泡 容器 -->
+    <Class name="cls_fusiyin_bubble_container"
+        shadow_radius="18" inset="26,26,26,26"
+        bkcolor="@color/fusiyin_bubble_container_bk" margin="19,19,19,19"
+        shadow_color="@color/fusiyin_bubble_container_shadow" bkround="8"
+        width="auto" height="auto" float="true" visible="false" />
+
+    <!-- 长按弹泡 按钮 -->
+    <Class name="cls_fusiyin_bubble_button"
+        textcolor="@color/fusiyin_bubble_button_text"
+        font="fi_fusiyin_bubble_button" bkround="6"
+        pushedtextcolor="@color/fusiyin_bubble_button_pushedtext"
+        pushedbkcolor="@color/theme_color" />
+
+    <Class name="cls_morecands_button"
+        width="auto" ellipsis="1" align="center|vcenter"
+        textcolor="@color/keybutton_text" font="cand_font"
+        textpadding="10,0,10,0"
+        bkcolor="@color/morecands_button_bk"
+        pushedbkcolor="@color/morecands_button_pushedbk"
+        bordercolor="@color/morecands_list_border"
+        bordersize="1"
+        key_sound="Keyboard" key_vibrate="Standard"
+        usefixscale="false" />
+
+    <!--更多候选滚动条-->
+    <Class name="cls_morecands_scroll"
+        width="5" thumbnormalcolor="@color/morecands_thumbnormal"
+        showbutton1="false" showbutton2="false" />
+
+    <Class name="cls_morecand_filter_containder"
+        inset="3,3,3,3" height="match_parent" width="150"
+        bkcolor="@color/morecands_filter_container_bk" bkround="20"/>
+
+    <!-- 更多候选 列表背景 -->
+    <Class name="cls_morecand_bk"
+        bkcolor="@color/morecands_list_bk"
+        bordercolor="@color/morecands_list_border"
+        vertical_scroll_bar_overflow_range="50"
+        bordersize="2" bkround="11" borderround="11"/>
+
+    <Class name="cls_touch_tip_button"
+        shadow_radius="2" mouse="false"
+        bkcolor="@color/touch_tip_button_bk" bkround="12"
+        font="key_touch_tip" visible="false"
+        shadow_color="@color/fusiyin_bubble_container_shadow"
+        textcolor="@color/keybutton_text" float="true" />
+
+    <!-- 翻译 背景区-->
+    <Class name="cls_trans_container_bk"
+        width_weight="match_parent" height="match_parent"
+        bkround="999" borderround="999"
+        bordercolor="@color/trans_container_border"
+        bkcolor="@color/trans_container_bk" />
+
+    <!-- 翻译 语言选项  按钮-->
+    <Class name="cls_trans_lang_button_adaptive"
+        padding1x="0,0,0,0" padding_decimal="0.0147,0.1,0.02941,0.1" />
+
+    <!-- 翻译 语言选项  按钮-->
+    <Class name="cls_trans_lang_button"
+        class_adaptive="cls_trans_lang_button_adaptive"
+        ficon_text="\ue35f" text="\ue35c"
+        font="fi_trans_lang_button_ficon" ficon_font="fi_trans_lang_button_ficon"
+        ficon_based_on_textrc="false"
+        ficon_width="0" ficon_height="0"
+        ficon_visible_type="0"
+        ficon_textcolor="@color/keybutton_text_2"
+        ficon_textcolor_disable="@color/keybutton_text_2"
+        width="match_height" height="match_parent" bkround="999"
+        bkcolor="@color/trans_lang_button_bk"
+        pushedbkcolor="@color/trans_lang_button_pushedbk"
+        disabledbkcolor="@color/trans_lang_button_bk"
+        textcolor="@color/keybutton_text"
+        disabledtextcolor="@color/keybutton_text"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 翻译 action  按钮-->
+    <Class name="cls_trans_action_button_adaptive" width_weight="0.14444"
+        padding1x="0,0,0,0" padding_decimal="0.0355,0.1,0.01,0.1" />
+
+    <Class name="cls_trans_action_button"
+        class_adaptive="cls_trans_action_button_adaptive"
+        font="fi_trans_action_button"
+        bkround="999" bkcolor="@color/trans_action_button_bk"
+        textcolor="@color/keybutton_text"
+        pushedbkcolor="@color/trans_action_button_pushedbk"
+        key_sound="Keyboard" key_vibrate="Standard" />
+
+    <!-- 翻译 reset  按钮-->
+    <Class name="cls_btn_trans_reset_adaptive"
+        padding1x="0,0,0,0" padding_decimal="0.0225,0.15,0.0225,0.15" />
+
+    <Class name="cls_btn_trans_reset"
+        class_adaptive="cls_btn_trans_reset_adaptive"
+        text="\ue314" font="fi_trans_reset_button_icon"
+        width="match_height" height="match_parent" bkround="999"
+        textcolor="@color/keybutton_text_2"
+        bkcolor="@color/trans_action_button_bk"
+        pushedbkcolor="@color/trans_action_button_pushedbk"
+        key_sound="Delete" key_vibrate="Standard" />
+
+    <!-- 翻译 源文本框容器 -->
+    <Class name="cls_trans_sourcetext_container"
+        width="match_parent" height="match_parent"
+        sliderenable="true" sliderstopslowdown="true" sliderinittail="false" />
+
+    <!-- 翻译 文本框-->
+    <Class name="cls_trans_text"
+        font="fi_trans_text" align="left" width="auto"
+        textcolor="@color/keybutton_text" />
+
+    <!-- 翻译 文本框光标-->
+    <Class name="cls_trans_cursor" width="2" height="18" bkcolor="@color/trans_cursor" />
+
+    <Class name="cls_trans_tip_text"
+        padding="4,0,0,0"
+        font="fi_trans_text" align="left"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <!-- 快捷输入的提示label -->
+    <Class name="cls_quickinput_label"
+        font="quickinput_label_font"
+        width="match_parent" height_weight="1"
+        textpadding="0.04,0,0.04,0" textpaddingdecimalmode="true" />
+
+    <!-- 快捷输入的点击上屏button -->
+    <Class name="cls_quickinput_button"
+        font="cand_font"
+        width="match_parent" height_weight="1"
+        textcolor="@color/keybutton_text"
+        selectedtextcolor="@color/highlight_color"
+        textpadding="0.04,0,0.04,0"
+        textpaddingdecimalmode="true"
+        pushedbkcolor="@color/quickinput_button_pushedbk"
+        key_sound="Keyboard" key_vibrate="Standard" />
+
+    <!-- 引导 相关 -->
+    <Class name="cls_toolbar_tip_label_adaptive" padding1x="0,0,0,0" padding_decimal="0.012,0,0,0" />
+
+    <Class name="cls_toolbar_tip_label"
+        class_adaptive="cls_toolbar_tip_label_adaptive"
+        font="fi_toolbar_tip_text" textcolor="@color/keybutton_text"
+        width="match_parent" height="match_parent" align="left" ellipsis="1" />
+
+    <!-- 引导 容器 -->
+    <Class name="cls_toolbar_tip_container"
+        class_adaptive="cls_toolbar_tip_adaptive"
+        width="match_parent" height="match_parent" bkcolor="@color/keybutton_bk" bkround="999" />
+
+    <Class name="cls_toolbar_tip_leading_space_adaptive" width1x="0" width_weight="0.03571" />
+
+    <Class name="cls_toolbar_tip_leading_icon_adaptive"
+        padding1x="0,0,0,0" padding_decimal="0,0.25,0,0.25" />
+
+    <Class name="cls_toolbar_tip_leading_icon"
+        class_adaptive="cls_toolbar_tip_leading_icon_adaptive"
+        width="match_height" height="match_parent"
+        font="fi_toolbar_tip_button_icon"
+        textcolor="@color/toolbar_tip_leading_icon" />
+
+    <!-- 引导 去设置 按钮 -->
+    <Class name="cls_toolbar_tip_action_button_adaptive" textpadding="0.03571,0,0.03571,0"
+        padding1x="0,0,0,0" padding_decimal="0.012,0.15,0.012,0.15" />
+
+    <Class name="cls_toolbar_tip_action_button"
+        class_adaptive="cls_toolbar_tip_action_button_adaptive"
+        font="fi_toolbar_tip_button_text"
+        width="auto" height_weight="match_parent" bkround="999"
+        textpaddingdecimalmode="true"
+        textcolor="@color/toolbar_tip_upgrade_button_text_start"
+        textcolor2="@color/toolbar_tip_upgrade_button_text_end"
+        text_color_linear_gradient="true"
+        bkcolor="@color/toolbar_tip_upgrade_button_bk_start"
+        bkcolor2="@color/toolbar_tip_upgrade_button_bk_end"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <Class name="cls_toolbar_tip_close_button_adaptive"
+        padding1x="0,0,0,0" padding_decimal="0.012,0.15,0.01785,0.15" />
+
+    <Class name="cls_toolbar_tip_close_button" width="match_height" height="match_parent"
+        class="cls_toolbar_tip_close_button_adaptive"
+        text="\ue306" textcolor="@color/keybutton_text_2"
+        font="fi_toolbar_tip_button_icon" bkround="999"
+        bkcolor="@color/toolbar_tip_close_button_bk"
+        pushedbkcolor="@color/toolbar_tip_close_button_pushedbk"
+        key_sound="Keyboard" key_vibrate="Function" />
+
+    <Class name="cls_quick_reply_item" font="reply_label_font"
+        textcolor="@color/keybutton_text" textpadding="6,2,6,2"
+        width="auto" height="match_parent" text="" usefixscale="true"/>
+
+    <Class name="cls_quick_reply_ai_item" font="reply_label_font"
+        textcolor="@color/keybutton_text"
+        width="auto" height="match_parent"
+        margin="6,0,0,0" textpadding="30,0,6,0"
+        ficon_based_on_textrc="false"
+        ficon_width="0"
+        ficon_height="0"
+        ficon_text_style="left|vcenter"
+        ficon_text_offset_tobox="0,0"
+        ficon_textcolor="@color/toolbar_tip_option"
+        ficon_font="ai_entrance_button_icon"
+        ficon_visible_type="0"
+        usefixscale="true"/>
+    <Class name="cls_symbol_keyboard_button" class="cls_keyboard_button" key_vibrate="Function" />
+
+    <Class name="cls_keyboard_button_add_custom_symbol"
+        class="cls_pinyin9_filter_button"
+        ficon_textcolor="@color/keybutton_text"
+        ficon_textcolor_disable="@color/setting_button_icon_disabled"
+        ficon_textcolor_pushed="@color/keybutton_text"
+        ficon_textcolor_selected="@color/setting_button_icon_selected"
+        ficon_based_on_textrc="false"
+        ficon_font="fi_add_custom_symbol_button_icon"
+        text="自定义"
+        ficon_text="\ue375"
+        font="fi_vertical_add_custom_symbol_list_text"
+        ficon_visible_type="0"
+        ficon_height="0.6905"
+        textpadding="0,0.1350,0,0" textpaddingdecimalmode="true" align="top"
+        key_vibrate="Function"/>
+</Window>

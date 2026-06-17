@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->getAppLanguageOption()Ll52; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:l52
+
+getAppLanguageOption-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->appLanguageOption Ll52;
+	1       (00000004) return-object        v0
+

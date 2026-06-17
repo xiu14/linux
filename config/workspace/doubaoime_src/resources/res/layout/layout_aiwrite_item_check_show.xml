@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/oui_g_list_item_3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textStyle="bold"
+        android:textColor="@color/oui_text_1"
+        android:ellipsize="end"
+        android:id="@+id/check_item_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="358dp"
+        android:text="第 1 处修改"
+        android:maxLines="1"
+        style="@style/Title_Title_M"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3b"
+        android:id="@+id/check_item_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="（共4处）"
+        style="@style/Title_Title_M_Thin"/>
+</LinearLayout>

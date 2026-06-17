@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$ensureDependenciesInitialized(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)Ljava/lang/Object; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.service.BatteryMonitorService
+# - v1:n60
+#
+# - return:java.lang.Object
+
+access$ensureDependenciesInitialized-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->ensureDependenciesInitialized(Ln60;)Ljava/lang/Object;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

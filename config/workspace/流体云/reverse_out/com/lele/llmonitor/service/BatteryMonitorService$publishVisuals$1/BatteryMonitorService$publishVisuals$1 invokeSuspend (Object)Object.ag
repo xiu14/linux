@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : 
+	0       (00000000) iput-object          v9, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->result Ljava/lang/Object;
+	1       (00000004) iget                 v9, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->label I
+	2       (00000008) const/high16         v0, -2147483648
+	3       (0000000c) or-int/2addr         v9, v0
+	4       (0000000e) iput                 v9, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->label I
+	5       (00000012) iget-object          v0, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	6       (00000016) const/4              v4, 0
+	7       (00000018) const-wide/16        v5, 0
+	8       (0000001c) const/4              v1, 0
+	9       (0000001e) const/4              v2, 0
+	10      (00000020) const/4              v3, 0
+	11      (00000022) move-object          v7, v8
+	12      (00000024) invoke-static/range  v0 ... v7, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$publishVisuals(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; I I F J Ln60;)Ljava/lang/Object;
+	13      (0000002a) move-result-object   v8
+	14      (0000002c) return-object        v8
+

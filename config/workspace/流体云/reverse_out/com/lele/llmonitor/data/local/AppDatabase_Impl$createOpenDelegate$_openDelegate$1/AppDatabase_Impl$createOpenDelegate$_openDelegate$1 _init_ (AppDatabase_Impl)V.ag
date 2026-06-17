@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;-><init>(Lcom/lele/llmonitor/data/local/AppDatabase_Impl;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:com.lele.llmonitor.data.local.AppDatabase_Impl
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v3, v2, Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;->this$0 Lcom/lele/llmonitor/data/local/AppDatabase_Impl;
+	1       (00000004) const-string         v3, "5c1ddbf13994b871c5b6a06bbbc2d6bc"
+	2       (00000008) const-string         v0, "c111edde2d2dccdb468f9dfde42ffd47"
+	3       (0000000c) const/4              v1, 3
+	4       (0000000e) invoke-direct        v2, v1, v3, v0, Lkx2;-><init>(I Ljava/lang/String; Ljava/lang/String;)V
+	5       (00000014) return-void          
+

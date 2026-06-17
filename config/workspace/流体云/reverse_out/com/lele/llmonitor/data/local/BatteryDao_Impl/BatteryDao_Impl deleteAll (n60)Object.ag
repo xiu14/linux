@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->deleteAll(Ln60;)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:n60
+#
+# - return:java.lang.Object
+
+deleteAll-BB@0x0 : [ deleteAll-BB@0x26 deleteAll-BB@0x28 ]
+	0       (00000000) iget-object          v3, v3, Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->__db Lhx2;
+	1       (00000004) new-instance         v0, Ll;
+	2       (00000008) const/16             v1, 13
+	3       (0000000c) invoke-direct        v0, v1, Ll;-><init>(I)V
+	4       (00000012) const/4              v1, 0
+	5       (00000014) const/4              v2, 1
+	6       (00000016) invoke-static        v4, v3, v1, v2, v0, Lni1;->L(Ln60; Lhx2; Z Z Ld11;)Ljava/lang/Object;
+	7       (0000001c) move-result-object   v3
+	8       (0000001e) sget-object          v4, Le80;->d Le80;
+	9       (00000022) if-ne                v3, v4, +003h
+
+deleteAll-BB@0x26 : 
+	10      (00000026) return-object        v3
+
+deleteAll-BB@0x28 : 
+	11      (00000028) sget-object          v3, Lbw3;->a Lbw3;
+	12      (0000002c) return-object        v3
+

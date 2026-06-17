@@ -1,0 +1,74 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readBatteryTempForHint()Ljava/lang/Float; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:java.lang.Float
+
+readBatteryTempForHint-BB@0x0 : [ readBatteryTempForHint-BB@0x46 ]
+	0       (00000000) new-instance         v3, Ljava/io/File;
+	1       (00000004) const-string         v0, "/sys/class/power_supply/battery/temp"
+	2       (00000008) invoke-direct        v3, v0, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	3       (0000000e) invoke-static        v3, Lwt0;->V(Ljava/io/File;)Ljava/lang/String;
+	4       (00000014) move-result-object   v3
+	5       (00000016) invoke-static        v3, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	6       (0000001c) move-result-object   v3
+	7       (0000001e) invoke-virtual       v3, Ljava/lang/Object;->toString()Ljava/lang/String;
+	8       (00000024) move-result-object   v3
+	9       (00000026) invoke-static        v3, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+	10      (0000002c) move-result          v3
+	11      (0000002e) invoke-static        v3, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	12      (00000034) move-result-object   v3
+	13      (00000036) goto                 +8h
+	0:35
+	(Ljava/lang/Throwable; -> 38 readBatteryTempForHint-BB@0x38)
+
+readBatteryTempForHint-BB@0x38 : [ readBatteryTempForHint-BB@0x46 ]
+	14      (00000038) move-exception       v3
+	15      (0000003a) new-instance         v0, Lcw2;
+	16      (0000003e) invoke-direct        v0, v3, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	17      (00000044) move-object          v3, v0
+
+readBatteryTempForHint-BB@0x46 : [ readBatteryTempForHint-BB@0x52 readBatteryTempForHint-BB@0x54 ]
+	18      (00000046) nop                  
+	19      (00000048) instance-of          v0, v3, Lcw2;
+	20      (0000004c) const/4              v1, 0
+	21      (0000004e) if-eqz               v0, +003h
+
+readBatteryTempForHint-BB@0x52 : [ readBatteryTempForHint-BB@0x54 ]
+	22      (00000052) move-object          v3, v1
+
+readBatteryTempForHint-BB@0x54 : [ readBatteryTempForHint-BB@0x5c readBatteryTempForHint-BB@0x98 ]
+	23      (00000054) check-cast           v3, Ljava/lang/Float;
+	24      (00000058) if-eqz               v3, +020h
+
+readBatteryTempForHint-BB@0x5c : [ readBatteryTempForHint-BB@0x70 readBatteryTempForHint-BB@0x7c ]
+	25      (0000005c) invoke-virtual       v3, Ljava/lang/Float;->floatValue()F
+	26      (00000062) move-result          v0
+	27      (00000064) const/high16         v1, 1148846080
+	28      (00000068) cmpl-float           v2, v0, v1
+	29      (0000006c) if-lez               v2, +008h
+
+readBatteryTempForHint-BB@0x70 : [ readBatteryTempForHint-BB@0x96 ]
+	30      (00000070) div-float/2addr      v0, v1
+	31      (00000072) invoke-static        v0, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	32      (00000078) move-result-object   v3
+	33      (0000007a) goto                 +eh
+
+readBatteryTempForHint-BB@0x7c : [ readBatteryTempForHint-BB@0x88 readBatteryTempForHint-BB@0x96 ]
+	34      (0000007c) const/high16         v1, 1125515264
+	35      (00000080) cmpl-float           v1, v0, v1
+	36      (00000084) if-lez               v1, +009h
+
+readBatteryTempForHint-BB@0x88 : [ readBatteryTempForHint-BB@0x96 ]
+	37      (00000088) const/high16         v3, 1092616192
+	38      (0000008c) div-float/2addr      v0, v3
+	39      (0000008e) invoke-static        v0, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	40      (00000094) move-result-object   v3
+
+readBatteryTempForHint-BB@0x96 : 
+	41      (00000096) return-object        v3
+
+readBatteryTempForHint-BB@0x98 : 
+	42      (00000098) return-object        v1
+

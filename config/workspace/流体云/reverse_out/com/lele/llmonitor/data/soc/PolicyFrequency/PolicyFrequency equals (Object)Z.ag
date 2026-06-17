@@ -1,0 +1,67 @@
+# Lcom/lele/llmonitor/data/soc/PolicyFrequency;->equals(Ljava/lang/Object;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:boolean
+
+equals-BB@0x0 : [ equals-BB@0x6 equals-BB@0x8 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-ne                v4, v5, +003h
+
+equals-BB@0x6 : 
+	2       (00000006) return               v0
+
+equals-BB@0x8 : [ equals-BB@0x12 equals-BB@0x14 ]
+	3       (00000008) instance-of          v1, v5, Lcom/lele/llmonitor/data/soc/PolicyFrequency;
+	4       (0000000c) const/4              v2, 0
+	5       (0000000e) if-nez               v1, +003h
+
+equals-BB@0x12 : 
+	6       (00000012) return               v2
+
+equals-BB@0x14 : [ equals-BB@0x2c equals-BB@0x2e ]
+	7       (00000014) check-cast           v5, Lcom/lele/llmonitor/data/soc/PolicyFrequency;
+	8       (00000018) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->name Ljava/lang/String;
+	9       (0000001c) iget-object          v3, v5, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->name Ljava/lang/String;
+	10      (00000020) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	11      (00000026) move-result          v1
+	12      (00000028) if-nez               v1, +003h
+
+equals-BB@0x2c : 
+	13      (0000002c) return               v2
+
+equals-BB@0x2e : [ equals-BB@0x42 equals-BB@0x44 ]
+	14      (0000002e) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->relatedCores Ljava/util/Set;
+	15      (00000032) iget-object          v3, v5, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->relatedCores Ljava/util/Set;
+	16      (00000036) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	17      (0000003c) move-result          v1
+	18      (0000003e) if-nez               v1, +003h
+
+equals-BB@0x42 : 
+	19      (00000042) return               v2
+
+equals-BB@0x44 : [ equals-BB@0x58 equals-BB@0x5a ]
+	20      (00000044) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->currentKhz Ljava/lang/Long;
+	21      (00000048) iget-object          v3, v5, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->currentKhz Ljava/lang/Long;
+	22      (0000004c) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	23      (00000052) move-result          v1
+	24      (00000054) if-nez               v1, +003h
+
+equals-BB@0x58 : 
+	25      (00000058) return               v2
+
+equals-BB@0x5a : [ equals-BB@0x6e equals-BB@0x70 ]
+	26      (0000005a) iget-object          v4, v4, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->maxKhz Ljava/lang/Long;
+	27      (0000005e) iget-object          v5, v5, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->maxKhz Ljava/lang/Long;
+	28      (00000062) invoke-static        v4, v5, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	29      (00000068) move-result          v4
+	30      (0000006a) if-nez               v4, +003h
+
+equals-BB@0x6e : 
+	31      (0000006e) return               v2
+
+equals-BB@0x70 : 
+	32      (00000070) return               v0
+

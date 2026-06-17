@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="false"
+        android:state_pressed="false"
+        android:color="@color/asr_editor_button_text_normal"/>
+    <item android:color="@color/oui_text_1"/>
+</selector>

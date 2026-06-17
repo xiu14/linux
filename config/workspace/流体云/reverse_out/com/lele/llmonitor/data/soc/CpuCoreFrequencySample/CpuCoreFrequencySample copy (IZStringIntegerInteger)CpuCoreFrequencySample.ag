@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->copy(I Z Ljava/lang/String; Ljava/lang/Integer; Ljava/lang/Integer;)Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+# - v2:boolean
+# - v3:java.lang.String
+# - v4:java.lang.Integer
+# - v5:java.lang.Integer
+#
+# - return:com.lele.llmonitor.data.soc.CpuCoreFrequencySample
+
+copy-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;
+	1       (00000004) invoke-direct/range  v0 ... v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;-><init>(I Z Ljava/lang/String; Ljava/lang/Integer; Ljava/lang/Integer;)V
+	2       (0000000a) return-object        v0
+

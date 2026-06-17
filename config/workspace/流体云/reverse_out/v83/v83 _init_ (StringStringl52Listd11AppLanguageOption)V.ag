@@ -1,0 +1,23 @@
+# Lv83;-><init>(Ljava/lang/String; Ljava/lang/String; Ll52; Ljava/util/List; Ld11; Lcom/lele/llmonitor/data/AppLanguageOption;)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.String
+# - v2:java.lang.String
+# - v3:l52
+# - v4:java.util.List
+# - v5:d11
+# - v6:com.lele.llmonitor.data.AppLanguageOption
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	1       (00000006) iput-object          v1, v0, Lv83;->d Ljava/lang/String;
+	2       (0000000a) iput-object          v2, v0, Lv83;->e Ljava/lang/String;
+	3       (0000000e) iput-object          v3, v0, Lv83;->f Ll52;
+	4       (00000012) iput-object          v4, v0, Lv83;->g Ljava/util/List;
+	5       (00000016) iput-object          v5, v0, Lv83;->h Ld11;
+	6       (0000001a) iput-object          v6, v0, Lv83;->i Lcom/lele/llmonitor/data/AppLanguageOption;
+	7       (0000001e) return-void          
+

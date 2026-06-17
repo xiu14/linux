@@ -1,0 +1,35 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->cpuDirs_delegate$lambda$0$0(Ljava/io/File;)Z [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.io.File
+#
+# - return:boolean
+
+cpuDirs_delegate$lambda$0$0-BB@0x0 : [ cpuDirs_delegate$lambda$0$0-BB@0xc cpuDirs_delegate$lambda$0$0-BB@0x44 ]
+	0       (00000000) invoke-virtual       v1, Ljava/io/File;->isDirectory()Z
+	1       (00000006) move-result          v0
+	2       (00000008) if-eqz               v0, +01eh
+
+cpuDirs_delegate$lambda$0$0-BB@0xc : [ cpuDirs_delegate$lambda$0$0-BB@0x40 cpuDirs_delegate$lambda$0$0-BB@0x44 ]
+	3       (0000000c) invoke-virtual       v1, Ljava/io/File;->getName()Ljava/lang/String;
+	4       (00000012) move-result-object   v1
+	5       (00000014) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	6       (0000001a) const-string         v0, "cpu\d+"
+	7       (0000001e) invoke-static        v0, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+	8       (00000024) move-result-object   v0
+	9       (00000026) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	10      (0000002c) invoke-virtual       v0, v1, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+	11      (00000032) move-result-object   v1
+	12      (00000034) invoke-virtual       v1, Ljava/util/regex/Matcher;->matches()Z
+	13      (0000003a) move-result          v1
+	14      (0000003c) if-eqz               v1, +004h
+
+cpuDirs_delegate$lambda$0$0-BB@0x40 : 
+	15      (00000040) const/4              v1, 1
+	16      (00000042) return               v1
+
+cpuDirs_delegate$lambda$0$0-BB@0x44 : 
+	17      (00000044) const/4              v1, 0
+	18      (00000046) return               v1
+

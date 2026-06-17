@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dp_4">
+    <com.obric.oui.button.OButton
+        android:gravity="center"
+        android:id="@+id/check_item_prev"
+        android:padding="0dp"
+        android:clickable="true"
+        android:layout_width="@dimen/oui_w_button_icon_m1"
+        android:layout_height="@dimen/oui_h_m1"
+        app:icon="@drawable/dropdown_default_trans_on"
+        app:iconSize="@dimen/oui_h_icon_in_button_ic_m1"
+        style="@style/OButton.M1.Standard.Neutral"/>
+    <com.obric.oui.button.OButton
+        android:gravity="center"
+        android:id="@+id/check_item_next"
+        android:padding="0dp"
+        android:clickable="true"
+        android:layout_width="@dimen/oui_w_button_icon_m1"
+        android:layout_height="@dimen/oui_h_m1"
+        android:layout_marginLeft="@dimen/dp_8"
+        app:icon="@drawable/dropdown_default_trans_off"
+        app:iconSize="@dimen/oui_h_icon_in_button_ic_m1"
+        style="@style/OButton.M1.Standard.Neutral"/>
+</LinearLayout>

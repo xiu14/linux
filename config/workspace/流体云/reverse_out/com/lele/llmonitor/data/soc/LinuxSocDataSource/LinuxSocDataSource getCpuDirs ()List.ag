@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->getCpuDirs()Ljava/util/List; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.util.List
+
+getCpuDirs-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->cpuDirs$delegate Lmq1;
+	1       (00000004) invoke-interface     v0, Lmq1;->getValue()Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) check-cast           v0, Ljava/util/List;
+	4       (00000010) return-object        v0
+

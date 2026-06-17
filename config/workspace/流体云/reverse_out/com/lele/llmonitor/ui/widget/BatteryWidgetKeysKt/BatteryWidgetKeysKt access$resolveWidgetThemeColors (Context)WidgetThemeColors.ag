@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeysKt;->access$resolveWidgetThemeColors(Landroid/content/Context;)Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:android.content.Context
+#
+# - return:com.lele.llmonitor.ui.widget.WidgetThemeColors
+
+access$resolveWidgetThemeColors-BB@0x0 : 
+	0       (00000000) invoke-static        v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeysKt;->resolveWidgetThemeColors(Landroid/content/Context;)Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

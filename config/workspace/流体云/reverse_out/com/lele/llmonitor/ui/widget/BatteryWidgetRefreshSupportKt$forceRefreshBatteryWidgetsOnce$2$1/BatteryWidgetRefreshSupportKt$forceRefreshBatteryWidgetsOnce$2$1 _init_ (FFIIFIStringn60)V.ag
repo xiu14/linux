@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;-><init>(F F I I F I Ljava/lang/String; Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:float
+# - v2:float
+# - v3:int
+# - v4:int
+# - v5:float
+# - v6:int
+# - v7:java.lang.String
+# - v8:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput                 v1, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$displayPower F
+	1       (00000004) iput                 v2, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$displayCurrent F
+	2       (00000008) iput                 v3, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$currentCapacity I
+	3       (0000000c) iput                 v4, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$totalCapacity I
+	4       (00000010) iput                 v5, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$tempC F
+	5       (00000014) iput                 v6, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$tempFractionDigits I
+	6       (00000018) iput-object          v7, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$updateTimeStr Ljava/lang/String;
+	7       (0000001c) const/4              v1, 2
+	8       (0000001e) invoke-direct        v0, v1, v8, Ljj3;-><init>(I Ln60;)V
+	9       (00000024) return-void          
+

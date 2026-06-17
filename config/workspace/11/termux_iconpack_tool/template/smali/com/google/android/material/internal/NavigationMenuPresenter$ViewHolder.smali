@@ -1,0 +1,14 @@
+.class abstract Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;
+.super Landroidx/recyclerview/widget/i2;
+.source "r8-map-id-5389b39850ea3af500c7854811bd81da73ae8b6ea4d88eb7ca022411f1b5d3c1"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/internal/NavigationMenuPresenter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "ViewHolder"
+.end annotation

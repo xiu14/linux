@@ -1,0 +1,38 @@
+# Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x8 invokeSuspend-BB@0x40 ]
+	0       (00000000) iget                 v0, v4, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->label I
+	1       (00000004) if-nez               v0, +01eh
+
+invokeSuspend-BB@0x8 : [ invokeSuspend-BB@0x26 invokeSuspend-BB@0x28 ]
+	2       (00000008) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	3       (0000000e) iget-wide            v0, v4, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->$generation J
+	4       (00000012) invoke-static        Lcom/lele/llmonitor/data/SettingsManager;->access$getLaunchSnapshotRefreshGeneration$p()J
+	5       (00000018) move-result-wide     v2
+	6       (0000001a) cmp-long             v5, v0, v2
+	7       (0000001e) sget-object          v0, Lbw3;->a Lbw3;
+	8       (00000022) if-eqz               v5, +003h
+
+invokeSuspend-BB@0x26 : 
+	9       (00000026) return-object        v0
+
+invokeSuspend-BB@0x28 : 
+	10      (00000028) sget-object          v5, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	11      (0000002c) invoke-virtual       v5, Lcom/lele/llmonitor/data/SettingsManager;->getLaunchAppearanceSnapshot()Ll52;
+	12      (00000032) move-result-object   v5
+	13      (00000034) iget-object          v4, v4, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->$resolvedSnapshot Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	14      (00000038) invoke-interface     v5, v4, Ll52;->setValue(Ljava/lang/Object;)V
+	15      (0000003e) return-object        v0
+
+invokeSuspend-BB@0x40 : 
+	16      (00000040) const-string         v4, "call to 'resume' before 'invoke' with coroutine"
+	17      (00000044) invoke-static        v4, Lh;->m(Ljava/lang/String;)V
+	18      (0000004a) const/4              v4, 0
+	19      (0000004c) return-object        v4
+

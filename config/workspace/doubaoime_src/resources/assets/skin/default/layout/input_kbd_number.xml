@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <NumberLayout name="input_kbd_number" class="cls_input_kbd9" userdata="number"
+        slidable_control="number9_filter_list">
+        <HorizontalLayout width="match_parent" height="match_parent">
+            <!-- 66 = 61 + 2.5 + 2.5（左2.5右2.5margin）-->
+            <VerticalLayout width_weight="66" height="match_parent">
+                <FilterListLayout name="number9_filter_list" class="cls_vertical_symbol_list"
+                        width="match_parent" height_weight="156"
+                        item_style="cls_pinyin9_filter_button" />
+                <ButtonSwitchBoard text="符号" target="3"
+                    class="cls_keyboard9_button_func, cls_to_input_kbd_symbol" height_weight="52" name="button_symbol"/>
+            </VerticalLayout>
+
+            <HorizontalLayout width_weight="291" height="match_parent">
+                <VerticalLayout height="match_parent" width_weight="75">
+                    <ButtonNumber text="1" class="cls_keyboard_number9_button" commitstr="1" />
+                    <ButtonNumber text="4" class="cls_keyboard_number9_button" commitstr="4" />
+                    <ButtonNumber text="7" class="cls_keyboard_number9_button" commitstr="7" />
+                    <ButtonSwitchCurrentMode class="cls_keyboard9_button_back" name="button_number_back" label="number" text="返回" font="key_func"/>
+                </VerticalLayout>
+
+                <VerticalLayout height="match_parent" width_weight="75">
+                    <ButtonNumber text="2" class="cls_keyboard_number9_button" commitstr="2" />
+                    <ButtonNumber text="5" class="cls_keyboard_number9_button" commitstr="5" />
+                    <ButtonNumber text="8" class="cls_keyboard_number9_button" commitstr="8" />
+                    <ButtonNumber text="0" class="cls_keyboard_number9_button" commitstr="0" />
+                </VerticalLayout>
+
+                <VerticalLayout height="match_parent" width_weight="75">
+                    <ButtonNumber text="3" class="cls_keyboard_number9_button" commitstr="3" />
+                    <ButtonNumber text="6" class="cls_keyboard_number9_button" commitstr="6" />
+                    <ButtonNumber text="9" class="cls_keyboard_number9_button" commitstr="9" />
+                    <ButtonSymbol text="." class="cls_keyboard_number9_button" commitstr="."
+                       />
+
+                </VerticalLayout>
+
+                <!-- 66 = 61 + 2.5 + 2.5（左2.5右2.5margin）-->
+                <VerticalLayout height="match_parent" width_weight="66">
+                    <ButtonBackspace name="backspace"
+                        class="cls_button_backspace, cls_keyboard9_button_margin" />
+                    <ButtonSpace name="space_speech" class="cls_keyboard9_button_func" text="空格" />
+                    <ButtonEnter name="button_enter" class="cls_button_enter9" height_weight="2"/>
+                </VerticalLayout>
+            </HorizontalLayout>
+        </HorizontalLayout>
+    </NumberLayout>
+</Window>

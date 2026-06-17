@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="37dp"/>
+            <solid android:color="@color/activity_button_disable_background"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="37dp"/>
+            <solid android:color="@color/common_button_bk"/>
+        </shape>
+    </item>
+</selector>

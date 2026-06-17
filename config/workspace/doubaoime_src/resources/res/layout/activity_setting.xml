@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_ime_set_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:textColorHighlight="#ff3e3d3d"
+            android:textColorLink="#ff3e3d3d"
+            android:id="@+id/et_ime_input"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:hint="体验输入法"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:textAllCaps="false"
+            android:textAlignment="viewStart"
+            android:backgroundTint="@color/black_2"/>
+    </LinearLayout>
+</RelativeLayout>

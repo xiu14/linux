@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="@dimen/dp_72"
+    android:layout_height="match_parent">
+    <com.obric.oui.button.OIconButton
+        android:id="@+id/btn_one_hand_back"
+        android:paddingTop="20dp"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/oic_ime_quit_one_hand"
+        android:paddingStart="28dp"
+        style="@style/OButton.M1.Trans"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_one_hand_right"
+        android:background="@color/bg_btn_one_hand_back_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        app:icon="@drawable/oic_keyboard_right_arrowtriangle"
+        app:oui_radius="8dp"
+        style="@style/OButton.L1.Standard.Neutral"/>
+</LinearLayout>

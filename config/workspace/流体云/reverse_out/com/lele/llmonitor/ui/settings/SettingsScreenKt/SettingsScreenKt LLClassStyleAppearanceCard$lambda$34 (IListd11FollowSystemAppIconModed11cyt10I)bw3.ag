@@ -1,0 +1,154 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$34(I Ljava/util/List; Ld11; Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Ld11; Lcy; Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v26
+# - v27:int
+# - v28:java.util.List
+# - v29:d11
+# - v30:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v31:d11
+# - v32:cy
+# - v33:t10
+# - v34:int
+#
+# - return:bw3
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x0 : [ LLClassStyleAppearanceCard$lambda$34-BB@0x18 LLClassStyleAppearanceCard$lambda$34-BB@0x1c ]
+	0       (00000000) move/from16          v0, v27
+	1       (00000004) invoke-virtual/range v32, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000a) and-int/lit8         v1, v34, 17
+	3       (0000000e) const/16             v2, 16
+	4       (00000012) const/4              v4, 1
+	5       (00000014) if-eq                v1, v2, +004h
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x18 : [ LLClassStyleAppearanceCard$lambda$34-BB@0x1e ]
+	6       (00000018) move                 v1, v4
+	7       (0000001a) goto                 +2h
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x1c : [ LLClassStyleAppearanceCard$lambda$34-BB@0x1e ]
+	8       (0000001c) const/4              v1, 0
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x1e : [ LLClassStyleAppearanceCard$lambda$34-BB@0x36 LLClassStyleAppearanceCard$lambda$34-BB@0x1ca ]
+	9       (0000001e) and-int/lit8         v2, v34, 1
+	10      (00000022) move-object/from16   v8, v33
+	11      (00000026) check-cast           v8, Lb20;
+	12      (0000002a) invoke-virtual       v8, v2, v1, Lb20;->O(I Z)Z
+	13      (00000030) move-result          v1
+	14      (00000032) if-eqz               v1, +0cch
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x36 : [ LLClassStyleAppearanceCard$lambda$34-BB@0x76 LLClassStyleAppearanceCard$lambda$34-BB@0x1b4 ]
+	15      (00000036) sget-object          v9, Lj22;->a Lj22;
+	16      (0000003a) const/high16         v1, 1065353216
+	17      (0000003e) invoke-static        v9, v1, Lac3;->c(Lm22; F)Lm22;
+	18      (00000044) move-result-object   v2
+	19      (00000046) new-instance         v4, Ld83;
+	20      (0000004a) move-object/from16   v5, v28
+	21      (0000004e) move-object/from16   v6, v29
+	22      (00000052) invoke-direct        v4, v5, v0, v6, Ld83;-><init>(Ljava/util/List; I Ld11;)V
+	23      (00000058) const                v5, -1764646172
+	24      (0000005e) invoke-static        v5, v4, v8, Ln54;->K(I Lp11; Lt10;)Lc00;
+	25      (00000064) move-result-object   v4
+	26      (00000066) const/4              v15, 0
+	27      (00000068) const/16             v5, 390
+	28      (0000006c) invoke-static        v2, v15, v4, v8, v5, Lid1;->e(Lm22; F Lc00; Lt10; I)V
+	29      (00000072) if-nez               v0, +0a1h
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x76 : [ LLClassStyleAppearanceCard$lambda$34-BB@0x1d0 ]
+	30      (00000076) const                v0, 1362820099
+	31      (0000007c) invoke-virtual       v8, v0, Lb20;->Y(I)V
+	32      (00000082) sget-object          v0, Lox;->a Lmg3;
+	33      (00000086) invoke-virtual       v8, v0, Lb20;->j(Lrq2;)Ljava/lang/Object;
+	34      (0000008c) move-result-object   v2
+	35      (0000008e) check-cast           v2, Lmx;
+	36      (00000092) iget-wide            v6, v2, Lmx;->B J
+	37      (00000096) const                v2, 1052938076
+	38      (0000009c) invoke-static        v6, v7, v2, Lfx;->b(J F)J
+	39      (000000a2) move-result-wide     v6
+	40      (000000a4) const/high16         v13, 1096810496
+	41      (000000a8) const/4              v14, 5
+	42      (000000aa) const/4              v10, 0
+	43      (000000ac) const/high16         v11, 1098907648
+	44      (000000b0) const/4              v12, 0
+	45      (000000b2) invoke-static/range  v9 ... v14, Ln54;->G(Lm22; F F F F I)Lm22;
+	46      (000000b8) move-result-object   v4
+	47      (000000ba) move-object          v2, v9
+	48      (000000bc) const/4              v9, 6
+	49      (000000be) const/4              v10, 2
+	50      (000000c0) move                 v11, v5
+	51      (000000c2) const/4              v5, 0
+	52      (000000c4) invoke-static/range  v4 ... v10, Lp34;->b(Lm22; F J Lt10; I I)V
+	53      (000000ca) const-string         v4, "启动图标样式"
+	54      (000000ce) invoke-static        v4, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	55      (000000d4) move-result-object   v4
+	56      (000000d6) sget-object          v5, Lou3;->a Lmg3;
+	57      (000000da) invoke-virtual       v8, v5, Lb20;->j(Lrq2;)Ljava/lang/Object;
+	58      (000000e0) move-result-object   v5
+	59      (000000e2) check-cast           v5, Lmu3;
+	60      (000000e6) iget-object          v5, v5, Lmu3;->i Lyp3;
+	61      (000000ea) sget-object          v10, Lhz0;->h Lhz0;
+	62      (000000ee) invoke-virtual       v8, v0, Lb20;->j(Lrq2;)Ljava/lang/Object;
+	63      (000000f4) move-result-object   v0
+	64      (000000f6) check-cast           v0, Lmx;
+	65      (000000fa) iget-wide            v6, v0, Lmx;->q J
+	66      (000000fe) const/16             v24, 0
+	67      (00000102) const                v25, 131002
+	68      (00000108) move-object/from16   v21, v5
+	69      (0000010c) const/4              v5, 0
+	70      (0000010e) move-object/from16   v22, v8
+	71      (00000112) const-wide/16        v8, 0
+	72      (00000116) move                 v0, v11
+	73      (00000118) const-wide/16        v11, 0
+	74      (0000011c) const/4              v13, 0
+	75      (0000011e) move/from16          v16, v15
+	76      (00000122) const-wide/16        v14, 0
+	77      (00000126) move/from16          v17, v16
+	78      (0000012a) const/16             v16, 0
+	79      (0000012e) move/from16          v18, v17
+	80      (00000132) const/16             v17, 0
+	81      (00000136) move/from16          v19, v18
+	82      (0000013a) const/16             v18, 0
+	83      (0000013e) move/from16          v20, v19
+	84      (00000142) const/16             v19, 0
+	85      (00000146) move/from16          v23, v20
+	86      (0000014a) const/16             v20, 0
+	87      (0000014e) move/from16          v26, v23
+	88      (00000152) const/high16         v23, 1572864
+	89      (00000156) move/from16          v3, v26
+	90      (0000015a) invoke-static/range  v4 ... v25, Lbp3;->b(Ljava/lang/String; Lm22; J J Lhz0; J Lyl3; J I Z I I Ld11; Lyp3; Lt10; I I I)V
+	91      (00000160) move-object/from16   v8, v22
+	92      (00000164) invoke-static        v2, v1, Lac3;->c(Lm22; F)Lm22;
+	93      (0000016a) move-result-object   v9
+	94      (0000016c) const/4              v13, 0
+	95      (0000016e) const/16             v14, 13
+	96      (00000172) const/4              v10, 0
+	97      (00000174) const/high16         v11, 1094713344
+	98      (00000178) const/4              v12, 0
+	99      (0000017a) invoke-static/range  v9 ... v14, Ln54;->G(Lm22; F F F F I)Lm22;
+	100     (00000180) move-result-object   v1
+	101     (00000182) new-instance         v2, Lj60;
+	102     (00000186) const/4              v4, 7
+	103     (00000188) move-object/from16   v5, v30
+	104     (0000018c) move-object/from16   v6, v31
+	105     (00000190) invoke-direct        v2, v5, v6, v4, Lj60;-><init>(Ljava/lang/Object; Ld11; I)V
+	106     (00000196) const                v4, 1854285439
+	107     (0000019c) invoke-static        v4, v2, v8, Ln54;->K(I Lp11; Lt10;)Lc00;
+	108     (000001a2) move-result-object   v2
+	109     (000001a4) invoke-static        v1, v3, v2, v8, v0, Lid1;->e(Lm22; F Lc00; Lt10; I)V
+	110     (000001aa) const/4              v0, 0
+	111     (000001ac) invoke-virtual       v8, v0, Lb20;->p(Z)V
+	112     (000001b2) goto                 +fh
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x1b4 : [ LLClassStyleAppearanceCard$lambda$34-BB@0x1d0 ]
+	113     (000001b4) const/4              v0, 0
+	114     (000001b6) const                v1, 1365449395
+	115     (000001bc) invoke-virtual       v8, v1, Lb20;->Y(I)V
+	116     (000001c2) invoke-virtual       v8, v0, Lb20;->p(Z)V
+	117     (000001c8) goto                 +4h
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x1ca : [ LLClassStyleAppearanceCard$lambda$34-BB@0x1d0 ]
+	118     (000001ca) invoke-virtual       v8, Lb20;->R()V
+
+LLClassStyleAppearanceCard$lambda$34-BB@0x1d0 : 
+	119     (000001d0) sget-object          v0, Lbw3;->a Lbw3;
+	120     (000001d4) return-object        v0
+

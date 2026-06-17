@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="4.0dip" android:paddingBottom="8.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="4.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/stat_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:srcCompat="@drawable/ic_kustom" app:tint="?colorOnSurface" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="32.0dip" android:layout_weight="1.0" android:layout_marginEnd="32.0dip">
+        <TextView android:textColor="?colorOnSurface" android:id="@id/stat_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextStyle.Frames.Subtitle2" />
+        <TextView android:textColor="?colorOnSurface" android:id="@id/stat_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" style="@style/TextStyle.Frames.Caption" />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton android:id="@id/required_app_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/install" android:layout_marginEnd="16.0dip" style="@style/Widget.Frames.ColoredButton" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->resolveSupplyTextForNotification(I)Ljava/lang/String; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+#
+# - return:java.lang.String
+
+resolveSupplyTextForNotification-BB@0x0 : [ resolveSupplyTextForNotification-BB@0x6 resolveSupplyTextForNotification-BB@0x3c ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-eq                v1, v0, +01dh
+
+resolveSupplyTextForNotification-BB@0x6 : [ resolveSupplyTextForNotification-BB@0xc resolveSupplyTextForNotification-BB@0x2e ]
+	2       (00000006) const/4              v0, 2
+	3       (00000008) if-eq                v1, v0, +013h
+
+resolveSupplyTextForNotification-BB@0xc : [ resolveSupplyTextForNotification-BB@0x12 resolveSupplyTextForNotification-BB@0x20 ]
+	4       (0000000c) const/4              v0, 4
+	5       (0000000e) if-eq                v1, v0, +009h
+
+resolveSupplyTextForNotification-BB@0x12 : 
+	6       (00000012) const-string         v0, "电池供电"
+	7       (00000016) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	8       (0000001c) move-result-object   v0
+	9       (0000001e) return-object        v0
+
+resolveSupplyTextForNotification-BB@0x20 : 
+	10      (00000020) const-string         v0, "无线充电"
+	11      (00000024) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	12      (0000002a) move-result-object   v0
+	13      (0000002c) return-object        v0
+
+resolveSupplyTextForNotification-BB@0x2e : 
+	14      (0000002e) const-string         v0, "电脑 (USB)"
+	15      (00000032) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	16      (00000038) move-result-object   v0
+	17      (0000003a) return-object        v0
+
+resolveSupplyTextForNotification-BB@0x3c : 
+	18      (0000003c) const-string         v0, "电源适配器"
+	19      (00000040) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	20      (00000046) move-result-object   v0
+	21      (00000048) return-object        v0
+

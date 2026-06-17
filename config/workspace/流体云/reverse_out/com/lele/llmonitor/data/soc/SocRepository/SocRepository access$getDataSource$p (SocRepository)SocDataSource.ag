@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.soc.SocRepository
+#
+# - return:com.lele.llmonitor.data.soc.SocDataSource
+
+access$getDataSource$p-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/SocRepository;->dataSource Lcom/lele/llmonitor/data/soc/SocDataSource;
+	1       (00000004) return-object        v0
+

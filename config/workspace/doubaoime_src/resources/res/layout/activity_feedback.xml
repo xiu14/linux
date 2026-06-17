@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content"
+    android:background="@color/ime_color_setting_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.common_biz.ui.widget.ImeTitleBar
+        android:id="@+id/settings_title_bar"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_title_bar_window"
+        app:ime_back_arrow_icon="@drawable/ic_arrow_left"
+        app:ime_title_text="@string/upload_feedback_title"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.segmentedtab.OTabSegmentedLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/feedback_tab"
+            android:layout_width="328dp"
+            android:layout_height="@dimen/oui_h_l1"
+            app:bar_color="@color/oui_fill_sunken_variable"
+            app:bar_stroke_color="@color/Transparent"
+            app:indicator_anim_enable="true"
+            app:indicator_color="@color/oui_fill_seg_selected"
+            app:indicator_corner_radius="@dimen/oui_r_m2_rect"
+            app:indicator_height="@dimen/oui_h_m2"
+            app:indicator_spacing="4dp"
+            app:tab_textBold="SELECT"
+            app:tab_textSelectColor="@color/oui_text_1"
+            app:tab_textSize="16sp"
+            app:tab_textUnselectColor="@color/oui_text_3b"/>
+        <RelativeLayout
+            android:id="@+id/pager_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/activity_feedback_page_input"/>
+            <include
+                android:visibility="gone"
+                layout="@layout/activity_feedback_page_associate"/>
+            <include
+                android:visibility="gone"
+                layout="@layout/activity_feedback_page_voice"/>
+            <include
+                android:visibility="gone"
+                layout="@layout/activity_feedback_page_others"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

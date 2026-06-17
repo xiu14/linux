@@ -1,0 +1,138 @@
+# Lcom/lele/llmonitor/data/SettingsManager;-><clinit>()V [access_flags=static constructor]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+<clinit>-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/SettingsManager;
+	1       (00000004) invoke-direct        v0, Lcom/lele/llmonitor/data/SettingsManager;-><init>()V
+	2       (0000000a) sput-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	3       (0000000e) invoke-static        Lid1;->g()Lli3;
+	4       (00000014) move-result-object   v0
+	5       (00000016) sget-object          v1, Lii0;->a Lod0;
+	6       (0000001a) invoke-static        v0, v1, Lix2;->P(Lr70; Lt70;)Lt70;
+	7       (00000020) move-result-object   v0
+	8       (00000022) invoke-static        v0, Lr7;->b(Lt70;)Lm60;
+	9       (00000028) move-result-object   v0
+	10      (0000002a) sput-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->backgroundScope Ld80;
+	11      (0000002e) sget-object          v0, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+	12      (00000032) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isInvertCurrent Ll52;
+	15      (0000003e) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	16      (00000044) move-result-object   v1
+	17      (00000046) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isDoubleCell Ll52;
+	18      (0000004a) sget-object          v1, Ljava/lang/Boolean;->TRUE Ljava/lang/Boolean;
+	19      (0000004e) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	20      (00000054) move-result-object   v2
+	21      (00000056) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->isNotificationEnabled Ll52;
+	22      (0000005a) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	23      (00000060) move-result-object   v2
+	24      (00000062) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->isShowNotificationWhenNotCharging Ll52;
+	25      (00000066) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	26      (0000006c) move-result-object   v2
+	27      (0000006e) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->isLiveNotificationEnabled Ll52;
+	28      (00000072) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	29      (00000078) move-result-object   v2
+	30      (0000007a) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->isLiveCloseActionEnabled Ll52;
+	31      (0000007e) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	32      (00000084) move-result-object   v2
+	33      (00000086) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->showNotificationBatteryLevel Ll52;
+	34      (0000008a) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	35      (00000090) move-result-object   v2
+	36      (00000092) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->showNotificationSupply Ll52;
+	37      (00000096) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	38      (0000009c) move-result-object   v2
+	39      (0000009e) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->showNotificationVoltage Ll52;
+	40      (000000a2) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	41      (000000a8) move-result-object   v2
+	42      (000000aa) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->showNotificationCurrent Ll52;
+	43      (000000ae) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	44      (000000b4) move-result-object   v1
+	45      (000000b6) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->showNotificationTemperature Ll52;
+	46      (000000ba) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	47      (000000c0) move-result-object   v1
+	48      (000000c2) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isVirtualVoltageEnabled Ll52;
+	49      (000000c6) const/4              v1, 2
+	50      (000000c8) invoke-static        v1, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	51      (000000ce) move-result-object   v1
+	52      (000000d0) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	53      (000000d6) move-result-object   v1
+	54      (000000d8) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->themeMode Ll52;
+	55      (000000dc) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->DYNAMIC Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	56      (000000e0) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	57      (000000e6) move-result-object   v1
+	58      (000000e8) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->themePalettePreset Ll52;
+	59      (000000ec) sget-object          v1, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->Companion Lcom/lele/llmonitor/data/FollowSystemAppIconMode$Companion;
+	60      (000000f0) invoke-virtual       v1, Lcom/lele/llmonitor/data/FollowSystemAppIconMode$Companion;->getDefault()Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	61      (000000f6) move-result-object   v1
+	62      (000000f8) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	63      (000000fe) move-result-object   v1
+	64      (00000100) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->followSystemAppIconMode Ll52;
+	65      (00000104) const/4              v1, 0
+	66      (00000106) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	67      (0000010c) move-result-object   v1
+	68      (0000010e) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->launchAppearanceSnapshot Ll52;
+	69      (00000112) const/high16         v1, 1065353216
+	70      (00000116) invoke-static        v1, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	71      (0000011c) move-result-object   v1
+	72      (0000011e) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	73      (00000124) move-result-object   v1
+	74      (00000126) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->homeCardOpacity Ll52;
+	75      (0000012a) sget-object          v1, Lcom/lele/llmonitor/data/AppLanguageOption;->Companion Lcom/lele/llmonitor/data/AppLanguageOption$Companion;
+	76      (0000012e) invoke-virtual       v1, Lcom/lele/llmonitor/data/AppLanguageOption$Companion;->getDefault()Lcom/lele/llmonitor/data/AppLanguageOption;
+	77      (00000134) move-result-object   v1
+	78      (00000136) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	79      (0000013c) move-result-object   v1
+	80      (0000013e) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->appLanguageOption Ll52;
+	81      (00000142) const-wide/16        v1, 1000
+	82      (00000146) invoke-static        v1, v2, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	83      (0000014c) move-result-object   v1
+	84      (0000014e) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	85      (00000154) move-result-object   v1
+	86      (00000156) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->refreshRateUiCharging Ll52;
+	87      (0000015a) const-wide/16        v1, 3000
+	88      (0000015e) invoke-static        v1, v2, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	89      (00000164) move-result-object   v1
+	90      (00000166) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	91      (0000016c) move-result-object   v2
+	92      (0000016e) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->refreshRateNotifyCharging Ll52;
+	93      (00000172) const-wide/16        v2, 10000
+	94      (00000176) invoke-static        v2, v3, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	95      (0000017c) move-result-object   v2
+	96      (0000017e) invoke-static        v2, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	97      (00000184) move-result-object   v2
+	98      (00000186) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->refreshRateNotifyChargingScreenOff Ll52;
+	99      (0000018a) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	100     (00000190) move-result-object   v1
+	101     (00000192) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->refreshRateUiNotCharging Ll52;
+	102     (00000196) const-wide/32        v1, 180000
+	103     (0000019c) invoke-static        v1, v2, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	104     (000001a2) move-result-object   v1
+	105     (000001a4) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	106     (000001aa) move-result-object   v2
+	107     (000001ac) sput-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->refreshRateNotifyNotCharging Ll52;
+	108     (000001b0) invoke-static        v1, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	109     (000001b6) move-result-object   v1
+	110     (000001b8) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->refreshRateNotifyNotChargingScreenOff Ll52;
+	111     (000001bc) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	112     (000001c2) move-result-object   v1
+	113     (000001c4) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isVirtualVoltageSuggestionDismissed Ll52;
+	114     (000001c8) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	115     (000001ce) move-result-object   v1
+	116     (000001d0) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isBatteryOptimizationDismissed Ll52;
+	117     (000001d4) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	118     (000001da) move-result-object   v1
+	119     (000001dc) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isNotificationPermissionDismissed Ll52;
+	120     (000001e0) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	121     (000001e6) move-result-object   v1
+	122     (000001e8) sput-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isDebugModeEnabled Ll52;
+	123     (000001ec) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	124     (000001f2) move-result-object   v0
+	125     (000001f4) sput-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->isAppAccessUnlocked Ll52;
+	126     (000001f8) const/16             v0, 8
+	127     (000001fc) sput                 v0, Lcom/lele/llmonitor/data/SettingsManager;->$stable I
+	128     (00000200) return-void          
+

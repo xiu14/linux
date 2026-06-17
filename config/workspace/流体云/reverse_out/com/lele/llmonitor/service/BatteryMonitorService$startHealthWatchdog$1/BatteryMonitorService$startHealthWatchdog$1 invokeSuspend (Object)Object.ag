@@ -1,0 +1,171 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x14 invokeSuspend-BB@0x2c ]
+	0       (00000000) iget-object          v0, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->L$0 Ljava/lang/Object;
+	1       (00000004) check-cast           v0, Ld80;
+	2       (00000008) iget                 v1, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->label I
+	3       (0000000c) const/4              v2, 0
+	4       (0000000e) const/4              v3, 1
+	5       (00000010) if-eqz               v1, +00eh
+
+invokeSuspend-BB@0x14 : [ invokeSuspend-BB@0x18 invokeSuspend-BB@0x20 ]
+	6       (00000014) if-ne                v1, v3, +006h
+
+invokeSuspend-BB@0x18 : [ invokeSuspend-BB@0x5c ]
+	7       (00000018) invoke-static        v11, Lib1;->Q(Ljava/lang/Object;)V
+	8       (0000001e) goto                 +1fh
+
+invokeSuspend-BB@0x20 : 
+	9       (00000020) const-string         v10, "call to 'resume' before 'invoke' with coroutine"
+	10      (00000024) invoke-static        v10, Lh;->m(Ljava/lang/String;)V
+	11      (0000002a) return-object        v2
+
+invokeSuspend-BB@0x2c : [ invokeSuspend-BB@0x32 ]
+	12      (0000002c) invoke-static        v11, Lib1;->Q(Ljava/lang/Object;)V
+
+invokeSuspend-BB@0x32 : [ invokeSuspend-BB@0x3e invokeSuspend-BB@0x1b8 ]
+	13      (00000032) invoke-static        v0, Lr7;->I(Ld80;)Z
+	14      (00000038) move-result          v11
+	15      (0000003a) if-eqz               v11, +0bfh
+
+invokeSuspend-BB@0x3e : [ invokeSuspend-BB@0x5a invokeSuspend-BB@0x5c ]
+	16      (0000003e) iput-object          v0, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->L$0 Ljava/lang/Object;
+	17      (00000042) iput                 v3, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->label I
+	18      (00000046) const-wide/16        v4, 30000
+	19      (0000004a) invoke-static        v4, v5, v10, Ln54;->r(J Ln60;)Ljava/lang/Object;
+	20      (00000050) move-result-object   v11
+	21      (00000052) sget-object          v1, Le80;->d Le80;
+	22      (00000056) if-ne                v11, v1, +003h
+
+invokeSuspend-BB@0x5a : 
+	23      (0000005a) return-object        v1
+
+invokeSuspend-BB@0x5c : [ invokeSuspend-BB@0x6c invokeSuspend-BB@0x6e ]
+	24      (0000005c) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	25      (00000060) invoke-static        v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$isMonitorLoopStarted$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Z
+	26      (00000066) move-result          v11
+	27      (00000068) if-nez               v11, +003h
+
+invokeSuspend-BB@0x6c : [ invokeSuspend-BB@0x32 ]
+	28      (0000006c) goto                 -1dh
+
+invokeSuspend-BB@0x6e : [ invokeSuspend-BB@0x8e invokeSuspend-BB@0x9a ]
+	29      (0000006e) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	30      (00000072) new-instance         v1, Landroid/content/IntentFilter;
+	31      (00000076) const-string         v4, "android.intent.action.BATTERY_CHANGED"
+	32      (0000007a) invoke-direct        v1, v4, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+	33      (00000080) invoke-virtual       v11, v2, v1, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	34      (00000086) move-result-object   v11
+	35      (00000088) const/4              v1, 0
+	36      (0000008a) if-eqz               v11, +008h
+
+invokeSuspend-BB@0x8e : [ invokeSuspend-BB@0x9a ]
+	37      (0000008e) const-string         v4, "plugged"
+	38      (00000092) invoke-virtual       v11, v4, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	39      (00000098) move-result          v1
+
+invokeSuspend-BB@0x9a : [ invokeSuspend-BB@0xb8 invokeSuspend-BB@0x108 ]
+	40      (0000009a) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	41      (0000009e) const-string         v4, "power"
+	42      (000000a2) invoke-virtual       v11, v4, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	43      (000000a8) move-result-object   v11
+	44      (000000aa) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	45      (000000b0) check-cast           v11, Landroid/os/PowerManager;
+	46      (000000b4) if-eqz               v1, +02ah
+
+invokeSuspend-BB@0xb8 : [ invokeSuspend-BB@0xc4 invokeSuspend-BB@0xe6 ]
+	47      (000000b8) invoke-virtual       v11, Landroid/os/PowerManager;->isInteractive()Z
+	48      (000000be) move-result          v11
+	49      (000000c0) if-eqz               v11, +013h
+
+invokeSuspend-BB@0xc4 : [ invokeSuspend-BB@0x156 ]
+	50      (000000c4) sget-object          v11, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	51      (000000c8) invoke-virtual       v11, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyCharging()Ll52;
+	52      (000000ce) move-result-object   v11
+	53      (000000d0) invoke-interface     v11, Lcg3;->getValue()Ljava/lang/Object;
+	54      (000000d6) move-result-object   v11
+	55      (000000d8) check-cast           v11, Ljava/lang/Number;
+	56      (000000dc) invoke-virtual       v11, Ljava/lang/Number;->longValue()J
+	57      (000000e2) move-result-wide     v4
+	58      (000000e4) goto                 +39h
+
+invokeSuspend-BB@0xe6 : [ invokeSuspend-BB@0x156 ]
+	59      (000000e6) sget-object          v11, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	60      (000000ea) invoke-virtual       v11, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyChargingScreenOff()Ll52;
+	61      (000000f0) move-result-object   v11
+	62      (000000f2) invoke-interface     v11, Lcg3;->getValue()Ljava/lang/Object;
+	63      (000000f8) move-result-object   v11
+	64      (000000fa) check-cast           v11, Ljava/lang/Number;
+	65      (000000fe) invoke-virtual       v11, Ljava/lang/Number;->longValue()J
+	66      (00000104) move-result-wide     v4
+	67      (00000106) goto                 +28h
+
+invokeSuspend-BB@0x108 : [ invokeSuspend-BB@0x114 invokeSuspend-BB@0x136 ]
+	68      (00000108) invoke-virtual       v11, Landroid/os/PowerManager;->isInteractive()Z
+	69      (0000010e) move-result          v11
+	70      (00000110) if-eqz               v11, +013h
+
+invokeSuspend-BB@0x114 : [ invokeSuspend-BB@0x156 ]
+	71      (00000114) sget-object          v11, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	72      (00000118) invoke-virtual       v11, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyNotCharging()Ll52;
+	73      (0000011e) move-result-object   v11
+	74      (00000120) invoke-interface     v11, Lcg3;->getValue()Ljava/lang/Object;
+	75      (00000126) move-result-object   v11
+	76      (00000128) check-cast           v11, Ljava/lang/Number;
+	77      (0000012c) invoke-virtual       v11, Ljava/lang/Number;->longValue()J
+	78      (00000132) move-result-wide     v4
+	79      (00000134) goto                 +11h
+
+invokeSuspend-BB@0x136 : [ invokeSuspend-BB@0x156 ]
+	80      (00000136) sget-object          v11, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	81      (0000013a) invoke-virtual       v11, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyNotChargingScreenOff()Ll52;
+	82      (00000140) move-result-object   v11
+	83      (00000142) invoke-interface     v11, Lcg3;->getValue()Ljava/lang/Object;
+	84      (00000148) move-result-object   v11
+	85      (0000014a) check-cast           v11, Ljava/lang/Number;
+	86      (0000014e) invoke-virtual       v11, Ljava/lang/Number;->longValue()J
+	87      (00000154) move-result-wide     v4
+
+invokeSuspend-BB@0x156 : [ invokeSuspend-BB@0x168 invokeSuspend-BB@0x16a ]
+	88      (00000156) const-wide/16        v6, 3
+	89      (0000015a) mul-long/2addr       v4, v6
+	90      (0000015c) const-wide/16        v6, 15000
+	91      (00000160) cmp-long             v11, v4, v6
+	92      (00000164) if-gez               v11, +003h
+
+invokeSuspend-BB@0x168 : [ invokeSuspend-BB@0x16a ]
+	93      (00000168) move-wide            v4, v6
+
+invokeSuspend-BB@0x16a : [ invokeSuspend-BB@0x188 invokeSuspend-BB@0x32 ]
+	94      (0000016a) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	95      (00000170) move-result-wide     v6
+	96      (00000172) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	97      (00000176) invoke-static        v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getLastVisualPublishElapsedMs$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)J
+	98      (0000017c) move-result-wide     v8
+	99      (0000017e) sub-long/2addr       v6, v8
+	100     (00000180) cmp-long             v11, v6, v4
+	101     (00000184) if-ltz               v11, -0a9h
+
+invokeSuspend-BB@0x188 : [ invokeSuspend-BB@0x32 ]
+	102     (00000188) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	103     (0000018c) invoke-static        v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$requestImmediateUpdate(Lcom/lele/llmonitor/service/BatteryMonitorService;)V
+	104     (00000192) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	105     (00000196) invoke-static        v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getServiceScope$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Ld80;
+	106     (0000019c) move-result-object   v11
+	107     (0000019e) new-instance         v4, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;
+	108     (000001a2) iget-object          v5, v10, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	109     (000001a6) invoke-direct        v4, v5, v1, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; I Ln60;)V
+	110     (000001ac) const/4              v1, 3
+	111     (000001ae) invoke-static        v11, v2, v2, v4, v1, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	112     (000001b4) goto/16              -0c1h
+
+invokeSuspend-BB@0x1b8 : 
+	113     (000001b8) sget-object          v10, Lbw3;->a Lbw3;
+	114     (000001bc) return-object        v10
+

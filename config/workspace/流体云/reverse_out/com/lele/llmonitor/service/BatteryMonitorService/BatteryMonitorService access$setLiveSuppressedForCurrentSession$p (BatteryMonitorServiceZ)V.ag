@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setLiveSuppressedForCurrentSession$p(Lcom/lele/llmonitor/service/BatteryMonitorService; Z)V [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.service.BatteryMonitorService
+# - v1:boolean
+#
+# - return:void
+
+access$setLiveSuppressedForCurrentSession$p-BB@0x0 : 
+	0       (00000000) iput-boolean         v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->isLiveSuppressedForCurrentSession Z
+	1       (00000004) return-void          
+

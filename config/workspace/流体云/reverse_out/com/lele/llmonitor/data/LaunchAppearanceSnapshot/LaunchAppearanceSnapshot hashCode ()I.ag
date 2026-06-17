@@ -1,0 +1,42 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:int
+
+hashCode-BB@0x0 : 
+	0       (00000000) iget                 v0, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->backgroundArgb I
+	1       (00000004) invoke-static        v0, Ljava/lang/Integer;->hashCode(I)I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/16             v1, 31
+	4       (00000010) mul-int/2addr        v0, v1
+	5       (00000012) iget                 v2, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->themeMode I
+	6       (00000016) invoke-static        v2, v0, v1, Lve2;->d(I I I)I
+	7       (0000001c) move-result          v0
+	8       (0000001e) iget-object          v2, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->themePalettePreset Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	9       (00000022) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	10      (00000028) move-result          v2
+	11      (0000002a) add-int/2addr        v2, v0
+	12      (0000002c) mul-int/2addr        v2, v1
+	13      (0000002e) iget-boolean         v0, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperEnabled Z
+	14      (00000032) invoke-static        v2, v1, v0, Ls42;->c(I I Z)I
+	15      (00000038) move-result          v0
+	16      (0000003a) iget                 v2, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperAlpha F
+	17      (0000003e) invoke-static        v2, v0, v1, Lve2;->c(F I I)I
+	18      (00000044) move-result          v0
+	19      (00000046) iget                 v2, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperBlur F
+	20      (0000004a) invoke-static        v2, v0, v1, Lve2;->c(F I I)I
+	21      (00000050) move-result          v0
+	22      (00000052) iget-wide            v2, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperVersion J
+	23      (00000056) invoke-static        v0, v1, v2, v3, Ls42;->a(I I J)I
+	24      (0000005c) move-result          v0
+	25      (0000005e) iget-wide            v2, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->startupPreviewVersion J
+	26      (00000062) invoke-static        v0, v1, v2, v3, Ls42;->a(I I J)I
+	27      (00000068) move-result          v0
+	28      (0000006a) iget-object          v4, v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->startupPreviewRenderSpec Ljava/lang/String;
+	29      (0000006e) invoke-virtual       v4, Ljava/lang/String;->hashCode()I
+	30      (00000074) move-result          v4
+	31      (00000076) add-int/2addr        v4, v0
+	32      (00000078) return               v4
+

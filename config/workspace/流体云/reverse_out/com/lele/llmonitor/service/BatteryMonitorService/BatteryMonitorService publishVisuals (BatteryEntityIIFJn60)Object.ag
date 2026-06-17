@@ -1,0 +1,167 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->publishVisuals(Lcom/lele/llmonitor/data/local/BatteryEntity; I I F J Ln60;)Ljava/lang/Object; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v17
+# - v18:com.lele.llmonitor.data.local.BatteryEntity
+# - v19:int
+# - v20:int
+# - v21:float
+# - v22:long
+# - v23:n60
+#
+# - return:java.lang.Object
+
+publishVisuals-BB@0x0 : [ publishVisuals-BB@0x18 publishVisuals-BB@0x36 ]
+	0       (00000000) move-object/from16   v1, v16
+	1       (00000004) move/from16          v2, v20
+	2       (00000008) move-wide/from16     v3, v21
+	3       (0000000c) move-object/from16   v0, v23
+	4       (00000010) instance-of          v5, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;
+	5       (00000014) if-eqz               v5, +011h
+
+publishVisuals-BB@0x18 : [ publishVisuals-BB@0x2e publishVisuals-BB@0x36 ]
+	6       (00000018) move-object          v5, v0
+	7       (0000001a) check-cast           v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;
+	8       (0000001e) iget                 v6, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->label I
+	9       (00000022) const/high16         v7, -2147483648
+	10      (00000026) and-int              v8, v6, v7
+	11      (0000002a) if-eqz               v8, +006h
+
+publishVisuals-BB@0x2e : [ publishVisuals-BB@0x40 ]
+	12      (0000002e) sub-int/2addr        v6, v7
+	13      (00000030) iput                 v6, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->label I
+	14      (00000034) goto                 +6h
+
+publishVisuals-BB@0x36 : [ publishVisuals-BB@0x40 ]
+	15      (00000036) new-instance         v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;
+	16      (0000003a) invoke-direct        v5, v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+
+publishVisuals-BB@0x40 : [ publishVisuals-BB@0x56 publishVisuals-BB@0x7e ]
+	17      (00000040) iget-object          v0, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->result Ljava/lang/Object;
+	18      (00000044) iget                 v6, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->label I
+	19      (00000048) const/4              v7, 0
+	20      (0000004a) const/4              v8, 0
+	21      (0000004c) sget-object          v9, Lbw3;->a Lbw3;
+	22      (00000050) const/4              v10, 1
+	23      (00000052) if-eqz               v6, +016h
+
+publishVisuals-BB@0x56 : [ publishVisuals-BB@0x5a publishVisuals-BB@0x72 ]
+	24      (00000056) if-ne                v6, v10, +00eh
+
+publishVisuals-BB@0x5a : [ publishVisuals-BB@0x132 ]
+	25      (0000005a) iget-boolean         v2, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->Z$0 Z
+	26      (0000005e) iget-wide            v3, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->J$0 J
+	27      (00000062) iget-object          v5, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->L$0 Ljava/lang/Object;
+	28      (00000066) check-cast           v5, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	29      (0000006a) invoke-static        v0, Lib1;->Q(Ljava/lang/Object;)V
+	30      (00000070) goto                 +61h
+
+publishVisuals-BB@0x72 : 
+	31      (00000072) const-string         v0, "call to 'resume' before 'invoke' with coroutine"
+	32      (00000076) invoke-static        v0, Lh;->m(Ljava/lang/String;)V
+	33      (0000007c) return-object        v7
+
+publishVisuals-BB@0x7e : [ publishVisuals-BB@0x84 ]
+	34      (0000007e) invoke-static        v0, Lib1;->Q(Ljava/lang/Object;)V
+
+publishVisuals-BB@0x84 : [ publishVisuals-BB@0x9a ]
+	35      (00000084) invoke-direct/range  v16 ... v19, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateNotification(Lcom/lele/llmonitor/data/local/BatteryEntity; I I)V
+	36      (0000008a) move-object          v6, v9
+	37      (0000008c) goto                 +7h
+	84:89
+	(Ljava/lang/Throwable; -> 8e publishVisuals-BB@0x8e)
+
+publishVisuals-BB@0x8e : [ publishVisuals-BB@0x9a ]
+	38      (0000008e) move-exception       v0
+	39      (00000090) new-instance         v6, Lcw2;
+	40      (00000094) invoke-direct        v6, v0, Lcw2;-><init>(Ljava/lang/Throwable;)V
+
+publishVisuals-BB@0x9a : [ publishVisuals-BB@0xa6 publishVisuals-BB@0xac ]
+	41      (0000009a) invoke-static        v6, Ldw2;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+	42      (000000a0) move-result-object   v0
+	43      (000000a2) if-eqz               v0, +005h
+
+publishVisuals-BB@0xa6 : [ publishVisuals-BB@0xac ]
+	44      (000000a6) invoke-virtual       v0, Ljava/lang/Throwable;->printStackTrace()V
+
+publishVisuals-BB@0xac : [ publishVisuals-BB@0xc2 publishVisuals-BB@0xd6 ]
+	45      (000000ac) instance-of          v0, v6, Lcw2;
+	46      (000000b0) xor-int/2addr        v0, v10
+	47      (000000b2) iget-wide            v11, v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceStartElapsedMs J
+	48      (000000b6) const-wide/16        v13, 0
+	49      (000000ba) cmp-long             v6, v11, v13
+	50      (000000be) if-lez               v6, +00ch
+
+publishVisuals-BB@0xc2 : [ publishVisuals-BB@0xd2 publishVisuals-BB@0xd6 ]
+	51      (000000c2) sub-long             v11, v3, v11
+	52      (000000c6) const-wide/16        v13, 8000
+	53      (000000ca) cmp-long             v6, v11, v13
+	54      (000000ce) if-gez               v6, +004h
+
+publishVisuals-BB@0xd2 : [ publishVisuals-BB@0xd8 ]
+	55      (000000d2) move                 v6, v10
+	56      (000000d4) goto                 +2h
+
+publishVisuals-BB@0xd6 : [ publishVisuals-BB@0xd8 ]
+	57      (000000d6) move                 v6, v8
+
+publishVisuals-BB@0xd8 : [ publishVisuals-BB@0xdc publishVisuals-BB@0xe0 ]
+	58      (000000d8) if-eqz               v6, +004h
+
+publishVisuals-BB@0xdc : [ publishVisuals-BB@0x144 ]
+	59      (000000dc) move                 v8, v10
+	60      (000000de) goto                 +33h
+
+publishVisuals-BB@0xe0 : [ publishVisuals-BB@0x12a publishVisuals-BB@0x12c ]
+	61      (000000e0) new-instance         v11, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;
+	62      (000000e4) move-object/from16   v12, v17
+	63      (000000e8) invoke-direct        v11, v1, v12, v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; F Ln60;)V
+	64      (000000ee) iput-object          v7, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->L$0 Ljava/lang/Object;
+	65      (000000f2) move/from16          v7, v18
+	66      (000000f6) iput                 v7, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->I$0 I
+	67      (000000fa) move/from16          v7, v19
+	68      (000000fe) iput                 v7, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->I$1 I
+	69      (00000102) iput                 v2, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->F$0 F
+	70      (00000106) iput-wide            v3, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->J$0 J
+	71      (0000010a) iput-boolean         v0, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->Z$0 Z
+	72      (0000010e) iput                 v6, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->I$2 I
+	73      (00000112) iput                 v10, v5, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$1;->label I
+	74      (00000116) const-wide/16        v6, 2500
+	75      (0000011a) invoke-static        v6, v7, v11, v5, Lvc1;->d0(J Lh11; Lp60;)Ljava/lang/Object;
+	76      (00000120) move-result-object   v2
+	77      (00000122) sget-object          v5, Le80;->d Le80;
+	78      (00000126) if-ne                v2, v5, +003h
+
+publishVisuals-BB@0x12a : 
+	79      (0000012a) return-object        v5
+
+publishVisuals-BB@0x12c : [ publishVisuals-BB@0x132 ]
+	80      (0000012c) move-object          v15, v2
+	81      (0000012e) move                 v2, v0
+	82      (00000130) move-object          v0, v15
+
+publishVisuals-BB@0x132 : [ publishVisuals-BB@0x13a publishVisuals-BB@0x142 ]
+	83      (00000132) check-cast           v0, Ljava/lang/Boolean;
+	84      (00000136) if-eqz               v0, +006h
+
+publishVisuals-BB@0x13a : [ publishVisuals-BB@0x142 ]
+	85      (0000013a) invoke-virtual       v0, Ljava/lang/Boolean;->booleanValue()Z
+	86      (00000140) move-result          v8
+
+publishVisuals-BB@0x142 : [ publishVisuals-BB@0x144 ]
+	87      (00000142) move                 v0, v2
+
+publishVisuals-BB@0x144 : [ publishVisuals-BB@0x148 publishVisuals-BB@0x14c ]
+	88      (00000144) if-nez               v0, +004h
+
+publishVisuals-BB@0x148 : [ publishVisuals-BB@0x14c publishVisuals-BB@0x150 ]
+	89      (00000148) if-eqz               v8, +004h
+
+publishVisuals-BB@0x14c : [ publishVisuals-BB@0x150 ]
+	90      (0000014c) iput-wide            v3, v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->lastVisualPublishElapsedMs J
+
+publishVisuals-BB@0x150 : 
+	91      (00000150) iget-object          v1, v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->visualRefreshScheduler Lcom/lele/llmonitor/service/VisualRefreshScheduler;
+	92      (00000154) invoke-virtual       v1, v3, v4, v0, v8, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->onPublishResult(J Z Z)V
+	93      (0000015a) return-object        v9
+

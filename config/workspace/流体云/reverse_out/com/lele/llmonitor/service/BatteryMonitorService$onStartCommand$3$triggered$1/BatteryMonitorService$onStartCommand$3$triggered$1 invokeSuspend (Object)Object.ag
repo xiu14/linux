@@ -1,0 +1,44 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x24 ]
+	0       (00000000) iget                 v0, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;->label I
+	1       (00000004) const/4              v1, 1
+	2       (00000006) if-eqz               v0, +00fh
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0xe invokeSuspend-BB@0x16 ]
+	3       (0000000a) if-ne                v0, v1, +006h
+
+invokeSuspend-BB@0xe : [ invokeSuspend-BB@0x4c ]
+	4       (0000000e) invoke-static        v3, Lib1;->Q(Ljava/lang/Object;)V
+	5       (00000014) goto                 +1ch
+
+invokeSuspend-BB@0x16 : 
+	6       (00000016) const-string         v2, "call to 'resume' before 'invoke' with coroutine"
+	7       (0000001a) invoke-static        v2, Lh;->m(Ljava/lang/String;)V
+	8       (00000020) const/4              v2, 0
+	9       (00000022) return-object        v2
+
+invokeSuspend-BB@0x24 : [ invokeSuspend-BB@0x4a invokeSuspend-BB@0x4c ]
+	10      (00000024) invoke-static        v3, Lib1;->Q(Ljava/lang/Object;)V
+	11      (0000002a) iget-object          v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	12      (0000002e) invoke-static        v3, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getUpdateTrigger$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lvt;
+	13      (00000034) move-result-object   v3
+	14      (00000036) iput                 v1, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;->label I
+	15      (0000003a) invoke-interface     v3, v2, Lxs2;->m(Ln60;)Ljava/lang/Object;
+	16      (00000040) move-result-object   v2
+	17      (00000042) sget-object          v3, Le80;->d Le80;
+	18      (00000046) if-ne                v2, v3, +003h
+
+invokeSuspend-BB@0x4a : 
+	19      (0000004a) return-object        v3
+
+invokeSuspend-BB@0x4c : 
+	20      (0000004c) sget-object          v2, Ljava/lang/Boolean;->TRUE Ljava/lang/Boolean;
+	21      (00000050) return-object        v2
+

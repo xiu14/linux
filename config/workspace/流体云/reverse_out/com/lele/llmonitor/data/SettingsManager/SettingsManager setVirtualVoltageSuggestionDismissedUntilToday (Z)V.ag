@@ -1,0 +1,42 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->setVirtualVoltageSuggestionDismissedUntilToday(Z)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:boolean
+#
+# - return:void
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x0 : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x8 setVirtualVoltageSuggestionDismissedUntilToday-BB@0x44 ]
+	0       (00000000) sget-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	1       (00000004) if-eqz               v2, +020h
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x8 : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x14 setVirtualVoltageSuggestionDismissedUntilToday-BB@0x44 ]
+	2       (00000008) invoke-interface     v2, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	3       (0000000e) move-result-object   v2
+	4       (00000010) if-eqz               v2, +01ah
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x14 : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x18 setVirtualVoltageSuggestionDismissedUntilToday-BB@0x2a ]
+	5       (00000014) if-eqz               v3, +00bh
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x18 : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x2e ]
+	6       (00000018) invoke-static        Ljava/time/LocalDate;->now()Ljava/time/LocalDate;
+	7       (0000001e) move-result-object   v3
+	8       (00000020) invoke-virtual       v3, Ljava/time/LocalDate;->toEpochDay()J
+	9       (00000026) move-result-wide     v0
+	10      (00000028) goto                 +3h
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x2a : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x2e ]
+	11      (0000002a) const-wide/high16    v0, -9223372036854775808
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x2e : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x3e setVirtualVoltageSuggestionDismissedUntilToday-BB@0x44 ]
+	12      (0000002e) const-string         v3, "dismiss_virtual_voltage_until"
+	13      (00000032) invoke-interface     v2, v3, v0, v1, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String; J)Landroid/content/SharedPreferences$Editor;
+	14      (00000038) move-result-object   v2
+	15      (0000003a) if-eqz               v2, +005h
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x3e : [ setVirtualVoltageSuggestionDismissedUntilToday-BB@0x44 ]
+	16      (0000003e) invoke-interface     v2, Landroid/content/SharedPreferences$Editor;->apply()V
+
+setVirtualVoltageSuggestionDismissedUntilToday-BB@0x44 : 
+	17      (00000044) return-void          
+

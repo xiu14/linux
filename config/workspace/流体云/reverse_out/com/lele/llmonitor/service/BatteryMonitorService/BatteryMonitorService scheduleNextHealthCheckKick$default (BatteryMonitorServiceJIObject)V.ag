@@ -1,0 +1,22 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextHealthCheckKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.service.BatteryMonitorService
+# - v2:long
+# - v3:int
+# - v4:java.lang.Object
+#
+# - return:void
+
+scheduleNextHealthCheckKick$default-BB@0x0 : [ scheduleNextHealthCheckKick$default-BB@0x8 scheduleNextHealthCheckKick$default-BB@0xe ]
+	0       (00000000) and-int/lit8         v3, v3, 1
+	1       (00000004) if-eqz               v3, +005h
+
+scheduleNextHealthCheckKick$default-BB@0x8 : [ scheduleNextHealthCheckKick$default-BB@0xe ]
+	2       (00000008) const-wide/32        v1, 60000
+
+scheduleNextHealthCheckKick$default-BB@0xe : 
+	3       (0000000e) invoke-direct        v0, v1, v2, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextHealthCheckKick(J)V
+	4       (00000014) return-void          
+

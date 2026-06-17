@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Object
+# - v4:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v3, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;
+	1       (00000004) iget-object          v0, v2, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$currentSnapshot Ljava/util/List;
+	2       (00000008) iget-object          v1, v2, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$data Ljava/util/List;
+	3       (0000000c) iget-object          v2, v2, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$persisted Ljava/util/List;
+	4       (00000010) invoke-direct        v3, v0, v1, v2, v4, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;-><init>(Ljava/util/List; Ljava/util/List; Ljava/util/List; Ln60;)V
+	5       (00000016) return-object        v3
+

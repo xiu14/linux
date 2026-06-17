@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->copy(F I I I)Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:float
+# - v2:int
+# - v3:int
+# - v4:int
+#
+# - return:com.lele.llmonitor.data.BatteryEngine$BatteryTemperatureReading
+
+copy-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	1       (00000004) invoke-direct        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;-><init>(F I I I)V
+	2       (0000000a) return-object        v0
+

@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->getEntries()Ldq0; [access_flags=public static]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:dq0
+
+getEntries-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->$ENTRIES Ldq0;
+	1       (00000004) return-object        v0
+

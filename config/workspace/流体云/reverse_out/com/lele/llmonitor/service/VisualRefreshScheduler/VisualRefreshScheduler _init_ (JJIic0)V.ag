@@ -1,0 +1,29 @@
+# Lcom/lele/llmonitor/service/VisualRefreshScheduler;-><init>(J J I Lic0;)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:long
+# - v4:long
+# - v5:int
+# - v6:ic0
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x8 <init>-BB@0xc ]
+	0       (00000000) and-int/lit8         v6, v5, 1
+	1       (00000004) if-eqz               v6, +004h
+
+<init>-BB@0x8 : [ <init>-BB@0xc ]
+	2       (00000008) const-wide/16        v1, 15000
+
+<init>-BB@0xc : [ <init>-BB@0x14 <init>-BB@0x18 ]
+	3       (0000000c) and-int/lit8         v5, v5, 2
+	4       (00000010) if-eqz               v5, +004h
+
+<init>-BB@0x14 : [ <init>-BB@0x18 ]
+	5       (00000014) const-wide/16        v3, 10000
+
+<init>-BB@0x18 : 
+	6       (00000018) invoke-direct        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/service/VisualRefreshScheduler;-><init>(J J)V
+	7       (0000001e) return-void          
+

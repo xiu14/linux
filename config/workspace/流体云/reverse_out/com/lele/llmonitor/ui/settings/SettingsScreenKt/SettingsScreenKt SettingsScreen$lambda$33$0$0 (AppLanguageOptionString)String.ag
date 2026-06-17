@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->SettingsScreen$lambda$33$0$0(Lcom/lele/llmonitor/data/AppLanguageOption; Ljava/lang/String;)Ljava/lang/String; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.AppLanguageOption
+# - v1:java.lang.String
+#
+# - return:java.lang.String
+
+SettingsScreen$lambda$33$0$0-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-static        v1, v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String; Lcom/lele/llmonitor/data/AppLanguageOption;)Ljava/lang/String;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) return-object        v0
+

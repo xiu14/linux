@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->snapshotFile()Ljava/io/File; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.io.File
+
+snapshotFile-BB@0x0 : [ snapshotFile-BB@0x8 snapshotFile-BB@0xc ]
+	0       (00000000) sget-object          v2, Lcom/lele/llmonitor/data/BatteryRepository;->appContext Landroid/content/Context;
+	1       (00000004) if-nez               v2, +004h
+
+snapshotFile-BB@0x8 : 
+	2       (00000008) const/4              v2, 0
+	3       (0000000a) return-object        v2
+
+snapshotFile-BB@0xc : 
+	4       (0000000c) new-instance         v0, Ljava/io/File;
+	5       (00000010) invoke-virtual       v2, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+	6       (00000016) move-result-object   v2
+	7       (00000018) const-string         v1, "battery_history_snapshot.json"
+	8       (0000001c) invoke-direct        v0, v2, v1, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	9       (00000022) return-object        v0
+

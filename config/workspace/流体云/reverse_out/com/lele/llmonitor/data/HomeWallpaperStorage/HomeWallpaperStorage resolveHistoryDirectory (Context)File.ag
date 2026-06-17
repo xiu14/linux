@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryDirectory(Landroid/content/Context;)Ljava/io/File; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+#
+# - return:java.io.File
+
+resolveHistoryDirectory-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/io/File;
+	1       (00000004) invoke-direct        v1, v2, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveWallpaperDirectory(Landroid/content/Context;)Ljava/io/File;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) const-string         v2, "history"
+	4       (00000010) invoke-direct        v0, v1, v2, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	5       (00000016) return-object        v0
+

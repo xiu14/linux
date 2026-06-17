@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/service/VisualRefreshScheduler;->onExternalTrigger()V [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+onExternalTrigger-BB@0x0 : 
+	0       (00000000) const-wide/16        v0, 0
+	1       (00000004) iput-wide            v0, v2, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastNotificationTimeMs J
+	2       (00000008) iput-wide            v0, v2, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastWidgetTimeMs J
+	3       (0000000c) iput-wide            v0, v2, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastHeartbeatTimeMs J
+	4       (00000010) return-void          
+

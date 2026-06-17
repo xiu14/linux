@@ -1,0 +1,28 @@
+# Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->shouldCloseTaskAfterThemeModeChange(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; I)Z [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+# - v2:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v3:int
+#
+# - return:boolean
+
+shouldCloseTaskAfterThemeModeChange-BB@0x0 : [ shouldCloseTaskAfterThemeModeChange-BB@0x22 shouldCloseTaskAfterThemeModeChange-BB@0x26 ]
+	0       (00000000) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-static        v1, v2, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveAppIconDarkModeEnabled(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)Z
+	2       (0000000c) move-result          v0
+	3       (0000000e) invoke-static        v1, v2, v3, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveFollowSystemAppIconModeForThemeModeChange(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; I)Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	4       (00000014) move-result-object   v1
+	5       (00000016) invoke-static        v3, v1, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveAppIconDarkModeEnabled(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)Z
+	6       (0000001c) move-result          v1
+	7       (0000001e) if-eq                v0, v1, +004h
+
+shouldCloseTaskAfterThemeModeChange-BB@0x22 : 
+	8       (00000022) const/4              v1, 1
+	9       (00000024) return               v1
+
+shouldCloseTaskAfterThemeModeChange-BB@0x26 : 
+	10      (00000026) const/4              v1, 0
+	11      (00000028) return               v1
+

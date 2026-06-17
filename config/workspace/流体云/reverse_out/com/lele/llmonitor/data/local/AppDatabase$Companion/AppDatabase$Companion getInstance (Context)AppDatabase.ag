@@ -1,0 +1,46 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase$Companion;->getInstance(Landroid/content/Context;)Lcom/lele/llmonitor/data/local/AppDatabase; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+#
+# - return:com.lele.llmonitor.data.local.AppDatabase
+
+getInstance-BB@0x0 : [ getInstance-BB@0x12 getInstance-BB@0x5a ]
+	0       (00000000) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-static        Lcom/lele/llmonitor/data/local/AppDatabase;->access$getINSTANCE$cp()Lcom/lele/llmonitor/data/local/AppDatabase;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) if-nez               v0, +026h
+
+getInstance-BB@0x12 : [ getInstance-BB@0x14 ]
+	4       (00000012) monitor-enter        v2
+
+getInstance-BB@0x14 : 
+	5       (00000014) invoke-virtual       v3, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	6       (0000001a) move-result-object   v3
+	7       (0000001c) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	8       (00000022) const-class          v0, Lcom/lele/llmonitor/data/local/AppDatabase;
+	9       (00000026) const-string         v1, "battery_db"
+	10      (0000002a) invoke-static        v3, v0, v1, Lbd1;->q(Landroid/content/Context; Ljava/lang/Class; Ljava/lang/String;)Lcx2;
+	11      (00000030) move-result-object   v3
+	12      (00000032) const/4              v0, 0
+	13      (00000034) iput-boolean         v0, v3, Lcx2;->p Z
+	14      (00000038) const/4              v0, 1
+	15      (0000003a) iput-boolean         v0, v3, Lcx2;->q Z
+	16      (0000003e) invoke-virtual       v3, Lcx2;->b()Lhx2;
+	17      (00000044) move-result-object   v3
+	18      (00000046) check-cast           v3, Lcom/lele/llmonitor/data/local/AppDatabase;
+	19      (0000004a) invoke-static        v3, Lcom/lele/llmonitor/data/local/AppDatabase;->access$setINSTANCE$cp(Lcom/lele/llmonitor/data/local/AppDatabase;)V
+	20      (00000050) monitor-exit         v2
+	21      (00000052) return-object        v3
+	14:4f
+	(Ljava/lang/Throwable; -> 54 getInstance-BB@0x54)
+
+getInstance-BB@0x54 : 
+	22      (00000054) move-exception       v3
+	23      (00000056) monitor-exit         v2
+	24      (00000058) throw                v3
+
+getInstance-BB@0x5a : 
+	25      (0000005a) return-object        v0
+

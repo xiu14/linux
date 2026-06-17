@@ -1,0 +1,191 @@
+.class Lcom/google/gson/Gson$2;
+.super Lcom/google/gson/TypeAdapter;
+.source "r8-map-id-5389b39850ea3af500c7854811bd81da73ae8b6ea4d88eb7ca022411f1b5d3c1"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/gson/TypeAdapter<",
+        "Ljava/lang/Number;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final b(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->F0()Lcom/google/gson/stream/JsonToken;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    sget-object v1, Lcom/google/gson/stream/JsonToken;->p:Lcom/google/gson/stream/JsonToken;
+
+    .line 6
+    .line 7
+    if-ne v0, v1, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->B0()V
+
+    .line 10
+    .line 11
+    .line 12
+    const/4 p1, 0x0
+
+    .line 13
+    return-object p1
+
+    .line 14
+    :cond_0
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->p0()D
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-wide v0
+
+    .line 18
+    double-to-float p1, v0
+
+    .line 19
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object p1
+
+    .line 23
+    return-object p1
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+.end method
+
+.method public final c(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
+    .locals 3
+
+    .line 1
+    check-cast p2, Ljava/lang/Number;
+
+    .line 2
+    .line 3
+    if-nez p2, :cond_0
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->E()Lcom/google/gson/stream/JsonWriter;
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+
+    .line 9
+    :cond_0
+    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    float-to-double v1, v0
+
+    .line 14
+    invoke-static {v1, v2}, Lcom/google/gson/Gson;->a(D)V
+
+    .line 15
+    .line 16
+    .line 17
+    instance-of v1, p2, Ljava/lang/Float;
+
+    .line 18
+    .line 19
+    if-eqz v1, :cond_1
+
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object p2
+
+    .line 26
+    :goto_0
+    invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->x0(Ljava/lang/Number;)V
+
+    .line 27
+    .line 28
+    .line 29
+    return-void
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+.end method

@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->access$internalInitInvalidationTracker(Lcom/lele/llmonitor/data/local/AppDatabase_Impl; Lmy2;)V [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.local.AppDatabase_Impl
+# - v1:my2
+#
+# - return:void
+
+access$internalInitInvalidationTracker-BB@0x0 : 
+	0       (00000000) invoke-virtual       v0, v1, Lhx2;->internalInitInvalidationTracker(Lmy2;)V
+	1       (00000006) return-void          
+

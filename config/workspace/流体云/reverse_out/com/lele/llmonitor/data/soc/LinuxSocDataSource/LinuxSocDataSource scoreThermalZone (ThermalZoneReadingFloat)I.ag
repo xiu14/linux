@@ -1,0 +1,190 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->scoreThermalZone(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; Ljava/lang/Float;)I [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:com.lele.llmonitor.data.soc.ThermalZoneReading
+# - v9:java.lang.Float
+#
+# - return:int
+
+scoreThermalZone-BB@0x0 : [ scoreThermalZone-BB@0x3a scoreThermalZone-BB@0x40 ]
+	0       (00000000) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-static        Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	5       (00000016) invoke-virtual       v0, v1, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+	6       (0000001c) move-result-object   v0
+	7       (0000001e) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	8       (00000024) const-string         v1, "soc"
+	9       (00000028) const/4              v2, 0
+	10      (0000002a) invoke-static        v0, v1, v2, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	11      (00000030) move-result          v1
+	12      (00000032) const/16             v3, 40
+	13      (00000036) if-eqz               v1, +005h
+
+scoreThermalZone-BB@0x3a : [ scoreThermalZone-BB@0x96 ]
+	14      (0000003a) const/16             v1, 100
+	15      (0000003e) goto                 +2ch
+
+scoreThermalZone-BB@0x40 : [ scoreThermalZone-BB@0x50 scoreThermalZone-BB@0x56 ]
+	16      (00000040) const-string         v1, "cpu"
+	17      (00000044) invoke-static        v0, v1, v2, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	18      (0000004a) move-result          v1
+	19      (0000004c) if-eqz               v1, +005h
+
+scoreThermalZone-BB@0x50 : [ scoreThermalZone-BB@0x96 ]
+	20      (00000050) const/16             v1, 90
+	21      (00000054) goto                 +21h
+
+scoreThermalZone-BB@0x56 : [ scoreThermalZone-BB@0x62 scoreThermalZone-BB@0x68 ]
+	22      (00000056) invoke-direct        v7, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isApThermalType(Ljava/lang/String;)Z
+	23      (0000005c) move-result          v1
+	24      (0000005e) if-eqz               v1, +005h
+
+scoreThermalZone-BB@0x62 : [ scoreThermalZone-BB@0x96 ]
+	25      (00000062) const/16             v1, 80
+	26      (00000066) goto                 +18h
+
+scoreThermalZone-BB@0x68 : [ scoreThermalZone-BB@0x78 scoreThermalZone-BB@0x7e ]
+	27      (00000068) const-string         v1, "tsens"
+	28      (0000006c) invoke-static        v0, v1, v2, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	29      (00000072) move-result          v1
+	30      (00000074) if-eqz               v1, +005h
+
+scoreThermalZone-BB@0x78 : [ scoreThermalZone-BB@0x96 ]
+	31      (00000078) const/16             v1, 70
+	32      (0000007c) goto                 +dh
+
+scoreThermalZone-BB@0x7e : [ scoreThermalZone-BB@0x8e scoreThermalZone-BB@0x92 ]
+	33      (0000007e) const-string         v1, "gpu"
+	34      (00000082) invoke-static        v0, v1, v2, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	35      (00000088) move-result          v1
+	36      (0000008a) if-eqz               v1, +004h
+
+scoreThermalZone-BB@0x8e : [ scoreThermalZone-BB@0x96 ]
+	37      (0000008e) move                 v1, v3
+	38      (00000090) goto                 +3h
+
+scoreThermalZone-BB@0x92 : [ scoreThermalZone-BB@0x96 ]
+	39      (00000092) const/16             v1, -10
+
+scoreThermalZone-BB@0x96 : [ scoreThermalZone-BB@0xb2 scoreThermalZone-BB@0xc0 ]
+	40      (00000096) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	41      (0000009c) move-result          v2
+	42      (0000009e) const/high16         v4, 1103626240
+	43      (000000a2) cmpg-float           v4, v4, v2
+	44      (000000a6) const/16             v5, 10
+	45      (000000aa) const/high16         v6, 1097859072
+	46      (000000ae) if-gtz               v4, +009h
+
+scoreThermalZone-BB@0xb2 : [ scoreThermalZone-BB@0xbe scoreThermalZone-BB@0xc0 ]
+	47      (000000b2) const/high16         v4, 1119748096
+	48      (000000b6) cmpg-float           v2, v2, v4
+	49      (000000ba) if-gtz               v2, +003h
+
+scoreThermalZone-BB@0xbe : [ scoreThermalZone-BB@0xe4 ]
+	50      (000000be) goto                 +13h
+
+scoreThermalZone-BB@0xc0 : [ scoreThermalZone-BB@0xd0 scoreThermalZone-BB@0xe0 ]
+	51      (000000c0) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	52      (000000c6) move-result          v2
+	53      (000000c8) cmpg-float           v3, v6, v2
+	54      (000000cc) if-gtz               v3, +00ah
+
+scoreThermalZone-BB@0xd0 : [ scoreThermalZone-BB@0xdc scoreThermalZone-BB@0xe0 ]
+	55      (000000d0) const/high16         v3, 1123024896
+	56      (000000d4) cmpg-float           v2, v2, v3
+	57      (000000d8) if-gtz               v2, +004h
+
+scoreThermalZone-BB@0xdc : [ scoreThermalZone-BB@0xe4 ]
+	58      (000000dc) move                 v3, v5
+	59      (000000de) goto                 +3h
+
+scoreThermalZone-BB@0xe0 : [ scoreThermalZone-BB@0xe4 ]
+	60      (000000e0) const/16             v3, -60
+
+scoreThermalZone-BB@0xe4 : [ scoreThermalZone-BB@0xf6 scoreThermalZone-BB@0xfc ]
+	61      (000000e4) add-int/2addr        v1, v3
+	62      (000000e6) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	63      (000000ec) move-result          v2
+	64      (000000ee) cmpg-float           v2, v2, v6
+	65      (000000f2) if-gez               v2, +005h
+
+scoreThermalZone-BB@0xf6 : [ scoreThermalZone-BB@0x114 ]
+	66      (000000f6) add-int/lit8         v1, v1, -80
+	67      (000000fa) goto                 +dh
+
+scoreThermalZone-BB@0xfc : [ scoreThermalZone-BB@0x110 scoreThermalZone-BB@0x114 ]
+	68      (000000fc) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	69      (00000102) move-result          v2
+	70      (00000104) const/high16         v3, 1101004800
+	71      (00000108) cmpg-float           v2, v2, v3
+	72      (0000010c) if-gez               v2, +004h
+
+scoreThermalZone-BB@0x110 : [ scoreThermalZone-BB@0x114 ]
+	73      (00000110) add-int/lit8         v1, v1, -30
+
+scoreThermalZone-BB@0x114 : [ scoreThermalZone-BB@0x118 scoreThermalZone-BB@0x188 ]
+	74      (00000114) if-eqz               v9, +03ah
+
+scoreThermalZone-BB@0x118 : [ scoreThermalZone-BB@0x134 scoreThermalZone-BB@0x146 ]
+	75      (00000118) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	76      (0000011e) move-result          v2
+	77      (00000120) invoke-virtual       v9, Ljava/lang/Float;->floatValue()F
+	78      (00000126) move-result          v3
+	79      (00000128) sub-float/2addr      v2, v3
+	80      (0000012a) const/4              v3, 0
+	81      (0000012c) cmpg-float           v3, v3, v2
+	82      (00000130) if-gtz               v3, +00bh
+
+scoreThermalZone-BB@0x134 : [ scoreThermalZone-BB@0x140 scoreThermalZone-BB@0x146 ]
+	83      (00000134) const/high16         v3, 1106247680
+	84      (00000138) cmpg-float           v3, v2, v3
+	85      (0000013c) if-gtz               v3, +005h
+
+scoreThermalZone-BB@0x140 : [ scoreThermalZone-BB@0x164 ]
+	86      (00000140) const/16             v5, 25
+	87      (00000144) goto                 +10h
+
+scoreThermalZone-BB@0x146 : [ scoreThermalZone-BB@0x152 scoreThermalZone-BB@0x160 ]
+	88      (00000146) const/high16         v3, -1063256064
+	89      (0000014a) cmpg-float           v3, v3, v2
+	90      (0000014e) if-gtz               v3, +009h
+
+scoreThermalZone-BB@0x152 : [ scoreThermalZone-BB@0x15e scoreThermalZone-BB@0x160 ]
+	91      (00000152) const/high16         v3, 1110704128
+	92      (00000156) cmpg-float           v2, v2, v3
+	93      (0000015a) if-gtz               v2, +003h
+
+scoreThermalZone-BB@0x15e : [ scoreThermalZone-BB@0x164 ]
+	94      (0000015e) goto                 +3h
+
+scoreThermalZone-BB@0x160 : [ scoreThermalZone-BB@0x164 ]
+	95      (00000160) const/16             v5, -15
+
+scoreThermalZone-BB@0x164 : [ scoreThermalZone-BB@0x184 scoreThermalZone-BB@0x188 ]
+	96      (00000164) add-int/2addr        v1, v5
+	97      (00000166) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	98      (0000016c) move-result          v8
+	99      (0000016e) const/high16         v2, 1090519040
+	100     (00000172) add-float/2addr      v8, v2
+	101     (00000174) invoke-virtual       v9, Ljava/lang/Float;->floatValue()F
+	102     (0000017a) move-result          v9
+	103     (0000017c) cmpg-float           v8, v8, v9
+	104     (00000180) if-gez               v8, +004h
+
+scoreThermalZone-BB@0x184 : [ scoreThermalZone-BB@0x188 ]
+	105     (00000184) add-int/lit8         v1, v1, -70
+
+scoreThermalZone-BB@0x188 : [ scoreThermalZone-BB@0x194 scoreThermalZone-BB@0x198 ]
+	106     (00000188) invoke-direct        v7, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isSocFocusedThermalType(Ljava/lang/String;)Z
+	107     (0000018e) move-result          v7
+	108     (00000190) if-nez               v7, +004h
+
+scoreThermalZone-BB@0x194 : [ scoreThermalZone-BB@0x198 ]
+	109     (00000194) add-int/lit8         v1, v1, -25
+
+scoreThermalZone-BB@0x198 : 
+	110     (00000198) return               v1
+

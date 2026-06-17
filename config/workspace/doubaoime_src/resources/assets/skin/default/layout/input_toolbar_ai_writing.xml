@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HorizontalLayout class_adaptive="cls_toolbar_idle_adaptive" name="toolbar_ai_writing_layout"
+        width="match_parent" height="match_parent">
+        <ButtonKey name="btn_ai_writing_close" class="cls_ai_writing_btn_close" text="\ue306" />
+        <ButtonKey name="btn_ai_writing_check" class="cls_ai_writing_btn_func" text="检查" ficon_text="\ue32a" />
+        <ButtonKey name="btn_ai_writing_rewrite" class="cls_ai_writing_btn_func" text="重写" ficon_text="\ue32b" />
+        <ButtonKey name="btn_ai_writing_summary" class="cls_ai_writing_btn_func" text="总结" ficon_text="\ue32c" />
+    </HorizontalLayout>
+</Window>

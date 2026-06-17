@@ -1,0 +1,58 @@
+# Lcom/lele/llmonitor/i18n/TextI18nKt;->resolveAppTextLocale(Lcom/lele/llmonitor/data/AppLanguageOption;)Lcom/lele/llmonitor/i18n/AppTextLocale; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.data.AppLanguageOption
+#
+# - return:com.lele.llmonitor.i18n.AppTextLocale
+
+resolveAppTextLocale-BB@0x0 : [ resolveAppTextLocale-BB@0x16 resolveAppTextLocale-BB@0x54 ]
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/i18n/TextI18nKt$WhenMappings;->$EnumSwitchMapping$1 [I
+	1       (00000004) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	2       (0000000a) move-result          v1
+	3       (0000000c) aget                 v1, v0, v1
+	4       (00000010) const/4              v0, 1
+	5       (00000012) if-eq                v1, v0, +021h
+
+resolveAppTextLocale-BB@0x16 : [ resolveAppTextLocale-BB@0x1c resolveAppTextLocale-BB@0x4e ]
+	6       (00000016) const/4              v0, 2
+	7       (00000018) if-eq                v1, v0, +01bh
+
+resolveAppTextLocale-BB@0x1c : [ resolveAppTextLocale-BB@0x22 resolveAppTextLocale-BB@0x48 ]
+	8       (0000001c) const/4              v0, 3
+	9       (0000001e) if-eq                v1, v0, +015h
+
+resolveAppTextLocale-BB@0x22 : [ resolveAppTextLocale-BB@0x28 resolveAppTextLocale-BB@0x42 ]
+	10      (00000022) const/4              v0, 4
+	11      (00000024) if-eq                v1, v0, +00fh
+
+resolveAppTextLocale-BB@0x28 : [ resolveAppTextLocale-BB@0x2e resolveAppTextLocale-BB@0x38 ]
+	12      (00000028) const/4              v0, 5
+	13      (0000002a) if-ne                v1, v0, +007h
+
+resolveAppTextLocale-BB@0x2e : 
+	14      (0000002e) invoke-static        Lcom/lele/llmonitor/i18n/TextI18nKt;->resolveSystemTextLocale()Lcom/lele/llmonitor/i18n/AppTextLocale;
+	15      (00000034) move-result-object   v1
+	16      (00000036) return-object        v1
+
+resolveAppTextLocale-BB@0x38 : 
+	17      (00000038) invoke-static        Lh;->b()V
+	18      (0000003e) const/4              v1, 0
+	19      (00000040) return-object        v1
+
+resolveAppTextLocale-BB@0x42 : 
+	20      (00000042) sget-object          v1, Lcom/lele/llmonitor/i18n/AppTextLocale;->ZH_TW Lcom/lele/llmonitor/i18n/AppTextLocale;
+	21      (00000046) return-object        v1
+
+resolveAppTextLocale-BB@0x48 : 
+	22      (00000048) sget-object          v1, Lcom/lele/llmonitor/i18n/AppTextLocale;->ZH_HK Lcom/lele/llmonitor/i18n/AppTextLocale;
+	23      (0000004c) return-object        v1
+
+resolveAppTextLocale-BB@0x4e : 
+	24      (0000004e) sget-object          v1, Lcom/lele/llmonitor/i18n/AppTextLocale;->ZH_CN Lcom/lele/llmonitor/i18n/AppTextLocale;
+	25      (00000052) return-object        v1
+
+resolveAppTextLocale-BB@0x54 : 
+	26      (00000054) sget-object          v1, Lcom/lele/llmonitor/i18n/AppTextLocale;->EN Lcom/lele/llmonitor/i18n/AppTextLocale;
+	27      (00000058) return-object        v1
+

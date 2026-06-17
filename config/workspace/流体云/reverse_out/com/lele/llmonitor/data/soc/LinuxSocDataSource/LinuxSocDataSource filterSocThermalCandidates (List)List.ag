@@ -1,0 +1,48 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->filterSocThermalCandidates(Ljava/util/List;)Ljava/util/List; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.util.List
+#
+# - return:java.util.List
+
+filterSocThermalCandidates-BB@0x0 : [ filterSocThermalCandidates-BB@0x12 ]
+	0       (00000000) new-instance         v0, Ljava/util/ArrayList;
+	1       (00000004) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	2       (0000000a) invoke-interface     v5, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	3       (00000010) move-result-object   v5
+
+filterSocThermalCandidates-BB@0x12 : [ filterSocThermalCandidates-BB@0x1e filterSocThermalCandidates-BB@0x70 ]
+	4       (00000012) invoke-interface     v5, Ljava/util/Iterator;->hasNext()Z
+	5       (00000018) move-result          v1
+	6       (0000001a) if-eqz               v1, +02bh
+
+filterSocThermalCandidates-BB@0x1e : [ filterSocThermalCandidates-BB@0x5c filterSocThermalCandidates-BB@0x12 ]
+	7       (0000001e) invoke-interface     v5, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	8       (00000024) move-result-object   v1
+	9       (00000026) move-object          v2, v1
+	10      (00000028) check-cast           v2, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	11      (0000002c) invoke-virtual       v2, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	12      (00000032) move-result-object   v2
+	13      (00000034) invoke-static        Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+	14      (0000003a) move-result-object   v3
+	15      (0000003c) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	16      (00000042) invoke-virtual       v2, v3, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+	17      (00000048) move-result-object   v2
+	18      (0000004a) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	19      (00000050) invoke-direct        v4, v2, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isIrrelevantThermalType(Ljava/lang/String;)Z
+	20      (00000056) move-result          v3
+	21      (00000058) if-nez               v3, -023h
+
+filterSocThermalCandidates-BB@0x5c : [ filterSocThermalCandidates-BB@0x68 filterSocThermalCandidates-BB@0x12 ]
+	22      (0000005c) invoke-direct        v4, v2, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isSocFocusedThermalType(Ljava/lang/String;)Z
+	23      (00000062) move-result          v2
+	24      (00000064) if-eqz               v2, -029h
+
+filterSocThermalCandidates-BB@0x68 : [ filterSocThermalCandidates-BB@0x12 ]
+	25      (00000068) invoke-interface     v0, v1, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	26      (0000006e) goto                 -2eh
+
+filterSocThermalCandidates-BB@0x70 : 
+	27      (00000070) return-object        v0
+

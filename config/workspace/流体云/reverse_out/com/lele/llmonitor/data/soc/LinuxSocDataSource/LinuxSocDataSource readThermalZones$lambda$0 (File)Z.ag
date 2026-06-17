@@ -1,0 +1,30 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readThermalZones$lambda$0(Ljava/io/File;)Z [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.io.File
+#
+# - return:boolean
+
+readThermalZones$lambda$0-BB@0x0 : [ readThermalZones$lambda$0-BB@0xe readThermalZones$lambda$0-BB@0x30 ]
+	0       (00000000) invoke-virtual       v2, Ljava/io/File;->isDirectory()Z
+	1       (00000006) move-result          v0
+	2       (00000008) const/4              v1, 0
+	3       (0000000a) if-eqz               v0, +013h
+
+readThermalZones$lambda$0-BB@0xe : [ readThermalZones$lambda$0-BB@0x2c readThermalZones$lambda$0-BB@0x30 ]
+	4       (0000000e) invoke-virtual       v2, Ljava/io/File;->getName()Ljava/lang/String;
+	5       (00000014) move-result-object   v2
+	6       (00000016) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	7       (0000001c) const-string         v0, "thermal_zone"
+	8       (00000020) invoke-static        v2, v0, v1, Loh3;->j0(Ljava/lang/String; Ljava/lang/String; Z)Z
+	9       (00000026) move-result          v2
+	10      (00000028) if-eqz               v2, +004h
+
+readThermalZones$lambda$0-BB@0x2c : 
+	11      (0000002c) const/4              v2, 1
+	12      (0000002e) return               v2
+
+readThermalZones$lambda$0-BB@0x30 : 
+	13      (00000030) return               v1
+

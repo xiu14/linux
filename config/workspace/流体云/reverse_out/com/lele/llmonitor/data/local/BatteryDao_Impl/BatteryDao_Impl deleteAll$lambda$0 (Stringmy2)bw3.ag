@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->deleteAll$lambda$0(Ljava/lang/String; Lmy2;)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:java.lang.String
+# - v1:my2
+#
+# - return:bw3
+
+deleteAll$lambda$0-BB@0x0 : [ deleteAll$lambda$0-BB@0xe ]
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-interface     v1, v0, Lmy2;->v0(Ljava/lang/String;)Loy2;
+	2       (0000000c) move-result-object   v0
+
+deleteAll$lambda$0-BB@0xe : 
+	3       (0000000e) invoke-interface     v0, Loy2;->l0()Z
+	4       (00000014) invoke-interface     v0, Ljava/lang/AutoCloseable;->close()V
+	5       (0000001a) sget-object          v0, Lbw3;->a Lbw3;
+	6       (0000001e) return-object        v0
+	e:13
+	(Ljava/lang/Throwable; -> 20 deleteAll$lambda$0-BB@0x20)
+
+deleteAll$lambda$0-BB@0x20 : 
+	7       (00000020) move-exception       v1
+	8       (00000022) invoke-interface     v0, Ljava/lang/AutoCloseable;->close()V
+	9       (00000028) throw                v1
+

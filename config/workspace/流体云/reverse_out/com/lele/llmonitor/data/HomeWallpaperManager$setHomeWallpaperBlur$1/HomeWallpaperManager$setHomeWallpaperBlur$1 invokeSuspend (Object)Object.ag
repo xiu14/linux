@@ -1,0 +1,66 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperBlur$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x24 ]
+	0       (00000000) iget                 v0, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperBlur$1;->label I
+	1       (00000004) const/4              v1, 1
+	2       (00000006) if-eqz               v0, +00fh
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0xe invokeSuspend-BB@0x16 ]
+	3       (0000000a) if-ne                v0, v1, +006h
+
+invokeSuspend-BB@0xe : [ invokeSuspend-BB@0x44 ]
+	4       (0000000e) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	5       (00000014) goto                 +18h
+
+invokeSuspend-BB@0x16 : 
+	6       (00000016) const-string         v4, "call to 'resume' before 'invoke' with coroutine"
+	7       (0000001a) invoke-static        v4, Lh;->m(Ljava/lang/String;)V
+	8       (00000020) const/4              v4, 0
+	9       (00000022) return-object        v4
+
+invokeSuspend-BB@0x24 : [ invokeSuspend-BB@0x42 invokeSuspend-BB@0x44 ]
+	10      (00000024) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	11      (0000002a) iput                 v1, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperBlur$1;->label I
+	12      (0000002e) const-wide/16        v0, 300
+	13      (00000032) invoke-static        v0, v1, v4, Ln54;->r(J Ln60;)Ljava/lang/Object;
+	14      (00000038) move-result-object   v5
+	15      (0000003a) sget-object          v0, Le80;->d Le80;
+	16      (0000003e) if-ne                v5, v0, +003h
+
+invokeSuspend-BB@0x42 : 
+	17      (00000042) return-object        v0
+
+invokeSuspend-BB@0x44 : [ invokeSuspend-BB@0x5c invokeSuspend-BB@0x5e ]
+	18      (00000044) iget-wide            v0, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperBlur$1;->$generation J
+	19      (00000048) invoke-static        Lcom/lele/llmonitor/data/HomeWallpaperManager;->access$getHomeWallpaperBlurGeneration$p()J
+	20      (0000004e) move-result-wide     v2
+	21      (00000050) cmp-long             v5, v0, v2
+	22      (00000054) sget-object          v0, Lbw3;->a Lbw3;
+	23      (00000058) if-eqz               v5, +003h
+
+invokeSuspend-BB@0x5c : 
+	24      (0000005c) return-object        v0
+
+invokeSuspend-BB@0x5e : 
+	25      (0000005e) iget-object          v5, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperBlur$1;->$context Landroid/content/Context;
+	26      (00000062) const-string         v1, "llmonitor_settings"
+	27      (00000066) const/4              v2, 0
+	28      (00000068) invoke-virtual       v5, v1, v2, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String; I)Landroid/content/SharedPreferences;
+	29      (0000006e) move-result-object   v5
+	30      (00000070) invoke-interface     v5, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	31      (00000076) move-result-object   v5
+	32      (00000078) const-string         v1, "home_wallpaper_blur"
+	33      (0000007c) iget                 v4, v4, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperBlur$1;->$clamped F
+	34      (00000080) invoke-interface     v5, v1, v4, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String; F)Landroid/content/SharedPreferences$Editor;
+	35      (00000086) move-result-object   v4
+	36      (00000088) invoke-interface     v4, Landroid/content/SharedPreferences$Editor;->apply()V
+	37      (0000008e) sget-object          v4, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	38      (00000092) invoke-virtual       v4, Lcom/lele/llmonitor/data/SettingsManager;->refreshLaunchAppearanceSnapshot()V
+	39      (00000098) return-object        v0
+

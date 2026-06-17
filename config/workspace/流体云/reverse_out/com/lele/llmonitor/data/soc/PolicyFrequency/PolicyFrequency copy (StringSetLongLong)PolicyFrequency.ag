@@ -1,0 +1,18 @@
+# Lcom/lele/llmonitor/data/soc/PolicyFrequency;->copy(Ljava/lang/String; Ljava/util/Set; Ljava/lang/Long; Ljava/lang/Long;)Lcom/lele/llmonitor/data/soc/PolicyFrequency; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.String
+# - v2:java.util.Set
+# - v3:java.lang.Long
+# - v4:java.lang.Long
+#
+# - return:com.lele.llmonitor.data.soc.PolicyFrequency
+
+copy-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) new-instance         v0, Lcom/lele/llmonitor/data/soc/PolicyFrequency;
+	3       (00000010) invoke-direct        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/soc/PolicyFrequency;-><init>(Ljava/lang/String; Ljava/util/Set; Ljava/lang/Long; Ljava/lang/Long;)V
+	4       (00000016) return-object        v0
+

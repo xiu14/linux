@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManager;->sync$default(Lcom/lele/llmonitor/data/AppIconPaletteManager; Landroid/content/Context; Z Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z I Ljava/lang/Object;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.AppIconPaletteManager
+# - v1:android.content.Context
+# - v2:boolean
+# - v3:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v4:boolean
+# - v5:int
+# - v6:java.lang.Object
+#
+# - return:void
+
+sync$default-BB@0x0 : [ sync$default-BB@0x8 sync$default-BB@0xa ]
+	0       (00000000) and-int/lit8         v5, v5, 8
+	1       (00000004) if-eqz               v5, +003h
+
+sync$default-BB@0x8 : [ sync$default-BB@0xa ]
+	2       (00000008) const/4              v4, 1
+
+sync$default-BB@0xa : 
+	3       (0000000a) invoke-virtual       v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/AppIconPaletteManager;->sync(Landroid/content/Context; Z Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z)V
+	4       (00000010) return-void          
+

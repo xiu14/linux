@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->b(Lcom/lele/llmonitor/data/local/AppDatabase_Impl;)Lcom/lele/llmonitor/data/local/BatteryDao_Impl; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.local.AppDatabase_Impl
+#
+# - return:com.lele.llmonitor.data.local.BatteryDao_Impl
+
+b-BB@0x0 : 
+	0       (00000000) invoke-static        v0, Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->_batteryDao$lambda$0(Lcom/lele/llmonitor/data/local/AppDatabase_Impl;)Lcom/lele/llmonitor/data/local/BatteryDao_Impl;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

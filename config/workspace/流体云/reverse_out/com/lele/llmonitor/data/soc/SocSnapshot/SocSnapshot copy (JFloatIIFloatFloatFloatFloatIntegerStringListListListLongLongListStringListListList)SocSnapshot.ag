@@ -1,0 +1,59 @@
+# Lcom/lele/llmonitor/data/soc/SocSnapshot;->copy(J Ljava/lang/Float; I I Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List; Ljava/lang/Long; Ljava/lang/Long; Ljava/util/List; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List;)Lcom/lele/llmonitor/data/soc/SocSnapshot; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v23
+# - v24:long
+# - v25:java.lang.Float
+# - v26:int
+# - v27:int
+# - v28:java.lang.Float
+# - v29:java.lang.Float
+# - v30:java.lang.Float
+# - v31:java.lang.Float
+# - v32:java.lang.Integer
+# - v33:java.lang.String
+# - v34:java.util.List
+# - v35:java.util.List
+# - v36:java.util.List
+# - v37:java.lang.Long
+# - v38:java.lang.Long
+# - v39:java.util.List
+# - v40:java.lang.String
+# - v41:java.util.List
+# - v42:java.util.List
+# - v43:java.util.List
+#
+# - return:com.lele.llmonitor.data.soc.SocSnapshot
+
+copy-BB@0x0 : 
+	0       (00000000) invoke-virtual/range v34, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual/range v35, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-virtual/range v36, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	3       (00000012) invoke-virtual/range v39, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	4       (00000018) invoke-virtual/range v41, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	5       (0000001e) invoke-virtual/range v42, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	6       (00000024) invoke-virtual/range v43, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	7       (0000002a) new-instance         v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	8       (0000002e) move-wide/from16     v1, v23
+	9       (00000032) move-object/from16   v3, v25
+	10      (00000036) move/from16          v4, v26
+	11      (0000003a) move/from16          v5, v27
+	12      (0000003e) move-object/from16   v6, v28
+	13      (00000042) move-object/from16   v7, v29
+	14      (00000046) move-object/from16   v8, v30
+	15      (0000004a) move-object/from16   v9, v31
+	16      (0000004e) move-object/from16   v10, v32
+	17      (00000052) move-object/from16   v11, v33
+	18      (00000056) move-object/from16   v12, v34
+	19      (0000005a) move-object/from16   v13, v35
+	20      (0000005e) move-object/from16   v14, v36
+	21      (00000062) move-object/from16   v15, v37
+	22      (00000066) move-object/from16   v16, v38
+	23      (0000006a) move-object/from16   v17, v39
+	24      (0000006e) move-object/from16   v18, v40
+	25      (00000072) move-object/from16   v19, v41
+	26      (00000076) move-object/from16   v20, v42
+	27      (0000007a) move-object/from16   v21, v43
+	28      (0000007e) invoke-direct/range  v0 ... v21, Lcom/lele/llmonitor/data/soc/SocSnapshot;-><init>(J Ljava/lang/Float; I I Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List; Ljava/lang/Long; Ljava/lang/Long; Ljava/util/List; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List;)V
+	29      (00000084) return-object        v0
+

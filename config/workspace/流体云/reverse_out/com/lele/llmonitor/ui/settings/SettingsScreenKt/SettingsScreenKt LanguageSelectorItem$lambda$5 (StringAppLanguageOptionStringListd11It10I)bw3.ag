@@ -1,0 +1,29 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LanguageSelectorItem$lambda$5(Ljava/lang/String; Lcom/lele/llmonitor/data/AppLanguageOption; Ljava/lang/String; Ljava/util/List; Ld11; I Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:java.lang.String
+# - v8:com.lele.llmonitor.data.AppLanguageOption
+# - v9:java.lang.String
+# - v10:java.util.List
+# - v11:d11
+# - v12:int
+# - v13:t10
+# - v14:int
+#
+# - return:bw3
+
+LanguageSelectorItem$lambda$5-BB@0x0 : 
+	0       (00000000) or-int/lit8          v12, v12, 1
+	1       (00000004) invoke-static        v12, Lvc1;->b0(I)I
+	2       (0000000a) move-result          v6
+	3       (0000000c) move-object          v0, v7
+	4       (0000000e) move-object          v1, v8
+	5       (00000010) move-object          v2, v9
+	6       (00000012) move-object          v3, v10
+	7       (00000014) move-object          v4, v11
+	8       (00000016) move-object          v5, v13
+	9       (00000018) invoke-static/range  v0 ... v6, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LanguageSelectorItem(Ljava/lang/String; Lcom/lele/llmonitor/data/AppLanguageOption; Ljava/lang/String; Ljava/util/List; Ld11; Lt10; I)V
+	10      (0000001e) sget-object          v7, Lbw3;->a Lbw3;
+	11      (00000022) return-object        v7
+

@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->component5()Lkx; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:kx
+
+component5-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->onSurfaceVariant Lkx;
+	1       (00000004) return-object        v0
+

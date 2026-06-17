@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager;->importWallpaper$lambda$0(Z)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:boolean
+#
+# - return:bw3
+
+importWallpaper$lambda$0-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lbw3;->a Lbw3;
+	1       (00000004) return-object        v0
+

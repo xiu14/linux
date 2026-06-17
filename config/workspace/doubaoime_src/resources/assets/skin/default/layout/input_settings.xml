@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <SettingsLayout name="input_setting_keyboard" mouse="false" >
+        <!-- 此部分与工具栏样式相同 -->
+        <HorizontalLayout class="cls_toolbar_bk" class_adaptive="cls_toolbar_idle_adaptive">
+            <ButtonSwitchCurrentMode class="cld_toolbar_close_button" label="toolbar_close" text="\ue362" />
+            <Control width_weight="292" />
+        </HorizontalLayout>
+
+        <!-- 此部分与键盘相同 -->
+        <VerticalLayout width="match_parent" height="match_parent">
+            <SettingsButtonContainer name="settings_button_container" sliderenable="true" >
+                <TileLayout class="cls_settings_bk" >
+                    <ButtonKey text="语音输入" class="cls_settings_button" ficon_text="\ue374"
+                        name="btn_settings_speech" />
+                    <ButtonKey text="表情" class="cls_settings_button" ficon_text="\ue33b"
+                        name="btn_open_emoji" />
+                    <ButtonSwitchBoard text="键盘选择" class="cls_settings_button" ficon_text="\ue327"
+                        name="btn_switch_keyboard" target="11" />
+                    <ButtonKey text="常用语" class="cls_settings_button" ficon_text="\ue345"
+                        name="btn_common_phrase" />
+                    <ButtonKey text="剪切板" class="cls_settings_button" ficon_text="\ue364"
+                        name="btn_clipboard_history" />
+                    <ButtonKey text="定制工具栏" class="cls_settings_button" ficon_text="\ue372"
+                        name="btn_customize_toolbar"/>
+                    <ButtonKey text="翻译" class="cls_settings_button" ficon_text="\ue340"
+                        name="btn_translate" />
+                    <ButtonKey text="繁体输入" class="cls_settings_button" ficon_text="\ue379"
+                        name="btn_hant" />
+                    <ButtonKey text="键盘调节" class="cls_settings_button" ficon_text="\ue347"
+                        name="btn_stretch_keyboard"/>
+                    <OptionBase text="单手模式" class="cls_settings_option_mode_switch_button" ficon_text="\ue346"
+                        name="btn_one_hand_switch" group=""/>
+                    <ButtonKey text="更多设置" class="cls_settings_button" ficon_text="\ue326"
+                        name="btn_open_settings" />
+                    <ButtonKey text="问题反馈" class="cls_settings_button" ficon_text="\ue34b"
+                        name="btn_feedback"/>
+<!--                    <ButtonKey text="AI聊天助手" class="cls_settings_button" ficon_text="\ue344"-->
+<!--                        name="btn_open_ai_chatter" />-->
+                    <Control name="red_point_of_setting_btn" width="18" height="18"
+                        rect_follow_control="btn_open_ai_chatter" float="true"
+                        gravity="center|top" pos="60,36" bkcolor="#ffff0000" bkround="99" />
+                </TileLayout>
+            </SettingsButtonContainer>
+            <SettingsTabPointContainer name="settings_point" class="cls_settings_tab_point_container" >
+                <Control width="match_parent" />
+                <Control class="cls_settings_tab_point" />
+                <Control width="match_parent" />
+            </SettingsTabPointContainer>
+        </VerticalLayout>
+    </SettingsLayout>
+</Window>

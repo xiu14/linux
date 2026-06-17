@@ -1,0 +1,89 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles(Landroid/content/Context; Ljava/io/File;)Ljava/util/List; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+# - v7:java.io.File
+#
+# - return:java.util.List
+
+resolveHistoryFiles-BB@0x0 : [ resolveHistoryFiles-BB@0xc resolveHistoryFiles-BB@0x3a ]
+	0       (00000000) invoke-virtual       v6, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) const/4              v0, 0
+	2       (00000008) if-eqz               v7, +019h
+
+resolveHistoryFiles-BB@0xc : [ resolveHistoryFiles-BB@0x18 resolveHistoryFiles-BB@0x3a ]
+	3       (0000000c) invoke-virtual       v7, Ljava/io/File;->exists()Z
+	4       (00000012) move-result          v1
+	5       (00000014) if-eqz               v1, +013h
+
+resolveHistoryFiles-BB@0x18 : [ resolveHistoryFiles-BB@0x24 resolveHistoryFiles-BB@0x3a ]
+	6       (00000018) invoke-virtual       v7, Ljava/io/File;->isFile()Z
+	7       (0000001e) move-result          v1
+	8       (00000020) if-eqz               v1, +00dh
+
+resolveHistoryFiles-BB@0x24 : [ resolveHistoryFiles-BB@0x38 resolveHistoryFiles-BB@0x3a ]
+	9       (00000024) invoke-virtual       v7, Ljava/io/File;->length()J
+	10      (0000002a) move-result-wide     v1
+	11      (0000002c) const-wide/16        v3, 0
+	12      (00000030) cmp-long             v1, v1, v3
+	13      (00000034) if-lez               v1, +003h
+
+resolveHistoryFiles-BB@0x38 : [ resolveHistoryFiles-BB@0x3c ]
+	14      (00000038) goto                 +2h
+
+resolveHistoryFiles-BB@0x3a : [ resolveHistoryFiles-BB@0x3c ]
+	15      (0000003a) move-object          v7, v0
+
+resolveHistoryFiles-BB@0x3c : [ resolveHistoryFiles-BB@0x50 resolveHistoryFiles-BB@0xc6 ]
+	16      (0000003c) invoke-direct        v5, v6, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryDirectory(Landroid/content/Context;)Ljava/io/File;
+	17      (00000042) move-result-object   v5
+	18      (00000044) invoke-virtual       v5, Ljava/io/File;->listFiles()[Ljava/io/File;
+	19      (0000004a) move-result-object   v5
+	20      (0000004c) if-eqz               v5, +03dh
+
+resolveHistoryFiles-BB@0x50 : [ resolveHistoryFiles-BB@0xa6 resolveHistoryFiles-BB@0xb4 ]
+	21      (00000050) invoke-static        v5, Lwh;->R([Ljava/lang/Object;)Lz53;
+	22      (00000056) move-result-object   v5
+	23      (00000058) new-instance         v6, Lu70;
+	24      (0000005c) const/16             v0, 20
+	25      (00000060) invoke-direct        v6, v0, Lu70;-><init>(I)V
+	26      (00000066) new-instance         v0, Lbu0;
+	27      (0000006a) const/4              v1, 1
+	28      (0000006c) invoke-direct        v0, v5, v1, v6, Lbu0;-><init>(Lz53; Z Ld11;)V
+	29      (00000072) new-instance         v5, Lk;
+	30      (00000076) const/16             v6, 16
+	31      (0000007a) invoke-direct        v5, v6, v7, Lk;-><init>(I Ljava/lang/Object;)V
+	32      (00000080) new-instance         v6, Lbu0;
+	33      (00000084) invoke-direct        v6, v0, v1, v5, Lbu0;-><init>(Lz53; Z Ld11;)V
+	34      (0000008a) new-instance         v5, Lcom/lele/llmonitor/data/HomeWallpaperStorage$resolveHistoryFiles$$inlined$sortedByDescending$1;
+	35      (0000008e) invoke-direct        v5, Lcom/lele/llmonitor/data/HomeWallpaperStorage$resolveHistoryFiles$$inlined$sortedByDescending$1;-><init>()V
+	36      (00000094) new-instance         v7, Lm21;
+	37      (00000098) invoke-direct        v7, v1, v6, v5, Lm21;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	38      (0000009e) instance-of          v5, v7, Lwl0;
+	39      (000000a2) if-eqz               v5, +009h
+
+resolveHistoryFiles-BB@0xa6 : [ resolveHistoryFiles-BB@0xbe ]
+	40      (000000a6) check-cast           v7, Lwl0;
+	41      (000000aa) invoke-interface     v7, Lwl0;->take()Lz53;
+	42      (000000b0) move-result-object   v5
+	43      (000000b2) goto                 +6h
+
+resolveHistoryFiles-BB@0xb4 : [ resolveHistoryFiles-BB@0xbe ]
+	44      (000000b4) new-instance         v5, Lxk3;
+	45      (000000b8) invoke-direct        v5, v7, Lxk3;-><init>(Lz53;)V
+
+resolveHistoryFiles-BB@0xbe : [ resolveHistoryFiles-BB@0xc6 ]
+	46      (000000be) invoke-static        v5, Lb63;->e0(Lz53;)Ljava/util/List;
+	47      (000000c4) move-result-object   v0
+
+resolveHistoryFiles-BB@0xc6 : [ resolveHistoryFiles-BB@0xca resolveHistoryFiles-BB@0xd0 ]
+	48      (000000c6) if-nez               v0, +005h
+
+resolveHistoryFiles-BB@0xca : 
+	49      (000000ca) sget-object          v5, Luo0;->d Luo0;
+	50      (000000ce) return-object        v5
+
+resolveHistoryFiles-BB@0xd0 : 
+	51      (000000d0) return-object        v0
+

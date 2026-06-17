@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/NormalizedThermalTemp;->component1()F [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:float
+
+component1-BB@0x0 : 
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/data/soc/NormalizedThermalTemp;->celsius F
+	1       (00000004) return               v0
+

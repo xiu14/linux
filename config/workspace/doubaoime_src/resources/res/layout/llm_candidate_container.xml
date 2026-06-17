@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llm_candidate_box"
+    android:paddingLeft="@dimen/dp_12"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/llm_candidate_list"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <com.obric.oui.tag.OTextTag
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LLM"
+            android:paddingHorizontal="3dp"
+            app:oui_radius="4dp"
+            style="@style/OTag.Text.Small.RoundedRectangle.Accent"/>
+    </LinearLayout>
+</HorizontalScrollView>

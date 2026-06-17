@@ -1,0 +1,257 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readCpuCoreFrequencies()Ljava/util/List; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v15
+#
+# - return:java.util.List
+
+readCpuCoreFrequencies-BB@0x0 : [ readCpuCoreFrequencies-BB@0x14 readCpuCoreFrequencies-BB@0x1a ]
+	0       (00000000) invoke-direct        v15, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->getCpuDirs()Ljava/util/List;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-interface     v0, Ljava/util/List;->isEmpty()Z
+	3       (0000000e) move-result          v0
+	4       (00000010) if-eqz               v0, +005h
+
+readCpuCoreFrequencies-BB@0x14 : 
+	5       (00000014) sget-object          v15, Luo0;->d Luo0;
+	6       (00000018) return-object        v15
+
+readCpuCoreFrequencies-BB@0x1a : [ readCpuCoreFrequencies-BB@0x3c ]
+	7       (0000001a) invoke-direct        v15, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readPolicyFrequencyMap()Ljava/util/Map;
+	8       (00000020) move-result-object   v1
+	9       (00000022) invoke-direct        v15, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->getCpuDirs()Ljava/util/List;
+	10      (00000028) move-result-object   v0
+	11      (0000002a) new-instance         v2, Ljava/util/ArrayList;
+	12      (0000002e) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	13      (00000034) invoke-interface     v0, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	14      (0000003a) move-result-object   v3
+
+readCpuCoreFrequencies-BB@0x3c : [ readCpuCoreFrequencies-BB@0x48 readCpuCoreFrequencies-BB@0x232 ]
+	15      (0000003c) invoke-interface     v3, Ljava/util/Iterator;->hasNext()Z
+	16      (00000042) move-result          v0
+	17      (00000044) if-eqz               v0, +0f7h
+
+readCpuCoreFrequencies-BB@0x48 : [ readCpuCoreFrequencies-BB@0x7e readCpuCoreFrequencies-BB@0x224 ]
+	18      (00000048) invoke-interface     v3, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	19      (0000004e) move-result-object   v0
+	20      (00000050) move-object          v4, v0
+	21      (00000052) check-cast           v4, Ljava/io/File;
+	22      (00000056) invoke-virtual       v4, Ljava/io/File;->getName()Ljava/lang/String;
+	23      (0000005c) move-result-object   v0
+	24      (0000005e) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	25      (00000064) const-string         v5, "cpu"
+	26      (00000068) invoke-static        v0, v5, Lhh3;->D0(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	27      (0000006e) move-result-object   v0
+	28      (00000070) invoke-static        v0, Loh3;->k0(Ljava/lang/String;)Ljava/lang/Integer;
+	29      (00000076) move-result-object   v5
+	30      (00000078) const/4              v6, 0
+	31      (0000007a) if-eqz               v5, +0d5h
+
+readCpuCoreFrequencies-BB@0x7e : [ readCpuCoreFrequencies-BB@0x86 ]
+	32      (0000007e) invoke-virtual       v5, Ljava/lang/Integer;->intValue()I
+	33      (00000084) move-result          v8
+
+readCpuCoreFrequencies-BB@0x86 : [ readCpuCoreFrequencies-BB@0xba readCpuCoreFrequencies-BB@0xbc ]
+	34      (00000086) new-instance         v0, Ljava/io/File;
+	35      (0000008a) const-string         v7, "online"
+	36      (0000008e) invoke-direct        v0, v4, v7, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	37      (00000094) invoke-static        v0, Lwt0;->V(Ljava/io/File;)Ljava/lang/String;
+	38      (0000009a) move-result-object   v0
+	39      (0000009c) invoke-static        v0, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	40      (000000a2) move-result-object   v0
+	41      (000000a4) invoke-virtual       v0, Ljava/lang/Object;->toString()Ljava/lang/String;
+	42      (000000aa) move-result-object   v0
+	43      (000000ac) invoke-static        v0, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+	44      (000000b2) move-result          v0
+	45      (000000b4) const/4              v7, 1
+	46      (000000b6) if-ne                v0, v7, +003h
+	86:c5
+	(Ljava/lang/Throwable; -> c8 readCpuCoreFrequencies-BB@0xc8)
+
+readCpuCoreFrequencies-BB@0xba : [ readCpuCoreFrequencies-BB@0xbe ]
+	47      (000000ba) goto                 +2h
+	86:c5
+	(Ljava/lang/Throwable; -> c8 readCpuCoreFrequencies-BB@0xc8)
+
+readCpuCoreFrequencies-BB@0xbc : [ readCpuCoreFrequencies-BB@0xbe ]
+	48      (000000bc) const/4              v7, 0
+	86:c5
+	(Ljava/lang/Throwable; -> c8 readCpuCoreFrequencies-BB@0xc8)
+
+readCpuCoreFrequencies-BB@0xbe : [ readCpuCoreFrequencies-BB@0xd6 ]
+	49      (000000be) invoke-static        v7, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	50      (000000c4) move-result-object   v0
+	51      (000000c6) goto                 +8h
+
+readCpuCoreFrequencies-BB@0xc8 : [ readCpuCoreFrequencies-BB@0xd6 ]
+	52      (000000c8) move-exception       v0
+	53      (000000ca) new-instance         v7, Lcw2;
+	54      (000000ce) invoke-direct        v7, v0, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	55      (000000d4) move-object          v0, v7
+
+readCpuCoreFrequencies-BB@0xd6 : [ readCpuCoreFrequencies-BB@0xe2 readCpuCoreFrequencies-BB@0xe4 ]
+	56      (000000d6) sget-object          v7, Ljava/lang/Boolean;->TRUE Ljava/lang/Boolean;
+	57      (000000da) instance-of          v9, v0, Lcw2;
+	58      (000000de) if-eqz               v9, +003h
+
+readCpuCoreFrequencies-BB@0xe2 : [ readCpuCoreFrequencies-BB@0xe4 ]
+	59      (000000e2) move-object          v0, v7
+
+readCpuCoreFrequencies-BB@0xe4 : [ readCpuCoreFrequencies-BB@0x10e readCpuCoreFrequencies-BB@0x11a ]
+	60      (000000e4) check-cast           v0, Ljava/lang/Boolean;
+	61      (000000e8) invoke-virtual       v0, Ljava/lang/Boolean;->booleanValue()Z
+	62      (000000ee) move-result          v9
+	63      (000000f0) new-instance         v0, Ljava/io/File;
+	64      (000000f4) const-string         v7, "cpufreq"
+	65      (000000f8) invoke-direct        v0, v4, v7, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	66      (000000fe) const-string         v4, "scaling_cur_freq"
+	67      (00000102) invoke-direct        v15, v0, v4, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLong(Ljava/io/File; Ljava/lang/String;)Ljava/lang/Long;
+	68      (00000108) move-result-object   v4
+	69      (0000010a) if-nez               v4, +008h
+
+readCpuCoreFrequencies-BB@0x10e : [ readCpuCoreFrequencies-BB@0x11a ]
+	70      (0000010e) const-string         v4, "cpuinfo_cur_freq"
+	71      (00000112) invoke-direct        v15, v0, v4, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLong(Ljava/io/File; Ljava/lang/String;)Ljava/lang/Long;
+	72      (00000118) move-result-object   v4
+
+readCpuCoreFrequencies-BB@0x11a : [ readCpuCoreFrequencies-BB@0x12a readCpuCoreFrequencies-BB@0x136 ]
+	73      (0000011a) const-string         v7, "cpuinfo_max_freq"
+	74      (0000011e) invoke-direct        v15, v0, v7, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLong(Ljava/io/File; Ljava/lang/String;)Ljava/lang/Long;
+	75      (00000124) move-result-object   v7
+	76      (00000126) if-nez               v7, +008h
+
+readCpuCoreFrequencies-BB@0x12a : [ readCpuCoreFrequencies-BB@0x136 ]
+	77      (0000012a) const-string         v7, "scaling_max_freq"
+	78      (0000012e) invoke-direct        v15, v0, v7, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLong(Ljava/io/File; Ljava/lang/String;)Ljava/lang/Long;
+	79      (00000134) move-result-object   v7
+
+readCpuCoreFrequencies-BB@0x136 : [ readCpuCoreFrequencies-BB@0x14a ]
+	80      (00000136) invoke-interface     v1, Ljava/util/Map;->entrySet()Ljava/util/Set;
+	81      (0000013c) move-result-object   v0
+	82      (0000013e) check-cast           v0, Ljava/lang/Iterable;
+	83      (00000142) invoke-interface     v0, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	84      (00000148) move-result-object   v0
+
+readCpuCoreFrequencies-BB@0x14a : [ readCpuCoreFrequencies-BB@0x156 readCpuCoreFrequencies-BB@0x186 ]
+	85      (0000014a) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	86      (00000150) move-result          v10
+	87      (00000152) if-eqz               v10, +01ah
+
+readCpuCoreFrequencies-BB@0x156 : [ readCpuCoreFrequencies-BB@0x184 readCpuCoreFrequencies-BB@0x14a ]
+	88      (00000156) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	89      (0000015c) move-result-object   v10
+	90      (0000015e) move-object          v11, v10
+	91      (00000160) check-cast           v11, Ljava/util/Map$Entry;
+	92      (00000164) invoke-interface     v11, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	93      (0000016a) move-result-object   v11
+	94      (0000016c) check-cast           v11, Lcom/lele/llmonitor/data/soc/PolicyFrequency;
+	95      (00000170) invoke-virtual       v11, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->getRelatedCores()Ljava/util/Set;
+	96      (00000176) move-result-object   v11
+	97      (00000178) invoke-interface     v11, v5, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+	98      (0000017e) move-result          v11
+	99      (00000180) if-eqz               v11, -01bh
+
+readCpuCoreFrequencies-BB@0x184 : [ readCpuCoreFrequencies-BB@0x188 ]
+	100     (00000184) goto                 +2h
+
+readCpuCoreFrequencies-BB@0x186 : [ readCpuCoreFrequencies-BB@0x188 ]
+	101     (00000186) move-object          v10, v6
+
+readCpuCoreFrequencies-BB@0x188 : [ readCpuCoreFrequencies-BB@0x190 readCpuCoreFrequencies-BB@0x19e ]
+	102     (00000188) check-cast           v10, Ljava/util/Map$Entry;
+	103     (0000018c) if-eqz               v10, +009h
+
+readCpuCoreFrequencies-BB@0x190 : [ readCpuCoreFrequencies-BB@0x1a0 ]
+	104     (00000190) invoke-interface     v10, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	105     (00000196) move-result-object   v0
+	106     (00000198) check-cast           v0, Lcom/lele/llmonitor/data/soc/PolicyFrequency;
+	107     (0000019c) goto                 +2h
+
+readCpuCoreFrequencies-BB@0x19e : [ readCpuCoreFrequencies-BB@0x1a0 ]
+	108     (0000019e) move-object          v0, v6
+
+readCpuCoreFrequencies-BB@0x1a0 : [ readCpuCoreFrequencies-BB@0x1a4 readCpuCoreFrequencies-BB@0x1b4 ]
+	109     (000001a0) if-nez               v4, +00ah
+
+readCpuCoreFrequencies-BB@0x1a4 : [ readCpuCoreFrequencies-BB@0x1a8 readCpuCoreFrequencies-BB@0x1b2 ]
+	110     (000001a4) if-eqz               v0, +007h
+
+readCpuCoreFrequencies-BB@0x1a8 : [ readCpuCoreFrequencies-BB@0x1b4 ]
+	111     (000001a8) invoke-virtual       v0, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->getCurrentKhz()Ljava/lang/Long;
+	112     (000001ae) move-result-object   v4
+	113     (000001b0) goto                 +2h
+
+readCpuCoreFrequencies-BB@0x1b2 : [ readCpuCoreFrequencies-BB@0x1b4 ]
+	114     (000001b2) move-object          v4, v6
+
+readCpuCoreFrequencies-BB@0x1b4 : [ readCpuCoreFrequencies-BB@0x1b8 readCpuCoreFrequencies-BB@0x1c8 ]
+	115     (000001b4) if-nez               v7, +00ah
+
+readCpuCoreFrequencies-BB@0x1b8 : [ readCpuCoreFrequencies-BB@0x1bc readCpuCoreFrequencies-BB@0x1c6 ]
+	116     (000001b8) if-eqz               v0, +007h
+
+readCpuCoreFrequencies-BB@0x1bc : [ readCpuCoreFrequencies-BB@0x1c8 ]
+	117     (000001bc) invoke-virtual       v0, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->getMaxKhz()Ljava/lang/Long;
+	118     (000001c2) move-result-object   v7
+	119     (000001c4) goto                 +2h
+
+readCpuCoreFrequencies-BB@0x1c6 : [ readCpuCoreFrequencies-BB@0x1c8 ]
+	120     (000001c6) move-object          v7, v6
+
+readCpuCoreFrequencies-BB@0x1c8 : [ readCpuCoreFrequencies-BB@0x1d0 readCpuCoreFrequencies-BB@0x1dc ]
+	121     (000001c8) new-instance         v5, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;
+	122     (000001cc) if-eqz               v0, +008h
+
+readCpuCoreFrequencies-BB@0x1d0 : [ readCpuCoreFrequencies-BB@0x1de ]
+	123     (000001d0) invoke-virtual       v0, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->getName()Ljava/lang/String;
+	124     (000001d6) move-result-object   v0
+	125     (000001d8) move-object          v10, v0
+	126     (000001da) goto                 +2h
+
+readCpuCoreFrequencies-BB@0x1dc : [ readCpuCoreFrequencies-BB@0x1de ]
+	127     (000001dc) move-object          v10, v6
+
+readCpuCoreFrequencies-BB@0x1de : [ readCpuCoreFrequencies-BB@0x1e6 readCpuCoreFrequencies-BB@0x1fc ]
+	128     (000001de) const-wide/16        v11, 1000
+	129     (000001e2) if-eqz               v4, +00dh
+
+readCpuCoreFrequencies-BB@0x1e6 : [ readCpuCoreFrequencies-BB@0x1fe ]
+	130     (000001e6) invoke-virtual       v4, Ljava/lang/Long;->longValue()J
+	131     (000001ec) move-result-wide     v13
+	132     (000001ee) div-long/2addr       v13, v11
+	133     (000001f0) long-to-int          v0, v13
+	134     (000001f2) invoke-static        v0, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	135     (000001f8) move-result-object   v0
+	136     (000001fa) goto                 +2h
+
+readCpuCoreFrequencies-BB@0x1fc : [ readCpuCoreFrequencies-BB@0x1fe ]
+	137     (000001fc) move-object          v0, v6
+
+readCpuCoreFrequencies-BB@0x1fe : [ readCpuCoreFrequencies-BB@0x202 readCpuCoreFrequencies-BB@0x216 ]
+	138     (000001fe) if-eqz               v7, +00ch
+
+readCpuCoreFrequencies-BB@0x202 : [ readCpuCoreFrequencies-BB@0x216 ]
+	139     (00000202) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	140     (00000208) move-result-wide     v6
+	141     (0000020a) div-long/2addr       v6, v11
+	142     (0000020c) long-to-int          v4, v6
+	143     (0000020e) invoke-static        v4, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	144     (00000214) move-result-object   v6
+
+readCpuCoreFrequencies-BB@0x216 : [ readCpuCoreFrequencies-BB@0x224 ]
+	145     (00000216) move-object          v11, v0
+	146     (00000218) move-object          v7, v5
+	147     (0000021a) move-object          v12, v6
+	148     (0000021c) invoke-direct/range  v7 ... v12, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;-><init>(I Z Ljava/lang/String; Ljava/lang/Integer; Ljava/lang/Integer;)V
+	149     (00000222) move-object          v6, v7
+
+readCpuCoreFrequencies-BB@0x224 : [ readCpuCoreFrequencies-BB@0x228 readCpuCoreFrequencies-BB@0x3c ]
+	150     (00000224) if-eqz               v6, -0f4h
+
+readCpuCoreFrequencies-BB@0x228 : [ readCpuCoreFrequencies-BB@0x3c ]
+	151     (00000228) invoke-virtual       v2, v6, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	152     (0000022e) goto/16              -0f9h
+
+readCpuCoreFrequencies-BB@0x232 : 
+	153     (00000232) return-object        v2
+

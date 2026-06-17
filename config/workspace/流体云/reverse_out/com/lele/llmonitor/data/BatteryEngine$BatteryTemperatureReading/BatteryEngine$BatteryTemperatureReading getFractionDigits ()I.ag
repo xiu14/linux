@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->getFractionDigits()I [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:int
+
+getFractionDigits-BB@0x0 : 
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->fractionDigits I
+	1       (00000004) return               v0
+

@@ -1,0 +1,21 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : 
+	0       (00000000) iput-object          v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$1;->result Ljava/lang/Object;
+	1       (00000004) iget                 v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$1;->label I
+	2       (00000008) const/high16         v0, -2147483648
+	3       (0000000c) or-int/2addr         v3, v0
+	4       (0000000e) iput                 v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$1;->label I
+	5       (00000012) iget-object          v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	6       (00000016) const/4              v0, 0
+	7       (00000018) const/4              v1, 0
+	8       (0000001a) invoke-static        v3, v0, v1, v2, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$updateWidget(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; F Ln60;)Ljava/lang/Object;
+	9       (00000020) move-result-object   v2
+	10      (00000022) return-object        v2
+

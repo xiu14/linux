@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->setThemePalettePreset$default(Lcom/lele/llmonitor/data/SettingsManager; Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ls01; I Ljava/lang/Object;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.SettingsManager
+# - v1:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v2:s01
+# - v3:int
+# - v4:java.lang.Object
+#
+# - return:void
+
+setThemePalettePreset$default-BB@0x0 : [ setThemePalettePreset$default-BB@0x8 setThemePalettePreset$default-BB@0xa ]
+	0       (00000000) and-int/lit8         v3, v3, 2
+	1       (00000004) if-eqz               v3, +003h
+
+setThemePalettePreset$default-BB@0x8 : [ setThemePalettePreset$default-BB@0xa ]
+	2       (00000008) const/4              v2, 0
+
+setThemePalettePreset$default-BB@0xa : 
+	3       (0000000a) invoke-virtual       v0, v1, v2, Lcom/lele/llmonitor/data/SettingsManager;->setThemePalettePreset(Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ls01;)V
+	4       (00000010) return-void          
+

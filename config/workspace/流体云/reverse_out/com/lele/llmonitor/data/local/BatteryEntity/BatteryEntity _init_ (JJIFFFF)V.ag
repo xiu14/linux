@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/data/local/BatteryEntity;-><init>(J J I F F F F)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:long
+# - v4:long
+# - v5:int
+# - v6:float
+# - v7:float
+# - v8:float
+# - v9:float
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	1       (00000006) iput-wide            v1, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->id J
+	2       (0000000a) iput-wide            v3, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->timestamp J
+	3       (0000000e) iput                 v5, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->level I
+	4       (00000012) iput                 v6, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->voltage F
+	5       (00000016) iput                 v7, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->current F
+	6       (0000001a) iput                 v8, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->power F
+	7       (0000001e) iput                 v9, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->temperature F
+	8       (00000022) return-void          
+

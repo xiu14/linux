@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <item>Je hebt een launcher nodig die icon packs aanvaard. De lijst van compatibele launchers kan je vinden in de \"toevoegen\" sectie, of in de Play Store beschrijving.</item>
+        <item>Afhankelijk van het navigatietype van de app moet je ofwel de navigatielade van links schuiven, en ga naar de \"Apply\" sectie, of kies het 4de icoon uit de onderste navigatiebalk. Vanaf daar kun je een launcher kiezen waar je de iconen aan wilt toevoegen. Sommige launchers zijn geen voorstander van automatisch toepassen en je moet dit handmatig doen via hun instellingen.</item>
+        <item>Ga terug naar de hoofdsectie van de app en druk op de tegel met de titel \"Icons\".</item>
+        <item>Afhankelijk van de launcher die je gebruikt, moet je ofwel de icon lang aanraken en \"Edit\" selecteren in het pop-up menu, of tik lang op het pictogram en verplaats het naar het vak \"Edit\".</item>
+        <item>Afhankelijk van het navigatietype van de app moet je ofwel de navigatielade vanaf links schuiven, en ga naar de \"Request\" sectie, of kies de icon uit de onderste navigatiebalk.</item>
+        <item>Het gebeurde omdat het icoon pakket naar de SD-kaart is verplaatst, je moet het installeren in de interne opslag.</item>
+        <item>Het probleem zou kunnen komen door de launcher die je gebruikt moeite heeft bij het verwerken van grote resolutie. Je kunt dit herstellen door de icon grootte te verhogen tot 115 tot 120%. Of probeer een andere launcher.</item>
+        <item>Stuur een icoon verzoek.</item>
+        <item>Het is nodig om iconen verzoek gegevens en bestanden te schrijven, evenals het opslaan van achtergronden, en om de downloadlocatie van achtergronden te kunnen wijzigen.</item>
+        <item>Het is nodig om achtergronden te kunnen laden uit de cloud en ze te downloaden.</item>
+        <item>Het is nodig om te kunnen controleren of je apparaat internetverbinding heeft.</item>
+        <item>Het is nodig om een achtergrond direct vanuit de app toe te kunnen passen.</item>
+        <item>Het is nodig om de afmetingen van achtergronden aan te passen op basis van je schermresolutie.</item>
+        <item>Het is nodig voor Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Hoe gebruik je de icon pack?</item>
+        <item>Hoe kan ik de icon pack toepassen?</item>
+        <item>Hoe bekijk ik alle inbegrepen iconen?</item>
+        <item>Hoe vervang ik een icon met een alternatief?</item>
+        <item>Hoe stuur je een verzoek voor niet gethematiseerde iconen?</item>
+        <item>Na het opnieuw opstarten van mijn toestel is het icon pack niet meer toegepast. De iconen werden teruggezet naar de systeemstandaard.</item>
+        <item>Waarom zijn de pixels zo duidelijk zichtbaar bij de iconen?</item>
+        <item>Ik kan een icoon zien voor een app in de lijst, maar het wordt niet toegepast.</item>
+        <item>Waarom heeft de app toestemming nodig om content te wijzigen of verwijderen van mijn opslag?</item>
+        <item>Waarom heeft de app volledige netwerktoegang nodig?</item>
+        <item>Waarom heeft de app toestemming nodig om verbindingen te bekijken?</item>
+        <item>Waarom heeft de app toestemming nodig om een achtergrond in te stellen?</item>
+        <item>Waarom heeft de app toestemming nodig om de grootte van de achtergrond aan te passen?</item>
+        <item>Waarom heeft de app toestemming nodig om te voorkomen dat de telefoon in slaapmodus gaat?</item>
+    </string-array>
+</resources>

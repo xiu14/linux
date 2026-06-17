@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <View
+        android:layout_gravity="center_vertical"
+        android:background="@color/ime_toolbar_clipboard_line_short"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/ime_dp_26"
+        android:layout_marginEnd="@dimen/ime_dp_4"/>
+    <TextView
+        android:textColor="@color/ime_toolbar_clipboard_text_color"
+        android:gravity="center"
+        android:id="@+id/tv_clipboard_preview_item"
+        android:background="@drawable/bg_toolbar_clipboard_item_selector"
+        android:paddingTop="@dimen/ime_dp_2"
+        android:paddingBottom="@dimen/ime_dp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ime_dp_36"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/ime_dp_8"
+        android:paddingEnd="@dimen/ime_dp_8"/>
+</LinearLayout>

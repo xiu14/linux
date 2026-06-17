@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->access$schedulePersistLocked(Lcom/lele/llmonitor/data/BatteryRepository;)V [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.BatteryRepository
+#
+# - return:void
+
+access$schedulePersistLocked-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, Lcom/lele/llmonitor/data/BatteryRepository;->schedulePersistLocked()V
+	1       (00000006) return-void          
+

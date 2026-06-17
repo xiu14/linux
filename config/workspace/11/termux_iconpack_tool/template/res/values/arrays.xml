@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="all">
+        <item>amber_circle</item>
+        <item>amber_rectangle</item>
+        <item>amber_square</item>
+        <item>blue_circle</item>
+        <item>blue_rectangle</item>
+        <item>blue_square</item>
+        <item>purple_circle</item>
+        <item>purple_rectangle</item>
+        <item>purple_square</item>
+        <item>red_circle</item>
+        <item>red_rectangle</item>
+        <item>red_square</item>
+    </string-array>
+    <string-array name="answers" formatted="false">
+        <item>You need a launcher with icon pack support. You’ll find a list of supported launchers in the “Apply” section or in the app’s description on the Play Store.</item>
+        <item>Depending on the app’s navigation type, either slide out the navigation drawer from the left and go to the “Apply” section, or choose “Apply” in the bottom navigation bar. On the “Apply” page, select your launcher. If your launcher isn’t listed, apply the icon pack via the launcher’s settings.</item>
+        <item>On the main page of the app, tap the tile titled “Icons.”</item>
+        <item>Depending on the launcher you’re using, either tap and hold the icon and select “Edit” from the pop-up menu, or tap and hold the icon and drag it to the “Edit” box near the top of the screen.</item>
+        <item>Depending on the app’s navigation type, either slide out the navigation drawer from the left and go to the “Request” section, or choose “Request” in the bottom navigation bar.</item>
+        <item>This happened because the icon pack has been moved to the SD card. You should move it back to internal storage.</item>
+        <item>Your launcher may be incorrectly handling the resolution of the icons. You can fix this by increasing the icon size to 115%–120% or switching to another launcher.</item>
+        <item>Please send an icon request.</item>
+        <item>It’s needed to create icon request files, save wallpapers, and set the download location for wallpapers.</item>
+        <item>It’s needed to load wallpapers from the cloud and download them.</item>
+        <item>It’s needed to check if your device is connected to the internet.</item>
+        <item>It’s needed to let you apply wallpapers directly from the app.</item>
+        <item>It’s needed to adjust the dimensions of wallpapers based on the resolution of your device’s screen.</item>
+        <item>It’s needed by Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="app_themes">
+        <item>@string/light_theme</item>
+        <item>@string/dark_theme</item>
+        <item>@string/follow_system_theme</item>
+    </string-array>
+    <string-array name="credits_buttons">
+        <item>小红书|酷安</item>
+        <item>支付宝打赏|微信赞赏</item>
+    </string-array>
+    <string-array name="credits_descriptions">
+        <item>设计师1个，画画图标/画画主题</item>
+        <item>谢谢您的支持，设计师加油肝图标！</item>
+    </string-array>
+    <string-array name="credits_links">
+        <item>https://www.xiaohongshu.com/user/profile/5fb34ba40000000001002046|http://www.coolapk.com/u/1066529</item>
+        <item>http://t.cn/A6bqTLkD|https://share.weiyun.com/zu2QBUyf</item>
+    </string-array>
+    <string-array name="credits_photos">
+        <item>https://c-ssl.duitang.com/uploads/item/201801/27/20180127194259_rfvea.thumb.1000_0.png</item>
+        <item></item>
+    </string-array>
+    <string-array name="credits_titles">
+        <item>全平台 @胖胖和哒哒</item>
+        <item>打赏设计师</item>
+    </string-array>
+    <string-array name="dock_backgroundlist">
+        <item>dock_a</item>
+        <item>dock_b</item>
+    </string-array>
+    <string-array name="donation_items">
+        <item></item>
+    </string-array>
+    <string-array name="home_list_descriptions">
+        <item>小红书可薅羊毛，付费版图标包</item>
+        <item>图标包/手机主题使用技巧+教程</item>
+        <item>bug/图标适配→Q群：731076159</item>
+        <item>myui图标适配→Q群：324875751</item>
+        <item>支付宝打赏设计师</item>
+        <item>微信打赏设计师</item>
+    </string-array>
+    <string-array name="home_list_icons">
+        <item>rednote</item>
+        <item>douyin</item>
+        <item>qq</item>
+        <item>moto</item>
+        <item>alipay</item>
+        <item>wechat</item>
+    </string-array>
+    <string-array name="home_list_links">
+        <item>https://www.xiaohongshu.com/user/profile/5fb34ba40000000001002046</item>
+        <item>https://v.douyin.com/pViofNcG7c4</item>
+        <item>https://qm.qq.com/q/bl4enhe6vC</item>
+        <item>http://t.cn/A6ECPDfR</item>
+        <item>http://t.cn/A6bqTLkD</item>
+        <item>https://share.weiyun.com/TBGh2uKS</item>
+    </string-array>
+    <string-array name="home_list_titles">
+        <item>小红书@胖胖和哒哒，付费版+更新</item>
+        <item>抖音@胖胖和哒哒，使用教程</item>
+        <item>胖哒-图标包9群</item>
+        <item>胖哒-Moto图标包③群</item>
+        <item>支付宝请设计师喝杯奶茶</item>
+        <item>微信支付请设计师喝杯咖啡</item>
+    </string-array>
+    <string-array name="icon_filters">
+        <item>all</item>
+    </string-array>
+    <string-array name="icon_shapes_options">
+        <item>@string/icon_shape_system</item>
+        <item>@string/icon_shape_circle</item>
+        <item>@string/icon_shape_squircle</item>
+        <item>@string/icon_shape_rounded_square</item>
+        <item>@string/icon_shape_square</item>
+        <item>@string/icon_shape_teardrop</item>
+    </string-array>
+    <string-array name="icons_preview">
+        <item>calendar</item>
+        <item>phone</item>
+        <item>camera</item>
+        <item>calculator</item>
+    </string-array>
+    <string-array name="questions">
+        <item>How to use the icon pack?</item>
+        <item>How to apply the icon pack?</item>
+        <item>How to see all the included icons?</item>
+        <item>How to replace an icon with an alternative one?</item>
+        <item>How to request new icons?</item>
+        <item>I’ve restarted my device and the icon pack isn’t applied anymore. The default icons have been restored.</item>
+        <item>Why do the icons look pixelated on my device?</item>
+        <item>I can see an icon for a specific app in the icon list, but it’s not being applied.</item>
+        <item>Why does the app need permission to modify or delete the files on my device?</item>
+        <item>Why does the app need full network access?</item>
+        <item>Why does the app need permission to view connections?</item>
+        <item>Why does the app need permission to set the wallpaper?</item>
+        <item>Why does the app need permission to adjust the wallpaper size?</item>
+        <item>Why does the app need permission to prevent the device from sleeping?</item>
+    </string-array>
+    <string-array name="set_wallpaper_options">
+        <item>@string/home_screen</item>
+        <item>@string/lock_screen</item>
+        <item>@string/home_and_lock_screens</item>
+        <item>@string/apply_w_external_app</item>
+    </string-array>
+    <string-array name="set_wallpaper_options_pre_nougat">
+        <item>@string/home_and_lock_screens</item>
+        <item>@string/apply_w_external_app</item>
+    </string-array>
+    <string-array name="supported_launchers">
+        <item>action</item>
+        <item>adw</item>
+        <item>adwex</item>
+        <item>aio</item>
+        <item>apex</item>
+        <item>atom</item>
+        <item>gip</item>
+        <item>go</item>
+        <item>googlenow</item>
+        <item>holo</item>
+        <item>holoics</item>
+        <item>lg</item>
+        <item>lawnchair</item>
+        <item>lineageos</item>
+        <item>lucid</item>
+        <item>moto</item>
+        <item>niagara</item>
+        <item>nova</item>
+        <item>oneplus</item>
+        <item>pixel</item>
+        <item>posidon</item>
+        <item>projectivy</item>
+        <item>smart</item>
+        <item>smartpro</item>
+        <item>solo</item>
+        <item>square</item>
+        <item>tsf</item>
+    </string-array>
+    <string-array name="wallpapers">
+        <item></item>
+    </string-array>
+</resources>

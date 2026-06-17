@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?selectableItemBackground" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <dev.jahir.kuper.ui.widgets.SquaredImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    <com.google.android.material.textview.MaterialTextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/icon_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="1" style="@style/TextStyle.Frames.Caption" />
+</LinearLayout>

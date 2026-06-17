@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->createOpenDelegate()Llx2; [access_flags=public bridge synthetic]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:lx2
+
+createOpenDelegate-BB@0x0 : 
+	0       (00000000) invoke-virtual       v0, Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->createOpenDelegate()Lkx2;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

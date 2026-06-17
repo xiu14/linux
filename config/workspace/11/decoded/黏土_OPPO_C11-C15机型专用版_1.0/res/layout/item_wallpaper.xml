@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:id="@id/card" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" android:hapticFeedbackEnabled="true" app:cardCornerRadius="@dimen/cards_corner_size" app:cardPreventCornerOverlap="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.ProgressBar" />
+    <dev.jahir.frames.ui.widgets.PortraitImageView android:id="@id/wallpaper_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:heightMultiplier="@dimen/heightMultiplier" app:overlayColor="@color/wallpaper_overlay" app:shapeAppearanceOverlay="@style/ShapeAppearance.Frames.Wallpapers" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/wallpaper_details_background" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/wallpaper_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/TextStyle.Frames.WallpaperTitle" />
+            <TextView android:ellipsize="end" android:id="@id/wallpaper_author" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/TextStyle.Frames.WallpaperSubtitle" />
+        </LinearLayout>
+        <dev.jahir.frames.ui.widgets.FavoriteCheckbox android:id="@id/fav_button" android:background="?actionBarItemBackground" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:checked="false" android:button="@drawable/ic_favorite_check" android:layout_marginStart="20.0dip" android:layout_marginEnd="4.0dip" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

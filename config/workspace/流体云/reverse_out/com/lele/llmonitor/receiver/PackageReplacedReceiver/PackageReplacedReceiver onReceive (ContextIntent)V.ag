@@ -1,0 +1,29 @@
+# Lcom/lele/llmonitor/receiver/PackageReplacedReceiver;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:android.content.Intent
+#
+# - return:void
+
+onReceive-BB@0x0 : [ onReceive-BB@0x24 onReceive-BB@0x38 ]
+	0       (00000000) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-virtual       v3, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	3       (00000012) move-result-object   v1
+	4       (00000014) const-string         v3, "android.intent.action.MY_PACKAGE_REPLACED"
+	5       (00000018) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	6       (0000001e) move-result          v1
+	7       (00000020) if-eqz               v1, +00ch
+
+onReceive-BB@0x24 : [ onReceive-BB@0x38 ]
+	8       (00000024) sget-object          v1, Lcom/lele/llmonitor/recovery/HealthRecoveryScheduler;->INSTANCE Lcom/lele/llmonitor/recovery/HealthRecoveryScheduler;
+	9       (00000028) invoke-virtual       v1, v2, Lcom/lele/llmonitor/recovery/HealthRecoveryScheduler;->scheduleHealthWork(Landroid/content/Context;)V
+	10      (0000002e) const/4              v3, 2
+	11      (00000030) const/4              v0, 0
+	12      (00000032) invoke-static        v1, v2, v0, v3, v0, Lcom/lele/llmonitor/recovery/HealthRecoveryScheduler;->kickMonitorService$default(Lcom/lele/llmonitor/recovery/HealthRecoveryScheduler; Landroid/content/Context; Ljava/lang/String; I Ljava/lang/Object;)V
+
+onReceive-BB@0x38 : 
+	13      (00000038) return-void          
+

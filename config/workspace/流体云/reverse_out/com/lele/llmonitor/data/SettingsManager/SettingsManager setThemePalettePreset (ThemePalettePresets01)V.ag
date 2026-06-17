@@ -1,0 +1,45 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->setThemePalettePreset(Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ls01;)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v4:s01
+#
+# - return:void
+
+setThemePalettePreset-BB@0x0 : [ setThemePalettePreset-BB@0x18 setThemePalettePreset-BB@0x42 ]
+	0       (00000000) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->themePalettePreset Ll52;
+	2       (0000000a) invoke-interface     v0, v3, Ll52;->setValue(Ljava/lang/Object;)V
+	3       (00000010) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	4       (00000014) if-eqz               v0, +017h
+
+setThemePalettePreset-BB@0x18 : [ setThemePalettePreset-BB@0x24 setThemePalettePreset-BB@0x42 ]
+	5       (00000018) invoke-interface     v0, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	6       (0000001e) move-result-object   v0
+	7       (00000020) if-eqz               v0, +011h
+
+setThemePalettePreset-BB@0x24 : [ setThemePalettePreset-BB@0x3c setThemePalettePreset-BB@0x42 ]
+	8       (00000024) const-string         v1, "theme_palette_preset"
+	9       (00000028) invoke-virtual       v3, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->getPreferenceValue()Ljava/lang/String;
+	10      (0000002e) move-result-object   v3
+	11      (00000030) invoke-interface     v0, v1, v3, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+	12      (00000036) move-result-object   v3
+	13      (00000038) if-eqz               v3, +005h
+
+setThemePalettePreset-BB@0x3c : [ setThemePalettePreset-BB@0x42 ]
+	14      (0000003c) invoke-interface     v3, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+setThemePalettePreset-BB@0x42 : [ setThemePalettePreset-BB@0x56 setThemePalettePreset-BB@0x5c ]
+	15      (00000042) const/4              v3, 1
+	16      (00000044) const/4              v0, 0
+	17      (00000046) invoke-static        v2, v0, v3, v0, Lcom/lele/llmonitor/data/SettingsManager;->syncAppIcon$default(Lcom/lele/llmonitor/data/SettingsManager; Ljava/lang/Boolean; I Ljava/lang/Object;)V
+	18      (0000004c) invoke-virtual       v2, Lcom/lele/llmonitor/data/SettingsManager;->refreshLaunchAppearanceSnapshot()V
+	19      (00000052) if-eqz               v4, +005h
+
+setThemePalettePreset-BB@0x56 : [ setThemePalettePreset-BB@0x5c ]
+	20      (00000056) invoke-interface     v4, Ls01;->invoke()Ljava/lang/Object;
+
+setThemePalettePreset-BB@0x5c : 
+	21      (0000005c) return-void          
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aichat_baike_content_item"
+    android:background="@drawable/test"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_0"
+        android:id="@+id/aichat_baike_content"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:maxLines="8"
+        android:layout_centerInParent="true"
+        android:lineSpacingExtra="4sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:textFontWeight="600"
+        style="@style/Body_M"/>
+</RelativeLayout>

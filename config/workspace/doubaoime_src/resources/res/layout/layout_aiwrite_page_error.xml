@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.obric.oui.button.OButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/o_ic_download_failed"
+            app:iconSize="@dimen/dp_48"
+            app:iconTint="@color/oui_text_4"/>
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_text_3b"
+            android:gravity="center_horizontal"
+            android:id="@+id/aiwrite_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:maxLines="2"
+            style="@style/Label_L"/>
+    </LinearLayout>
+</LinearLayout>

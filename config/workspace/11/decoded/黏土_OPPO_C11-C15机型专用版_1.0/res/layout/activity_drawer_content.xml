@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/activity_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:transitionName="appbar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:minHeight="?actionBarSize" app:titleTextAppearance="@style/TextAppearance.Frames.ToolbarTitle" style="?toolbarStyle" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/fragments_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:layout_gravity="bottom|center" android:id="@id/fab_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/quick_apply" app:hideMotionSpec="@animator/efab_hide_animator" app:icon="@drawable/ic_apply" app:layout_anchor="@id/fragments_container" app:layout_anchorGravity="bottom|center" app:showMotionSpec="@animator/efab_show_animator" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

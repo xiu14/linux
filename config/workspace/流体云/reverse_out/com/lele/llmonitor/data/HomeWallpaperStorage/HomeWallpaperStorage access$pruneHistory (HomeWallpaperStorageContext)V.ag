@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->access$pruneHistory(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/content/Context;)V [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.HomeWallpaperStorage
+# - v1:android.content.Context
+#
+# - return:void
+
+access$pruneHistory-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, v1, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->pruneHistory(Landroid/content/Context;)V
+	1       (00000006) return-void          
+

@@ -1,0 +1,24 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->SocScreen$lambda$7$0$0$5(Lcom/lele/llmonitor/data/soc/ThermalZoneReading;)Ljava/lang/Object; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:com.lele.llmonitor.data.soc.ThermalZoneReading
+#
+# - return:java.lang.Object
+
+SocScreen$lambda$7$0$0$5-BB@0x0 : 
+	0       (00000000) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v2, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getZone()Ljava/lang/String;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-virtual       v2, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	4       (00000014) move-result-object   v2
+	5       (00000016) new-instance         v1, Ljava/lang/StringBuilder;
+	6       (0000001a) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	7       (00000020) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000026) const-string         v0, "-"
+	9       (0000002a) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (00000030) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	11      (00000036) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	12      (0000003c) move-result-object   v2
+	13      (0000003e) return-object        v2
+

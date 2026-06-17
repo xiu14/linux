@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Frames.Default.Amoled" parent="@style/Frames.Default">
+        <item name="android:windowBackground">@color/amoledThemeBackground</item>
+        <item name="colorAccent">@color/amoledThemeAccent</item>
+        <item name="colorBackgroundFloating">@color/amoledThemeBackground</item>
+        <item name="colorOnBackground">@color/amoledThemeOnBackground</item>
+        <item name="colorOnPrimary">@color/amoledThemeOnPrimary</item>
+        <item name="colorOnSecondary">@color/amoledThemeOnAccent</item>
+        <item name="colorOnSurface">@color/amoledThemeOnSurface</item>
+        <item name="colorPrimary">@color/amoledThemePrimary</item>
+        <item name="colorPrimaryDark">@color/amoledThemePrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/amoledThemePrimaryDark</item>
+        <item name="colorSecondary">@color/amoledThemeAccent</item>
+        <item name="colorSecondaryVariant">@color/amoledThemeAccent</item>
+        <item name="colorSurface">@color/amoledThemeSurface</item>
+        <item name="snackbarBackgroundColor">@color/amoledThemeSnackbarBackgroundColor</item>
+        <item name="snackbarButtonColor">@color/amoledThemeSnackbarButtonColor</item>
+        <item name="snackbarTextColor">@color/amoledThemeSnackbarTextColor</item>
+    </style>
+    <style name="Frames.Default.Amoled.MaterialYou" parent="@style/Frames.Default.MaterialYou">
+        <item name="android:windowBackground">@color/m3_amoledThemeBackground</item>
+        <item name="colorAccent">@color/m3_amoledThemeAccent</item>
+        <item name="colorBackgroundFloating">@color/m3_amoledThemeBackground</item>
+        <item name="colorOnBackground">@color/m3_amoledThemeOnBackground</item>
+        <item name="colorOnPrimary">@color/m3_amoledThemeOnPrimary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_amoledThemeOnAccent</item>
+        <item name="colorOnSecondary">@color/m3_amoledThemeOnAccent</item>
+        <item name="colorOnSecondaryContainer">@color/m3_amoledThemeOnSecondaryContainer</item>
+        <item name="colorOnSurface">@color/m3_amoledThemeOnSurface</item>
+        <item name="colorOnTertiaryContainer">@color/m3_amoledThemeOnTertiaryContainer</item>
+        <item name="colorPrimary">@color/m3_amoledThemePrimary</item>
+        <item name="colorPrimaryContainer">@color/m3_amoledThemeAccent</item>
+        <item name="colorPrimaryDark">@color/m3_amoledThemePrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/m3_amoledThemePrimaryDark</item>
+        <item name="colorSecondary">@color/m3_amoledThemeAccent</item>
+        <item name="colorSecondaryContainer">@color/m3_amoledThemeSecondaryContainer</item>
+        <item name="colorSecondaryVariant">@color/m3_amoledThemeAccent</item>
+        <item name="colorSurface">@color/m3_amoledThemeSurface</item>
+        <item name="colorTertiaryContainer">@color/m3_amoledThemeTertiaryContainer</item>
+        <item name="snackbarBackgroundColor">@color/m3_amoledThemeSnackbarBackgroundColor</item>
+        <item name="snackbarButtonColor">@color/m3_amoledThemeSnackbarButtonColor</item>
+        <item name="snackbarTextColor">@color/m3_amoledThemeSnackbarTextColor</item>
+    </style>
+    <style name="Frames.SplashScreen.Amoled" parent="@style/Frames.SplashScreen">
+        <item name="android:windowBackground">@drawable/splash_screen_amoled</item>
+        <item name="colorAccent">@color/amoledThemeAccent</item>
+        <item name="colorBackgroundFloating">@color/amoledThemeBackground</item>
+        <item name="colorOnBackground">@color/amoledThemeOnBackground</item>
+        <item name="colorOnPrimary">@color/amoledThemeOnPrimary</item>
+        <item name="colorOnSecondary">@color/amoledThemeOnAccent</item>
+        <item name="colorOnSurface">@color/amoledThemeOnSurface</item>
+        <item name="colorPrimary">@color/amoledThemePrimary</item>
+        <item name="colorPrimaryDark">@color/amoledThemePrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/amoledThemePrimaryDark</item>
+        <item name="colorSecondary">@color/amoledThemeAccent</item>
+        <item name="colorSecondaryVariant">@color/amoledThemeAccent</item>
+        <item name="colorSurface">@color/amoledThemeSurface</item>
+        <item name="snackbarBackgroundColor">@color/amoledThemeSnackbarBackgroundColor</item>
+        <item name="snackbarButtonColor">@color/amoledThemeSnackbarButtonColor</item>
+        <item name="snackbarTextColor">@color/amoledThemeSnackbarTextColor</item>
+    </style>
+    <style name="Frames.SplashScreen.Amoled.MaterialYou" parent="@style/Frames.SplashScreen.MaterialYou">
+        <item name="android:windowBackground">@drawable/splash_screen_amoled</item>
+        <item name="colorAccent">@color/m3_amoledThemeAccent</item>
+        <item name="colorBackgroundFloating">@color/m3_amoledThemeBackground</item>
+        <item name="colorOnBackground">@color/m3_amoledThemeOnBackground</item>
+        <item name="colorOnPrimary">@color/m3_amoledThemeOnPrimary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_amoledThemeOnAccent</item>
+        <item name="colorOnSecondary">@color/m3_amoledThemeOnAccent</item>
+        <item name="colorOnSecondaryContainer">@color/m3_amoledThemeOnSecondaryContainer</item>
+        <item name="colorOnSurface">@color/m3_amoledThemeOnSurface</item>
+        <item name="colorOnTertiaryContainer">@color/m3_amoledThemeOnTertiaryContainer</item>
+        <item name="colorPrimary">@color/m3_amoledThemePrimary</item>
+        <item name="colorPrimaryContainer">@color/m3_amoledThemeAccent</item>
+        <item name="colorPrimaryDark">@color/m3_amoledThemePrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/m3_amoledThemePrimaryDark</item>
+        <item name="colorSecondary">@color/m3_amoledThemeAccent</item>
+        <item name="colorSecondaryContainer">@color/m3_amoledThemeSecondaryContainer</item>
+        <item name="colorSecondaryVariant">@color/m3_amoledThemeAccent</item>
+        <item name="colorSurface">@color/m3_amoledThemeSurface</item>
+        <item name="colorTertiaryContainer">@color/m3_amoledThemeTertiaryContainer</item>
+        <item name="snackbarBackgroundColor">@color/m3_amoledThemeSnackbarBackgroundColor</item>
+        <item name="snackbarButtonColor">@color/m3_amoledThemeSnackbarButtonColor</item>
+        <item name="snackbarTextColor">@color/m3_amoledThemeSnackbarTextColor</item>
+    </style>
+    <style name="Theme.AppCompat.DayNight" parent="@style/Theme.AppCompat" />
+    <style name="Theme.AppCompat.DayNight.DarkActionBar" parent="@style/Theme.AppCompat" />
+    <style name="Theme.AppCompat.DayNight.Dialog" parent="@style/Theme.AppCompat.Dialog" />
+    <style name="Theme.AppCompat.DayNight.Dialog.Alert" parent="@style/Theme.AppCompat.Dialog.Alert" />
+    <style name="Theme.AppCompat.DayNight.Dialog.MinWidth" parent="@style/Theme.AppCompat.Dialog.MinWidth" />
+    <style name="Theme.AppCompat.DayNight.DialogWhenLarge" parent="@style/Theme.AppCompat.DialogWhenLarge" />
+    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="@style/Theme.AppCompat.NoActionBar" />
+    <style name="Theme.Material3.DayNight" parent="@style/Theme.Material3.Dark" />
+    <style name="Theme.Material3.DayNight.BottomSheetDialog" parent="@style/Theme.Material3.Dark.BottomSheetDialog" />
+    <style name="Theme.Material3.DayNight.Dialog" parent="@style/Theme.Material3.Dark.Dialog" />
+    <style name="Theme.Material3.DayNight.Dialog.Alert" parent="@style/Theme.Material3.Dark.Dialog.Alert" />
+    <style name="Theme.Material3.DayNight.Dialog.MinWidth" parent="@style/Theme.Material3.Dark.Dialog.MinWidth" />
+    <style name="Theme.Material3.DayNight.DialogWhenLarge" parent="@style/Theme.Material3.Dark.DialogWhenLarge" />
+    <style name="Theme.Material3.DayNight.NoActionBar" parent="@style/Theme.Material3.Dark.NoActionBar" />
+    <style name="Theme.Material3.DayNight.SideSheetDialog" parent="@style/Theme.Material3.Dark.SideSheetDialog" />
+    <style name="Theme.Material3.DynamicColors.DayNight" parent="@style/Theme.Material3.DynamicColors.Dark" />
+    <style name="Theme.Material3.DynamicColors.DayNight.NoActionBar" parent="@style/Theme.Material3.DynamicColors.Dark.NoActionBar" />
+    <style name="Theme.MaterialComponents.DayNight" parent="@style/Theme.MaterialComponents" />
+    <style name="Theme.MaterialComponents.DayNight.BottomSheetDialog" parent="@style/Theme.MaterialComponents.BottomSheetDialog" />
+    <style name="Theme.MaterialComponents.DayNight.Bridge" parent="@style/Theme.MaterialComponents.Bridge" />
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar" parent="@style/Theme.MaterialComponents" />
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" parent="@style/Theme.MaterialComponents.Bridge" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog" parent="@style/Theme.MaterialComponents.Dialog" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Alert" parent="@style/Theme.MaterialComponents.Dialog.Alert" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Alert.Bridge" parent="@style/Theme.MaterialComponents.Dialog.Alert.Bridge" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Bridge" parent="@style/Theme.MaterialComponents.Dialog.Bridge" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.FixedSize" parent="@style/Theme.MaterialComponents.Dialog.FixedSize" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.FixedSize.Bridge" parent="@style/Theme.MaterialComponents.Dialog.FixedSize.Bridge" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.MinWidth" parent="@style/Theme.MaterialComponents.Dialog.MinWidth" />
+    <style name="Theme.MaterialComponents.DayNight.Dialog.MinWidth.Bridge" parent="@style/Theme.MaterialComponents.Dialog.MinWidth.Bridge" />
+    <style name="Theme.MaterialComponents.DayNight.DialogWhenLarge" parent="@style/Theme.MaterialComponents.DialogWhenLarge" />
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar" parent="@style/Theme.MaterialComponents.NoActionBar" />
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar.Bridge" parent="@style/Theme.MaterialComponents.NoActionBar.Bridge" />
+    <style name="ThemeOverlay.AppCompat.DayNight" parent="@style/ThemeOverlay.AppCompat.Dark" />
+    <style name="ThemeOverlay.Material3.DynamicColors.DayNight" parent="@style/ThemeOverlay.Material3.DynamicColors.Dark" />
+    <style name="Widget.Blueprint.NavigationView.Amoled" parent="@style/Widget.Blueprint.NavigationView">
+        <item name="android:background">@color/amoledThemeBackground</item>
+    </style>
+    <style name="Widget.Blueprint.NavigationView.Amoled.MaterialYou" parent="@style/Widget.Blueprint.NavigationView.MaterialYou">
+        <item name="android:background">@color/m3_amoledThemeBackground</item>
+    </style>
+    <style name="Widget.MaterialComponents.ActionBar.PrimarySurface" parent="@style/Widget.MaterialComponents.ActionBar.Surface" />
+    <style name="Widget.MaterialComponents.AppBarLayout.PrimarySurface" parent="@style/Widget.MaterialComponents.AppBarLayout.Surface" />
+    <style name="Widget.MaterialComponents.BottomAppBar.PrimarySurface" parent="@style/Widget.MaterialComponents.BottomAppBar" />
+    <style name="Widget.MaterialComponents.BottomNavigationView.PrimarySurface" parent="@style/Widget.MaterialComponents.BottomNavigationView" />
+    <style name="Widget.MaterialComponents.NavigationRailView.PrimarySurface" parent="@style/Widget.MaterialComponents.NavigationRailView" />
+    <style name="Widget.MaterialComponents.TabLayout.PrimarySurface" parent="@style/Widget.MaterialComponents.TabLayout" />
+    <style name="Widget.MaterialComponents.Toolbar.PrimarySurface" parent="@style/Widget.MaterialComponents.Toolbar.Surface" />
+</resources>

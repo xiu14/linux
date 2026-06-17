@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->applyCurrentAdjustments(F Z Z)F [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:float
+# - v2:boolean
+# - v3:boolean
+#
+# - return:float
+
+applyCurrentAdjustments-BB@0x0 : [ applyCurrentAdjustments-BB@0x4 applyCurrentAdjustments-BB@0xa ]
+	0       (00000000) if-eqz               v2, +005h
+
+applyCurrentAdjustments-BB@0x4 : [ applyCurrentAdjustments-BB@0xa ]
+	1       (00000004) const/high16         v0, -1082130432
+	2       (00000008) mul-float/2addr      v1, v0
+
+applyCurrentAdjustments-BB@0xa : [ applyCurrentAdjustments-BB@0xe applyCurrentAdjustments-BB@0x14 ]
+	3       (0000000a) if-eqz               v3, +005h
+
+applyCurrentAdjustments-BB@0xe : [ applyCurrentAdjustments-BB@0x14 ]
+	4       (0000000e) const/high16         v0, 1073741824
+	5       (00000012) mul-float/2addr      v1, v0
+
+applyCurrentAdjustments-BB@0x14 : 
+	6       (00000014) return               v1
+

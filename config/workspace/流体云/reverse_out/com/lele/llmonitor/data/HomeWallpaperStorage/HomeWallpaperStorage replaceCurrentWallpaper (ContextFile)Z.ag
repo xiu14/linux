@@ -1,0 +1,184 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->replaceCurrentWallpaper(Landroid/content/Context; Ljava/io/File;)Z [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.content.Context
+# - v9:java.io.File
+#
+# - return:boolean
+
+replaceCurrentWallpaper-BB@0x0 : [ replaceCurrentWallpaper-BB@0x16 replaceCurrentWallpaper-BB@0x1a ]
+	0       (00000000) invoke-virtual       v7, v8, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveWallpaperFile(Landroid/content/Context;)Ljava/io/File;
+	1       (00000006) move-result-object   v7
+	2       (00000008) invoke-virtual       v7, Ljava/io/File;->getParentFile()Ljava/io/File;
+	3       (0000000e) move-result-object   v8
+	4       (00000010) const/4              v0, 0
+	5       (00000012) if-nez               v8, +004h
+
+replaceCurrentWallpaper-BB@0x16 : [ replaceCurrentWallpaper-BB@0x122 ]
+	6       (00000016) goto/16              +086h
+
+replaceCurrentWallpaper-BB@0x1a : [ replaceCurrentWallpaper-BB@0x44 ]
+	7       (0000001a) new-instance         v1, Ljava/io/File;
+	8       (0000001e) const-string         v2, "current_wallpaper.tmp"
+	9       (00000022) invoke-direct        v1, v8, v2, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	10      (00000028) new-instance         v2, Ljava/io/File;
+	11      (0000002c) const-string         v3, "current_wallpaper.bak"
+	12      (00000030) invoke-direct        v2, v8, v3, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	13      (00000036) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	14      (0000003c) invoke-virtual       v2, Ljava/io/File;->delete()Z
+	15      (00000042) const/4              v8, 1
+
+replaceCurrentWallpaper-BB@0x44 : [ replaceCurrentWallpaper-BB@0x4e ]
+	16      (00000044) new-instance         v3, Ljava/io/FileInputStream;
+	17      (00000048) invoke-direct        v3, v9, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+	44:4d
+	(Ljava/lang/Throwable; -> 8e replaceCurrentWallpaper-BB@0x8e)
+
+replaceCurrentWallpaper-BB@0x4e : [ replaceCurrentWallpaper-BB@0x58 ]
+	18      (0000004e) new-instance         v9, Ljava/io/FileOutputStream;
+	19      (00000052) invoke-direct        v9, v1, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+	4e:57
+	(Ljava/lang/Throwable; -> 92 replaceCurrentWallpaper-BB@0x92)
+
+replaceCurrentWallpaper-BB@0x58 : [ replaceCurrentWallpaper-BB@0x5e ]
+	20      (00000058) invoke-static        v3, v9, Lni1;->x(Ljava/io/InputStream; Ljava/io/FileOutputStream;)J
+	58:5d
+	(Ljava/lang/Throwable; -> 96 replaceCurrentWallpaper-BB@0x96)
+
+replaceCurrentWallpaper-BB@0x5e : [ replaceCurrentWallpaper-BB@0x64 ]
+	21      (0000005e) invoke-virtual       v9, Ljava/io/FileOutputStream;->close()V
+	5e:63
+	(Ljava/lang/Throwable; -> 92 replaceCurrentWallpaper-BB@0x92)
+
+replaceCurrentWallpaper-BB@0x64 : [ replaceCurrentWallpaper-BB@0x7e replaceCurrentWallpaper-BB@0x82 ]
+	22      (00000064) invoke-virtual       v3, Ljava/io/FileInputStream;->close()V
+	23      (0000006a) invoke-virtual       v1, Ljava/io/File;->length()J
+	24      (00000070) move-result-wide     v3
+	25      (00000072) const-wide/16        v5, 0
+	26      (00000076) cmp-long             v9, v3, v5
+	27      (0000007a) if-lez               v9, +004h
+	64:8b
+	(Ljava/lang/Throwable; -> 8e replaceCurrentWallpaper-BB@0x8e)
+
+replaceCurrentWallpaper-BB@0x7e : [ replaceCurrentWallpaper-BB@0x84 ]
+	28      (0000007e) move                 v9, v8
+	29      (00000080) goto                 +2h
+	64:8b
+	(Ljava/lang/Throwable; -> 8e replaceCurrentWallpaper-BB@0x8e)
+
+replaceCurrentWallpaper-BB@0x82 : [ replaceCurrentWallpaper-BB@0x84 ]
+	30      (00000082) move                 v9, v0
+	64:8b
+	(Ljava/lang/Throwable; -> 8e replaceCurrentWallpaper-BB@0x8e)
+
+replaceCurrentWallpaper-BB@0x84 : [ replaceCurrentWallpaper-BB@0xbc ]
+	31      (00000084) invoke-static        v9, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	32      (0000008a) move-result-object   v9
+	33      (0000008c) goto                 +18h
+
+replaceCurrentWallpaper-BB@0x8e : [ replaceCurrentWallpaper-BB@0xb0 ]
+	34      (0000008e) move-exception       v9
+	35      (00000090) goto                 +10h
+
+replaceCurrentWallpaper-BB@0x92 : [ replaceCurrentWallpaper-BB@0xa4 ]
+	36      (00000092) move-exception       v9
+	37      (00000094) goto                 +8h
+
+replaceCurrentWallpaper-BB@0x96 : [ replaceCurrentWallpaper-BB@0x98 ]
+	38      (00000096) move-exception       v4
+
+replaceCurrentWallpaper-BB@0x98 : 
+	39      (00000098) throw                v4
+	98:99
+	(Ljava/lang/Throwable; -> 9a replaceCurrentWallpaper-BB@0x9a)
+
+replaceCurrentWallpaper-BB@0x9a : [ replaceCurrentWallpaper-BB@0x9c ]
+	40      (0000009a) move-exception       v5
+
+replaceCurrentWallpaper-BB@0x9c : 
+	41      (0000009c) invoke-static        v9, v4, Lp34;->j(Ljava/io/Closeable; Ljava/lang/Throwable;)V
+	42      (000000a2) throw                v5
+	9c:a3
+	(Ljava/lang/Throwable; -> 92 replaceCurrentWallpaper-BB@0x92)
+
+replaceCurrentWallpaper-BB@0xa4 : 
+	43      (000000a4) throw                v9
+	a4:a5
+	(Ljava/lang/Throwable; -> a6 replaceCurrentWallpaper-BB@0xa6)
+
+replaceCurrentWallpaper-BB@0xa6 : [ replaceCurrentWallpaper-BB@0xa8 ]
+	44      (000000a6) move-exception       v4
+
+replaceCurrentWallpaper-BB@0xa8 : 
+	45      (000000a8) invoke-static        v3, v9, Lp34;->j(Ljava/io/Closeable; Ljava/lang/Throwable;)V
+	46      (000000ae) throw                v4
+	a8:af
+	(Ljava/lang/Throwable; -> 8e replaceCurrentWallpaper-BB@0x8e)
+
+replaceCurrentWallpaper-BB@0xb0 : [ replaceCurrentWallpaper-BB@0xbc ]
+	47      (000000b0) new-instance         v3, Lcw2;
+	48      (000000b4) invoke-direct        v3, v9, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	49      (000000ba) move-object          v9, v3
+
+replaceCurrentWallpaper-BB@0xbc : [ replaceCurrentWallpaper-BB@0xc8 replaceCurrentWallpaper-BB@0xca ]
+	50      (000000bc) invoke-static        v9, Ldw2;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+	51      (000000c2) move-result-object   v3
+	52      (000000c4) if-nez               v3, +003h
+
+replaceCurrentWallpaper-BB@0xc8 : [ replaceCurrentWallpaper-BB@0xce ]
+	53      (000000c8) goto                 +3h
+
+replaceCurrentWallpaper-BB@0xca : [ replaceCurrentWallpaper-BB@0xce ]
+	54      (000000ca) sget-object          v9, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+
+replaceCurrentWallpaper-BB@0xce : [ replaceCurrentWallpaper-BB@0xde replaceCurrentWallpaper-BB@0xe6 ]
+	55      (000000ce) check-cast           v9, Ljava/lang/Boolean;
+	56      (000000d2) invoke-virtual       v9, Ljava/lang/Boolean;->booleanValue()Z
+	57      (000000d8) move-result          v9
+	58      (000000da) if-nez               v9, +006h
+
+replaceCurrentWallpaper-BB@0xde : 
+	59      (000000de) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	60      (000000e4) return               v0
+
+replaceCurrentWallpaper-BB@0xe6 : [ replaceCurrentWallpaper-BB@0xf2 replaceCurrentWallpaper-BB@0x106 ]
+	61      (000000e6) invoke-virtual       v7, Ljava/io/File;->exists()Z
+	62      (000000ec) move-result          v9
+	63      (000000ee) if-eqz               v9, +00ch
+
+replaceCurrentWallpaper-BB@0xf2 : [ replaceCurrentWallpaper-BB@0xfe replaceCurrentWallpaper-BB@0x106 ]
+	64      (000000f2) invoke-virtual       v7, v2, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+	65      (000000f8) move-result          v3
+	66      (000000fa) if-nez               v3, +006h
+
+replaceCurrentWallpaper-BB@0xfe : 
+	67      (000000fe) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	68      (00000104) return               v0
+
+replaceCurrentWallpaper-BB@0x106 : [ replaceCurrentWallpaper-BB@0x112 replaceCurrentWallpaper-BB@0x124 ]
+	69      (00000106) invoke-virtual       v1, v7, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+	70      (0000010c) move-result          v3
+	71      (0000010e) if-nez               v3, +00bh
+
+replaceCurrentWallpaper-BB@0x112 : [ replaceCurrentWallpaper-BB@0x11c replaceCurrentWallpaper-BB@0x122 ]
+	72      (00000112) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	73      (00000118) if-eqz               v9, +005h
+
+replaceCurrentWallpaper-BB@0x11c : [ replaceCurrentWallpaper-BB@0x122 ]
+	74      (0000011c) invoke-virtual       v2, v7, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+
+replaceCurrentWallpaper-BB@0x122 : 
+	75      (00000122) return               v0
+
+replaceCurrentWallpaper-BB@0x124 : [ replaceCurrentWallpaper-BB@0x130 replaceCurrentWallpaper-BB@0x136 ]
+	76      (00000124) invoke-virtual       v2, Ljava/io/File;->exists()Z
+	77      (0000012a) move-result          v7
+	78      (0000012c) if-eqz               v7, +005h
+
+replaceCurrentWallpaper-BB@0x130 : [ replaceCurrentWallpaper-BB@0x136 ]
+	79      (00000130) invoke-virtual       v2, Ljava/io/File;->delete()Z
+
+replaceCurrentWallpaper-BB@0x136 : 
+	80      (00000136) return               v8
+

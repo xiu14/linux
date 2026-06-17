@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <!--数字，英文符号键盘-->
+    <NumberSymbolLayout name="input_kbd_number_symbol_en" class="cls_input_kbd"  >
+        <HorizontalLayout width="match_parent" height_weight="48" >
+            <ButtonNumber text="1" class="cls_keyboard_button" commitstr="1" />
+            <ButtonNumber text="2" class="cls_keyboard_button" commitstr="2" />
+            <ButtonNumber text="3" class="cls_keyboard_button" commitstr="3" />
+            <ButtonNumber text="4" class="cls_keyboard_button" commitstr="4" />
+            <ButtonNumber text="5" class="cls_keyboard_button" commitstr="5" />
+            <ButtonNumber text="6" class="cls_keyboard_button" commitstr="6" />
+            <ButtonNumber text="7" class="cls_keyboard_button" commitstr="7" />
+            <ButtonNumber text="8" class="cls_keyboard_button" commitstr="8" />
+            <ButtonNumber text="9" class="cls_keyboard_button" commitstr="9" />
+            <ButtonNumber text="0" class="cls_keyboard_button" commitstr="0" />
+        </HorizontalLayout>
+        <!--所有设置ficon_text_offset_tobox 都是特殊适配丝印位置的 ficon_font="ficon_text_big" 特殊设置字号的 -->
+        <HorizontalLayout width="match_parent" height_weight="48" >
+            <ButtonSymbol text="-" class="cls_symbol_keyboard_button" commitstr="-" />
+            <ButtonSymbol text="/" class="cls_symbol_keyboard_button" commitstr="/" />
+            <ButtonSymbol text=":" class="cls_symbol_keyboard_button" commitstr=":" />
+            <ButtonSymbol text="_" class="cls_symbol_keyboard_button" commitstr="_" />
+            <ButtonSymbol text="(" class="cls_symbol_keyboard_button" commitstr="(" />
+            <ButtonSymbol text=")" class="cls_symbol_keyboard_button" commitstr=")" />
+            <ButtonSymbol text="#" class="cls_symbol_keyboard_button" commitstr="#" />
+            <ButtonSymbol text="&amp;" class="cls_symbol_keyboard_button" commitstr="&amp;" />
+            <ButtonSymbol text="@" class="cls_symbol_keyboard_button" commitstr="@" />
+            <ButtonSymbol text="&quot;" class="cls_symbol_keyboard_button" commitstr="&quot;" />
+        </HorizontalLayout>
+
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonSwitchBoard text="符号" target="3" class="cls_keyboard_button_func, cls_button_left_big" name="button_symbol"/>
+            <HorizontalLayout width_weight="70" height="match_parent">
+                <ButtonSymbol text="." class="cls_symbol_keyboard_button" commitstr="." />
+                <ButtonSymbol text="," class="cls_symbol_keyboard_button" commitstr="," />
+                <ButtonSymbol text="?" class="cls_symbol_keyboard_button" commitstr="?" />
+                <ButtonSymbol text="!" class="cls_symbol_keyboard_button" commitstr="!" />
+                <ButtonSymbol text="…" class="cls_symbol_keyboard_button" commitstr="…" />
+                <ButtonSymbol text="'" class="cls_symbol_keyboard_button" commitstr="'" />
+            </HorizontalLayout>
+            <ButtonBackspace class="cls_button_backspace, cls_button_right_big" name="backspace" />
+        </HorizontalLayout>
+
+
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonSwitchCurrentMode name="button_symbol_back" class="cls_button_back_symbol" label="number_symbol_en"
+                class_adaptive="cls_123symbol_button_back_width_adaptive"/>
+            <ButtonSwitchBoard class="cls_button_1234" target="10" width_weight="30"
+                text="\ue366" font="fi_cnen_ficon" textcolor="@color/keybutton_text"
+                textpadding="9,0,0,0"
+                class_adaptive="cls_123symbol_button_123_width_adaptive" name="button_switch_123"/>
+
+            <Container class_adaptive="cls_123symbol_button_space_width_adaptive" mouse="false">
+                <ButtonSpace name="space_speech" class="cls_button_space"/>
+            </Container>
+            <!--ButtonSwitchBoard target="9" class="cls_button_en2cn"
+                width_weight="30" class_adaptive="cls_button_123_width_adaptive" name="button_en2ch"
+                ficon_text_offset_tobox="0,2"/-->
+            <ButtonEnter class="cls_button_enter26" name="button_enter"
+                class_adaptive="cls_123symbol_button_enter_width_adaptive"/>
+        </HorizontalLayout>
+    </NumberSymbolLayout>
+</Window>

@@ -1,0 +1,38 @@
+# Lcom/lele/llmonitor/ui/soc/SocUiState;-><init>(Z Lcom/lele/llmonitor/data/soc/SocSnapshot; Ljava/lang/String; I Lic0;)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:boolean
+# - v3:com.lele.llmonitor.data.soc.SocSnapshot
+# - v4:java.lang.String
+# - v5:int
+# - v6:ic0
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x8 <init>-BB@0xa ]
+	0       (00000000) and-int/lit8         v6, v5, 1
+	1       (00000004) if-eqz               v6, +003h
+
+<init>-BB@0x8 : [ <init>-BB@0xa ]
+	2       (00000008) const/4              v2, 1
+
+<init>-BB@0xa : [ <init>-BB@0x14 <init>-BB@0x16 ]
+	3       (0000000a) and-int/lit8         v6, v5, 2
+	4       (0000000e) const/4              v0, 0
+	5       (00000010) if-eqz               v6, +003h
+
+<init>-BB@0x14 : [ <init>-BB@0x16 ]
+	6       (00000014) move-object          v3, v0
+
+<init>-BB@0x16 : [ <init>-BB@0x1e <init>-BB@0x20 ]
+	7       (00000016) and-int/lit8         v5, v5, 4
+	8       (0000001a) if-eqz               v5, +003h
+
+<init>-BB@0x1e : [ <init>-BB@0x20 ]
+	9       (0000001e) move-object          v4, v0
+
+<init>-BB@0x20 : 
+	10      (00000020) invoke-direct        v1, v2, v3, v4, Lcom/lele/llmonitor/ui/soc/SocUiState;-><init>(Z Lcom/lele/llmonitor/data/soc/SocSnapshot; Ljava/lang/String;)V
+	11      (00000026) return-void          
+

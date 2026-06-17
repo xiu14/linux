@@ -1,0 +1,184 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->getVoltageVWithSources(Landroid/content/Context;)Lcom/lele/llmonitor/data/BatteryProbeResult; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:android.content.Context
+#
+# - return:com.lele.llmonitor.data.BatteryProbeResult
+
+getVoltageVWithSources-BB@0x0 : [ getVoltageVWithSources-BB@0x2e getVoltageVWithSources-BB@0x3c ]
+	0       (00000000) invoke-virtual       v13, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) new-instance         v0, Ljava/util/ArrayList;
+	2       (0000000a) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	3       (00000010) new-instance         v1, Landroid/content/IntentFilter;
+	4       (00000014) const-string         v2, "android.intent.action.BATTERY_CHANGED"
+	5       (00000018) invoke-direct        v1, v2, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+	6       (0000001e) const/4              v2, 0
+	7       (00000020) invoke-virtual       v13, v2, v1, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	8       (00000026) move-result-object   v13
+	9       (00000028) const/4              v1, 0
+	10      (0000002a) if-eqz               v13, +009h
+
+getVoltageVWithSources-BB@0x2e : [ getVoltageVWithSources-BB@0x3e ]
+	11      (0000002e) const-string         v2, "voltage"
+	12      (00000032) invoke-virtual       v13, v2, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	13      (00000038) move-result          v13
+	14      (0000003a) goto                 +2h
+
+getVoltageVWithSources-BB@0x3c : [ getVoltageVWithSources-BB@0x3e ]
+	15      (0000003c) move                 v13, v1
+
+getVoltageVWithSources-BB@0x3e : [ getVoltageVWithSources-BB@0x54 getVoltageVWithSources-BB@0xca ]
+	16      (0000003e) const-string         v2, "V"
+	17      (00000042) const-string         v3, "%.3f"
+	18      (00000046) const-string         v4, "Intent.EXTRA_VOLTAGE"
+	19      (0000004a) const/high16         v5, 1148846080
+	20      (0000004e) const/4              v6, 1
+	21      (00000050) if-lez               v13, +03dh
+
+getVoltageVWithSources-BB@0x54 : 
+	22      (00000054) int-to-float         v12, v13
+	23      (00000056) div-float/2addr      v12, v5
+	24      (00000058) new-instance         v1, Lcom/lele/llmonitor/data/BatterySourceProbe;
+	25      (0000005c) invoke-static        v12, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	26      (00000062) move-result-object   v5
+	27      (00000064) filled-new-array     v5, [Ljava/lang/Object;
+	28      (0000006a) move-result-object   v5
+	29      (0000006c) invoke-static        v5, v6, Ljava/util/Arrays;->copyOf([Ljava/lang/Object; I)[Ljava/lang/Object;
+	30      (00000072) move-result-object   v5
+	31      (00000074) invoke-static        v3, v5, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	32      (0000007a) move-result-object   v3
+	33      (0000007c) new-instance         v5, Ljava/lang/StringBuilder;
+	34      (00000080) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	35      (00000086) invoke-virtual       v5, v13, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	36      (0000008c) const-string         v13, "mV => "
+	37      (00000090) invoke-virtual       v5, v13, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (00000096) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	39      (0000009c) invoke-virtual       v5, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	40      (000000a2) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	41      (000000a8) move-result-object   v13
+	42      (000000aa) invoke-direct        v1, v4, v13, v6, Lcom/lele/llmonitor/data/BatterySourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	43      (000000b0) invoke-interface     v0, v1, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	44      (000000b6) new-instance         v13, Lcom/lele/llmonitor/data/BatteryProbeResult;
+	45      (000000ba) invoke-static        v12, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	46      (000000c0) move-result-object   v12
+	47      (000000c2) invoke-direct        v13, v12, v0, Lcom/lele/llmonitor/data/BatteryProbeResult;-><init>(Ljava/lang/Object; Ljava/util/List;)V
+	48      (000000c8) return-object        v13
+
+getVoltageVWithSources-BB@0xca : [ getVoltageVWithSources-BB@0x10c ]
+	49      (000000ca) new-instance         v7, Lcom/lele/llmonitor/data/BatterySourceProbe;
+	50      (000000ce) new-instance         v8, Ljava/lang/StringBuilder;
+	51      (000000d2) invoke-direct        v8, Ljava/lang/StringBuilder;-><init>()V
+	52      (000000d8) invoke-virtual       v8, v13, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	53      (000000de) const-string         v13, "mV"
+	54      (000000e2) invoke-virtual       v8, v13, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	55      (000000e8) invoke-virtual       v8, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	56      (000000ee) move-result-object   v13
+	57      (000000f0) invoke-direct        v7, v4, v13, v1, Lcom/lele/llmonitor/data/BatterySourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	58      (000000f6) invoke-interface     v0, v7, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	59      (000000fc) invoke-direct        v12, Lcom/lele/llmonitor/data/BatteryEngine;->collectBatteryVoltageCandidates()Ljava/util/List;
+	60      (00000102) move-result-object   v13
+	61      (00000104) invoke-interface     v13, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	62      (0000010a) move-result-object   v13
+
+getVoltageVWithSources-BB@0x10c : [ getVoltageVWithSources-BB@0x118 getVoltageVWithSources-BB@0x224 ]
+	63      (0000010c) invoke-interface     v13, Ljava/util/Iterator;->hasNext()Z
+	64      (00000112) move-result          v4
+	65      (00000114) if-eqz               v4, +088h
+
+getVoltageVWithSources-BB@0x118 : [ getVoltageVWithSources-BB@0x130 getVoltageVWithSources-BB@0x20c ]
+	66      (00000118) invoke-interface     v13, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	67      (0000011e) move-result-object   v4
+	68      (00000120) check-cast           v4, Ljava/lang/String;
+	69      (00000124) invoke-direct        v12, v4, Lcom/lele/llmonitor/data/BatteryEngine;->readSysFile(Ljava/lang/String;)Ljava/lang/Long;
+	70      (0000012a) move-result-object   v7
+	71      (0000012c) if-eqz               v7, +070h
+
+getVoltageVWithSources-BB@0x130 : [ getVoltageVWithSources-BB@0x144 getVoltageVWithSources-BB@0x20c ]
+	72      (00000130) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	73      (00000136) move-result-wide     v8
+	74      (00000138) const-wide/16        v10, 0
+	75      (0000013c) cmp-long             v8, v8, v10
+	76      (00000140) if-lez               v8, +066h
+
+getVoltageVWithSources-BB@0x144 : [ getVoltageVWithSources-BB@0x15a getVoltageVWithSources-BB@0x16e ]
+	77      (00000144) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	78      (0000014a) move-result-wide     v12
+	79      (0000014c) const-wide/32        v8, 100000
+	80      (00000152) cmp-long             v12, v12, v8
+	81      (00000156) if-lez               v12, +00ch
+
+getVoltageVWithSources-BB@0x15a : [ getVoltageVWithSources-BB@0x19a ]
+	82      (0000015a) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	83      (00000160) move-result-wide     v12
+	84      (00000162) long-to-float        v12, v12
+	85      (00000164) const                v13, 1232348160
+	86      (0000016a) div-float/2addr      v12, v13
+	87      (0000016c) goto                 +17h
+
+getVoltageVWithSources-BB@0x16e : [ getVoltageVWithSources-BB@0x182 getVoltageVWithSources-BB@0x190 ]
+	88      (0000016e) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	89      (00000174) move-result-wide     v12
+	90      (00000176) const-wide/16        v8, 1000
+	91      (0000017a) cmp-long             v12, v12, v8
+	92      (0000017e) if-lez               v12, +009h
+
+getVoltageVWithSources-BB@0x182 : [ getVoltageVWithSources-BB@0x19a ]
+	93      (00000182) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	94      (00000188) move-result-wide     v12
+	95      (0000018a) long-to-float        v12, v12
+	96      (0000018c) div-float/2addr      v12, v5
+	97      (0000018e) goto                 +6h
+
+getVoltageVWithSources-BB@0x190 : [ getVoltageVWithSources-BB@0x19a ]
+	98      (00000190) invoke-virtual       v7, Ljava/lang/Long;->longValue()J
+	99      (00000196) move-result-wide     v12
+	100     (00000198) long-to-float        v12, v12
+
+getVoltageVWithSources-BB@0x19a : 
+	101     (0000019a) new-instance         v13, Lcom/lele/llmonitor/data/BatterySourceProbe;
+	102     (0000019e) invoke-static        v12, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	103     (000001a4) move-result-object   v1
+	104     (000001a6) filled-new-array     v1, [Ljava/lang/Object;
+	105     (000001ac) move-result-object   v1
+	106     (000001ae) invoke-static        v1, v6, Ljava/util/Arrays;->copyOf([Ljava/lang/Object; I)[Ljava/lang/Object;
+	107     (000001b4) move-result-object   v1
+	108     (000001b6) invoke-static        v3, v1, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	109     (000001bc) move-result-object   v1
+	110     (000001be) new-instance         v3, Ljava/lang/StringBuilder;
+	111     (000001c2) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	112     (000001c8) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	113     (000001ce) const-string         v5, " => "
+	114     (000001d2) invoke-virtual       v3, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	115     (000001d8) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	116     (000001de) invoke-virtual       v3, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	117     (000001e4) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	118     (000001ea) move-result-object   v1
+	119     (000001ec) invoke-direct        v13, v4, v1, v6, Lcom/lele/llmonitor/data/BatterySourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	120     (000001f2) invoke-interface     v0, v13, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	121     (000001f8) new-instance         v13, Lcom/lele/llmonitor/data/BatteryProbeResult;
+	122     (000001fc) invoke-static        v12, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	123     (00000202) move-result-object   v12
+	124     (00000204) invoke-direct        v13, v12, v0, Lcom/lele/llmonitor/data/BatteryProbeResult;-><init>(Ljava/lang/Object; Ljava/util/List;)V
+	125     (0000020a) return-object        v13
+
+getVoltageVWithSources-BB@0x20c : [ getVoltageVWithSources-BB@0x10c ]
+	126     (0000020c) new-instance         v7, Lcom/lele/llmonitor/data/BatterySourceProbe;
+	127     (00000210) const-string         v8, "unavailable"
+	128     (00000214) invoke-direct        v7, v4, v8, v1, Lcom/lele/llmonitor/data/BatterySourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	129     (0000021a) invoke-interface     v0, v7, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	130     (00000220) goto/16              -08ah
+
+getVoltageVWithSources-BB@0x224 : 
+	131     (00000224) new-instance         v12, Lcom/lele/llmonitor/data/BatterySourceProbe;
+	132     (00000228) const-string         v13, "fallback"
+	133     (0000022c) const-string         v1, "0V"
+	134     (00000230) invoke-direct        v12, v13, v1, v6, Lcom/lele/llmonitor/data/BatterySourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	135     (00000236) invoke-interface     v0, v12, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	136     (0000023c) new-instance         v12, Lcom/lele/llmonitor/data/BatteryProbeResult;
+	137     (00000240) const/4              v13, 0
+	138     (00000242) invoke-static        v13, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	139     (00000248) move-result-object   v13
+	140     (0000024a) invoke-direct        v12, v13, v0, Lcom/lele/llmonitor/data/BatteryProbeResult;-><init>(Ljava/lang/Object; Ljava/util/List;)V
+	141     (00000250) return-object        v12
+

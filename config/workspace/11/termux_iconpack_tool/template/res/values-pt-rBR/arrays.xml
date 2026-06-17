@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers" formatted="false">
+        <item>Você precisa de um launcher com suporte ao pacote de ícones. Você encontrará uma lista de launchers suportados na seção \"Aplicar\" ou na descrição do aplicativo na Play Store.</item>
+        <item>Dependendo do tipo de navegação do aplicativo, qualquer deslize pela gaveta de navegação da esquerda e vá para a seção \"Aplicar\", ou escolha \"Aplicar\" na barra de navegação inferior. Na página \"Aplicar\", selecione seu launcher. Se seu launcher não estiver listado, aplique o pacote de ícones nas configurações do launcher.</item>
+        <item>Na página principal do aplicativo, toque no botão intitulado \"Ícones\".</item>
+        <item>Dependendo do launcher que você estiver usando, toque e segure o ícone e selecione \"Editar\" no menu pop-up, ou toque e segure o ícone e arraste-o para a caixa \"Editar\" perto do topo da tela.</item>
+        <item>Dependendo do tipo de navegação do aplicativo, qualquer painel desliza pela gaveta de navegação da esquerda e vá para a seção \"Pedido\", ou escolha \"Solicitar\" na barra de navegação inferior.</item>
+        <item>Isto aconteceu porque o pacote de ícones foi movido para o cartão SD. Você deve movê-lo de volta para o armazenamento interno.</item>
+        <item>Seu launcher pode estar com a resolução incorreta dos ícones. Você pode corrigir isso aumentando o tamanho do ícone para 115%-120% ou mudando para outro launcher.</item>
+        <item>Por favor, envie uma solicitação de ícone.</item>
+        <item>É necessário criar arquivos de solicitação de ícone, salvar papéis de parede e definir o local de download para papéis de parede.</item>
+        <item>É necessário carregar papéis de parede da nuvem e baixá-los.</item>
+        <item>É necessário verificar se seu dispositivo está conectado à internet.</item>
+        <item>É necessário permitir que você aplique papéis de parede diretamente do aplicativo.</item>
+        <item>É necessário ajustar as dimensões dos papéis de parede com base na resolução da tela do seu dispositivo.</item>
+        <item>É necessário por Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Como usar o pacote de ícones?</item>
+        <item>Como aplicar o pacote de ícones?</item>
+        <item>Como ver todos os ícones incluídos?</item>
+        <item>Como substituir um ícone com um alternativo?</item>
+        <item>Como solicitar novos ícones?</item>
+        <item>Eu reiniciei o meu dispositivo e o pacote de ícones não é mais aplicado. Os ícones padrão foram restaurados.</item>
+        <item>Por que os ícones parecem pixelados no meu dispositivo?</item>
+        <item>Posso ver um ícone para um aplicativo específico na lista de ícones, mas ele não está sendo aplicado.</item>
+        <item>Por que o aplicativo precisa de permissão para modificar ou excluir os arquivos no meu dispositivo?</item>
+        <item>Por que o aplicativo precisa ter acesso total à rede?</item>
+        <item>Por que o aplicativo precisa de permissão para visualizar as conexões?</item>
+        <item>Por que o app precisa de permissão para definir o papel de parede?</item>
+        <item>Por que o aplicativo precisa de permissão para ajustar o tamanho do papel de parede?</item>
+        <item>Por que o app precisa de permissão para impedir a suspensão do dispositivo?</item>
+    </string-array>
+</resources>

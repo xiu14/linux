@@ -1,0 +1,92 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->awaitInitialHistoryLoaded(Landroid/content/Context; Ln60;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.Context
+# - v5:n60
+#
+# - return:java.lang.Object
+
+awaitInitialHistoryLoaded-BB@0x0 : [ awaitInitialHistoryLoaded-BB@0xc ]
+	0       (00000000) invoke-virtual       v3, v4, Lcom/lele/llmonitor/data/BatteryRepository;->init(Landroid/content/Context;)V
+	1       (00000006) sget-object          v3, Lcom/lele/llmonitor/data/BatteryRepository;->initialLoadGuard Ljava/lang/Object;
+	2       (0000000a) monitor-enter        v3
+
+awaitInitialHistoryLoaded-BB@0xc : [ awaitInitialHistoryLoaded-BB@0x16 awaitInitialHistoryLoaded-BB@0x18 ]
+	3       (0000000c) sget-boolean         v4, Lcom/lele/llmonitor/data/BatteryRepository;->hasInitialHistoryLoaded Z
+	4       (00000010) const/4              v0, 0
+	5       (00000012) if-eqz               v4, +003h
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x16 : [ awaitInitialHistoryLoaded-BB@0x54 ]
+	6       (00000016) goto                 +1fh
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x18 : [ awaitInitialHistoryLoaded-BB@0x20 awaitInitialHistoryLoaded-BB@0x34 ]
+	7       (00000018) sget-object          v4, Lcom/lele/llmonitor/data/BatteryRepository;->initialLoadJob Lpj1;
+	8       (0000001c) if-eqz               v4, +00ch
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x20 : [ awaitInitialHistoryLoaded-BB@0x2e awaitInitialHistoryLoaded-BB@0x34 ]
+	9       (00000020) invoke-interface     v4, Lpj1;->e()Z
+	10      (00000026) move-result          v4
+	11      (00000028) const/4              v1, 1
+	12      (0000002a) if-ne                v4, v1, +005h
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x2e : [ awaitInitialHistoryLoaded-BB@0x50 ]
+	13      (0000002e) goto                 +11h
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x30 : [ awaitInitialHistoryLoaded-BB@0x78 ]
+	14      (00000030) move-exception       v4
+	15      (00000032) goto                 +23h
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x34 : [ awaitInitialHistoryLoaded-BB@0x50 ]
+	16      (00000034) sget-object          v4, Lcom/lele/llmonitor/data/BatteryRepository;->repositoryScope Ld80;
+	17      (00000038) new-instance         v1, Lcom/lele/llmonitor/data/BatteryRepository$awaitInitialHistoryLoaded$job$1$1;
+	18      (0000003c) invoke-direct        v1, v0, Lcom/lele/llmonitor/data/BatteryRepository$awaitInitialHistoryLoaded$job$1$1;-><init>(Ln60;)V
+	19      (00000042) const/4              v2, 3
+	20      (00000044) invoke-static        v4, v0, v0, v1, v2, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	21      (0000004a) move-result-object   v4
+	22      (0000004c) sput-object          v4, Lcom/lele/llmonitor/data/BatteryRepository;->initialLoadJob Lpj1;
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x50 : [ awaitInitialHistoryLoaded-BB@0x54 ]
+	23      (00000050) sget-object          v0, Lcom/lele/llmonitor/data/BatteryRepository;->initialLoadJob Lpj1;
+	c:53
+	(Ljava/lang/Throwable; -> 30 awaitInitialHistoryLoaded-BB@0x30)
+
+awaitInitialHistoryLoaded-BB@0x54 : [ awaitInitialHistoryLoaded-BB@0x5a awaitInitialHistoryLoaded-BB@0x72 ]
+	24      (00000054) monitor-exit         v3
+	25      (00000056) if-eqz               v0, +00eh
+
+awaitInitialHistoryLoaded-BB@0x5a : [ awaitInitialHistoryLoaded-BB@0x6a awaitInitialHistoryLoaded-BB@0x6c ]
+	26      (0000005a) invoke-interface     v0, v5, Lpj1;->x0(Ln60;)Ljava/lang/Object;
+	27      (00000060) move-result-object   v3
+	28      (00000062) sget-object          v4, Le80;->d Le80;
+	29      (00000066) if-ne                v3, v4, +003h
+
+awaitInitialHistoryLoaded-BB@0x6a : 
+	30      (0000006a) return-object        v3
+
+awaitInitialHistoryLoaded-BB@0x6c : 
+	31      (0000006c) sget-object          v3, Lbw3;->a Lbw3;
+	32      (00000070) return-object        v3
+
+awaitInitialHistoryLoaded-BB@0x72 : 
+	33      (00000072) sget-object          v3, Lbw3;->a Lbw3;
+	34      (00000076) return-object        v3
+
+awaitInitialHistoryLoaded-BB@0x78 : 
+	35      (00000078) monitor-exit         v3
+	36      (0000007a) throw                v4
+

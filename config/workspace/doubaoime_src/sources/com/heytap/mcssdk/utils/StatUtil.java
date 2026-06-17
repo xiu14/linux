@@ -1,0 +1,68 @@
+package com.heytap.mcssdk.utils;
+
+import android.content.Context;
+import android.content.Intent;
+import com.heytap.mcssdk.PushService;
+import com.heytap.mcssdk.constant.MessageConstant;
+import com.heytap.msp.push.mode.MessageStat;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+/* loaded from: classes2.dex */
+public class StatUtil {
+    private static final String COUNT = "count";
+    private static final int MCS_SUPPORT_VERSION = 1017;
+    private static final String STAT_LIST = "list";
+    private static final String TYPE = "type";
+
+    private static boolean isSupportStatisticByMcs(Context context) {
+        String mcsPackageName = PushService.getInstance().getMcsPackageName(context);
+        return Utils.isExistPackage(context, mcsPackageName) && Utils.getVersionCode(context, mcsPackageName) >= 1017;
+    }
+
+    public static void statisticMessage(Context context, MessageStat messageStat) {
+        LinkedList linkedList = new LinkedList();
+        linkedList.add(messageStat);
+        statisticMessage(context, linkedList);
+    }
+
+    public static boolean statisticMessage(Context context, List<MessageStat> list) {
+        LinkedList linkedList = new LinkedList();
+        linkedList.addAll(list);
+        StringBuilder M = e.a.a.a.a.M("isSupportStatisticByMcs:");
+        M.append(isSupportStatisticByMcs(context));
+        M.append(",list size:");
+        M.append(linkedList.size());
+        e.b(M.toString());
+        if (linkedList.size() <= 0 || !isSupportStatisticByMcs(context)) {
+            return false;
+        }
+        return statisticMessageByMcs(context, linkedList);
+    }
+
+    private static boolean statisticMessageByMcs(Context context, List<MessageStat> list) {
+        try {
+            Intent intent = new Intent();
+            intent.setAction(PushService.getInstance().getReceiveSdkAction(context));
+            intent.setPackage(PushService.getInstance().getMcsPackageName(context));
+            intent.putExtra(com.heytap.mcssdk.constant.b.f6897e, context.getPackageName());
+            intent.putExtra("type", MessageConstant.CommandId.COMMAND_STATISTIC);
+            intent.putExtra(COUNT, list.size());
+            ArrayList<String> arrayList = new ArrayList<>();
+            Iterator<MessageStat> it2 = list.iterator();
+            while (it2.hasNext()) {
+                arrayList.add(it2.next().toJsonObject());
+            }
+            intent.putStringArrayListExtra(STAT_LIST, arrayList);
+            context.startService(intent);
+            return true;
+        } catch (Exception e2) {
+            StringBuilder M = e.a.a.a.a.M("statisticMessage--Exception");
+            M.append(e2.getMessage());
+            e.e(M.toString());
+            return false;
+        }
+    }
+}

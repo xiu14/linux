@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->access$toAppIconPalette(Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)Lcom/lele/llmonitor/data/AppIconPalette; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.ui.theme.ThemePalettePreset
+#
+# - return:com.lele.llmonitor.data.AppIconPalette
+
+access$toAppIconPalette-BB@0x0 : 
+	0       (00000000) invoke-static        v0, Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->toAppIconPalette(Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)Lcom/lele/llmonitor/data/AppIconPalette;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

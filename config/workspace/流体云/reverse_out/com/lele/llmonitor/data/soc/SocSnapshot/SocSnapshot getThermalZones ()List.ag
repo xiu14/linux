@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/SocSnapshot;->getThermalZones()Ljava/util/List; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.util.List
+
+getThermalZones-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->thermalZones Ljava/util/List;
+	1       (00000004) return-object        v0
+

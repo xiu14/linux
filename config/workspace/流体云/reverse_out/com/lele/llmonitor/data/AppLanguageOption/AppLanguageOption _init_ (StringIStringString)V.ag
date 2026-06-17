@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/data/AppLanguageOption;-><init>(Ljava/lang/String; I Ljava/lang/String; Ljava/lang/String;)V [access_flags=private constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.String
+# - v2:int
+# - v3:java.lang.String
+# - v4:java.lang.String
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, v1, v2, Ljava/lang/Enum;-><init>(Ljava/lang/String; I)V
+	1       (00000006) iput-object          v3, v0, Lcom/lele/llmonitor/data/AppLanguageOption;->preferenceValue Ljava/lang/String;
+	2       (0000000a) iput-object          v4, v0, Lcom/lele/llmonitor/data/AppLanguageOption;->explicitLanguageTag Ljava/lang/String;
+	3       (0000000e) return-void          
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <item>Precisa de um launcher com suporte para packs de ícones. A lista de launchers suportados pode ser encontrada na secção de \"Aplicar\", ou na descrição na Play Store.</item>
+        <item>Dependendo do tipo de navegação da aplicação, é preciso deslizar a gaveta de navegação para a esquerda e ir para a seção \"Aplicar\" ou escolher o 4º ícone na barra de navegação inferior. A partir daí, pode escolher um launcher ao qual deseja aplicar os ícones. Alguns launchers não suportam a aplicação automática e sendo assim, deve fazer a aplicação manualmente nas configurações.</item>
+        <item>Voltar para a secção principal da aplicação e clicar em \"Ícones\".</item>
+        <item>Dependendo do launcher que está a utilizar, pode ter de pressionar o ícone e selecionar \"Editar\" no menu pop-up, ou então pressionar o ícone e movê-lo para a box de \"Editar\".</item>
+        <item>Dependendo do tipo de navegação da aplicação, é precisa deslizar a gaveta de apps da esquerda e ir para a secção \"Pedidos\", ou escolha o ícone na barra de navegação inferior.</item>
+        <item>Acontece porque o pack de ícones foi movido para o cartão SD. O pack de ícones deve ser instalado na memória interna.</item>
+        <item>O problema deve ser do launcher que está a usar, quando usada uma resolução elevada. Isto pode ser corrigido aumentando o tamanho dos ícones para 115-120%. Ou então tente utilizar outro launcher.</item>
+        <item>Enviar um pedido de ícone.</item>
+        <item>É necessário permissão para gravar dados e arquivos de pedidos de ícones, bem como salvar wallpapers e ser capaz de alterar o local de download dos wallpapers.</item>
+        <item>É necessário ser capaz de carregar wallpapers da nuvem e fazer o seu download.</item>
+        <item>É necessário poder verificar se o seu dispositivo tem ligação à internet.</item>
+        <item>É necessário poder aplicar wallpapers diretamente da aplicação.</item>
+        <item>É necessário ajustar as dimensões do wallpapers com base na resolução do seu ecrã.</item>
+        <item>É necessário para Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Como usar o pack de ícones?</item>
+        <item>Como aplicar o pack de ícones?</item>
+        <item>Como ver todos os ícones incluídos?</item>
+        <item>Como substituir um ícone por outro?</item>
+        <item>Como fazer um pedido de ícones?</item>
+        <item>Depois de reiniciar o meu dispositivo o pack de ícones deixou de estar aplicado. Os ícones voltaram a ser os predefinidos.</item>
+        <item>Porque razão os ícones tem um aspecto pixelado no meu dispositivo?</item>
+        <item>Posso ver um ícone para X app nos ícones incluídos, mas o ícone não se aplica.</item>
+        <item>Porque razão a aplicação necessita de permissão para modificar ou eliminar conteúdo da minha memória interna?</item>
+        <item>Porque razão a aplicação necessita de permissão para aceder à rede?</item>
+        <item>Porque razão a aplicação necessita de permissão para ver coneções?</item>
+        <item>Porque razão precisa a aplicação de permissão para mudar o wallpaper?</item>
+        <item>Porque razão necessita a aplicação de permissão para ajustar o tamanho do wallpaper?</item>
+        <item>Porque razão precisa a aplicação de permissão para impedir o telefone de bloquear?</item>
+    </string-array>
+</resources>

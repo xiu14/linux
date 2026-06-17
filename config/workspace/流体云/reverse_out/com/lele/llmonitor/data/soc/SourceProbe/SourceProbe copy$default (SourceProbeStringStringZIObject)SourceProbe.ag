@@ -1,0 +1,39 @@
+# Lcom/lele/llmonitor/data/soc/SourceProbe;->copy$default(Lcom/lele/llmonitor/data/soc/SourceProbe; Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/Object;)Lcom/lele/llmonitor/data/soc/SourceProbe; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.soc.SourceProbe
+# - v1:java.lang.String
+# - v2:java.lang.String
+# - v3:boolean
+# - v4:int
+# - v5:java.lang.Object
+#
+# - return:com.lele.llmonitor.data.soc.SourceProbe
+
+copy$default-BB@0x0 : [ copy$default-BB@0x8 copy$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v5, v4, 1
+	1       (00000004) if-eqz               v5, +004h
+
+copy$default-BB@0x8 : [ copy$default-BB@0xc ]
+	2       (00000008) iget-object          v1, v0, Lcom/lele/llmonitor/data/soc/SourceProbe;->source Ljava/lang/String;
+
+copy$default-BB@0xc : [ copy$default-BB@0x14 copy$default-BB@0x18 ]
+	3       (0000000c) and-int/lit8         v5, v4, 2
+	4       (00000010) if-eqz               v5, +004h
+
+copy$default-BB@0x14 : [ copy$default-BB@0x18 ]
+	5       (00000014) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SourceProbe;->value Ljava/lang/String;
+
+copy$default-BB@0x18 : [ copy$default-BB@0x20 copy$default-BB@0x24 ]
+	6       (00000018) and-int/lit8         v4, v4, 4
+	7       (0000001c) if-eqz               v4, +004h
+
+copy$default-BB@0x20 : [ copy$default-BB@0x24 ]
+	8       (00000020) iget-boolean         v3, v0, Lcom/lele/llmonitor/data/soc/SourceProbe;->success Z
+
+copy$default-BB@0x24 : 
+	9       (00000024) invoke-virtual       v0, v1, v2, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;->copy(Ljava/lang/String; Ljava/lang/String; Z)Lcom/lele/llmonitor/data/soc/SourceProbe;
+	10      (0000002a) move-result-object   v0
+	11      (0000002c) return-object        v0
+

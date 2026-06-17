@@ -1,0 +1,6 @@
+package com.prolificinteractive.materialcalendarview.w;
+
+/* loaded from: classes2.dex */
+public interface e {
+    public static final e a = new c();
+}

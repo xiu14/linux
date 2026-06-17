@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getWallpaperEnabled()Z [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:boolean
+
+getWallpaperEnabled-BB@0x0 : 
+	0       (00000000) iget-boolean         v0, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperEnabled Z
+	1       (00000004) return               v0
+

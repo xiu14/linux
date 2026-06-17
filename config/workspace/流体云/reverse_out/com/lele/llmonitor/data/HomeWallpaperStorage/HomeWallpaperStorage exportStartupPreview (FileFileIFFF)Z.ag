@@ -1,0 +1,177 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->exportStartupPreview(Ljava/io/File; Ljava/io/File; I F F F)Z [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.io.File
+# - v7:java.io.File
+# - v8:int
+# - v9:float
+# - v10:float
+# - v11:float
+#
+# - return:boolean
+
+exportStartupPreview-BB@0x0 : [ exportStartupPreview-BB@0x50 exportStartupPreview-BB@0x5e ]
+	0       (00000000) new-instance         v0, Ljava/io/File;
+	1       (00000004) invoke-virtual       v7, Ljava/io/File;->getParentFile()Ljava/io/File;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) invoke-virtual       v7, Ljava/io/File;->getName()Ljava/lang/String;
+	4       (00000012) move-result-object   v2
+	5       (00000014) new-instance         v3, Ljava/lang/StringBuilder;
+	6       (00000018) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001e) invoke-virtual       v3, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000024) const-string         v2, ".tmp"
+	9       (00000028) invoke-virtual       v3, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002e) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	11      (00000034) move-result-object   v2
+	12      (00000036) invoke-direct        v0, v1, v2, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	13      (0000003c) invoke-virtual       v0, Ljava/io/File;->delete()Z
+	14      (00000042) invoke-direct        v5, v6, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->decodeStartupPreviewBitmap(Ljava/io/File;)Landroid/graphics/Bitmap;
+	15      (00000048) move-result-object   v6
+	16      (0000004a) const/4              v1, 0
+	17      (0000004c) if-nez               v6, +009h
+
+exportStartupPreview-BB@0x50 : 
+	18      (00000050) invoke-virtual       v0, Ljava/io/File;->delete()Z
+	19      (00000056) invoke-virtual       v7, Ljava/io/File;->delete()Z
+	20      (0000005c) return               v1
+
+exportStartupPreview-BB@0x5e : [ exportStartupPreview-BB@0xcc ]
+	21      (0000005e) invoke-virtual       v6, Landroid/graphics/Bitmap;->getWidth()I
+	22      (00000064) move-result          v2
+	23      (00000066) invoke-virtual       v6, Landroid/graphics/Bitmap;->getHeight()I
+	24      (0000006c) move-result          v3
+	25      (0000006e) sget-object          v4, Landroid/graphics/Bitmap$Config;->ARGB_8888 Landroid/graphics/Bitmap$Config;
+	26      (00000072) invoke-static        v2, v3, v4, Landroid/graphics/Bitmap;->createBitmap(I I Landroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+	27      (00000078) move-result-object   v2
+	28      (0000007a) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	29      (00000080) new-instance         v3, Landroid/graphics/Canvas;
+	30      (00000084) invoke-direct        v3, v2, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+	31      (0000008a) invoke-virtual       v3, v8, Landroid/graphics/Canvas;->drawColor(I)V
+	32      (00000090) invoke-direct        v5, v6, v10, v11, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->applyWallpaperBlur(Landroid/graphics/Bitmap; F F)Landroid/graphics/Bitmap;
+	33      (00000096) move-result-object   v5
+	34      (00000098) new-instance         v8, Landroid/graphics/Paint;
+	35      (0000009c) const/4              v10, 3
+	36      (0000009e) invoke-direct        v8, v10, Landroid/graphics/Paint;-><init>(I)V
+	37      (000000a4) const/high16         v10, 1065353216
+	38      (000000a8) const/4              v11, 0
+	39      (000000aa) invoke-static        v9, v11, v10, Lib1;->k(F F F)F
+	40      (000000b0) move-result          v9
+	41      (000000b2) const/high16         v10, 1132396544
+	42      (000000b6) mul-float/2addr      v9, v10
+	43      (000000b8) invoke-static        v9, Ll02;->F(F)I
+	44      (000000be) move-result          v9
+	45      (000000c0) invoke-virtual       v8, v9, Landroid/graphics/Paint;->setAlpha(I)V
+	46      (000000c6) invoke-virtual       v3, v5, v11, v11, v8, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap; F F Landroid/graphics/Paint;)V
+
+exportStartupPreview-BB@0xcc : [ exportStartupPreview-BB@0xd6 ]
+	47      (000000cc) new-instance         v8, Ljava/io/FileOutputStream;
+	48      (000000d0) invoke-direct        v8, v0, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+	cc:d5
+	(Ljava/lang/Throwable; -> 10e exportStartupPreview-BB@0x10e)
+
+exportStartupPreview-BB@0xd6 : [ exportStartupPreview-BB@0xe4 ]
+	49      (000000d6) sget-object          v9, Landroid/graphics/Bitmap$CompressFormat;->PNG Landroid/graphics/Bitmap$CompressFormat;
+	50      (000000da) const/16             v10, 100
+	51      (000000de) invoke-virtual       v2, v9, v10, v8, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat; I Ljava/io/OutputStream;)Z
+	d6:e3
+	(Ljava/lang/Throwable; -> 112 exportStartupPreview-BB@0x112)
+
+exportStartupPreview-BB@0xe4 : [ exportStartupPreview-BB@0xfe exportStartupPreview-BB@0x102 ]
+	52      (000000e4) invoke-virtual       v8, Ljava/io/FileOutputStream;->close()V
+	53      (000000ea) invoke-virtual       v0, Ljava/io/File;->length()J
+	54      (000000f0) move-result-wide     v8
+	55      (000000f2) const-wide/16        v10, 0
+	56      (000000f6) cmp-long             v8, v8, v10
+	57      (000000fa) if-lez               v8, +004h
+	e4:10b
+	(Ljava/lang/Throwable; -> 10e exportStartupPreview-BB@0x10e)
+
+exportStartupPreview-BB@0xfe : [ exportStartupPreview-BB@0x104 ]
+	58      (000000fe) const/4              v8, 1
+	59      (00000100) goto                 +2h
+	e4:10b
+	(Ljava/lang/Throwable; -> 10e exportStartupPreview-BB@0x10e)
+
+exportStartupPreview-BB@0x102 : [ exportStartupPreview-BB@0x104 ]
+	60      (00000102) move                 v8, v1
+	e4:10b
+	(Ljava/lang/Throwable; -> 10e exportStartupPreview-BB@0x10e)
+
+exportStartupPreview-BB@0x104 : [ exportStartupPreview-BB@0x12c ]
+	61      (00000104) invoke-static        v8, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	62      (0000010a) move-result-object   v8
+	63      (0000010c) goto                 +10h
+
+exportStartupPreview-BB@0x10e : [ exportStartupPreview-BB@0x120 ]
+	64      (0000010e) move-exception       v8
+	65      (00000110) goto                 +8h
+
+exportStartupPreview-BB@0x112 : [ exportStartupPreview-BB@0x114 ]
+	66      (00000112) move-exception       v9
+
+exportStartupPreview-BB@0x114 : 
+	67      (00000114) throw                v9
+	114:115
+	(Ljava/lang/Throwable; -> 116 exportStartupPreview-BB@0x116)
+
+exportStartupPreview-BB@0x116 : [ exportStartupPreview-BB@0x118 ]
+	68      (00000116) move-exception       v10
+
+exportStartupPreview-BB@0x118 : 
+	69      (00000118) invoke-static        v8, v9, Lp34;->j(Ljava/io/Closeable; Ljava/lang/Throwable;)V
+	70      (0000011e) throw                v10
+	118:11f
+	(Ljava/lang/Throwable; -> 10e exportStartupPreview-BB@0x10e)
+
+exportStartupPreview-BB@0x120 : [ exportStartupPreview-BB@0x12c ]
+	71      (00000120) new-instance         v9, Lcw2;
+	72      (00000124) invoke-direct        v9, v8, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	73      (0000012a) move-object          v8, v9
+
+exportStartupPreview-BB@0x12c : [ exportStartupPreview-BB@0x138 exportStartupPreview-BB@0x13a ]
+	74      (0000012c) invoke-static        v8, Ldw2;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+	75      (00000132) move-result-object   v9
+	76      (00000134) if-nez               v9, +003h
+
+exportStartupPreview-BB@0x138 : [ exportStartupPreview-BB@0x13e ]
+	77      (00000138) goto                 +3h
+
+exportStartupPreview-BB@0x13a : [ exportStartupPreview-BB@0x13e ]
+	78      (0000013a) sget-object          v8, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+
+exportStartupPreview-BB@0x13e : [ exportStartupPreview-BB@0x14e exportStartupPreview-BB@0x15c ]
+	79      (0000013e) check-cast           v8, Ljava/lang/Boolean;
+	80      (00000142) invoke-virtual       v8, Ljava/lang/Boolean;->booleanValue()Z
+	81      (00000148) move-result          v8
+	82      (0000014a) if-eq                v5, v6, +009h
+
+exportStartupPreview-BB@0x14e : [ exportStartupPreview-BB@0x162 ]
+	83      (0000014e) invoke-virtual       v6, Landroid/graphics/Bitmap;->recycle()V
+	84      (00000154) invoke-virtual       v5, Landroid/graphics/Bitmap;->recycle()V
+	85      (0000015a) goto                 +4h
+
+exportStartupPreview-BB@0x15c : [ exportStartupPreview-BB@0x162 ]
+	86      (0000015c) invoke-virtual       v6, Landroid/graphics/Bitmap;->recycle()V
+
+exportStartupPreview-BB@0x162 : [ exportStartupPreview-BB@0x16c exportStartupPreview-BB@0x174 ]
+	87      (00000162) invoke-virtual       v2, Landroid/graphics/Bitmap;->recycle()V
+	88      (00000168) if-nez               v8, +006h
+
+exportStartupPreview-BB@0x16c : 
+	89      (0000016c) invoke-virtual       v0, Ljava/io/File;->delete()Z
+	90      (00000172) return               v1
+
+exportStartupPreview-BB@0x174 : [ exportStartupPreview-BB@0x180 exportStartupPreview-BB@0x186 ]
+	91      (00000174) invoke-virtual       v7, Ljava/io/File;->exists()Z
+	92      (0000017a) move-result          v5
+	93      (0000017c) if-eqz               v5, +005h
+
+exportStartupPreview-BB@0x180 : [ exportStartupPreview-BB@0x186 ]
+	94      (00000180) invoke-virtual       v7, Ljava/io/File;->delete()Z
+
+exportStartupPreview-BB@0x186 : 
+	95      (00000186) invoke-virtual       v0, v7, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+	96      (0000018c) move-result          v5
+	97      (0000018e) return               v5
+

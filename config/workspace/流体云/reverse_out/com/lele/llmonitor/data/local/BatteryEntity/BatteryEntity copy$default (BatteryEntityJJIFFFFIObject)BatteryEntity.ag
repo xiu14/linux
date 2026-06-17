@@ -1,0 +1,98 @@
+# Lcom/lele/llmonitor/data/local/BatteryEntity;->copy$default(Lcom/lele/llmonitor/data/local/BatteryEntity; J J I F F F F I Ljava/lang/Object;)Lcom/lele/llmonitor/data/local/BatteryEntity; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:com.lele.llmonitor.data.local.BatteryEntity
+# - v13:long
+# - v14:long
+# - v15:int
+# - v16:float
+# - v17:float
+# - v18:float
+# - v19:float
+# - v20:int
+# - v21:java.lang.Object
+#
+# - return:com.lele.llmonitor.data.local.BatteryEntity
+
+copy$default-BB@0x0 : [ copy$default-BB@0x8 copy$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v0, v20, 1
+	1       (00000004) if-eqz               v0, +004h
+
+copy$default-BB@0x8 : [ copy$default-BB@0xc ]
+	2       (00000008) iget-wide            v11, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->id J
+
+copy$default-BB@0xc : [ copy$default-BB@0x16 copy$default-BB@0x1a ]
+	3       (0000000c) move-wide            v1, v11
+	4       (0000000e) and-int/lit8         v11, v20, 2
+	5       (00000012) if-eqz               v11, +004h
+
+copy$default-BB@0x16 : [ copy$default-BB@0x1a ]
+	6       (00000016) iget-wide            v13, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->timestamp J
+
+copy$default-BB@0x1a : [ copy$default-BB@0x24 copy$default-BB@0x28 ]
+	7       (0000001a) move-wide            v3, v13
+	8       (0000001c) and-int/lit8         v11, v20, 4
+	9       (00000020) if-eqz               v11, +004h
+
+copy$default-BB@0x24 : [ copy$default-BB@0x28 ]
+	10      (00000024) iget                 v15, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->level I
+
+copy$default-BB@0x28 : [ copy$default-BB@0x32 copy$default-BB@0x3a ]
+	11      (00000028) move                 v5, v15
+	12      (0000002a) and-int/lit8         v11, v20, 8
+	13      (0000002e) if-eqz               v11, +006h
+
+copy$default-BB@0x32 : [ copy$default-BB@0x3e ]
+	14      (00000032) iget                 v11, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->voltage F
+	15      (00000036) move                 v6, v11
+	16      (00000038) goto                 +3h
+
+copy$default-BB@0x3a : [ copy$default-BB@0x3e ]
+	17      (0000003a) move/from16          v6, v16
+
+copy$default-BB@0x3e : [ copy$default-BB@0x46 copy$default-BB@0x4e ]
+	18      (0000003e) and-int/lit8         v11, v20, 16
+	19      (00000042) if-eqz               v11, +006h
+
+copy$default-BB@0x46 : [ copy$default-BB@0x52 ]
+	20      (00000046) iget                 v11, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->current F
+	21      (0000004a) move                 v7, v11
+	22      (0000004c) goto                 +3h
+
+copy$default-BB@0x4e : [ copy$default-BB@0x52 ]
+	23      (0000004e) move/from16          v7, v17
+
+copy$default-BB@0x52 : [ copy$default-BB@0x5a copy$default-BB@0x62 ]
+	24      (00000052) and-int/lit8         v11, v20, 32
+	25      (00000056) if-eqz               v11, +006h
+
+copy$default-BB@0x5a : [ copy$default-BB@0x66 ]
+	26      (0000005a) iget                 v11, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->power F
+	27      (0000005e) move                 v8, v11
+	28      (00000060) goto                 +3h
+
+copy$default-BB@0x62 : [ copy$default-BB@0x66 ]
+	29      (00000062) move/from16          v8, v18
+
+copy$default-BB@0x66 : [ copy$default-BB@0x6e copy$default-BB@0x78 ]
+	30      (00000066) and-int/lit8         v11, v20, 64
+	31      (0000006a) if-eqz               v11, +007h
+
+copy$default-BB@0x6e : [ copy$default-BB@0x74 ]
+	32      (0000006e) iget                 v11, v10, Lcom/lele/llmonitor/data/local/BatteryEntity;->temperature F
+	33      (00000072) move                 v9, v11
+
+copy$default-BB@0x74 : [ copy$default-BB@0x7e ]
+	34      (00000074) move-object          v0, v10
+	35      (00000076) goto                 +4h
+
+copy$default-BB@0x78 : [ copy$default-BB@0x74 ]
+	36      (00000078) move/from16          v9, v19
+	37      (0000007c) goto                 -4h
+
+copy$default-BB@0x7e : 
+	38      (0000007e) invoke-virtual/range v0 ... v9, Lcom/lele/llmonitor/data/local/BatteryEntity;->copy(J J I F F F F)Lcom/lele/llmonitor/data/local/BatteryEntity;
+	39      (00000084) move-result-object   v10
+	40      (00000086) return-object        v10
+

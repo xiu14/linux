@@ -1,0 +1,71 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManagerKt$WhenMappings;-><clinit>()V [access_flags=static constructor]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+<clinit>-BB@0x0 : [ <clinit>-BB@0xe ]
+	0       (00000000) invoke-static        Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->values()[Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	1       (00000006) move-result-object   v0
+	2       (00000008) array-length         v0, v0
+	3       (0000000a) new-array            v0, v0, [I
+
+<clinit>-BB@0xe : [ <clinit>-BB@0x20 ]
+	4       (0000000e) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->DYNAMIC Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	5       (00000012) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	6       (00000018) move-result          v1
+	7       (0000001a) const/4              v2, 1
+	8       (0000001c) aput                 v2, v0, v1
+	e:1f
+	(Ljava/lang/NoSuchFieldError; -> 20 <clinit>-BB@0x20)
+
+<clinit>-BB@0x20 : [ <clinit>-BB@0x32 ]
+	9       (00000020) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->OCEAN Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	10      (00000024) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	11      (0000002a) move-result          v1
+	12      (0000002c) const/4              v2, 2
+	13      (0000002e) aput                 v2, v0, v1
+	20:31
+	(Ljava/lang/NoSuchFieldError; -> 32 <clinit>-BB@0x32)
+
+<clinit>-BB@0x32 : [ <clinit>-BB@0x44 ]
+	14      (00000032) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->FOREST Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	15      (00000036) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	16      (0000003c) move-result          v1
+	17      (0000003e) const/4              v2, 3
+	18      (00000040) aput                 v2, v0, v1
+	32:43
+	(Ljava/lang/NoSuchFieldError; -> 44 <clinit>-BB@0x44)
+
+<clinit>-BB@0x44 : [ <clinit>-BB@0x56 ]
+	19      (00000044) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->SUNSET Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	20      (00000048) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	21      (0000004e) move-result          v1
+	22      (00000050) const/4              v2, 4
+	23      (00000052) aput                 v2, v0, v1
+	44:55
+	(Ljava/lang/NoSuchFieldError; -> 56 <clinit>-BB@0x56)
+
+<clinit>-BB@0x56 : [ <clinit>-BB@0x68 ]
+	24      (00000056) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->BLOSSOM Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	25      (0000005a) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	26      (00000060) move-result          v1
+	27      (00000062) const/4              v2, 5
+	28      (00000064) aput                 v2, v0, v1
+	56:67
+	(Ljava/lang/NoSuchFieldError; -> 68 <clinit>-BB@0x68)
+
+<clinit>-BB@0x68 : [ <clinit>-BB@0x7a ]
+	29      (00000068) sget-object          v1, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->JIZI Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	30      (0000006c) invoke-virtual       v1, Ljava/lang/Enum;->ordinal()I
+	31      (00000072) move-result          v1
+	32      (00000074) const/4              v2, 6
+	33      (00000076) aput                 v2, v0, v1
+	68:79
+	(Ljava/lang/NoSuchFieldError; -> 7a <clinit>-BB@0x7a)
+
+<clinit>-BB@0x7a : 
+	34      (0000007a) sput-object          v0, Lcom/lele/llmonitor/data/AppIconPaletteManagerKt$WhenMappings;->$EnumSwitchMapping$0 [I
+	35      (0000007e) return-void          
+

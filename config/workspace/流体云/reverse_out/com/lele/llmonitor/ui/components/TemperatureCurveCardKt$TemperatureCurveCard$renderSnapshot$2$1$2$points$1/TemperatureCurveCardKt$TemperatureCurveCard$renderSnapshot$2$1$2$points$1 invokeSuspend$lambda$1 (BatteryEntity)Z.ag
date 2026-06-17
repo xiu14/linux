@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/ui/components/TemperatureCurveCardKt$TemperatureCurveCard$renderSnapshot$2$1$2$points$1;->invokeSuspend$lambda$1(Lcom/lele/llmonitor/data/local/BatteryEntity;)Z [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.data.local.BatteryEntity
+#
+# - return:boolean
+
+invokeSuspend$lambda$1-BB@0x0 : [ invokeSuspend$lambda$1-BB@0x1e invokeSuspend$lambda$1-BB@0x22 ]
+	0       (00000000) invoke-virtual       v1, Lcom/lele/llmonitor/data/local/BatteryEntity;->getTemperature()F
+	1       (00000006) move-result          v1
+	2       (00000008) invoke-static        v1, Ljava/lang/Math;->abs(F)F
+	3       (0000000e) move-result          v1
+	4       (00000010) const                v0, 2139095039
+	5       (00000016) cmpg-float           v1, v1, v0
+	6       (0000001a) if-gtz               v1, +004h
+
+invokeSuspend$lambda$1-BB@0x1e : 
+	7       (0000001e) const/4              v1, 1
+	8       (00000020) return               v1
+
+invokeSuspend$lambda$1-BB@0x22 : 
+	9       (00000022) const/4              v1, 0
+	10      (00000024) return               v1
+

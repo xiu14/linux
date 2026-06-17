@@ -1,0 +1,35 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->setHomeCardOpacity(F)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:float
+#
+# - return:void
+
+setHomeCardOpacity-BB@0x0 : [ setHomeCardOpacity-BB@0x22 setHomeCardOpacity-BB@0x44 ]
+	0       (00000000) invoke-direct        v1, v2, Lcom/lele/llmonitor/data/SettingsManager;->normalizeHomeCardOpacity(F)F
+	1       (00000006) move-result          v1
+	2       (00000008) sget-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->homeCardOpacity Ll52;
+	3       (0000000c) invoke-static        v1, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	4       (00000012) move-result-object   v0
+	5       (00000014) invoke-interface     v2, v0, Ll52;->setValue(Ljava/lang/Object;)V
+	6       (0000001a) sget-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	7       (0000001e) if-eqz               v2, +013h
+
+setHomeCardOpacity-BB@0x22 : [ setHomeCardOpacity-BB@0x2e setHomeCardOpacity-BB@0x44 ]
+	8       (00000022) invoke-interface     v2, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	9       (00000028) move-result-object   v2
+	10      (0000002a) if-eqz               v2, +00dh
+
+setHomeCardOpacity-BB@0x2e : [ setHomeCardOpacity-BB@0x3e setHomeCardOpacity-BB@0x44 ]
+	11      (0000002e) const-string         v0, "home_card_opacity"
+	12      (00000032) invoke-interface     v2, v0, v1, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String; F)Landroid/content/SharedPreferences$Editor;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) if-eqz               v1, +005h
+
+setHomeCardOpacity-BB@0x3e : [ setHomeCardOpacity-BB@0x44 ]
+	15      (0000003e) invoke-interface     v1, Landroid/content/SharedPreferences$Editor;->apply()V
+
+setHomeCardOpacity-BB@0x44 : 
+	16      (00000044) return-void          
+

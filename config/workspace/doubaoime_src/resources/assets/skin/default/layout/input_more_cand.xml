@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <MoreCandsLayout name="more_cand" class_adaptive="cls_input_kbd_morecand_inset_adaptive">
+        <HorizontalLayout class="cls_toolbar_bk" class_adaptive="cls_toolbar_more_cand_adaptive">
+            <Control width="match_height" height="match_parent" />
+            <Control />
+            <HorizontalLayout name="container_filter" class="cls_morecand_filter_containder">
+                <OptionFilter class="cls_filter_button" name="btn_filter_whole"
+                    text="全部" is_single="false" selected="true"/>
+                <OptionFilter class="cls_filter_button" name="btn_filter_word"
+                    text="单字" is_single="true"/>
+            </HorizontalLayout>
+            <Control />
+            <ButtonSwitchCurrentMode class="cls_btn_morecand_back" label="more"/>
+        </HorizontalLayout>
+
+        <HorizontalLayout name="more_cands_area" padding="1,0,1,0" >
+            <!-- 音节过滤 -->
+            <FilterListLayout name="more_cand_filter_list" class="cls_vertical_symbol_list"
+                width_weight="62" />
+            <!-- 列表 -->
+            <Container width_weight="296" inset="3,4,3,4">
+                <MoreCands name="more_cand_list" class="cls_morecand_bk"
+                    sliderenable="true" sliderstopslowdown="true" clip_children_to_rounds="true">
+                </MoreCands>
+                <ButtonKey name="btn_more_cand_backspace"
+                    class="cls_button_backspace"
+                    gravity="bottom|right" float="true" bkimage=""
+                    width_weight="0.252" height_weight="0.202"
+                    bkcolor="@color/morecands_backspace_bk" bkround="0,0,11,0"
+                    pushedbkcolor="@color/morecands_backspace_pushedbk"/>
+            </Container>
+        </HorizontalLayout>
+    </MoreCandsLayout>
+</Window>

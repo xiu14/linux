@@ -1,0 +1,288 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->probeSocTemperatureC(Ln60;)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:n60
+#
+# - return:java.lang.Object
+
+probeSocTemperatureC-BB@0x0 : [ probeSocTemperatureC-BB@0x6e probeSocTemperatureC-BB@0x84 ]
+	0       (00000000) new-instance         v4, Ljava/util/ArrayList;
+	1       (00000004) invoke-direct        v4, Ljava/util/ArrayList;-><init>()V
+	2       (0000000a) invoke-direct        v12, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readThermalZones()Ljava/util/List;
+	3       (00000010) move-result-object   v13
+	4       (00000012) invoke-direct        v12, v13, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->filterSocThermalCandidates(Ljava/util/List;)Ljava/util/List;
+	5       (00000018) move-result-object   v5
+	6       (0000001a) invoke-direct        v12, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readBatteryTempForHint()Ljava/lang/Float;
+	7       (00000020) move-result-object   v0
+	8       (00000022) new-instance         v1, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	9       (00000026) invoke-interface     v5, Ljava/util/List;->size()I
+	10      (0000002c) move-result          v2
+	11      (0000002e) invoke-interface     v13, Ljava/util/List;->size()I
+	12      (00000034) move-result          v13
+	13      (00000036) const-string         v3, "soc-candidates="
+	14      (0000003a) const-string         v6, "/"
+	15      (0000003e) invoke-static        v3, v2, v6, v13, Lve2;->n(Ljava/lang/String; I Ljava/lang/String; I)Ljava/lang/String;
+	16      (00000044) move-result-object   v13
+	17      (00000046) invoke-interface     v5, Ljava/util/Collection;->isEmpty()Z
+	18      (0000004c) move-result          v2
+	19      (0000004e) const/4              v3, 1
+	20      (00000050) xor-int/2addr        v2, v3
+	21      (00000052) const-string         v7, "sysfs(thermal zones)"
+	22      (00000056) invoke-direct        v1, v7, v13, v2, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	23      (0000005c) invoke-interface     v4, v1, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	24      (00000062) invoke-interface     v5, Ljava/util/List;->isEmpty()Z
+	25      (00000068) move-result          v13
+	26      (0000006a) if-eqz               v13, +00dh
+
+probeSocTemperatureC-BB@0x6e : 
+	27      (0000006e) new-instance         v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;
+	28      (00000072) const/4              v3, 0
+	29      (00000074) sget-object          v5, Luo0;->d Luo0;
+	30      (00000078) const/4              v1, 0
+	31      (0000007a) const/4              v2, 0
+	32      (0000007c) invoke-direct/range  v0 ... v5, Lcom/lele/llmonitor/data/soc/TemperatureResult;-><init>(Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List;)V
+	33      (00000082) return-object        v0
+
+probeSocTemperatureC-BB@0x84 : [ probeSocTemperatureC-BB@0xa2 ]
+	34      (00000084) new-instance         v13, Ljava/util/ArrayList;
+	35      (00000088) const/16             v1, 10
+	36      (0000008c) invoke-static        v5, v1, Lzw;->j0(Ljava/lang/Iterable; I)I
+	37      (00000092) move-result          v1
+	38      (00000094) invoke-direct        v13, v1, Ljava/util/ArrayList;-><init>(I)V
+	39      (0000009a) invoke-interface     v5, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	40      (000000a0) move-result-object   v1
+
+probeSocTemperatureC-BB@0xa2 : [ probeSocTemperatureC-BB@0xae probeSocTemperatureC-BB@0xde ]
+	41      (000000a2) invoke-interface     v1, Ljava/util/Iterator;->hasNext()Z
+	42      (000000a8) move-result          v2
+	43      (000000aa) if-eqz               v2, +01ah
+
+probeSocTemperatureC-BB@0xae : [ probeSocTemperatureC-BB@0xa2 ]
+	44      (000000ae) invoke-interface     v1, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	45      (000000b4) move-result-object   v2
+	46      (000000b6) check-cast           v2, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	47      (000000ba) invoke-direct        v12, v2, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->scoreThermalZone(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; Ljava/lang/Float;)I
+	48      (000000c0) move-result          v7
+	49      (000000c2) new-instance         v8, Ljava/lang/Integer;
+	50      (000000c6) invoke-direct        v8, v7, Ljava/lang/Integer;-><init>(I)V
+	51      (000000cc) new-instance         v7, Lqh2;
+	52      (000000d0) invoke-direct        v7, v2, v8, Lqh2;-><init>(Ljava/lang/Object; Ljava/lang/Object;)V
+	53      (000000d6) invoke-interface     v13, v7, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	54      (000000dc) goto                 -1dh
+
+probeSocTemperatureC-BB@0xde : [ probeSocTemperatureC-BB@0xf4 probeSocTemperatureC-BB@0xf8 ]
+	55      (000000de) invoke-interface     v13, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	56      (000000e4) move-result-object   v13
+	57      (000000e6) invoke-interface     v13, Ljava/util/Iterator;->hasNext()Z
+	58      (000000ec) move-result          v1
+	59      (000000ee) const/4              v2, 0
+	60      (000000f0) if-nez               v1, +004h
+
+probeSocTemperatureC-BB@0xf4 : [ probeSocTemperatureC-BB@0x156 ]
+	61      (000000f4) move-object          v1, v2
+	62      (000000f6) goto                 +30h
+
+probeSocTemperatureC-BB@0xf8 : [ probeSocTemperatureC-BB@0x10c probeSocTemperatureC-BB@0x10e ]
+	63      (000000f8) invoke-interface     v13, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	64      (000000fe) move-result-object   v1
+	65      (00000100) invoke-interface     v13, Ljava/util/Iterator;->hasNext()Z
+	66      (00000106) move-result          v7
+	67      (00000108) if-nez               v7, +003h
+
+probeSocTemperatureC-BB@0x10c : [ probeSocTemperatureC-BB@0x156 ]
+	68      (0000010c) goto                 +25h
+
+probeSocTemperatureC-BB@0x10e : [ probeSocTemperatureC-BB@0x124 ]
+	69      (0000010e) move-object          v7, v1
+	70      (00000110) check-cast           v7, Lqh2;
+	71      (00000114) iget-object          v7, v7, Lqh2;->e Ljava/lang/Object;
+	72      (00000118) check-cast           v7, Ljava/lang/Number;
+	73      (0000011c) invoke-virtual       v7, Ljava/lang/Number;->intValue()I
+	74      (00000122) move-result          v7
+
+probeSocTemperatureC-BB@0x124 : [ probeSocTemperatureC-BB@0x146 probeSocTemperatureC-BB@0x14a ]
+	75      (00000124) invoke-interface     v13, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	76      (0000012a) move-result-object   v8
+	77      (0000012c) move-object          v9, v8
+	78      (0000012e) check-cast           v9, Lqh2;
+	79      (00000132) iget-object          v9, v9, Lqh2;->e Ljava/lang/Object;
+	80      (00000136) check-cast           v9, Ljava/lang/Number;
+	81      (0000013a) invoke-virtual       v9, Ljava/lang/Number;->intValue()I
+	82      (00000140) move-result          v9
+	83      (00000142) if-ge                v7, v9, +004h
+
+probeSocTemperatureC-BB@0x146 : [ probeSocTemperatureC-BB@0x14a ]
+	84      (00000146) move-object          v1, v8
+	85      (00000148) move                 v7, v9
+
+probeSocTemperatureC-BB@0x14a : [ probeSocTemperatureC-BB@0x156 probeSocTemperatureC-BB@0x124 ]
+	86      (0000014a) invoke-interface     v13, Ljava/util/Iterator;->hasNext()Z
+	87      (00000150) move-result          v8
+	88      (00000152) if-nez               v8, -017h
+
+probeSocTemperatureC-BB@0x156 : [ probeSocTemperatureC-BB@0x15e probeSocTemperatureC-BB@0x196 ]
+	89      (00000156) check-cast           v1, Lqh2;
+	90      (0000015a) if-eqz               v1, +01eh
+
+probeSocTemperatureC-BB@0x15e : [ probeSocTemperatureC-BB@0x182 probeSocTemperatureC-BB@0x186 ]
+	91      (0000015e) iget-object          v13, v1, Lqh2;->d Ljava/lang/Object;
+	92      (00000162) check-cast           v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	93      (00000166) iget-object          v7, v1, Lqh2;->e Ljava/lang/Object;
+	94      (0000016a) check-cast           v7, Ljava/lang/Number;
+	95      (0000016e) invoke-virtual       v7, Ljava/lang/Number;->intValue()I
+	96      (00000174) move-result          v7
+	97      (00000176) invoke-direct        v12, v13, v7, v0, v5, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isReliableSocTemperatureCandidate(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; I Ljava/lang/Float; Ljava/util/List;)Z
+	98      (0000017c) move-result          v13
+	99      (0000017e) if-eqz               v13, +004h
+
+probeSocTemperatureC-BB@0x182 : [ probeSocTemperatureC-BB@0x188 ]
+	100     (00000182) move-object          v13, v1
+	101     (00000184) goto                 +2h
+
+probeSocTemperatureC-BB@0x186 : [ probeSocTemperatureC-BB@0x188 ]
+	102     (00000186) move-object          v13, v2
+
+probeSocTemperatureC-BB@0x188 : [ probeSocTemperatureC-BB@0x18c probeSocTemperatureC-BB@0x196 ]
+	103     (00000188) if-eqz               v13, +007h
+
+probeSocTemperatureC-BB@0x18c : [ probeSocTemperatureC-BB@0x198 ]
+	104     (0000018c) iget-object          v13, v13, Lqh2;->d Ljava/lang/Object;
+	105     (00000190) check-cast           v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	106     (00000194) goto                 +2h
+
+probeSocTemperatureC-BB@0x196 : [ probeSocTemperatureC-BB@0x198 ]
+	107     (00000196) move-object          v13, v2
+
+probeSocTemperatureC-BB@0x198 : [ probeSocTemperatureC-BB@0x1a4 probeSocTemperatureC-BB@0x1fe ]
+	108     (00000198) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	109     (0000019c) const-string         v7, " "
+	110     (000001a0) if-eqz               v13, +02fh
+
+probeSocTemperatureC-BB@0x1a4 : [ probeSocTemperatureC-BB@0x29c ]
+	111     (000001a4) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getZone()Ljava/lang/String;
+	112     (000001aa) move-result-object   v1
+	113     (000001ac) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	114     (000001b2) move-result-object   v8
+	115     (000001b4) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	116     (000001ba) move-result          v9
+	117     (000001bc) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempFractionDigits()I
+	118     (000001c2) move-result          v10
+	119     (000001c4) invoke-direct        v12, v9, v10, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->formatTemp(F I)Ljava/lang/String;
+	120     (000001ca) move-result-object   v12
+	121     (000001cc) new-instance         v9, Ljava/lang/StringBuilder;
+	122     (000001d0) invoke-direct        v9, Ljava/lang/StringBuilder;-><init>()V
+	123     (000001d6) invoke-virtual       v9, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	124     (000001dc) invoke-virtual       v9, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	125     (000001e2) invoke-virtual       v9, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	126     (000001e8) invoke-virtual       v9, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	127     (000001ee) invoke-virtual       v9, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	128     (000001f4) invoke-virtual       v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	129     (000001fa) move-result-object   v12
+	130     (000001fc) goto                 +50h
+
+probeSocTemperatureC-BB@0x1fe : [ probeSocTemperatureC-BB@0x202 probeSocTemperatureC-BB@0x298 ]
+	131     (000001fe) if-eqz               v1, +04dh
+
+probeSocTemperatureC-BB@0x202 : [ probeSocTemperatureC-BB@0x29c ]
+	132     (00000202) iget-object          v8, v1, Lqh2;->d Ljava/lang/Object;
+	133     (00000206) move-object          v9, v8
+	134     (00000208) check-cast           v9, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	135     (0000020c) invoke-virtual       v9, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getZone()Ljava/lang/String;
+	136     (00000212) move-result-object   v9
+	137     (00000214) move-object          v10, v8
+	138     (00000216) check-cast           v10, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	139     (0000021a) invoke-virtual       v10, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	140     (00000220) move-result-object   v10
+	141     (00000222) move-object          v11, v8
+	142     (00000224) check-cast           v11, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	143     (00000228) invoke-virtual       v11, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	144     (0000022e) move-result          v11
+	145     (00000230) check-cast           v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;
+	146     (00000234) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempFractionDigits()I
+	147     (0000023a) move-result          v8
+	148     (0000023c) invoke-direct        v12, v11, v8, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->formatTemp(F I)Ljava/lang/String;
+	149     (00000242) move-result-object   v12
+	150     (00000244) iget-object          v1, v1, Lqh2;->e Ljava/lang/Object;
+	151     (00000248) new-instance         v8, Ljava/lang/StringBuilder;
+	152     (0000024c) const-string         v11, "no reliable candidate ("
+	153     (00000250) invoke-direct        v8, v11, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	154     (00000256) invoke-virtual       v8, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	155     (0000025c) invoke-virtual       v8, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	156     (00000262) invoke-virtual       v8, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	157     (00000268) invoke-virtual       v8, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	158     (0000026e) invoke-virtual       v8, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	159     (00000274) const-string         v12, " score="
+	160     (00000278) invoke-virtual       v8, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	161     (0000027e) invoke-virtual       v8, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	162     (00000284) const-string         v12, ")"
+	163     (00000288) invoke-virtual       v8, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	164     (0000028e) invoke-virtual       v8, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	165     (00000294) move-result-object   v12
+	166     (00000296) goto                 +3h
+
+probeSocTemperatureC-BB@0x298 : [ probeSocTemperatureC-BB@0x29c ]
+	167     (00000298) const-string         v12, "none"
+
+probeSocTemperatureC-BB@0x29c : [ probeSocTemperatureC-BB@0x2a0 probeSocTemperatureC-BB@0x2a2 ]
+	168     (0000029c) if-eqz               v13, +003h
+
+probeSocTemperatureC-BB@0x2a0 : [ probeSocTemperatureC-BB@0x2a4 ]
+	169     (000002a0) goto                 +2h
+
+probeSocTemperatureC-BB@0x2a2 : [ probeSocTemperatureC-BB@0x2a4 ]
+	170     (000002a2) const/4              v3, 0
+
+probeSocTemperatureC-BB@0x2a4 : [ probeSocTemperatureC-BB@0x2b8 probeSocTemperatureC-BB@0x2ce ]
+	171     (000002a4) const-string         v1, "selector(score)"
+	172     (000002a8) invoke-direct        v0, v1, v12, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	173     (000002ae) invoke-interface     v4, v0, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	174     (000002b4) if-eqz               v13, +00dh
+
+probeSocTemperatureC-BB@0x2b8 : [ probeSocTemperatureC-BB@0x2d0 ]
+	175     (000002b8) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	176     (000002be) move-result          v12
+	177     (000002c0) new-instance         v0, Ljava/lang/Float;
+	178     (000002c4) invoke-direct        v0, v12, Ljava/lang/Float;-><init>(F)V
+	179     (000002ca) move-object          v1, v0
+	180     (000002cc) goto                 +2h
+
+probeSocTemperatureC-BB@0x2ce : [ probeSocTemperatureC-BB@0x2d0 ]
+	181     (000002ce) move-object          v1, v2
+
+probeSocTemperatureC-BB@0x2d0 : [ probeSocTemperatureC-BB@0x2d4 probeSocTemperatureC-BB@0x2e8 ]
+	182     (000002d0) if-eqz               v13, +00ch
+
+probeSocTemperatureC-BB@0x2d4 : [ probeSocTemperatureC-BB@0x2ea ]
+	183     (000002d4) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempFractionDigits()I
+	184     (000002da) move-result          v12
+	185     (000002dc) new-instance         v0, Ljava/lang/Integer;
+	186     (000002e0) invoke-direct        v0, v12, Ljava/lang/Integer;-><init>(I)V
+	187     (000002e6) goto                 +2h
+
+probeSocTemperatureC-BB@0x2e8 : [ probeSocTemperatureC-BB@0x2ea ]
+	188     (000002e8) move-object          v0, v2
+
+probeSocTemperatureC-BB@0x2ea : [ probeSocTemperatureC-BB@0x2ee probeSocTemperatureC-BB@0x322 ]
+	189     (000002ea) if-eqz               v13, +01ch
+
+probeSocTemperatureC-BB@0x2ee : [ probeSocTemperatureC-BB@0x322 ]
+	190     (000002ee) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getZone()Ljava/lang/String;
+	191     (000002f4) move-result-object   v12
+	192     (000002f6) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	193     (000002fc) move-result-object   v13
+	194     (000002fe) new-instance         v2, Ljava/lang/StringBuilder;
+	195     (00000302) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	196     (00000308) invoke-virtual       v2, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	197     (0000030e) invoke-virtual       v2, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	198     (00000314) invoke-virtual       v2, v13, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	199     (0000031a) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	200     (00000320) move-result-object   v2
+
+probeSocTemperatureC-BB@0x322 : 
+	201     (00000322) move-object          v3, v2
+	202     (00000324) move-object          v2, v0
+	203     (00000326) new-instance         v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;
+	204     (0000032a) invoke-direct/range  v0 ... v5, Lcom/lele/llmonitor/data/soc/TemperatureResult;-><init>(Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List;)V
+	205     (00000330) return-object        v0
+

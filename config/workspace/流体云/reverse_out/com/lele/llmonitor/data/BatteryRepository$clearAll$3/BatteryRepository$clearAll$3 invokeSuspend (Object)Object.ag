@@ -1,0 +1,35 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x34 ]
+	0       (00000000) iget                 v1, v1, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;->label I
+	1       (00000004) const/4              v0, 0
+	2       (00000006) if-nez               v1, +017h
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0x20 invokeSuspend-BB@0x32 ]
+	3       (0000000a) invoke-static        v2, Lib1;->Q(Ljava/lang/Object;)V
+	4       (00000010) sget-object          v1, Lcom/lele/llmonitor/data/BatteryRepository;->INSTANCE Lcom/lele/llmonitor/data/BatteryRepository;
+	5       (00000014) invoke-static        v1, Lcom/lele/llmonitor/data/BatteryRepository;->access$snapshotFile(Lcom/lele/llmonitor/data/BatteryRepository;)Ljava/io/File;
+	6       (0000001a) move-result-object   v1
+	7       (0000001c) if-eqz               v1, +00bh
+
+invokeSuspend-BB@0x20 : 
+	8       (00000020) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	9       (00000026) move-result          v1
+	10      (00000028) invoke-static        v1, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	11      (0000002e) move-result-object   v1
+	12      (00000030) return-object        v1
+
+invokeSuspend-BB@0x32 : 
+	13      (00000032) return-object        v0
+
+invokeSuspend-BB@0x34 : 
+	14      (00000034) const-string         v1, "call to 'resume' before 'invoke' with coroutine"
+	15      (00000038) invoke-static        v1, Lh;->m(Ljava/lang/String;)V
+	16      (0000003e) return-object        v0
+

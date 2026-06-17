@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;-><init>(Ljava/util/List; Ljava/util/List; Ljava/util/List; Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.util.List
+# - v2:java.util.List
+# - v3:java.util.List
+# - v4:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$currentSnapshot Ljava/util/List;
+	1       (00000004) iput-object          v2, v0, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$data Ljava/util/List;
+	2       (00000008) iput-object          v3, v0, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$persisted Ljava/util/List;
+	3       (0000000c) const/4              v1, 2
+	4       (0000000e) invoke-direct        v0, v1, v4, Ljj3;-><init>(I Ln60;)V
+	5       (00000014) return-void          
+

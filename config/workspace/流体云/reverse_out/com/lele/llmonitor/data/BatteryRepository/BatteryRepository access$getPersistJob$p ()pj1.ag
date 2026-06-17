@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->access$getPersistJob$p()Lpj1; [access_flags=public static final synthetic]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:pj1
+
+access$getPersistJob$p-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/BatteryRepository;->persistJob Lpj1;
+	1       (00000004) return-object        v0
+

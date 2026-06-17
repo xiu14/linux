@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->clearAllTables()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+clearAllTables-BB@0x0 : 
+	0       (00000000) const-string         v0, "battery_history"
+	1       (00000004) filled-new-array     v0, [Ljava/lang/String;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) const/4              v1, 0
+	4       (0000000e) invoke-virtual       v2, v1, v0, Lhx2;->performClear(Z [Ljava/lang/String;)V
+	5       (00000014) return-void          
+

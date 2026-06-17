@@ -1,0 +1,55 @@
+# Lcom/lele/llmonitor/data/soc/LoadAvgResult;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+hashCode-BB@0x0 : [ hashCode-BB@0xa hashCode-BB@0xe ]
+	0       (00000000) iget-object          v0, v3, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->loadAvg1 Ljava/lang/Float;
+	1       (00000004) const/4              v1, 0
+	2       (00000006) if-nez               v0, +004h
+
+hashCode-BB@0xa : [ hashCode-BB@0x16 ]
+	3       (0000000a) move                 v0, v1
+	4       (0000000c) goto                 +5h
+
+hashCode-BB@0xe : [ hashCode-BB@0x16 ]
+	5       (0000000e) invoke-virtual       v0, Ljava/lang/Object;->hashCode()I
+	6       (00000014) move-result          v0
+
+hashCode-BB@0x16 : [ hashCode-BB@0x22 hashCode-BB@0x26 ]
+	7       (00000016) mul-int/lit8         v0, v0, 31
+	8       (0000001a) iget-object          v2, v3, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->loadAvg5 Ljava/lang/Float;
+	9       (0000001e) if-nez               v2, +004h
+
+hashCode-BB@0x22 : [ hashCode-BB@0x2e ]
+	10      (00000022) move                 v2, v1
+	11      (00000024) goto                 +5h
+
+hashCode-BB@0x26 : [ hashCode-BB@0x2e ]
+	12      (00000026) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	13      (0000002c) move-result          v2
+
+hashCode-BB@0x2e : [ hashCode-BB@0x3c hashCode-BB@0x3e ]
+	14      (0000002e) add-int/2addr        v0, v2
+	15      (00000030) mul-int/lit8         v0, v0, 31
+	16      (00000034) iget-object          v2, v3, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->loadAvg15 Ljava/lang/Float;
+	17      (00000038) if-nez               v2, +003h
+
+hashCode-BB@0x3c : [ hashCode-BB@0x46 ]
+	18      (0000003c) goto                 +5h
+
+hashCode-BB@0x3e : [ hashCode-BB@0x46 ]
+	19      (0000003e) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	20      (00000044) move-result          v1
+
+hashCode-BB@0x46 : 
+	21      (00000046) add-int/2addr        v0, v1
+	22      (00000048) mul-int/lit8         v0, v0, 31
+	23      (0000004c) iget-object          v3, v3, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->probes Ljava/util/List;
+	24      (00000050) invoke-virtual       v3, Ljava/lang/Object;->hashCode()I
+	25      (00000056) move-result          v3
+	26      (00000058) add-int/2addr        v3, v0
+	27      (0000005a) return               v3
+

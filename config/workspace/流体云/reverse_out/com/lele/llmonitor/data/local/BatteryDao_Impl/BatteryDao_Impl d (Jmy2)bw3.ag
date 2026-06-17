@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->d(J Lmy2;)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:long
+# - v3:my2
+#
+# - return:bw3
+
+d-BB@0x0 : 
+	0       (00000000) const-string         v0, "DELETE FROM battery_history WHERE id IN (SELECT id FROM battery_history WHERE timestamp < ? LIMIT 100)"
+	1       (00000004) invoke-static        v0, v1, v2, v3, Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->clearOldData$lambda$0(Ljava/lang/String; J Lmy2;)Lbw3;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) return-object        v1
+

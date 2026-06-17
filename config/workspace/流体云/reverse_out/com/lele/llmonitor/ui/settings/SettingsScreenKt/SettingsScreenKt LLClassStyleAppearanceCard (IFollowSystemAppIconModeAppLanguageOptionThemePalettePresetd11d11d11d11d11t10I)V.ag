@@ -1,0 +1,1448 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Lcom/lele/llmonitor/data/AppLanguageOption; Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ld11; Ld11; Ld11; Ld11; Ld11; Lt10; I)V [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v56
+# - v57:int
+# - v58:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v59:com.lele.llmonitor.data.AppLanguageOption
+# - v60:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v61:d11
+# - v62:d11
+# - v63:d11
+# - v64:d11
+# - v65:d11
+# - v66:t10
+# - v67:int
+#
+# - return:void
+
+LLClassStyleAppearanceCard-BB@0x0 : [ LLClassStyleAppearanceCard-BB@0x56 LLClassStyleAppearanceCard-BB@0x70 ]
+	0       (00000000) move-object/from16   v9, v65
+	1       (00000004) move/from16          v10, v67
+	2       (00000008) invoke-virtual/range v58, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	3       (0000000e) invoke-virtual/range v59, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	4       (00000014) invoke-virtual/range v60, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	5       (0000001a) invoke-virtual/range v61, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	6       (00000020) invoke-virtual/range v62, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	7       (00000026) invoke-virtual/range v63, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	8       (0000002c) invoke-virtual/range v64, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	9       (00000032) invoke-virtual       v9, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	10      (00000038) move-object/from16   v0, v66
+	11      (0000003c) check-cast           v0, Lb20;
+	12      (00000040) const                v1, -839209504
+	13      (00000046) invoke-virtual       v0, v1, Lb20;->a0(I)Lb20;
+	14      (0000004c) and-int/lit8         v1, v10, 6
+	15      (00000050) const/4              v2, 2
+	16      (00000052) if-nez               v1, +00fh
+
+LLClassStyleAppearanceCard-BB@0x56 : [ LLClassStyleAppearanceCard-BB@0x66 LLClassStyleAppearanceCard-BB@0x6a ]
+	17      (00000056) move/from16          v1, v57
+	18      (0000005a) invoke-virtual       v0, v1, Lb20;->d(I)Z
+	19      (00000060) move-result          v3
+	20      (00000062) if-eqz               v3, +004h
+
+LLClassStyleAppearanceCard-BB@0x66 : [ LLClassStyleAppearanceCard-BB@0x6c ]
+	21      (00000066) const/4              v3, 4
+	22      (00000068) goto                 +2h
+
+LLClassStyleAppearanceCard-BB@0x6a : [ LLClassStyleAppearanceCard-BB@0x6c ]
+	23      (0000006a) move                 v3, v2
+
+LLClassStyleAppearanceCard-BB@0x6c : [ LLClassStyleAppearanceCard-BB@0x76 ]
+	24      (0000006c) or-int/2addr         v3, v10
+	25      (0000006e) goto                 +4h
+
+LLClassStyleAppearanceCard-BB@0x70 : [ LLClassStyleAppearanceCard-BB@0x76 ]
+	26      (00000070) move/from16          v1, v57
+	27      (00000074) move                 v3, v10
+
+LLClassStyleAppearanceCard-BB@0x76 : [ LLClassStyleAppearanceCard-BB@0x7e LLClassStyleAppearanceCard-BB@0x9e ]
+	28      (00000076) and-int/lit8         v4, v10, 48
+	29      (0000007a) if-nez               v4, +012h
+
+LLClassStyleAppearanceCard-BB@0x7e : [ LLClassStyleAppearanceCard-BB@0x92 LLClassStyleAppearanceCard-BB@0x98 ]
+	30      (0000007e) invoke-virtual/range v58, Ljava/lang/Enum;->ordinal()I
+	31      (00000084) move-result          v4
+	32      (00000086) invoke-virtual       v0, v4, Lb20;->d(I)Z
+	33      (0000008c) move-result          v4
+	34      (0000008e) if-eqz               v4, +005h
+
+LLClassStyleAppearanceCard-BB@0x92 : [ LLClassStyleAppearanceCard-BB@0x9c ]
+	35      (00000092) const/16             v4, 32
+	36      (00000096) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x98 : [ LLClassStyleAppearanceCard-BB@0x9c ]
+	37      (00000098) const/16             v4, 16
+
+LLClassStyleAppearanceCard-BB@0x9c : [ LLClassStyleAppearanceCard-BB@0x9e ]
+	38      (0000009c) or-int/2addr         v3, v4
+
+LLClassStyleAppearanceCard-BB@0x9e : [ LLClassStyleAppearanceCard-BB@0xa6 LLClassStyleAppearanceCard-BB@0xc6 ]
+	39      (0000009e) and-int/lit16        v4, v10, 384
+	40      (000000a2) if-nez               v4, +012h
+
+LLClassStyleAppearanceCard-BB@0xa6 : [ LLClassStyleAppearanceCard-BB@0xba LLClassStyleAppearanceCard-BB@0xc0 ]
+	41      (000000a6) invoke-virtual/range v59, Ljava/lang/Enum;->ordinal()I
+	42      (000000ac) move-result          v4
+	43      (000000ae) invoke-virtual       v0, v4, Lb20;->d(I)Z
+	44      (000000b4) move-result          v4
+	45      (000000b6) if-eqz               v4, +005h
+
+LLClassStyleAppearanceCard-BB@0xba : [ LLClassStyleAppearanceCard-BB@0xc4 ]
+	46      (000000ba) const/16             v4, 256
+	47      (000000be) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0xc0 : [ LLClassStyleAppearanceCard-BB@0xc4 ]
+	48      (000000c0) const/16             v4, 128
+
+LLClassStyleAppearanceCard-BB@0xc4 : [ LLClassStyleAppearanceCard-BB@0xc6 ]
+	49      (000000c4) or-int/2addr         v3, v4
+
+LLClassStyleAppearanceCard-BB@0xc6 : [ LLClassStyleAppearanceCard-BB@0xce LLClassStyleAppearanceCard-BB@0xee ]
+	50      (000000c6) and-int/lit16        v4, v10, 3072
+	51      (000000ca) if-nez               v4, +012h
+
+LLClassStyleAppearanceCard-BB@0xce : [ LLClassStyleAppearanceCard-BB@0xe2 LLClassStyleAppearanceCard-BB@0xe8 ]
+	52      (000000ce) invoke-virtual/range v60, Ljava/lang/Enum;->ordinal()I
+	53      (000000d4) move-result          v4
+	54      (000000d6) invoke-virtual       v0, v4, Lb20;->d(I)Z
+	55      (000000dc) move-result          v4
+	56      (000000de) if-eqz               v4, +005h
+
+LLClassStyleAppearanceCard-BB@0xe2 : [ LLClassStyleAppearanceCard-BB@0xec ]
+	57      (000000e2) const/16             v4, 2048
+	58      (000000e6) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0xe8 : [ LLClassStyleAppearanceCard-BB@0xec ]
+	59      (000000e8) const/16             v4, 1024
+
+LLClassStyleAppearanceCard-BB@0xec : [ LLClassStyleAppearanceCard-BB@0xee ]
+	60      (000000ec) or-int/2addr         v3, v4
+
+LLClassStyleAppearanceCard-BB@0xee : [ LLClassStyleAppearanceCard-BB@0xfa LLClassStyleAppearanceCard-BB@0x112 ]
+	61      (000000ee) and-int/lit16        v4, v10, 24576
+	62      (000000f2) move-object/from16   v6, v61
+	63      (000000f6) if-nez               v4, +00eh
+
+LLClassStyleAppearanceCard-BB@0xfa : [ LLClassStyleAppearanceCard-BB@0x106 LLClassStyleAppearanceCard-BB@0x10c ]
+	64      (000000fa) invoke-virtual       v0, v6, Lb20;->h(Ljava/lang/Object;)Z
+	65      (00000100) move-result          v4
+	66      (00000102) if-eqz               v4, +005h
+
+LLClassStyleAppearanceCard-BB@0x106 : [ LLClassStyleAppearanceCard-BB@0x110 ]
+	67      (00000106) const/16             v4, 16384
+	68      (0000010a) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x10c : [ LLClassStyleAppearanceCard-BB@0x110 ]
+	69      (0000010c) const/16             v4, 8192
+
+LLClassStyleAppearanceCard-BB@0x110 : [ LLClassStyleAppearanceCard-BB@0x112 ]
+	70      (00000110) or-int/2addr         v3, v4
+
+LLClassStyleAppearanceCard-BB@0x112 : [ LLClassStyleAppearanceCard-BB@0x120 LLClassStyleAppearanceCard-BB@0x138 ]
+	71      (00000112) const/high16         v4, 196608
+	72      (00000116) and-int/2addr        v4, v10
+	73      (00000118) move-object/from16   v8, v62
+	74      (0000011c) if-nez               v4, +00eh
+
+LLClassStyleAppearanceCard-BB@0x120 : [ LLClassStyleAppearanceCard-BB@0x12c LLClassStyleAppearanceCard-BB@0x132 ]
+	75      (00000120) invoke-virtual       v0, v8, Lb20;->h(Ljava/lang/Object;)Z
+	76      (00000126) move-result          v4
+	77      (00000128) if-eqz               v4, +005h
+
+LLClassStyleAppearanceCard-BB@0x12c : [ LLClassStyleAppearanceCard-BB@0x136 ]
+	78      (0000012c) const/high16         v4, 131072
+	79      (00000130) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x132 : [ LLClassStyleAppearanceCard-BB@0x136 ]
+	80      (00000132) const/high16         v4, 65536
+
+LLClassStyleAppearanceCard-BB@0x136 : [ LLClassStyleAppearanceCard-BB@0x138 ]
+	81      (00000136) or-int/2addr         v3, v4
+
+LLClassStyleAppearanceCard-BB@0x138 : [ LLClassStyleAppearanceCard-BB@0x142 LLClassStyleAppearanceCard-BB@0x160 ]
+	82      (00000138) const/high16         v4, 1572864
+	83      (0000013c) and-int/2addr        v4, v10
+	84      (0000013e) if-nez               v4, +011h
+
+LLClassStyleAppearanceCard-BB@0x142 : [ LLClassStyleAppearanceCard-BB@0x152 LLClassStyleAppearanceCard-BB@0x158 ]
+	85      (00000142) move-object/from16   v4, v63
+	86      (00000146) invoke-virtual       v0, v4, Lb20;->h(Ljava/lang/Object;)Z
+	87      (0000014c) move-result          v7
+	88      (0000014e) if-eqz               v7, +005h
+
+LLClassStyleAppearanceCard-BB@0x152 : [ LLClassStyleAppearanceCard-BB@0x15c ]
+	89      (00000152) const/high16         v7, 1048576
+	90      (00000156) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x158 : [ LLClassStyleAppearanceCard-BB@0x15c ]
+	91      (00000158) const/high16         v7, 524288
+
+LLClassStyleAppearanceCard-BB@0x15c : [ LLClassStyleAppearanceCard-BB@0x164 ]
+	92      (0000015c) or-int/2addr         v3, v7
+	93      (0000015e) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x160 : [ LLClassStyleAppearanceCard-BB@0x164 ]
+	94      (00000160) move-object/from16   v4, v63
+
+LLClassStyleAppearanceCard-BB@0x164 : [ LLClassStyleAppearanceCard-BB@0x16e LLClassStyleAppearanceCard-BB@0x18c ]
+	95      (00000164) const/high16         v7, 12582912
+	96      (00000168) and-int/2addr        v7, v10
+	97      (0000016a) if-nez               v7, +011h
+
+LLClassStyleAppearanceCard-BB@0x16e : [ LLClassStyleAppearanceCard-BB@0x17e LLClassStyleAppearanceCard-BB@0x184 ]
+	98      (0000016e) move-object/from16   v7, v64
+	99      (00000172) invoke-virtual       v0, v7, Lb20;->h(Ljava/lang/Object;)Z
+	100     (00000178) move-result          v11
+	101     (0000017a) if-eqz               v11, +005h
+
+LLClassStyleAppearanceCard-BB@0x17e : [ LLClassStyleAppearanceCard-BB@0x188 ]
+	102     (0000017e) const/high16         v11, 8388608
+	103     (00000182) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x184 : [ LLClassStyleAppearanceCard-BB@0x188 ]
+	104     (00000184) const/high16         v11, 4194304
+
+LLClassStyleAppearanceCard-BB@0x188 : [ LLClassStyleAppearanceCard-BB@0x190 ]
+	105     (00000188) or-int/2addr         v3, v11
+	106     (0000018a) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x18c : [ LLClassStyleAppearanceCard-BB@0x190 ]
+	107     (0000018c) move-object/from16   v7, v64
+
+LLClassStyleAppearanceCard-BB@0x190 : [ LLClassStyleAppearanceCard-BB@0x19a LLClassStyleAppearanceCard-BB@0x1b2 ]
+	108     (00000190) const/high16         v11, 100663296
+	109     (00000194) and-int/2addr        v11, v10
+	110     (00000196) if-nez               v11, +00eh
+
+LLClassStyleAppearanceCard-BB@0x19a : [ LLClassStyleAppearanceCard-BB@0x1a6 LLClassStyleAppearanceCard-BB@0x1ac ]
+	111     (0000019a) invoke-virtual       v0, v9, Lb20;->h(Ljava/lang/Object;)Z
+	112     (000001a0) move-result          v11
+	113     (000001a2) if-eqz               v11, +005h
+
+LLClassStyleAppearanceCard-BB@0x1a6 : [ LLClassStyleAppearanceCard-BB@0x1b0 ]
+	114     (000001a6) const/high16         v11, 67108864
+	115     (000001aa) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x1ac : [ LLClassStyleAppearanceCard-BB@0x1b0 ]
+	116     (000001ac) const/high16         v11, 33554432
+
+LLClassStyleAppearanceCard-BB@0x1b0 : [ LLClassStyleAppearanceCard-BB@0x1b2 ]
+	117     (000001b0) or-int/2addr         v3, v11
+
+LLClassStyleAppearanceCard-BB@0x1b2 : [ LLClassStyleAppearanceCard-BB@0x1c8 LLClassStyleAppearanceCard-BB@0x1cc ]
+	118     (000001b2) const                v11, 38347923
+	119     (000001b8) and-int/2addr        v11, v3
+	120     (000001ba) const                v13, 38347922
+	121     (000001c0) const/4              v14, 0
+	122     (000001c2) const/4              v15, 1
+	123     (000001c4) if-eq                v11, v13, +004h
+
+LLClassStyleAppearanceCard-BB@0x1c8 : [ LLClassStyleAppearanceCard-BB@0x1ce ]
+	124     (000001c8) move                 v11, v15
+	125     (000001ca) goto                 +2h
+
+LLClassStyleAppearanceCard-BB@0x1cc : [ LLClassStyleAppearanceCard-BB@0x1ce ]
+	126     (000001cc) move                 v11, v14
+
+LLClassStyleAppearanceCard-BB@0x1ce : [ LLClassStyleAppearanceCard-BB@0x1de LLClassStyleAppearanceCard-BB@0x1490 ]
+	127     (000001ce) and-int/lit8         v13, v3, 1
+	128     (000001d2) invoke-virtual       v0, v13, v11, Lb20;->O(I Z)Z
+	129     (000001d8) move-result          v11
+	130     (000001da) if-eqz               v11, +95bh
+
+LLClassStyleAppearanceCard-BB@0x1de : [ LLClassStyleAppearanceCard-BB@0x2c2 ]
+	131     (000001de) new-instance         v11, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;
+	132     (000001e2) const-string         v13, "跟随系统"
+	133     (000001e6) invoke-static        v13, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	134     (000001ec) move-result-object   v13
+	135     (000001ee) const/16             v66, 32
+	136     (000001f2) invoke-static        Ldd2;->u()Lmd1;
+	137     (000001f8) move-result-object   v5
+	138     (000001fa) invoke-direct        v11, v14, v13, v5, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;-><init>(I Ljava/lang/String; Lmd1;)V
+	139     (00000200) new-instance         v5, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;
+	140     (00000204) const-string         v13, "浅色模式"
+	141     (00000208) invoke-static        v13, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	142     (0000020e) move-result-object   v13
+	143     (00000210) invoke-static        Ldf1;->A()Lmd1;
+	144     (00000216) move-result-object   v12
+	145     (00000218) invoke-direct        v5, v15, v13, v12, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;-><init>(I Ljava/lang/String; Lmd1;)V
+	146     (0000021e) new-instance         v12, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;
+	147     (00000222) const-string         v13, "深色模式"
+	148     (00000226) invoke-static        v13, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	149     (0000022c) move-result-object   v13
+	150     (0000022e) invoke-static        Lwm1;->d0()Lmd1;
+	151     (00000234) move-result-object   v15
+	152     (00000236) invoke-direct        v12, v2, v13, v15, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;-><init>(I Ljava/lang/String; Lmd1;)V
+	153     (0000023c) filled-new-array     v11, v5, v12, [Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$ThemeOption;
+	154     (00000242) move-result-object   v5
+	155     (00000244) invoke-static        v5, Lr7;->M([Ljava/lang/Object;)Ljava/util/List;
+	156     (0000024a) move-result-object   v5
+	157     (0000024c) sget-object          v11, Lcom/lele/llmonitor/data/AppLanguageOption;->FOLLOW_SYSTEM Lcom/lele/llmonitor/data/AppLanguageOption;
+	158     (00000250) new-instance         v12, Lqh2;
+	159     (00000254) const-string         v13, "Follow System"
+	160     (00000258) invoke-direct        v12, v11, v13, Lqh2;-><init>(Ljava/lang/Object; Ljava/lang/Object;)V
+	161     (0000025e) sget-object          v11, Lcom/lele/llmonitor/data/AppLanguageOption;->ENGLISH Lcom/lele/llmonitor/data/AppLanguageOption;
+	162     (00000262) new-instance         v13, Lqh2;
+	163     (00000266) const-string         v15, "English"
+	164     (0000026a) invoke-direct        v13, v11, v15, Lqh2;-><init>(Ljava/lang/Object; Ljava/lang/Object;)V
+	165     (00000270) sget-object          v11, Lcom/lele/llmonitor/data/AppLanguageOption;->CHINESE_SIMPLIFIED_CHINA Lcom/lele/llmonitor/data/AppLanguageOption;
+	166     (00000274) new-instance         v2, Lqh2;
+	167     (00000278) const-string         v14, "简体中文（中国）"
+	168     (0000027c) invoke-direct        v2, v11, v14, Lqh2;-><init>(Ljava/lang/Object; Ljava/lang/Object;)V
+	169     (00000282) sget-object          v11, Lcom/lele/llmonitor/data/AppLanguageOption;->CHINESE_TRADITIONAL_HONG_KONG Lcom/lele/llmonitor/data/AppLanguageOption;
+	170     (00000286) new-instance         v14, Lqh2;
+	171     (0000028a) const-string         v1, "繁體中文（中國香港）"
+	172     (0000028e) invoke-direct        v14, v11, v1, Lqh2;-><init>(Ljava/lang/Object; Ljava/lang/Object;)V
+	173     (00000294) sget-object          v1, Lcom/lele/llmonitor/data/AppLanguageOption;->CHINESE_TRADITIONAL_TAIWAN Lcom/lele/llmonitor/data/AppLanguageOption;
+	174     (00000298) new-instance         v11, Lqh2;
+	175     (0000029c) move/from16          v19, v3
+	176     (000002a0) const-string         v3, "繁體中文（中國台灣）"
+	177     (000002a4) invoke-direct        v11, v1, v3, Lqh2;-><init>(Ljava/lang/Object; Ljava/lang/Object;)V
+	178     (000002aa) filled-new-array     v12, v13, v2, v14, v11, [Lqh2;
+	179     (000002b0) move-result-object   v1
+	180     (000002b2) invoke-static        v1, Lr7;->M([Ljava/lang/Object;)Ljava/util/List;
+	181     (000002b8) move-result-object   v1
+	182     (000002ba) invoke-interface     v1, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	183     (000002c0) move-result-object   v2
+
+LLClassStyleAppearanceCard-BB@0x2c2 : [ LLClassStyleAppearanceCard-BB@0x2ce LLClassStyleAppearanceCard-BB@0x2ea ]
+	184     (000002c2) invoke-interface     v2, Ljava/util/Iterator;->hasNext()Z
+	185     (000002c8) move-result          v3
+	186     (000002ca) if-eqz               v3, +010h
+
+LLClassStyleAppearanceCard-BB@0x2ce : [ LLClassStyleAppearanceCard-BB@0x2e8 LLClassStyleAppearanceCard-BB@0x2c2 ]
+	187     (000002ce) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	188     (000002d4) move-result-object   v3
+	189     (000002d6) move-object          v12, v3
+	190     (000002d8) check-cast           v12, Lqh2;
+	191     (000002dc) iget-object          v12, v12, Lqh2;->d Ljava/lang/Object;
+	192     (000002e0) move-object/from16   v13, v59
+	193     (000002e4) if-ne                v12, v13, -011h
+
+LLClassStyleAppearanceCard-BB@0x2e8 : [ LLClassStyleAppearanceCard-BB@0x2f0 ]
+	194     (000002e8) goto                 +4h
+
+LLClassStyleAppearanceCard-BB@0x2ea : [ LLClassStyleAppearanceCard-BB@0x2f0 ]
+	195     (000002ea) move-object/from16   v13, v59
+	196     (000002ee) const/4              v3, 0
+
+LLClassStyleAppearanceCard-BB@0x2f0 : [ LLClassStyleAppearanceCard-BB@0x2f8 LLClassStyleAppearanceCard-BB@0x308 ]
+	197     (000002f0) check-cast           v3, Lqh2;
+	198     (000002f4) if-eqz               v3, +00ah
+
+LLClassStyleAppearanceCard-BB@0x2f8 : [ LLClassStyleAppearanceCard-BB@0x304 LLClassStyleAppearanceCard-BB@0x308 ]
+	199     (000002f8) iget-object          v2, v3, Lqh2;->e Ljava/lang/Object;
+	200     (000002fc) check-cast           v2, Ljava/lang/String;
+	201     (00000300) if-eqz               v2, +004h
+
+LLClassStyleAppearanceCard-BB@0x304 : [ LLClassStyleAppearanceCard-BB@0x30c ]
+	202     (00000304) const/4              v3, 0
+	203     (00000306) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x308 : [ LLClassStyleAppearanceCard-BB@0x304 ]
+	204     (00000308) move-object          v2, v15
+	205     (0000030a) goto                 -3h
+
+LLClassStyleAppearanceCard-BB@0x30c : [ LLClassStyleAppearanceCard-BB@0x338 LLClassStyleAppearanceCard-BB@0x33c ]
+	206     (0000030c) invoke-static        v0, v3, Lcom/lele/llmonitor/ui/theme/ThemeKt;->isAppInDarkTheme(Lt10; I)Z
+	207     (00000312) move-result          v31
+	208     (00000314) invoke-static        v0, v3, Lcom/lele/llmonitor/ui/wallpaper/HomeWallpaperViewportKt;->rememberHomeWallpaperViewportSize(Lt10; I)J
+	209     (0000031a) move-result-wide     v14
+	210     (0000031c) invoke-virtual       v0, v14, v15, Lb20;->e(J)Z
+	211     (00000322) move-result          v3
+	212     (00000324) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	213     (0000032a) move-result-object   v12
+	214     (0000032c) const/16             v20, 0
+	215     (00000330) sget-object          v11, Lr10;->a Li41;
+	216     (00000334) if-nez               v3, +004h
+
+LLClassStyleAppearanceCard-BB@0x338 : [ LLClassStyleAppearanceCard-BB@0x33c LLClassStyleAppearanceCard-BB@0x346 ]
+	217     (00000338) if-ne                v12, v11, +007h
+
+LLClassStyleAppearanceCard-BB@0x33c : [ LLClassStyleAppearanceCard-BB@0x350 ]
+	218     (0000033c) move-object/from16   v32, v1
+	219     (00000340) move-object/from16   v33, v2
+	220     (00000344) goto                 +6h
+
+LLClassStyleAppearanceCard-BB@0x346 : [ LLClassStyleAppearanceCard-BB@0x398 ]
+	221     (00000346) move-object/from16   v32, v1
+	222     (0000034a) move-object/from16   v33, v2
+	223     (0000034e) goto                 +25h
+
+LLClassStyleAppearanceCard-BB@0x350 : [ LLClassStyleAppearanceCard-BB@0x398 ]
+	224     (00000350) shr-long             v1, v14, v66
+	225     (00000354) long-to-int          v1, v1
+	226     (00000356) invoke-static        v1, Ljava/lang/Float;->intBitsToFloat(I)F
+	227     (0000035c) move-result          v1
+	228     (0000035e) const-wide           v2, 4294967295
+	229     (00000368) and-long/2addr       v2, v14
+	230     (0000036a) long-to-int          v2, v2
+	231     (0000036c) invoke-static        v2, Ljava/lang/Float;->intBitsToFloat(I)F
+	232     (00000372) move-result          v2
+	233     (00000374) div-float/2addr      v1, v2
+	234     (00000376) const                v2, 1050253722
+	235     (0000037c) const                v3, 1060320051
+	236     (00000382) invoke-static        v1, v2, v3, Lib1;->k(F F F)F
+	237     (00000388) move-result          v1
+	238     (0000038a) invoke-static        v1, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	239     (00000390) move-result-object   v12
+	240     (00000392) invoke-virtual       v0, v12, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x398 : [ LLClassStyleAppearanceCard-BB@0x3ea LLClassStyleAppearanceCard-BB@0x412 ]
+	241     (00000398) check-cast           v12, Ljava/lang/Number;
+	242     (0000039c) invoke-virtual       v12, Ljava/lang/Number;->floatValue()F
+	243     (000003a2) move-result          v35
+	244     (000003a4) sget-object          v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperManager;
+	245     (000003a8) invoke-virtual       v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->isEnabled()Ll52;
+	246     (000003ae) move-result-object   v2
+	247     (000003b0) invoke-virtual       v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->getWallpaperAlpha()Ll52;
+	248     (000003b6) move-result-object   v3
+	249     (000003b8) invoke-virtual       v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->getWallpaperBlur()Ll52;
+	250     (000003be) move-result-object   v12
+	251     (000003c0) invoke-virtual       v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->getWallpaperFile()Ll52;
+	252     (000003c6) move-result-object   v36
+	253     (000003c8) invoke-virtual       v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->getHistoryFiles()Ll52;
+	254     (000003ce) move-result-object   v39
+	255     (000003d0) sget-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	256     (000003d4) invoke-virtual       v1, Lcom/lele/llmonitor/data/SettingsManager;->getHomeCardOpacity()Ll52;
+	257     (000003da) move-result-object   v1
+	258     (000003dc) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	259     (000003e2) move-result-object   v14
+	260     (000003e4) const/4              v15, 0
+	261     (000003e6) if-ne                v14, v11, +016h
+
+LLClassStyleAppearanceCard-BB@0x3ea : [ LLClassStyleAppearanceCard-BB@0x412 ]
+	262     (000003ea) invoke-static        v1, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$7(Ll52;)F
+	263     (000003f0) move-result          v14
+	264     (000003f2) const/high16         v4, 1065353216
+	265     (000003f6) sub-float            v14, v4, v14
+	266     (000003fa) invoke-static        v14, v15, v4, Lib1;->k(F F F)F
+	267     (00000400) move-result          v4
+	268     (00000402) new-instance         v14, Lci2;
+	269     (00000406) invoke-direct        v14, v4, Lci2;-><init>(F)V
+	270     (0000040c) invoke-virtual       v0, v14, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x412 : [ LLClassStyleAppearanceCard-BB@0x424 LLClassStyleAppearanceCard-BB@0x436 ]
+	271     (00000412) move-object          v4, v14
+	272     (00000414) check-cast           v4, Lc42;
+	273     (00000418) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	274     (0000041e) move-result-object   v14
+	275     (00000420) if-ne                v14, v11, +00bh
+
+LLClassStyleAppearanceCard-BB@0x424 : [ LLClassStyleAppearanceCard-BB@0x436 ]
+	276     (00000424) sget-object          v14, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+	277     (00000428) invoke-static        v14, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	278     (0000042e) move-result-object   v14
+	279     (00000430) invoke-virtual       v0, v14, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x436 : [ LLClassStyleAppearanceCard-BB@0x446 LLClassStyleAppearanceCard-BB@0x466 ]
+	280     (00000436) check-cast           v14, Ll52;
+	281     (0000043a) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	282     (00000440) move-result-object   v15
+	283     (00000442) if-ne                v15, v11, +012h
+
+LLClassStyleAppearanceCard-BB@0x446 : [ LLClassStyleAppearanceCard-BB@0x46a ]
+	284     (00000446) invoke-static        v3, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$3(Ll52;)F
+	285     (0000044c) move-result          v15
+	286     (0000044e) move-object/from16   v34, v5
+	287     (00000452) new-instance         v5, Lci2;
+	288     (00000456) invoke-direct        v5, v15, Lci2;-><init>(F)V
+	289     (0000045c) invoke-virtual       v0, v5, Lb20;->j0(Ljava/lang/Object;)V
+	290     (00000462) move-object          v15, v5
+	291     (00000464) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x466 : [ LLClassStyleAppearanceCard-BB@0x46a ]
+	292     (00000466) move-object/from16   v34, v5
+
+LLClassStyleAppearanceCard-BB@0x46a : [ LLClassStyleAppearanceCard-BB@0x47c LLClassStyleAppearanceCard-BB@0x48e ]
+	293     (0000046a) move-object          v5, v15
+	294     (0000046c) check-cast           v5, Lc42;
+	295     (00000470) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	296     (00000476) move-result-object   v15
+	297     (00000478) if-ne                v15, v11, +00bh
+
+LLClassStyleAppearanceCard-BB@0x47c : [ LLClassStyleAppearanceCard-BB@0x48e ]
+	298     (0000047c) sget-object          v15, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+	299     (00000480) invoke-static        v15, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	300     (00000486) move-result-object   v15
+	301     (00000488) invoke-virtual       v0, v15, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x48e : [ LLClassStyleAppearanceCard-BB@0x49e LLClassStyleAppearanceCard-BB@0x4b8 ]
+	302     (0000048e) check-cast           v15, Ll52;
+	303     (00000492) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	304     (00000498) move-result-object   v6
+	305     (0000049a) if-ne                v6, v11, +00fh
+
+LLClassStyleAppearanceCard-BB@0x49e : [ LLClassStyleAppearanceCard-BB@0x4b8 ]
+	306     (0000049e) invoke-static        v12, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$4(Ll52;)F
+	307     (000004a4) move-result          v6
+	308     (000004a6) new-instance         v7, Lci2;
+	309     (000004aa) invoke-direct        v7, v6, Lci2;-><init>(F)V
+	310     (000004b0) invoke-virtual       v0, v7, Lb20;->j0(Ljava/lang/Object;)V
+	311     (000004b6) move-object          v6, v7
+
+LLClassStyleAppearanceCard-BB@0x4b8 : [ LLClassStyleAppearanceCard-BB@0x4c8 LLClassStyleAppearanceCard-BB@0x4da ]
+	312     (000004b8) check-cast           v6, Lc42;
+	313     (000004bc) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	314     (000004c2) move-result-object   v7
+	315     (000004c4) if-ne                v7, v11, +00bh
+
+LLClassStyleAppearanceCard-BB@0x4c8 : [ LLClassStyleAppearanceCard-BB@0x4da ]
+	316     (000004c8) sget-object          v7, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+	317     (000004cc) invoke-static        v7, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	318     (000004d2) move-result-object   v7
+	319     (000004d4) invoke-virtual       v0, v7, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x4da : [ LLClassStyleAppearanceCard-BB@0x4ea LLClassStyleAppearanceCard-BB@0x4f8 ]
+	320     (000004da) check-cast           v7, Ll52;
+	321     (000004de) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	322     (000004e4) move-result-object   v8
+	323     (000004e6) if-ne                v8, v11, +009h
+
+LLClassStyleAppearanceCard-BB@0x4ea : [ LLClassStyleAppearanceCard-BB@0x4f8 ]
+	324     (000004ea) invoke-static/range  v20, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	325     (000004f0) move-result-object   v8
+	326     (000004f2) invoke-virtual       v0, v8, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x4f8 : [ LLClassStyleAppearanceCard-BB@0x51c LLClassStyleAppearanceCard-BB@0x520 ]
+	327     (000004f8) check-cast           v8, Ll52;
+	328     (000004fc) new-instance         v10, Lu3;
+	329     (00000500) const/4              v13, 0
+	330     (00000502) invoke-direct        v10, v13, Lu3;-><init>(I)V
+	331     (00000508) const/high16         v13, 234881024
+	332     (0000050c) and-int              v13, v19, v13
+	333     (00000510) move-object/from16   v43, v2
+	334     (00000514) const/high16         v2, 67108864
+	335     (00000518) if-ne                v13, v2, +004h
+
+LLClassStyleAppearanceCard-BB@0x51c : [ LLClassStyleAppearanceCard-BB@0x522 ]
+	336     (0000051c) const/4              v2, 1
+	337     (0000051e) goto                 +2h
+
+LLClassStyleAppearanceCard-BB@0x520 : [ LLClassStyleAppearanceCard-BB@0x522 ]
+	338     (00000520) const/4              v2, 0
+
+LLClassStyleAppearanceCard-BB@0x522 : [ LLClassStyleAppearanceCard-BB@0x52e LLClassStyleAppearanceCard-BB@0x538 ]
+	339     (00000522) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	340     (00000528) move-result-object   v13
+	341     (0000052a) if-nez               v2, +007h
+
+LLClassStyleAppearanceCard-BB@0x52e : [ LLClassStyleAppearanceCard-BB@0x532 LLClassStyleAppearanceCard-BB@0x534 ]
+	342     (0000052e) if-ne                v13, v11, +003h
+
+LLClassStyleAppearanceCard-BB@0x532 : [ LLClassStyleAppearanceCard-BB@0x538 ]
+	343     (00000532) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x534 : [ LLClassStyleAppearanceCard-BB@0x54a ]
+	344     (00000534) const/4              v2, 1
+	345     (00000536) goto                 +ah
+
+LLClassStyleAppearanceCard-BB@0x538 : [ LLClassStyleAppearanceCard-BB@0x54a ]
+	346     (00000538) new-instance         v13, Lea0;
+	347     (0000053c) const/4              v2, 1
+	348     (0000053e) invoke-direct        v13, v2, v9, Lea0;-><init>(I Ld11;)V
+	349     (00000544) invoke-virtual       v0, v13, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x54a : [ LLClassStyleAppearanceCard-BB@0x58c LLClassStyleAppearanceCard-BB@0x590 ]
+	350     (0000054a) check-cast           v13, Ld11;
+	351     (0000054e) const/4              v2, 0
+	352     (00000550) invoke-static        v10, v13, v0, v2, Lmi1;->F(Lq3; Ld11; Lb20; I)Lhz1;
+	353     (00000556) move-result-object   v38
+	354     (00000558) invoke-static        v3, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$3(Ll52;)F
+	355     (0000055e) move-result          v2
+	356     (00000560) invoke-static        v2, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	357     (00000566) move-result-object   v2
+	358     (00000568) invoke-static        v15, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$18(Ll52;)Z
+	359     (0000056e) move-result          v10
+	360     (00000570) invoke-static        v10, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	361     (00000576) move-result-object   v10
+	362     (00000578) invoke-virtual       v0, v3, Lb20;->f(Ljava/lang/Object;)Z
+	363     (0000057e) move-result          v13
+	364     (00000580) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	365     (00000586) move-result-object   v9
+	366     (00000588) if-nez               v13, +004h
+
+LLClassStyleAppearanceCard-BB@0x58c : [ LLClassStyleAppearanceCard-BB@0x590 LLClassStyleAppearanceCard-BB@0x5a4 ]
+	367     (0000058c) if-ne                v9, v11, +00ch
+
+LLClassStyleAppearanceCard-BB@0x590 : [ LLClassStyleAppearanceCard-BB@0x5a4 ]
+	368     (00000590) new-instance         v9, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$1$1;
+	369     (00000594) move-object/from16   v13, v20
+	370     (00000598) invoke-direct        v9, v15, v3, v5, v13, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$1$1;-><init>(Ll52; Ll52; Lc42; Ln60;)V
+	371     (0000059e) invoke-virtual       v0, v9, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x5a4 : [ LLClassStyleAppearanceCard-BB@0x5e2 LLClassStyleAppearanceCard-BB@0x5e6 ]
+	372     (000005a4) check-cast           v9, Lh11;
+	373     (000005a8) invoke-static        v2, v10, v9, v0, Lr7;->k(Ljava/lang/Object; Ljava/lang/Object; Lh11; Lt10;)V
+	374     (000005ae) invoke-static        v1, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$7(Ll52;)F
+	375     (000005b4) move-result          v2
+	376     (000005b6) invoke-static        v2, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	377     (000005bc) move-result-object   v2
+	378     (000005be) invoke-static        v14, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$12(Ll52;)Z
+	379     (000005c4) move-result          v9
+	380     (000005c6) invoke-static        v9, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	381     (000005cc) move-result-object   v9
+	382     (000005ce) invoke-virtual       v0, v1, Lb20;->f(Ljava/lang/Object;)Z
+	383     (000005d4) move-result          v10
+	384     (000005d6) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	385     (000005dc) move-result-object   v13
+	386     (000005de) if-nez               v10, +004h
+
+LLClassStyleAppearanceCard-BB@0x5e2 : [ LLClassStyleAppearanceCard-BB@0x5e6 LLClassStyleAppearanceCard-BB@0x5f8 ]
+	387     (000005e2) if-ne                v13, v11, +00bh
+
+LLClassStyleAppearanceCard-BB@0x5e6 : [ LLClassStyleAppearanceCard-BB@0x5f8 ]
+	388     (000005e6) new-instance         v13, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$2$1;
+	389     (000005ea) const/4              v10, 0
+	390     (000005ec) invoke-direct        v13, v14, v1, v4, v10, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$2$1;-><init>(Ll52; Ll52; Lc42; Ln60;)V
+	391     (000005f2) invoke-virtual       v0, v13, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x5f8 : [ LLClassStyleAppearanceCard-BB@0x636 LLClassStyleAppearanceCard-BB@0x640 ]
+	392     (000005f8) check-cast           v13, Lh11;
+	393     (000005fc) invoke-static        v2, v9, v13, v0, Lr7;->k(Ljava/lang/Object; Ljava/lang/Object; Lh11; Lt10;)V
+	394     (00000602) invoke-static        v12, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$4(Ll52;)F
+	395     (00000608) move-result          v1
+	396     (0000060a) invoke-static        v1, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	397     (00000610) move-result-object   v1
+	398     (00000612) invoke-static        v7, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$24(Ll52;)Z
+	399     (00000618) move-result          v2
+	400     (0000061a) invoke-static        v2, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	401     (00000620) move-result-object   v2
+	402     (00000622) invoke-virtual       v0, v12, Lb20;->f(Ljava/lang/Object;)Z
+	403     (00000628) move-result          v9
+	404     (0000062a) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	405     (00000630) move-result-object   v10
+	406     (00000632) if-nez               v9, +007h
+
+LLClassStyleAppearanceCard-BB@0x636 : [ LLClassStyleAppearanceCard-BB@0x63a LLClassStyleAppearanceCard-BB@0x63c ]
+	407     (00000636) if-ne                v10, v11, +003h
+
+LLClassStyleAppearanceCard-BB@0x63a : [ LLClassStyleAppearanceCard-BB@0x640 ]
+	408     (0000063a) goto                 +3h
+
+LLClassStyleAppearanceCard-BB@0x63c : [ LLClassStyleAppearanceCard-BB@0x652 ]
+	409     (0000063c) const/4              v13, 0
+	410     (0000063e) goto                 +ah
+
+LLClassStyleAppearanceCard-BB@0x640 : [ LLClassStyleAppearanceCard-BB@0x652 ]
+	411     (00000640) new-instance         v10, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$3$1;
+	412     (00000644) const/4              v13, 0
+	413     (00000646) invoke-direct        v10, v7, v12, v6, v13, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt$LLClassStyleAppearanceCard$3$1;-><init>(Ll52; Ll52; Lc42; Ln60;)V
+	414     (0000064c) invoke-virtual       v0, v10, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x652 : [ LLClassStyleAppearanceCard-BB@0x668 LLClassStyleAppearanceCard-BB@0x690 ]
+	415     (00000652) check-cast           v10, Lh11;
+	416     (00000656) invoke-static        v1, v2, v10, v0, Lr7;->k(Ljava/lang/Object; Ljava/lang/Object; Lh11; Lt10;)V
+	417     (0000065c) invoke-static        v8, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$27(Ll52;)Ljava/lang/String;
+	418     (00000662) move-result-object   v1
+	419     (00000664) if-nez               v1, +016h
+
+LLClassStyleAppearanceCard-BB@0x668 : [ LLClassStyleAppearanceCard-BB@0x768 ]
+	420     (00000668) const                v1, 117544502
+	421     (0000066e) invoke-virtual       v0, v1, Lb20;->Y(I)V
+	422     (00000674) const/4              v2, 0
+	423     (00000676) invoke-virtual       v0, v2, Lb20;->p(Z)V
+	424     (0000067c) move-object          v11, v0
+	425     (0000067e) move                 v9, v2
+	426     (00000680) move-object          v1, v14
+	427     (00000682) move-object/from16   v44, v15
+	428     (00000686) move-object/from16   v0, v36
+	429     (0000068a) const/4              v2, 0
+	430     (0000068c) const/4              v10, 1
+	431     (0000068e) goto                 +6dh
+
+LLClassStyleAppearanceCard-BB@0x690 : [ LLClassStyleAppearanceCard-BB@0x6aa LLClassStyleAppearanceCard-BB@0x6be ]
+	432     (00000690) const/4              v2, 0
+	433     (00000692) const                v9, 117544503
+	434     (00000698) invoke-virtual       v0, v9, Lb20;->Y(I)V
+	435     (0000069e) invoke-virtual       v0, Lb20;->L()Ljava/lang/Object;
+	436     (000006a4) move-result-object   v9
+	437     (000006a6) if-ne                v9, v11, +00ch
+
+LLClassStyleAppearanceCard-BB@0x6aa : [ LLClassStyleAppearanceCard-BB@0x6be ]
+	438     (000006aa) new-instance         v9, Lwb;
+	439     (000006ae) const/16             v10, 14
+	440     (000006b2) invoke-direct        v9, v8, v10, Lwb;-><init>(Ll52; I)V
+	441     (000006b8) invoke-virtual       v0, v9, Lb20;->j0(Ljava/lang/Object;)V
+
+LLClassStyleAppearanceCard-BB@0x6be : [ LLClassStyleAppearanceCard-BB@0x768 ]
+	442     (000006be) move-object          v11, v9
+	443     (000006c0) check-cast           v11, Ls01;
+	444     (000006c4) new-instance         v9, Lyn;
+	445     (000006c8) const/16             v10, 18
+	446     (000006cc) invoke-direct        v9, v10, v1, v8, Lyn;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	447     (000006d2) const                v1, -780655274
+	448     (000006d8) invoke-static        v1, v9, v0, Ln54;->K(I Lp11; Lt10;)Lc00;
+	449     (000006de) move-result-object   v12
+	450     (000006e0) new-instance         v1, Lwr0;
+	451     (000006e4) const/4              v9, 3
+	452     (000006e6) invoke-direct        v1, v8, v9, Lwr0;-><init>(Ll52; I)V
+	453     (000006ec) const                v9, 960987924
+	454     (000006f2) invoke-static        v9, v1, v0, Ln54;->K(I Lp11; Lt10;)Lc00;
+	455     (000006f8) move-result-object   v1
+	456     (000006fa) sget-object          v9, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->INSTANCE Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;
+	457     (000006fe) invoke-virtual       v9, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->getLambda$-1592336174$app()Lh11;
+	458     (00000704) move-result-object   v16
+	459     (00000706) invoke-virtual       v9, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->getLambda$-721514575$app()Lh11;
+	460     (0000070c) move-result-object   v9
+	461     (0000070e) const                v29, 1772598
+	462     (00000714) const/16             v30, 16276
+	463     (00000718) move-object/from16   v20, v13
+	464     (0000071c) const/4              v13, 0
+	465     (0000071e) move-object/from16   v44, v15
+	466     (00000722) const/4              v15, 0
+	467     (00000724) const/16             v18, 0
+	468     (00000728) move-object/from16   v10, v20
+	469     (0000072c) const-wide/16        v19, 0
+	470     (00000730) const-wide/16        v21, 0
+	471     (00000734) const-wide/16        v23, 0
+	472     (00000738) const-wide/16        v25, 0
+	473     (0000073c) const/16             v27, 0
+	474     (00000740) move-object          v10, v14
+	475     (00000742) move-object          v14, v1
+	476     (00000744) move-object          v1, v10
+	477     (00000746) move-object/from16   v28, v0
+	478     (0000074a) move-object/from16   v17, v9
+	479     (0000074e) move-object/from16   v0, v36
+	480     (00000752) const/4              v10, 1
+	481     (00000754) move                 v9, v2
+	482     (00000756) const/4              v2, 0
+	483     (00000758) invoke-static/range  v11 ... v30, Ll02;->a(Ls01; Lc00; Lm22; Lh11; Lh11; Lh11; Lh11; Lv93; J J J J Lfh0; Lt10; I I)V
+	484     (0000075e) move-object/from16   v11, v28
+	485     (00000762) invoke-virtual       v11, v9, Lb20;->p(Z)V
+
+LLClassStyleAppearanceCard-BB@0x768 : [ LLClassStyleAppearanceCard-BB@0x780 LLClassStyleAppearanceCard-BB@0x78c ]
+	486     (00000768) const-string         v12, "显示模式"
+	487     (0000076c) invoke-static        v12, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	488     (00000772) move-result-object   v12
+	489     (00000774) sget-object          v13, Lse1;->a Lmd1;
+	490     (00000778) const/high16         v14, 1094713344
+	491     (0000077c) if-eqz               v13, +008h
+
+LLClassStyleAppearanceCard-BB@0x780 : [ LLClassStyleAppearanceCard-BB@0x784 ]
+	492     (00000780) move-object/from16   v28, v11
+
+LLClassStyleAppearanceCard-BB@0x784 : [ LLClassStyleAppearanceCard-BB@0x960 ]
+	493     (00000784) move-object          v14, v13
+	494     (00000786) const/4              v9, 0
+	495     (00000788) goto/16              +0ech
+
+LLClassStyleAppearanceCard-BB@0x78c : [ LLClassStyleAppearanceCard-BB@0x784 ]
+	496     (0000078c) new-instance         v15, Lld1;
+	497     (00000790) const/16             v23, 0
+	498     (00000794) const/16             v25, 96
+	499     (00000798) const-string         v16, "Rounded.InvertColors"
+	500     (0000079c) const/high16         v17, 1103101952
+	501     (000007a0) const/high16         v18, 1103101952
+	502     (000007a4) const/high16         v19, 1103101952
+	503     (000007a8) const/high16         v20, 1103101952
+	504     (000007ac) const-wide/16        v21, 0
+	505     (000007b0) const/16             v24, 0
+	506     (000007b4) invoke-direct/range  v15 ... v25, Lld1;-><init>(Ljava/lang/String; F F F F J I Z I)V
+	507     (000007ba) sget                 v13, Lay3;->a I
+	508     (000007be) new-instance         v13, Lxe3;
+	509     (000007c2) move-object/from16   v28, v11
+	510     (000007c6) sget-wide            v10, Lfx;->b J
+	511     (000007ca) invoke-direct        v13, v10, v11, Lxe3;-><init>(J)V
+	512     (000007d0) new-instance         v10, Lxz0;
+	513     (000007d4) const/4              v11, 2
+	514     (000007d6) invoke-direct        v10, v11, v9, Lxz0;-><init>(I Z)V
+	515     (000007dc) const                v11, 1083829125
+	516     (000007e2) invoke-virtual       v10, v14, v11, Lxz0;->m(F F)V
+	517     (000007e8) const/high16         v9, 1100480512
+	518     (000007ec) invoke-virtual       v10, v14, v9, Lxz0;->k(F F)V
+	519     (000007f2) const/high16         v52, -1061158912
+	520     (000007f6) const                v53, -1061431542
+	521     (000007fc) const                v48, -1068247286
+	522     (00000802) const/16             v49, 0
+	523     (00000806) const/high16         v50, -1061158912
+	524     (0000080a) const                v51, -1071099412
+	525     (00000810) move-object/from16   v47, v10
+	526     (00000814) invoke-virtual/range v47 ... v53, Lxz0;->g(F F F F F F)V
+	527     (0000081a) const/high16         v52, 1071644672
+	528     (0000081e) const                v53, -1065059615
+	529     (00000824) const/16             v48, 0
+	530     (00000828) const                v49, -1077432812
+	531     (0000082e) const                v50, 1058977874
+	532     (00000834) const                v51, -1069421691
+	533     (0000083a) invoke-virtual/range v47 ... v53, Lxz0;->g(F F F F F F)V
+	534     (00000840) move-object/from16   v9, v47
+	535     (00000844) invoke-virtual       v9, v14, v11, Lxz0;->k(F F)V
+	536     (0000084a) const                v10, 1087058739
+	537     (00000850) const                v11, 1089596293
+	538     (00000856) invoke-virtual       v9, v10, v11, Lxz0;->m(F F)V
+	539     (0000085c) invoke-virtual       v9, v10, v11, Lxz0;->k(F F)V
+	540     (00000862) const/high16         v52, 1082130432
+	541     (00000866) const                v53, 1095898235
+	542     (0000086c) const                v48, 1084017869
+	543     (00000872) const                v49, 1091557130
+	544     (00000878) const/high16         v50, 1082130432
+	545     (0000087c) const                v51, 1093622825
+	546     (00000882) invoke-virtual/range v47 ... v53, Lxz0;->f(F F F F F F)V
+	547     (00000888) const/high16         v52, 1094713344
+	548     (0000088c) const/high16         v53, 1101529088
+	549     (00000890) const/high16         v48, 1082130432
+	550     (00000894) const                v49, 1099683594
+	551     (0000089a) const                v50, 1089638236
+	552     (000008a0) const/high16         v51, 1101529088
+	553     (000008a4) invoke-virtual/range v47 ... v53, Lxz0;->f(F F F F F F)V
+	554     (000008aa) const/high16         v52, 1090519040
+	555     (000008ae) const                v53, -1057237238
+	556     (000008b4) const                v48, 1083011236
+	557     (000008ba) const/16             v49, 0
+	558     (000008be) const/high16         v50, 1090519040
+	559     (000008c2) const                v51, -1067366482
+	560     (000008c8) invoke-virtual/range v47 ... v53, Lxz0;->g(F F F F F F)V
+	561     (000008ce) const                v52, -1072273818
+	562     (000008d4) const                v53, -1062060687
+	563     (000008da) const/16             v48, 0
+	564     (000008de) const                v49, -1073028792
+	565     (000008e4) const                v50, -1083808154
+	566     (000008ea) const                v51, -1065059615
+	567     (000008f0) invoke-virtual/range v47 ... v53, Lxz0;->g(F F F F F F)V
+	568     (000008f6) invoke-virtual       v9, v2, v2, Lxz0;->l(F F)V
+	569     (000008fc) const                v14, 1095447347
+	570     (00000902) const                v2, 1076635894
+	571     (00000908) invoke-virtual       v9, v14, v2, Lxz0;->k(F F)V
+	572     (0000090e) const                v52, -1078774989
+	573     (00000914) const/16             v53, 0
+	574     (00000918) const                v48, -1094210028
+	575     (0000091e) const                v49, -1094545572
+	576     (00000924) const                v50, -1082046546
+	577     (0000092a) const                v51, -1094545572
+	578     (00000930) invoke-virtual/range v47 ... v53, Lxz0;->g(F F F F F F)V
+	579     (00000936) invoke-virtual       v9, v10, v11, Lxz0;->k(F F)V
+	580     (0000093c) invoke-virtual       v9, Lxz0;->e()V
+	581     (00000942) iget-object          v2, v9, Lxz0;->a Ljava/util/ArrayList;
+	582     (00000946) invoke-static        v15, v2, v13, Lld1;->a(Lld1; Ljava/util/ArrayList; Lxe3;)V
+	583     (0000094c) invoke-virtual       v15, Lld1;->b()Lmd1;
+	584     (00000952) move-result-object   v13
+	585     (00000954) sput-object          v13, Lse1;->a Lmd1;
+	586     (00000958) const/4              v2, 0
+	587     (0000095a) const/4              v10, 1
+	588     (0000095c) goto/16              -0ech
+
+LLClassStyleAppearanceCard-BB@0x960 : [ LLClassStyleAppearanceCard-BB@0xa10 LLClassStyleAppearanceCard-BB@0xa1a ]
+	589     (00000960) invoke-static        v2, v10, v9, Lcom/lele/llmonitor/ui/settings/SettingsUiKitKt;->settingsCardOuterPadding-0680j_4$default(F I Ljava/lang/Object;)Ljg2;
+	590     (00000966) move-result-object   v11
+	591     (00000968) sget-object          v2, Lj22;->a Lj22;
+	592     (0000096c) invoke-static        v2, v11, Ln54;->C(Lm22; Ljg2;)Lm22;
+	593     (00000972) move-result-object   v10
+	594     (00000974) move-object/from16   v37, v3
+	595     (00000978) new-instance         v3, Lv73;
+	596     (0000097c) move-object/from16   v24, v4
+	597     (00000980) move-object/from16   v42, v5
+	598     (00000984) move-object/from16   v40, v6
+	599     (00000988) move-object/from16   v45, v7
+	600     (0000098c) move-object/from16   v41, v8
+	601     (00000990) move-object/from16   v5, v34
+	602     (00000994) move/from16          v4, v57
+	603     (00000998) move-object/from16   v7, v58
+	604     (0000099c) move-object/from16   v6, v61
+	605     (000009a0) move-object/from16   v8, v62
+	606     (000009a4) invoke-direct/range  v3 ... v8, Lv73;-><init>(I Ljava/util/List; Ld11; Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Ld11;)V
+	607     (000009aa) const                v4, 693214863
+	608     (000009b0) move-object/from16   v11, v28
+	609     (000009b4) invoke-static        v4, v3, v11, Ln54;->K(I Lp11; Lt10;)Lc00;
+	610     (000009ba) move-result-object   v17
+	611     (000009bc) const/high16         v19, 1572864
+	612     (000009c0) const/16             v20, 52
+	613     (000009c4) const/4              v13, 0
+	614     (000009c6) const/4              v15, 0
+	615     (000009c8) const/16             v16, 0
+	616     (000009cc) move-object/from16   v18, v11
+	617     (000009d0) move-object          v11, v12
+	618     (000009d2) const/high16         v3, 1094713344
+	619     (000009d6) move-object          v12, v10
+	620     (000009d8) invoke-static/range  v11 ... v20, Lcom/lele/llmonitor/ui/settings/SettingsSectionCardKt;->SettingsSectionCard(Ljava/lang/String; Lm22; Ljava/lang/String; Lmd1; Z Li11; Li11; Lt10; I I)V
+	621     (000009de) move-object/from16   v4, v18
+	622     (000009e2) const/4              v13, 0
+	623     (000009e4) invoke-static        v4, v13, Lcom/lele/llmonitor/ui/components/HdrGlowWrapperKt;->rememberActiveRingRotationState(Lt10; I)Lcg3;
+	624     (000009ea) move-result-object   v5
+	625     (000009ec) const-string         v6, "主题配色"
+	626     (000009f0) invoke-static        v6, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	627     (000009f6) move-result-object   v6
+	628     (000009f8) sget-object          v7, Lid1;->c Lmd1;
+	629     (000009fc) const/high16         v8, 1073741824
+	630     (00000a00) const/high16         v10, 1090519040
+	631     (00000a04) const/high16         v11, 1092616192
+	632     (00000a08) const/high16         v12, 1098907648
+	633     (00000a0c) if-eqz               v7, +007h
+
+LLClassStyleAppearanceCard-BB@0xa10 : [ LLClassStyleAppearanceCard-BB@0xa12 ]
+	634     (00000a10) move-object          v13, v9
+
+LLClassStyleAppearanceCard-BB@0xa12 : [ LLClassStyleAppearanceCard-BB@0xd9e ]
+	635     (00000a12) const/4              v9, 0
+	636     (00000a14) const/4              v11, 1
+	637     (00000a16) goto/16              +1c4h
+
+LLClassStyleAppearanceCard-BB@0xa1a : [ LLClassStyleAppearanceCard-BB@0xa12 ]
+	638     (00000a1a) new-instance         v46, Lld1;
+	639     (00000a1e) const/16             v54, 0
+	640     (00000a22) const/16             v56, 96
+	641     (00000a26) const/16             v55, 0
+	642     (00000a2a) const/high16         v48, 1103101952
+	643     (00000a2e) const/high16         v49, 1103101952
+	644     (00000a32) const/high16         v50, 1103101952
+	645     (00000a36) const/high16         v51, 1103101952
+	646     (00000a3a) const-wide/16        v52, 0
+	647     (00000a3e) const-string         v47, "Rounded.Palette"
+	648     (00000a42) invoke-direct/range  v46 ... v56, Lld1;-><init>(Ljava/lang/String; F F F F J I Z I)V
+	649     (00000a48) move-object/from16   v7, v46
+	650     (00000a4c) sget                 v13, Lay3;->a I
+	651     (00000a50) new-instance         v13, Lxe3;
+	652     (00000a54) sget-wide            v14, Lfx;->b J
+	653     (00000a58) invoke-direct        v13, v14, v15, Lxe3;-><init>(J)V
+	654     (00000a5e) new-instance         v14, Lxz0;
+	655     (00000a62) const/4              v9, 0
+	656     (00000a64) const/4              v15, 2
+	657     (00000a66) invoke-direct        v14, v15, v9, Lxz0;-><init>(I Z)V
+	658     (00000a6c) invoke-virtual       v14, v3, v8, Lxz0;->m(F F)V
+	659     (00000a72) const/high16         v51, 1073741824
+	660     (00000a76) const/high16         v52, 1094713344
+	661     (00000a7a) const                v47, 1087352340
+	662     (00000a80) const/high16         v48, 1073741824
+	663     (00000a84) const/high16         v49, 1073741824
+	664     (00000a88) const                v50, 1087352340
+	665     (00000a8e) move-object/from16   v46, v14
+	666     (00000a92) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	667     (00000a98) move-object/from16   v9, v46
+	668     (00000a9c) const                v14, 1083158036
+	669     (00000aa2) invoke-virtual       v9, v14, v11, v11, v11, Lxz0;->o(F F F F)V
+	670     (00000aa8) const/high16         v51, 1075838976
+	671     (00000aac) const/high16         v52, -1071644672
+	672     (00000ab0) const                v47, 1068540887
+	673     (00000ab6) const/16             v48, 0
+	674     (00000aba) const/high16         v49, 1075838976
+	675     (00000abe) const                v50, -1081123799
+	676     (00000ac4) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	677     (00000aca) const                v51, -1088170230
+	678     (00000ad0) const                v52, -1076510065
+	679     (00000ad6) const/16             v47, 0
+	680     (00000ada) const                v48, -1088673546
+	681     (00000ae0) const                v49, -1100249825
+	682     (00000ae6) const                v50, -1080452710
+	683     (00000aec) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	684     (00000af2) const                v51, -1106960712
+	685     (00000af8) const                v52, -1096223293
+	686     (00000afe) const                v47, -1113336054
+	687     (00000b04) const                v48, -1110651699
+	688     (00000b0a) const                v49, -1106960712
+	689     (00000b10) const                v50, -1101592003
+	690     (00000b16) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	691     (00000b1c) const/high16         v51, 1056964608
+	692     (00000b20) const/high16         v52, -1090519040
+	693     (00000b24) const/16             v47, 0
+	694     (00000b28) const                v48, -1097901015
+	695     (00000b2e) const                v49, 1046562734
+	696     (00000b34) const/high16         v50, -1090519040
+	697     (00000b38) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	698     (00000b3e) invoke-virtual       v9, v12, Lxz0;->i(F)V
+	699     (00000b44) const/high16         v51, 1086324736
+	700     (00000b48) const/high16         v52, -1061158912
+	701     (00000b4c) const                v47, 1079236362
+	702     (00000b52) const/16             v48, 0
+	703     (00000b56) const/high16         v49, 1086324736
+	704     (00000b5a) const                v50, -1070847754
+	705     (00000b60) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	706     (00000b66) const/high16         v51, 1094713344
+	707     (00000b6a) const/high16         v52, 1073741824
+	708     (00000b6e) const/high16         v47, 1102053376
+	709     (00000b72) const                v48, 1086408622
+	710     (00000b78) const                v49, 1099699323
+	711     (00000b7e) const/high16         v50, 1073741824
+	712     (00000b82) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	713     (00000b88) invoke-virtual       v9, Lxz0;->e()V
+	714     (00000b8e) const/high16         v14, 1099694080
+	715     (00000b92) const/high16         v15, 1095761920
+	716     (00000b96) invoke-virtual       v9, v14, v15, Lxz0;->m(F F)V
+	717     (00000b9c) const/high16         v51, -1077936128
+	718     (00000ba0) const/high16         v52, -1077936128
+	719     (00000ba4) const                v47, -1084982559
+	720     (00000baa) const/16             v48, 0
+	721     (00000bae) const/high16         v49, -1077936128
+	722     (00000bb2) const                v50, -1087666913
+	723     (00000bb8) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	724     (00000bbe) const/high16         v51, 1069547520
+	725     (00000bc2) const/16             v47, 0
+	726     (00000bc6) const                v48, -1084982559
+	727     (00000bcc) const                v49, 1059816735
+	728     (00000bd2) const/high16         v50, -1077936128
+	729     (00000bd6) invoke-virtual/range v46 ... v52, Lxz0;->g(F F F F F F)V
+	730     (00000bdc) const                v14, 1059816735
+	731     (00000be2) const/high16         v15, 1069547520
+	732     (00000be6) invoke-virtual       v9, v15, v14, v15, v15, Lxz0;->o(F F F F)V
+	733     (00000bec) const/high16         v51, 1099694080
+	734     (00000bf0) const/high16         v52, 1095761920
+	735     (00000bf4) const/high16         v47, 1100480512
+	736     (00000bf8) const                v48, 1095059374
+	737     (00000bfe) const                v49, 1100129239
+	738     (00000c04) const/high16         v50, 1095761920
+	739     (00000c08) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	740     (00000c0e) invoke-virtual       v9, Lxz0;->e()V
+	741     (00000c14) const/high16         v14, 1097334784
+	742     (00000c18) const/high16         v15, 1091567616
+	743     (00000c1c) invoke-virtual       v9, v14, v15, Lxz0;->m(F F)V
+	744     (00000c22) const/high16         v51, 1095761920
+	745     (00000c26) const/high16         v52, 1089470464
+	746     (00000c2a) const                v47, 1096464466
+	747     (00000c30) const/high16         v48, 1091567616
+	748     (00000c34) const/high16         v49, 1095761920
+	749     (00000c38) const                v50, 1090865070
+	750     (00000c3e) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	751     (00000c44) const/high16         v51, 1097334784
+	752     (00000c48) const/high16         v52, 1086324736
+	753     (00000c4c) const/high16         v47, 1095761920
+	754     (00000c50) const                v48, 1087729828
+	755     (00000c56) const                v49, 1096464466
+	756     (00000c5c) const/high16         v50, 1086324736
+	757     (00000c60) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	758     (00000c66) const                v14, 1087729828
+	759     (00000c6c) const/high16         v15, 1089470464
+	760     (00000c70) invoke-virtual       v9, v12, v14, v12, v15, Lxz0;->n(F F F F)V
+	761     (00000c76) const/high16         v52, 1091567616
+	762     (00000c7a) const/high16         v47, 1098907648
+	763     (00000c7e) const                v48, 1090865070
+	764     (00000c84) const                v49, 1098205102
+	765     (00000c8a) const/high16         v50, 1091567616
+	766     (00000c8e) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	767     (00000c94) invoke-virtual       v9, Lxz0;->e()V
+	768     (00000c9a) const/high16         v14, 1094189056
+	769     (00000c9e) const/high16         v15, 1084227584
+	770     (00000ca2) invoke-virtual       v9, v15, v14, Lxz0;->m(F F)V
+	771     (00000ca8) const/high16         v51, 1087373312
+	772     (00000cac) const/high16         v52, 1092616192
+	773     (00000cb0) const/high16         v47, 1084227584
+	774     (00000cb4) const                v48, 1093318738
+	775     (00000cba) const                v49, 1085632676
+	776     (00000cc0) const/high16         v50, 1092616192
+	777     (00000cc4) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	778     (00000cca) const                v14, 1093318738
+	779     (00000cd0) const/high16         v15, 1094189056
+	780     (00000cd4) invoke-virtual       v9, v10, v14, v10, v15, Lxz0;->n(F F F F)V
+	781     (00000cda) const/high16         v52, 1095761920
+	782     (00000cde) const/high16         v47, 1090519040
+	783     (00000ce2) const                v48, 1095059374
+	784     (00000ce8) const                v49, 1089113948
+	785     (00000cee) const/high16         v50, 1095761920
+	786     (00000cf2) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	787     (00000cf8) const                v14, 1095059374
+	788     (00000cfe) const/high16         v11, 1084227584
+	789     (00000d02) invoke-virtual       v9, v11, v14, v11, v15, Lxz0;->n(F F F F)V
+	790     (00000d08) invoke-virtual       v9, Lxz0;->e()V
+	791     (00000d0e) const/high16         v11, 1093664768
+	792     (00000d12) const/high16         v14, 1089470464
+	793     (00000d16) invoke-virtual       v9, v11, v14, Lxz0;->m(F F)V
+	794     (00000d1c) const/high16         v51, 1092091904
+	795     (00000d20) const/high16         v52, 1091567616
+	796     (00000d24) const/high16         v47, 1093664768
+	797     (00000d28) const                v48, 1090865070
+	798     (00000d2e) const                v49, 1092962222
+	799     (00000d34) const/high16         v50, 1091567616
+	800     (00000d38) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	801     (00000d3e) const                v11, 1090865070
+	802     (00000d44) invoke-virtual       v9, v10, v11, v10, v14, Lxz0;->n(F F F F)V
+	803     (00000d4a) const/high16         v52, 1086324736
+	804     (00000d4e) const/high16         v47, 1090519040
+	805     (00000d52) const                v48, 1087729828
+	806     (00000d58) const                v49, 1091221586
+	807     (00000d5e) const/high16         v50, 1086324736
+	808     (00000d62) invoke-virtual/range v46 ... v52, Lxz0;->f(F F F F F F)V
+	809     (00000d68) const                v11, 1087729828
+	810     (00000d6e) const/high16         v14, 1093664768
+	811     (00000d72) const/high16         v15, 1089470464
+	812     (00000d76) invoke-virtual       v9, v14, v11, v14, v15, Lxz0;->n(F F F F)V
+	813     (00000d7c) invoke-virtual       v9, Lxz0;->e()V
+	814     (00000d82) iget-object          v9, v9, Lxz0;->a Ljava/util/ArrayList;
+	815     (00000d86) invoke-static        v7, v9, v13, Lld1;->a(Lld1; Ljava/util/ArrayList; Lxe3;)V
+	816     (00000d8c) invoke-virtual       v7, Lld1;->b()Lmd1;
+	817     (00000d92) move-result-object   v7
+	818     (00000d94) sput-object          v7, Lid1;->c Lmd1;
+	819     (00000d98) const/4              v13, 0
+	820     (00000d9a) goto/16              -1c4h
+
+LLClassStyleAppearanceCard-BB@0xd9e : [ LLClassStyleAppearanceCard-BB@0xe98 LLClassStyleAppearanceCard-BB@0xea2 ]
+	821     (00000d9e) invoke-static        v9, v11, v13, Lcom/lele/llmonitor/ui/settings/SettingsUiKitKt;->settingsCardOuterPadding-0680j_4$default(F I Ljava/lang/Object;)Ljg2;
+	822     (00000da4) move-result-object   v14
+	823     (00000da6) invoke-static        v2, v14, Ln54;->C(Lm22; Ljg2;)Lm22;
+	824     (00000dac) move-result-object   v9
+	825     (00000dae) new-instance         v11, Lw73;
+	826     (00000db2) move-object/from16   v14, v60
+	827     (00000db6) move-object/from16   v15, v63
+	828     (00000dba) move-object/from16   v17, v1
+	829     (00000dbe) move-object          v13, v5
+	830     (00000dc0) move                 v5, v12
+	831     (00000dc2) move-object/from16   v16, v24
+	832     (00000dc6) move/from16          v12, v31
+	833     (00000dca) const/high16         v1, 1092616192
+	834     (00000dce) invoke-direct/range  v11 ... v17, Lw73;-><init>(Z Lcg3; Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ld11; Lc42; Ll52;)V
+	835     (00000dd4) const                v12, -723053512
+	836     (00000dda) invoke-static        v12, v11, v4, Ln54;->K(I Lp11; Lt10;)Lc00;
+	837     (00000de0) move-result-object   v17
+	838     (00000de2) const/high16         v19, 1572864
+	839     (00000de6) const/16             v20, 52
+	840     (00000dea) const/4              v13, 0
+	841     (00000dec) const/4              v15, 0
+	842     (00000dee) const/16             v16, 0
+	843     (00000df2) move-object/from16   v18, v4
+	844     (00000df6) move-object          v11, v6
+	845     (00000df8) move-object          v14, v7
+	846     (00000dfa) move-object          v12, v9
+	847     (00000dfc) invoke-static/range  v11 ... v20, Lcom/lele/llmonitor/ui/settings/SettingsSectionCardKt;->SettingsSectionCard(Ljava/lang/String; Lm22; Ljava/lang/String; Lmd1; Z Li11; Li11; Lt10; I I)V
+	848     (00000e02) move-object/from16   v11, v18
+	849     (00000e06) const-string         v4, "主界面壁纸"
+	850     (00000e0a) invoke-static        v4, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	851     (00000e10) move-result-object   v4
+	852     (00000e12) invoke-static        Lad1;->C()Lmd1;
+	853     (00000e18) move-result-object   v14
+	854     (00000e1a) const/4              v6, 1
+	855     (00000e1c) const/4              v9, 0
+	856     (00000e1e) const/4              v13, 0
+	857     (00000e20) invoke-static        v9, v6, v13, Lcom/lele/llmonitor/ui/settings/SettingsUiKitKt;->settingsCardOuterPadding-0680j_4$default(F I Ljava/lang/Object;)Ljg2;
+	858     (00000e26) move-result-object   v7
+	859     (00000e28) invoke-static        v2, v7, Ln54;->C(Lm22; Ljg2;)Lm22;
+	860     (00000e2e) move-result-object   v12
+	861     (00000e30) new-instance         v6, Lj60;
+	862     (00000e34) const/4              v7, 5
+	863     (00000e36) move-object/from16   v9, v43
+	864     (00000e3a) invoke-direct        v6, v7, v9, v0, Lj60;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	865     (00000e40) const                v7, -452838418
+	866     (00000e46) invoke-static        v7, v6, v11, Ln54;->K(I Lp11; Lt10;)Lc00;
+	867     (00000e4c) move-result-object   v16
+	868     (00000e4e) new-instance         v34, Lx73;
+	869     (00000e52) move-object/from16   v36, v0
+	870     (00000e56) invoke-direct/range  v34 ... v45, Lx73;-><init>(F Ll52; Ll52; Lhz1; Ll52; Lc42; Ll52; Lc42; Ll52; Ll52; Ll52;)V
+	871     (00000e5c) move-object/from16   v0, v34
+	872     (00000e60) const                v6, -1760063913
+	873     (00000e66) invoke-static        v6, v0, v11, Ln54;->K(I Lp11; Lt10;)Lc00;
+	874     (00000e6c) move-result-object   v17
+	875     (00000e6e) const/high16         v19, 1769472
+	876     (00000e72) const/16             v20, 20
+	877     (00000e76) const/4              v13, 0
+	878     (00000e78) move-object          v11, v4
+	879     (00000e7a) invoke-static/range  v11 ... v20, Lcom/lele/llmonitor/ui/settings/SettingsSectionCardKt;->SettingsSectionCard(Ljava/lang/String; Lm22; Ljava/lang/String; Lmd1; Z Li11; Li11; Lt10; I I)V
+	880     (00000e80) move-object/from16   v4, v18
+	881     (00000e84) const-string         v0, "语言"
+	882     (00000e88) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	883     (00000e8e) move-result-object   v0
+	884     (00000e90) sget-object          v6, Lib1;->b Lmd1;
+	885     (00000e94) if-eqz               v6, +007h
+
+LLClassStyleAppearanceCard-BB@0xe98 : [ LLClassStyleAppearanceCard-BB@0x1432 ]
+	886     (00000e98) const/4              v9, 0
+	887     (00000e9a) const/4              v10, 1
+	888     (00000e9c) const/4              v13, 0
+	889     (00000e9e) goto/16              +2cah
+
+LLClassStyleAppearanceCard-BB@0xea2 : [ LLClassStyleAppearanceCard-BB@0xe98 ]
+	890     (00000ea2) new-instance         v34, Lld1;
+	891     (00000ea6) const/16             v42, 0
+	892     (00000eaa) const/16             v44, 96
+	893     (00000eae) const/16             v43, 0
+	894     (00000eb2) const/high16         v36, 1103101952
+	895     (00000eb6) const/high16         v37, 1103101952
+	896     (00000eba) const/high16         v38, 1103101952
+	897     (00000ebe) const/high16         v39, 1103101952
+	898     (00000ec2) const-wide/16        v40, 0
+	899     (00000ec6) const-string         v35, "Rounded.Language"
+	900     (00000eca) invoke-direct/range  v34 ... v44, Lld1;-><init>(Ljava/lang/String; F F F F J I Z I)V
+	901     (00000ed0) move-object/from16   v6, v34
+	902     (00000ed4) sget                 v7, Lay3;->a I
+	903     (00000ed8) new-instance         v7, Lxe3;
+	904     (00000edc) sget-wide            v11, Lfx;->b J
+	905     (00000ee0) invoke-direct        v7, v11, v12, Lxe3;-><init>(J)V
+	906     (00000ee6) new-instance         v13, Lxz0;
+	907     (00000eea) const/4              v9, 0
+	908     (00000eec) const/4              v11, 2
+	909     (00000eee) invoke-direct        v13, v11, v9, Lxz0;-><init>(I Z)V
+	910     (00000ef4) const                v9, 1094702858
+	911     (00000efa) invoke-virtual       v13, v9, v8, Lxz0;->m(F F)V
+	912     (00000f00) const/high16         v18, 1073741824
+	913     (00000f04) const/high16         v19, 1094713344
+	914     (00000f08) const                v14, 1087310397
+	915     (00000f0e) const/high16         v15, 1073741824
+	916     (00000f12) const/high16         v16, 1073741824
+	917     (00000f16) const                v17, 1087331369
+	918     (00000f1c) invoke-virtual/range v13 ... v19, Lxz0;->f(F F F F F F)V
+	919     (00000f22) const                v9, 1083116093
+	920     (00000f28) const                v11, 1092605706
+	921     (00000f2e) invoke-virtual       v13, v9, v1, v11, v1, Lxz0;->o(F F F F)V
+	922     (00000f34) const/high16         v18, 1102053376
+	923     (00000f38) const                v14, 1099704566
+	924     (00000f3e) const/high16         v15, 1102053376
+	925     (00000f42) const/high16         v16, 1102053376
+	926     (00000f46) const                v17, 1099704566
+	927     (00000f4c) invoke-virtual/range v13 ... v19, Lxz0;->f(F F F F F F)V
+	928     (00000f52) const                v1, 1099704566
+	929     (00000f58) const                v9, 1094702858
+	930     (00000f5e) invoke-virtual       v13, v1, v8, v9, v8, Lxz0;->n(F F F F)V
+	931     (00000f64) invoke-virtual       v13, Lxz0;->e()V
+	932     (00000f6a) const                v1, 1100438569
+	933     (00000f70) invoke-virtual       v13, v1, v10, Lxz0;->m(F F)V
+	934     (00000f76) const                v1, -1069757235
+	935     (00000f7c) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	936     (00000f82) const                v18, -1078942761
+	937     (00000f88) const                v19, -1067198710
+	938     (00000f8e) const                v14, -1096558838
+	939     (00000f94) const/high16         v15, -1080033280
+	940     (00000f98) const                v16, -1085821420
+	941     (00000f9e) const                v17, -1071854387
+	942     (00000fa4) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	943     (00000faa) const                v18, 1082822492
+	944     (00000fb0) const                v19, 1080284938
+	945     (00000fb6) const                v14, 1072399647
+	946     (00000fbc) const                v15, 1059145646
+	947     (00000fc2) const                v16, 1079488020
+	948     (00000fc8) const                v17, 1072986849
+	949     (00000fce) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	950     (00000fd4) invoke-virtual       v13, Lxz0;->e()V
+	951     (00000fda) const                v1, 1082214318
+	952     (00000fe0) invoke-virtual       v13, v3, v1, Lxz0;->m(F F)V
+	953     (00000fe6) const                v18, 1072986849
+	954     (00000fec) const                v19, 1081962660
+	955     (00000ff2) const                v14, 1062501089
+	956     (00000ff8) const                v15, 1067030938
+	957     (00000ffe) const                v16, 1069379748
+	958     (00001004) const                v17, 1075964805
+	959     (0000100a) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	960     (00001010) const                v1, -1066108191
+	961     (00001016) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	962     (0000101c) const                v19, -1065520988
+	963     (00001022) const                v14, 1054615798
+	964     (00001028) const                v15, -1078523331
+	965     (0000102e) const                v16, 1066024305
+	966     (00001034) const                v17, -1070554153
+	967     (0000103a) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	968     (00001040) invoke-virtual       v13, Lxz0;->e()V
+	969     (00001046) const                v1, 1082675692
+	970     (0000104c) const/high16         v9, 1096810496
+	971     (00001050) invoke-virtual       v13, v1, v9, Lxz0;->m(F F)V
+	972     (00001056) const/high16         v18, 1082130432
+	973     (0000105a) const/high16         v19, 1094713344
+	974     (0000105e) const                v14, 1082340147
+	975     (00001064) const                v15, 1096139407
+	976     (0000106a) const/high16         v16, 1082130432
+	977     (0000106e) const                v17, 1095436861
+	978     (00001074) invoke-virtual/range v13 ... v19, Lxz0;->f(F F F F F F)V
+	979     (0000107a) const                v1, -1079110533
+	980     (00001080) const                v9, 1048911544
+	981     (00001086) const/high16         v11, -1073741824
+	982     (0000108a) const                v12, 1036831949
+	983     (00001090) invoke-virtual       v13, v12, v1, v9, v11, Lxz0;->o(F F F F)V
+	984     (00001096) const                v1, 1079529964
+	985     (0000109c) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	986     (000010a2) const                v18, -1106289623
+	987     (000010a8) const/high16         v19, 1073741824
+	988     (000010ac) const                v14, -1113336054
+	989     (000010b2) const                v15, 1059648963
+	990     (000010b8) const                v16, -1106289623
+	991     (000010be) const                v17, 1068037571
+	992     (000010c4) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	993     (000010ca) const                v1, 1031127695
+	994     (000010d0) const                v9, 1041194025
+	995     (000010d6) const                v11, 1068205343
+	996     (000010dc) invoke-virtual       v13, v1, v11, v9, v8, Lxz0;->o(F F F F)V
+	997     (000010e2) const                v1, 1082675692
+	998     (000010e8) const/high16         v9, 1096810496
+	999     (000010ec) invoke-virtual       v13, v1, v9, Lxz0;->k(F F)V
+	1000    (000010f2) invoke-virtual       v13, Lxz0;->e()V
+	1001    (000010f8) const                v1, 1084395356
+	1002    (000010fe) invoke-virtual       v13, v1, v5, Lxz0;->m(F F)V
+	1003    (00001104) const                v1, 1077726413
+	1004    (0000110a) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	1005    (00001110) const                v18, 1068540887
+	1006    (00001116) const                v19, 1080284938
+	1007    (0000111c) const                v14, 1050924810
+	1008    (00001122) const/high16         v15, 1067450368
+	1009    (00001126) const                v16, 1061662228
+	1010    (0000112c) const                v17, 1075629261
+	1011    (00001132) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1012    (00001138) const                v18, -1064661156
+	1013    (0000113e) const                v19, -1067198710
+	1014    (00001144) const                v14, -1075084001
+	1015    (0000114a) const                v15, -1088338002
+	1016    (00001150) const                v16, -1067995628
+	1017    (00001156) const                v17, -1074580685
+	1018    (0000115c) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1019    (00001162) invoke-virtual       v13, Lxz0;->e()V
+	1020    (00001168) const                v1, 1090550497
+	1021    (0000116e) invoke-virtual       v13, v1, v10, Lxz0;->m(F F)V
+	1022    (00001174) const                v1, 1084395356
+	1023    (0000117a) invoke-virtual       v13, v1, v10, Lxz0;->k(F F)V
+	1024    (00001180) const                v18, 1082822492
+	1025    (00001186) const                v14, 1064682127
+	1026    (0000118c) const                v15, -1076593951
+	1027    (00001192) const                v16, 1075797033
+	1028    (00001198) const                v17, -1069841121
+	1029    (0000119e) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1030    (000011a4) const                v18, 1090550497
+	1031    (000011aa) const/high16         v19, 1090519040
+	1032    (000011ae) const                v14, 1091368387
+	1033    (000011b4) const                v15, 1085381018
+	1034    (000011ba) const                v16, 1090886042
+	1035    (000011c0) const/high16         v17, 1087897600
+	1036    (000011c4) invoke-virtual/range v13 ... v19, Lxz0;->f(F F F F F F)V
+	1037    (000011ca) invoke-virtual       v13, Lxz0;->e()V
+	1038    (000011d0) const                v1, 1100983828
+	1039    (000011d6) invoke-virtual       v13, v3, v1, Lxz0;->m(F F)V
+	1040    (000011dc) const                v18, -1074496799
+	1041    (000011e2) const                v19, -1065520988
+	1042    (000011e8) const                v14, -1084982559
+	1043    (000011ee) const                v15, -1080452710
+	1044    (000011f4) const                v16, -1078103900
+	1045    (000011fa) const                v17, -1071518843
+	1046    (00001200) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1047    (00001206) const                v1, 1081375457
+	1048    (0000120c) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	1049    (00001212) const                v19, 1081962660
+	1050    (00001218) const                v14, -1092867850
+	1051    (0000121e) const                v15, 1068960317
+	1052    (00001224) const                v16, -1081459343
+	1053    (0000122a) const                v17, 1076929495
+	1054    (00001230) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1055    (00001236) invoke-virtual       v13, Lxz0;->e()V
+	1056    (0000123c) const                v1, 1097167012
+	1057    (00001242) const/high16         v3, 1096810496
+	1058    (00001246) invoke-virtual       v13, v1, v3, Lxz0;->m(F F)V
+	1059    (0000124c) const                v1, 1092259676
+	1060    (00001252) invoke-virtual       v13, v1, v3, Lxz0;->k(F F)V
+	1061    (00001258) const                v18, -1104947446
+	1062    (0000125e) const/high16         v19, -1073741824
+	1063    (00001262) const                v14, -1111993876
+	1064    (00001268) const                v15, -1087834685
+	1065    (0000126e) const                v16, -1104947446
+	1066    (00001274) const                v17, -1079446077
+	1067    (0000127a) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1068    (00001280) const                v1, -1079194419
+	1069    (00001286) const                v3, 1042536202
+	1070    (0000128c) const/high16         v5, -1073741824
+	1071    (00001290) const                v9, 1032805417
+	1072    (00001296) invoke-virtual       v13, v9, v1, v3, v5, Lxz0;->o(F F F F)V
+	1073    (0000129c) const                v1, 1083556495
+	1074    (000012a2) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	1075    (000012a8) const                v18, 1042536202
+	1076    (000012ae) const/high16         v19, 1073741824
+	1077    (000012b2) const                v14, 1035489772
+	1078    (000012b8) const                v15, 1059481190
+	1079    (000012be) const                v16, 1042536202
+	1080    (000012c4) const                v17, 1068037571
+	1081    (000012ca) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1082    (000012d0) const                v1, -1114678231
+	1083    (000012d6) const                v3, -1104947446
+	1084    (000012dc) const                v5, 1068205343
+	1085    (000012e2) invoke-virtual       v13, v1, v5, v3, v8, Lxz0;->o(F F F F)V
+	1086    (000012e8) invoke-virtual       v13, Lxz0;->e()V
+	1087    (000012ee) const                v1, 1097429156
+	1088    (000012f4) const                v3, 1100774113
+	1089    (000012fa) invoke-virtual       v13, v1, v3, Lxz0;->m(F F)V
+	1090    (00001300) const                v18, 1068540887
+	1091    (00001306) const                v19, -1067198710
+	1092    (0000130c) const                v14, 1058642330
+	1093    (00001312) const                v15, -1081207685
+	1094    (00001318) const                v16, 1065856532
+	1095    (0000131e) const                v17, -1072441590
+	1096    (00001324) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1097    (0000132a) const                v1, 1077726413
+	1098    (00001330) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	1099    (00001336) const                v18, -1064661156
+	1100    (0000133c) const                v19, 1080284938
+	1101    (00001342) const                v14, -1082801521
+	1102    (00001348) const                v15, 1070805811
+	1103    (0000134e) const                v16, -1071686615
+	1104    (00001354) const                v17, 1077642527
+	1105    (0000135a) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1106    (00001360) invoke-virtual       v13, Lxz0;->e()V
+	1107    (00001366) const                v1, 1099096392
+	1108    (0000136c) const/high16         v3, 1096810496
+	1109    (00001370) invoke-virtual       v13, v1, v3, Lxz0;->m(F F)V
+	1110    (00001376) const                v18, 1041194025
+	1111    (0000137c) const/high16         v19, -1073741824
+	1112    (00001380) const                v14, 1034147594
+	1113    (00001386) const                v15, -1087834685
+	1114    (0000138c) const                v16, 1041194025
+	1115    (00001392) const                v17, -1079446077
+	1116    (00001398) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1117    (0000139e) const                v1, -1079278305
+	1118    (000013a4) const                v3, -1106289623
+	1119    (000013aa) const/high16         v5, -1073741824
+	1120    (000013ae) const                v9, -1116355953
+	1121    (000013b4) invoke-virtual       v13, v9, v1, v3, v5, Lxz0;->o(F F F F)V
+	1122    (000013ba) const                v1, 1079529964
+	1123    (000013c0) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	1124    (000013c6) const                v18, 1048911544
+	1125    (000013cc) const/high16         v19, 1073741824
+	1126    (000013d0) const                v14, 1042536202
+	1127    (000013d6) const                v15, 1059313418
+	1128    (000013dc) const                v16, 1048911544
+	1129    (000013e2) const                v17, 1067953684
+	1130    (000013e8) invoke-virtual/range v13 ... v19, Lxz0;->g(F F F F F F)V
+	1131    (000013ee) const                v1, 1068373115
+	1132    (000013f4) const                v3, -1098572104
+	1133    (000013fa) const                v5, -1110651699
+	1134    (00001400) invoke-virtual       v13, v5, v1, v3, v8, Lxz0;->o(F F F F)V
+	1135    (00001406) const                v1, -1067953684
+	1136    (0000140c) invoke-virtual       v13, v1, Lxz0;->j(F)V
+	1137    (00001412) invoke-virtual       v13, Lxz0;->e()V
+	1138    (00001418) iget-object          v1, v13, Lxz0;->a Ljava/util/ArrayList;
+	1139    (0000141c) invoke-static        v6, v1, v7, Lld1;->a(Lld1; Ljava/util/ArrayList; Lxe3;)V
+	1140    (00001422) invoke-virtual       v6, Lld1;->b()Lmd1;
+	1141    (00001428) move-result-object   v6
+	1142    (0000142a) sput-object          v6, Lib1;->b Lmd1;
+	1143    (0000142e) goto/16              -2cbh
+
+LLClassStyleAppearanceCard-BB@0x1432 : [ LLClassStyleAppearanceCard-BB@0x149a ]
+	1144    (00001432) invoke-static        v9, v10, v13, Lcom/lele/llmonitor/ui/settings/SettingsUiKitKt;->settingsCardOuterPadding-0680j_4$default(F I Ljava/lang/Object;)Ljg2;
+	1145    (00001438) move-result-object   v1
+	1146    (0000143a) invoke-static        v2, v1, Ln54;->C(Lm22; Ljg2;)Lm22;
+	1147    (00001440) move-result-object   v1
+	1148    (00001442) new-instance         v11, Lgr1;
+	1149    (00001446) const/16             v16, 3
+	1150    (0000144a) move-object/from16   v12, v59
+	1151    (0000144e) move-object/from16   v15, v64
+	1152    (00001452) move-object/from16   v14, v32
+	1153    (00001456) move-object/from16   v13, v33
+	1154    (0000145a) invoke-direct/range  v11 ... v16, Lgr1;-><init>(Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object; I)V
+	1155    (00001460) const                v2, 1497892982
+	1156    (00001466) invoke-static        v2, v11, v4, Ln54;->K(I Lp11; Lt10;)Lc00;
+	1157    (0000146c) move-result-object   v17
+	1158    (0000146e) const/high16         v19, 1572864
+	1159    (00001472) const/16             v20, 52
+	1160    (00001476) const/4              v13, 0
+	1161    (00001478) const/4              v15, 0
+	1162    (0000147a) const/16             v16, 0
+	1163    (0000147e) move-object          v11, v0
+	1164    (00001480) move-object          v12, v1
+	1165    (00001482) move-object/from16   v18, v4
+	1166    (00001486) move-object          v14, v6
+	1167    (00001488) invoke-static/range  v11 ... v20, Lcom/lele/llmonitor/ui/settings/SettingsSectionCardKt;->SettingsSectionCard(Ljava/lang/String; Lm22; Ljava/lang/String; Lmd1; Z Li11; Li11; Lt10; I I)V
+	1168    (0000148e) goto                 +6h
+
+LLClassStyleAppearanceCard-BB@0x1490 : [ LLClassStyleAppearanceCard-BB@0x149a ]
+	1169    (00001490) move-object/from16   v18, v0
+	1170    (00001494) invoke-virtual/range v18, Lb20;->R()V
+
+LLClassStyleAppearanceCard-BB@0x149a : [ LLClassStyleAppearanceCard-BB@0x14a6 LLClassStyleAppearanceCard-BB@0x14dc ]
+	1171    (0000149a) invoke-virtual/range v18, Lb20;->r()Lat2;
+	1172    (000014a0) move-result-object   v11
+	1173    (000014a2) if-eqz               v11, +01dh
+
+LLClassStyleAppearanceCard-BB@0x14a6 : [ LLClassStyleAppearanceCard-BB@0x14dc ]
+	1174    (000014a6) new-instance         v0, Ly73;
+	1175    (000014aa) move/from16          v1, v57
+	1176    (000014ae) move-object/from16   v2, v58
+	1177    (000014b2) move-object/from16   v3, v59
+	1178    (000014b6) move-object/from16   v4, v60
+	1179    (000014ba) move-object/from16   v5, v61
+	1180    (000014be) move-object/from16   v6, v62
+	1181    (000014c2) move-object/from16   v7, v63
+	1182    (000014c6) move-object/from16   v8, v64
+	1183    (000014ca) move-object/from16   v9, v65
+	1184    (000014ce) move/from16          v10, v67
+	1185    (000014d2) invoke-direct/range  v0 ... v10, Ly73;-><init>(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Lcom/lele/llmonitor/data/AppLanguageOption; Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ld11; Ld11; Ld11; Ld11; Ld11; I)V
+	1186    (000014d8) iput-object          v0, v11, Lat2;->d Lh11;
+
+LLClassStyleAppearanceCard-BB@0x14dc : 
+	1187    (000014dc) return-void          
+

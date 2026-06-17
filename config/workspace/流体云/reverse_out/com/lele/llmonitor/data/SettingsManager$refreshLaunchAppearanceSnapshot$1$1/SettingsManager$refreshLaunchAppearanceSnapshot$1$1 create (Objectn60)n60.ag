@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Object
+# - v4:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v3, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;
+	1       (00000004) iget-wide            v0, v2, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->$generation J
+	2       (00000008) iget-object          v2, v2, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->$resolvedSnapshot Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	3       (0000000c) invoke-direct        v3, v0, v1, v2, v4, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;-><init>(J Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; Ln60;)V
+	4       (00000012) return-object        v3
+

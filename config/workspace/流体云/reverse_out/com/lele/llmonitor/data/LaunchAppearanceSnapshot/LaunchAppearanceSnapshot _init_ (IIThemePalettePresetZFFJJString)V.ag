@@ -1,0 +1,31 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;-><init>(I I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Z F F J J Ljava/lang/String;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+# - v4:int
+# - v5:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v6:boolean
+# - v7:float
+# - v8:float
+# - v9:long
+# - v10:long
+# - v11:java.lang.String
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	3       (00000012) iput                 v1, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->backgroundArgb I
+	4       (00000016) iput                 v2, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->themeMode I
+	5       (0000001a) iput-object          v3, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->themePalettePreset Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	6       (0000001e) iput-boolean         v4, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperEnabled Z
+	7       (00000022) iput                 v5, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperAlpha F
+	8       (00000026) iput                 v6, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperBlur F
+	9       (0000002a) iput-wide            v7, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperVersion J
+	10      (0000002e) iput-wide            v9, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->startupPreviewVersion J
+	11      (00000032) iput-object          v11, v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->startupPreviewRenderSpec Ljava/lang/String;
+	12      (00000036) return-void          
+

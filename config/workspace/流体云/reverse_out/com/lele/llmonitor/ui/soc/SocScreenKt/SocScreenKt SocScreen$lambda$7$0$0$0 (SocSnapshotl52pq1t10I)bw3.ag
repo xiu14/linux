@@ -1,0 +1,300 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->SocScreen$lambda$7$0$0$0(Lcom/lele/llmonitor/data/soc/SocSnapshot; Ll52; Lpq1; Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v21
+# - v22:com.lele.llmonitor.data.soc.SocSnapshot
+# - v23:l52
+# - v24:pq1
+# - v25:t10
+# - v26:int
+#
+# - return:bw3
+
+SocScreen$lambda$7$0$0$0-BB@0x0 : [ SocScreen$lambda$7$0$0$0-BB@0x16 SocScreen$lambda$7$0$0$0-BB@0x1a ]
+	0       (00000000) invoke-virtual/range v24, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) and-int/lit8         v0, v26, 17
+	2       (0000000a) const/16             v1, 16
+	3       (0000000e) const/4              v2, 0
+	4       (00000010) const/4              v3, 1
+	5       (00000012) if-eq                v0, v1, +004h
+
+SocScreen$lambda$7$0$0$0-BB@0x16 : [ SocScreen$lambda$7$0$0$0-BB@0x1c ]
+	6       (00000016) move                 v0, v3
+	7       (00000018) goto                 +2h
+
+SocScreen$lambda$7$0$0$0-BB@0x1a : [ SocScreen$lambda$7$0$0$0-BB@0x1c ]
+	8       (0000001a) move                 v0, v2
+
+SocScreen$lambda$7$0$0$0-BB@0x1c : [ SocScreen$lambda$7$0$0$0-BB@0x34 SocScreen$lambda$7$0$0$0-BB@0x2ba ]
+	9       (0000001c) and-int/lit8         v1, v26, 1
+	10      (00000020) move-object/from16   v10, v25
+	11      (00000024) check-cast           v10, Lb20;
+	12      (00000028) invoke-virtual       v10, v1, v0, Lb20;->O(I Z)Z
+	13      (0000002e) move-result          v0
+	14      (00000030) if-eqz               v0, +145h
+
+SocScreen$lambda$7$0$0$0-BB@0x34 : [ SocScreen$lambda$7$0$0$0-BB@0x9e SocScreen$lambda$7$0$0$0-BB@0xa6 ]
+	15      (00000034) sget-object          v0, Lj22;->a Lj22;
+	16      (00000038) const/high16         v1, 1065353216
+	17      (0000003c) invoke-static        v0, v1, Lac3;->c(Lm22; F)Lm22;
+	18      (00000042) move-result-object   v0
+	19      (00000044) new-instance         v4, Lhh;
+	20      (00000048) new-instance         v5, Ldh;
+	21      (0000004c) invoke-direct        v5, v2, Ldh;-><init>(I)V
+	22      (00000052) const/high16         v2, 1098907648
+	23      (00000056) invoke-direct        v4, v2, v3, v5, Lhh;-><init>(F Z Ldh;)V
+	24      (0000005c) sget-object          v2, Lpx2;->o Lbm;
+	25      (00000060) const/4              v5, 6
+	26      (00000062) invoke-static        v4, v2, v10, v5, Ley2;->a(Lgh; Lbm; Lt10; I)Lfy2;
+	27      (00000068) move-result-object   v2
+	28      (0000006a) invoke-static        v10, Lp34;->x(Lt10;)I
+	29      (00000070) move-result          v4
+	30      (00000072) invoke-virtual       v10, Lb20;->l()Lzj2;
+	31      (00000078) move-result-object   v5
+	32      (0000007a) invoke-static        v10, v0, Ljn;->K(Lt10; Lm22;)Lm22;
+	33      (00000080) move-result-object   v0
+	34      (00000082) sget-object          v6, Lo10;->b Ln10;
+	35      (00000086) invoke-virtual       v6, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	36      (0000008c) sget-object          v6, Ln10;->b Lq20;
+	37      (00000090) invoke-virtual       v10, Lb20;->c0()V
+	38      (00000096) iget-boolean         v7, v10, Lb20;->S Z
+	39      (0000009a) if-eqz               v7, +006h
+
+SocScreen$lambda$7$0$0$0-BB@0x9e : [ SocScreen$lambda$7$0$0$0-BB@0xac ]
+	40      (0000009e) invoke-virtual       v10, v6, Lb20;->k(Ls01;)V
+	41      (000000a4) goto                 +4h
+
+SocScreen$lambda$7$0$0$0-BB@0xa6 : [ SocScreen$lambda$7$0$0$0-BB@0xac ]
+	42      (000000a6) invoke-virtual       v10, Lb20;->m0()V
+
+SocScreen$lambda$7$0$0$0-BB@0xac : [ SocScreen$lambda$7$0$0$0-BB@0xcc SocScreen$lambda$7$0$0$0-BB@0xe8 ]
+	43      (000000ac) sget-object          v6, Ln10;->f Lxc;
+	44      (000000b0) invoke-static        v10, v6, v2, Lse1;->L(Lt10; Lh11; Ljava/lang/Object;)V
+	45      (000000b6) sget-object          v2, Ln10;->e Lxc;
+	46      (000000ba) invoke-static        v10, v2, v5, Lse1;->L(Lt10; Lh11; Ljava/lang/Object;)V
+	47      (000000c0) sget-object          v2, Ln10;->g Lxc;
+	48      (000000c4) iget-boolean         v5, v10, Lb20;->S Z
+	49      (000000c8) if-nez               v5, +010h
+
+SocScreen$lambda$7$0$0$0-BB@0xcc : [ SocScreen$lambda$7$0$0$0-BB@0xe8 SocScreen$lambda$7$0$0$0-BB@0xee ]
+	50      (000000cc) invoke-virtual       v10, Lb20;->L()Ljava/lang/Object;
+	51      (000000d2) move-result-object   v5
+	52      (000000d4) invoke-static        v4, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	53      (000000da) move-result-object   v6
+	54      (000000dc) invoke-static        v5, v6, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	55      (000000e2) move-result          v5
+	56      (000000e4) if-nez               v5, +005h
+
+SocScreen$lambda$7$0$0$0-BB@0xe8 : [ SocScreen$lambda$7$0$0$0-BB@0xee ]
+	57      (000000e8) invoke-static        v4, v10, v4, v2, Lve2;->v(I Lb20; I Lxc;)V
+
+SocScreen$lambda$7$0$0$0-BB@0xee : [ SocScreen$lambda$7$0$0$0-BB@0x108 SocScreen$lambda$7$0$0$0-BB@0x12e ]
+	58      (000000ee) sget-object          v2, Ln10;->d Lxc;
+	59      (000000f2) invoke-static        v10, v2, v0, Lse1;->L(Lt10; Lh11; Ljava/lang/Object;)V
+	60      (000000f8) const-string         v0, "CPU 占用"
+	61      (000000fc) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	62      (00000102) move-result-object   v4
+	63      (00000104) if-eqz               v22, +015h
+
+SocScreen$lambda$7$0$0$0-BB@0x108 : [ SocScreen$lambda$7$0$0$0-BB@0x114 SocScreen$lambda$7$0$0$0-BB@0x12e ]
+	64      (00000108) invoke-virtual/range v22, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getCpuUsagePercent()Ljava/lang/Float;
+	65      (0000010e) move-result-object   v0
+	66      (00000110) if-eqz               v0, +00fh
+
+SocScreen$lambda$7$0$0$0-BB@0x114 : [ SocScreen$lambda$7$0$0$0-BB@0x128 SocScreen$lambda$7$0$0$0-BB@0x12a ]
+	67      (00000114) invoke-virtual       v0, Ljava/lang/Number;->floatValue()F
+	68      (0000011a) move-result          v0
+	69      (0000011c) invoke-static        v0, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->formatPercent(F)Ljava/lang/String;
+	70      (00000122) move-result-object   v0
+	71      (00000124) if-nez               v0, +003h
+
+SocScreen$lambda$7$0$0$0-BB@0x128 : [ SocScreen$lambda$7$0$0$0-BB@0x12e ]
+	72      (00000128) goto                 +3h
+
+SocScreen$lambda$7$0$0$0-BB@0x12a : [ SocScreen$lambda$7$0$0$0-BB@0x13c ]
+	73      (0000012a) move-object          v5, v0
+	74      (0000012c) goto                 +8h
+
+SocScreen$lambda$7$0$0$0-BB@0x12e : [ SocScreen$lambda$7$0$0$0-BB@0x12a ]
+	75      (0000012e) const-string         v0, "受限"
+	76      (00000132) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	77      (00000138) move-result-object   v0
+	78      (0000013a) goto                 -8h
+
+SocScreen$lambda$7$0$0$0-BB@0x13c : [ SocScreen$lambda$7$0$0$0-BB@0x156 SocScreen$lambda$7$0$0$0-BB@0x166 ]
+	79      (0000013c) new-instance         v11, Lkq1;
+	80      (00000140) invoke-direct        v11, v1, v3, Lkq1;-><init>(F Z)V
+	81      (00000146) invoke-virtual       v10, Lb20;->L()Ljava/lang/Object;
+	82      (0000014c) move-result-object   v0
+	83      (0000014e) sget-object          v2, Lr10;->a Li41;
+	84      (00000152) if-ne                v0, v2, +00ah
+
+SocScreen$lambda$7$0$0$0-BB@0x156 : [ SocScreen$lambda$7$0$0$0-BB@0x166 ]
+	85      (00000156) new-instance         v0, Lre3;
+	86      (0000015a) invoke-direct        v0, v3, Lre3;-><init>(I)V
+	87      (00000160) invoke-virtual       v10, v0, Lb20;->j0(Ljava/lang/Object;)V
+
+SocScreen$lambda$7$0$0$0-BB@0x166 : [ SocScreen$lambda$7$0$0$0-BB@0x194 SocScreen$lambda$7$0$0$0-BB@0x1b6 ]
+	88      (00000166) move-object          v15, v0
+	89      (00000168) check-cast           v15, Ls01;
+	90      (0000016c) const/16             v16, 7
+	91      (00000170) const/16             v17, 0
+	92      (00000174) const/4              v12, 0
+	93      (00000176) const/4              v13, 0
+	94      (00000178) const/4              v14, 0
+	95      (0000017a) invoke-static/range  v11 ... v17, Lcom/lele/llmonitor/ui/components/SquishyModifierKt;->squishyClickable$default(Lm22; Li42; Lbe1; Z Ls01; I Ljava/lang/Object;)Lm22;
+	96      (00000180) move-result-object   v6
+	97      (00000182) invoke-static/range  v23, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->SocScreen$lambda$1(Ll52;)Z
+	98      (00000188) move-result          v0
+	99      (0000018a) sget-object          v13, Luo0;->d Luo0;
+	100     (0000018e) const/4              v14, 0
+	101     (00000190) if-eqz               v0, +013h
+
+SocScreen$lambda$7$0$0$0-BB@0x194 : [ SocScreen$lambda$7$0$0$0-BB@0x198 SocScreen$lambda$7$0$0$0-BB@0x1a2 ]
+	102     (00000194) if-eqz               v22, +007h
+
+SocScreen$lambda$7$0$0$0-BB@0x198 : [ SocScreen$lambda$7$0$0$0-BB@0x1a4 ]
+	103     (00000198) invoke-virtual/range v22, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getCpuUsageSources()Ljava/util/List;
+	104     (0000019e) move-result-object   v0
+	105     (000001a0) goto                 +2h
+
+SocScreen$lambda$7$0$0$0-BB@0x1a2 : [ SocScreen$lambda$7$0$0$0-BB@0x1a4 ]
+	106     (000001a2) move-object          v0, v14
+
+SocScreen$lambda$7$0$0$0-BB@0x1a4 : [ SocScreen$lambda$7$0$0$0-BB@0x1a8 SocScreen$lambda$7$0$0$0-BB@0x1aa ]
+	107     (000001a4) if-nez               v0, +003h
+
+SocScreen$lambda$7$0$0$0-BB@0x1a8 : [ SocScreen$lambda$7$0$0$0-BB@0x1aa ]
+	108     (000001a8) move-object          v0, v13
+
+SocScreen$lambda$7$0$0$0-BB@0x1aa : [ SocScreen$lambda$7$0$0$0-BB@0x1b8 ]
+	109     (000001aa) invoke-static        v0, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->toSourceLines(Ljava/util/List;)Ljava/util/List;
+	110     (000001b0) move-result-object   v0
+	111     (000001b2) move-object          v9, v0
+	112     (000001b4) goto                 +2h
+
+SocScreen$lambda$7$0$0$0-BB@0x1b6 : [ SocScreen$lambda$7$0$0$0-BB@0x1b8 ]
+	113     (000001b6) move-object          v9, v13
+
+SocScreen$lambda$7$0$0$0-BB@0x1b8 : [ SocScreen$lambda$7$0$0$0-BB@0x1d8 SocScreen$lambda$7$0$0$0-BB@0x216 ]
+	114     (000001b8) const/4              v11, 0
+	115     (000001ba) const/16             v12, 24
+	116     (000001be) const/4              v7, 0
+	117     (000001c0) const/4              v8, 0
+	118     (000001c2) invoke-static/range  v4 ... v12, Lcom/lele/llmonitor/ui/components/InfoCardKt;->InfoCard(Ljava/lang/String; Ljava/lang/String; Lm22; Z Ljava/lang/String; Ljava/util/List; Lt10; I I)V
+	119     (000001c8) const-string         v0, "SoC 温度"
+	120     (000001cc) invoke-static        v0, Lcom/lele/llmonitor/i18n/TextI18nKt;->l10n(Ljava/lang/String;)Ljava/lang/String;
+	121     (000001d2) move-result-object   v4
+	122     (000001d4) if-eqz               v22, +021h
+
+SocScreen$lambda$7$0$0$0-BB@0x1d8 : [ SocScreen$lambda$7$0$0$0-BB@0x1e4 SocScreen$lambda$7$0$0$0-BB@0x216 ]
+	123     (000001d8) invoke-virtual/range v22, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getSocTemperatureC()Ljava/lang/Float;
+	124     (000001de) move-result-object   v0
+	125     (000001e0) if-eqz               v0, +01bh
+
+SocScreen$lambda$7$0$0$0-BB@0x1e4 : [ SocScreen$lambda$7$0$0$0-BB@0x1f8 SocScreen$lambda$7$0$0$0-BB@0x202 ]
+	126     (000001e4) invoke-virtual       v0, Ljava/lang/Number;->floatValue()F
+	127     (000001ea) move-result          v0
+	128     (000001ec) invoke-virtual/range v22, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getSocTemperatureFractionDigits()Ljava/lang/Integer;
+	129     (000001f2) move-result-object   v5
+	130     (000001f4) if-eqz               v5, +007h
+
+SocScreen$lambda$7$0$0$0-BB@0x1f8 : [ SocScreen$lambda$7$0$0$0-BB@0x204 ]
+	131     (000001f8) invoke-virtual       v5, Ljava/lang/Integer;->intValue()I
+	132     (000001fe) move-result          v5
+	133     (00000200) goto                 +2h
+
+SocScreen$lambda$7$0$0$0-BB@0x202 : [ SocScreen$lambda$7$0$0$0-BB@0x204 ]
+	134     (00000202) move                 v5, v3
+
+SocScreen$lambda$7$0$0$0-BB@0x204 : [ SocScreen$lambda$7$0$0$0-BB@0x210 SocScreen$lambda$7$0$0$0-BB@0x212 ]
+	135     (00000204) invoke-static        v0, v5, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->formatTemp(F I)Ljava/lang/String;
+	136     (0000020a) move-result-object   v0
+	137     (0000020c) if-nez               v0, +003h
+
+SocScreen$lambda$7$0$0$0-BB@0x210 : [ SocScreen$lambda$7$0$0$0-BB@0x216 ]
+	138     (00000210) goto                 +3h
+
+SocScreen$lambda$7$0$0$0-BB@0x212 : [ SocScreen$lambda$7$0$0$0-BB@0x21c ]
+	139     (00000212) move-object          v5, v0
+	140     (00000214) goto                 +4h
+
+SocScreen$lambda$7$0$0$0-BB@0x216 : [ SocScreen$lambda$7$0$0$0-BB@0x212 ]
+	141     (00000216) const-string         v0, "--"
+	142     (0000021a) goto                 -4h
+
+SocScreen$lambda$7$0$0$0-BB@0x21c : [ SocScreen$lambda$7$0$0$0-BB@0x232 SocScreen$lambda$7$0$0$0-BB@0x244 ]
+	143     (0000021c) new-instance         v15, Lkq1;
+	144     (00000220) invoke-direct        v15, v1, v3, Lkq1;-><init>(F Z)V
+	145     (00000226) invoke-virtual       v10, Lb20;->L()Ljava/lang/Object;
+	146     (0000022c) move-result-object   v0
+	147     (0000022e) if-ne                v0, v2, +00bh
+
+SocScreen$lambda$7$0$0$0-BB@0x232 : [ SocScreen$lambda$7$0$0$0-BB@0x244 ]
+	148     (00000232) new-instance         v0, Lre3;
+	149     (00000236) const/4              v1, 2
+	150     (00000238) invoke-direct        v0, v1, Lre3;-><init>(I)V
+	151     (0000023e) invoke-virtual       v10, v0, Lb20;->j0(Ljava/lang/Object;)V
+
+SocScreen$lambda$7$0$0$0-BB@0x244 : [ SocScreen$lambda$7$0$0$0-BB@0x274 SocScreen$lambda$7$0$0$0-BB@0x2a0 ]
+	152     (00000244) move-object/from16   v19, v0
+	153     (00000248) check-cast           v19, Ls01;
+	154     (0000024c) const/16             v20, 7
+	155     (00000250) const/16             v21, 0
+	156     (00000254) const/16             v16, 0
+	157     (00000258) const/16             v17, 0
+	158     (0000025c) const/16             v18, 0
+	159     (00000260) invoke-static/range  v15 ... v21, Lcom/lele/llmonitor/ui/components/SquishyModifierKt;->squishyClickable$default(Lm22; Li42; Lbe1; Z Ls01; I Ljava/lang/Object;)Lm22;
+	160     (00000266) move-result-object   v6
+	161     (00000268) invoke-static/range  v23, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->SocScreen$lambda$1(Ll52;)Z
+	162     (0000026e) move-result          v0
+	163     (00000270) if-eqz               v0, +018h
+
+SocScreen$lambda$7$0$0$0-BB@0x274 : [ SocScreen$lambda$7$0$0$0-BB@0x278 SocScreen$lambda$7$0$0$0-BB@0x282 ]
+	164     (00000274) if-eqz               v22, +007h
+
+SocScreen$lambda$7$0$0$0-BB@0x278 : [ SocScreen$lambda$7$0$0$0-BB@0x284 ]
+	165     (00000278) invoke-virtual/range v22, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getSocTemperatureSource()Ljava/lang/String;
+	166     (0000027e) move-result-object   v0
+	167     (00000280) goto                 +2h
+
+SocScreen$lambda$7$0$0$0-BB@0x282 : [ SocScreen$lambda$7$0$0$0-BB@0x284 ]
+	168     (00000282) move-object          v0, v14
+
+SocScreen$lambda$7$0$0$0-BB@0x284 : [ SocScreen$lambda$7$0$0$0-BB@0x288 SocScreen$lambda$7$0$0$0-BB@0x290 ]
+	169     (00000284) if-eqz               v22, +006h
+
+SocScreen$lambda$7$0$0$0-BB@0x288 : [ SocScreen$lambda$7$0$0$0-BB@0x290 ]
+	170     (00000288) invoke-virtual/range v22, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getSocTemperatureSources()Ljava/util/List;
+	171     (0000028e) move-result-object   v14
+
+SocScreen$lambda$7$0$0$0-BB@0x290 : [ SocScreen$lambda$7$0$0$0-BB@0x294 SocScreen$lambda$7$0$0$0-BB@0x296 ]
+	172     (00000290) if-nez               v14, +003h
+
+SocScreen$lambda$7$0$0$0-BB@0x294 : [ SocScreen$lambda$7$0$0$0-BB@0x298 ]
+	173     (00000294) goto                 +2h
+
+SocScreen$lambda$7$0$0$0-BB@0x296 : [ SocScreen$lambda$7$0$0$0-BB@0x298 ]
+	174     (00000296) move-object          v13, v14
+
+SocScreen$lambda$7$0$0$0-BB@0x298 : [ SocScreen$lambda$7$0$0$0-BB@0x2a0 ]
+	175     (00000298) invoke-static        v0, v13, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->tempSourceLines(Ljava/lang/String; Ljava/util/List;)Ljava/util/List;
+	176     (0000029e) move-result-object   v13
+
+SocScreen$lambda$7$0$0$0-BB@0x2a0 : [ SocScreen$lambda$7$0$0$0-BB@0x2c0 ]
+	177     (000002a0) move-object          v9, v13
+	178     (000002a2) const/4              v11, 0
+	179     (000002a4) const/16             v12, 24
+	180     (000002a8) const/4              v7, 0
+	181     (000002aa) const/4              v8, 0
+	182     (000002ac) invoke-static/range  v4 ... v12, Lcom/lele/llmonitor/ui/components/InfoCardKt;->InfoCard(Ljava/lang/String; Ljava/lang/String; Lm22; Z Ljava/lang/String; Ljava/util/List; Lt10; I I)V
+	183     (000002b2) invoke-virtual       v10, v3, Lb20;->p(Z)V
+	184     (000002b8) goto                 +4h
+
+SocScreen$lambda$7$0$0$0-BB@0x2ba : [ SocScreen$lambda$7$0$0$0-BB@0x2c0 ]
+	185     (000002ba) invoke-virtual       v10, Lb20;->R()V
+
+SocScreen$lambda$7$0$0$0-BB@0x2c0 : 
+	186     (000002c0) sget-object          v0, Lbw3;->a Lbw3;
+	187     (000002c4) return-object        v0
+

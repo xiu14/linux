@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v0, 0
+	1       (00000002) const/4              v1, 1
+	2       (00000004) invoke-direct        v2, v0, v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository;-><init>(Lcom/lele/llmonitor/data/soc/SocDataSource; I Lic0;)V
+	3       (0000000a) return-void          
+

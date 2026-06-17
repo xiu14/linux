@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->access$mergeAndNormalizeEntries(Lcom/lele/llmonitor/data/BatteryRepository; [Ljava/util/List;)Ljava/util/List; [access_flags=public static final varargs synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.BatteryRepository
+# - v1:java.util.List[]
+#
+# - return:java.util.List
+
+access$mergeAndNormalizeEntries-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, v1, Lcom/lele/llmonitor/data/BatteryRepository;->mergeAndNormalizeEntries([Ljava/util/List;)Ljava/util/List;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

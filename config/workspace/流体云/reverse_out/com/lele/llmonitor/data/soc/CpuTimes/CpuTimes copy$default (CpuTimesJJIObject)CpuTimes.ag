@@ -1,0 +1,31 @@
+# Lcom/lele/llmonitor/data/soc/CpuTimes;->copy$default(Lcom/lele/llmonitor/data/soc/CpuTimes; J J I Ljava/lang/Object;)Lcom/lele/llmonitor/data/soc/CpuTimes; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:com.lele.llmonitor.data.soc.CpuTimes
+# - v3:long
+# - v4:long
+# - v5:int
+# - v6:java.lang.Object
+#
+# - return:com.lele.llmonitor.data.soc.CpuTimes
+
+copy$default-BB@0x0 : [ copy$default-BB@0x8 copy$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v6, v5, 1
+	1       (00000004) if-eqz               v6, +004h
+
+copy$default-BB@0x8 : [ copy$default-BB@0xc ]
+	2       (00000008) iget-wide            v1, v0, Lcom/lele/llmonitor/data/soc/CpuTimes;->total J
+
+copy$default-BB@0xc : [ copy$default-BB@0x14 copy$default-BB@0x18 ]
+	3       (0000000c) and-int/lit8         v5, v5, 2
+	4       (00000010) if-eqz               v5, +004h
+
+copy$default-BB@0x14 : [ copy$default-BB@0x18 ]
+	5       (00000014) iget-wide            v3, v0, Lcom/lele/llmonitor/data/soc/CpuTimes;->idle J
+
+copy$default-BB@0x18 : 
+	6       (00000018) invoke-virtual       v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/soc/CpuTimes;->copy(J J)Lcom/lele/llmonitor/data/soc/CpuTimes;
+	7       (0000001e) move-result-object   v0
+	8       (00000020) return-object        v0
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.button.OButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_78"
+        app:icon="@drawable/o_ic_download_failed"
+        app:iconSize="@dimen/dp_48"
+        app:iconTint="@color/oui_text_4"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3b"
+        android:gravity="center_horizontal"
+        android:id="@+id/aichat_net_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="加载失败"
+        android:maxLines="2"
+        style="@style/Label_L"/>
+    <com.obric.oui.button.OButton
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="回到键盘"
+        android:layout_centerInParent="true"
+        android:letterSpacing="0.1"
+        style="@style/OButton.M1.Standard.Neutral"/>
+</LinearLayout>

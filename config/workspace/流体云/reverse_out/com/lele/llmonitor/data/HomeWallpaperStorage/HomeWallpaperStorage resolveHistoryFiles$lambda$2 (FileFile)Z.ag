@@ -1,0 +1,30 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles$lambda$2(Ljava/io/File; Ljava/io/File;)Z [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.io.File
+# - v3:java.io.File
+#
+# - return:boolean
+
+resolveHistoryFiles$lambda$2-BB@0x0 : [ resolveHistoryFiles$lambda$2-BB@0x6 resolveHistoryFiles$lambda$2-BB@0x8 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-nez               v2, +003h
+
+resolveHistoryFiles$lambda$2-BB@0x6 : 
+	2       (00000006) return               v0
+
+resolveHistoryFiles$lambda$2-BB@0x8 : [ resolveHistoryFiles$lambda$2-BB@0x1e resolveHistoryFiles$lambda$2-BB@0x20 ]
+	3       (00000008) sget-object          v1, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperStorage;
+	4       (0000000c) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	5       (00000012) invoke-direct        v1, v3, v2, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->fastSignatureEquals(Ljava/io/File; Ljava/io/File;)Z
+	6       (00000018) move-result          v2
+	7       (0000001a) if-nez               v2, +003h
+
+resolveHistoryFiles$lambda$2-BB@0x1e : 
+	8       (0000001e) return               v0
+
+resolveHistoryFiles$lambda$2-BB@0x20 : 
+	9       (00000020) const/4              v2, 0
+	10      (00000022) return               v2
+

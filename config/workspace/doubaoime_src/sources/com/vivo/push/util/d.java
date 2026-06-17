@@ -1,0 +1,21 @@
+package com.vivo.push.util;
+
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
+
+/* loaded from: classes2.dex */
+public final class d {
+    public static Bitmap a(Bitmap bitmap, int i, int i2) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        float f2 = i / width;
+        float f3 = i2 / height;
+        try {
+            Matrix matrix = new Matrix();
+            matrix.postScale(f2, f3);
+            return Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
+        } catch (Exception unused) {
+            return bitmap;
+        }
+    }
+}

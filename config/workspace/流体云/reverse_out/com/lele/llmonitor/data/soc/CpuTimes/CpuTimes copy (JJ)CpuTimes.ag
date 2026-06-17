@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/soc/CpuTimes;->copy(J J)Lcom/lele/llmonitor/data/soc/CpuTimes; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:long
+# - v4:long
+#
+# - return:com.lele.llmonitor.data.soc.CpuTimes
+
+copy-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	1       (00000004) invoke-direct        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/soc/CpuTimes;-><init>(J J)V
+	2       (0000000a) return-object        v0
+

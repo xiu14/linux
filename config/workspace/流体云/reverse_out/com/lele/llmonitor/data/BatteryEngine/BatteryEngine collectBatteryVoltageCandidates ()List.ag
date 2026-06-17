@@ -1,0 +1,154 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->collectBatteryVoltageCandidates()Ljava/util/List; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v8
+#
+# - return:java.util.List
+
+collectBatteryVoltageCandidates-BB@0x0 : [ collectBatteryVoltageCandidates-BB@0x26 collectBatteryVoltageCandidates-BB@0x54 ]
+	0       (00000000) new-instance         v8, Ljava/util/LinkedHashSet;
+	1       (00000004) invoke-direct        v8, Ljava/util/LinkedHashSet;-><init>()V
+	2       (0000000a) new-instance         v0, Ljava/io/File;
+	3       (0000000e) const-string         v1, "/sys/class/power_supply"
+	4       (00000012) invoke-direct        v0, v1, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	5       (00000018) invoke-virtual       v0, Ljava/io/File;->listFiles()[Ljava/io/File;
+	6       (0000001e) move-result-object   v0
+	7       (00000020) const/4              v1, 0
+	8       (00000022) if-eqz               v0, +019h
+
+collectBatteryVoltageCandidates-BB@0x26 : [ collectBatteryVoltageCandidates-BB@0x34 ]
+	9       (00000026) new-instance         v2, Ljava/util/ArrayList;
+	10      (0000002a) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	11      (00000030) array-length         v3, v0
+	12      (00000032) move                 v4, v1
+
+collectBatteryVoltageCandidates-BB@0x34 : [ collectBatteryVoltageCandidates-BB@0x38 collectBatteryVoltageCandidates-BB@0x56 ]
+	13      (00000034) if-ge                v4, v3, +011h
+
+collectBatteryVoltageCandidates-BB@0x38 : [ collectBatteryVoltageCandidates-BB@0x48 collectBatteryVoltageCandidates-BB@0x4e ]
+	14      (00000038) aget-object          v5, v0, v4
+	15      (0000003c) invoke-virtual       v5, Ljava/io/File;->isDirectory()Z
+	16      (00000042) move-result          v6
+	17      (00000044) if-eqz               v6, +005h
+
+collectBatteryVoltageCandidates-BB@0x48 : [ collectBatteryVoltageCandidates-BB@0x4e ]
+	18      (00000048) invoke-interface     v2, v5, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+collectBatteryVoltageCandidates-BB@0x4e : [ collectBatteryVoltageCandidates-BB@0x34 ]
+	19      (0000004e) add-int/lit8         v4, v4, 1
+	20      (00000052) goto                 -fh
+
+collectBatteryVoltageCandidates-BB@0x54 : [ collectBatteryVoltageCandidates-BB@0x56 ]
+	21      (00000054) const/4              v2, 0
+
+collectBatteryVoltageCandidates-BB@0x56 : [ collectBatteryVoltageCandidates-BB@0x5a collectBatteryVoltageCandidates-BB@0x5e ]
+	22      (00000056) if-nez               v2, +004h
+
+collectBatteryVoltageCandidates-BB@0x5a : [ collectBatteryVoltageCandidates-BB@0x5e ]
+	23      (0000005a) sget-object          v2, Luo0;->d Luo0;
+
+collectBatteryVoltageCandidates-BB@0x5e : [ collectBatteryVoltageCandidates-BB@0x94 ]
+	24      (0000005e) const-string         v0, "batt_vol"
+	25      (00000062) const-string         v3, "voltage_ocv"
+	26      (00000066) const-string         v4, "voltage_now"
+	27      (0000006a) const-string         v5, "bat_vol_get"
+	28      (0000006e) const-string         v6, "ptim_battery_voltage_get"
+	29      (00000072) filled-new-array     v4, v5, v6, v0, v3, [Ljava/lang/String;
+	30      (00000078) move-result-object   v0
+	31      (0000007a) invoke-static        v0, Lr7;->M([Ljava/lang/Object;)Ljava/util/List;
+	32      (00000080) move-result-object   v0
+	33      (00000082) new-instance         v3, Ljava/util/ArrayList;
+	34      (00000086) invoke-direct        v3, Ljava/util/ArrayList;-><init>()V
+	35      (0000008c) invoke-interface     v2, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	36      (00000092) move-result-object   v2
+
+collectBatteryVoltageCandidates-BB@0x94 : [ collectBatteryVoltageCandidates-BB@0xa0 collectBatteryVoltageCandidates-BB@0xc2 ]
+	37      (00000094) invoke-interface     v2, Ljava/util/Iterator;->hasNext()Z
+	38      (0000009a) move-result          v4
+	39      (0000009c) if-eqz               v4, +013h
+
+collectBatteryVoltageCandidates-BB@0xa0 : [ collectBatteryVoltageCandidates-BB@0xba collectBatteryVoltageCandidates-BB@0x94 ]
+	40      (000000a0) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	41      (000000a6) move-result-object   v4
+	42      (000000a8) move-object          v5, v4
+	43      (000000aa) check-cast           v5, Ljava/io/File;
+	44      (000000ae) invoke-static        v5, Lcom/lele/llmonitor/data/BatteryEngine;->collectBatteryVoltageCandidates$isBatteryLikeDir(Ljava/io/File;)Z
+	45      (000000b4) move-result          v5
+	46      (000000b6) if-eqz               v5, -011h
+
+collectBatteryVoltageCandidates-BB@0xba : [ collectBatteryVoltageCandidates-BB@0x94 ]
+	47      (000000ba) invoke-interface     v3, v4, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	48      (000000c0) goto                 -16h
+
+collectBatteryVoltageCandidates-BB@0xc2 : [ collectBatteryVoltageCandidates-BB@0xca ]
+	49      (000000c2) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	50      (000000c8) move-result          v2
+
+collectBatteryVoltageCandidates-BB@0xca : [ collectBatteryVoltageCandidates-BB@0xce collectBatteryVoltageCandidates-BB@0x124 ]
+	51      (000000ca) if-ge                v1, v2, +02dh
+
+collectBatteryVoltageCandidates-BB@0xce : [ collectBatteryVoltageCandidates-BB@0xe6 ]
+	52      (000000ce) invoke-virtual       v3, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	53      (000000d4) move-result-object   v4
+	54      (000000d6) add-int/lit8         v1, v1, 1
+	55      (000000da) check-cast           v4, Ljava/io/File;
+	56      (000000de) invoke-interface     v0, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	57      (000000e4) move-result-object   v5
+
+collectBatteryVoltageCandidates-BB@0xe6 : [ collectBatteryVoltageCandidates-BB@0xf2 collectBatteryVoltageCandidates-BB@0xca ]
+	58      (000000e6) invoke-interface     v5, Ljava/util/Iterator;->hasNext()Z
+	59      (000000ec) move-result          v6
+	60      (000000ee) if-eqz               v6, -012h
+
+collectBatteryVoltageCandidates-BB@0xf2 : [ collectBatteryVoltageCandidates-BB@0x114 collectBatteryVoltageCandidates-BB@0xe6 ]
+	61      (000000f2) invoke-interface     v5, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	62      (000000f8) move-result-object   v6
+	63      (000000fa) check-cast           v6, Ljava/lang/String;
+	64      (000000fe) new-instance         v7, Ljava/io/File;
+	65      (00000102) invoke-direct        v7, v4, v6, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	66      (00000108) invoke-virtual       v7, Ljava/io/File;->exists()Z
+	67      (0000010e) move-result          v6
+	68      (00000110) if-eqz               v6, -015h
+
+collectBatteryVoltageCandidates-BB@0x114 : [ collectBatteryVoltageCandidates-BB@0xe6 ]
+	69      (00000114) invoke-virtual       v7, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+	70      (0000011a) move-result-object   v6
+	71      (0000011c) invoke-interface     v8, v6, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	72      (00000122) goto                 -1eh
+
+collectBatteryVoltageCandidates-BB@0x124 : [ collectBatteryVoltageCandidates-BB@0x14c ]
+	73      (00000124) const-string         v0, "/sys/class/power_supply/Battery/voltage_now"
+	74      (00000128) const-string         v1, "/sys/class/power_supply/battery/voltage_ocv"
+	75      (0000012c) const-string         v2, "/sys/class/power_supply/battery/voltage_now"
+	76      (00000130) const-string         v3, "/sys/class/power_supply/battery/batt_vol"
+	77      (00000134) filled-new-array     v2, v3, v0, v1, [Ljava/lang/String;
+	78      (0000013a) move-result-object   v0
+	79      (0000013c) invoke-static        v0, Lr7;->M([Ljava/lang/Object;)Ljava/util/List;
+	80      (00000142) move-result-object   v0
+	81      (00000144) invoke-interface     v0, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	82      (0000014a) move-result-object   v0
+
+collectBatteryVoltageCandidates-BB@0x14c : [ collectBatteryVoltageCandidates-BB@0x158 collectBatteryVoltageCandidates-BB@0x182 ]
+	83      (0000014c) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	84      (00000152) move-result          v1
+	85      (00000154) if-eqz               v1, +017h
+
+collectBatteryVoltageCandidates-BB@0x158 : [ collectBatteryVoltageCandidates-BB@0x17a collectBatteryVoltageCandidates-BB@0x14c ]
+	86      (00000158) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	87      (0000015e) move-result-object   v1
+	88      (00000160) check-cast           v1, Ljava/lang/String;
+	89      (00000164) new-instance         v2, Ljava/io/File;
+	90      (00000168) invoke-direct        v2, v1, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	91      (0000016e) invoke-virtual       v2, Ljava/io/File;->exists()Z
+	92      (00000174) move-result          v2
+	93      (00000176) if-eqz               v2, -015h
+
+collectBatteryVoltageCandidates-BB@0x17a : [ collectBatteryVoltageCandidates-BB@0x14c ]
+	94      (0000017a) invoke-interface     v8, v1, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	95      (00000180) goto                 -1ah
+
+collectBatteryVoltageCandidates-BB@0x182 : 
+	96      (00000182) invoke-static        v8, Lyw;->W0(Ljava/lang/Iterable;)Ljava/util/List;
+	97      (00000188) move-result-object   v8
+	98      (0000018a) return-object        v8
+

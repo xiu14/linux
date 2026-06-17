@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->requestImmediateUpdate()V [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+requestImmediateUpdate-BB@0x0 : 
+	0       (00000000) iget-object          v0, v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->visualRefreshScheduler Lcom/lele/llmonitor/service/VisualRefreshScheduler;
+	1       (00000004) invoke-virtual       v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->onExternalTrigger()V
+	2       (0000000a) iget-object          v1, v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	3       (0000000e) sget-object          v0, Lbw3;->a Lbw3;
+	4       (00000012) invoke-interface     v1, v0, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+	5       (00000018) return-void          
+

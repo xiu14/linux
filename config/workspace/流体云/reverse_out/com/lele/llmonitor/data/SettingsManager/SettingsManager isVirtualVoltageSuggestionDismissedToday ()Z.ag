@@ -1,0 +1,33 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->isVirtualVoltageSuggestionDismissedToday()Z [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:boolean
+
+isVirtualVoltageSuggestionDismissedToday-BB@0x0 : [ isVirtualVoltageSuggestionDismissedToday-BB@0xc isVirtualVoltageSuggestionDismissedToday-BB@0x18 ]
+	0       (00000000) sget-object          v4, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	1       (00000004) const-wide/high16    v0, -9223372036854775808
+	2       (00000008) if-eqz               v4, +008h
+
+isVirtualVoltageSuggestionDismissedToday-BB@0xc : [ isVirtualVoltageSuggestionDismissedToday-BB@0x18 ]
+	3       (0000000c) const-string         v2, "dismiss_virtual_voltage_until"
+	4       (00000010) invoke-interface     v4, v2, v0, v1, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String; J)J
+	5       (00000016) move-result-wide     v0
+
+isVirtualVoltageSuggestionDismissedToday-BB@0x18 : [ isVirtualVoltageSuggestionDismissedToday-BB@0x30 isVirtualVoltageSuggestionDismissedToday-BB@0x34 ]
+	6       (00000018) invoke-static        Ljava/time/LocalDate;->now()Ljava/time/LocalDate;
+	7       (0000001e) move-result-object   v4
+	8       (00000020) invoke-virtual       v4, Ljava/time/LocalDate;->toEpochDay()J
+	9       (00000026) move-result-wide     v2
+	10      (00000028) cmp-long             v4, v0, v2
+	11      (0000002c) if-nez               v4, +004h
+
+isVirtualVoltageSuggestionDismissedToday-BB@0x30 : 
+	12      (00000030) const/4              v4, 1
+	13      (00000032) return               v4
+
+isVirtualVoltageSuggestionDismissedToday-BB@0x34 : 
+	14      (00000034) const/4              v4, 0
+	15      (00000036) return               v4
+

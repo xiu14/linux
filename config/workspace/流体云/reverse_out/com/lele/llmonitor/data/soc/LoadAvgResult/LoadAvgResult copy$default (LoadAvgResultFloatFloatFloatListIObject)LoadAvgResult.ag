@@ -1,0 +1,47 @@
+# Lcom/lele/llmonitor/data/soc/LoadAvgResult;->copy$default(Lcom/lele/llmonitor/data/soc/LoadAvgResult; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/util/List; I Ljava/lang/Object;)Lcom/lele/llmonitor/data/soc/LoadAvgResult; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.soc.LoadAvgResult
+# - v1:java.lang.Float
+# - v2:java.lang.Float
+# - v3:java.lang.Float
+# - v4:java.util.List
+# - v5:int
+# - v6:java.lang.Object
+#
+# - return:com.lele.llmonitor.data.soc.LoadAvgResult
+
+copy$default-BB@0x0 : [ copy$default-BB@0x8 copy$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v6, v5, 1
+	1       (00000004) if-eqz               v6, +004h
+
+copy$default-BB@0x8 : [ copy$default-BB@0xc ]
+	2       (00000008) iget-object          v1, v0, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->loadAvg1 Ljava/lang/Float;
+
+copy$default-BB@0xc : [ copy$default-BB@0x14 copy$default-BB@0x18 ]
+	3       (0000000c) and-int/lit8         v6, v5, 2
+	4       (00000010) if-eqz               v6, +004h
+
+copy$default-BB@0x14 : [ copy$default-BB@0x18 ]
+	5       (00000014) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->loadAvg5 Ljava/lang/Float;
+
+copy$default-BB@0x18 : [ copy$default-BB@0x20 copy$default-BB@0x24 ]
+	6       (00000018) and-int/lit8         v6, v5, 4
+	7       (0000001c) if-eqz               v6, +004h
+
+copy$default-BB@0x20 : [ copy$default-BB@0x24 ]
+	8       (00000020) iget-object          v3, v0, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->loadAvg15 Ljava/lang/Float;
+
+copy$default-BB@0x24 : [ copy$default-BB@0x2c copy$default-BB@0x30 ]
+	9       (00000024) and-int/lit8         v5, v5, 8
+	10      (00000028) if-eqz               v5, +004h
+
+copy$default-BB@0x2c : [ copy$default-BB@0x30 ]
+	11      (0000002c) iget-object          v4, v0, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->probes Ljava/util/List;
+
+copy$default-BB@0x30 : 
+	12      (00000030) invoke-virtual       v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->copy(Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/util/List;)Lcom/lele/llmonitor/data/soc/LoadAvgResult;
+	13      (00000036) move-result-object   v0
+	14      (00000038) return-object        v0
+

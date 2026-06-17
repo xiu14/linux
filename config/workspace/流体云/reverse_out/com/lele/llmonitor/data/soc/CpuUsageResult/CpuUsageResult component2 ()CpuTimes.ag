@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/CpuUsageResult;->component2()Lcom/lele/llmonitor/data/soc/CpuTimes; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:com.lele.llmonitor.data.soc.CpuTimes
+
+component2-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->nextCpuTimes Lcom/lele/llmonitor/data/soc/CpuTimes;
+	1       (00000004) return-object        v0
+

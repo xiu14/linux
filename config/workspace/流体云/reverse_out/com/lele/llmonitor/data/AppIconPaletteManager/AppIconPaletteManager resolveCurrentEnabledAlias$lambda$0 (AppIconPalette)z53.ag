@@ -1,0 +1,26 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManager;->resolveCurrentEnabledAlias$lambda$0(Lcom/lele/llmonitor/data/AppIconPalette;)Lz53; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:com.lele.llmonitor.data.AppIconPalette
+#
+# - return:z53
+
+resolveCurrentEnabledAlias$lambda$0-BB@0x0 : 
+	0       (00000000) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v3, Lcom/lele/llmonitor/data/AppIconPalette;->getAliasClassName()Ljava/lang/String;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-virtual       v3, Lcom/lele/llmonitor/data/AppIconPalette;->getDarkAliasClassName()Ljava/lang/String;
+	4       (00000014) move-result-object   v3
+	5       (00000016) filled-new-array     v0, v3, [Ljava/lang/String;
+	6       (0000001c) move-result-object   v3
+	7       (0000001e) invoke-static        v3, Lwh;->R([Ljava/lang/Object;)Lz53;
+	8       (00000024) move-result-object   v3
+	9       (00000026) new-instance         v0, Lyz2;
+	10      (0000002a) const/16             v1, 28
+	11      (0000002e) invoke-direct        v0, v1, Lyz2;-><init>(I)V
+	12      (00000034) new-instance         v1, Lbu0;
+	13      (00000038) const/4              v2, 0
+	14      (0000003a) invoke-direct        v1, v3, v2, v0, Lbu0;-><init>(Lz53; Z Ld11;)V
+	15      (00000040) return-object        v1
+

@@ -1,0 +1,6 @@
+png_total: 364
+webp_total: 15
+drawable_nodpi_images: 130
+xml_total: 1129
+smali_total: 6221
+appfilter_items: 678

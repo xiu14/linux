@@ -1,0 +1,24 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->readSysText(Ljava/io/File;)Ljava/lang/String; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.io.File
+#
+# - return:java.lang.String
+
+readSysText-BB@0x0 : [ readSysText-BB@0xc readSysText-BB@0x16 ]
+	0       (00000000) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	1       (00000006) move-result          v0
+	2       (00000008) if-eqz               v0, +007h
+	0:13
+	(Ljava/lang/Exception; -> 16 readSysText-BB@0x16)
+
+readSysText-BB@0xc : 
+	3       (0000000c) invoke-static        v1, Lwt0;->V(Ljava/io/File;)Ljava/lang/String;
+	4       (00000012) move-result-object   v0
+	5       (00000014) return-object        v0
+
+readSysText-BB@0x16 : 
+	6       (00000016) const/4              v0, 0
+	7       (00000018) return-object        v0
+

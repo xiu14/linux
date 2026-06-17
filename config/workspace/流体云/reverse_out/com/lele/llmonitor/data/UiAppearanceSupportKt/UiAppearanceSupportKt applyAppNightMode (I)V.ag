@@ -1,0 +1,101 @@
+# Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->applyAppNightMode(I)V [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:int
+#
+# - return:void
+
+applyAppNightMode-BB@0x0 : [ applyAppNightMode-BB@0x12 applyAppNightMode-BB@0x38 ]
+	0       (00000000) invoke-static        v2, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveAppCompatNightMode(I)I
+	1       (00000006) move-result          v2
+	2       (00000008) sget                 v0, Ljf;->a I
+	3       (0000000c) const/4              v0, -1
+	4       (0000000e) if-eq                v2, v0, +015h
+
+applyAppNightMode-BB@0x12 : [ applyAppNightMode-BB@0x16 applyAppNightMode-BB@0x38 ]
+	5       (00000012) if-eqz               v2, +013h
+
+applyAppNightMode-BB@0x16 : [ applyAppNightMode-BB@0x1c applyAppNightMode-BB@0x38 ]
+	6       (00000016) const/4              v0, 1
+	7       (00000018) if-eq                v2, v0, +010h
+
+applyAppNightMode-BB@0x1c : [ applyAppNightMode-BB@0x22 applyAppNightMode-BB@0x38 ]
+	8       (0000001c) const/4              v0, 2
+	9       (0000001e) if-eq                v2, v0, +00dh
+
+applyAppNightMode-BB@0x22 : [ applyAppNightMode-BB@0x28 applyAppNightMode-BB@0x38 ]
+	10      (00000022) const/4              v0, 3
+	11      (00000024) if-eq                v2, v0, +00ah
+
+applyAppNightMode-BB@0x28 : 
+	12      (00000028) const-string         v2, "AppCompatDelegate"
+	13      (0000002c) const-string         v0, "setDefaultNightMode() called with an unknown mode"
+	14      (00000030) invoke-static        v2, v0, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	15      (00000036) return-void          
+
+applyAppNightMode-BB@0x38 : [ applyAppNightMode-BB@0x40 applyAppNightMode-BB@0x9c ]
+	16      (00000038) sget                 v0, Ljf;->a I
+	17      (0000003c) if-eq                v0, v2, +030h
+
+applyAppNightMode-BB@0x40 : [ applyAppNightMode-BB@0x4a ]
+	18      (00000040) sput                 v2, Ljf;->a I
+	19      (00000044) sget-object          v2, Ljf;->d Ljava/lang/Object;
+	20      (00000048) monitor-enter        v2
+
+applyAppNightMode-BB@0x4a : [ applyAppNightMode-BB@0x5e ]
+	21      (0000004a) sget-object          v0, Ljf;->c Lvh;
+	22      (0000004e) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	23      (00000054) new-instance         v1, Lph;
+	24      (00000058) invoke-direct        v1, v0, Lph;-><init>(Lvh;)V
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x5e : [ applyAppNightMode-BB@0x6a applyAppNightMode-BB@0x94 ]
+	25      (0000005e) invoke-virtual       v1, Lph;->hasNext()Z
+	26      (00000064) move-result          v0
+	27      (00000066) if-eqz               v0, +017h
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x6a : [ applyAppNightMode-BB@0x82 applyAppNightMode-BB@0x84 ]
+	28      (0000006a) invoke-virtual       v1, Lph;->next()Ljava/lang/Object;
+	29      (00000070) move-result-object   v0
+	30      (00000072) check-cast           v0, Ljava/lang/ref/WeakReference;
+	31      (00000076) invoke-virtual       v0, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+	32      (0000007c) move-result-object   v0
+	33      (0000007e) if-nez               v0, +003h
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x82 : [ applyAppNightMode-BB@0x5e ]
+	34      (00000082) goto                 -12h
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x84 : 
+	35      (00000084) new-instance         v0, Ljava/lang/ClassCastException;
+	36      (00000088) invoke-direct        v0, Ljava/lang/ClassCastException;-><init>()V
+	37      (0000008e) throw                v0
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x90 : [ applyAppNightMode-BB@0x98 ]
+	38      (00000090) move-exception       v0
+	39      (00000092) goto                 +3h
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x94 : 
+	40      (00000094) monitor-exit         v2
+	41      (00000096) return-void          
+	4a:99
+	(Ljava/lang/Throwable; -> 90 applyAppNightMode-BB@0x90)
+
+applyAppNightMode-BB@0x98 : 
+	42      (00000098) monitor-exit         v2
+	43      (0000009a) throw                v0
+
+applyAppNightMode-BB@0x9c : 
+	44      (0000009c) return-void          
+

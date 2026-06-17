@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Class name="cls_use_fix_scale_except_float" usefixscale="false" />
+    <Class name="cls_use_fix_scale_recursively_except_float" usefixscale_recursively="false" />
+
+    <Class name="cls_toolbar_bk_adaptive" height_weight="0.212" />
+    <Class name="cls_toolbar_bk_adaptive_editor" height_weight="0.212" />
+
+    <Class name="cls_input_kbd_adaptive"
+        inset_decimal="0,0,0,0"
+        padding1x="0,0,0,0"
+        padding_decimal="0.005,0.212,0.005,0" />
+
+    <Class name="cls_input_kbd_adaptive_editor"
+        inset_decimal="0,0,0,0"
+        padding1x="0,0,0,0"
+        padding_decimal="0.005,0.212,0.005,0" />
+
+    <Class name="cls_input_kbd9_adaptive"
+        padding1x="0,0,0,0"
+        padding_decimal="0.002,0.212,0.002,0" />
+    <Class name="cls_input_kbd9_adaptive_editor"
+        padding1x="0,0,0,0"
+        padding_decimal="0.002,0.212,0.002,0" />
+
+    <!-- 26键 中文逗号句号, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_cn_text_adaptive"  ficon_text_offset_tobox="0,-4"  textpadding="0,5,0,6"/>
+
+</Window>

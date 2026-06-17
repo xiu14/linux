@@ -1,0 +1,36 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->createHistoryFile(Landroid/content/Context;)Ljava/io/File; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+#
+# - return:java.io.File
+
+createHistoryFile-BB@0x0 : 
+	0       (00000000) invoke-static        Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v0, Ljava/util/UUID;->toString()Ljava/lang/String;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	5       (00000016) const/16             v1, 8
+	6       (0000001a) invoke-static        v0, v1, Lhh3;->N0(Ljava/lang/String; I)Ljava/lang/String;
+	7       (00000020) move-result-object   v0
+	8       (00000022) new-instance         v1, Ljava/io/File;
+	9       (00000026) invoke-direct        v5, v6, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryDirectory(Landroid/content/Context;)Ljava/io/File;
+	10      (0000002c) move-result-object   v5
+	11      (0000002e) invoke-static        Ljava/lang/System;->currentTimeMillis()J
+	12      (00000034) move-result-wide     v2
+	13      (00000036) new-instance         v6, Ljava/lang/StringBuilder;
+	14      (0000003a) const-string         v4, "wallpaper_"
+	15      (0000003e) invoke-direct        v6, v4, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	16      (00000044) invoke-virtual       v6, v2, v3, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	17      (0000004a) const-string         v2, "_"
+	18      (0000004e) invoke-virtual       v6, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (00000054) invoke-virtual       v6, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (0000005a) const-string         v0, ".img"
+	21      (0000005e) invoke-virtual       v6, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (00000064) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	23      (0000006a) move-result-object   v6
+	24      (0000006c) invoke-direct        v1, v5, v6, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	25      (00000072) return-object        v1
+

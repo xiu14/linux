@@ -1,0 +1,33 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->toggleLiveCloseActionEnabled(Z)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:boolean
+#
+# - return:void
+
+toggleLiveCloseActionEnabled-BB@0x0 : [ toggleLiveCloseActionEnabled-BB@0x1a toggleLiveCloseActionEnabled-BB@0x3c ]
+	0       (00000000) sget-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->isLiveCloseActionEnabled Ll52;
+	1       (00000004) invoke-static        v2, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) invoke-interface     v1, v0, Ll52;->setValue(Ljava/lang/Object;)V
+	4       (00000012) sget-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	5       (00000016) if-eqz               v1, +013h
+
+toggleLiveCloseActionEnabled-BB@0x1a : [ toggleLiveCloseActionEnabled-BB@0x26 toggleLiveCloseActionEnabled-BB@0x3c ]
+	6       (0000001a) invoke-interface     v1, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	7       (00000020) move-result-object   v1
+	8       (00000022) if-eqz               v1, +00dh
+
+toggleLiveCloseActionEnabled-BB@0x26 : [ toggleLiveCloseActionEnabled-BB@0x36 toggleLiveCloseActionEnabled-BB@0x3c ]
+	9       (00000026) const-string         v0, "live_close_action_enabled"
+	10      (0000002a) invoke-interface     v1, v0, v2, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String; Z)Landroid/content/SharedPreferences$Editor;
+	11      (00000030) move-result-object   v1
+	12      (00000032) if-eqz               v1, +005h
+
+toggleLiveCloseActionEnabled-BB@0x36 : [ toggleLiveCloseActionEnabled-BB@0x3c ]
+	13      (00000036) invoke-interface     v1, Landroid/content/SharedPreferences$Editor;->apply()V
+
+toggleLiveCloseActionEnabled-BB@0x3c : 
+	14      (0000003c) return-void          
+

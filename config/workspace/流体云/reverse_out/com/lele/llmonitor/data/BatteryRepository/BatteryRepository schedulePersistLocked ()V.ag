@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->schedulePersistLocked()V [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+schedulePersistLocked-BB@0x0 : [ schedulePersistLocked-BB@0xa schedulePersistLocked-BB@0x10 ]
+	0       (00000000) sget-object          v3, Lcom/lele/llmonitor/data/BatteryRepository;->persistJob Lpj1;
+	1       (00000004) const/4              v0, 0
+	2       (00000006) if-eqz               v3, +005h
+
+schedulePersistLocked-BB@0xa : [ schedulePersistLocked-BB@0x10 ]
+	3       (0000000a) invoke-interface     v3, v0, Lpj1;->k(Ljava/util/concurrent/CancellationException;)V
+
+schedulePersistLocked-BB@0x10 : 
+	4       (00000010) sget-object          v3, Lcom/lele/llmonitor/data/BatteryRepository;->repositoryScope Ld80;
+	5       (00000014) new-instance         v1, Lcom/lele/llmonitor/data/BatteryRepository$schedulePersistLocked$1;
+	6       (00000018) invoke-direct        v1, v0, Lcom/lele/llmonitor/data/BatteryRepository$schedulePersistLocked$1;-><init>(Ln60;)V
+	7       (0000001e) const/4              v2, 3
+	8       (00000020) invoke-static        v3, v0, v0, v1, v2, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	9       (00000026) move-result-object   v3
+	10      (00000028) sput-object          v3, Lcom/lele/llmonitor/data/BatteryRepository;->persistJob Lpj1;
+	11      (0000002c) return-void          
+

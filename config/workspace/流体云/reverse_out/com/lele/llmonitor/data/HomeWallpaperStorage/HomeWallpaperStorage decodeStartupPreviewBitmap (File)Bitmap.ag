@@ -1,0 +1,112 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->decodeStartupPreviewBitmap(Ljava/io/File;)Landroid/graphics/Bitmap; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:java.io.File
+#
+# - return:android.graphics.Bitmap
+
+decodeStartupPreviewBitmap-BB@0x0 : [ decodeStartupPreviewBitmap-BB@0x2 ]
+	0       (00000000) const/4              v0, 0
+
+decodeStartupPreviewBitmap-BB@0x2 : [ decodeStartupPreviewBitmap-BB@0x10 decodeStartupPreviewBitmap-BB@0x42 ]
+	1       (00000002) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	2       (00000006) const/16             v2, 28
+	3       (0000000a) const/4              v3, 0
+	4       (0000000c) if-lt                v1, v2, +01bh
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0x10 : [ decodeStartupPreviewBitmap-BB@0xca ]
+	5       (00000010) invoke-static        v8, Lj;->g(Ljava/io/File;)Landroid/graphics/ImageDecoder$Source;
+	6       (00000016) move-result-object   v8
+	7       (00000018) invoke-virtual       v8, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	8       (0000001e) new-instance         v1, Lo71;
+	9       (00000022) invoke-direct        v1, v7, Lo71;-><init>(Lcom/lele/llmonitor/data/HomeWallpaperStorage;)V
+	10      (00000028) invoke-static        v8, v1, Lj;->e(Landroid/graphics/ImageDecoder$Source; Lo71;)Landroid/graphics/Bitmap;
+	11      (0000002e) move-result-object   v7
+	12      (00000030) sget-object          v8, Landroid/graphics/Bitmap$Config;->ARGB_8888 Landroid/graphics/Bitmap$Config;
+	13      (00000034) invoke-virtual       v7, v8, v3, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config; Z)Landroid/graphics/Bitmap;
+	14      (0000003a) move-result-object   v7
+	15      (0000003c) goto                 +47h
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0x3e : [ decodeStartupPreviewBitmap-BB@0xbe ]
+	16      (0000003e) move-exception       v7
+	17      (00000040) goto                 +3fh
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0x42 : [ decodeStartupPreviewBitmap-BB@0x68 decodeStartupPreviewBitmap-BB@0xba ]
+	18      (00000042) new-instance         v1, Landroid/graphics/BitmapFactory$Options;
+	19      (00000046) invoke-direct        v1, Landroid/graphics/BitmapFactory$Options;-><init>()V
+	20      (0000004c) const/4              v2, 1
+	21      (0000004e) iput-boolean         v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds Z
+	22      (00000052) invoke-virtual       v8, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+	23      (00000058) move-result-object   v2
+	24      (0000005a) invoke-static        v2, v1, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String; Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+	25      (00000060) iget                 v2, v1, Landroid/graphics/BitmapFactory$Options;->outWidth I
+	26      (00000064) if-lez               v2, +02bh
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0x68 : [ decodeStartupPreviewBitmap-BB@0x70 decodeStartupPreviewBitmap-BB@0x72 ]
+	27      (00000068) iget                 v1, v1, Landroid/graphics/BitmapFactory$Options;->outHeight I
+	28      (0000006c) if-gtz               v1, +003h
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0x70 : [ decodeStartupPreviewBitmap-BB@0xba ]
+	29      (00000070) goto                 +25h
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0x72 : [ decodeStartupPreviewBitmap-BB@0xb0 decodeStartupPreviewBitmap-BB@0xba ]
+	30      (00000072) new-instance         v1, Landroid/graphics/BitmapFactory$Options;
+	31      (00000076) invoke-direct        v1, Landroid/graphics/BitmapFactory$Options;-><init>()V
+	32      (0000007c) sget-object          v2, Landroid/graphics/Bitmap$Config;->ARGB_8888 Landroid/graphics/Bitmap$Config;
+	33      (00000080) iput-object          v2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig Landroid/graphics/Bitmap$Config;
+	34      (00000084) iget                 v4, v1, Landroid/graphics/BitmapFactory$Options;->outWidth I
+	35      (00000088) iget                 v5, v1, Landroid/graphics/BitmapFactory$Options;->outHeight I
+	36      (0000008c) const/16             v6, 960
+	37      (00000090) invoke-direct        v7, v4, v5, v6, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->calculateInSampleSize(I I I)I
+	38      (00000096) move-result          v7
+	39      (00000098) iput                 v7, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize I
+	40      (0000009c) invoke-virtual       v8, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+	41      (000000a2) move-result-object   v7
+	42      (000000a4) invoke-static        v7, v1, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String; Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+	43      (000000aa) move-result-object   v7
+	44      (000000ac) if-eqz               v7, +007h
+	2:b7
+	(Ljava/lang/Throwable; -> 3e decodeStartupPreviewBitmap-BB@0x3e)
+
+decodeStartupPreviewBitmap-BB@0xb0 : [ decodeStartupPreviewBitmap-BB@0xca ]
+	45      (000000b0) invoke-virtual       v7, v2, v3, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config; Z)Landroid/graphics/Bitmap;
+	46      (000000b6) move-result-object   v7
+	47      (000000b8) goto                 +9h
+
+decodeStartupPreviewBitmap-BB@0xba : [ decodeStartupPreviewBitmap-BB@0xca ]
+	48      (000000ba) move-object          v7, v0
+	49      (000000bc) goto                 +7h
+
+decodeStartupPreviewBitmap-BB@0xbe : [ decodeStartupPreviewBitmap-BB@0xca ]
+	50      (000000be) new-instance         v8, Lcw2;
+	51      (000000c2) invoke-direct        v8, v7, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	52      (000000c8) move-object          v7, v8
+
+decodeStartupPreviewBitmap-BB@0xca : [ decodeStartupPreviewBitmap-BB@0xd4 decodeStartupPreviewBitmap-BB@0xd6 ]
+	53      (000000ca) nop                  
+	54      (000000cc) instance-of          v8, v7, Lcw2;
+	55      (000000d0) if-eqz               v8, +003h
+
+decodeStartupPreviewBitmap-BB@0xd4 : [ decodeStartupPreviewBitmap-BB@0xd8 ]
+	56      (000000d4) goto                 +2h
+
+decodeStartupPreviewBitmap-BB@0xd6 : [ decodeStartupPreviewBitmap-BB@0xd8 ]
+	57      (000000d6) move-object          v0, v7
+
+decodeStartupPreviewBitmap-BB@0xd8 : 
+	58      (000000d8) check-cast           v0, Landroid/graphics/Bitmap;
+	59      (000000dc) return-object        v0
+

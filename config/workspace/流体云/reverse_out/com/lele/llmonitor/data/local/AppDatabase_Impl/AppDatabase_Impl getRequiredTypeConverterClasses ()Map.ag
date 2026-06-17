@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->getRequiredTypeConverterClasses()Ljava/util/Map; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.util.Map
+
+getRequiredTypeConverterClasses-BB@0x0 : 
+	0       (00000000) new-instance         v2, Ljava/util/LinkedHashMap;
+	1       (00000004) invoke-direct        v2, Ljava/util/LinkedHashMap;-><init>()V
+	2       (0000000a) const-class          v0, Lcom/lele/llmonitor/data/local/BatteryDao;
+	3       (0000000e) invoke-static        v0, Lvt2;->a(Ljava/lang/Class;)Lgv;
+	4       (00000014) move-result-object   v0
+	5       (00000016) sget-object          v1, Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->Companion Lcom/lele/llmonitor/data/local/BatteryDao_Impl$Companion;
+	6       (0000001a) invoke-virtual       v1, Lcom/lele/llmonitor/data/local/BatteryDao_Impl$Companion;->getRequiredConverters()Ljava/util/List;
+	7       (00000020) move-result-object   v1
+	8       (00000022) invoke-interface     v2, v0, v1, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	9       (00000028) return-object        v2
+

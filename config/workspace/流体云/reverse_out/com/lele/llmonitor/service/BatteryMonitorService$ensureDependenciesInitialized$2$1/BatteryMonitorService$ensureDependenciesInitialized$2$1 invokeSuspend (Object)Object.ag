@@ -1,0 +1,55 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x8 invokeSuspend-BB@0x7c ]
+	0       (00000000) iget                 v0, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;->label I
+	1       (00000004) if-nez               v0, +03ch
+
+invokeSuspend-BB@0x8 : [ invokeSuspend-BB@0x1e invokeSuspend-BB@0x42 ]
+	2       (00000008) invoke-static        v3, Lib1;->Q(Ljava/lang/Object;)V
+	3       (0000000e) iget-object          v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	4       (00000012) invoke-static        v3, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDb$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/data/local/AppDatabase;
+	5       (00000018) move-result-object   v3
+	6       (0000001a) if-nez               v3, +014h
+
+invokeSuspend-BB@0x1e : [ invokeSuspend-BB@0x42 ]
+	7       (0000001e) iget-object          v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	8       (00000022) sget-object          v0, Lcom/lele/llmonitor/data/local/AppDatabase;->Companion Lcom/lele/llmonitor/data/local/AppDatabase$Companion;
+	9       (00000026) invoke-virtual       v3, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	10      (0000002c) move-result-object   v1
+	11      (0000002e) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	12      (00000034) invoke-virtual       v0, v1, Lcom/lele/llmonitor/data/local/AppDatabase$Companion;->getInstance(Landroid/content/Context;)Lcom/lele/llmonitor/data/local/AppDatabase;
+	13      (0000003a) move-result-object   v0
+	14      (0000003c) invoke-static        v3, v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setDb$p(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/AppDatabase;)V
+
+invokeSuspend-BB@0x42 : [ invokeSuspend-BB@0x52 invokeSuspend-BB@0x76 ]
+	15      (00000042) iget-object          v3, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	16      (00000046) invoke-static        v3, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDesignCapacity$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)I
+	17      (0000004c) move-result          v3
+	18      (0000004e) if-gtz               v3, +014h
+
+invokeSuspend-BB@0x52 : [ invokeSuspend-BB@0x76 ]
+	19      (00000052) iget-object          v2, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	20      (00000056) sget-object          v3, Lcom/lele/llmonitor/data/BatteryEngine;->INSTANCE Lcom/lele/llmonitor/data/BatteryEngine;
+	21      (0000005a) invoke-virtual       v2, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	22      (00000060) move-result-object   v0
+	23      (00000062) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	24      (00000068) invoke-virtual       v3, v0, Lcom/lele/llmonitor/data/BatteryEngine;->getBatteryDesignCapacity(Landroid/content/Context;)I
+	25      (0000006e) move-result          v3
+	26      (00000070) invoke-static        v2, v3, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setDesignCapacity$p(Lcom/lele/llmonitor/service/BatteryMonitorService; I)V
+
+invokeSuspend-BB@0x76 : 
+	27      (00000076) sget-object          v2, Lbw3;->a Lbw3;
+	28      (0000007a) return-object        v2
+
+invokeSuspend-BB@0x7c : 
+	29      (0000007c) const-string         v2, "call to 'resume' before 'invoke' with coroutine"
+	30      (00000080) invoke-static        v2, Lh;->m(Ljava/lang/String;)V
+	31      (00000086) const/4              v2, 0
+	32      (00000088) return-object        v2
+

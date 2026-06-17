@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/divider_layout" layout="@layout/item_divider" />
+    <LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <com.google.android.material.textview.MaterialTextView android:textColor="?colorOnSurface" android:ellipsize="end" android:id="@id/section_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0sp" android:text="@string/palette" android:maxLines="1" style="@style/TextStyle.Frames.Headline6" />
+        <com.google.android.material.textview.MaterialTextView android:textColor="?colorOnSurface" android:ellipsize="end" android:id="@id/section_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tap_to_copy" android:maxLines="1" style="@style/TextStyle.Frames.Caption" />
+    </LinearLayout>
+</LinearLayout>

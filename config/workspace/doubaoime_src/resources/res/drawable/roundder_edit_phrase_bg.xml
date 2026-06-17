@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="12dp"/>
+    <solid android:color="@color/common_phrase_edit_view_bg_focused"/>
+    <stroke
+        android:width="2dp"
+        android:color="@color/ime_oui_line3"/>
+</shape>

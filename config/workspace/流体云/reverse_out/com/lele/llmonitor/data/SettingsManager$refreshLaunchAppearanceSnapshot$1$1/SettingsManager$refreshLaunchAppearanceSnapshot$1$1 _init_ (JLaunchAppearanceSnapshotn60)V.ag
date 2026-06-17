@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;-><init>(J Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:long
+# - v3:com.lele.llmonitor.data.LaunchAppearanceSnapshot
+# - v4:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-wide            v1, v0, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->$generation J
+	1       (00000004) iput-object          v3, v0, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1$1;->$resolvedSnapshot Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	2       (00000008) const/4              v1, 2
+	3       (0000000a) invoke-direct        v0, v1, v4, Ljj3;-><init>(I Ln60;)V
+	4       (00000010) return-void          
+

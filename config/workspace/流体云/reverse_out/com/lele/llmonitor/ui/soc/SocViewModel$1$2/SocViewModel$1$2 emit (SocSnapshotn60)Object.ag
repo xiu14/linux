@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/ui/soc/SocViewModel$1$2;->emit(Lcom/lele/llmonitor/data/soc/SocSnapshot; Ln60;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:com.lele.llmonitor.data.soc.SocSnapshot
+# - v4:n60
+#
+# - return:java.lang.Object
+
+emit-BB@0x0 : 
+	0       (00000000) iget-object          v2, v2, Lcom/lele/llmonitor/ui/soc/SocViewModel$1$2;->this$0 Lcom/lele/llmonitor/ui/soc/SocViewModel;
+	1       (00000004) invoke-static        v2, Lcom/lele/llmonitor/ui/soc/SocViewModel;->access$get_uiState$p(Lcom/lele/llmonitor/ui/soc/SocViewModel;)Lm52;
+	2       (0000000a) move-result-object   v2
+	3       (0000000c) new-instance         v4, Lcom/lele/llmonitor/ui/soc/SocUiState;
+	4       (00000010) const/4              v0, 0
+	5       (00000012) const/4              v1, 0
+	6       (00000014) invoke-direct        v4, v0, v3, v1, Lcom/lele/llmonitor/ui/soc/SocUiState;-><init>(Z Lcom/lele/llmonitor/data/soc/SocSnapshot; Ljava/lang/String;)V
+	7       (0000001a) check-cast           v2, Lfg3;
+	8       (0000001e) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	9       (00000024) invoke-virtual       v2, v1, v4, Lfg3;->j(Ljava/lang/Object; Ljava/lang/Object;)Z
+	10      (0000002a) sget-object          v2, Lbw3;->a Lbw3;
+	11      (0000002e) return-object        v2
+

@@ -1,0 +1,104 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->runCommand([Ljava/lang/String; J)Ljava/lang/String; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String[]
+# - v5:long
+#
+# - return:java.lang.String
+
+runCommand-BB@0x0 : [ runCommand-BB@0x2 ]
+	0       (00000000) const/4              v2, 0
+
+runCommand-BB@0x2 : [ runCommand-BB@0x3c runCommand-BB@0x4a ]
+	1       (00000002) new-instance         v0, Ljava/lang/ProcessBuilder;
+	2       (00000006) array-length         v1, v3
+	3       (00000008) invoke-static        v3, v1, Ljava/util/Arrays;->copyOf([Ljava/lang/Object; I)[Ljava/lang/Object;
+	4       (0000000e) move-result-object   v3
+	5       (00000010) check-cast           v3, [Ljava/lang/String;
+	6       (00000014) invoke-direct        v0, v3, Ljava/lang/ProcessBuilder;-><init>([Ljava/lang/String;)V
+	7       (0000001a) const/4              v3, 1
+	8       (0000001c) invoke-virtual       v0, v3, Ljava/lang/ProcessBuilder;->redirectErrorStream(Z)Ljava/lang/ProcessBuilder;
+	9       (00000022) move-result-object   v3
+	10      (00000024) invoke-virtual       v3, Ljava/lang/ProcessBuilder;->start()Ljava/lang/Process;
+	11      (0000002a) move-result-object   v3
+	12      (0000002c) sget-object          v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS Ljava/util/concurrent/TimeUnit;
+	13      (00000030) invoke-virtual       v3, v4, v5, v0, Ljava/lang/Process;->waitFor(J Ljava/util/concurrent/TimeUnit;)Z
+	14      (00000036) move-result          v4
+	15      (00000038) if-nez               v4, +009h
+	2:73
+	(Ljava/lang/Throwable; -> 46 runCommand-BB@0x46)
+
+runCommand-BB@0x3c : [ runCommand-BB@0x9c ]
+	16      (0000003c) invoke-virtual       v3, Ljava/lang/Process;->destroyForcibly()Ljava/lang/Process;
+	17      (00000042) move-object          v4, v2
+	18      (00000044) goto                 +2ch
+	2:73
+	(Ljava/lang/Throwable; -> 46 runCommand-BB@0x46)
+
+runCommand-BB@0x46 : [ runCommand-BB@0x92 ]
+	19      (00000046) move-exception       v3
+	20      (00000048) goto                 +25h
+	2:73
+	(Ljava/lang/Throwable; -> 46 runCommand-BB@0x46)
+
+runCommand-BB@0x4a : [ runCommand-BB@0x74 ]
+	21      (0000004a) invoke-virtual       v3, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
+	22      (00000050) move-result-object   v3
+	23      (00000052) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	24      (00000058) sget-object          v4, Luu;->a Ljava/nio/charset/Charset;
+	25      (0000005c) new-instance         v5, Ljava/io/InputStreamReader;
+	26      (00000060) invoke-direct        v5, v3, v4, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream; Ljava/nio/charset/Charset;)V
+	27      (00000066) new-instance         v3, Ljava/io/BufferedReader;
+	28      (0000006a) const/16             v4, 8192
+	29      (0000006e) invoke-direct        v3, v5, v4, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader; I)V
+	2:73
+	(Ljava/lang/Throwable; -> 46 runCommand-BB@0x46)
+
+runCommand-BB@0x74 : [ runCommand-BB@0x7c ]
+	30      (00000074) invoke-static        v3, Ldf2;->P(Ljava/io/Reader;)Ljava/lang/String;
+	31      (0000007a) move-result-object   v4
+	74:7b
+	(Ljava/lang/Throwable; -> 84 runCommand-BB@0x84)
+
+runCommand-BB@0x7c : [ runCommand-BB@0x9c ]
+	32      (0000007c) invoke-interface     v3, Ljava/io/Closeable;->close()V
+	33      (00000082) goto                 +dh
+	7c:81
+	(Ljava/lang/Throwable; -> 46 runCommand-BB@0x46)
+
+runCommand-BB@0x84 : [ runCommand-BB@0x86 ]
+	34      (00000084) move-exception       v4
+
+runCommand-BB@0x86 : 
+	35      (00000086) throw                v4
+	86:87
+	(Ljava/lang/Throwable; -> 88 runCommand-BB@0x88)
+
+runCommand-BB@0x88 : [ runCommand-BB@0x8a ]
+	36      (00000088) move-exception       v5
+
+runCommand-BB@0x8a : 
+	37      (0000008a) invoke-static        v3, v4, Lp34;->j(Ljava/io/Closeable; Ljava/lang/Throwable;)V
+	38      (00000090) throw                v5
+	8a:91
+	(Ljava/lang/Throwable; -> 46 runCommand-BB@0x46)
+
+runCommand-BB@0x92 : [ runCommand-BB@0x9c ]
+	39      (00000092) new-instance         v4, Lcw2;
+	40      (00000096) invoke-direct        v4, v3, Lcw2;-><init>(Ljava/lang/Throwable;)V
+
+runCommand-BB@0x9c : [ runCommand-BB@0xa4 runCommand-BB@0xa6 ]
+	41      (0000009c) instance-of          v3, v4, Lcw2;
+	42      (000000a0) if-eqz               v3, +003h
+
+runCommand-BB@0xa4 : [ runCommand-BB@0xa8 ]
+	43      (000000a4) goto                 +2h
+
+runCommand-BB@0xa6 : [ runCommand-BB@0xa8 ]
+	44      (000000a6) move-object          v2, v4
+
+runCommand-BB@0xa8 : 
+	45      (000000a8) check-cast           v2, Ljava/lang/String;
+	46      (000000ac) return-object        v2
+

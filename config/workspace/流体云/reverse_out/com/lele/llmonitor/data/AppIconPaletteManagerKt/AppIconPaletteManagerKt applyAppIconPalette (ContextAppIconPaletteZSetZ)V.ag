@@ -1,0 +1,103 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->applyAppIconPalette(Landroid/content/Context; Lcom/lele/llmonitor/data/AppIconPalette; Z Ljava/util/Set; Z)V [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.content.Context
+# - v11:com.lele.llmonitor.data.AppIconPalette
+# - v12:boolean
+# - v13:java.util.Set
+# - v14:boolean
+#
+# - return:void
+
+applyAppIconPalette-BB@0x0 : [ applyAppIconPalette-BB@0x20 ]
+	0       (00000000) invoke-virtual       v10, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v11, v12, Lcom/lele/llmonitor/data/AppIconPalette;->resolveAliasClassName(Z)Ljava/lang/String;
+	3       (0000000e) move-result-object   v11
+	4       (00000010) invoke-static        Lcom/lele/llmonitor/data/AppIconPalette;->getEntries()Ldq0;
+	5       (00000016) move-result-object   v12
+	6       (00000018) invoke-interface     v12, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	7       (0000001e) move-result-object   v12
+
+applyAppIconPalette-BB@0x20 : [ applyAppIconPalette-BB@0x2c applyAppIconPalette-BB@0xd0 ]
+	8       (00000020) invoke-interface     v12, Ljava/util/Iterator;->hasNext()Z
+	9       (00000026) move-result          v1
+	10      (00000028) if-eqz               v1, +054h
+
+applyAppIconPalette-BB@0x2c : [ applyAppIconPalette-BB@0x62 ]
+	11      (0000002c) invoke-interface     v12, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	12      (00000032) move-result-object   v1
+	13      (00000034) check-cast           v1, Lcom/lele/llmonitor/data/AppIconPalette;
+	14      (00000038) invoke-virtual       v1, Lcom/lele/llmonitor/data/AppIconPalette;->getAliasClassName()Ljava/lang/String;
+	15      (0000003e) move-result-object   v2
+	16      (00000040) invoke-virtual       v1, Lcom/lele/llmonitor/data/AppIconPalette;->getDarkAliasClassName()Ljava/lang/String;
+	17      (00000046) move-result-object   v1
+	18      (00000048) filled-new-array     v2, v1, [Ljava/lang/String;
+	19      (0000004e) move-result-object   v1
+	20      (00000050) invoke-static        v1, Lwh;->f0([Ljava/lang/Object;)Ljava/util/ArrayList;
+	21      (00000056) move-result-object   v1
+	22      (00000058) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	23      (0000005e) move-result          v2
+	24      (00000060) const/4              v3, 0
+
+applyAppIconPalette-BB@0x62 : [ applyAppIconPalette-BB@0x66 applyAppIconPalette-BB@0x20 ]
+	25      (00000062) if-ge                v3, v2, -021h
+
+applyAppIconPalette-BB@0x66 : [ applyAppIconPalette-BB@0x7a applyAppIconPalette-BB@0x88 ]
+	26      (00000066) invoke-virtual       v1, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	27      (0000006c) move-result-object   v4
+	28      (0000006e) add-int/lit8         v3, v3, 1
+	29      (00000072) check-cast           v4, Ljava/lang/String;
+	30      (00000076) if-nez               v14, +009h
+
+applyAppIconPalette-BB@0x7a : [ applyAppIconPalette-BB@0x86 applyAppIconPalette-BB@0x88 ]
+	31      (0000007a) invoke-static        v4, v11, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	32      (00000080) move-result          v5
+	33      (00000082) if-nez               v5, +003h
+
+applyAppIconPalette-BB@0x86 : [ applyAppIconPalette-BB@0x62 ]
+	34      (00000086) goto                 -12h
+
+applyAppIconPalette-BB@0x88 : [ applyAppIconPalette-BB@0x98 applyAppIconPalette-BB@0x9c ]
+	35      (00000088) invoke-static        v4, v11, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	36      (0000008e) move-result          v5
+	37      (00000090) const/4              v6, 2
+	38      (00000092) const/4              v7, 1
+	39      (00000094) if-eqz               v5, +004h
+
+applyAppIconPalette-BB@0x98 : [ applyAppIconPalette-BB@0x9e ]
+	40      (00000098) move                 v5, v7
+	41      (0000009a) goto                 +2h
+
+applyAppIconPalette-BB@0x9c : [ applyAppIconPalette-BB@0x9e ]
+	42      (0000009c) move                 v5, v6
+
+applyAppIconPalette-BB@0x9e : [ applyAppIconPalette-BB@0xb4 applyAppIconPalette-BB@0xb6 ]
+	43      (0000009e) new-instance         v8, Landroid/content/ComponentName;
+	44      (000000a2) invoke-direct        v8, v10, v4, Landroid/content/ComponentName;-><init>(Landroid/content/Context; Ljava/lang/String;)V
+	45      (000000a8) invoke-virtual       v0, v8, Landroid/content/pm/PackageManager;->getComponentEnabledSetting(Landroid/content/ComponentName;)I
+	46      (000000ae) move-result          v9
+	47      (000000b0) if-ne                v9, v5, +003h
+
+applyAppIconPalette-BB@0xb4 : [ applyAppIconPalette-BB@0x62 ]
+	48      (000000b4) goto                 -29h
+
+applyAppIconPalette-BB@0xb6 : [ applyAppIconPalette-BB@0xba applyAppIconPalette-BB@0xc8 ]
+	49      (000000b6) if-ne                v5, v6, +009h
+
+applyAppIconPalette-BB@0xba : [ applyAppIconPalette-BB@0xc6 applyAppIconPalette-BB@0xc8 ]
+	50      (000000ba) invoke-interface     v13, v4, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+	51      (000000c0) move-result          v4
+	52      (000000c2) if-eqz               v4, +003h
+
+applyAppIconPalette-BB@0xc6 : [ applyAppIconPalette-BB@0x62 ]
+	53      (000000c6) goto                 -32h
+
+applyAppIconPalette-BB@0xc8 : [ applyAppIconPalette-BB@0x62 ]
+	54      (000000c8) invoke-virtual       v0, v8, v5, v7, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName; I I)V
+	55      (000000ce) goto                 -36h
+
+applyAppIconPalette-BB@0xd0 : 
+	56      (000000d0) return-void          
+

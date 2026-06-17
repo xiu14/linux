@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/kaomoji_layout_bg_transparent"/>
+    <corners android:radius="11dp"/>
+    <stroke
+        android:width="0.67dp"
+        android:color="@color/kaomoji_layout_border"/>
+</shape>

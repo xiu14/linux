@@ -1,0 +1,24 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->x2(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Lcom/lele/llmonitor/data/AppLanguageOption; Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ld11; Ld11; Ld11; Ld11; Ld11; I Lt10; I)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:int
+# - v1:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v2:com.lele.llmonitor.data.AppLanguageOption
+# - v3:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v4:d11
+# - v5:d11
+# - v6:d11
+# - v7:d11
+# - v8:d11
+# - v9:int
+# - v10:t10
+# - v11:int
+#
+# - return:bw3
+
+x2-BB@0x0 : 
+	0       (00000000) invoke-static/range  v0 ... v11, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LLClassStyleAppearanceCard$lambda$39(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Lcom/lele/llmonitor/data/AppLanguageOption; Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Ld11; Ld11; Ld11; Ld11; Ld11; I Lt10; I)Lbw3;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

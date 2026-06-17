@@ -1,0 +1,34 @@
+.class public interface abstract annotation Lcom/google/android/datatransport/runtime/dagger/Subcomponent;
+.super Ljava/lang/Object;
+.source "r8-map-id-5389b39850ea3af500c7854811bd81da73ae8b6ea4d88eb7ca022411f1b5d3c1"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lcom/google/android/datatransport/runtime/dagger/Subcomponent;
+        modules = {}
+    .end subannotation
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/datatransport/runtime/dagger/Subcomponent$Factory;,
+        Lcom/google/android/datatransport/runtime/dagger/Subcomponent$Builder;
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Documented;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;
+    }
+.end annotation

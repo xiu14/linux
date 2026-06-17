@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDesignCapacity$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)I [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.service.BatteryMonitorService
+#
+# - return:int
+
+access$getDesignCapacity$p-BB@0x0 : 
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->designCapacity I
+	1       (00000004) return               v0
+

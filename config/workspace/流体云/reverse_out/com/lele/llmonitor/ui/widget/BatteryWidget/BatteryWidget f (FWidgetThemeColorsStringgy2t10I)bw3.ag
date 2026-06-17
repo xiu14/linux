@@ -1,0 +1,18 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidget;->f(F Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; Ljava/lang/String; Lgy2; Lt10; I)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:float
+# - v1:com.lele.llmonitor.ui.widget.WidgetThemeColors
+# - v2:java.lang.String
+# - v3:gy2
+# - v4:t10
+# - v5:int
+#
+# - return:bw3
+
+f-BB@0x0 : 
+	0       (00000000) invoke-static/range  v0 ... v5, Lcom/lele/llmonitor/ui/widget/BatteryWidget;->LayoutWideVerticalCompressed$lambda$0$0(F Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; Ljava/lang/String; Lgy2; Lt10; I)Lbw3;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

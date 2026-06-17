@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <item>You need a launcher with icon packs support. The list of supported launchers might be found in the app in the \"Apply\" section, or Play Store description.</item>
+        <item>V závislosti na typu navigace aplikace je třeba buď vysunout navigační panel zleva a přejít k části \"Použít\" nebo zvolit 4. ikonu v dolním navigačním panelu. Odtud můžete vybrat spouštěč, ve kterém chcete tento balíček ikon použít. Některé spouštěče nepodporují automatické nastavení ikon a je nutné to vykonat ručně prostřednictvím jejich nastavení.</item>
+        <item>Přejděte zpátky do hlavní sekce aplikace a klikněte na tlačítko s názvem \"Ikony\".</item>
+        <item>V závislosti na spouštěči, který používáte, buď musíte dlouze přidržet ikonu a zvolit \"Upravit\" z vyskakovacího menu, nebo dlouze přidržet ikonu a přesunout ji do políčka \"Upravit\".</item>
+        <item>V závislosti na typu navigace aplikace musíte vysunout navigační zleva zleva a přejít do části \"Požadavky\" nebo vybrat ikonu z dolního navigačního panelu.</item>
+        <item>K tomu došlo, protože balíček ikon byl přenesena na SD kartu. Měli byste jej umístit do vnitřního úložiště.</item>
+        <item>Při manipulaci s velkým rozlišením může dojít k potížím se spouštěčem, který používáte. Můžete to opravit změnou velikosti ikony na 115 – 120%. Nebo zkuste použít jiný spouštěč.</item>
+        <item>Poslat požadavek na ikonu.</item>
+        <item>Toto oprávnění je nutné k zápisu požadavků na ikony a soubory, jakož i ukládání tapet a možnosti změnit místo pro ukládání stažených tapet.</item>
+        <item>Toto oprávnění je nutné pro načtení tapet ze serveru a jejich stažení.</item>
+        <item>Toto oprávnění umožňuje aplikaci zjistit, zda je zařízení připojeno k internetu.</item>
+        <item>Toto oprávnění umožňuje nastavit tapetu přímo z aplikace.</item>
+        <item>Toto oprávnění umožňuje upravit rozměry tapety na základě rozlišení vaší obrazovky.</item>
+        <item>Toto oprávnění je vyžadováno aplikací Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Jak použít tento balíček ikon?</item>
+        <item>Jak nastavit balíček ikon?</item>
+        <item>Jak zobrazit všechny obsažené ikony?</item>
+        <item>Jak nahradit stávající ikony ikonou alternativní?</item>
+        <item>Jak požádat o ikony bez motivu?</item>
+        <item>Po restartování mého zařízení již nebyl balíček ikon nastaven. Ikony byly obnoveny do výchozího stavu.</item>
+        <item>Proč na mém zařízení vypadají ikony rozmazaně?</item>
+        <item>V obsažených ikonách vidím ikonu aplikace X, ale ikona se nenastaví.</item>
+        <item>Proč aplikace potřebuje oprávnění k úpravám nebo odstranění obsahu mého úložiště?</item>
+        <item>Proč aplikace potřebuje oprávnění pro úplný přístup k síti?</item>
+        <item>Proč aplikace potřebuje oprávnění k zobrazení připojení?</item>
+        <item>Proč aplikace potřebuje oprávnění nastavit tapetu?</item>
+        <item>Proč aplikace potřebuje oprávnění k upravení velikosti tapety?</item>
+        <item>Proč aplikace potřebuje oprávnění zabránit telefonu přejít do režimu spánku?</item>
+    </string-array>
+</resources>

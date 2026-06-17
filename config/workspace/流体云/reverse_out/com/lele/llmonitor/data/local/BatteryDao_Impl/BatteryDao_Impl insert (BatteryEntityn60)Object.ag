@@ -1,0 +1,28 @@
+# Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->insert(Lcom/lele/llmonitor/data/local/BatteryEntity; Ln60;)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:com.lele.llmonitor.data.local.BatteryEntity
+# - v5:n60
+#
+# - return:java.lang.Object
+
+insert-BB@0x0 : [ insert-BB@0x24 insert-BB@0x26 ]
+	0       (00000000) iget-object          v0, v3, Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->__db Lhx2;
+	1       (00000004) new-instance         v1, Ly;
+	2       (00000008) const/4              v2, 4
+	3       (0000000a) invoke-direct        v1, v2, v3, v4, Ly;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	4       (00000010) const/4              v3, 0
+	5       (00000012) const/4              v4, 1
+	6       (00000014) invoke-static        v5, v0, v3, v4, v1, Lni1;->L(Ln60; Lhx2; Z Z Ld11;)Ljava/lang/Object;
+	7       (0000001a) move-result-object   v3
+	8       (0000001c) sget-object          v4, Le80;->d Le80;
+	9       (00000020) if-ne                v3, v4, +003h
+
+insert-BB@0x24 : 
+	10      (00000024) return-object        v3
+
+insert-BB@0x26 : 
+	11      (00000026) sget-object          v3, Lbw3;->a Lbw3;
+	12      (0000002a) return-object        v3
+

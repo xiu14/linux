@@ -1,0 +1,18 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:java.lang.Object
+# - v8:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;
+	1       (00000004) iget-wide            v1, v6, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->$generation J
+	2       (00000008) iget-object          v3, v6, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->$context Landroid/content/Context;
+	3       (0000000c) iget                 v4, v6, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->$clamped F
+	4       (00000010) move-object          v5, v8
+	5       (00000012) invoke-direct/range  v0 ... v5, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;-><init>(J Landroid/content/Context; F Ln60;)V
+	6       (00000018) return-object        v0
+

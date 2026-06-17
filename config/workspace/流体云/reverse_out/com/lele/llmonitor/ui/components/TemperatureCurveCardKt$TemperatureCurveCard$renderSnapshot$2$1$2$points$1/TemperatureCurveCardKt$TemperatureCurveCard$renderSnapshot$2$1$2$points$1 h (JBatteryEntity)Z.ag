@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/ui/components/TemperatureCurveCardKt$TemperatureCurveCard$renderSnapshot$2$1$2$points$1;->h(J Lcom/lele/llmonitor/data/local/BatteryEntity;)Z [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:long
+# - v2:com.lele.llmonitor.data.local.BatteryEntity
+#
+# - return:boolean
+
+h-BB@0x0 : 
+	0       (00000000) invoke-static        v0, v1, v2, Lcom/lele/llmonitor/ui/components/TemperatureCurveCardKt$TemperatureCurveCard$renderSnapshot$2$1$2$points$1;->invokeSuspend$lambda$0(J Lcom/lele/llmonitor/data/local/BatteryEntity;)Z
+	1       (00000006) move-result          v0
+	2       (00000008) return               v0
+

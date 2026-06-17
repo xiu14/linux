@@ -1,0 +1,87 @@
+# Lcom/lele/llmonitor/receiver/BootReceiver;->isAppForeground(Landroid/content/Context;)Z [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.content.Context
+#
+# - return:boolean
+
+isAppForeground-BB@0x0 : [ isAppForeground-BB@0x16 isAppForeground-BB@0x1c ]
+	0       (00000000) const-string         v6, "activity"
+	1       (00000004) invoke-virtual       v7, v6, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v6
+	3       (0000000c) instance-of          v0, v6, Landroid/app/ActivityManager;
+	4       (00000010) const/4              v1, 0
+	5       (00000012) if-eqz               v0, +005h
+
+isAppForeground-BB@0x16 : [ isAppForeground-BB@0x1e ]
+	6       (00000016) check-cast           v6, Landroid/app/ActivityManager;
+	7       (0000001a) goto                 +2h
+
+isAppForeground-BB@0x1c : [ isAppForeground-BB@0x1e ]
+	8       (0000001c) move-object          v6, v1
+
+isAppForeground-BB@0x1e : [ isAppForeground-BB@0x24 isAppForeground-BB@0x26 ]
+	9       (0000001e) const/4              v0, 0
+	10      (00000020) if-nez               v6, +003h
+
+isAppForeground-BB@0x24 : 
+	11      (00000024) return               v0
+
+isAppForeground-BB@0x26 : [ isAppForeground-BB@0x42 isAppForeground-BB@0x44 ]
+	12      (00000026) invoke-static        Landroid/os/Process;->myPid()I
+	13      (0000002c) move-result          v2
+	14      (0000002e) invoke-virtual       v7, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	15      (00000034) move-result-object   v7
+	16      (00000036) invoke-virtual       v6, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
+	17      (0000003c) move-result-object   v6
+	18      (0000003e) if-nez               v6, +003h
+
+isAppForeground-BB@0x42 : 
+	19      (00000042) return               v0
+
+isAppForeground-BB@0x44 : [ isAppForeground-BB@0x4c ]
+	20      (00000044) invoke-interface     v6, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	21      (0000004a) move-result-object   v6
+
+isAppForeground-BB@0x4c : [ isAppForeground-BB@0x58 isAppForeground-BB@0x80 ]
+	22      (0000004c) invoke-interface     v6, Ljava/util/Iterator;->hasNext()Z
+	23      (00000052) move-result          v3
+	24      (00000054) if-eqz               v3, +016h
+
+isAppForeground-BB@0x58 : [ isAppForeground-BB@0x6e isAppForeground-BB@0x7e ]
+	25      (00000058) invoke-interface     v6, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	26      (0000005e) move-result-object   v3
+	27      (00000060) move-object          v4, v3
+	28      (00000062) check-cast           v4, Landroid/app/ActivityManager$RunningAppProcessInfo;
+	29      (00000066) iget                 v5, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid I
+	30      (0000006a) if-eq                v5, v2, +00ah
+
+isAppForeground-BB@0x6e : [ isAppForeground-BB@0x7e isAppForeground-BB@0x4c ]
+	31      (0000006e) iget-object          v4, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName Ljava/lang/String;
+	32      (00000072) invoke-static        v4, v7, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	33      (00000078) move-result          v4
+	34      (0000007a) if-eqz               v4, -017h
+
+isAppForeground-BB@0x7e : [ isAppForeground-BB@0x80 ]
+	35      (0000007e) move-object          v1, v3
+
+isAppForeground-BB@0x80 : [ isAppForeground-BB@0x88 isAppForeground-BB@0x8a ]
+	36      (00000080) check-cast           v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
+	37      (00000084) if-nez               v1, +003h
+
+isAppForeground-BB@0x88 : 
+	38      (00000088) return               v0
+
+isAppForeground-BB@0x8a : [ isAppForeground-BB@0x96 isAppForeground-BB@0x9a ]
+	39      (0000008a) iget                 v6, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance I
+	40      (0000008e) const/16             v7, 100
+	41      (00000092) if-gt                v6, v7, +004h
+
+isAppForeground-BB@0x96 : 
+	42      (00000096) const/4              v6, 1
+	43      (00000098) return               v6
+
+isAppForeground-BB@0x9a : 
+	44      (0000009a) return               v0
+

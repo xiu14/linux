@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;-><init>(J Landroid/content/Context; F Ln60;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:long
+# - v3:android.content.Context
+# - v4:float
+# - v5:n60
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-wide            v1, v0, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->$generation J
+	1       (00000004) iput-object          v3, v0, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->$context Landroid/content/Context;
+	2       (00000008) iput                 v4, v0, Lcom/lele/llmonitor/data/HomeWallpaperManager$setHomeWallpaperAlpha$1;->$clamped F
+	3       (0000000c) const/4              v1, 2
+	4       (0000000e) invoke-direct        v0, v1, v5, Ljj3;-><init>(I Ln60;)V
+	5       (00000014) return-void          
+

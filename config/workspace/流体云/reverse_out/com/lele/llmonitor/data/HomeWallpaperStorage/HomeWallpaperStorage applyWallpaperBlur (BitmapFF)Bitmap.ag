@@ -1,0 +1,38 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->applyWallpaperBlur(Landroid/graphics/Bitmap; F F)Landroid/graphics/Bitmap; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.graphics.Bitmap
+# - v3:float
+# - v4:float
+#
+# - return:android.graphics.Bitmap
+
+applyWallpaperBlur-BB@0x0 : [ applyWallpaperBlur-BB@0x14 applyWallpaperBlur-BB@0x16 ]
+	0       (00000000) invoke-static        v3, v4, Lcom/lele/llmonitor/data/HomeWallpaperBlurSupportKt;->resolveHomeWallpaperBlurRadiusPx(F F)F
+	1       (00000006) move-result          v3
+	2       (00000008) const/high16         v4, 1056964608
+	3       (0000000c) cmpg-float           v4, v3, v4
+	4       (00000010) if-gtz               v4, +003h
+
+applyWallpaperBlur-BB@0x14 : 
+	5       (00000014) return-object        v2
+
+applyWallpaperBlur-BB@0x16 : [ applyWallpaperBlur-BB@0x22 applyWallpaperBlur-BB@0x30 ]
+	6       (00000016) sget                 v4, Landroid/os/Build$VERSION;->SDK_INT I
+	7       (0000001a) const/16             v0, 31
+	8       (0000001e) if-lt                v4, v0, +009h
+
+applyWallpaperBlur-BB@0x22 : [ applyWallpaperBlur-BB@0x2e applyWallpaperBlur-BB@0x30 ]
+	9       (00000022) invoke-direct        v1, v2, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->applyRenderNodeBlur(Landroid/graphics/Bitmap; F)Landroid/graphics/Bitmap;
+	10      (00000028) move-result-object   v4
+	11      (0000002a) if-eqz               v4, +003h
+
+applyWallpaperBlur-BB@0x2e : 
+	12      (0000002e) return-object        v4
+
+applyWallpaperBlur-BB@0x30 : 
+	13      (00000030) invoke-direct        v1, v2, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->applyApproximateGaussianBlur(Landroid/graphics/Bitmap; F)Landroid/graphics/Bitmap;
+	14      (00000036) move-result-object   v1
+	15      (00000038) return-object        v1
+

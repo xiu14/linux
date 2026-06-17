@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->isInitialHistoryLoaded()Z [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:boolean
+
+isInitialHistoryLoaded-BB@0x0 : 
+	0       (00000000) sget-boolean         v0, Lcom/lele/llmonitor/data/BatteryRepository;->hasInitialHistoryLoaded Z
+	1       (00000004) return               v0
+

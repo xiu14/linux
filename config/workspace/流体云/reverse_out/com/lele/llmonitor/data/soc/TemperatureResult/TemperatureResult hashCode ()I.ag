@@ -1,0 +1,59 @@
+# Lcom/lele/llmonitor/data/soc/TemperatureResult;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:int
+
+hashCode-BB@0x0 : [ hashCode-BB@0xa hashCode-BB@0xe ]
+	0       (00000000) iget-object          v0, v4, Lcom/lele/llmonitor/data/soc/TemperatureResult;->temperatureC Ljava/lang/Float;
+	1       (00000004) const/4              v1, 0
+	2       (00000006) if-nez               v0, +004h
+
+hashCode-BB@0xa : [ hashCode-BB@0x16 ]
+	3       (0000000a) move                 v0, v1
+	4       (0000000c) goto                 +5h
+
+hashCode-BB@0xe : [ hashCode-BB@0x16 ]
+	5       (0000000e) invoke-virtual       v0, Ljava/lang/Object;->hashCode()I
+	6       (00000014) move-result          v0
+
+hashCode-BB@0x16 : [ hashCode-BB@0x24 hashCode-BB@0x28 ]
+	7       (00000016) const/16             v2, 31
+	8       (0000001a) mul-int/2addr        v0, v2
+	9       (0000001c) iget-object          v3, v4, Lcom/lele/llmonitor/data/soc/TemperatureResult;->temperatureFractionDigits Ljava/lang/Integer;
+	10      (00000020) if-nez               v3, +004h
+
+hashCode-BB@0x24 : [ hashCode-BB@0x30 ]
+	11      (00000024) move                 v3, v1
+	12      (00000026) goto                 +5h
+
+hashCode-BB@0x28 : [ hashCode-BB@0x30 ]
+	13      (00000028) invoke-virtual       v3, Ljava/lang/Object;->hashCode()I
+	14      (0000002e) move-result          v3
+
+hashCode-BB@0x30 : [ hashCode-BB@0x3c hashCode-BB@0x3e ]
+	15      (00000030) add-int/2addr        v0, v3
+	16      (00000032) mul-int/2addr        v0, v2
+	17      (00000034) iget-object          v3, v4, Lcom/lele/llmonitor/data/soc/TemperatureResult;->selectedZone Ljava/lang/String;
+	18      (00000038) if-nez               v3, +003h
+
+hashCode-BB@0x3c : [ hashCode-BB@0x46 ]
+	19      (0000003c) goto                 +5h
+
+hashCode-BB@0x3e : [ hashCode-BB@0x46 ]
+	20      (0000003e) invoke-virtual       v3, Ljava/lang/String;->hashCode()I
+	21      (00000044) move-result          v1
+
+hashCode-BB@0x46 : 
+	22      (00000046) add-int/2addr        v0, v1
+	23      (00000048) mul-int/2addr        v0, v2
+	24      (0000004a) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/TemperatureResult;->probes Ljava/util/List;
+	25      (0000004e) invoke-static        v1, v0, v2, Ls42;->e(Ljava/util/List; I I)I
+	26      (00000054) move-result          v0
+	27      (00000056) iget-object          v4, v4, Lcom/lele/llmonitor/data/soc/TemperatureResult;->zones Ljava/util/List;
+	28      (0000005a) invoke-virtual       v4, Ljava/lang/Object;->hashCode()I
+	29      (00000060) move-result          v4
+	30      (00000062) add-int/2addr        v4, v0
+	31      (00000064) return               v4
+

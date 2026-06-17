@@ -1,0 +1,28 @@
+# Lcom/lele/llmonitor/ui/widget/b;->invoke(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:java.lang.Object
+# - v14:java.lang.Object
+#
+# - return:java.lang.Object
+
+invoke-BB@0x0 : 
+	0       (00000000) move-object          v10, v13
+	1       (00000002) check-cast           v10, Lt10;
+	2       (00000006) check-cast           v14, Ljava/lang/Integer;
+	3       (0000000a) invoke-virtual       v14, Ljava/lang/Integer;->intValue()I
+	4       (00000010) move-result          v11
+	5       (00000012) iget-wide            v0, v12, Lcom/lele/llmonitor/ui/widget/b;->d J
+	6       (00000016) iget-object          v2, v12, Lcom/lele/llmonitor/ui/widget/b;->e Lcom/lele/llmonitor/ui/widget/BatteryWidget;
+	7       (0000001a) iget                 v3, v12, Lcom/lele/llmonitor/ui/widget/b;->f F
+	8       (0000001e) iget-object          v4, v12, Lcom/lele/llmonitor/ui/widget/b;->g Ljava/lang/String;
+	9       (00000022) iget                 v5, v12, Lcom/lele/llmonitor/ui/widget/b;->h I
+	10      (00000026) iget                 v6, v12, Lcom/lele/llmonitor/ui/widget/b;->i F
+	11      (0000002a) iget                 v7, v12, Lcom/lele/llmonitor/ui/widget/b;->j I
+	12      (0000002e) iget                 v8, v12, Lcom/lele/llmonitor/ui/widget/b;->k I
+	13      (00000032) iget-object          v9, v12, Lcom/lele/llmonitor/ui/widget/b;->l Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;
+	14      (00000036) invoke-static/range  v0 ... v11, Lcom/lele/llmonitor/ui/widget/BatteryWidget;->c(J Lcom/lele/llmonitor/ui/widget/BatteryWidget; F Ljava/lang/String; I F I I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; Lt10; I)Lbw3;
+	15      (0000003c) move-result-object   v12
+	16      (0000003e) return-object        v12
+

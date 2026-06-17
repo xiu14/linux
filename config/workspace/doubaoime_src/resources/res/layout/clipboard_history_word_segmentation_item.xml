@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="13dp"
+    android:textColor="@color/clipboard_history_word_seg_text_color"
+    android:gravity="center"
+    android:id="@+id/clipboard_history_word_segmentation_item_text"
+    android:background="@drawable/bg_clipboard_item_seg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:includeFontPadding="false"
+    android:paddingHorizontal="@dimen/dp_10"/>

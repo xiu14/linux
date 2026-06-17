@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen android:key="prefs"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.PreferenceCategory android:title="@string/interface_title" android:key="interface_prefs">
+        <androidx.preference.Preference android:title="@string/app_language" android:key="app_language" />
+        <androidx.preference.Preference android:title="@string/app_theme" android:key="app_theme" android:summary="@string/follow_system_theme" />
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/use_amoled_theme" android:key="use_amoled" android:summary="@string/use_amoled_theme_summary" />
+        <androidx.preference.SwitchPreferenceCompat android:title="Material You" android:key="use_material_you" />
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/colored_navigation_bar" android:key="colored_navigation_bar" />
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/interface_animations" android:key="interface_animations" android:summary="@string/interface_animations_summary" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="@string/data_and_storage" android:key="data_prefs">
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/display_full_res_previews" android:key="full_res_previews" android:summary="@string/display_full_res_previews_summary" />
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/download_on_wifi_only" android:key="download_on_wifi_only" android:summary="@string/download_on_wifi_only_summary" />
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/crop_pictures" android:key="crop_pictures" android:summary="@string/crop_pictures_summary" />
+        <androidx.preference.Preference android:title="@string/download_location" android:key="download_location" />
+        <androidx.preference.Preference android:title="@string/clear_data_cache" android:key="clear_data_cache" android:summary="@string/clear_data_cache_summary" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="@string/notifications" android:key="notifications_prefs">
+        <androidx.preference.SwitchPreferenceCompat android:title="@string/enable_notifications" android:key="notifications" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="@string/legal" android:key="legal">
+        <androidx.preference.Preference android:persistent="true" android:title="@string/privacy_policy" android:key="privacy" />
+        <androidx.preference.Preference android:persistent="true" android:title="@string/terms_conditions" android:key="terms" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="@string/versions" android:key="versions">
+        <androidx.preference.Preference android:persistent="true" android:key="app_version" />
+        <androidx.preference.Preference android:persistent="true" android:key="dashboard_version" />
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

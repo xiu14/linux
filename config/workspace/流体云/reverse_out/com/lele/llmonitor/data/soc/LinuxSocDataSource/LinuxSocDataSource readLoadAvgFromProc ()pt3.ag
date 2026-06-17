@@ -1,0 +1,135 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLoadAvgFromProc()Lpt3; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:pt3
+
+readLoadAvgFromProc-BB@0x0 : [ readLoadAvgFromProc-BB@0x36 ]
+	0       (00000000) new-instance         v6, Ljava/io/File;
+	1       (00000004) const-string         v0, "/proc/loadavg"
+	2       (00000008) invoke-direct        v6, v0, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	3       (0000000e) invoke-static        v6, Lwt0;->V(Ljava/io/File;)Ljava/lang/String;
+	4       (00000014) move-result-object   v6
+	5       (00000016) invoke-static        v6, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	6       (0000001c) move-result-object   v6
+	7       (0000001e) invoke-virtual       v6, Ljava/lang/Object;->toString()Ljava/lang/String;
+	8       (00000024) move-result-object   v6
+	9       (00000026) goto                 +8h
+	0:25
+	(Ljava/lang/Throwable; -> 28 readLoadAvgFromProc-BB@0x28)
+
+readLoadAvgFromProc-BB@0x28 : [ readLoadAvgFromProc-BB@0x36 ]
+	10      (00000028) move-exception       v6
+	11      (0000002a) new-instance         v0, Lcw2;
+	12      (0000002e) invoke-direct        v0, v6, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	13      (00000034) move-object          v6, v0
+
+readLoadAvgFromProc-BB@0x36 : [ readLoadAvgFromProc-BB@0x42 readLoadAvgFromProc-BB@0x44 ]
+	14      (00000036) nop                  
+	15      (00000038) instance-of          v0, v6, Lcw2;
+	16      (0000003c) const/4              v1, 0
+	17      (0000003e) if-eqz               v0, +003h
+
+readLoadAvgFromProc-BB@0x42 : [ readLoadAvgFromProc-BB@0x44 ]
+	18      (00000042) move-object          v6, v1
+
+readLoadAvgFromProc-BB@0x44 : [ readLoadAvgFromProc-BB@0x4c readLoadAvgFromProc-BB@0x50 ]
+	19      (00000044) check-cast           v6, Ljava/lang/String;
+	20      (00000048) if-nez               v6, +004h
+
+readLoadAvgFromProc-BB@0x4c : [ readLoadAvgFromProc-BB@0x158 ]
+	21      (0000004c) goto/16              +086h
+
+readLoadAvgFromProc-BB@0x50 : [ readLoadAvgFromProc-BB@0x7e readLoadAvgFromProc-BB@0x90 ]
+	22      (00000050) const-string         v0, "\s+"
+	23      (00000054) invoke-static        v0, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+	24      (0000005a) move-result-object   v0
+	25      (0000005c) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	26      (00000062) const/4              v2, 0
+	27      (00000064) invoke-static        v2, Lhh3;->E0(I)V
+	28      (0000006a) invoke-virtual       v0, v6, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+	29      (00000070) move-result-object   v0
+	30      (00000072) invoke-virtual       v0, Ljava/util/regex/Matcher;->find()Z
+	31      (00000078) move-result          v3
+	32      (0000007a) if-nez               v3, +00bh
+
+readLoadAvgFromProc-BB@0x7e : [ readLoadAvgFromProc-BB@0xf2 ]
+	33      (0000007e) invoke-virtual       v6, Ljava/lang/Object;->toString()Ljava/lang/String;
+	34      (00000084) move-result-object   v6
+	35      (00000086) invoke-static        v6, Lr7;->L(Ljava/lang/Object;)Ljava/util/List;
+	36      (0000008c) move-result-object   v6
+	37      (0000008e) goto                 +32h
+
+readLoadAvgFromProc-BB@0x90 : [ readLoadAvgFromProc-BB@0xa0 ]
+	38      (00000090) new-instance         v3, Ljava/util/ArrayList;
+	39      (00000094) const/16             v4, 10
+	40      (00000098) invoke-direct        v3, v4, Ljava/util/ArrayList;-><init>(I)V
+	41      (0000009e) move                 v4, v2
+
+readLoadAvgFromProc-BB@0xa0 : [ readLoadAvgFromProc-BB@0xd2 readLoadAvgFromProc-BB@0xa0 ]
+	42      (000000a0) invoke-virtual       v0, Ljava/util/regex/Matcher;->start()I
+	43      (000000a6) move-result          v5
+	44      (000000a8) invoke-virtual       v6, v4, v5, Ljava/lang/String;->subSequence(I I)Ljava/lang/CharSequence;
+	45      (000000ae) move-result-object   v4
+	46      (000000b0) invoke-virtual       v4, Ljava/lang/Object;->toString()Ljava/lang/String;
+	47      (000000b6) move-result-object   v4
+	48      (000000b8) invoke-virtual       v3, v4, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	49      (000000be) invoke-virtual       v0, Ljava/util/regex/Matcher;->end()I
+	50      (000000c4) move-result          v4
+	51      (000000c6) invoke-virtual       v0, Ljava/util/regex/Matcher;->find()Z
+	52      (000000cc) move-result          v5
+	53      (000000ce) if-nez               v5, -017h
+
+readLoadAvgFromProc-BB@0xd2 : [ readLoadAvgFromProc-BB@0xf2 ]
+	54      (000000d2) invoke-virtual       v6, Ljava/lang/String;->length()I
+	55      (000000d8) move-result          v0
+	56      (000000da) invoke-virtual       v6, v4, v0, Ljava/lang/String;->subSequence(I I)Ljava/lang/CharSequence;
+	57      (000000e0) move-result-object   v6
+	58      (000000e2) invoke-virtual       v6, Ljava/lang/Object;->toString()Ljava/lang/String;
+	59      (000000e8) move-result-object   v6
+	60      (000000ea) invoke-virtual       v3, v6, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	61      (000000f0) move-object          v6, v3
+
+readLoadAvgFromProc-BB@0xf2 : [ readLoadAvgFromProc-BB@0x100 readLoadAvgFromProc-BB@0x102 ]
+	62      (000000f2) invoke-interface     v6, Ljava/util/List;->size()I
+	63      (000000f8) move-result          v0
+	64      (000000fa) const/4              v3, 3
+	65      (000000fc) if-ge                v0, v3, +003h
+
+readLoadAvgFromProc-BB@0x100 : [ readLoadAvgFromProc-BB@0x158 ]
+	66      (00000100) goto                 +2ch
+
+readLoadAvgFromProc-BB@0x102 : [ readLoadAvgFromProc-BB@0x11a readLoadAvgFromProc-BB@0x158 ]
+	67      (00000102) invoke-interface     v6, v2, Ljava/util/List;->get(I)Ljava/lang/Object;
+	68      (00000108) move-result-object   v0
+	69      (0000010a) check-cast           v0, Ljava/lang/String;
+	70      (0000010e) invoke-static        v0, Lnh3;->a0(Ljava/lang/String;)Ljava/lang/Float;
+	71      (00000114) move-result-object   v0
+	72      (00000116) if-eqz               v0, +021h
+
+readLoadAvgFromProc-BB@0x11a : [ readLoadAvgFromProc-BB@0x134 readLoadAvgFromProc-BB@0x158 ]
+	73      (0000011a) const/4              v2, 1
+	74      (0000011c) invoke-interface     v6, v2, Ljava/util/List;->get(I)Ljava/lang/Object;
+	75      (00000122) move-result-object   v2
+	76      (00000124) check-cast           v2, Ljava/lang/String;
+	77      (00000128) invoke-static        v2, Lnh3;->a0(Ljava/lang/String;)Ljava/lang/Float;
+	78      (0000012e) move-result-object   v2
+	79      (00000130) if-eqz               v2, +014h
+
+readLoadAvgFromProc-BB@0x134 : [ readLoadAvgFromProc-BB@0x14e readLoadAvgFromProc-BB@0x158 ]
+	80      (00000134) const/4              v3, 2
+	81      (00000136) invoke-interface     v6, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	82      (0000013c) move-result-object   v6
+	83      (0000013e) check-cast           v6, Ljava/lang/String;
+	84      (00000142) invoke-static        v6, Lnh3;->a0(Ljava/lang/String;)Ljava/lang/Float;
+	85      (00000148) move-result-object   v6
+	86      (0000014a) if-eqz               v6, +007h
+
+readLoadAvgFromProc-BB@0x14e : [ readLoadAvgFromProc-BB@0x158 ]
+	87      (0000014e) new-instance         v1, Lpt3;
+	88      (00000152) invoke-direct        v1, v0, v2, v6, Lpt3;-><init>(Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object;)V
+
+readLoadAvgFromProc-BB@0x158 : 
+	89      (00000158) return-object        v1
+

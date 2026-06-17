@@ -1,0 +1,212 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->probeCpuUsage(Lcom/lele/llmonitor/data/soc/CpuTimes; Ln60;)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:com.lele.llmonitor.data.soc.CpuTimes
+# - v12:n60
+#
+# - return:java.lang.Object
+
+probeCpuUsage-BB@0x0 : [ probeCpuUsage-BB@0x8 probeCpuUsage-BB@0x26 ]
+	0       (00000000) instance-of          v0, v12, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;
+	1       (00000004) if-eqz               v0, +011h
+
+probeCpuUsage-BB@0x8 : [ probeCpuUsage-BB@0x1e probeCpuUsage-BB@0x26 ]
+	2       (00000008) move-object          v0, v12
+	3       (0000000a) check-cast           v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;
+	4       (0000000e) iget                 v1, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->label I
+	5       (00000012) const/high16         v2, -2147483648
+	6       (00000016) and-int              v3, v1, v2
+	7       (0000001a) if-eqz               v3, +006h
+
+probeCpuUsage-BB@0x1e : [ probeCpuUsage-BB@0x30 ]
+	8       (0000001e) sub-int/2addr        v1, v2
+	9       (00000020) iput                 v1, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->label I
+	10      (00000024) goto                 +6h
+
+probeCpuUsage-BB@0x26 : [ probeCpuUsage-BB@0x30 ]
+	11      (00000026) new-instance         v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;
+	12      (0000002a) invoke-direct        v0, v10, v12, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;-><init>(Lcom/lele/llmonitor/data/soc/LinuxSocDataSource; Ln60;)V
+
+probeCpuUsage-BB@0x30 : [ probeCpuUsage-BB@0x46 probeCpuUsage-BB@0x7e ]
+	13      (00000030) iget-object          v12, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->result Ljava/lang/Object;
+	14      (00000034) iget                 v1, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->label I
+	15      (00000038) const/4              v2, 0
+	16      (0000003a) const-string         v3, "read failed"
+	17      (0000003e) const/4              v4, 0
+	18      (00000040) const/4              v5, 1
+	19      (00000042) if-eqz               v1, +01eh
+
+probeCpuUsage-BB@0x46 : [ probeCpuUsage-BB@0x4a probeCpuUsage-BB@0x72 ]
+	20      (00000046) if-ne                v1, v5, +016h
+
+probeCpuUsage-BB@0x4a : [ probeCpuUsage-BB@0x126 ]
+	21      (0000004a) iget-object          v11, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$3 Ljava/lang/Object;
+	22      (0000004e) check-cast           v11, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	23      (00000052) iget-object          v11, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$2 Ljava/lang/Object;
+	24      (00000056) check-cast           v11, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	25      (0000005a) iget-object          v1, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$1 Ljava/lang/Object;
+	26      (0000005e) check-cast           v1, Ljava/util/List;
+	27      (00000062) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$0 Ljava/lang/Object;
+	28      (00000066) check-cast           v0, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	29      (0000006a) invoke-static        v12, Lib1;->Q(Ljava/lang/Object;)V
+	30      (00000070) goto                 +5bh
+
+probeCpuUsage-BB@0x72 : 
+	31      (00000072) const-string         v10, "call to 'resume' before 'invoke' with coroutine"
+	32      (00000076) invoke-static        v10, Lh;->m(Ljava/lang/String;)V
+	33      (0000007c) return-object        v2
+
+probeCpuUsage-BB@0x7e : [ probeCpuUsage-BB@0x9e probeCpuUsage-BB@0xf0 ]
+	34      (0000007e) invoke-static        v12, Lib1;->Q(Ljava/lang/Object;)V
+	35      (00000084) new-instance         v1, Ljava/util/ArrayList;
+	36      (00000088) invoke-direct        v1, Ljava/util/ArrayList;-><init>()V
+	37      (0000008e) invoke-direct        v10, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readCpuTimesFromProcStat()Lcom/lele/llmonitor/data/soc/CpuTimes;
+	38      (00000094) move-result-object   v12
+	39      (00000096) const-string         v6, "proc/stat(delta)"
+	40      (0000009a) if-eqz               v12, +02bh
+
+probeCpuUsage-BB@0x9e : [ probeCpuUsage-BB@0xaa probeCpuUsage-BB@0xbe ]
+	41      (0000009e) invoke-direct        v10, v11, v12, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->calculateCpuUsagePercent(Lcom/lele/llmonitor/data/soc/CpuTimes; Lcom/lele/llmonitor/data/soc/CpuTimes;)Ljava/lang/Float;
+	42      (000000a4) move-result-object   v11
+	43      (000000a6) if-eqz               v11, +00ch
+
+probeCpuUsage-BB@0xaa : [ probeCpuUsage-BB@0xbe probeCpuUsage-BB@0xc2 ]
+	44      (000000aa) invoke-virtual       v11, Ljava/lang/Number;->floatValue()F
+	45      (000000b0) move-result          v7
+	46      (000000b2) invoke-direct        v10, v7, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->formatPercent(F)Ljava/lang/String;
+	47      (000000b8) move-result-object   v7
+	48      (000000ba) if-nez               v7, +004h
+
+probeCpuUsage-BB@0xbe : [ probeCpuUsage-BB@0xc2 ]
+	49      (000000be) const-string         v7, "delta unavailable"
+
+probeCpuUsage-BB@0xc2 : [ probeCpuUsage-BB@0xc6 probeCpuUsage-BB@0xca ]
+	50      (000000c2) if-eqz               v11, +004h
+
+probeCpuUsage-BB@0xc6 : [ probeCpuUsage-BB@0xcc ]
+	51      (000000c6) move                 v8, v5
+	52      (000000c8) goto                 +2h
+
+probeCpuUsage-BB@0xca : [ probeCpuUsage-BB@0xcc ]
+	53      (000000ca) move                 v8, v4
+
+probeCpuUsage-BB@0xcc : [ probeCpuUsage-BB@0xe0 probeCpuUsage-BB@0xec ]
+	54      (000000cc) new-instance         v9, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	55      (000000d0) invoke-direct        v9, v6, v7, v8, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	56      (000000d6) invoke-interface     v1, v9, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	57      (000000dc) if-eqz               v11, +008h
+
+probeCpuUsage-BB@0xe0 : 
+	58      (000000e0) new-instance         v10, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	59      (000000e4) invoke-direct        v10, v11, v12, v1, Lcom/lele/llmonitor/data/soc/CpuUsageResult;-><init>(Ljava/lang/Float; Lcom/lele/llmonitor/data/soc/CpuTimes; Ljava/util/List;)V
+	60      (000000ea) return-object        v10
+
+probeCpuUsage-BB@0xec : [ probeCpuUsage-BB@0x100 ]
+	61      (000000ec) move-object          v11, v12
+	62      (000000ee) goto                 +9h
+
+probeCpuUsage-BB@0xf0 : [ probeCpuUsage-BB@0x100 ]
+	63      (000000f0) new-instance         v12, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	64      (000000f4) invoke-direct        v12, v6, v3, v4, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	65      (000000fa) invoke-interface     v1, v12, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+probeCpuUsage-BB@0x100 : [ probeCpuUsage-BB@0x124 probeCpuUsage-BB@0x126 ]
+	66      (00000100) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$0 Ljava/lang/Object;
+	67      (00000104) iput-object          v1, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$1 Ljava/lang/Object;
+	68      (00000108) iput-object          v11, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$2 Ljava/lang/Object;
+	69      (0000010c) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->L$3 Ljava/lang/Object;
+	70      (00000110) iput                 v5, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource$probeCpuUsage$1;->label I
+	71      (00000114) invoke-direct        v10, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->sampleCpuUsageShortWindow(Ln60;)Ljava/lang/Object;
+	72      (0000011a) move-result-object   v12
+	73      (0000011c) sget-object          v0, Le80;->d Le80;
+	74      (00000120) if-ne                v12, v0, +003h
+
+probeCpuUsage-BB@0x124 : 
+	75      (00000124) return-object        v0
+
+probeCpuUsage-BB@0x126 : [ probeCpuUsage-BB@0x12e probeCpuUsage-BB@0x142 ]
+	76      (00000126) check-cast           v12, Ljava/lang/Float;
+	77      (0000012a) if-eqz               v12, +00ch
+
+probeCpuUsage-BB@0x12e : [ probeCpuUsage-BB@0x142 probeCpuUsage-BB@0x144 ]
+	78      (0000012e) invoke-virtual       v12, Ljava/lang/Number;->floatValue()F
+	79      (00000134) move-result          v0
+	80      (00000136) invoke-direct        v10, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->formatPercent(F)Ljava/lang/String;
+	81      (0000013c) move-result-object   v0
+	82      (0000013e) if-nez               v0, +003h
+
+probeCpuUsage-BB@0x142 : [ probeCpuUsage-BB@0x144 ]
+	83      (00000142) move-object          v0, v3
+
+probeCpuUsage-BB@0x144 : [ probeCpuUsage-BB@0x148 probeCpuUsage-BB@0x14c ]
+	84      (00000144) if-eqz               v12, +004h
+
+probeCpuUsage-BB@0x148 : [ probeCpuUsage-BB@0x14e ]
+	85      (00000148) move                 v6, v5
+	86      (0000014a) goto                 +2h
+
+probeCpuUsage-BB@0x14c : [ probeCpuUsage-BB@0x14e ]
+	87      (0000014c) move                 v6, v4
+
+probeCpuUsage-BB@0x14e : [ probeCpuUsage-BB@0x166 probeCpuUsage-BB@0x172 ]
+	88      (0000014e) new-instance         v7, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	89      (00000152) const-string         v8, "proc/stat(short-window)"
+	90      (00000156) invoke-direct        v7, v8, v0, v6, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	91      (0000015c) invoke-interface     v1, v7, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	92      (00000162) if-eqz               v12, +008h
+
+probeCpuUsage-BB@0x166 : 
+	93      (00000166) new-instance         v10, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	94      (0000016a) invoke-direct        v10, v12, v11, v1, Lcom/lele/llmonitor/data/soc/CpuUsageResult;-><init>(Ljava/lang/Float; Lcom/lele/llmonitor/data/soc/CpuTimes; Ljava/util/List;)V
+	95      (00000170) return-object        v10
+
+probeCpuUsage-BB@0x172 : [ probeCpuUsage-BB@0x17e probeCpuUsage-BB@0x196 ]
+	96      (00000172) invoke-direct        v10, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->estimateCpuUsageFromFrequencies()Ljava/lang/Float;
+	97      (00000178) move-result-object   v12
+	98      (0000017a) if-eqz               v12, +00eh
+
+probeCpuUsage-BB@0x17e : [ probeCpuUsage-BB@0x192 probeCpuUsage-BB@0x194 ]
+	99      (0000017e) invoke-virtual       v12, Ljava/lang/Number;->floatValue()F
+	100     (00000184) move-result          v0
+	101     (00000186) invoke-direct        v10, v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->formatPercent(F)Ljava/lang/String;
+	102     (0000018c) move-result-object   v10
+	103     (0000018e) if-nez               v10, +003h
+
+probeCpuUsage-BB@0x192 : [ probeCpuUsage-BB@0x196 ]
+	104     (00000192) goto                 +2h
+
+probeCpuUsage-BB@0x194 : [ probeCpuUsage-BB@0x196 ]
+	105     (00000194) move-object          v3, v10
+
+probeCpuUsage-BB@0x196 : [ probeCpuUsage-BB@0x19a probeCpuUsage-BB@0x19c ]
+	106     (00000196) if-eqz               v12, +003h
+
+probeCpuUsage-BB@0x19a : [ probeCpuUsage-BB@0x19e ]
+	107     (0000019a) goto                 +2h
+
+probeCpuUsage-BB@0x19c : [ probeCpuUsage-BB@0x19e ]
+	108     (0000019c) move                 v5, v4
+
+probeCpuUsage-BB@0x19e : [ probeCpuUsage-BB@0x1b6 probeCpuUsage-BB@0x1c2 ]
+	109     (0000019e) new-instance         v10, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	110     (000001a2) const-string         v0, "cpufreq(estimated)"
+	111     (000001a6) invoke-direct        v10, v0, v3, v5, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	112     (000001ac) invoke-interface     v1, v10, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	113     (000001b2) if-eqz               v12, +008h
+
+probeCpuUsage-BB@0x1b6 : 
+	114     (000001b6) new-instance         v10, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	115     (000001ba) invoke-direct        v10, v12, v11, v1, Lcom/lele/llmonitor/data/soc/CpuUsageResult;-><init>(Ljava/lang/Float; Lcom/lele/llmonitor/data/soc/CpuTimes; Ljava/util/List;)V
+	116     (000001c0) return-object        v10
+
+probeCpuUsage-BB@0x1c2 : 
+	117     (000001c2) new-instance         v10, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	118     (000001c6) const-string         v12, "trusted-sources-only"
+	119     (000001ca) const-string         v0, "no reliable system cpu source"
+	120     (000001ce) invoke-direct        v10, v12, v0, v4, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	121     (000001d4) invoke-interface     v1, v10, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+	122     (000001da) new-instance         v10, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	123     (000001de) invoke-direct        v10, v2, v11, v1, Lcom/lele/llmonitor/data/soc/CpuUsageResult;-><init>(Ljava/lang/Float; Lcom/lele/llmonitor/data/soc/CpuTimes; Ljava/util/List;)V
+	124     (000001e4) return-object        v10
+

@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->access$exportStartupPreview(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Ljava/io/File; Ljava/io/File; I F F F)Z [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.HomeWallpaperStorage
+# - v1:java.io.File
+# - v2:java.io.File
+# - v3:int
+# - v4:float
+# - v5:float
+# - v6:float
+#
+# - return:boolean
+
+access$exportStartupPreview-BB@0x0 : 
+	0       (00000000) invoke-direct/range  v0 ... v6, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->exportStartupPreview(Ljava/io/File; Ljava/io/File; I F F F)Z
+	1       (00000006) move-result          v0
+	2       (00000008) return               v0
+

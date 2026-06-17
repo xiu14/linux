@@ -1,0 +1,93 @@
+# Lcom/lele/llmonitor/data/local/BatteryEntity;->equals(Ljava/lang/Object;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:java.lang.Object
+#
+# - return:boolean
+
+equals-BB@0x0 : [ equals-BB@0x6 equals-BB@0x8 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-ne                v7, v8, +003h
+
+equals-BB@0x6 : 
+	2       (00000006) return               v0
+
+equals-BB@0x8 : [ equals-BB@0x12 equals-BB@0x14 ]
+	3       (00000008) instance-of          v1, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	4       (0000000c) const/4              v2, 0
+	5       (0000000e) if-nez               v1, +003h
+
+equals-BB@0x12 : 
+	6       (00000012) return               v2
+
+equals-BB@0x14 : [ equals-BB@0x28 equals-BB@0x2a ]
+	7       (00000014) check-cast           v8, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	8       (00000018) iget-wide            v3, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->id J
+	9       (0000001c) iget-wide            v5, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->id J
+	10      (00000020) cmp-long             v1, v3, v5
+	11      (00000024) if-eqz               v1, +003h
+
+equals-BB@0x28 : 
+	12      (00000028) return               v2
+
+equals-BB@0x2a : [ equals-BB@0x3a equals-BB@0x3c ]
+	13      (0000002a) iget-wide            v3, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->timestamp J
+	14      (0000002e) iget-wide            v5, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->timestamp J
+	15      (00000032) cmp-long             v1, v3, v5
+	16      (00000036) if-eqz               v1, +003h
+
+equals-BB@0x3a : 
+	17      (0000003a) return               v2
+
+equals-BB@0x3c : [ equals-BB@0x48 equals-BB@0x4a ]
+	18      (0000003c) iget                 v1, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->level I
+	19      (00000040) iget                 v3, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->level I
+	20      (00000044) if-eq                v1, v3, +003h
+
+equals-BB@0x48 : 
+	21      (00000048) return               v2
+
+equals-BB@0x4a : [ equals-BB@0x5e equals-BB@0x60 ]
+	22      (0000004a) iget                 v1, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->voltage F
+	23      (0000004e) iget                 v3, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->voltage F
+	24      (00000052) invoke-static        v1, v3, Ljava/lang/Float;->compare(F F)I
+	25      (00000058) move-result          v1
+	26      (0000005a) if-eqz               v1, +003h
+
+equals-BB@0x5e : 
+	27      (0000005e) return               v2
+
+equals-BB@0x60 : [ equals-BB@0x74 equals-BB@0x76 ]
+	28      (00000060) iget                 v1, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->current F
+	29      (00000064) iget                 v3, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->current F
+	30      (00000068) invoke-static        v1, v3, Ljava/lang/Float;->compare(F F)I
+	31      (0000006e) move-result          v1
+	32      (00000070) if-eqz               v1, +003h
+
+equals-BB@0x74 : 
+	33      (00000074) return               v2
+
+equals-BB@0x76 : [ equals-BB@0x8a equals-BB@0x8c ]
+	34      (00000076) iget                 v1, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->power F
+	35      (0000007a) iget                 v3, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->power F
+	36      (0000007e) invoke-static        v1, v3, Ljava/lang/Float;->compare(F F)I
+	37      (00000084) move-result          v1
+	38      (00000086) if-eqz               v1, +003h
+
+equals-BB@0x8a : 
+	39      (0000008a) return               v2
+
+equals-BB@0x8c : [ equals-BB@0xa0 equals-BB@0xa2 ]
+	40      (0000008c) iget                 v7, v7, Lcom/lele/llmonitor/data/local/BatteryEntity;->temperature F
+	41      (00000090) iget                 v8, v8, Lcom/lele/llmonitor/data/local/BatteryEntity;->temperature F
+	42      (00000094) invoke-static        v7, v8, Ljava/lang/Float;->compare(F F)I
+	43      (0000009a) move-result          v7
+	44      (0000009c) if-eqz               v7, +003h
+
+equals-BB@0xa0 : 
+	45      (000000a0) return               v2
+
+equals-BB@0xa2 : 
+	46      (000000a2) return               v0
+

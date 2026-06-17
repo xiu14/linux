@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->SettingsScreen$lambda$35$4$0$1$0$0$0$1$0(Ll52; Ll52; Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:l52
+# - v1:l52
+# - v2:com.lele.llmonitor.data.FollowSystemAppIconMode
+#
+# - return:bw3
+
+SettingsScreen$lambda$35$4$0$1$0$0$0$1$0-BB@0x0 : [ SettingsScreen$lambda$35$4$0$1$0$0$0$1$0-BB@0x12 SettingsScreen$lambda$35$4$0$1$0$0$0$1$0-BB@0x18 ]
+	0       (00000000) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-static        v0, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->SettingsScreen$lambda$12(Ll52;)Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) if-eq                v2, v0, +005h
+
+SettingsScreen$lambda$35$4$0$1$0$0$0$1$0-BB@0x12 : [ SettingsScreen$lambda$35$4$0$1$0$0$0$1$0-BB@0x18 ]
+	4       (00000012) invoke-static        v1, v2, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->SettingsScreen$lambda$19(Ll52; Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)V
+
+SettingsScreen$lambda$35$4$0$1$0$0$0$1$0-BB@0x18 : 
+	5       (00000018) sget-object          v0, Lbw3;->a Lbw3;
+	6       (0000001c) return-object        v0
+

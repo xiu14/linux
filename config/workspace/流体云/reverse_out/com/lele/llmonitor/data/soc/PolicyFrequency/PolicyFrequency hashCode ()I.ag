@@ -1,0 +1,46 @@
+# Lcom/lele/llmonitor/data/soc/PolicyFrequency;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+hashCode-BB@0x0 : [ hashCode-BB@0x2c hashCode-BB@0x30 ]
+	0       (00000000) iget-object          v0, v3, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->name Ljava/lang/String;
+	1       (00000004) invoke-virtual       v0, Ljava/lang/String;->hashCode()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) mul-int/lit8         v0, v0, 31
+	4       (00000010) iget-object          v1, v3, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->relatedCores Ljava/util/Set;
+	5       (00000014) invoke-virtual       v1, Ljava/lang/Object;->hashCode()I
+	6       (0000001a) move-result          v1
+	7       (0000001c) add-int/2addr        v1, v0
+	8       (0000001e) mul-int/lit8         v1, v1, 31
+	9       (00000022) iget-object          v0, v3, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->currentKhz Ljava/lang/Long;
+	10      (00000026) const/4              v2, 0
+	11      (00000028) if-nez               v0, +004h
+
+hashCode-BB@0x2c : [ hashCode-BB@0x38 ]
+	12      (0000002c) move                 v0, v2
+	13      (0000002e) goto                 +5h
+
+hashCode-BB@0x30 : [ hashCode-BB@0x38 ]
+	14      (00000030) invoke-virtual       v0, Ljava/lang/Object;->hashCode()I
+	15      (00000036) move-result          v0
+
+hashCode-BB@0x38 : [ hashCode-BB@0x46 hashCode-BB@0x48 ]
+	16      (00000038) add-int/2addr        v1, v0
+	17      (0000003a) mul-int/lit8         v1, v1, 31
+	18      (0000003e) iget-object          v3, v3, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->maxKhz Ljava/lang/Long;
+	19      (00000042) if-nez               v3, +003h
+
+hashCode-BB@0x46 : [ hashCode-BB@0x50 ]
+	20      (00000046) goto                 +5h
+
+hashCode-BB@0x48 : [ hashCode-BB@0x50 ]
+	21      (00000048) invoke-virtual       v3, Ljava/lang/Object;->hashCode()I
+	22      (0000004e) move-result          v2
+
+hashCode-BB@0x50 : 
+	23      (00000050) add-int/2addr        v1, v2
+	24      (00000052) return               v1
+

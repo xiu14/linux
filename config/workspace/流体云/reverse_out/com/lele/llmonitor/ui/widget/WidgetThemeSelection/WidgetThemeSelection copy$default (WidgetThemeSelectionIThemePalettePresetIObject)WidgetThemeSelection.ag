@@ -1,0 +1,31 @@
+# Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;->copy$default(Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; I Ljava/lang/Object;)Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.ui.widget.WidgetThemeSelection
+# - v1:int
+# - v2:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v3:int
+# - v4:java.lang.Object
+#
+# - return:com.lele.llmonitor.ui.widget.WidgetThemeSelection
+
+copy$default-BB@0x0 : [ copy$default-BB@0x8 copy$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v4, v3, 1
+	1       (00000004) if-eqz               v4, +004h
+
+copy$default-BB@0x8 : [ copy$default-BB@0xc ]
+	2       (00000008) iget                 v1, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;->themeMode I
+
+copy$default-BB@0xc : [ copy$default-BB@0x14 copy$default-BB@0x18 ]
+	3       (0000000c) and-int/lit8         v3, v3, 2
+	4       (00000010) if-eqz               v3, +004h
+
+copy$default-BB@0x14 : [ copy$default-BB@0x18 ]
+	5       (00000014) iget-object          v2, v0, Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;->palettePreset Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+
+copy$default-BB@0x18 : 
+	6       (00000018) invoke-virtual       v0, v1, v2, Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;->copy(I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)Lcom/lele/llmonitor/ui/widget/WidgetThemeSelection;
+	7       (0000001e) move-result-object   v0
+	8       (00000020) return-object        v0
+

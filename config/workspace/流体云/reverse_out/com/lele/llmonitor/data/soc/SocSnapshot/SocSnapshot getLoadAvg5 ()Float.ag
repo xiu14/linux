@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/SocSnapshot;->getLoadAvg5()Ljava/lang/Float; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.lang.Float
+
+getLoadAvg5-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg5 Ljava/lang/Float;
+	1       (00000004) return-object        v0
+

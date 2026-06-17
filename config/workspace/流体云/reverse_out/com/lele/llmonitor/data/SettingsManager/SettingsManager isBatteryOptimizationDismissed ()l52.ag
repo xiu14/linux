@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->isBatteryOptimizationDismissed()Ll52; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:l52
+
+isBatteryOptimizationDismissed-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->isBatteryOptimizationDismissed Ll52;
+	1       (00000004) return-object        v0
+

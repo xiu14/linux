@@ -1,0 +1,171 @@
+# Lcom/lele/llmonitor/data/AppIconPalette;-><clinit>()V [access_flags=static constructor]
+#
+# Parameters:
+# local registers: v0...v24
+#
+# - return:void
+
+<clinit>-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/AppIconPalette;
+	1       (00000004) sget                 v4, Lcom/lele/llmonitor/R$string;->app_icon_palette_ocean I
+	2       (00000008) const-wide           v1, 4290767359
+	3       (00000012) invoke-static        v1, v2, Ljn;->d(J)J
+	4       (00000018) move-result-wide     v5
+	5       (0000001a) const-wide           v1, 4279190102
+	6       (00000024) invoke-static        v1, v2, Ljn;->d(J)J
+	7       (0000002a) move-result-wide     v7
+	8       (0000002c) const-wide           v1, 4279724935
+	9       (00000036) invoke-static        v1, v2, Ljn;->d(J)J
+	10      (0000003c) move-result-wide     v9
+	11      (0000003e) const-wide           v1, 4278198058
+	12      (00000048) invoke-static        v1, v2, Ljn;->d(J)J
+	13      (0000004e) move-result-wide     v11
+	14      (00000050) sget                 v13, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_a_foreground I
+	15      (00000054) sget                 v14, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_a_dark_foreground I
+	16      (00000058) sget                 v15, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_a_foreground I
+	17      (0000005c) sget                 v16, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_a_dark_foreground I
+	18      (00000060) sget                 v17, Lcom/lele/llmonitor/R$mipmap;->ic_launcher_a I
+	19      (00000064) const-string         v18, "com.lele.llmonitor.LauncherAliasA"
+	20      (00000068) const-string         v19, "com.lele.llmonitor.LauncherAliasADark"
+	21      (0000006c) const-string         v1, "OCEAN"
+	22      (00000070) const/4              v2, 0
+	23      (00000072) const-string         v3, "a"
+	24      (00000076) invoke-direct/range  v0 ... v19, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	25      (0000007c) sput-object          v0, Lcom/lele/llmonitor/data/AppIconPalette;->OCEAN Lcom/lele/llmonitor/data/AppIconPalette;
+	26      (00000080) new-instance         v1, Lcom/lele/llmonitor/data/AppIconPalette;
+	27      (00000084) sget                 v5, Lcom/lele/llmonitor/R$string;->app_icon_palette_forest I
+	28      (00000088) const-wide           v2, 4290376401
+	29      (00000092) invoke-static        v2, v3, Ljn;->d(J)J
+	30      (00000098) move-result-wide     v6
+	31      (0000009a) const-wide           v2, 4279782710
+	32      (000000a4) invoke-static        v2, v3, Ljn;->d(J)J
+	33      (000000aa) move-result-wide     v8
+	34      (000000ac) const-wide           v2, 4281170517
+	35      (000000b6) invoke-static        v2, v3, Ljn;->d(J)J
+	36      (000000bc) move-result-wide     v10
+	37      (000000be) const-wide           v2, 4278198547
+	38      (000000c8) invoke-static        v2, v3, Ljn;->d(J)J
+	39      (000000ce) move-result-wide     v12
+	40      (000000d0) sget                 v14, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_b_foreground I
+	41      (000000d4) sget                 v15, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_b_dark_foreground I
+	42      (000000d8) sget                 v16, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_b_foreground I
+	43      (000000dc) sget                 v17, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_b_dark_foreground I
+	44      (000000e0) sget                 v18, Lcom/lele/llmonitor/R$mipmap;->ic_launcher_b I
+	45      (000000e4) const-string         v19, "com.lele.llmonitor.LauncherAliasB"
+	46      (000000e8) const-string         v20, "com.lele.llmonitor.LauncherAliasBDark"
+	47      (000000ec) const-string         v2, "FOREST"
+	48      (000000f0) const/4              v3, 1
+	49      (000000f2) const-string         v4, "b"
+	50      (000000f6) invoke-direct/range  v1 ... v20, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	51      (000000fc) sput-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->FOREST Lcom/lele/llmonitor/data/AppIconPalette;
+	52      (00000100) new-instance         v2, Lcom/lele/llmonitor/data/AppIconPalette;
+	53      (00000104) sget                 v6, Lcom/lele/llmonitor/R$string;->app_icon_palette_sunset I
+	54      (00000108) const-wide           v0, 4294958276
+	55      (00000112) invoke-static        v0, v1, Ljn;->d(J)J
+	56      (00000118) move-result-wide     v7
+	57      (0000011a) const-wide           v0, 4285543680
+	58      (00000124) invoke-static        v0, v1, Ljn;->d(J)J
+	59      (0000012a) move-result-wide     v9
+	60      (0000012c) const-wide           v0, 4288498710
+	61      (00000136) invoke-static        v0, v1, Ljn;->d(J)J
+	62      (0000013c) move-result-wide     v11
+	63      (0000013e) const-wide           v0, 4281275392
+	64      (00000148) invoke-static        v0, v1, Ljn;->d(J)J
+	65      (0000014e) move-result-wide     v13
+	66      (00000150) sget                 v15, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_c_foreground I
+	67      (00000154) sget                 v16, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_c_dark_foreground I
+	68      (00000158) sget                 v17, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_c_foreground I
+	69      (0000015c) sget                 v18, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_c_dark_foreground I
+	70      (00000160) sget                 v19, Lcom/lele/llmonitor/R$mipmap;->ic_launcher_c I
+	71      (00000164) const-string         v20, "com.lele.llmonitor.LauncherAliasC"
+	72      (00000168) const-string         v21, "com.lele.llmonitor.LauncherAliasCDark"
+	73      (0000016c) const-string         v3, "SUNSET"
+	74      (00000170) const/4              v4, 2
+	75      (00000172) const-string         v5, "c"
+	76      (00000176) invoke-direct/range  v2 ... v21, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	77      (0000017c) sput-object          v2, Lcom/lele/llmonitor/data/AppIconPalette;->SUNSET Lcom/lele/llmonitor/data/AppIconPalette;
+	78      (00000180) new-instance         v3, Lcom/lele/llmonitor/data/AppIconPalette;
+	79      (00000184) sget                 v7, Lcom/lele/llmonitor/R$string;->app_icon_palette_blossom I
+	80      (00000188) const-wide           v0, 4294957543
+	81      (00000192) invoke-static        v0, v1, Ljn;->d(J)J
+	82      (00000198) move-result-wide     v8
+	83      (0000019a) const-wide           v0, 4286195793
+	84      (000001a4) invoke-static        v0, v1, Ljn;->d(J)J
+	85      (000001aa) move-result-wide     v10
+	86      (000001ac) const-wide           v0, 4288693618
+	87      (000001b6) invoke-static        v0, v1, Ljn;->d(J)J
+	88      (000001bc) move-result-wide     v12
+	89      (000001be) const-wide           v0, 4281663518
+	90      (000001c8) invoke-static        v0, v1, Ljn;->d(J)J
+	91      (000001ce) move-result-wide     v14
+	92      (000001d0) sget                 v16, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_d_foreground I
+	93      (000001d4) sget                 v17, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_d_dark_foreground I
+	94      (000001d8) sget                 v18, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_d_foreground I
+	95      (000001dc) sget                 v19, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_d_dark_foreground I
+	96      (000001e0) sget                 v20, Lcom/lele/llmonitor/R$mipmap;->ic_launcher_d I
+	97      (000001e4) const-string         v21, "com.lele.llmonitor.LauncherAliasD"
+	98      (000001e8) const-string         v22, "com.lele.llmonitor.LauncherAliasDDark"
+	99      (000001ec) const-string         v4, "BLOSSOM"
+	100     (000001f0) const/4              v5, 3
+	101     (000001f2) const-string         v6, "d"
+	102     (000001f6) invoke-direct/range  v3 ... v22, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	103     (000001fc) sput-object          v3, Lcom/lele/llmonitor/data/AppIconPalette;->BLOSSOM Lcom/lele/llmonitor/data/AppIconPalette;
+	104     (00000200) new-instance         v4, Lcom/lele/llmonitor/data/AppIconPalette;
+	105     (00000204) sget                 v8, Lcom/lele/llmonitor/R$string;->app_icon_palette_jizi I
+	106     (00000208) const-wide           v0, 4293647871
+	107     (00000212) invoke-static        v0, v1, Ljn;->d(J)J
+	108     (00000218) move-result-wide     v9
+	109     (0000021a) const-wide           v0, 4283185528
+	110     (00000224) invoke-static        v0, v1, Ljn;->d(J)J
+	111     (0000022a) move-result-wide     v11
+	112     (0000022c) const-wide           v0, 4285682360
+	113     (00000236) invoke-static        v0, v1, Ljn;->d(J)J
+	114     (0000023c) move-result-wide     v13
+	115     (0000023e) const-wide           v0, 4280815693
+	116     (00000248) invoke-static        v0, v1, Ljn;->d(J)J
+	117     (0000024e) move-result-wide     v15
+	118     (00000250) sget                 v17, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_e_foreground I
+	119     (00000254) sget                 v18, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_e_dark_foreground I
+	120     (00000258) sget                 v19, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_e_foreground I
+	121     (0000025c) sget                 v20, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_e_dark_foreground I
+	122     (00000260) sget                 v21, Lcom/lele/llmonitor/R$mipmap;->ic_launcher_e I
+	123     (00000264) const-string         v22, "com.lele.llmonitor.LauncherAliasE"
+	124     (00000268) const-string         v23, "com.lele.llmonitor.LauncherAliasEDark"
+	125     (0000026c) const-string         v5, "JIZI"
+	126     (00000270) const/4              v6, 4
+	127     (00000272) const-string         v7, "e"
+	128     (00000276) invoke-direct/range  v4 ... v23, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	129     (0000027c) sput-object          v4, Lcom/lele/llmonitor/data/AppIconPalette;->JIZI Lcom/lele/llmonitor/data/AppIconPalette;
+	130     (00000280) new-instance         v5, Lcom/lele/llmonitor/data/AppIconPalette;
+	131     (00000284) sget                 v9, Lcom/lele/llmonitor/R$string;->app_icon_palette_dynamic_multicolor I
+	132     (00000288) const-wide           v0, 4294178555
+	133     (00000292) invoke-static        v0, v1, Ljn;->d(J)J
+	134     (00000298) move-result-wide     v10
+	135     (0000029a) const-wide           v0, 4279705651
+	136     (000002a4) invoke-static        v0, v1, Ljn;->d(J)J
+	137     (000002aa) move-result-wide     v12
+	138     (000002ac) const-wide           v0, 4282549748
+	139     (000002b6) invoke-static        v0, v1, Ljn;->d(J)J
+	140     (000002bc) move-result-wide     v14
+	141     (000002be) invoke-static        v0, v1, Ljn;->d(J)J
+	142     (000002c4) move-result-wide     v16
+	143     (000002c6) sget                 v18, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_f_foreground I
+	144     (000002ca) sget                 v19, Lcom/lele/llmonitor/R$drawable;->ic_launcher_palette_f_dark_foreground I
+	145     (000002ce) sget                 v20, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_f_foreground I
+	146     (000002d2) sget                 v21, Lcom/lele/llmonitor/R$drawable;->ic_notification_app_icon_f_dark_foreground I
+	147     (000002d6) sget                 v22, Lcom/lele/llmonitor/R$mipmap;->ic_launcher_f I
+	148     (000002da) const-string         v23, "com.lele.llmonitor.LauncherAliasF"
+	149     (000002de) const-string         v24, "com.lele.llmonitor.LauncherAliasFDark"
+	150     (000002e2) const-string         v6, "DYNAMIC"
+	151     (000002e6) const/4              v7, 5
+	152     (000002e8) const-string         v8, "f"
+	153     (000002ec) invoke-direct/range  v5 ... v24, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	154     (000002f2) sput-object          v5, Lcom/lele/llmonitor/data/AppIconPalette;->DYNAMIC Lcom/lele/llmonitor/data/AppIconPalette;
+	155     (000002f6) invoke-static        Lcom/lele/llmonitor/data/AppIconPalette;->$values()[Lcom/lele/llmonitor/data/AppIconPalette;
+	156     (000002fc) move-result-object   v0
+	157     (000002fe) sput-object          v0, Lcom/lele/llmonitor/data/AppIconPalette;->$VALUES [Lcom/lele/llmonitor/data/AppIconPalette;
+	158     (00000302) invoke-static        v0, Lwm1;->Y([Ljava/lang/Enum;)Leq0;
+	159     (00000308) move-result-object   v0
+	160     (0000030a) sput-object          v0, Lcom/lele/llmonitor/data/AppIconPalette;->$ENTRIES Ldq0;
+	161     (0000030e) return-void          
+

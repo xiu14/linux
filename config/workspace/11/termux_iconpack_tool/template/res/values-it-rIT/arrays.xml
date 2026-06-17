@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <item>"Hai bisogno di un launcher con il supporto ai pacchetti icone. Potrai trovare la lista dei launcher supportati nell'app nella sezione \"Applica\", o nella descrizione del Play Store."</item>
+        <item>"A seconda del tipo di navigazione dell'app, è necessario far scorrere il NavigationDrawer da sinistra e andare alla sezione \"Applica\" oppure scegliere la quarta icona dalla barra di navigazione in basso. Da lì puoi scegliere il launcher in cui vuoi applicare le icone. Alcuni launcher non supportano questa funzione quindi dovrai farlo manualmente dalle loro impostazioni."</item>
+        <item>"Torna alla sezione principale dell'app e tocca il riquadro intitolato \"Icone\"."</item>
+        <item>"A seconda del launcher che stai usando, o devi tenere premuto l'icona e selezionare \"Modifica\" dal menu a comparsa, o tenere premuto l'icona per poi spostarla in una casella di \"Modifica\"."</item>
+        <item>"A seconda del tipo di navigazione dell'applicazione, è necessario far scorrere il NavigationDrawer da sinistra e andare alla sezione \"Richieste\" o scegliere l'icona dalla barra di navigazione inferiore."</item>
+        <item>"È successo perché l'icon pack è stato spostato nella scheda SD, dovresti installarlo nella memoria interna."</item>
+        <item>Il problema potrebbe provenire dal launcher che stai usando, quando si usa una grande risoluzione. Puoi risolvere il problema aumentando la grandezza delle icone a 115 - 120%. O prova a usare un altro launcher.</item>
+        <item>Invia una richiesta di icona.</item>
+        <item>È necessario per poter compilare le richieste di icone, per salvare e cambiare destinazione del download degli sfondi.</item>
+        <item>È necessario per caricare e scaricare gli sfondi dal cloud.</item>
+        <item>È necessario per controllare se il tuo dispositivo è connesso ad internet.</item>
+        <item>"È necessario per poter applicare gli sfondi direttamente dall'app."</item>
+        <item>È necessario per poter regolare la dimensione degli sfondi in base alla risoluzione del tuo schermo.</item>
+        <item>È richiesto per Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>"Come usare l'Icon Pack?"</item>
+        <item>"Come applicare l'Icon Pack?"</item>
+        <item>Come visualizzare tutte le icone?</item>
+        <item>Come rimpiazzare una icona con quella alternativa?</item>
+        <item>Come richiedere le icone non a tema?</item>
+        <item>"Dopo aver riavviato il mio dispositivo, l'icon pack non è più applicato. Le icone sono state ripristinate per impostazione predefinita."</item>
+        <item>Perché le icone appaiono sgranate nel mio dispositivo?</item>
+        <item>"Posso vedere un'icona per l'app X nelle icone incluse, ma l'icona non si applica."</item>
+        <item>"Perché l'app necessita del permesso di modificare o eliminare contenuti del mio spazio di archiviazione?"</item>
+        <item>"Perché l'app necessita del permesso di accesso completo alla rete?"</item>
+        <item>"Perché l'app necessita del permesso di visualizzare le connessioni?"</item>
+        <item>"Perché l'app necessita del permesso di impostare lo sfondo?"</item>
+        <item>"Perché l'app necessita del permesso di regolare la dimensione dello sfondo?"</item>
+        <item>"Perché l'app necessita del permesso per evitare che il telefono vada in modalità Sleep?"</item>
+    </string-array>
+</resources>

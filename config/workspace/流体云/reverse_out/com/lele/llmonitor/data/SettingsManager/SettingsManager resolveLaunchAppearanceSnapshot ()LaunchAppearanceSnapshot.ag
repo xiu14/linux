@@ -1,0 +1,38 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->resolveLaunchAppearanceSnapshot()Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:com.lele.llmonitor.data.LaunchAppearanceSnapshot
+
+resolveLaunchAppearanceSnapshot-BB@0x0 : [ resolveLaunchAppearanceSnapshot-BB@0x8 resolveLaunchAppearanceSnapshot-BB@0xa ]
+	0       (00000000) sget-object          v1, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	1       (00000004) if-nez               v1, +003h
+
+resolveLaunchAppearanceSnapshot-BB@0x8 : [ resolveLaunchAppearanceSnapshot-BB@0x36 ]
+	2       (00000008) goto                 +17h
+
+resolveLaunchAppearanceSnapshot-BB@0xa : [ resolveLaunchAppearanceSnapshot-BB@0x1e resolveLaunchAppearanceSnapshot-BB@0x3a ]
+	3       (0000000a) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->launchAppearanceSnapshot Ll52;
+	4       (0000000e) invoke-interface     v0, Lcg3;->getValue()Ljava/lang/Object;
+	5       (00000014) move-result-object   v0
+	6       (00000016) check-cast           v0, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	7       (0000001a) if-nez               v0, +010h
+
+resolveLaunchAppearanceSnapshot-BB@0x1e : [ resolveLaunchAppearanceSnapshot-BB@0x2a resolveLaunchAppearanceSnapshot-BB@0x36 ]
+	8       (0000001e) invoke-static        v1, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->readLaunchAppearanceSnapshot(Landroid/content/SharedPreferences;)Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	9       (00000024) move-result-object   v1
+	10      (00000026) if-eqz               v1, +008h
+
+resolveLaunchAppearanceSnapshot-BB@0x2a : 
+	11      (0000002a) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->launchAppearanceSnapshot Ll52;
+	12      (0000002e) invoke-interface     v0, v1, Ll52;->setValue(Ljava/lang/Object;)V
+	13      (00000034) return-object        v1
+
+resolveLaunchAppearanceSnapshot-BB@0x36 : 
+	14      (00000036) const/4              v1, 0
+	15      (00000038) return-object        v1
+
+resolveLaunchAppearanceSnapshot-BB@0x3a : 
+	16      (0000003a) return-object        v0
+

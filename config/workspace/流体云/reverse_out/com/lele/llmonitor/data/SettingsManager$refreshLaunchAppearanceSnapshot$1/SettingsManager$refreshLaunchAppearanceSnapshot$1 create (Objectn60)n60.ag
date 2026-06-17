@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:java.lang.Object
+# - v14:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;
+	1       (00000004) iget-object          v1, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$context Landroid/content/Context;
+	2       (00000008) iget-object          v2, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$baseSnapshot Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	3       (0000000c) iget                 v3, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$wallpaperAlpha F
+	4       (00000010) iget                 v4, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$wallpaperBlur F
+	5       (00000014) iget-wide            v5, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$generation J
+	6       (00000018) iget-object          v7, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$immediateSnapshot Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;
+	7       (0000001c) iget-wide            v8, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$wallpaperVersion J
+	8       (00000020) iget-object          v10, v12, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;->$sharedPrefs Landroid/content/SharedPreferences;
+	9       (00000024) move-object          v11, v14
+	10      (00000026) invoke-direct/range  v0 ... v11, Lcom/lele/llmonitor/data/SettingsManager$refreshLaunchAppearanceSnapshot$1;-><init>(Landroid/content/Context; Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; F F J Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot; J Landroid/content/SharedPreferences; Ln60;)V
+	11      (0000002c) return-object        v0
+

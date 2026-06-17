@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <item>Necesitas un launcher con soporte para paquetes de iconos. La lista de launchers compatibles puede encontrarse en la aplicación en la sección \"Aplicar\", o la descripción de Play Store.</item>
+        <item>Dependiendo del tipo de navegación de la aplicación, necesitarás deslizar el panel de la izquierda e ir a la sección \"Aplicar\" o elegir el cuarto ícono de la barra de navegación inferior. Desde allí podrás elegir un launcher al qué aplicar los iconos. Algunos launchers no admiten la aplicación automática y tienes que hacerlo manualmente a través de su configuración.</item>
+        <item>Vuelve a la sección principal de la aplicación y pulse la ficha titulada \"Iconos\".</item>
+        <item>Dependiendo del launcher que usas, mantén presionado el icono y seleccionar \"Editar\" en el menú emergente, o mantén presionado el icono y moverlo a la caja de \"Editar\".</item>
+        <item>Dependiendo del tipo de navegación de la aplicación, necesitarás deslizar el panel de la izquierda e ir a la sección \"Solicitudes\" o elegir el icono de la barra de navegación inferior.</item>
+        <item>Sucedió porque el paquete de iconos se trasladó a la tarjeta SD, se debe instalar en almacenamiento interno.</item>
+        <item>El problema podría venir con el launcher que usas, cuando maneja gran resolución. Puedes solucionarlo mediante el aumento de tamaño de los iconos a 115 – 120%. O trata de usar otro launcher.</item>
+        <item>Envía una solicitud de iconos.</item>
+        <item>Se necesita para poder escribir datos de solicitudes de iconos y archivos, así como para guardar fondos de pantalla y poder cambiar la ubicación de descarga de fondos de pantalla.</item>
+        <item>Se necesita para poder cargar los fondos de pantalla de la nube y descargarlos.</item>
+        <item>Es necesario para poder verificar si tu dispositivo tiene conexión a Internet.</item>
+        <item>Es necesario para poder aplicar el fondo de pantalla directamente desde la aplicación.</item>
+        <item>Es necesario para poder ajustar las dimensiones de los fondos de pantalla en función de la resolución de tu pantalla.</item>
+        <item>Es necesario para Muzei Live Wallpaper.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>¿Cómo utilizar el paquete de iconos?</item>
+        <item>¿Cómo aplicar el paquete de iconos?</item>
+        <item>¿Cómo ver todos los iconos incluidos?</item>
+        <item>¿Cómo reemplazar ciertos iconos con alternativas?</item>
+        <item>¿Cómo solicitar iconos?</item>
+        <item>Después de reiniciar mi dispositivo, el paquete de iconos ya no se aplica. Se restauraron los iconos por defecto.</item>
+        <item>¿Por qué parecen los iconos pixelados en mi dispositivo?</item>
+        <item>Puedo ver un icono de X aplicación en los iconos incluidos, pero el icono no se aplica.</item>
+        <item>¿Por qué la aplicación necesita permiso para modificar o eliminar el contenido de mi almacenamiento?</item>
+        <item>¿Por qué la aplicación necesita permiso para acceder a la red?</item>
+        <item>¿Por qué la aplicación necesita permiso para ver las conexiones?</item>
+        <item>¿Por qué la aplicación necesita permiso para establecer fondos de pantalla?</item>
+        <item>¿Por qué la aplicación necesita permiso para ajustar el tamaño del fondo de pantalla?</item>
+        <item>¿Por qué la aplicación necesita permiso para evitar que el teléfono se suspenda?</item>
+    </string-array>
+</resources>

@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/AppIconPaletteManager;->syncOnAppStart(Landroid/content/Context; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.content.Context
+# - v9:int
+# - v10:com.lele.llmonitor.ui.theme.ThemePalettePreset
+# - v11:com.lele.llmonitor.data.FollowSystemAppIconMode
+#
+# - return:void
+
+syncOnAppStart-BB@0x0 : 
+	0       (00000000) invoke-virtual       v8, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v10, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	3       (00000012) invoke-static        v10, Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->access$toAppIconPalette(Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;)Lcom/lele/llmonitor/data/AppIconPalette;
+	4       (00000018) move-result-object   v1
+	5       (0000001a) invoke-static        v9, v11, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveAppIconDarkModeEnabled(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)Z
+	6       (00000020) move-result          v2
+	7       (00000022) const/16             v5, 8
+	8       (00000026) const/4              v6, 0
+	9       (00000028) const/4              v3, 0
+	10      (0000002a) const/4              v4, 0
+	11      (0000002c) move-object          v0, v8
+	12      (0000002e) invoke-static/range  v0 ... v6, Lcom/lele/llmonitor/data/AppIconPaletteManagerKt;->applyAppIconPalette$default(Landroid/content/Context; Lcom/lele/llmonitor/data/AppIconPalette; Z Ljava/util/Set; Z I Ljava/lang/Object;)V
+	13      (00000034) return-void          
+

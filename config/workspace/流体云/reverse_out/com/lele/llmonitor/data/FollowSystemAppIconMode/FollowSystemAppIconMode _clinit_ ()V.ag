@@ -1,0 +1,32 @@
+# Lcom/lele/llmonitor/data/FollowSystemAppIconMode;-><clinit>()V [access_flags=static constructor]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+<clinit>-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	1       (00000004) const-string         v1, "LIGHT"
+	2       (00000008) const/4              v2, 0
+	3       (0000000a) const/4              v3, 1
+	4       (0000000c) invoke-direct        v0, v1, v2, v3, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;-><init>(Ljava/lang/String; I I)V
+	5       (00000012) sput-object          v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->LIGHT Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	6       (00000016) new-instance         v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	7       (0000001a) const-string         v1, "DARK"
+	8       (0000001e) const/4              v2, 2
+	9       (00000020) invoke-direct        v0, v1, v3, v2, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;-><init>(Ljava/lang/String; I I)V
+	10      (00000026) sput-object          v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->DARK Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	11      (0000002a) invoke-static        Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->$values()[Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	12      (00000030) move-result-object   v1
+	13      (00000032) sput-object          v1, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->$VALUES [Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	14      (00000036) invoke-static        v1, Lwm1;->Y([Ljava/lang/Enum;)Leq0;
+	15      (0000003c) move-result-object   v1
+	16      (0000003e) sput-object          v1, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->$ENTRIES Ldq0;
+	17      (00000042) new-instance         v1, Lcom/lele/llmonitor/data/FollowSystemAppIconMode$Companion;
+	18      (00000046) const/4              v2, 0
+	19      (00000048) invoke-direct        v1, v2, Lcom/lele/llmonitor/data/FollowSystemAppIconMode$Companion;-><init>(Lic0;)V
+	20      (0000004e) sput-object          v1, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->Companion Lcom/lele/llmonitor/data/FollowSystemAppIconMode$Companion;
+	21      (00000052) sput-object          v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->default Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	22      (00000056) return-void          
+

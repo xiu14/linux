@@ -1,0 +1,99 @@
+# Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->getRecentHistory$lambda$0(Ljava/lang/String; J Lmy2;)Ljava/util/List; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v20
+# - v21:java.lang.String
+# - v22:long
+# - v23:my2
+#
+# - return:java.util.List
+
+getRecentHistory$lambda$0-BB@0x0 : [ getRecentHistory$lambda$0-BB@0x1c ]
+	0       (00000000) invoke-virtual/range v23, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) move-object/from16   v0, v20
+	2       (0000000a) move-object/from16   v1, v23
+	3       (0000000e) invoke-interface     v1, v0, Lmy2;->v0(Ljava/lang/String;)Loy2;
+	4       (00000014) move-result-object   v1
+	5       (00000016) const/4              v0, 1
+	6       (00000018) move-wide/from16     v2, v21
+
+getRecentHistory$lambda$0-BB@0x1c : [ getRecentHistory$lambda$0-BB@0x80 ]
+	7       (0000001c) invoke-interface     v1, v2, v3, v0, Loy2;->g(J I)V
+	8       (00000022) const-string         v0, "id"
+	9       (00000026) invoke-static        v1, v0, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	10      (0000002c) move-result          v0
+	11      (0000002e) const-string         v2, "timestamp"
+	12      (00000032) invoke-static        v1, v2, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	13      (00000038) move-result          v2
+	14      (0000003a) const-string         v3, "level"
+	15      (0000003e) invoke-static        v1, v3, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	16      (00000044) move-result          v3
+	17      (00000046) const-string         v4, "voltage"
+	18      (0000004a) invoke-static        v1, v4, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	19      (00000050) move-result          v4
+	20      (00000052) const-string         v5, "current"
+	21      (00000056) invoke-static        v1, v5, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	22      (0000005c) move-result          v5
+	23      (0000005e) const-string         v6, "power"
+	24      (00000062) invoke-static        v1, v6, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	25      (00000068) move-result          v6
+	26      (0000006a) const-string         v7, "temperature"
+	27      (0000006e) invoke-static        v1, v7, Lzc1;->w(Loy2; Ljava/lang/String;)I
+	28      (00000074) move-result          v7
+	29      (00000076) new-instance         v8, Ljava/util/ArrayList;
+	30      (0000007a) invoke-direct        v8, Ljava/util/ArrayList;-><init>()V
+	1c:f5
+	(Ljava/lang/Throwable; -> 100 getRecentHistory$lambda$0-BB@0x100)
+
+getRecentHistory$lambda$0-BB@0x80 : [ getRecentHistory$lambda$0-BB@0x8c getRecentHistory$lambda$0-BB@0x104 ]
+	31      (00000080) invoke-interface     v1, Loy2;->l0()Z
+	32      (00000086) move-result          v9
+	33      (00000088) if-eqz               v9, +03eh
+	1c:f5
+	(Ljava/lang/Throwable; -> 100 getRecentHistory$lambda$0-BB@0x100)
+
+getRecentHistory$lambda$0-BB@0x8c : [ getRecentHistory$lambda$0-BB@0x80 ]
+	34      (0000008c) invoke-interface     v1, v0, Loy2;->getLong(I)J
+	35      (00000092) move-result-wide     v11
+	36      (00000094) invoke-interface     v1, v2, Loy2;->getLong(I)J
+	37      (0000009a) move-result-wide     v13
+	38      (0000009c) invoke-interface     v1, v3, Loy2;->getLong(I)J
+	39      (000000a2) move-result-wide     v9
+	40      (000000a4) long-to-int          v15, v9
+	41      (000000a6) invoke-interface     v1, v4, Loy2;->getDouble(I)D
+	42      (000000ac) move-result-wide     v9
+	43      (000000ae) double-to-float      v9, v9
+	44      (000000b0) move/from16          v20, v2
+	45      (000000b4) move/from16          v21, v3
+	46      (000000b8) invoke-interface     v1, v5, Loy2;->getDouble(I)D
+	47      (000000be) move-result-wide     v2
+	48      (000000c0) double-to-float      v2, v2
+	49      (000000c2) move/from16          v17, v2
+	50      (000000c6) invoke-interface     v1, v6, Loy2;->getDouble(I)D
+	51      (000000cc) move-result-wide     v2
+	52      (000000ce) double-to-float      v2, v2
+	53      (000000d0) move/from16          v18, v2
+	54      (000000d4) invoke-interface     v1, v7, Loy2;->getDouble(I)D
+	55      (000000da) move-result-wide     v2
+	56      (000000dc) double-to-float      v2, v2
+	57      (000000de) new-instance         v10, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	58      (000000e2) move/from16          v19, v2
+	59      (000000e6) move/from16          v16, v9
+	60      (000000ea) invoke-direct/range  v10 ... v19, Lcom/lele/llmonitor/data/local/BatteryEntity;-><init>(J J I F F F F)V
+	61      (000000f0) invoke-virtual       v8, v10, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	62      (000000f6) move/from16          v2, v20
+	63      (000000fa) move/from16          v3, v21
+	64      (000000fe) goto                 -3fh
+
+getRecentHistory$lambda$0-BB@0x100 : [ getRecentHistory$lambda$0-BB@0x10c ]
+	65      (00000100) move-exception       v0
+	66      (00000102) goto                 +5h
+
+getRecentHistory$lambda$0-BB@0x104 : 
+	67      (00000104) invoke-interface     v1, Ljava/lang/AutoCloseable;->close()V
+	68      (0000010a) return-object        v8
+
+getRecentHistory$lambda$0-BB@0x10c : 
+	69      (0000010c) invoke-interface     v1, Ljava/lang/AutoCloseable;->close()V
+	70      (00000112) throw                v0
+

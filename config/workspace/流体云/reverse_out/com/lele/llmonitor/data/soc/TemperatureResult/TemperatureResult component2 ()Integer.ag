@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/TemperatureResult;->component2()Ljava/lang/Integer; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.lang.Integer
+
+component2-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;->temperatureFractionDigits Ljava/lang/Integer;
+	1       (00000004) return-object        v0
+

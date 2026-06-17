@@ -1,0 +1,150 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->ensureDependenciesInitialized(Ln60;)Ljava/lang/Object; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:n60
+#
+# - return:java.lang.Object
+
+ensureDependenciesInitialized-BB@0x0 : [ ensureDependenciesInitialized-BB@0x8 ensureDependenciesInitialized-BB@0x26 ]
+	0       (00000000) instance-of          v0, v11, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;
+	1       (00000004) if-eqz               v0, +011h
+
+ensureDependenciesInitialized-BB@0x8 : [ ensureDependenciesInitialized-BB@0x1e ensureDependenciesInitialized-BB@0x26 ]
+	2       (00000008) move-object          v0, v11
+	3       (0000000a) check-cast           v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;
+	4       (0000000e) iget                 v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->label I
+	5       (00000012) const/high16         v2, -2147483648
+	6       (00000016) and-int              v3, v1, v2
+	7       (0000001a) if-eqz               v3, +006h
+
+ensureDependenciesInitialized-BB@0x1e : [ ensureDependenciesInitialized-BB@0x30 ]
+	8       (0000001e) sub-int/2addr        v1, v2
+	9       (00000020) iput                 v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->label I
+	10      (00000024) goto                 +6h
+
+ensureDependenciesInitialized-BB@0x26 : [ ensureDependenciesInitialized-BB@0x30 ]
+	11      (00000026) new-instance         v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;
+	12      (0000002a) invoke-direct        v0, v10, v11, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+
+ensureDependenciesInitialized-BB@0x30 : [ ensureDependenciesInitialized-BB@0x4c ensureDependenciesInitialized-BB@0x8a ]
+	13      (00000030) iget-object          v11, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->result Ljava/lang/Object;
+	14      (00000034) iget                 v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->label I
+	15      (00000038) const/4              v2, 0
+	16      (0000003a) const/4              v3, 2
+	17      (0000003c) const/4              v4, 1
+	18      (0000003e) sget-object          v5, Lbw3;->a Lbw3;
+	19      (00000042) const/4              v6, 0
+	20      (00000044) sget-object          v7, Le80;->d Le80;
+	21      (00000048) if-eqz               v1, +021h
+
+ensureDependenciesInitialized-BB@0x4c : [ ensureDependenciesInitialized-BB@0x50 ensureDependenciesInitialized-BB@0x74 ]
+	22      (0000004c) if-eq                v1, v4, +014h
+
+ensureDependenciesInitialized-BB@0x50 : [ ensureDependenciesInitialized-BB@0x54 ensureDependenciesInitialized-BB@0x68 ]
+	23      (00000050) if-ne                v1, v3, +00ch
+
+ensureDependenciesInitialized-BB@0x54 : [ ensureDependenciesInitialized-BB@0x5c ]
+	24      (00000054) iget-object          v10, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->L$0 Ljava/lang/Object;
+	25      (00000058) check-cast           v10, Lz52;
+
+ensureDependenciesInitialized-BB@0x5c : [ ensureDependenciesInitialized-BB@0x116 ]
+	26      (0000005c) invoke-static        v11, Lib1;->Q(Ljava/lang/Object;)V
+	27      (00000062) goto                 +5ah
+	5c:61
+	(Ljava/lang/Throwable; -> 64 ensureDependenciesInitialized-BB@0x64)
+
+ensureDependenciesInitialized-BB@0x64 : [ ensureDependenciesInitialized-BB@0x11e ]
+	28      (00000064) move-exception       v11
+	29      (00000066) goto                 +5ch
+
+ensureDependenciesInitialized-BB@0x68 : 
+	30      (00000068) const-string         v10, "call to 'resume' before 'invoke' with coroutine"
+	31      (0000006c) invoke-static        v10, Lh;->m(Ljava/lang/String;)V
+	32      (00000072) return-object        v6
+
+ensureDependenciesInitialized-BB@0x74 : [ ensureDependenciesInitialized-BB@0xc2 ]
+	33      (00000074) iget                 v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->I$0 I
+	34      (00000078) iget-object          v4, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->L$0 Ljava/lang/Object;
+	35      (0000007c) check-cast           v4, Lz52;
+	36      (00000080) invoke-static        v11, Lib1;->Q(Ljava/lang/Object;)V
+	37      (00000086) move-object          v11, v4
+	38      (00000088) goto                 +1dh
+
+ensureDependenciesInitialized-BB@0x8a : [ ensureDependenciesInitialized-BB@0x98 ensureDependenciesInitialized-BB@0xa2 ]
+	39      (0000008a) invoke-static        v11, Lib1;->Q(Ljava/lang/Object;)V
+	40      (00000090) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService;->db Lcom/lele/llmonitor/data/local/AppDatabase;
+	41      (00000094) if-eqz               v11, +007h
+
+ensureDependenciesInitialized-BB@0x98 : [ ensureDependenciesInitialized-BB@0xa0 ensureDependenciesInitialized-BB@0xa2 ]
+	42      (00000098) iget                 v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService;->designCapacity I
+	43      (0000009c) if-lez               v11, +003h
+
+ensureDependenciesInitialized-BB@0xa0 : 
+	44      (000000a0) return-object        v5
+
+ensureDependenciesInitialized-BB@0xa2 : [ ensureDependenciesInitialized-BB@0xbe ensureDependenciesInitialized-BB@0xc0 ]
+	45      (000000a2) iget-object          v11, v10, Lcom/lele/llmonitor/service/BatteryMonitorService;->dependencyInitMutex Lz52;
+	46      (000000a6) iput-object          v11, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->L$0 Ljava/lang/Object;
+	47      (000000aa) iput                 v2, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->I$0 I
+	48      (000000ae) iput                 v4, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->label I
+	49      (000000b2) invoke-interface     v11, v0, Lz52;->e(Ln60;)Ljava/lang/Object;
+	50      (000000b8) move-result-object   v1
+	51      (000000ba) if-ne                v1, v7, +003h
+
+ensureDependenciesInitialized-BB@0xbe : [ ensureDependenciesInitialized-BB@0x112 ]
+	52      (000000be) goto                 +2ah
+
+ensureDependenciesInitialized-BB@0xc0 : [ ensureDependenciesInitialized-BB@0xc2 ]
+	53      (000000c0) move                 v1, v2
+
+ensureDependenciesInitialized-BB@0xc2 : [ ensureDependenciesInitialized-BB@0xca ensureDependenciesInitialized-BB@0xe4 ]
+	54      (000000c2) iget-object          v4, v10, Lcom/lele/llmonitor/service/BatteryMonitorService;->db Lcom/lele/llmonitor/data/local/AppDatabase;
+	55      (000000c6) if-eqz               v4, +00fh
+	c2:cd
+	(Ljava/lang/Throwable; -> da ensureDependenciesInitialized-BB@0xda)
+
+ensureDependenciesInitialized-BB@0xca : [ ensureDependenciesInitialized-BB@0xd2 ensureDependenciesInitialized-BB@0xe4 ]
+	56      (000000ca) iget                 v4, v10, Lcom/lele/llmonitor/service/BatteryMonitorService;->designCapacity I
+	57      (000000ce) if-lez               v4, +00bh
+
+ensureDependenciesInitialized-BB@0xd2 : 
+	58      (000000d2) invoke-interface     v11, v6, Lz52;->d(Ljava/lang/Object;)V
+	59      (000000d8) return-object        v5
+
+ensureDependenciesInitialized-BB@0xda : [ ensureDependenciesInitialized-BB@0x11e ]
+	60      (000000da) move-exception       v10
+	61      (000000dc) move-object          v9, v11
+	62      (000000de) move-object          v11, v10
+	63      (000000e0) move-object          v10, v9
+	64      (000000e2) goto                 +1eh
+
+ensureDependenciesInitialized-BB@0xe4 : [ ensureDependenciesInitialized-BB@0x112 ensureDependenciesInitialized-BB@0x114 ]
+	65      (000000e4) sget-object          v4, Lii0;->a Lod0;
+	66      (000000e8) sget-object          v4, Lbd0;->f Lbd0;
+	67      (000000ec) new-instance         v8, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;
+	68      (000000f0) invoke-direct        v8, v10, v6, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$2$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+	69      (000000f6) iput-object          v11, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->L$0 Ljava/lang/Object;
+	70      (000000fa) iput                 v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->I$0 I
+	71      (000000fe) iput                 v2, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->I$1 I
+	72      (00000102) iput                 v3, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$ensureDependenciesInitialized$1;->label I
+	73      (00000106) invoke-static        v4, v8, v0, Lxt3;->k0(Lt70; Lh11; Ln60;)Ljava/lang/Object;
+	74      (0000010c) move-result-object   v10
+	75      (0000010e) if-ne                v10, v7, +003h
+	e4:10d
+	(Ljava/lang/Throwable; -> da ensureDependenciesInitialized-BB@0xda)
+
+ensureDependenciesInitialized-BB@0x112 : 
+	76      (00000112) return-object        v7
+
+ensureDependenciesInitialized-BB@0x114 : [ ensureDependenciesInitialized-BB@0x116 ]
+	77      (00000114) move-object          v10, v11
+
+ensureDependenciesInitialized-BB@0x116 : 
+	78      (00000116) invoke-interface     v10, v6, Lz52;->d(Ljava/lang/Object;)V
+	79      (0000011c) return-object        v5
+
+ensureDependenciesInitialized-BB@0x11e : 
+	80      (0000011e) invoke-interface     v10, v6, Lz52;->d(Ljava/lang/Object;)V
+	81      (00000124) throw                v11
+

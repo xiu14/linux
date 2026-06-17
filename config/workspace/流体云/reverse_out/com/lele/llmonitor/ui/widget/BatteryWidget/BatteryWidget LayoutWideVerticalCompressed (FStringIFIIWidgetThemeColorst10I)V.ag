@@ -1,0 +1,230 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidget;->LayoutWideVerticalCompressed(F Ljava/lang/String; I F I I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; Lt10; I)V [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v18
+# - v19:float
+# - v20:java.lang.String
+# - v21:int
+# - v22:float
+# - v23:int
+# - v24:int
+# - v25:com.lele.llmonitor.ui.widget.WidgetThemeColors
+# - v26:t10
+# - v27:int
+#
+# - return:void
+
+LayoutWideVerticalCompressed-BB@0x0 : [ LayoutWideVerticalCompressed-BB@0x24 LayoutWideVerticalCompressed-BB@0x3a ]
+	0       (00000000) move/from16          v9, v27
+	1       (00000004) move-object/from16   v3, v26
+	2       (00000008) check-cast           v3, Lb20;
+	3       (0000000c) const                v0, -1634337906
+	4       (00000012) invoke-virtual       v3, v0, Lb20;->a0(I)Lb20;
+	5       (00000018) and-int/lit8         v0, v9, 6
+	6       (0000001c) move/from16          v13, v19
+	7       (00000020) if-nez               v0, +00dh
+
+LayoutWideVerticalCompressed-BB@0x24 : [ LayoutWideVerticalCompressed-BB@0x30 LayoutWideVerticalCompressed-BB@0x34 ]
+	8       (00000024) invoke-virtual       v3, v13, Lb20;->c(F)Z
+	9       (0000002a) move-result          v0
+	10      (0000002c) if-eqz               v0, +004h
+
+LayoutWideVerticalCompressed-BB@0x30 : [ LayoutWideVerticalCompressed-BB@0x36 ]
+	11      (00000030) const/4              v0, 4
+	12      (00000032) goto                 +2h
+
+LayoutWideVerticalCompressed-BB@0x34 : [ LayoutWideVerticalCompressed-BB@0x36 ]
+	13      (00000034) const/4              v0, 2
+
+LayoutWideVerticalCompressed-BB@0x36 : [ LayoutWideVerticalCompressed-BB@0x3c ]
+	14      (00000036) or-int/2addr         v0, v9
+	15      (00000038) goto                 +2h
+
+LayoutWideVerticalCompressed-BB@0x3a : [ LayoutWideVerticalCompressed-BB@0x3c ]
+	16      (0000003a) move                 v0, v9
+
+LayoutWideVerticalCompressed-BB@0x3c : [ LayoutWideVerticalCompressed-BB@0x48 LayoutWideVerticalCompressed-BB@0x60 ]
+	17      (0000003c) and-int/lit8         v1, v9, 48
+	18      (00000040) move-object/from16   v14, v20
+	19      (00000044) if-nez               v1, +00eh
+
+LayoutWideVerticalCompressed-BB@0x48 : [ LayoutWideVerticalCompressed-BB@0x54 LayoutWideVerticalCompressed-BB@0x5a ]
+	20      (00000048) invoke-virtual       v3, v14, Lb20;->f(Ljava/lang/Object;)Z
+	21      (0000004e) move-result          v1
+	22      (00000050) if-eqz               v1, +005h
+
+LayoutWideVerticalCompressed-BB@0x54 : [ LayoutWideVerticalCompressed-BB@0x5e ]
+	23      (00000054) const/16             v1, 32
+	24      (00000058) goto                 +3h
+
+LayoutWideVerticalCompressed-BB@0x5a : [ LayoutWideVerticalCompressed-BB@0x5e ]
+	25      (0000005a) const/16             v1, 16
+
+LayoutWideVerticalCompressed-BB@0x5e : [ LayoutWideVerticalCompressed-BB@0x60 ]
+	26      (0000005e) or-int/2addr         v0, v1
+
+LayoutWideVerticalCompressed-BB@0x60 : [ LayoutWideVerticalCompressed-BB@0x6c LayoutWideVerticalCompressed-BB@0x84 ]
+	27      (00000060) and-int/lit16        v1, v9, 384
+	28      (00000064) move/from16          v15, v21
+	29      (00000068) if-nez               v1, +00eh
+
+LayoutWideVerticalCompressed-BB@0x6c : [ LayoutWideVerticalCompressed-BB@0x78 LayoutWideVerticalCompressed-BB@0x7e ]
+	30      (0000006c) invoke-virtual       v3, v15, Lb20;->d(I)Z
+	31      (00000072) move-result          v1
+	32      (00000074) if-eqz               v1, +005h
+
+LayoutWideVerticalCompressed-BB@0x78 : [ LayoutWideVerticalCompressed-BB@0x82 ]
+	33      (00000078) const/16             v1, 256
+	34      (0000007c) goto                 +3h
+
+LayoutWideVerticalCompressed-BB@0x7e : [ LayoutWideVerticalCompressed-BB@0x82 ]
+	35      (0000007e) const/16             v1, 128
+
+LayoutWideVerticalCompressed-BB@0x82 : [ LayoutWideVerticalCompressed-BB@0x84 ]
+	36      (00000082) or-int/2addr         v0, v1
+
+LayoutWideVerticalCompressed-BB@0x84 : [ LayoutWideVerticalCompressed-BB@0x90 LayoutWideVerticalCompressed-BB@0xa8 ]
+	37      (00000084) and-int/lit16        v1, v9, 3072
+	38      (00000088) move/from16          v11, v22
+	39      (0000008c) if-nez               v1, +00eh
+
+LayoutWideVerticalCompressed-BB@0x90 : [ LayoutWideVerticalCompressed-BB@0x9c LayoutWideVerticalCompressed-BB@0xa2 ]
+	40      (00000090) invoke-virtual       v3, v11, Lb20;->c(F)Z
+	41      (00000096) move-result          v1
+	42      (00000098) if-eqz               v1, +005h
+
+LayoutWideVerticalCompressed-BB@0x9c : [ LayoutWideVerticalCompressed-BB@0xa6 ]
+	43      (0000009c) const/16             v1, 2048
+	44      (000000a0) goto                 +3h
+
+LayoutWideVerticalCompressed-BB@0xa2 : [ LayoutWideVerticalCompressed-BB@0xa6 ]
+	45      (000000a2) const/16             v1, 1024
+
+LayoutWideVerticalCompressed-BB@0xa6 : [ LayoutWideVerticalCompressed-BB@0xa8 ]
+	46      (000000a6) or-int/2addr         v0, v1
+
+LayoutWideVerticalCompressed-BB@0xa8 : [ LayoutWideVerticalCompressed-BB@0xb4 LayoutWideVerticalCompressed-BB@0xcc ]
+	47      (000000a8) and-int/lit16        v1, v9, 24576
+	48      (000000ac) move/from16          v6, v23
+	49      (000000b0) if-nez               v1, +00eh
+
+LayoutWideVerticalCompressed-BB@0xb4 : [ LayoutWideVerticalCompressed-BB@0xc0 LayoutWideVerticalCompressed-BB@0xc6 ]
+	50      (000000b4) invoke-virtual       v3, v6, Lb20;->d(I)Z
+	51      (000000ba) move-result          v1
+	52      (000000bc) if-eqz               v1, +005h
+
+LayoutWideVerticalCompressed-BB@0xc0 : [ LayoutWideVerticalCompressed-BB@0xca ]
+	53      (000000c0) const/16             v1, 16384
+	54      (000000c4) goto                 +3h
+
+LayoutWideVerticalCompressed-BB@0xc6 : [ LayoutWideVerticalCompressed-BB@0xca ]
+	55      (000000c6) const/16             v1, 8192
+
+LayoutWideVerticalCompressed-BB@0xca : [ LayoutWideVerticalCompressed-BB@0xcc ]
+	56      (000000ca) or-int/2addr         v0, v1
+
+LayoutWideVerticalCompressed-BB@0xcc : [ LayoutWideVerticalCompressed-BB@0xda LayoutWideVerticalCompressed-BB@0xf2 ]
+	57      (000000cc) const/high16         v1, 196608
+	58      (000000d0) and-int/2addr        v1, v9
+	59      (000000d2) move/from16          v7, v24
+	60      (000000d6) if-nez               v1, +00eh
+
+LayoutWideVerticalCompressed-BB@0xda : [ LayoutWideVerticalCompressed-BB@0xe6 LayoutWideVerticalCompressed-BB@0xec ]
+	61      (000000da) invoke-virtual       v3, v7, Lb20;->d(I)Z
+	62      (000000e0) move-result          v1
+	63      (000000e2) if-eqz               v1, +005h
+
+LayoutWideVerticalCompressed-BB@0xe6 : [ LayoutWideVerticalCompressed-BB@0xf0 ]
+	64      (000000e6) const/high16         v1, 131072
+	65      (000000ea) goto                 +3h
+
+LayoutWideVerticalCompressed-BB@0xec : [ LayoutWideVerticalCompressed-BB@0xf0 ]
+	66      (000000ec) const/high16         v1, 65536
+
+LayoutWideVerticalCompressed-BB@0xf0 : [ LayoutWideVerticalCompressed-BB@0xf2 ]
+	67      (000000f0) or-int/2addr         v0, v1
+
+LayoutWideVerticalCompressed-BB@0xf2 : [ LayoutWideVerticalCompressed-BB@0x100 LayoutWideVerticalCompressed-BB@0x118 ]
+	68      (000000f2) const/high16         v1, 1572864
+	69      (000000f6) and-int/2addr        v1, v9
+	70      (000000f8) move-object/from16   v8, v25
+	71      (000000fc) if-nez               v1, +00eh
+
+LayoutWideVerticalCompressed-BB@0x100 : [ LayoutWideVerticalCompressed-BB@0x10c LayoutWideVerticalCompressed-BB@0x112 ]
+	72      (00000100) invoke-virtual       v3, v8, Lb20;->h(Ljava/lang/Object;)Z
+	73      (00000106) move-result          v1
+	74      (00000108) if-eqz               v1, +005h
+
+LayoutWideVerticalCompressed-BB@0x10c : [ LayoutWideVerticalCompressed-BB@0x116 ]
+	75      (0000010c) const/high16         v1, 1048576
+	76      (00000110) goto                 +3h
+
+LayoutWideVerticalCompressed-BB@0x112 : [ LayoutWideVerticalCompressed-BB@0x116 ]
+	77      (00000112) const/high16         v1, 524288
+
+LayoutWideVerticalCompressed-BB@0x116 : [ LayoutWideVerticalCompressed-BB@0x118 ]
+	78      (00000116) or-int/2addr         v0, v1
+
+LayoutWideVerticalCompressed-BB@0x118 : [ LayoutWideVerticalCompressed-BB@0x12c LayoutWideVerticalCompressed-BB@0x130 ]
+	79      (00000118) const                v1, 599187
+	80      (0000011e) and-int/2addr        v1, v0
+	81      (00000120) const                v2, 599186
+	82      (00000126) const/4              v4, 1
+	83      (00000128) if-eq                v1, v2, +004h
+
+LayoutWideVerticalCompressed-BB@0x12c : [ LayoutWideVerticalCompressed-BB@0x132 ]
+	84      (0000012c) move                 v1, v4
+	85      (0000012e) goto                 +2h
+
+LayoutWideVerticalCompressed-BB@0x130 : [ LayoutWideVerticalCompressed-BB@0x132 ]
+	86      (00000130) const/4              v1, 0
+
+LayoutWideVerticalCompressed-BB@0x132 : [ LayoutWideVerticalCompressed-BB@0x140 LayoutWideVerticalCompressed-BB@0x17e ]
+	87      (00000132) and-int/2addr        v0, v4
+	88      (00000134) invoke-virtual       v3, v0, v1, Lb20;->O(I Z)Z
+	89      (0000013a) move-result          v0
+	90      (0000013c) if-eqz               v0, +021h
+
+LayoutWideVerticalCompressed-BB@0x140 : [ LayoutWideVerticalCompressed-BB@0x184 ]
+	91      (00000140) sget-object          v0, Le31;->a Le31;
+	92      (00000144) invoke-static        v0, Lid1;->q(Lg31;)Lg31;
+	93      (0000014a) move-result-object   v0
+	94      (0000014c) new-instance         v10, Lcom/lele/llmonitor/ui/widget/e;
+	95      (00000150) move/from16          v16, v6
+	96      (00000154) move/from16          v17, v7
+	97      (00000158) move-object          v12, v8
+	98      (0000015a) invoke-direct/range  v10 ... v17, Lcom/lele/llmonitor/ui/widget/e;-><init>(F Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; F Ljava/lang/String; I I I)V
+	99      (00000160) const                v1, -488352764
+	100     (00000166) invoke-static        v1, v10, v3, Ln54;->K(I Lp11; Lt10;)Lc00;
+	101     (0000016c) move-result-object   v2
+	102     (0000016e) const/16             v4, 3072
+	103     (00000172) const/4              v5, 4
+	104     (00000174) const/4              v1, 1
+	105     (00000176) invoke-static/range  v0 ... v5, Lni1;->d(Lg31; I Lc00; Lt10; I I)V
+	106     (0000017c) goto                 +4h
+
+LayoutWideVerticalCompressed-BB@0x17e : [ LayoutWideVerticalCompressed-BB@0x184 ]
+	107     (0000017e) invoke-virtual       v3, Lb20;->R()V
+
+LayoutWideVerticalCompressed-BB@0x184 : [ LayoutWideVerticalCompressed-BB@0x190 LayoutWideVerticalCompressed-BB@0x1c0 ]
+	108     (00000184) invoke-virtual       v3, Lb20;->r()Lat2;
+	109     (0000018a) move-result-object   v11
+	110     (0000018c) if-eqz               v11, +01ah
+
+LayoutWideVerticalCompressed-BB@0x190 : [ LayoutWideVerticalCompressed-BB@0x1c0 ]
+	111     (00000190) new-instance         v0, Lcom/lele/llmonitor/ui/widget/f;
+	112     (00000194) const/4              v10, 0
+	113     (00000196) move-object/from16   v1, v18
+	114     (0000019a) move/from16          v2, v19
+	115     (0000019e) move-object/from16   v3, v20
+	116     (000001a2) move/from16          v4, v21
+	117     (000001a6) move/from16          v5, v22
+	118     (000001aa) move/from16          v6, v23
+	119     (000001ae) move/from16          v7, v24
+	120     (000001b2) move-object/from16   v8, v25
+	121     (000001b6) invoke-direct/range  v0 ... v10, Lcom/lele/llmonitor/ui/widget/f;-><init>(Lcom/lele/llmonitor/ui/widget/BatteryWidget; F Ljava/lang/String; I F I I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; I I)V
+	122     (000001bc) iput-object          v0, v11, Lat2;->d Lh11;
+
+LayoutWideVerticalCompressed-BB@0x1c0 : 
+	123     (000001c0) return-void          
+

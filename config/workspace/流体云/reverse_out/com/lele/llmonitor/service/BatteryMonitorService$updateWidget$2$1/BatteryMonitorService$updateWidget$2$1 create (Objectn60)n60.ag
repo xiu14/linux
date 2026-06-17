@@ -1,0 +1,22 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.lang.Object
+# - v10:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;
+	1       (00000004) iget                 v1, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$displayPower F
+	2       (00000008) iget                 v2, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$displayCurrent F
+	3       (0000000c) iget                 v3, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$currentCapacity I
+	4       (00000010) iget-object          v4, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	5       (00000014) iget                 v5, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$temp F
+	6       (00000018) iget-object          v6, v8, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->$updateTimeStr Ljava/lang/String;
+	7       (0000001c) move-object          v7, v10
+	8       (0000001e) invoke-direct/range  v0 ... v7, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;-><init>(F F I Lcom/lele/llmonitor/service/BatteryMonitorService; F Ljava/lang/String; Ln60;)V
+	9       (00000024) iput-object          v9, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$updateWidget$2$1;->L$0 Ljava/lang/Object;
+	10      (00000028) return-object        v0
+

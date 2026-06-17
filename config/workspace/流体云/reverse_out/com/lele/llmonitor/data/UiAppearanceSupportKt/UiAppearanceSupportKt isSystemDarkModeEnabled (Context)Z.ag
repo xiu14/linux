@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->isSystemDarkModeEnabled(Landroid/content/Context;)Z [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:android.content.Context
+#
+# - return:boolean
+
+isSystemDarkModeEnabled-BB@0x0 : [ isSystemDarkModeEnabled-BB@0x26 isSystemDarkModeEnabled-BB@0x2a ]
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v1, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	2       (0000000c) move-result-object   v1
+	3       (0000000e) invoke-virtual       v1, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+	4       (00000014) move-result-object   v1
+	5       (00000016) iget                 v1, v1, Landroid/content/res/Configuration;->uiMode I
+	6       (0000001a) and-int/lit8         v1, v1, 48
+	7       (0000001e) const/16             v0, 32
+	8       (00000022) if-ne                v1, v0, +004h
+
+isSystemDarkModeEnabled-BB@0x26 : 
+	9       (00000026) const/4              v1, 1
+	10      (00000028) return               v1
+
+isSystemDarkModeEnabled-BB@0x2a : 
+	11      (0000002a) const/4              v1, 0
+	12      (0000002c) return               v1
+

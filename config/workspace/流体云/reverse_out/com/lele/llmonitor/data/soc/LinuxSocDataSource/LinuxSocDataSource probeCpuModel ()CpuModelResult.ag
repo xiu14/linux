@@ -1,0 +1,283 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->probeCpuModel()Lcom/lele/llmonitor/data/soc/CpuModelResult; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v15
+#
+# - return:com.lele.llmonitor.data.soc.CpuModelResult
+
+probeCpuModel-BB@0x0 : [ probeCpuModel-BB@0xc probeCpuModel-BB@0xe ]
+	0       (00000000) const-string         v1, "/proc/cpuinfo"
+	1       (00000004) iget-object          v0, v15, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->cachedCpuModelResult Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	2       (00000008) if-eqz               v0, +003h
+
+probeCpuModel-BB@0xc : 
+	3       (0000000c) return-object        v0
+
+probeCpuModel-BB@0xe : [ probeCpuModel-BB@0x34 probeCpuModel-BB@0x9c ]
+	4       (0000000e) new-instance         v2, Ljava/util/ArrayList;
+	5       (00000012) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	6       (00000018) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	7       (0000001c) const/16             v3, 31
+	8       (00000020) const-string         v4, "unavailable"
+	9       (00000024) const-string         v5, "unknown"
+	10      (00000028) const-string         v6, "Build.SOC_MODEL"
+	11      (0000002c) const/4              v7, 0
+	12      (0000002e) const/4              v8, 1
+	13      (00000030) if-lt                v0, v3, +036h
+
+probeCpuModel-BB@0x34 : [ probeCpuModel-BB@0x5e probeCpuModel-BB@0x8a ]
+	14      (00000034) invoke-static        Lk6;->p()Ljava/lang/String;
+	15      (0000003a) move-result-object   v0
+	16      (0000003c) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	17      (00000042) invoke-static        v0, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	18      (00000048) move-result-object   v0
+	19      (0000004a) invoke-virtual       v0, Ljava/lang/Object;->toString()Ljava/lang/String;
+	20      (00000050) move-result-object   v0
+	21      (00000052) invoke-virtual       v0, Ljava/lang/String;->length()I
+	22      (00000058) move-result          v3
+	23      (0000005a) if-lez               v3, +018h
+
+probeCpuModel-BB@0x5e : [ probeCpuModel-BB@0x6a probeCpuModel-BB@0x8a ]
+	24      (0000005e) invoke-virtual       v0, v5, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	25      (00000064) move-result          v3
+	26      (00000066) if-nez               v3, +012h
+
+probeCpuModel-BB@0x6a : 
+	27      (0000006a) new-instance         v1, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	28      (0000006e) invoke-direct        v1, v6, v0, v8, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	29      (00000074) invoke-virtual       v2, v1, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	30      (0000007a) new-instance         v1, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	31      (0000007e) invoke-direct        v1, v0, v2, Lcom/lele/llmonitor/data/soc/CpuModelResult;-><init>(Ljava/lang/String; Ljava/util/List;)V
+	32      (00000084) iput-object          v1, v15, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->cachedCpuModelResult Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	33      (00000088) return-object        v1
+
+probeCpuModel-BB@0x8a : [ probeCpuModel-BB@0xb0 ]
+	34      (0000008a) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	35      (0000008e) invoke-direct        v0, v6, v4, v7, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	36      (00000094) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	37      (0000009a) goto                 +bh
+
+probeCpuModel-BB@0x9c : [ probeCpuModel-BB@0xb0 ]
+	38      (0000009c) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	39      (000000a0) const-string         v3, "API<31"
+	40      (000000a4) invoke-direct        v0, v6, v3, v7, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	41      (000000aa) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+probeCpuModel-BB@0xb0 : [ probeCpuModel-BB@0xd2 ]
+	42      (000000b0) new-instance         v0, Ljava/io/File;
+	43      (000000b4) invoke-direct        v0, v1, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	44      (000000ba) invoke-static        v0, Lwt0;->U(Ljava/io/File;)Ljava/util/ArrayList;
+	45      (000000c0) move-result-object   v0
+	46      (000000c2) goto                 +8h
+	b0:c1
+	(Ljava/lang/Throwable; -> c4 probeCpuModel-BB@0xc4)
+
+probeCpuModel-BB@0xc4 : [ probeCpuModel-BB@0xd2 ]
+	47      (000000c4) move-exception       v0
+	48      (000000c6) new-instance         v3, Lcw2;
+	49      (000000ca) invoke-direct        v3, v0, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	50      (000000d0) move-object          v0, v3
+
+probeCpuModel-BB@0xd2 : [ probeCpuModel-BB@0xde probeCpuModel-BB@0xe0 ]
+	51      (000000d2) nop                  
+	52      (000000d4) instance-of          v3, v0, Lcw2;
+	53      (000000d8) const/4              v6, 0
+	54      (000000da) if-eqz               v3, +003h
+
+probeCpuModel-BB@0xde : [ probeCpuModel-BB@0xe0 ]
+	55      (000000de) move-object          v0, v6
+
+probeCpuModel-BB@0xe0 : [ probeCpuModel-BB@0xe8 probeCpuModel-BB@0x1f4 ]
+	56      (000000e0) check-cast           v0, Ljava/util/List;
+	57      (000000e4) if-eqz               v0, +088h
+
+probeCpuModel-BB@0xe8 : [ probeCpuModel-BB@0x110 ]
+	58      (000000e8) const-string         v3, "Processor"
+	59      (000000ec) const-string         v9, "Model"
+	60      (000000f0) const-string         v10, "Hardware"
+	61      (000000f4) const-string         v11, "model name"
+	62      (000000f8) filled-new-array     v10, v11, v3, v9, [Ljava/lang/String;
+	63      (000000fe) move-result-object   v3
+	64      (00000100) invoke-static        v3, Lr7;->M([Ljava/lang/Object;)Ljava/util/List;
+	65      (00000106) move-result-object   v3
+	66      (00000108) invoke-interface     v3, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	67      (0000010e) move-result-object   v3
+
+probeCpuModel-BB@0x110 : [ probeCpuModel-BB@0x11c probeCpuModel-BB@0x1de ]
+	68      (00000110) invoke-interface     v3, Ljava/util/Iterator;->hasNext()Z
+	69      (00000116) move-result          v9
+	70      (00000118) if-eqz               v9, +063h
+
+probeCpuModel-BB@0x11c : [ probeCpuModel-BB@0x130 ]
+	71      (0000011c) invoke-interface     v3, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	72      (00000122) move-result-object   v9
+	73      (00000124) check-cast           v9, Ljava/lang/String;
+	74      (00000128) invoke-interface     v0, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	75      (0000012e) move-result-object   v10
+
+probeCpuModel-BB@0x130 : [ probeCpuModel-BB@0x140 probeCpuModel-BB@0x174 ]
+	76      (00000130) invoke-interface     v10, Ljava/util/Iterator;->hasNext()Z
+	77      (00000136) move-result          v11
+	78      (00000138) const/16             v12, 58
+	79      (0000013c) if-eqz               v11, +01ch
+
+probeCpuModel-BB@0x140 : [ probeCpuModel-BB@0x172 probeCpuModel-BB@0x130 ]
+	80      (00000140) invoke-interface     v10, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	81      (00000146) move-result-object   v11
+	82      (00000148) move-object          v13, v11
+	83      (0000014a) check-cast           v13, Ljava/lang/String;
+	84      (0000014e) invoke-static        v13, v12, Lhh3;->L0(Ljava/lang/String; C)Ljava/lang/String;
+	85      (00000154) move-result-object   v13
+	86      (00000156) invoke-static        v13, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	87      (0000015c) move-result-object   v13
+	88      (0000015e) invoke-virtual       v13, Ljava/lang/Object;->toString()Ljava/lang/String;
+	89      (00000164) move-result-object   v13
+	90      (00000166) invoke-static        v13, v9, v8, Loh3;->d0(Ljava/lang/String; Ljava/lang/String; Z)Z
+	91      (0000016c) move-result          v13
+	92      (0000016e) if-eqz               v13, -01fh
+
+probeCpuModel-BB@0x172 : [ probeCpuModel-BB@0x176 ]
+	93      (00000172) goto                 +2h
+
+probeCpuModel-BB@0x174 : [ probeCpuModel-BB@0x176 ]
+	94      (00000174) move-object          v11, v6
+
+probeCpuModel-BB@0x176 : [ probeCpuModel-BB@0x182 probeCpuModel-BB@0x19c ]
+	95      (00000176) check-cast           v11, Ljava/lang/String;
+	96      (0000017a) const-string         v10, ""
+	97      (0000017e) if-eqz               v11, +00fh
+
+probeCpuModel-BB@0x182 : [ probeCpuModel-BB@0x19e ]
+	98      (00000182) invoke-static        v12, v11, v10, Lhh3;->I0(C Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	99      (00000188) move-result-object   v11
+	100     (0000018a) invoke-static        v11, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	101     (00000190) move-result-object   v11
+	102     (00000192) invoke-virtual       v11, Ljava/lang/Object;->toString()Ljava/lang/String;
+	103     (00000198) move-result-object   v11
+	104     (0000019a) goto                 +2h
+
+probeCpuModel-BB@0x19c : [ probeCpuModel-BB@0x19e ]
+	105     (0000019c) move-object          v11, v6
+
+probeCpuModel-BB@0x19e : [ probeCpuModel-BB@0x1a2 probeCpuModel-BB@0x1a4 ]
+	106     (0000019e) if-nez               v11, +003h
+
+probeCpuModel-BB@0x1a2 : [ probeCpuModel-BB@0x1a6 ]
+	107     (000001a2) goto                 +2h
+
+probeCpuModel-BB@0x1a4 : [ probeCpuModel-BB@0x1a6 ]
+	108     (000001a4) move-object          v10, v11
+
+probeCpuModel-BB@0x1a6 : [ probeCpuModel-BB@0x1b2 probeCpuModel-BB@0x110 ]
+	109     (000001a6) invoke-virtual       v10, Ljava/lang/String;->length()I
+	110     (000001ac) move-result          v11
+	111     (000001ae) if-lez               v11, -04fh
+
+probeCpuModel-BB@0x1b2 : 
+	112     (000001b2) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	113     (000001b6) const-string         v1, "/proc/cpuinfo:"
+	114     (000001ba) invoke-static        v1, v9, Ls42;->h(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	115     (000001c0) move-result-object   v1
+	116     (000001c2) invoke-direct        v0, v1, v10, v8, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	117     (000001c8) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	118     (000001ce) new-instance         v0, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	119     (000001d2) invoke-direct        v0, v10, v2, Lcom/lele/llmonitor/data/soc/CpuModelResult;-><init>(Ljava/lang/String; Ljava/util/List;)V
+	120     (000001d8) iput-object          v0, v15, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->cachedCpuModelResult Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	121     (000001dc) return-object        v0
+
+probeCpuModel-BB@0x1de : [ probeCpuModel-BB@0x208 ]
+	122     (000001de) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	123     (000001e2) const-string         v3, "no model field"
+	124     (000001e6) invoke-direct        v0, v1, v3, v7, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	125     (000001ec) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	126     (000001f2) goto                 +bh
+
+probeCpuModel-BB@0x1f4 : [ probeCpuModel-BB@0x208 ]
+	127     (000001f4) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	128     (000001f8) const-string         v3, "read failed"
+	129     (000001fc) invoke-direct        v0, v1, v3, v7, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	130     (00000202) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+probeCpuModel-BB@0x208 : [ probeCpuModel-BB@0x22c ]
+	131     (00000208) const-string         v0, "ro.hardware"
+	132     (0000020c) const-string         v1, "ro.board.platform"
+	133     (00000210) const-string         v3, "ro.soc.model"
+	134     (00000214) filled-new-array     v3, v0, v1, [Ljava/lang/String;
+	135     (0000021a) move-result-object   v0
+	136     (0000021c) invoke-static        v0, Lr7;->M([Ljava/lang/Object;)Ljava/util/List;
+	137     (00000222) move-result-object   v0
+	138     (00000224) invoke-interface     v0, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	139     (0000022a) move-result-object   v0
+
+probeCpuModel-BB@0x22c : [ probeCpuModel-BB@0x238 probeCpuModel-BB@0x2e2 ]
+	140     (0000022c) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	141     (00000232) move-result          v1
+	142     (00000234) if-eqz               v1, +057h
+
+probeCpuModel-BB@0x238 : [ probeCpuModel-BB@0x266 probeCpuModel-BB@0x294 ]
+	143     (00000238) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	144     (0000023e) move-result-object   v1
+	145     (00000240) check-cast           v1, Ljava/lang/String;
+	146     (00000244) const-string         v3, "/system/bin/getprop"
+	147     (00000248) filled-new-array     v3, v1, [Ljava/lang/String;
+	148     (0000024e) move-result-object   v10
+	149     (00000250) const/4              v13, 2
+	150     (00000252) const/4              v14, 0
+	151     (00000254) const-wide/16        v11, 0
+	152     (00000258) move-object          v9, v15
+	153     (0000025a) invoke-static/range  v9 ... v14, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->runCommand$default(Lcom/lele/llmonitor/data/soc/LinuxSocDataSource; [Ljava/lang/String; J I Ljava/lang/Object;)Ljava/lang/String;
+	154     (00000260) move-result-object   v15
+	155     (00000262) if-eqz               v15, +019h
+
+probeCpuModel-BB@0x266 : [ probeCpuModel-BB@0x27a probeCpuModel-BB@0x294 ]
+	156     (00000266) invoke-static        v15, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	157     (0000026c) move-result-object   v15
+	158     (0000026e) invoke-virtual       v15, Ljava/lang/Object;->toString()Ljava/lang/String;
+	159     (00000274) move-result-object   v15
+	160     (00000276) if-eqz               v15, +00fh
+
+probeCpuModel-BB@0x27a : [ probeCpuModel-BB@0x286 probeCpuModel-BB@0x294 ]
+	161     (0000027a) invoke-virtual       v15, Ljava/lang/String;->length()I
+	162     (00000280) move-result          v3
+	163     (00000282) if-lez               v3, +009h
+
+probeCpuModel-BB@0x286 : [ probeCpuModel-BB@0x292 probeCpuModel-BB@0x294 ]
+	164     (00000286) invoke-virtual       v15, v5, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	165     (0000028c) move-result          v3
+	166     (0000028e) if-nez               v3, +003h
+
+probeCpuModel-BB@0x292 : [ probeCpuModel-BB@0x296 ]
+	167     (00000292) goto                 +2h
+
+probeCpuModel-BB@0x294 : [ probeCpuModel-BB@0x296 ]
+	168     (00000294) move-object          v15, v6
+
+probeCpuModel-BB@0x296 : [ probeCpuModel-BB@0x29e probeCpuModel-BB@0x2c6 ]
+	169     (00000296) const-string         v3, "getprop "
+	170     (0000029a) if-eqz               v15, +016h
+
+probeCpuModel-BB@0x29e : 
+	171     (0000029e) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	172     (000002a2) invoke-static        v3, v1, Ls42;->h(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	173     (000002a8) move-result-object   v1
+	174     (000002aa) invoke-direct        v0, v1, v15, v8, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	175     (000002b0) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	176     (000002b6) new-instance         v0, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	177     (000002ba) invoke-direct        v0, v15, v2, Lcom/lele/llmonitor/data/soc/CpuModelResult;-><init>(Ljava/lang/String; Ljava/util/List;)V
+	178     (000002c0) iput-object          v0, v9, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->cachedCpuModelResult Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	179     (000002c4) return-object        v0
+
+probeCpuModel-BB@0x2c6 : [ probeCpuModel-BB@0x22c ]
+	180     (000002c6) new-instance         v15, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	181     (000002ca) invoke-static        v3, v1, Ls42;->h(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	182     (000002d0) move-result-object   v1
+	183     (000002d2) invoke-direct        v15, v1, v4, v7, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	184     (000002d8) invoke-virtual       v2, v15, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	185     (000002de) move-object          v15, v9
+	186     (000002e0) goto                 -5ah
+
+probeCpuModel-BB@0x2e2 : 
+	187     (000002e2) new-instance         v15, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	188     (000002e6) invoke-direct        v15, v6, v2, Lcom/lele/llmonitor/data/soc/CpuModelResult;-><init>(Ljava/lang/String; Ljava/util/List;)V
+	189     (000002ec) return-object        v15
+

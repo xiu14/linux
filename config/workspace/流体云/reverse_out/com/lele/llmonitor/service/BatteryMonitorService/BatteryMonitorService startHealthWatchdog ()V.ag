@@ -1,0 +1,31 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->startHealthWatchdog()V [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+startHealthWatchdog-BB@0x0 : [ startHealthWatchdog-BB@0x8 startHealthWatchdog-BB@0x18 ]
+	0       (00000000) iget-object          v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService;->healthWatchdogJob Lpj1;
+	1       (00000004) if-eqz               v0, +00ah
+
+startHealthWatchdog-BB@0x8 : [ startHealthWatchdog-BB@0x16 startHealthWatchdog-BB@0x18 ]
+	2       (00000008) invoke-interface     v0, Lpj1;->e()Z
+	3       (0000000e) move-result          v0
+	4       (00000010) const/4              v1, 1
+	5       (00000012) if-ne                v0, v1, +003h
+
+startHealthWatchdog-BB@0x16 : 
+	6       (00000016) return-void          
+
+startHealthWatchdog-BB@0x18 : 
+	7       (00000018) iget-object          v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceScope Ld80;
+	8       (0000001c) new-instance         v1, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;
+	9       (00000020) const/4              v2, 0
+	10      (00000022) invoke-direct        v1, v4, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+	11      (00000028) const/4              v3, 3
+	12      (0000002a) invoke-static        v0, v2, v2, v1, v3, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	13      (00000030) move-result-object   v0
+	14      (00000032) iput-object          v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService;->healthWatchdogJob Lpj1;
+	15      (00000036) return-void          
+

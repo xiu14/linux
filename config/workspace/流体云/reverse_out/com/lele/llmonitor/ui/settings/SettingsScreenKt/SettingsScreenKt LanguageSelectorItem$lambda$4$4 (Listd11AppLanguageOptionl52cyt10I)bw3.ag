@@ -1,0 +1,114 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->LanguageSelectorItem$lambda$4$4(Ljava/util/List; Ld11; Lcom/lele/llmonitor/data/AppLanguageOption; Ll52; Lcy; Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.util.List
+# - v10:d11
+# - v11:com.lele.llmonitor.data.AppLanguageOption
+# - v12:l52
+# - v13:cy
+# - v14:t10
+# - v15:int
+#
+# - return:bw3
+
+LanguageSelectorItem$lambda$4$4-BB@0x0 : [ LanguageSelectorItem$lambda$4$4-BB@0x14 LanguageSelectorItem$lambda$4$4-BB@0x18 ]
+	0       (00000000) invoke-virtual       v13, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) and-int/lit8         v13, v15, 17
+	2       (0000000a) const/16             v0, 16
+	3       (0000000e) const/4              v1, 1
+	4       (00000010) if-eq                v13, v0, +004h
+
+LanguageSelectorItem$lambda$4$4-BB@0x14 : [ LanguageSelectorItem$lambda$4$4-BB@0x1a ]
+	5       (00000014) move                 v13, v1
+	6       (00000016) goto                 +2h
+
+LanguageSelectorItem$lambda$4$4-BB@0x18 : [ LanguageSelectorItem$lambda$4$4-BB@0x1a ]
+	7       (00000018) const/4              v13, 0
+
+LanguageSelectorItem$lambda$4$4-BB@0x1a : [ LanguageSelectorItem$lambda$4$4-BB@0x2e LanguageSelectorItem$lambda$4$4-BB@0xea ]
+	8       (0000001a) and-int/2addr        v15, v1
+	9       (0000001c) move-object          v7, v14
+	10      (0000001e) check-cast           v7, Lb20;
+	11      (00000022) invoke-virtual       v7, v15, v13, Lb20;->O(I Z)Z
+	12      (00000028) move-result          v13
+	13      (0000002a) if-eqz               v13, +060h
+
+LanguageSelectorItem$lambda$4$4-BB@0x2e : [ LanguageSelectorItem$lambda$4$4-BB@0x36 ]
+	14      (0000002e) invoke-interface     v9, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	15      (00000034) move-result-object   v9
+
+LanguageSelectorItem$lambda$4$4-BB@0x36 : [ LanguageSelectorItem$lambda$4$4-BB@0x42 LanguageSelectorItem$lambda$4$4-BB@0xf0 ]
+	16      (00000036) invoke-interface     v9, Ljava/util/Iterator;->hasNext()Z
+	17      (0000003c) move-result          v13
+	18      (0000003e) if-eqz               v13, +059h
+
+LanguageSelectorItem$lambda$4$4-BB@0x42 : [ LanguageSelectorItem$lambda$4$4-BB@0x9e LanguageSelectorItem$lambda$4$4-BB@0xa6 ]
+	19      (00000042) invoke-interface     v9, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	20      (00000048) move-result-object   v13
+	21      (0000004a) check-cast           v13, Lqh2;
+	22      (0000004e) iget-object          v14, v13, Lqh2;->d Ljava/lang/Object;
+	23      (00000052) check-cast           v14, Lcom/lele/llmonitor/data/AppLanguageOption;
+	24      (00000056) iget-object          v13, v13, Lqh2;->e Ljava/lang/Object;
+	25      (0000005a) check-cast           v13, Ljava/lang/String;
+	26      (0000005e) new-instance         v15, Lu90;
+	27      (00000062) const/4              v0, 4
+	28      (00000064) invoke-direct        v15, v13, v0, Lu90;-><init>(Ljava/lang/String; I)V
+	29      (0000006a) const                v13, 2012201135
+	30      (00000070) invoke-static        v13, v15, v7, Ln54;->K(I Lp11; Lt10;)Lc00;
+	31      (00000076) move-result-object   v0
+	32      (00000078) invoke-virtual       v7, v10, Lb20;->f(Ljava/lang/Object;)Z
+	33      (0000007e) move-result          v13
+	34      (00000080) invoke-virtual       v14, Ljava/lang/Enum;->ordinal()I
+	35      (00000086) move-result          v15
+	36      (00000088) invoke-virtual       v7, v15, Lb20;->d(I)Z
+	37      (0000008e) move-result          v15
+	38      (00000090) or-int/2addr         v13, v15
+	39      (00000092) invoke-virtual       v7, Lb20;->L()Ljava/lang/Object;
+	40      (00000098) move-result-object   v15
+	41      (0000009a) if-nez               v13, +006h
+
+LanguageSelectorItem$lambda$4$4-BB@0x9e : [ LanguageSelectorItem$lambda$4$4-BB@0xa6 LanguageSelectorItem$lambda$4$4-BB@0xba ]
+	42      (0000009e) sget-object          v13, Lr10;->a Li41;
+	43      (000000a2) if-ne                v15, v13, +00ch
+
+LanguageSelectorItem$lambda$4$4-BB@0xa6 : [ LanguageSelectorItem$lambda$4$4-BB@0xba ]
+	44      (000000a6) new-instance         v15, Lvj;
+	45      (000000aa) const/16             v13, 9
+	46      (000000ae) invoke-direct        v15, v10, v14, v12, v13, Lvj;-><init>(Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object; I)V
+	47      (000000b4) invoke-virtual       v7, v15, Lb20;->j0(Ljava/lang/Object;)V
+
+LanguageSelectorItem$lambda$4$4-BB@0xba : [ LanguageSelectorItem$lambda$4$4-BB@0xc4 LanguageSelectorItem$lambda$4$4-BB@0xd4 ]
+	48      (000000ba) move-object          v1, v15
+	49      (000000bc) check-cast           v1, Ls01;
+	50      (000000c0) if-ne                v14, v11, +00ah
+
+LanguageSelectorItem$lambda$4$4-BB@0xc4 : [ LanguageSelectorItem$lambda$4$4-BB@0xd0 ]
+	51      (000000c4) sget-object          v13, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->INSTANCE Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;
+	52      (000000c8) invoke-virtual       v13, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->getLambda$1319497550$app()Lh11;
+	53      (000000ce) move-result-object   v13
+
+LanguageSelectorItem$lambda$4$4-BB@0xd0 : [ LanguageSelectorItem$lambda$4$4-BB@0xd8 ]
+	54      (000000d0) move-object          v3, v13
+	55      (000000d2) goto                 +3h
+
+LanguageSelectorItem$lambda$4$4-BB@0xd4 : [ LanguageSelectorItem$lambda$4$4-BB@0xd0 ]
+	56      (000000d4) const/4              v13, 0
+	57      (000000d6) goto                 -3h
+
+LanguageSelectorItem$lambda$4$4-BB@0xd8 : [ LanguageSelectorItem$lambda$4$4-BB@0x36 ]
+	58      (000000d8) const/4              v6, 0
+	59      (000000da) const/4              v8, 6
+	60      (000000dc) const/4              v2, 0
+	61      (000000de) const/4              v4, 0
+	62      (000000e0) const/4              v5, 0
+	63      (000000e2) invoke-static/range  v0 ... v8, Lt9;->a(Lc00; Ls01; Lm22; Lh11; Z Le12; Ljg2; Lt10; I)V
+	64      (000000e8) goto                 -59h
+
+LanguageSelectorItem$lambda$4$4-BB@0xea : [ LanguageSelectorItem$lambda$4$4-BB@0xf0 ]
+	65      (000000ea) invoke-virtual       v7, Lb20;->R()V
+
+LanguageSelectorItem$lambda$4$4-BB@0xf0 : 
+	66      (000000f0) sget-object          v9, Lbw3;->a Lbw3;
+	67      (000000f4) return-object        v9
+

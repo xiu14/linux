@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->u(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; Lwn; Lt10; I)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.soc.ThermalZoneReading
+# - v1:wn
+# - v2:t10
+# - v3:int
+#
+# - return:bw3
+
+u-BB@0x0 : 
+	0       (00000000) invoke-static        v0, v1, v2, v3, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->ThermalZoneCard$lambda$0(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; Lwn; Lt10; I)Lbw3;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

@@ -1,0 +1,33 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->roundToFractionDigits(F I)F [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:float
+# - v6:int
+#
+# - return:float
+
+roundToFractionDigits-BB@0x0 : [ roundToFractionDigits-BB@0x4 roundToFractionDigits-BB@0x12 ]
+	0       (00000000) if-gtz               v6, +009h
+
+roundToFractionDigits-BB@0x4 : [ roundToFractionDigits-BB@0xe ]
+	1       (00000004) float-to-double      v4, v5
+	2       (00000006) invoke-static        v4, v5, Ljava/lang/Math;->rint(D)D
+	3       (0000000c) move-result-wide     v4
+
+roundToFractionDigits-BB@0xe : 
+	4       (0000000e) double-to-float      v4, v4
+	5       (00000010) return               v4
+
+roundToFractionDigits-BB@0x12 : [ roundToFractionDigits-BB@0xe ]
+	6       (00000012) const-wide/high16    v0, 4621819117588971520
+	7       (00000016) int-to-double        v2, v6
+	8       (00000018) invoke-static        v0, v1, v2, v3, Ljava/lang/Math;->pow(D D)D
+	9       (0000001e) move-result-wide     v0
+	10      (00000020) float-to-double      v4, v5
+	11      (00000022) mul-double/2addr     v4, v0
+	12      (00000024) invoke-static        v4, v5, Ljava/lang/Math;->rint(D)D
+	13      (0000002a) move-result-wide     v4
+	14      (0000002c) div-double/2addr     v4, v0
+	15      (0000002e) goto                 -10h
+

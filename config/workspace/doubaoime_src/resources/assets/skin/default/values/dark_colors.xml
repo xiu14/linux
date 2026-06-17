@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">rgba(0, 0, 0, 0)</color>
+    <color name="first_cand_text_color">rgba(255, 255, 255, 0.95)</color>
+    <color name="first_cand_pinyin_text_color">rgba(255, 255, 255, 0.85)</color>
+    <color name="default_bk">rgba(61, 61, 61, 1)</color>
+    <color name="highlight_color">rgba(102, 191, 255, 1)</color>
+    <color name="highlight_disabledtext">#5b47B2FF</color>
+    <color name="highlight_pushedtext">#ad47B2FF</color>
+    <color name="title_text">rgba(255, 255, 255, 1.0)</color>
+    <color name="keybutton_ficon_disabledtext">rgba(255, 255, 255, 0.5)</color>
+    <color name="keybutton_text">rgba(255, 255, 255, 0.95)</color>
+    <color name="keybutton_text_2">rgba(255, 255, 255, 0.4)</color>
+    <color name="keybutton_text_3">rgba(255, 255, 255, 0.5)</color>
+    <color name="keyboard_current_english">rgba(79, 132, 255, 0.95)</color>
+    <color name="keybutton_bk">rgba(255, 255, 255, 0.28)</color>
+    <color name="keybutton_func_bk">rgba(255, 255, 255, 0.08)</color>
+    <color name="keybutton_pushed_bk">rgba(255, 255, 255, 0.08)</color>
+    <color name="keybutton_func_pushed_bk">rgba(255, 255, 255, 0.28)</color>
+    <color name="keybutton_func_border">rgba(255, 255, 255, 0.1)</color>
+    <color name="keybutton_white_shadow">rgba(0, 0, 0, 0.4)</color>
+    <color name="keybutton_gray_shadow">rgba(0, 0, 0, 0.4)</color>
+    <color name="keybutton_float_bk">rgba(0, 0, 0, 0.16)</color>
+    <color name="keybutton_float_pushedbk">rgba(41, 41, 41, 1)</color>
+    <color name="keybutton_space3">rgba(255, 255, 255, 0.4)</color>
+    <color name="toolbar_idle_button_text">rgba(255, 255, 255, 0.5)</color>
+    <color name="toolbar_idle_button_text_disabled">rgba(255, 255, 255, 0.25)</color>
+    <color name="white">rgba(255,255,255,1.000)</color>
+
+    <color name="touch_tip_button_bk">rgba(96, 96, 96, 1)</color>
+
+    <color name="action_button_pushedbk">rgba(255, 255, 255, 0.12)</color>
+    <color name="action_button_disabletext">rgba(0, 0, 0, 0.5)</color>
+    <color name="action_button_pushedtext">rgba(255, 255, 255, 1)</color>
+    <color name="action_button_text_disable">rgba(255, 255, 255, 0.3)</color>
+
+    <color name="cnen_button_light">rgba(255, 255, 255, 0.35)</color>
+
+    <color name="toolbar_idle_button_bk">rgba(255, 255, 255, 0.12)</color>
+    <color name="toolbar_idle_button_disabled_bk">rgba(255, 255, 255, 0.06)</color>
+    <color name="toolbar_idle_button_pushedbk">rgba(255, 255, 255, 0.04)</color>
+    <color name="toolbar_custom_confirm_button_bk">rgba(79, 132, 255, 1)</color>
+
+    <color name="recommend_drawer_handle_bk">#FF141414</color>
+    <color name="recommend_bk">rgba(255, 255, 255, 0.06)</color>
+    <color name="recommend_pushedbk">rgba(255, 255, 255, 0.2)</color>
+    <color name="recommend_button_bk">rgba(255, 255, 255, 0.08)</color>
+    <color name="recommend_button_bk_disabled">rgba(255, 255, 255, 0.024)</color>
+    <color name="recommend_button_pushedbk">rgba(255, 255, 255, 0.2)</color>
+    <color name="recommend_button_text_disabled">rgba(255, 255, 255, 0.24)</color>
+    <color name="recommend_button_selectedtext">rgba(255, 255, 255, 0.85)</color>
+    <color name="recommends_list_split_bk">rgba(255, 255, 255, 0.06)</color>
+
+    <color name="recommends_tip_text_color">rgba(87, 193, 255, 1)</color>
+    <color name="recommends_tip_bk_color">rgba(255, 255, 255, 0.12)</color>
+    <color name="chat_assistant_tip_text_color">#FFFF9500</color>
+    <color name="chat_assistant_tip_bk_color">#33FFA800</color>
+
+    <color name="recommend_polish_replace_button_text_color">rgba(0, 0, 0, 0.85)</color>
+    <color name="recommend_polish_replace_button_text_color_disabled">rgba(0, 0, 0, 0.255)</color>
+    <color name="recommend_polish_replace_button_bk">rgba(255, 255, 255, 1)</color>
+    <color name="recommend_polish_replace_button_bk_disabled">rgba(255, 255, 255, 0.3)</color>
+    <color name="recommend_polish_replace_button_pushedbk">rgba(255, 255, 255, 0.8)</color>
+
+    <color name="recommends_container_bkcolor">rgba(0, 0, 0, 0.06)</color>
+    <color name="recommends_container_bkcolor_disabled">rgba(0, 0, 0, 0.018)</color>
+    <color name="recommends_container_pushed_bkcolor">rgba(0, 0, 0, 0.07)</color>
+    <color name="recommends_common_bk">#ff141414</color>
+    <color name="recommends_common_text">rgba(255, 255, 255, 1.0)</color>
+    <color name="recommend_common_tip_icon">rgba(255, 255, 255, 0.2)</color>
+
+    <color name="toolbar_cand_list_border">#500000ff</color>
+    <color name="canditem_text">rgba(255, 255, 255, 0.95)</color>
+    <color name="canditem_pinyin_text">rgba(255, 255, 255, 0.70)</color>
+    <color name="canditem_text_llm">rgba(0, 0, 200, 0.45)</color>
+    <color name="canditem_text_llm_engine">rgba(0, 200, 0, 0.45)</color>
+    <color name="canditem_pushedbk">rgba(255, 255, 255, 0.08)</color>
+    <color name="canditem_selectedbk">rgba(79, 132, 255, 0.8)</color>
+    <color name="canditem_split">rgba(255, 255, 255, 0.16)</color>
+    <color name="comp_pushedbk">rgba(255, 255, 255, 0.12)</color>
+    <color name="comp_half_text">rgba(255, 255, 255, 1)</color>
+
+    <color name="setting_button_bk">rgba(255, 255, 255, 0.12)</color>
+    <color name="setting_button_disabledbk">rgba(255, 255, 255, 0.048)</color>
+    <color name="setting_button_pushedbk">rgba(255, 255, 255, 0.04)</color>
+    <color name="setting_button_icon_disabled">rgba(255, 255, 255, 0.38)</color>
+    <color name="setting_button_icon_selected">rgba(255, 255, 255, 1)</color>
+    <color name="setting_button_disabledtext">rgba(255, 255, 255, 0.18)</color>
+    <color name="setting_button_selectedtext">rgba(255, 255, 255, 1)</color>
+
+    <color name="setting_tab_point_bk">rgba(255, 255, 255, 0.95)</color>
+    <color name="setting_tab_point_disabled_bk">rgba(255, 255, 255, 0.2)</color>
+
+    <color name="vertical_symbol_list_button_border">rgba(255, 255, 255, 0.1)</color>
+
+    <color name="symbol_container_bk">rgba(255, 255, 255, 0.06)</color>
+
+    <color name="symbol_option_pushedbk">rgba(255, 255, 255, 0.09)</color>
+
+    <color name="history_symbollist_pushedbk">rgba(255, 255, 255, 0.5)</color>
+    <color name="history_symbollist_ficon_text">rgba(153, 153, 153, 1.0)</color>
+
+    <color name="swipe_clear_text">rgba(213, 213, 213, 1.0)</color>
+    <color name="swipe_clear_bk1">rgba(45, 45, 45, 0)</color>
+    <color name="swipe_clear_bk2">rgba(45, 45, 45, 1)</color>
+    <color name="swipe_clear_bk3">rgba(45, 45, 45, 1)</color>
+    <color name="swipe_clear_arrow_text">#7FFFFFFF</color>
+
+    <color name="morecands_button_pushedbk">rgba(0, 0, 0, 0.04)</color>
+    <color name="english_morecands_button_pushedbk">#FFe8ebf0</color>
+
+    <color name="morecands_thumbnormal">#FFECEEF2</color>
+    <color name="morecands_list_bk">rgba(255, 255, 255, 0.06)</color>
+    <color name="morecands_list_pushedbk">#FFB0B8C7</color>
+    <color name="morecands_list_border">#1AFFFFFF</color>
+    <color name="morecands_filter_container_bk">rgba(255, 255, 255, 0.06)</color>
+    <color name="filter_button_selectedbk">rgba(0, 0, 0, 0.24)</color>
+    <color name="filter_button_selecttext">rgba(255, 255, 255, 1)</color>
+    <color name="morecands_backspace_bk">rgba(59, 59, 59, 1)</color>
+    <color name="morecands_backspace_pushedbk">rgba(42, 42, 42, 1)</color>
+
+    <color name="touch_tip_text">#ff47B2FF</color>
+    <color name="ai_common_tip_text">#ff333333</color>
+
+    <color name="trans_container_bk">rgba(255, 255, 255, 0.07)</color>
+    <color name="trans_container_disabledbk">rgba(255, 255, 255, 0.15)</color>
+    <color name="trans_container_border">rgba(255, 255, 255, 0.16)</color>
+    <color name="trans_lang_button_bk">rgba(255, 255, 255, 0.09)</color>
+    <color name="trans_lang_button_pushedbk">rgba(255, 255, 255, 0.18)</color>
+    <color name="trans_action_button_bk">rgba(255, 255, 255, 0.07)</color>
+    <color name="trans_action_button_pushedbk">rgba(255, 255, 255, 0.15)</color>
+    <color name="trans_tip_text_show">rgba(255, 255, 255, 0.15)</color>
+    <color name="trans_tip_text_active">rgba(255, 255, 255, 0.15)</color>
+    <color name="trans_cursor">rgba(0, 0, 0, 0.85)</color>
+
+    <color name="correct_morecheck_bk">rgba(0, 0, 0, 1)</color>
+    <color name="correct_morecheck_pushedbk">rgba(255, 255, 255, 1.0)</color>
+    <color name="correct_morecheck_text">rgba(255, 255, 255, 1.0)</color>
+    <color name="correct_morecheck_pushedtext">rgba(0, 0, 0, 1)</color>
+
+    <color name="quickinput_button_pushedbk">#FFe8ebf0</color>
+    <color name="quickinput_split_bk">rgba(255, 255, 255, 0.12)</color>
+
+    <color name="swipe_clear_label_ready_back_color">#fff24c38</color>
+    <color name="swipe_clear_label_unready_back_color">rgba(255, 255, 255, 1.0)</color>
+    <color name="color/swipe_clear_label_ready_text_color">rgba(255, 255, 255, 1.0)</color>
+    <color name="swipe_clear_label_unready_text_color">#ff040a1a</color>
+
+    <color name="speech_animation_bk">#66BFFF</color>
+    <color name="speech_tip_correct_text">rgba(255, 255, 255, 1.0)</color>
+    <color name="speech_tip_text">rgba(255, 255, 255, 0.35)</color>
+    <color name="speech_button_text">rgba(255, 255, 255, 1.0)</color>
+
+    <color name="toolbar_tip_leading_icon">rgba(255, 255, 255, 1)</color>
+    <color name="toolbar_tip_close_button_bk">rgba(255, 255, 255, 0.07)</color>
+    <color name="toolbar_tip_close_button_pushedbk">rgba(255, 255, 255, 0.17)</color>
+    <color name="toolbar_tip_option">rgba(102, 191, 255, 1)</color>
+    <color name="toolbar_tip_split">rgba(97, 97, 97, 1)</color>
+
+    <color name="fusiyin_bubble_container_bk">rgba(96, 96, 96, 1)</color>
+    <color name="fusiyin_bubble_container_shadow">rgba(0, 0, 0, 0.15)</color>
+
+    <color name="fusiyin_bubble_button_text">rgba(255, 255, 255, 1)</color>
+    <color name="fusiyin_bubble_button_pushedtext">rgba(255, 255, 255, 1)</color>
+
+    <color name="scrollbar_thumb_bk">rgba(255, 255, 255, 0.2)</color>
+
+    <color name="entrance_bk">rgba(255, 255, 255, 0.08)</color>
+    <color name="entrance_selectedbk">rgba(31, 31, 31, 1)</color>
+    <color name="entrance_chat_aid_selected">rgba(102, 191, 255, 1)</color>
+    <color name="entrance_xiaohongshu_selected">rgba(255, 51, 51, 1)</color>
+    <color name="entrance_wechat_circle_selected">rgba(0, 191, 0, 1)</color>
+    <color name="entrance_polish_mail_selected">rgba(255, 102, 0, 1)</color>
+    <color name="entrance_evaluate_selected">rgba(199, 178, 255, 1)</color>
+    <color name="entrance_blessing_selected">rgba(255, 51, 51, 1)</color>
+    <color name="entrance_invitation_selected">rgba(255, 102, 0, 1)</color>
+    <color name="entrance_introduction_selected">rgba(102, 191, 255, 1)</color>
+    <color name="entrance_optimize_selected">rgba(0, 191, 0, 1)</color>
+    <color name="entrance_fonticon_text">rgb(48,81,242, 1)</color>
+
+    <color name="inassitant_button_bk">rgba(52, 46, 52, 1.0)</color>
+    <color name="inassitant_button_pushedbk">rgba(75, 70, 75, 1.0)</color>
+
+    <color name="symbol_float_button_bk">rgba(54, 54, 54, 1.0)</color>
+    <color name="symbol_float_button_pushedbk">rgba(43,43,43,1.000)</color>
+
+    <color name="secondpage_close_btn_bk">#14FFFFFF</color>
+    <color name="secondpage_close_btn_selectedbk">#29FFFFFF</color>
+
+    <color name="backspace_button_selectedbk">rgba(43,43,43,1.000)</color>
+</resources>

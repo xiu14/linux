@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveAppCompatNightMode(I)I [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+#
+# - return:int
+
+resolveAppCompatNightMode-BB@0x0 : [ resolveAppCompatNightMode-BB@0x6 resolveAppCompatNightMode-BB@0x10 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-eq                v1, v0, +007h
+
+resolveAppCompatNightMode-BB@0x6 : [ resolveAppCompatNightMode-BB@0xc resolveAppCompatNightMode-BB@0x10 ]
+	2       (00000006) const/4              v0, 2
+	3       (00000008) if-eq                v1, v0, +004h
+
+resolveAppCompatNightMode-BB@0xc : 
+	4       (0000000c) const/4              v1, -1
+	5       (0000000e) return               v1
+
+resolveAppCompatNightMode-BB@0x10 : 
+	6       (00000010) return               v0
+

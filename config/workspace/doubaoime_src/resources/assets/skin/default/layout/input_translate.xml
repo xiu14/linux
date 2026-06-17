@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HorizontalLayout width="match_parent" height="match_parent"
+        bkcolor="@color/transparent" class_adaptive="cls_translate_container_adaptive">
+        <HorizontalLayout name="trans_container" class="cls_trans_container_bk">
+            <ButtonKey name="btn_trans_lang" class="cls_trans_lang_button" />
+            <HorizontalLayout width="match_parent">
+                <TabLayout name="tab_trans_text"
+                    width="match_parent" height="match_parent"
+                    selectedid="0">
+                    <VerticalLayout name="tab_trans_text_idle" height="match_parent">
+                        <ButtonKey name="btn_trans_tiptext" text="点击这里, 开始翻译"
+                            class="cls_trans_tip_text" textcolor="@color/trans_tip_text_show"
+                            padding="0,0,0,0" />
+                    </VerticalLayout>
+
+                    <VerticalLayout name="tab_trans_text_start_working" height="match_parent">
+                        <HorizontalLayout class="cls_trans_sourcetext_container">
+                            <Control name="trans_cursor_start_working" desc="光标" class="cls_trans_cursor" />
+                            <ButtonBase name="btn_trans_text_tip" text="输入要翻译的中文"
+                                class="cls_trans_tip_text" textcolor="@color/trans_tip_text_active"
+                                mouse="false" />
+                        </HorizontalLayout>
+                    </VerticalLayout>
+
+                    <!-- 模拟带编辑光标的文本串 -->
+                    <VerticalLayout name="tab_trans_text_working" width="match_parent"
+                        height="match_parent">
+                        <TranslateVirtualInputboxLayout name="translate_virtualinputbox_layout"
+                            class="cls_trans_sourcetext_container">
+                            <ButtonTranslateText name="btn_trans_source_left_text"
+                                class="cls_trans_text"
+                                text="" />
+                            <Control name="trans_cursor_working" desc="光标" class="cls_trans_cursor" />
+                            <ButtonTranslateText name="btn_trans_source_right_text"
+                                class="cls_trans_text" padding_decimal="-0.006,0,0,0"
+                                text="?" />
+                        </TranslateVirtualInputboxLayout>
+                    </VerticalLayout>
+                </TabLayout>
+            </HorizontalLayout>
+            <ButtonKey name="btn_trans_reset" class="cls_btn_trans_reset" visible="false" />
+
+        </HorizontalLayout>
+        <ButtonKey name="btn_trans_action" text="取消" class="cls_trans_action_button" />
+    </HorizontalLayout>
+</Window>

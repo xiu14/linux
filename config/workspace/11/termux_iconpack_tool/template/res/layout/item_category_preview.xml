@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/divider_layout" layout="@layout/item_divider" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView android:textColor="?colorSecondary" android:ellipsize="end" android:id="@id/category_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:firstBaselineToTopHeight="36.0sp" app:lastBaselineToBottomHeight="20.0sp" style="@style/TextStyle.Frames.Subtitle2" />
+            <com.google.android.material.textview.MaterialTextView android:ellipsize="end" android:id="@id/category_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" app:firstBaselineToTopHeight="36.0sp" app:lastBaselineToBottomHeight="20.0sp" style="@style/TextStyle.Frames.Subtitle2" />
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/category_open_btn" android:background="?actionBarItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="4.0dip" android:scaleType="centerInside" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <dev.jahir.blueprint.ui.widgets.IconsPreviewRecyclerView android:layout_gravity="center_horizontal" android:id="@id/category_icons_preview" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/AppIconPalette;->getPreviewRingColor-0d7_KjU()J [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:long
+
+getPreviewRingColor-0d7_KjU-BB@0x0 : 
+	0       (00000000) iget-wide            v0, v2, Lcom/lele/llmonitor/data/AppIconPalette;->previewRingColor J
+	1       (00000004) return-wide          v0
+

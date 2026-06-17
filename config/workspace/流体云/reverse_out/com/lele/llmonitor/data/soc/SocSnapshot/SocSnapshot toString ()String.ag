@@ -1,0 +1,110 @@
+# Lcom/lele/llmonitor/data/soc/SocSnapshot;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v22
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) move-object/from16   v0, v22
+	1       (00000004) iget-wide            v1, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->timestamp J
+	2       (00000008) iget-object          v3, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsagePercent Ljava/lang/Float;
+	3       (0000000c) iget                 v4, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->onlineCores I
+	4       (00000010) iget                 v5, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->totalCores I
+	5       (00000014) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg1 Ljava/lang/Float;
+	6       (00000018) iget-object          v7, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg5 Ljava/lang/Float;
+	7       (0000001c) iget-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg15 Ljava/lang/Float;
+	8       (00000020) iget-object          v9, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureC Ljava/lang/Float;
+	9       (00000024) iget-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureFractionDigits Ljava/lang/Integer;
+	10      (00000028) iget-object          v11, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSource Ljava/lang/String;
+	11      (0000002c) iget-object          v12, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsageSources Ljava/util/List;
+	12      (00000030) iget-object          v13, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvgSources Ljava/util/List;
+	13      (00000034) iget-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSources Ljava/util/List;
+	14      (00000038) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryTotalBytes Ljava/lang/Long;
+	15      (0000003c) move-object/from16   v16, v15
+	16      (00000040) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryAvailableBytes Ljava/lang/Long;
+	17      (00000044) move-object/from16   v17, v15
+	18      (00000048) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memorySources Ljava/util/List;
+	19      (0000004c) move-object/from16   v18, v15
+	20      (00000050) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelName Ljava/lang/String;
+	21      (00000054) move-object/from16   v19, v15
+	22      (00000058) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelSources Ljava/util/List;
+	23      (0000005c) move-object/from16   v20, v15
+	24      (00000060) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->thermalZones Ljava/util/List;
+	25      (00000064) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/SocSnapshot;->coreFrequencies Ljava/util/List;
+	26      (00000068) move-object/from16   v22, v0
+	27      (0000006c) new-instance         v0, Ljava/lang/StringBuilder;
+	28      (00000070) move-object/from16   v21, v15
+	29      (00000074) const-string         v15, "SocSnapshot(timestamp="
+	30      (00000078) invoke-direct        v0, v15, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	31      (0000007e) invoke-virtual       v0, v1, v2, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	32      (00000084) const-string         v1, ", cpuUsagePercent="
+	33      (00000088) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	34      (0000008e) invoke-virtual       v0, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	35      (00000094) const-string         v1, ", onlineCores="
+	36      (00000098) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	37      (0000009e) invoke-virtual       v0, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	38      (000000a4) const-string         v1, ", totalCores="
+	39      (000000a8) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	40      (000000ae) invoke-virtual       v0, v5, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	41      (000000b4) const-string         v1, ", loadAvg1="
+	42      (000000b8) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000be) invoke-virtual       v0, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	44      (000000c4) const-string         v1, ", loadAvg5="
+	45      (000000c8) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	46      (000000ce) invoke-virtual       v0, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	47      (000000d4) const-string         v1, ", loadAvg15="
+	48      (000000d8) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	49      (000000de) invoke-virtual       v0, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	50      (000000e4) const-string         v1, ", socTemperatureC="
+	51      (000000e8) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	52      (000000ee) invoke-virtual       v0, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	53      (000000f4) const-string         v1, ", socTemperatureFractionDigits="
+	54      (000000f8) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	55      (000000fe) invoke-virtual       v0, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	56      (00000104) const-string         v1, ", socTemperatureSource="
+	57      (00000108) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	58      (0000010e) invoke-virtual       v0, v11, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	59      (00000114) const-string         v1, ", cpuUsageSources="
+	60      (00000118) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	61      (0000011e) invoke-virtual       v0, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	62      (00000124) const-string         v1, ", loadAvgSources="
+	63      (00000128) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	64      (0000012e) invoke-virtual       v0, v13, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	65      (00000134) const-string         v1, ", socTemperatureSources="
+	66      (00000138) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	67      (0000013e) invoke-virtual       v0, v14, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	68      (00000144) const-string         v1, ", memoryTotalBytes="
+	69      (00000148) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	70      (0000014e) move-object/from16   v1, v16
+	71      (00000152) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	72      (00000158) const-string         v1, ", memoryAvailableBytes="
+	73      (0000015c) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	74      (00000162) move-object/from16   v1, v17
+	75      (00000166) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	76      (0000016c) const-string         v1, ", memorySources="
+	77      (00000170) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	78      (00000176) move-object/from16   v1, v18
+	79      (0000017a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	80      (00000180) const-string         v1, ", cpuModelName="
+	81      (00000184) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	82      (0000018a) move-object/from16   v1, v19
+	83      (0000018e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	84      (00000194) const-string         v1, ", cpuModelSources="
+	85      (00000198) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	86      (0000019e) move-object/from16   v1, v20
+	87      (000001a2) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	88      (000001a8) const-string         v1, ", thermalZones="
+	89      (000001ac) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	90      (000001b2) move-object/from16   v1, v21
+	91      (000001b6) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	92      (000001bc) const-string         v1, ", coreFrequencies="
+	93      (000001c0) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	94      (000001c6) move-object/from16   v1, v22
+	95      (000001ca) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	96      (000001d0) const-string         v1, ")"
+	97      (000001d4) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	98      (000001da) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	99      (000001e0) move-result-object   v0
+	100     (000001e2) return-object        v0
+

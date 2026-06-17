@@ -1,0 +1,33 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager;->importWallpaper$default(Lcom/lele/llmonitor/data/HomeWallpaperManager; Landroid/net/Uri; Z Ld11; I Ljava/lang/Object;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.HomeWallpaperManager
+# - v1:android.net.Uri
+# - v2:boolean
+# - v3:d11
+# - v4:int
+# - v5:java.lang.Object
+#
+# - return:void
+
+importWallpaper$default-BB@0x0 : [ importWallpaper$default-BB@0x8 importWallpaper$default-BB@0xa ]
+	0       (00000000) and-int/lit8         v5, v4, 2
+	1       (00000004) if-eqz               v5, +003h
+
+importWallpaper$default-BB@0x8 : [ importWallpaper$default-BB@0xa ]
+	2       (00000008) const/4              v2, 0
+
+importWallpaper$default-BB@0xa : [ importWallpaper$default-BB@0x12 importWallpaper$default-BB@0x20 ]
+	3       (0000000a) and-int/lit8         v4, v4, 4
+	4       (0000000e) if-eqz               v4, +009h
+
+importWallpaper$default-BB@0x12 : [ importWallpaper$default-BB@0x20 ]
+	5       (00000012) new-instance         v3, Lu70;
+	6       (00000016) const/16             v4, 19
+	7       (0000001a) invoke-direct        v3, v4, Lu70;-><init>(I)V
+
+importWallpaper$default-BB@0x20 : 
+	8       (00000020) invoke-virtual       v0, v1, v2, v3, Lcom/lele/llmonitor/data/HomeWallpaperManager;->importWallpaper(Landroid/net/Uri; Z Ld11;)V
+	9       (00000026) return-void          
+

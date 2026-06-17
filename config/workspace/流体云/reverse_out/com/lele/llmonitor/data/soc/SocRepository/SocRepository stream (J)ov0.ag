@@ -1,0 +1,21 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository;->stream(J)Lov0; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:long
+#
+# - return:ov0
+
+stream-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;
+	1       (00000004) const/4              v1, 0
+	2       (00000006) invoke-direct        v0, v2, v3, v4, v1, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;-><init>(Lcom/lele/llmonitor/data/soc/SocRepository; J Ln60;)V
+	3       (0000000c) new-instance         v2, Lbb0;
+	4       (00000010) const/4              v3, 3
+	5       (00000012) invoke-direct        v2, v3, v0, Lbb0;-><init>(I Ljava/lang/Object;)V
+	6       (00000018) sget-object          v3, Lii0;->a Lod0;
+	7       (0000001c) sget-object          v3, Lbd0;->f Lbd0;
+	8       (00000020) invoke-static        v2, v3, Ltg1;->y(Lov0; Lt70;)Lov0;
+	9       (00000026) move-result-object   v2
+	10      (00000028) return-object        v2
+

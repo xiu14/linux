@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Pinyin9Layout name="input_kbd_pinyin9" class="cls_input_kbd9" userdata="pinyin9"
+        slidable_control="pinyin9_filter_list">
+        <HorizontalLayout width="match_parent" height="match_parent">
+            <!-- 66 = 61 + 2.5 + 2.5（左2.5右2.5margin）-->
+            <VerticalLayout width_weight="66" height="match_parent">
+                <!-- 156 = 52 （高度44 + 间距8） * 3-->
+                <FilterListLayout name="pinyin9_filter_list" class="cls_vertical_symbol_list"
+                    width="match_parent" height_weight="156"
+                    uri_filter_list=". / www. .com .cn http wap. ftp:"
+                    item_style="cls_pinyin9_filter_button" />
+                <!-- 48.5 = 43 + 5.5 （高度43 + 间距5.5） -->
+                <ButtonSwitchBoard text="符号" target="3"
+                    class="cls_keyboard9_button_func, cls_to_input_kbd_symbol" height_weight="52" name="button_symbol"/>
+            </VerticalLayout>
+
+            <VerticalLayout width_weight="225" height="match_parent">
+                <!-- 156 = 52 （高度44 + 间距8） * 3-->
+                <HorizontalLayout width="match_parent" height_weight="156" name="pinyin9_layout_container">
+                    <!-- 三列宽 77 （77 = 72 + 5（左右2.5margin）-->
+                    <VerticalLayout height="match_parent" width_weight="77">
+                        <ButtonPinyin9Symbol text="@#" name="pinyin9_btn_symbol"
+                            class="cls_keyboard9_button"
+                            font="key_letter9_at_symbol"
+                            fusiyin_keycode="0x3031" ficon_text="1"
+                            fusiyin_bubble_text="/ - _ 1 @ # ."
+                            fusiyin_bubble_keycode="0x00BF 0x00BD 0x10BD 0x3031 0x1032 0x1033 0x00BE"
+                            key_vibrate="Function" />
+                        <ButtonChar text="GHI" class="cls_keyboard9_button" ficon_text="4"
+                            keycode="0x34"
+                            fusiyin_keycode="0x3034" fusiyin_bubble_text="G H I 4 g h i"
+                            fusiyin_bubble_keycode="0x1047 0x1048 0x1049 0x3034 0x0047 0x0048 0x0049"
+                            long_press_bubble_text="g h i G H I 4"
+                            long_press_bubble_keycode="0x0047 0x0048 0x0049 0x1047 0x1048 0x1049 0x3034" />
+                        <ButtonChar text="PQRS" class="cls_keyboard9_button" ficon_text="7"
+                            keycode="0x37"
+                            fusiyin_keycode="0x3037" fusiyin_bubble_text="P Q R S 7 p q r s"
+                            fusiyin_bubble_keycode="0x1050 0x1051 0x1052 0x1053 0x3037 0x0050 0x0051 0x0052 0x0053"
+                            long_press_bubble_text="p q r s P Q R S 7"
+                            long_press_bubble_keycode="0x0050 0x0051 0x0052 0x0053 0x1050 0x1051 0x1052 0x1053 0x3037" />
+                    </VerticalLayout>
+
+                    <VerticalLayout height="match_parent" width_weight="77">
+                        <ButtonChar text="ABC" class="cls_keyboard9_button" ficon_text="2"
+                            keycode="0x32"
+                            fusiyin_keycode="0x3032" fusiyin_bubble_text="A B C 2 a b c"
+                            fusiyin_bubble_keycode="0x1041 0x1042 0x1043 0x3032 0x0041 0x0042 0x0043"
+                            long_press_bubble_text="a b c A B C 2"
+                            long_press_bubble_keycode="0x0041 0x0042 0x0043 0x1041 0x1042 0x1043 0x3032" />
+                        <ButtonChar text="JKL" class="cls_keyboard9_button" ficon_text="5"
+                            keycode="0x35"
+                            fusiyin_keycode="0x3035" fusiyin_bubble_text="J K L 5 j k l"
+                            fusiyin_bubble_keycode="0x104A 0x104B 0x104C 0x3035 0x004A 0x004B 0x004C"
+                            long_press_bubble_text="j k l J K L 5"
+                            long_press_bubble_keycode="0x004A 0x004B 0x004C 0x104A 0x104B 0x104C 0x3035" />
+                        <ButtonChar text="TUV" class="cls_keyboard9_button" ficon_text="8"
+                            keycode="0x38"
+                            fusiyin_keycode="0x3038" fusiyin_bubble_text="T U V 8 t u v"
+                            fusiyin_bubble_keycode="0x1054 0x1055 0x1056 0x3038 0x0054 0x0055 0x0056"
+                            long_press_bubble_text="t u v T U V 8"
+                            long_press_bubble_keycode="0x0054 0x0055 0x0056 0x1054 0x1055 0x1056 0x3038" />
+                    </VerticalLayout>
+
+                    <VerticalLayout height="match_parent" width_weight="77">
+                        <ButtonChar text="DEF" class="cls_keyboard9_button" ficon_text="3"
+                            keycode="0x33"
+                            fusiyin_keycode="0x3033" fusiyin_bubble_text="D E F 3 d e f"
+                            fusiyin_bubble_keycode="0x1044 0x1045 0x1046 0x3033 0x0044 0x0045 0x0046"
+                            long_press_bubble_text="d e f D E F 3"
+                            long_press_bubble_keycode="0x0044 0x0045 0x0046 0x1044 0x1045 0x1046 0x3033" />
+                        <ButtonChar text="MNO" class="cls_keyboard9_button" ficon_text="6"
+                            keycode="0x36"
+                            fusiyin_keycode="0x3036" fusiyin_bubble_text="M N O 6 m n o"
+                            fusiyin_bubble_keycode="0x104D 0x104E 0x104F 0x3036 0x004D 0x004E 0x004F"
+                            long_press_bubble_text="m n o M N O 6"
+                            long_press_bubble_keycode="0x004D 0x004E 0x004F 0x104D 0x104E 0x104F 0x3036" />
+                        <ButtonChar text="WXYZ" class="cls_keyboard9_button" ficon_text="9"
+                            keycode="0x39"
+                            fusiyin_keycode="0x3039" fusiyin_bubble_text="W X Y Z 9 w x y z"
+                            fusiyin_bubble_keycode="0x1057 0x1058 0x1059 0x105A 0x3039 0x0057 0x0058 0x0059 0x005A"
+                            long_press_bubble_text="w x y z W X Y Z 9"
+                            long_press_bubble_keycode="0x0057 0x0058 0x0059 0x005A 0x1057 0x1058 0x1059 0x105A 0x3039" />
+                    </VerticalLayout>
+                </HorizontalLayout>
+                <!-- 52 = 44 + 8 （高度44 + 间距8） -->
+                <HorizontalLayout width="match_parent" height_weight="52">
+                    <ButtonSwitchBoard class="cls_keyboard9_button_func_white_circle" text="123" target="5"
+                        width_weight="45.5" height="match_parent" name="button_switch_123"/>
+                    <Container width_weight="134" height="match_parent" mouse="false">
+                        <ButtonSpace name="space_speech" class="cls_button_space, cls_keyboard9_button_margin"
+                            ficon_text="0" fusiyin_keycode="0x3030"/>
+                        <Button name="space_speech_loading" visible="false" mouse="false" float="true"
+                            width="33" height="20" gravity="center|vcenter"
+                            normalimage="file='drawable/voice_space.gif'" />
+                    </Container>
+                    <ButtonSwitchChineseEnglish target="english"
+                        class="cls_button_cn2en, cls_keyboard9_button_margin, cls_bk_white_circle"
+                        width_weight="45.5" height="match_parent" name="button_en2ch"/>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- 66 = 61 + 2.5 + 2.5（左2.5右2.5margin）-->
+            <VerticalLayout height="match_parent" width_weight="66">
+                <ButtonBackspace name="backspace"
+                    class="cls_button_backspace, cls_keyboard9_button_margin" />
+                <ButtonReset text="重输" class="cls_keyboard9_button_func" name="button_reset"/>
+                <VerticalLayout width="match_parent" height_weight="2">
+                    <ButtonEnter name="button_enter" class="cls_button_enter9" />
+                </VerticalLayout>
+            </VerticalLayout>
+        </HorizontalLayout>
+    </Pinyin9Layout>
+</Window>

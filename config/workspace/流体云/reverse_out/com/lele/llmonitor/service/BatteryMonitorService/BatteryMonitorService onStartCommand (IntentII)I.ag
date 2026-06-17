@@ -1,0 +1,260 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->onStartCommand(Landroid/content/Intent; I I)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.content.Intent
+# - v11:int
+# - v12:int
+#
+# - return:int
+
+onStartCommand-BB@0x0 : [ onStartCommand-BB@0x10 onStartCommand-BB@0x1c ]
+	0       (00000000) iget-wide            v11, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceStartElapsedMs J
+	1       (00000004) const-wide/16        v0, 0
+	2       (00000008) cmp-long             v11, v11, v0
+	3       (0000000c) if-nez               v11, +008h
+
+onStartCommand-BB@0x10 : [ onStartCommand-BB@0x1c ]
+	4       (00000010) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	5       (00000016) move-result-wide     v11
+	6       (00000018) iput-wide            v11, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceStartElapsedMs J
+
+onStartCommand-BB@0x1c : [ onStartCommand-BB@0x22 onStartCommand-BB@0x2c ]
+	7       (0000001c) const/4              v11, 0
+	8       (0000001e) if-eqz               v10, +007h
+
+onStartCommand-BB@0x22 : [ onStartCommand-BB@0x2e ]
+	9       (00000022) invoke-virtual       v10, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	10      (00000028) move-result-object   v12
+	11      (0000002a) goto                 +2h
+
+onStartCommand-BB@0x2c : [ onStartCommand-BB@0x2e ]
+	12      (0000002c) move-object          v12, v11
+
+onStartCommand-BB@0x2e : [ onStartCommand-BB@0x38 onStartCommand-BB@0x50 ]
+	13      (0000002e) iget-boolean         v2, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isForegroundActive Z
+	14      (00000032) const/4              v3, 1
+	15      (00000034) if-nez               v2, +00eh
+
+onStartCommand-BB@0x38 : [ onStartCommand-BB@0x50 ]
+	16      (00000038) invoke-direct        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->createNotificationChannel()V
+	17      (0000003e) invoke-direct        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->createBootstrapNotification()Landroid/app/Notification;
+	18      (00000044) move-result-object   v2
+	19      (00000046) invoke-virtual       v9, v3, v2, Landroid/app/Service;->startForeground(I Landroid/app/Notification;)V
+	20      (0000004c) iput-boolean         v3, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isForegroundActive Z
+
+onStartCommand-BB@0x50 : [ onStartCommand-BB@0x8e onStartCommand-BB@0x15c ]
+	21      (00000050) sget-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	22      (00000054) invoke-virtual       v9, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	23      (0000005a) move-result-object   v4
+	24      (0000005c) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	25      (00000062) invoke-virtual       v2, v4, Lcom/lele/llmonitor/data/SettingsManager;->init(Landroid/content/Context;)V
+	26      (00000068) sget-object          v2, Lcom/lele/llmonitor/data/BatteryRepository;->INSTANCE Lcom/lele/llmonitor/data/BatteryRepository;
+	27      (0000006c) invoke-virtual       v9, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	28      (00000072) move-result-object   v4
+	29      (00000074) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	30      (0000007a) invoke-virtual       v2, v4, Lcom/lele/llmonitor/data/BatteryRepository;->init(Landroid/content/Context;)V
+	31      (00000080) const/4              v2, 3
+	32      (00000082) const-string         v4, "com.lele.llmonitor.ACTION_FORCE_UPDATE"
+	33      (00000086) sget-object          v5, Lbw3;->a Lbw3;
+	34      (0000008a) if-eqz               v12, +069h
+
+onStartCommand-BB@0x8e : [ D:onStartCommand-BB@0xa4 -1886648615:onStartCommand-BB@0xe6 -948936916:onStartCommand-BB@0xd4 -872894621:onStartCommand-BB@0xc6 1019184907:onStartCommand-BB@0xb4 1842467819:onStartCommand-BB@0xa6 ]
+	35      (0000008e) invoke-virtual       v12, Ljava/lang/String;->hashCode()I
+	36      (00000094) move-result          v6
+	37      (00000096) const-string         v7, "android.intent.action.ACTION_POWER_DISCONNECTED"
+	38      (0000009a) const-string         v8, "com.lele.llmonitor.ACTION_HEALTH_CHECK"
+	39      (0000009e) sparse-switch        v6, +00000e7h
+
+onStartCommand-BB@0xa4 : [ onStartCommand-BB@0x15c ]
+	40      (000000a4) goto                 +5ch
+
+onStartCommand-BB@0xa6 : [ onStartCommand-BB@0xb2 onStartCommand-BB@0xf4 ]
+	41      (000000a6) invoke-virtual       v12, v8, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	42      (000000ac) move-result          v6
+	43      (000000ae) if-nez               v6, +023h
+
+onStartCommand-BB@0xb2 : [ onStartCommand-BB@0x15c ]
+	44      (000000b2) goto                 +55h
+
+onStartCommand-BB@0xb4 : [ onStartCommand-BB@0xc4 onStartCommand-BB@0xf4 ]
+	45      (000000b4) const-string         v6, "android.intent.action.ACTION_POWER_CONNECTED"
+	46      (000000b8) invoke-virtual       v12, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	47      (000000be) move-result          v6
+	48      (000000c0) if-nez               v6, +01ah
+
+onStartCommand-BB@0xc4 : [ onStartCommand-BB@0x15c ]
+	49      (000000c4) goto                 +4ch
+
+onStartCommand-BB@0xc6 : [ onStartCommand-BB@0xd2 onStartCommand-BB@0xf4 ]
+	50      (000000c6) invoke-virtual       v12, v4, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	51      (000000cc) move-result          v6
+	52      (000000ce) if-nez               v6, +013h
+
+onStartCommand-BB@0xd2 : [ onStartCommand-BB@0x15c ]
+	53      (000000d2) goto                 +45h
+
+onStartCommand-BB@0xd4 : [ onStartCommand-BB@0xe4 onStartCommand-BB@0x15c ]
+	54      (000000d4) const-string         v6, "com.lele.llmonitor.ACTION_KEEP_ALIVE_KICK"
+	55      (000000d8) invoke-virtual       v12, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	56      (000000de) move-result          v6
+	57      (000000e0) if-eqz               v6, +03eh
+
+onStartCommand-BB@0xe4 : [ onStartCommand-BB@0xf4 ]
+	58      (000000e4) goto                 +8h
+
+onStartCommand-BB@0xe6 : [ onStartCommand-BB@0xf2 onStartCommand-BB@0xf4 ]
+	59      (000000e6) invoke-virtual       v12, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	60      (000000ec) move-result          v6
+	61      (000000ee) if-nez               v6, +003h
+
+onStartCommand-BB@0xf2 : [ onStartCommand-BB@0x15c ]
+	62      (000000f2) goto                 +35h
+
+onStartCommand-BB@0xf4 : [ onStartCommand-BB@0x106 onStartCommand-BB@0x11c ]
+	63      (000000f4) invoke-direct        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->requestImmediateUpdate()V
+	64      (000000fa) invoke-virtual       v12, v7, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	65      (00000100) move-result          v6
+	66      (00000102) if-eqz               v6, +00dh
+
+onStartCommand-BB@0x106 : [ onStartCommand-BB@0x13c ]
+	67      (00000106) iget-object          v12, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceScope Ld80;
+	68      (0000010a) new-instance         v6, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$1;
+	69      (0000010e) invoke-direct        v6, v9, v11, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+	70      (00000114) invoke-static        v12, v11, v11, v6, v2, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	71      (0000011a) goto                 +11h
+
+onStartCommand-BB@0x11c : [ onStartCommand-BB@0x128 onStartCommand-BB@0x13c ]
+	72      (0000011c) invoke-virtual       v12, v8, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	73      (00000122) move-result          v12
+	74      (00000124) if-eqz               v12, +00ch
+
+onStartCommand-BB@0x128 : [ onStartCommand-BB@0x13c ]
+	75      (00000128) iget-object          v12, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceScope Ld80;
+	76      (0000012c) new-instance         v6, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$2;
+	77      (00000130) invoke-direct        v6, v9, v11, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$2;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+	78      (00000136) invoke-static        v12, v11, v11, v6, v2, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+
+onStartCommand-BB@0x13c : [ onStartCommand-BB@0x144 onStartCommand-BB@0x15c ]
+	79      (0000013c) iget-boolean         v12, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isMonitorLoopStarted Z
+	80      (00000140) if-eqz               v12, +00eh
+
+onStartCommand-BB@0x144 : 
+	81      (00000144) invoke-static        v9, v0, v1, v3, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextKeepAliveKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	82      (0000014a) invoke-static        v9, v0, v1, v3, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextHealthCheckKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	83      (00000150) iget-object          v9, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	84      (00000154) invoke-interface     v9, v5, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+	85      (0000015a) return               v3
+
+onStartCommand-BB@0x15c : [ onStartCommand-BB@0x160 onStartCommand-BB@0x16a ]
+	86      (0000015c) if-eqz               v10, +007h
+
+onStartCommand-BB@0x160 : [ onStartCommand-BB@0x16c ]
+	87      (00000160) invoke-virtual       v10, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	88      (00000166) move-result-object   v10
+	89      (00000168) goto                 +2h
+
+onStartCommand-BB@0x16a : [ onStartCommand-BB@0x16c ]
+	90      (0000016a) move-object          v10, v11
+
+onStartCommand-BB@0x16c : [ onStartCommand-BB@0x170 onStartCommand-BB@0x1f0 ]
+	91      (0000016c) if-eqz               v10, +042h
+
+onStartCommand-BB@0x170 : [ onStartCommand-BB@0x182 onStartCommand-BB@0x1be ]
+	92      (00000170) invoke-virtual       v10, Ljava/lang/String;->hashCode()I
+	93      (00000176) move-result          v12
+	94      (00000178) const                v6, -1438121637
+	95      (0000017e) if-eq                v12, v6, +020h
+
+onStartCommand-BB@0x182 : [ onStartCommand-BB@0x18c onStartCommand-BB@0x18e ]
+	96      (00000182) const                v6, -1213012817
+	97      (00000188) if-eq                v12, v6, +003h
+
+onStartCommand-BB@0x18c : [ onStartCommand-BB@0x1f0 ]
+	98      (0000018c) goto                 +32h
+
+onStartCommand-BB@0x18e : [ onStartCommand-BB@0x19e onStartCommand-BB@0x1a0 ]
+	99      (0000018e) const-string         v12, "com.lele.llmonitor.ACTION_LIVE_NOTIFICATION_CLOSE_ONCE"
+	100     (00000192) invoke-virtual       v10, v12, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	101     (00000198) move-result          v10
+	102     (0000019a) if-nez               v10, +003h
+
+onStartCommand-BB@0x19e : [ onStartCommand-BB@0x1f0 ]
+	103     (0000019e) goto                 +29h
+
+onStartCommand-BB@0x1a0 : [ onStartCommand-BB@0x1b2 onStartCommand-BB@0x1f0 ]
+	104     (000001a0) iput-boolean         v3, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isLiveSuppressedForCurrentSession Z
+	105     (000001a4) invoke-direct        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->requestImmediateUpdate()V
+	106     (000001aa) iget-boolean         v10, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isMonitorLoopStarted Z
+	107     (000001ae) if-eqz               v10, +021h
+
+onStartCommand-BB@0x1b2 : 
+	108     (000001b2) iget-object          v9, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	109     (000001b6) invoke-interface     v9, v5, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+	110     (000001bc) return               v3
+
+onStartCommand-BB@0x1be : [ onStartCommand-BB@0x1ce onStartCommand-BB@0x1d0 ]
+	111     (000001be) const-string         v12, "com.lele.llmonitor.ACTION_NOTIFICATION_DISMISSED"
+	112     (000001c2) invoke-virtual       v10, v12, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	113     (000001c8) move-result          v10
+	114     (000001ca) if-nez               v10, +003h
+
+onStartCommand-BB@0x1ce : [ onStartCommand-BB@0x1f0 ]
+	115     (000001ce) goto                 +11h
+
+onStartCommand-BB@0x1d0 : [ onStartCommand-BB@0x1e4 onStartCommand-BB@0x1f0 ]
+	116     (000001d0) invoke-direct        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->handleNormalNotificationDismiss()V
+	117     (000001d6) invoke-direct        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->requestImmediateUpdate()V
+	118     (000001dc) iget-boolean         v10, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isMonitorLoopStarted Z
+	119     (000001e0) if-eqz               v10, +008h
+
+onStartCommand-BB@0x1e4 : 
+	120     (000001e4) iget-object          v9, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	121     (000001e8) invoke-interface     v9, v5, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+	122     (000001ee) return               v3
+
+onStartCommand-BB@0x1f0 : [ onStartCommand-BB@0x1f8 onStartCommand-BB@0x210 ]
+	123     (000001f0) iget-boolean         v10, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isMonitorLoopStarted Z
+	124     (000001f4) if-eqz               v10, +00eh
+
+onStartCommand-BB@0x1f8 : 
+	125     (000001f8) invoke-static        v9, v0, v1, v3, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextKeepAliveKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	126     (000001fe) invoke-static        v9, v0, v1, v3, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextHealthCheckKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	127     (00000204) iget-object          v9, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	128     (00000208) invoke-interface     v9, v5, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+	129     (0000020e) return               v3
+
+onStartCommand-BB@0x210 : [ onStartCommand-BB@0x224 onStartCommand-BB@0x23c ]
+	130     (00000210) invoke-static        v9, v0, v1, v3, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextKeepAliveKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	131     (00000216) invoke-static        v9, v0, v1, v3, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextHealthCheckKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	132     (0000021c) iget-boolean         v10, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isForceUpdateReceiverRegistered Z
+	133     (00000220) if-nez               v10, +00eh
+
+onStartCommand-BB@0x224 : [ onStartCommand-BB@0x23c ]
+	134     (00000224) new-instance         v10, Landroid/content/IntentFilter;
+	135     (00000228) invoke-direct        v10, v4, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+	136     (0000022e) iget-object          v12, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->forceUpdateReceiver Lcom/lele/llmonitor/service/BatteryMonitorService$forceUpdateReceiver$1;
+	137     (00000232) invoke-static        v9, v12, v10, Lwb0;->K(Landroid/content/Context; Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)V
+	138     (00000238) iput-boolean         v3, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isForceUpdateReceiverRegistered Z
+
+onStartCommand-BB@0x23c : [ onStartCommand-BB@0x244 onStartCommand-BB@0x25e ]
+	139     (0000023c) iget-boolean         v10, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isMonitorLoopStarted Z
+	140     (00000240) if-nez               v10, +00fh
+
+onStartCommand-BB@0x244 : 
+	141     (00000244) iput-boolean         v3, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->isMonitorLoopStarted Z
+	142     (00000248) iget-object          v10, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->serviceScope Ld80;
+	143     (0000024c) new-instance         v12, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;
+	144     (00000250) invoke-direct        v12, v9, v11, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+	145     (00000256) invoke-static        v10, v11, v11, v12, v2, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	146     (0000025c) return               v3
+
+onStartCommand-BB@0x25e : 
+	147     (0000025e) iget-object          v9, v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	148     (00000262) invoke-interface     v9, v5, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+	149     (00000268) return               v3
+
+onStartCommand-BB@0x26a : 
+	150     (0000026a) nop                  
+	151     (0000026c) sparse-switch-payload -7073f927 -388fa0d4 -3407509d 3cbf870b 6dd1d3eb
+

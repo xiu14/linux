@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clipboard_common_phrase_toolbar"
+    android:background="@color/navigation_bar_normal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/clipboard_common_phrase_toolbar_height"
+    android:paddingHorizontal="11dp">
+    <ImageView
+        android:id="@+id/btn_close_clipboard_common_phrase"
+        android:background="@drawable/bg_toolbar_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_toolbar_back"
+        android:scaleType="centerInside"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <com.bytedance.android.input.keyboard.component.SegmentedBar
+        android:id="@+id/segmented_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"/>
+    <FrameLayout
+        android:id="@+id/btn_delete_clipboard_container"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/btn_delete_clipboard"
+            android:background="@drawable/bg_toolbar_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_toolbar_delete"
+            android:scaleType="centerInside"/>
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/btn_add_common_phrase"
+        android:background="@drawable/bg_toolbar_btn"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_toolbar_add"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OListItemGeneral
+        android:id="@+id/feedback_context"
+        android:background="@drawable/o_background_list_item"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_gv_list_item_settings"
+        app:oui_list_item_title="@string/upload_feedback_enable_context_title"/>
+    <com.obric.oui.lisitem.OListItemGeneral
+        android:id="@+id/feedback_user_input"
+        android:background="@drawable/o_background_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_gv_list_item_settings"
+        app:oui_list_item_title="@string/upload_feedback_pinyin_title"/>
+    <com.obric.oui.lisitem.OListItemGeneral
+        android:id="@+id/feedback_candidate_list"
+        android:background="@drawable/o_background_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_gv_list_item_settings"
+        app:oui_list_item_title="@string/upload_feedback_candidates_title"/>
+    <com.obric.oui.forms.OFormItem
+        android:orientation="vertical"
+        android:id="@+id/feedback_content"
+        android:background="@drawable/o_background_list_item"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_gv_list_item_settings"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_feedback_commit"
+        android:background="@color/theme_color"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/oui_gv_list_item_settings"
+        android:text="@string/commit"
+        app:oui_radius="10dp"
+        style="@style/OButton.L1.Standard.Primary"/>
+</LinearLayout>

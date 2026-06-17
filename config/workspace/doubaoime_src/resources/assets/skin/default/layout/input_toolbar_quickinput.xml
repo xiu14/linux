@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Container name="toolbar_quickinput" class_adaptive="cls_toolbar_no_typing_adaptive" width="match_parent" height="match_parent">
+        <VerticalLayout name="toolbar_symbol_recent" width="match_parent" height="match_parent" visible="false">
+            <HorizontalLayout name="layout_symbol_recent" width="match_parent" height="match_parent">
+                <Control width_weight="4" />
+                <HorizontalLayout name="recent_symbol_list" class="cls_history_symbollist"
+                    width_weight="308" height="match_parent" margin="0,0,0,1" sliderenable="true" sliderstopslowdown="true">
+                    <ButtonSymbol text="." class="cls_history_symbollist_button" class_adaptive="cls_cand_margin_in_keyboard_type"/>
+                </HorizontalLayout>
+                <Control class="cls_candidate_split" />
+                <Control width_weight="3" />
+                <ButtonKey name="btn_symbol_recent_close" class="cls_history_close_button"
+                    class_adaptive="cls_btn_more_cand_button_adaptive"/>
+                <Control width_weight="4" />
+            </HorizontalLayout>
+            <Control height_weight="2" />
+        </VerticalLayout>
+        <!-- 快捷输入布局(短信) -->
+        <VerticalLayout name="toolbar_sms" width="match_parent" height="match_parent">
+            <HorizontalLayout name="layout_quickinput_sms" width="match_parent" height="match_parent" >
+                <HorizontalLayout name="quickinput_clipboard_container_sms" float="true"
+                    width="auto" height="auto"  gravity="center" >
+                    <ButtonKey name="btn_quickinput_sms" font="cand_font"
+                        text=""
+                        width="auto"  textcolor="@color/canditem_text" />
+                    <Label width="auto" height="match_parent" text="\ue363" align="top"
+                        textpadding="0.01,0,0.01,0" textpaddingdecimalmode="true"
+                        textcolor="@color/keybutton_text_2" font="fi_toolbar_tip_superscript" />
+                </HorizontalLayout>
+                <ButtonKey name="btn_quickinput_close_sms" class="cls_history_close_button"
+                    class_adaptive="cls_history_close_button" float="true" gravity="right" />
+            </HorizontalLayout>
+        </VerticalLayout>
+        <!-- 快捷输入布局(剪贴板) -->
+        <VerticalLayout name="toolbar_clipboard" width="match_parent" height="match_parent">
+            <HorizontalLayout name="layout_quickinput_clipboard" width="match_parent" height="match_parent" >
+                <Control width_weight="12" />
+                <HorizontalLayout name="quickinput_clipboard_container"
+                    width_weight="304" height="match_parent" sliderenable="true" sliderstopslowdown="true">
+                    <ButtonKey name="btn_quickinput_clipboard" font="cand_font"
+                        text="" margin_decimal="0,0.055,0,0.111" align="left"
+                        width="auto"  textcolor="@color/canditem_text" />
+                    <Label name="quickinput_clipboard_icon1" width="auto" height="match_parent" text="\ue320" align="top"
+                        margin_decimal="0,0.08,0,0.111" textpadding="0.01,0,0.01,0" textpaddingdecimalmode="true"
+                        textcolor="@color/keybutton_text_2" font="fi_toolbar_tip_superscript" />
+                </HorizontalLayout>
+                <ButtonKey name="btn_quickinput_close" class="cls_history_close_button"
+                    class_adaptive="cls_btn_more_cand_button_adaptive"/>
+                <Control width_weight="4" />
+            </HorizontalLayout>
+            <Control height_weight="4" />
+        </VerticalLayout>
+
+        <VerticalLayout name="toolbar_clipboard_no_slider" width="match_parent" height="match_parent">
+            <HorizontalLayout name="layout_quickinput_clipboard_no_slider" width="match_parent" height="match_parent" >
+
+                <HorizontalLayout name="quickinput_clipboard_container_no_slider" float="true"
+                    width="auto" height="auto"  gravity="center" >
+
+                    <ButtonKey name="btn_quickinput_clipboard_no_slider" font="cand_font"
+                        text=""
+                        width="auto"  textcolor="@color/canditem_text" />
+
+                    <Label width="auto" height="match_parent" text="\ue320" align="top"
+                        textpadding="0.0167,0.0167,0.01,0" textpaddingdecimalmode="true"
+                        textcolor="@color/keybutton_text_2" font="fi_toolbar_tip_superscript" />
+                </HorizontalLayout>
+                <ButtonKey name="btn_quickinput_close_no_slider" class="cls_history_close_button"
+                    class_adaptive="cls_history_close_button" float="true" gravity="right" />
+            </HorizontalLayout>
+            <Control height_weight ="4" />
+        </VerticalLayout>
+    </Container>
+</Window>

@@ -1,0 +1,13 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->c(Ld02;)Ljava/lang/Long; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:d02
+#
+# - return:java.lang.Long
+
+c-BB@0x0 : 
+	0       (00000000) invoke-static        v0, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->readLong$lambda$2(Ld02;)Ljava/lang/Long;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

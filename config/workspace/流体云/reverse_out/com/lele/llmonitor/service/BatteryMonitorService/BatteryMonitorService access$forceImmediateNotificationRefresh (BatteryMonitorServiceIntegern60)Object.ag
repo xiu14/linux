@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$forceImmediateNotificationRefresh(Lcom/lele/llmonitor/service/BatteryMonitorService; Ljava/lang/Integer; Ln60;)Ljava/lang/Object; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.service.BatteryMonitorService
+# - v1:java.lang.Integer
+# - v2:n60
+#
+# - return:java.lang.Object
+
+access$forceImmediateNotificationRefresh-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, v1, v2, Lcom/lele/llmonitor/service/BatteryMonitorService;->forceImmediateNotificationRefresh(Ljava/lang/Integer; Ln60;)Ljava/lang/Object;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

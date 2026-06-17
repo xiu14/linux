@@ -1,0 +1,130 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;->onValidateSchema(Lmy2;)Ljx2; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v14
+# - v15:my2
+#
+# - return:jx2
+
+onValidateSchema-BB@0x0 : [ onValidateSchema-BB@0x16c onValidateSchema-BB@0x1a4 ]
+	0       (00000000) invoke-virtual       v15, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) new-instance         v14, Ljava/util/LinkedHashMap;
+	2       (0000000a) invoke-direct        v14, Ljava/util/LinkedHashMap;-><init>()V
+	3       (00000010) new-instance         v0, Lrk3;
+	4       (00000014) const/4              v5, 0
+	5       (00000016) const/4              v6, 1
+	6       (00000018) const-string         v1, "id"
+	7       (0000001c) const-string         v2, "INTEGER"
+	8       (00000020) const/4              v3, 1
+	9       (00000022) const/4              v4, 1
+	10      (00000024) invoke-direct/range  v0 ... v6, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	11      (0000002a) const-string         v1, "id"
+	12      (0000002e) invoke-interface     v14, v1, v0, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	13      (00000034) new-instance         v2, Lrk3;
+	14      (00000038) const/4              v7, 0
+	15      (0000003a) const/4              v8, 1
+	16      (0000003c) const-string         v3, "timestamp"
+	17      (00000040) const-string         v4, "INTEGER"
+	18      (00000044) const/4              v5, 1
+	19      (00000046) const/4              v6, 0
+	20      (00000048) invoke-direct/range  v2 ... v8, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	21      (0000004e) const-string         v0, "timestamp"
+	22      (00000052) invoke-interface     v14, v0, v2, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	23      (00000058) new-instance         v3, Lrk3;
+	24      (0000005c) const/4              v8, 0
+	25      (0000005e) const/4              v9, 1
+	26      (00000060) const-string         v4, "level"
+	27      (00000064) const-string         v5, "INTEGER"
+	28      (00000068) const/4              v6, 1
+	29      (0000006a) const/4              v7, 0
+	30      (0000006c) invoke-direct/range  v3 ... v9, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	31      (00000072) const-string         v1, "level"
+	32      (00000076) invoke-interface     v14, v1, v3, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	33      (0000007c) new-instance         v4, Lrk3;
+	34      (00000080) const/4              v9, 0
+	35      (00000082) const/4              v10, 1
+	36      (00000084) const-string         v5, "voltage"
+	37      (00000088) const-string         v6, "REAL"
+	38      (0000008c) const/4              v7, 1
+	39      (0000008e) const/4              v8, 0
+	40      (00000090) invoke-direct/range  v4 ... v10, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	41      (00000096) const-string         v1, "voltage"
+	42      (0000009a) invoke-interface     v14, v1, v4, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	43      (000000a0) new-instance         v5, Lrk3;
+	44      (000000a4) const/4              v10, 0
+	45      (000000a6) const/4              v11, 1
+	46      (000000a8) const-string         v6, "current"
+	47      (000000ac) const-string         v7, "REAL"
+	48      (000000b0) const/4              v8, 1
+	49      (000000b2) const/4              v9, 0
+	50      (000000b4) invoke-direct/range  v5 ... v11, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	51      (000000ba) const-string         v1, "current"
+	52      (000000be) invoke-interface     v14, v1, v5, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	53      (000000c4) new-instance         v6, Lrk3;
+	54      (000000c8) const/4              v11, 0
+	55      (000000ca) const/4              v12, 1
+	56      (000000cc) const-string         v7, "power"
+	57      (000000d0) const-string         v8, "REAL"
+	58      (000000d4) const/4              v9, 1
+	59      (000000d6) const/4              v10, 0
+	60      (000000d8) invoke-direct/range  v6 ... v12, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	61      (000000de) const-string         v1, "power"
+	62      (000000e2) invoke-interface     v14, v1, v6, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	63      (000000e8) new-instance         v7, Lrk3;
+	64      (000000ec) const/4              v12, 0
+	65      (000000ee) const/4              v13, 1
+	66      (000000f0) const-string         v8, "temperature"
+	67      (000000f4) const-string         v9, "REAL"
+	68      (000000f8) const/4              v10, 1
+	69      (000000fa) const/4              v11, 0
+	70      (000000fc) invoke-direct/range  v7 ... v13, Lrk3;-><init>(Ljava/lang/String; Ljava/lang/String; Z I Ljava/lang/String; I)V
+	71      (00000102) const-string         v1, "temperature"
+	72      (00000106) invoke-interface     v14, v1, v7, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	73      (0000010c) new-instance         v1, Ljava/util/LinkedHashSet;
+	74      (00000110) invoke-direct        v1, Ljava/util/LinkedHashSet;-><init>()V
+	75      (00000116) new-instance         v2, Ljava/util/LinkedHashSet;
+	76      (0000011a) invoke-direct        v2, Ljava/util/LinkedHashSet;-><init>()V
+	77      (00000120) new-instance         v3, Ltk3;
+	78      (00000124) invoke-static        v0, Lr7;->L(Ljava/lang/Object;)Ljava/util/List;
+	79      (0000012a) move-result-object   v0
+	80      (0000012c) const-string         v4, "ASC"
+	81      (00000130) invoke-static        v4, Lr7;->L(Ljava/lang/Object;)Ljava/util/List;
+	82      (00000136) move-result-object   v4
+	83      (00000138) const-string         v5, "index_battery_history_timestamp"
+	84      (0000013c) const/4              v6, 0
+	85      (0000013e) invoke-direct        v3, v5, v6, v0, v4, Ltk3;-><init>(Ljava/lang/String; Z Ljava/util/List; Ljava/util/List;)V
+	86      (00000144) invoke-interface     v2, v3, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+	87      (0000014a) new-instance         v0, Luk3;
+	88      (0000014e) const-string         v3, "battery_history"
+	89      (00000152) invoke-direct        v0, v3, v14, v1, v2, Luk3;-><init>(Ljava/lang/String; Ljava/util/Map; Ljava/util/AbstractSet; Ljava/util/AbstractSet;)V
+	90      (00000158) invoke-static        v3, v15, Lif1;->C(Ljava/lang/String; Lmy2;)Luk3;
+	91      (0000015e) move-result-object   v14
+	92      (00000160) invoke-virtual       v0, v14, Luk3;->equals(Ljava/lang/Object;)Z
+	93      (00000166) move-result          v15
+	94      (00000168) if-nez               v15, +01eh
+
+onValidateSchema-BB@0x16c : 
+	95      (0000016c) new-instance         v15, Ljx2;
+	96      (00000170) new-instance         v1, Ljava/lang/StringBuilder;
+	97      (00000174) const-string         v2, "battery_history(com.lele.llmonitor.data.local.BatteryEntity).
+ Expected:
+"
+	98      (00000178) invoke-direct        v1, v2, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	99      (0000017e) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	100     (00000184) const-string         v0, "
+ Found:
+"
+	101     (00000188) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	102     (0000018e) invoke-virtual       v1, v14, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	103     (00000194) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	104     (0000019a) move-result-object   v14
+	105     (0000019c) invoke-direct        v15, v14, v6, Ljx2;-><init>(Ljava/lang/String; Z)V
+	106     (000001a2) return-object        v15
+
+onValidateSchema-BB@0x1a4 : 
+	107     (000001a4) new-instance         v14, Ljx2;
+	108     (000001a8) const/4              v15, 1
+	109     (000001aa) const/4              v0, 0
+	110     (000001ac) invoke-direct        v14, v0, v15, Ljx2;-><init>(Ljava/lang/String; Z)V
+	111     (000001b2) return-object        v14
+

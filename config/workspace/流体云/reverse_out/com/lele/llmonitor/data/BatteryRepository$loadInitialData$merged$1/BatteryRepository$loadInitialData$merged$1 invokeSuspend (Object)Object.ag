@@ -1,0 +1,36 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x8 invokeSuspend-BB@0x40 ]
+	0       (00000000) iget                 v0, v4, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->label I
+	1       (00000004) if-nez               v0, +01eh
+
+invokeSuspend-BB@0x8 : 
+	2       (00000008) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	3       (0000000e) sget-object          v5, Lcom/lele/llmonitor/data/BatteryRepository;->INSTANCE Lcom/lele/llmonitor/data/BatteryRepository;
+	4       (00000012) iget-object          v0, v4, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$currentSnapshot Ljava/util/List;
+	5       (00000016) iget-object          v1, v4, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$data Ljava/util/List;
+	6       (0000001a) iget-object          v4, v4, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$merged$1;->$persisted Ljava/util/List;
+	7       (0000001e) const/4              v2, 3
+	8       (00000020) new-array            v2, v2, [Ljava/util/List;
+	9       (00000024) const/4              v3, 0
+	10      (00000026) aput-object          v0, v2, v3
+	11      (0000002a) const/4              v0, 1
+	12      (0000002c) aput-object          v1, v2, v0
+	13      (00000030) const/4              v0, 2
+	14      (00000032) aput-object          v4, v2, v0
+	15      (00000036) invoke-static        v5, v2, Lcom/lele/llmonitor/data/BatteryRepository;->access$mergeAndNormalizeEntries(Lcom/lele/llmonitor/data/BatteryRepository; [Ljava/util/List;)Ljava/util/List;
+	16      (0000003c) move-result-object   v4
+	17      (0000003e) return-object        v4
+
+invokeSuspend-BB@0x40 : 
+	18      (00000040) const-string         v4, "call to 'resume' before 'invoke' with coroutine"
+	19      (00000044) invoke-static        v4, Lh;->m(Ljava/lang/String;)V
+	20      (0000004a) const/4              v4, 0
+	21      (0000004c) return-object        v4
+

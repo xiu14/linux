@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/ui/soc/SocUiState;-><init>(Z Lcom/lele/llmonitor/data/soc/SocSnapshot; Ljava/lang/String;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:boolean
+# - v2:com.lele.llmonitor.data.soc.SocSnapshot
+# - v3:java.lang.String
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	1       (00000006) iput-boolean         v1, v0, Lcom/lele/llmonitor/ui/soc/SocUiState;->isLoading Z
+	2       (0000000a) iput-object          v2, v0, Lcom/lele/llmonitor/ui/soc/SocUiState;->snapshot Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	3       (0000000e) iput-object          v3, v0, Lcom/lele/llmonitor/ui/soc/SocUiState;->error Ljava/lang/String;
+	4       (00000012) return-void          
+

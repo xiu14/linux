@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;->copy(Z J)Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:boolean
+# - v3:long
+#
+# - return:com.lele.llmonitor.service.VisualRefreshScheduler$Decision
+
+copy-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	1       (00000004) invoke-direct        v0, v1, v2, v3, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;-><init>(Z J)V
+	2       (0000000a) return-object        v0
+

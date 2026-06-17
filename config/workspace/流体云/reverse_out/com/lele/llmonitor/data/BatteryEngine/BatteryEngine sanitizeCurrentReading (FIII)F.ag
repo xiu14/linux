@@ -1,0 +1,76 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->sanitizeCurrentReading(F I I I)F [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:float
+# - v5:int
+# - v6:int
+# - v7:int
+#
+# - return:float
+
+sanitizeCurrentReading-BB@0x0 : [ sanitizeCurrentReading-BB@0x8 sanitizeCurrentReading-BB@0xc ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) const/4              v6, 1
+	2       (00000004) if-eqz               v7, +004h
+
+sanitizeCurrentReading-BB@0x8 : [ sanitizeCurrentReading-BB@0xe ]
+	3       (00000008) move                 v7, v6
+	4       (0000000a) goto                 +2h
+
+sanitizeCurrentReading-BB@0xc : [ sanitizeCurrentReading-BB@0xe ]
+	5       (0000000c) move                 v7, v3
+
+sanitizeCurrentReading-BB@0xe : [ sanitizeCurrentReading-BB@0x16 sanitizeCurrentReading-BB@0x1a ]
+	6       (0000000e) const/16             v0, 98
+	7       (00000012) if-le                v5, v0, +004h
+
+sanitizeCurrentReading-BB@0x16 : [ sanitizeCurrentReading-BB@0x1c ]
+	8       (00000016) move                 v5, v6
+	9       (00000018) goto                 +2h
+
+sanitizeCurrentReading-BB@0x1a : [ sanitizeCurrentReading-BB@0x1c ]
+	10      (0000001a) move                 v5, v3
+
+sanitizeCurrentReading-BB@0x1c : [ sanitizeCurrentReading-BB@0x40 sanitizeCurrentReading-BB@0x60 ]
+	11      (0000001c) invoke-static        v4, Ll02;->F(F)I
+	12      (00000022) move-result          v0
+	13      (00000024) int-to-float         v1, v0
+	14      (00000026) sub-float            v1, v4, v1
+	15      (0000002a) invoke-static        v1, Ljava/lang/Math;->abs(F)F
+	16      (00000030) move-result          v1
+	17      (00000032) const                v2, 981668463
+	18      (00000038) cmpg-float           v1, v1, v2
+	19      (0000003c) if-gez               v1, +012h
+
+sanitizeCurrentReading-BB@0x40 : [ sanitizeCurrentReading-BB@0x50 sanitizeCurrentReading-BB@0x60 ]
+	20      (00000040) invoke-static        v0, Ljava/lang/Math;->abs(I)I
+	21      (00000046) move-result          v1
+	22      (00000048) const/16             v2, 1000
+	23      (0000004c) if-lt                v1, v2, +00ah
+
+sanitizeCurrentReading-BB@0x50 : [ sanitizeCurrentReading-BB@0x5e sanitizeCurrentReading-BB@0x60 ]
+	24      (00000050) invoke-static        v0, Ljava/lang/Math;->abs(I)I
+	25      (00000056) move-result          v0
+	26      (00000058) rem-int/2addr        v0, v2
+	27      (0000005a) if-nez               v0, +003h
+
+sanitizeCurrentReading-BB@0x5e : [ sanitizeCurrentReading-BB@0x60 ]
+	28      (0000005e) move                 v3, v6
+
+sanitizeCurrentReading-BB@0x60 : [ sanitizeCurrentReading-BB@0x64 sanitizeCurrentReading-BB@0x70 ]
+	29      (00000060) if-eqz               v7, +008h
+
+sanitizeCurrentReading-BB@0x64 : [ sanitizeCurrentReading-BB@0x68 sanitizeCurrentReading-BB@0x70 ]
+	30      (00000064) if-eqz               v5, +006h
+
+sanitizeCurrentReading-BB@0x68 : [ sanitizeCurrentReading-BB@0x6c sanitizeCurrentReading-BB@0x70 ]
+	31      (00000068) if-eqz               v3, +004h
+
+sanitizeCurrentReading-BB@0x6c : 
+	32      (0000006c) const/4              v3, 0
+	33      (0000006e) return               v3
+
+sanitizeCurrentReading-BB@0x70 : 
+	34      (00000070) return               v4
+

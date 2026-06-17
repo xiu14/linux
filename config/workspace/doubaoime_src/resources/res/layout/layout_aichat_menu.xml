@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ai_chat_assistant_view_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/ai_chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="@dimen/common_phrase_bar_padding_left"
+        android:paddingVertical="@dimen/common_phrase_bar_padding_right">
+        <com.obric.oui.button.OButton
+            android:gravity="center"
+            android:id="@+id/btn_close_ai_chat"
+            android:padding="0dp"
+            android:clickable="true"
+            android:layout_width="@dimen/oui_w_button_icon_m1"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:icon="@drawable/o_ic_close"
+            app:iconSize="@dimen/oui_h_icon_in_button_ic_m1"
+            style="@style/OButton.M1.Standard.Neutral"/>
+        <com.obric.oui.button.OButton
+            android:textSize="16sp"
+            android:textColor="@color/oui_text_1"
+            android:id="@+id/ai_chat_tab_switch"
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:text="百科快答"
+            android:drawableRight="@drawable/o_input_view_combo_arrow"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:lineHeight="22px"
+            android:textFontWeight="500"
+            style="@style/OButton.M1.Standard"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ai_chat_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/common_phrase_item_margin_left"
+        android:layout_marginRight="@dimen/common_phrase_item_margin_left"
+        android:layout_weight="1">
+        <include layout="@layout/layout_aichat_assistant_page_chat"/>
+        <include layout="@layout/layout_aichat_assistant_page_baike"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->getThemePalettePreset()Ll52; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:l52
+
+getThemePalettePreset-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->themePalettePreset Ll52;
+	1       (00000004) return-object        v0
+

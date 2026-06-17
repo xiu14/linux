@@ -1,0 +1,22 @@
+# Lcom/lele/llmonitor/data/AppLocaleSupportKt;->resolveStoredAppLanguageOption(Landroid/content/SharedPreferences;)Lcom/lele/llmonitor/data/AppLanguageOption; [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.SharedPreferences
+#
+# - return:com.lele.llmonitor.data.AppLanguageOption
+
+resolveStoredAppLanguageOption-BB@0x0 : 
+	0       (00000000) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) sget-object          v0, Lcom/lele/llmonitor/data/AppLanguageOption;->Companion Lcom/lele/llmonitor/data/AppLanguageOption$Companion;
+	2       (0000000a) invoke-virtual       v0, Lcom/lele/llmonitor/data/AppLanguageOption$Companion;->getDefault()Lcom/lele/llmonitor/data/AppLanguageOption;
+	3       (00000010) move-result-object   v1
+	4       (00000012) invoke-virtual       v1, Lcom/lele/llmonitor/data/AppLanguageOption;->getPreferenceValue()Ljava/lang/String;
+	5       (00000018) move-result-object   v1
+	6       (0000001a) const-string         v2, "app_language_option"
+	7       (0000001e) invoke-interface     v3, v2, v1, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	8       (00000024) move-result-object   v3
+	9       (00000026) invoke-virtual       v0, v3, Lcom/lele/llmonitor/data/AppLanguageOption$Companion;->fromPreferenceValue(Ljava/lang/String;)Lcom/lele/llmonitor/data/AppLanguageOption;
+	10      (0000002c) move-result-object   v3
+	11      (0000002e) return-object        v3
+

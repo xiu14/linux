@@ -1,0 +1,183 @@
+# Lcom/lele/llmonitor/data/soc/SocSnapshot;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:int
+
+hashCode-BB@0x0 : [ hashCode-BB@0x1c hashCode-BB@0x20 ]
+	0       (00000000) iget-wide            v0, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->timestamp J
+	1       (00000004) invoke-static        v0, v1, Ljava/lang/Long;->hashCode(J)I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/16             v1, 31
+	4       (00000010) mul-int/2addr        v0, v1
+	5       (00000012) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsagePercent Ljava/lang/Float;
+	6       (00000016) const/4              v3, 0
+	7       (00000018) if-nez               v2, +004h
+
+hashCode-BB@0x1c : [ hashCode-BB@0x28 ]
+	8       (0000001c) move                 v2, v3
+	9       (0000001e) goto                 +5h
+
+hashCode-BB@0x20 : [ hashCode-BB@0x28 ]
+	10      (00000020) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	11      (00000026) move-result          v2
+
+hashCode-BB@0x28 : [ hashCode-BB@0x4c hashCode-BB@0x50 ]
+	12      (00000028) add-int/2addr        v0, v2
+	13      (0000002a) mul-int/2addr        v0, v1
+	14      (0000002c) iget                 v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->onlineCores I
+	15      (00000030) invoke-static        v2, v0, v1, Lve2;->d(I I I)I
+	16      (00000036) move-result          v0
+	17      (00000038) iget                 v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->totalCores I
+	18      (0000003c) invoke-static        v2, v0, v1, Lve2;->d(I I I)I
+	19      (00000042) move-result          v0
+	20      (00000044) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg1 Ljava/lang/Float;
+	21      (00000048) if-nez               v2, +004h
+
+hashCode-BB@0x4c : [ hashCode-BB@0x58 ]
+	22      (0000004c) move                 v2, v3
+	23      (0000004e) goto                 +5h
+
+hashCode-BB@0x50 : [ hashCode-BB@0x58 ]
+	24      (00000050) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	25      (00000056) move-result          v2
+
+hashCode-BB@0x58 : [ hashCode-BB@0x64 hashCode-BB@0x68 ]
+	26      (00000058) add-int/2addr        v0, v2
+	27      (0000005a) mul-int/2addr        v0, v1
+	28      (0000005c) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg5 Ljava/lang/Float;
+	29      (00000060) if-nez               v2, +004h
+
+hashCode-BB@0x64 : [ hashCode-BB@0x70 ]
+	30      (00000064) move                 v2, v3
+	31      (00000066) goto                 +5h
+
+hashCode-BB@0x68 : [ hashCode-BB@0x70 ]
+	32      (00000068) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	33      (0000006e) move-result          v2
+
+hashCode-BB@0x70 : [ hashCode-BB@0x7c hashCode-BB@0x80 ]
+	34      (00000070) add-int/2addr        v0, v2
+	35      (00000072) mul-int/2addr        v0, v1
+	36      (00000074) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg15 Ljava/lang/Float;
+	37      (00000078) if-nez               v2, +004h
+
+hashCode-BB@0x7c : [ hashCode-BB@0x88 ]
+	38      (0000007c) move                 v2, v3
+	39      (0000007e) goto                 +5h
+
+hashCode-BB@0x80 : [ hashCode-BB@0x88 ]
+	40      (00000080) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	41      (00000086) move-result          v2
+
+hashCode-BB@0x88 : [ hashCode-BB@0x94 hashCode-BB@0x98 ]
+	42      (00000088) add-int/2addr        v0, v2
+	43      (0000008a) mul-int/2addr        v0, v1
+	44      (0000008c) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureC Ljava/lang/Float;
+	45      (00000090) if-nez               v2, +004h
+
+hashCode-BB@0x94 : [ hashCode-BB@0xa0 ]
+	46      (00000094) move                 v2, v3
+	47      (00000096) goto                 +5h
+
+hashCode-BB@0x98 : [ hashCode-BB@0xa0 ]
+	48      (00000098) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	49      (0000009e) move-result          v2
+
+hashCode-BB@0xa0 : [ hashCode-BB@0xac hashCode-BB@0xb0 ]
+	50      (000000a0) add-int/2addr        v0, v2
+	51      (000000a2) mul-int/2addr        v0, v1
+	52      (000000a4) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureFractionDigits Ljava/lang/Integer;
+	53      (000000a8) if-nez               v2, +004h
+
+hashCode-BB@0xac : [ hashCode-BB@0xb8 ]
+	54      (000000ac) move                 v2, v3
+	55      (000000ae) goto                 +5h
+
+hashCode-BB@0xb0 : [ hashCode-BB@0xb8 ]
+	56      (000000b0) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	57      (000000b6) move-result          v2
+
+hashCode-BB@0xb8 : [ hashCode-BB@0xc4 hashCode-BB@0xc8 ]
+	58      (000000b8) add-int/2addr        v0, v2
+	59      (000000ba) mul-int/2addr        v0, v1
+	60      (000000bc) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSource Ljava/lang/String;
+	61      (000000c0) if-nez               v2, +004h
+
+hashCode-BB@0xc4 : [ hashCode-BB@0xd0 ]
+	62      (000000c4) move                 v2, v3
+	63      (000000c6) goto                 +5h
+
+hashCode-BB@0xc8 : [ hashCode-BB@0xd0 ]
+	64      (000000c8) invoke-virtual       v2, Ljava/lang/String;->hashCode()I
+	65      (000000ce) move-result          v2
+
+hashCode-BB@0xd0 : [ hashCode-BB@0x100 hashCode-BB@0x104 ]
+	66      (000000d0) add-int/2addr        v0, v2
+	67      (000000d2) mul-int/2addr        v0, v1
+	68      (000000d4) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsageSources Ljava/util/List;
+	69      (000000d8) invoke-static        v2, v0, v1, Ls42;->e(Ljava/util/List; I I)I
+	70      (000000de) move-result          v0
+	71      (000000e0) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvgSources Ljava/util/List;
+	72      (000000e4) invoke-static        v2, v0, v1, Ls42;->e(Ljava/util/List; I I)I
+	73      (000000ea) move-result          v0
+	74      (000000ec) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSources Ljava/util/List;
+	75      (000000f0) invoke-static        v2, v0, v1, Ls42;->e(Ljava/util/List; I I)I
+	76      (000000f6) move-result          v0
+	77      (000000f8) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryTotalBytes Ljava/lang/Long;
+	78      (000000fc) if-nez               v2, +004h
+
+hashCode-BB@0x100 : [ hashCode-BB@0x10c ]
+	79      (00000100) move                 v2, v3
+	80      (00000102) goto                 +5h
+
+hashCode-BB@0x104 : [ hashCode-BB@0x10c ]
+	81      (00000104) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	82      (0000010a) move-result          v2
+
+hashCode-BB@0x10c : [ hashCode-BB@0x118 hashCode-BB@0x11c ]
+	83      (0000010c) add-int/2addr        v0, v2
+	84      (0000010e) mul-int/2addr        v0, v1
+	85      (00000110) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryAvailableBytes Ljava/lang/Long;
+	86      (00000114) if-nez               v2, +004h
+
+hashCode-BB@0x118 : [ hashCode-BB@0x124 ]
+	87      (00000118) move                 v2, v3
+	88      (0000011a) goto                 +5h
+
+hashCode-BB@0x11c : [ hashCode-BB@0x124 ]
+	89      (0000011c) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	90      (00000122) move-result          v2
+
+hashCode-BB@0x124 : [ hashCode-BB@0x13c hashCode-BB@0x13e ]
+	91      (00000124) add-int/2addr        v0, v2
+	92      (00000126) mul-int/2addr        v0, v1
+	93      (00000128) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memorySources Ljava/util/List;
+	94      (0000012c) invoke-static        v2, v0, v1, Ls42;->e(Ljava/util/List; I I)I
+	95      (00000132) move-result          v0
+	96      (00000134) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelName Ljava/lang/String;
+	97      (00000138) if-nez               v2, +003h
+
+hashCode-BB@0x13c : [ hashCode-BB@0x146 ]
+	98      (0000013c) goto                 +5h
+
+hashCode-BB@0x13e : [ hashCode-BB@0x146 ]
+	99      (0000013e) invoke-virtual       v2, Ljava/lang/String;->hashCode()I
+	100     (00000144) move-result          v3
+
+hashCode-BB@0x146 : 
+	101     (00000146) add-int/2addr        v0, v3
+	102     (00000148) mul-int/2addr        v0, v1
+	103     (0000014a) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelSources Ljava/util/List;
+	104     (0000014e) invoke-static        v2, v0, v1, Ls42;->e(Ljava/util/List; I I)I
+	105     (00000154) move-result          v0
+	106     (00000156) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->thermalZones Ljava/util/List;
+	107     (0000015a) invoke-static        v2, v0, v1, Ls42;->e(Ljava/util/List; I I)I
+	108     (00000160) move-result          v0
+	109     (00000162) iget-object          v4, v4, Lcom/lele/llmonitor/data/soc/SocSnapshot;->coreFrequencies Ljava/util/List;
+	110     (00000166) invoke-virtual       v4, Ljava/lang/Object;->hashCode()I
+	111     (0000016c) move-result          v4
+	112     (0000016e) add-int/2addr        v4, v0
+	113     (00000170) return               v4
+

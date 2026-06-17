@@ -1,0 +1,78 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->SettingsScreen$lambda$31$1(Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Landroid/content/Context; Ll52; Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v12:android.content.Context
+# - v13:l52
+# - v14:t10
+# - v15:int
+#
+# - return:bw3
+
+SettingsScreen$lambda$31$1-BB@0x0 : [ SettingsScreen$lambda$31$1-BB@0xc SettingsScreen$lambda$31$1-BB@0x10 ]
+	0       (00000000) and-int/lit8         v0, v15, 3
+	1       (00000004) const/4              v1, 2
+	2       (00000006) const/4              v2, 1
+	3       (00000008) if-eq                v0, v1, +004h
+
+SettingsScreen$lambda$31$1-BB@0xc : [ SettingsScreen$lambda$31$1-BB@0x12 ]
+	4       (0000000c) move                 v0, v2
+	5       (0000000e) goto                 +2h
+
+SettingsScreen$lambda$31$1-BB@0x10 : [ SettingsScreen$lambda$31$1-BB@0x12 ]
+	6       (00000010) const/4              v0, 0
+
+SettingsScreen$lambda$31$1-BB@0x12 : [ SettingsScreen$lambda$31$1-BB@0x26 SettingsScreen$lambda$31$1-BB@0x94 ]
+	7       (00000012) and-int/2addr        v15, v2
+	8       (00000014) move-object          v8, v14
+	9       (00000016) check-cast           v8, Lb20;
+	10      (0000001a) invoke-virtual       v8, v15, v0, Lb20;->O(I Z)Z
+	11      (00000020) move-result          v14
+	12      (00000022) if-eqz               v14, +039h
+
+SettingsScreen$lambda$31$1-BB@0x26 : [ SettingsScreen$lambda$31$1-BB@0x4c SettingsScreen$lambda$31$1-BB@0x54 ]
+	13      (00000026) invoke-virtual       v11, Ljava/lang/Enum;->ordinal()I
+	14      (0000002c) move-result          v14
+	15      (0000002e) invoke-virtual       v8, v14, Lb20;->d(I)Z
+	16      (00000034) move-result          v14
+	17      (00000036) invoke-virtual       v8, v12, Lb20;->h(Ljava/lang/Object;)Z
+	18      (0000003c) move-result          v15
+	19      (0000003e) or-int/2addr         v14, v15
+	20      (00000040) invoke-virtual       v8, Lb20;->L()Ljava/lang/Object;
+	21      (00000046) move-result-object   v15
+	22      (00000048) if-nez               v14, +006h
+
+SettingsScreen$lambda$31$1-BB@0x4c : [ SettingsScreen$lambda$31$1-BB@0x54 SettingsScreen$lambda$31$1-BB@0x68 ]
+	23      (0000004c) sget-object          v14, Lr10;->a Li41;
+	24      (00000050) if-ne                v15, v14, +00ch
+
+SettingsScreen$lambda$31$1-BB@0x54 : [ SettingsScreen$lambda$31$1-BB@0x68 ]
+	25      (00000054) new-instance         v15, Lvj;
+	26      (00000058) const/16             v14, 11
+	27      (0000005c) invoke-direct        v15, v11, v13, v12, v14, Lvj;-><init>(Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object; I)V
+	28      (00000062) invoke-virtual       v8, v15, Lb20;->j0(Ljava/lang/Object;)V
+
+SettingsScreen$lambda$31$1-BB@0x68 : [ SettingsScreen$lambda$31$1-BB@0x9a ]
+	29      (00000068) move-object          v1, v15
+	30      (0000006a) check-cast           v1, Ls01;
+	31      (0000006e) sget-object          v11, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->INSTANCE Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;
+	32      (00000072) invoke-virtual       v11, Lcom/lele/llmonitor/ui/settings/ComposableSingletons$SettingsScreenKt;->getLambda$-1973863514$app()Li11;
+	33      (00000078) move-result-object   v7
+	34      (0000007a) const/high16         v9, 805306368
+	35      (0000007e) const/16             v10, 510
+	36      (00000082) const/4              v2, 0
+	37      (00000084) const/4              v3, 0
+	38      (00000086) const/4              v4, 0
+	39      (00000088) const/4              v5, 0
+	40      (0000008a) const/4              v6, 0
+	41      (0000008c) invoke-static/range  v1 ... v10, Ljn;->k(Ls01; Lm22; Z Lv93; Lqp; Ljg2; Li11; Lt10; I I)V
+	42      (00000092) goto                 +4h
+
+SettingsScreen$lambda$31$1-BB@0x94 : [ SettingsScreen$lambda$31$1-BB@0x9a ]
+	43      (00000094) invoke-virtual       v8, Lb20;->R()V
+
+SettingsScreen$lambda$31$1-BB@0x9a : 
+	44      (0000009a) sget-object          v11, Lbw3;->a Lbw3;
+	45      (0000009e) return-object        v11
+

@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase;->access$getINSTANCE$cp()Lcom/lele/llmonitor/data/local/AppDatabase; [access_flags=public static final synthetic]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:com.lele.llmonitor.data.local.AppDatabase
+
+access$getINSTANCE$cp-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/local/AppDatabase;->INSTANCE Lcom/lele/llmonitor/data/local/AppDatabase;
+	1       (00000004) return-object        v0
+

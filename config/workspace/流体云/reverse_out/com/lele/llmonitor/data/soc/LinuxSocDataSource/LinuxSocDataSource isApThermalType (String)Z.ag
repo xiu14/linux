@@ -1,0 +1,36 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isApThermalType(Ljava/lang/String;)Z [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+#
+# - return:boolean
+
+isApThermalType-BB@0x0 : [ isApThermalType-BB@0x12 isApThermalType-BB@0x3c ]
+	0       (00000000) const-string         v1, "apss"
+	1       (00000004) const/4              v0, 0
+	2       (00000006) invoke-static        v2, v1, v0, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	3       (0000000c) move-result          v1
+	4       (0000000e) if-nez               v1, +017h
+
+isApThermalType-BB@0x12 : [ isApThermalType-BB@0x38 isApThermalType-BB@0x3a ]
+	5       (00000012) const-string         v1, "(^|[_-])ap([_-]|$)"
+	6       (00000016) invoke-static        v1, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+	7       (0000001c) move-result-object   v1
+	8       (0000001e) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	9       (00000024) invoke-virtual       v1, v2, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+	10      (0000002a) move-result-object   v1
+	11      (0000002c) invoke-virtual       v1, Ljava/util/regex/Matcher;->find()Z
+	12      (00000032) move-result          v1
+	13      (00000034) if-eqz               v1, +003h
+
+isApThermalType-BB@0x38 : [ isApThermalType-BB@0x3c ]
+	14      (00000038) goto                 +2h
+
+isApThermalType-BB@0x3a : 
+	15      (0000003a) return               v0
+
+isApThermalType-BB@0x3c : 
+	16      (0000003c) const/4              v1, 1
+	17      (0000003e) return               v1
+

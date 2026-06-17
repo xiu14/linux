@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/ime_color_setting_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.common_biz.ui.widget.ImeTitleBar
+        android:id="@+id/settings_title_bar"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ime_dp_56"
+        app:ime_back_arrow_icon="@drawable/ic_arrow_left"
+        app:oui_title_text="@string/setting_feedback"/>
+</LinearLayout>

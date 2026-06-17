@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager;->deleteHistoryWallpaper(Ljava/lang/String;)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+#
+# - return:void
+
+deleteHistoryWallpaper-BB@0x0 : [ deleteHistoryWallpaper-BB@0xe deleteHistoryWallpaper-BB@0x10 ]
+	0       (00000000) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) sget-object          v3, Lcom/lele/llmonitor/data/HomeWallpaperManager;->appContext Landroid/content/Context;
+	2       (0000000a) if-nez               v3, +003h
+
+deleteHistoryWallpaper-BB@0xe : 
+	3       (0000000e) return-void          
+
+deleteHistoryWallpaper-BB@0x10 : 
+	4       (00000010) sget-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->scope Ld80;
+	5       (00000014) new-instance         v1, Lcom/lele/llmonitor/data/HomeWallpaperManager$deleteHistoryWallpaper$1;
+	6       (00000018) const/4              v2, 0
+	7       (0000001a) invoke-direct        v1, v3, v4, v2, Lcom/lele/llmonitor/data/HomeWallpaperManager$deleteHistoryWallpaper$1;-><init>(Landroid/content/Context; Ljava/lang/String; Ln60;)V
+	8       (00000020) const/4              v3, 3
+	9       (00000022) invoke-static        v0, v2, v2, v1, v3, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	10      (00000028) return-void          
+

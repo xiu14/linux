@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->access$setLastEmitTime$p(J)V [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:long
+#
+# - return:void
+
+access$setLastEmitTime$p-BB@0x0 : 
+	0       (00000000) sput-wide            v0, Lcom/lele/llmonitor/data/BatteryRepository;->lastEmitTime J
+	1       (00000004) return-void          
+

@@ -1,0 +1,86 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x14 invokeSuspend-BB@0x38 ]
+	0       (00000000) iget-object          v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->L$0 Ljava/lang/Object;
+	1       (00000004) check-cast           v0, Ld80;
+	2       (00000008) iget                 v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->label I
+	3       (0000000c) const/4              v1, 0
+	4       (0000000e) const/4              v2, 1
+	5       (00000010) if-eqz               v0, +014h
+
+invokeSuspend-BB@0x14 : [ invokeSuspend-BB@0x18 invokeSuspend-BB@0x2c ]
+	6       (00000014) if-ne                v0, v2, +00ch
+
+invokeSuspend-BB@0x18 : [ invokeSuspend-BB@0x20 ]
+	7       (00000018) iget-object          v4, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->L$1 Ljava/lang/Object;
+	8       (0000001c) check-cast           v4, Ld80;
+
+invokeSuspend-BB@0x20 : [ invokeSuspend-BB@0x6e ]
+	9       (00000020) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	10      (00000026) goto                 +24h
+	20:25
+	(Ljava/lang/Throwable; -> 28 invokeSuspend-BB@0x28)
+
+invokeSuspend-BB@0x28 : [ invokeSuspend-BB@0x74 ]
+	11      (00000028) move-exception       v4
+	12      (0000002a) goto                 +25h
+
+invokeSuspend-BB@0x2c : 
+	13      (0000002c) const-string         v4, "call to 'resume' before 'invoke' with coroutine"
+	14      (00000030) invoke-static        v4, Lh;->m(Ljava/lang/String;)V
+	15      (00000036) return-object        v1
+
+invokeSuspend-BB@0x38 : [ invokeSuspend-BB@0x4a ]
+	16      (00000038) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	17      (0000003e) iget-object          v5, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	18      (00000042) iget-object          v0, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->$entry Lcom/lele/llmonitor/data/local/BatteryEntity;
+	19      (00000046) iget                 v3, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->$tempC F
+
+invokeSuspend-BB@0x4a : [ invokeSuspend-BB@0x6c invokeSuspend-BB@0x6e ]
+	20      (0000004a) iput-object          v1, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->L$0 Ljava/lang/Object;
+	21      (0000004e) iput-object          v1, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->L$1 Ljava/lang/Object;
+	22      (00000052) const/4              v1, 0
+	23      (00000054) iput                 v1, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->I$0 I
+	24      (00000058) iput                 v2, v4, Lcom/lele/llmonitor/service/BatteryMonitorService$publishVisuals$widgetUpdated$1;->label I
+	25      (0000005c) invoke-static        v5, v0, v3, v4, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$updateWidget(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; F Ln60;)Ljava/lang/Object;
+	26      (00000062) move-result-object   v4
+	27      (00000064) sget-object          v5, Le80;->d Le80;
+	28      (00000068) if-ne                v4, v5, +003h
+	4a:63
+	(Ljava/lang/Throwable; -> 28 invokeSuspend-BB@0x28)
+
+invokeSuspend-BB@0x6c : 
+	29      (0000006c) return-object        v5
+
+invokeSuspend-BB@0x6e : [ invokeSuspend-BB@0x80 ]
+	30      (0000006e) sget-object          v4, Lbw3;->a Lbw3;
+	31      (00000072) goto                 +7h
+	6e:71
+	(Ljava/lang/Throwable; -> 28 invokeSuspend-BB@0x28)
+
+invokeSuspend-BB@0x74 : [ invokeSuspend-BB@0x80 ]
+	32      (00000074) new-instance         v5, Lcw2;
+	33      (00000078) invoke-direct        v5, v4, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	34      (0000007e) move-object          v4, v5
+
+invokeSuspend-BB@0x80 : [ invokeSuspend-BB@0x8c invokeSuspend-BB@0x92 ]
+	35      (00000080) invoke-static        v4, Ldw2;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+	36      (00000086) move-result-object   v5
+	37      (00000088) if-eqz               v5, +005h
+
+invokeSuspend-BB@0x8c : [ invokeSuspend-BB@0x92 ]
+	38      (0000008c) invoke-virtual       v5, Ljava/lang/Throwable;->printStackTrace()V
+
+invokeSuspend-BB@0x92 : 
+	39      (00000092) instance-of          v4, v4, Lcw2;
+	40      (00000096) xor-int/2addr        v4, v2
+	41      (00000098) invoke-static        v4, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	42      (0000009e) move-result-object   v4
+	43      (000000a0) return-object        v4
+

@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) iget-object          v0, v4, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->totalBytes Ljava/lang/Long;
+	1       (00000004) iget-object          v1, v4, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->availableBytes Ljava/lang/Long;
+	2       (00000008) iget-object          v4, v4, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->probes Ljava/util/List;
+	3       (0000000c) new-instance         v2, Ljava/lang/StringBuilder;
+	4       (00000010) const-string         v3, "MemoryInfoResult(totalBytes="
+	5       (00000014) invoke-direct        v2, v3, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	6       (0000001a) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	7       (00000020) const-string         v0, ", availableBytes="
+	8       (00000024) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (0000002a) invoke-virtual       v2, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	10      (00000030) const-string         v0, ", probes="
+	11      (00000034) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	12      (0000003a) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	13      (00000040) const-string         v4, ")"
+	14      (00000044) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (0000004a) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	16      (00000050) move-result-object   v4
+	17      (00000052) return-object        v4
+

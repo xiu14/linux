@@ -1,0 +1,75 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->getVirtualVoltage(I I Z)F [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+# - v5:int
+# - v6:boolean
+#
+# - return:float
+
+getVirtualVoltage-BB@0x0 : [ getVirtualVoltage-BB@0x4 getVirtualVoltage-BB@0xc ]
+	0       (00000000) if-gtz               v5, +006h
+
+getVirtualVoltage-BB@0x4 : 
+	1       (00000004) const                v3, 1081291571
+	2       (0000000a) return               v3
+
+getVirtualVoltage-BB@0xc : [ getVirtualVoltage-BB@0x34 getVirtualVoltage-BB@0x4a ]
+	3       (0000000c) int-to-float         v3, v4
+	4       (0000000e) int-to-float         v4, v5
+	5       (00000010) div-float/2addr      v3, v4
+	6       (00000012) const/high16         v4, 1065353216
+	7       (00000016) const/4              v5, 0
+	8       (00000018) invoke-static        v3, v5, v4, Lib1;->k(F F F)F
+	9       (0000001e) move-result          v3
+	10      (00000020) const                v4, 1045220557
+	11      (00000026) cmpl-float           v0, v3, v4
+	12      (0000002a) const                v1, 1061997773
+	13      (00000030) if-ltz               v0, +00dh
+
+getVirtualVoltage-BB@0x34 : [ getVirtualVoltage-BB@0x46 ]
+	14      (00000034) sub-float            v0, v3, v4
+	15      (00000038) const                v2, 1060320048
+	16      (0000003e) mul-float/2addr      v0, v2
+	17      (00000040) div-float/2addr      v0, v1
+	18      (00000042) const/high16         v2, 1081081856
+
+getVirtualVoltage-BB@0x46 : [ getVirtualVoltage-BB@0x5c ]
+	19      (00000046) add-float/2addr      v0, v2
+	20      (00000048) goto                 +ah
+
+getVirtualVoltage-BB@0x4a : [ getVirtualVoltage-BB@0x46 ]
+	21      (0000004a) const                v0, 1057803468
+	22      (00000050) mul-float/2addr      v0, v3
+	23      (00000052) div-float/2addr      v0, v4
+	24      (00000054) const                v2, 1078774989
+	25      (0000005a) goto                 -ah
+
+getVirtualVoltage-BB@0x5c : [ getVirtualVoltage-BB@0x60 getVirtualVoltage-BB@0x84 ]
+	26      (0000005c) if-eqz               v6, +014h
+
+getVirtualVoltage-BB@0x60 : [ getVirtualVoltage-BB@0x68 getVirtualVoltage-BB@0x7c ]
+	27      (00000060) cmpg-float           v5, v3, v1
+	28      (00000064) if-gtz               v5, +00ch
+
+getVirtualVoltage-BB@0x68 : [ getVirtualVoltage-BB@0x76 ]
+	29      (00000068) const                v4, 1050253722
+	30      (0000006e) mul-float/2addr      v3, v4
+	31      (00000070) div-float/2addr      v3, v1
+	32      (00000072) const/high16         v4, 1056964608
+
+getVirtualVoltage-BB@0x76 : [ getVirtualVoltage-BB@0x84 ]
+	33      (00000076) sub-float            v5, v4, v3
+	34      (0000007a) goto                 +5h
+
+getVirtualVoltage-BB@0x7c : [ getVirtualVoltage-BB@0x76 ]
+	35      (0000007c) sub-float/2addr      v3, v1
+	36      (0000007e) mul-float/2addr      v3, v4
+	37      (00000080) div-float/2addr      v3, v4
+	38      (00000082) goto                 -6h
+
+getVirtualVoltage-BB@0x84 : 
+	39      (00000084) add-float/2addr      v0, v5
+	40      (00000086) return               v0
+

@@ -1,0 +1,36 @@
+# Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveFollowSystemAppIconModeForThemeModeChange(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode; I)Lcom/lele/llmonitor/data/FollowSystemAppIconMode; [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:int
+# - v1:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v2:int
+#
+# - return:com.lele.llmonitor.data.FollowSystemAppIconMode
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0x0 : [ resolveFollowSystemAppIconModeForThemeModeChange-BB@0xa resolveFollowSystemAppIconModeForThemeModeChange-BB@0xc ]
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) if-eqz               v2, +003h
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0xa : [ resolveFollowSystemAppIconModeForThemeModeChange-BB@0x24 ]
+	2       (0000000a) goto                 +dh
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0xc : [ resolveFollowSystemAppIconModeForThemeModeChange-BB@0x12 resolveFollowSystemAppIconModeForThemeModeChange-BB@0x18 ]
+	3       (0000000c) const/4              v2, 2
+	4       (0000000e) if-ne                v0, v2, +005h
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0x12 : 
+	5       (00000012) sget-object          v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->DARK Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	6       (00000016) return-object        v0
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0x18 : [ resolveFollowSystemAppIconModeForThemeModeChange-BB@0x1e resolveFollowSystemAppIconModeForThemeModeChange-BB@0x24 ]
+	7       (00000018) const/4              v2, 1
+	8       (0000001a) if-ne                v0, v2, +005h
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0x1e : 
+	9       (0000001e) sget-object          v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->LIGHT Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	10      (00000022) return-object        v0
+
+resolveFollowSystemAppIconModeForThemeModeChange-BB@0x24 : 
+	11      (00000024) return-object        v1
+

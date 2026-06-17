@@ -1,0 +1,18 @@
+# Lcom/lele/llmonitor/data/AppIconPalette;->$values()[Lcom/lele/llmonitor/data/AppIconPalette; [access_flags=private static final synthetic]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:com.lele.llmonitor.data.AppIconPalette[]
+
+$values-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/AppIconPalette;->OCEAN Lcom/lele/llmonitor/data/AppIconPalette;
+	1       (00000004) sget-object          v1, Lcom/lele/llmonitor/data/AppIconPalette;->FOREST Lcom/lele/llmonitor/data/AppIconPalette;
+	2       (00000008) sget-object          v2, Lcom/lele/llmonitor/data/AppIconPalette;->SUNSET Lcom/lele/llmonitor/data/AppIconPalette;
+	3       (0000000c) sget-object          v3, Lcom/lele/llmonitor/data/AppIconPalette;->BLOSSOM Lcom/lele/llmonitor/data/AppIconPalette;
+	4       (00000010) sget-object          v4, Lcom/lele/llmonitor/data/AppIconPalette;->JIZI Lcom/lele/llmonitor/data/AppIconPalette;
+	5       (00000014) sget-object          v5, Lcom/lele/llmonitor/data/AppIconPalette;->DYNAMIC Lcom/lele/llmonitor/data/AppIconPalette;
+	6       (00000018) filled-new-array/range v0 ... v5, [Lcom/lele/llmonitor/data/AppIconPalette;
+	7       (0000001e) move-result-object   v0
+	8       (00000020) return-object        v0
+

@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getUpdateTrigger$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lvt; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.service.BatteryMonitorService
+#
+# - return:vt
+
+access$getUpdateTrigger$p-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->updateTrigger Lvt;
+	1       (00000004) return-object        v0
+

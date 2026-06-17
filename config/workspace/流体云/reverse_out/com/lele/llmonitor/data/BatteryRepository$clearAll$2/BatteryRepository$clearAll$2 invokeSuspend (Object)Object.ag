@@ -1,0 +1,38 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$clearAll$2;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x46 ]
+	0       (00000000) iget                 v1, v1, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$2;->label I
+	1       (00000004) const/4              v0, 0
+	2       (00000006) if-nez               v1, +020h
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0x38 invokeSuspend-BB@0x44 ]
+	3       (0000000a) invoke-static        v2, Lib1;->Q(Ljava/lang/Object;)V
+	4       (00000010) sget-object          v1, Lcom/lele/llmonitor/data/BatteryRepository;->INSTANCE Lcom/lele/llmonitor/data/BatteryRepository;
+	5       (00000014) invoke-virtual       v1, Lcom/lele/llmonitor/data/BatteryRepository;->getLatestHistory()Lle3;
+	6       (0000001a) move-result-object   v1
+	7       (0000001c) invoke-virtual       v1, Lle3;->clear()V
+	8       (00000022) const-wide/16        v1, 0
+	9       (00000026) invoke-static        v1, v2, Lcom/lele/llmonitor/data/BatteryRepository;->access$setLastEmitTime$p(J)V
+	10      (0000002c) invoke-static        Lcom/lele/llmonitor/data/BatteryRepository;->access$getPersistJob$p()Lpj1;
+	11      (00000032) move-result-object   v1
+	12      (00000034) if-eqz               v1, +008h
+
+invokeSuspend-BB@0x38 : 
+	13      (00000038) invoke-interface     v1, v0, Lpj1;->k(Ljava/util/concurrent/CancellationException;)V
+	14      (0000003e) sget-object          v1, Lbw3;->a Lbw3;
+	15      (00000042) return-object        v1
+
+invokeSuspend-BB@0x44 : 
+	16      (00000044) return-object        v0
+
+invokeSuspend-BB@0x46 : 
+	17      (00000046) const-string         v1, "call to 'resume' before 'invoke' with coroutine"
+	18      (0000004a) invoke-static        v1, Lh;->m(Ljava/lang/String;)V
+	19      (00000050) return-object        v0
+

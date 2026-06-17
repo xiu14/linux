@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository;-><init>(Lcom/lele/llmonitor/data/soc/SocDataSource;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.data.soc.SocDataSource
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	2       (0000000c) iput-object          v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository;->dataSource Lcom/lele/llmonitor/data/soc/SocDataSource;
+	3       (00000010) return-void          
+

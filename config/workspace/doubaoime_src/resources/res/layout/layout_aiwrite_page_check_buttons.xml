@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_16">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.oui.lisitem.OListItemGeneral
+            android:id="@+id/ai_btn_show_origin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:oui_list_item_title="@string/ai_btn_show_origin"
+            style="@style/aiwritng_btn_background"/>
+        <com.obric.oui.lisitem.OListItemGeneral
+            android:id="@+id/ai_btn_do_action"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/dp_4"
+            style="@style/aiwritng_btn_background"/>
+    </LinearLayout>
+</LinearLayout>

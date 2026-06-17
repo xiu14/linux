@@ -1,0 +1,76 @@
+# Lcom/lele/llmonitor/service/VisualRefreshScheduler;->evaluate(J J I J)Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:long
+# - v12:long
+# - v13:int
+# - v14:long
+#
+# - return:com.lele.llmonitor.service.VisualRefreshScheduler$Decision
+
+evaluate-BB@0x0 : [ evaluate-BB@0xc evaluate-BB@0x1c ]
+	0       (00000000) iget-object          v0, v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastPluggedState Ljava/lang/Integer;
+	1       (00000004) const/4              v1, 1
+	2       (00000006) const/4              v2, 0
+	3       (00000008) if-eqz               v0, +00ah
+
+evaluate-BB@0xc : [ evaluate-BB@0x18 evaluate-BB@0x1c ]
+	4       (0000000c) invoke-virtual       v0, Ljava/lang/Number;->intValue()I
+	5       (00000012) move-result          v0
+	6       (00000014) if-eq                v0, v12, +004h
+
+evaluate-BB@0x18 : [ evaluate-BB@0x1e ]
+	7       (00000018) move                 v0, v1
+	8       (0000001a) goto                 +2h
+
+evaluate-BB@0x1c : [ evaluate-BB@0x1e ]
+	9       (0000001c) move                 v0, v2
+
+evaluate-BB@0x1e : [ evaluate-BB@0x3c evaluate-BB@0x3e ]
+	10      (0000001e) invoke-static        v12, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	11      (00000024) move-result-object   v12
+	12      (00000026) iput-object          v12, v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastPluggedState Ljava/lang/Integer;
+	13      (0000002a) const-wide/16        v3, 3
+	14      (0000002e) mul-long/2addr       v3, v10
+	15      (00000030) iget-wide            v5, v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->staleForceFloorMs J
+	16      (00000034) cmp-long             v12, v3, v5
+	17      (00000038) if-gez               v12, +003h
+
+evaluate-BB@0x3c : [ evaluate-BB@0x3e ]
+	18      (0000003c) move-wide            v3, v5
+
+evaluate-BB@0x3e : [ evaluate-BB@0x42 evaluate-BB@0x74 ]
+	19      (0000003e) if-nez               v0, +01bh
+
+evaluate-BB@0x42 : [ evaluate-BB@0x52 evaluate-BB@0x74 ]
+	20      (00000042) iget-wide            v5, v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastNotificationTimeMs J
+	21      (00000046) sub-long             v5, v8, v5
+	22      (0000004a) cmp-long             v12, v5, v10
+	23      (0000004e) if-gez               v12, +013h
+
+evaluate-BB@0x52 : [ evaluate-BB@0x62 evaluate-BB@0x74 ]
+	24      (00000052) iget-wide            v5, v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastWidgetTimeMs J
+	25      (00000056) sub-long             v5, v8, v5
+	26      (0000005a) cmp-long             v12, v5, v10
+	27      (0000005e) if-gez               v12, +00bh
+
+evaluate-BB@0x62 : [ evaluate-BB@0x70 evaluate-BB@0x72 ]
+	28      (00000062) iget-wide            v5, v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->lastHeartbeatTimeMs J
+	29      (00000066) sub-long/2addr       v8, v5
+	30      (00000068) cmp-long             v7, v8, v3
+	31      (0000006c) if-ltz               v7, +003h
+
+evaluate-BB@0x70 : [ evaluate-BB@0x74 ]
+	32      (00000070) goto                 +2h
+
+evaluate-BB@0x72 : [ evaluate-BB@0x74 ]
+	33      (00000072) move                 v1, v2
+
+evaluate-BB@0x74 : 
+	34      (00000074) new-instance         v7, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	35      (00000078) invoke-static        v10, v11, v13, v14, Ljava/lang/Math;->min(J J)J
+	36      (0000007e) move-result-wide     v8
+	37      (00000080) invoke-direct        v7, v1, v8, v9, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;-><init>(Z J)V
+	38      (00000086) return-object        v7
+

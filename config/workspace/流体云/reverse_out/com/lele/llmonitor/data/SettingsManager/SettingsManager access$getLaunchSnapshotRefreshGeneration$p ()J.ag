@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->access$getLaunchSnapshotRefreshGeneration$p()J [access_flags=public static final synthetic]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:long
+
+access$getLaunchSnapshotRefreshGeneration$p-BB@0x0 : 
+	0       (00000000) sget-wide            v0, Lcom/lele/llmonitor/data/SettingsManager;->launchSnapshotRefreshGeneration J
+	1       (00000004) return-wide          v0
+

@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+hashCode-BB@0x0 : 
+	0       (00000000) iget-object          v0, v3, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->zone Ljava/lang/String;
+	1       (00000004) invoke-virtual       v0, Ljava/lang/String;->hashCode()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/16             v1, 31
+	4       (00000010) mul-int/2addr        v0, v1
+	5       (00000012) iget-object          v2, v3, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->type Ljava/lang/String;
+	6       (00000016) invoke-static        v2, v0, v1, Ls42;->d(Ljava/lang/String; I I)I
+	7       (0000001c) move-result          v0
+	8       (0000001e) iget                 v2, v3, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->tempC F
+	9       (00000022) invoke-static        v2, v0, v1, Lve2;->c(F I I)I
+	10      (00000028) move-result          v0
+	11      (0000002a) iget                 v3, v3, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->tempFractionDigits I
+	12      (0000002e) invoke-static        v3, Ljava/lang/Integer;->hashCode(I)I
+	13      (00000034) move-result          v3
+	14      (00000036) add-int/2addr        v3, v0
+	15      (00000038) return               v3
+

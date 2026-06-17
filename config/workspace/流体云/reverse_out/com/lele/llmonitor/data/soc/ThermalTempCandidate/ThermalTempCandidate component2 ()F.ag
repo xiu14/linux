@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/ThermalTempCandidate;->component2()F [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:float
+
+component2-BB@0x0 : 
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/data/soc/ThermalTempCandidate;->divisor F
+	1       (00000004) return               v0
+

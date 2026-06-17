@@ -1,0 +1,82 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidget;->LayoutSmallVertical$lambda$0$1(I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; I I Lgy2; Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:int
+# - v8:com.lele.llmonitor.ui.widget.WidgetThemeColors
+# - v9:int
+# - v10:int
+# - v11:gy2
+# - v12:t10
+# - v13:int
+#
+# - return:bw3
+
+LayoutSmallVertical$lambda$0$1-BB@0x0 : 
+	0       (00000000) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) new-instance         v11, Ljava/lang/StringBuilder;
+	2       (0000000a) invoke-direct        v11, Ljava/lang/StringBuilder;-><init>()V
+	3       (00000010) invoke-virtual       v11, v7, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	4       (00000016) const-string         v7, "%"
+	5       (0000001a) invoke-virtual       v11, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	6       (00000020) invoke-virtual       v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	7       (00000026) move-result-object   v0
+	8       (00000028) const/16             v7, 16
+	9       (0000002c) invoke-static        v7, Lse1;->y(I)J
+	10      (00000032) move-result-wide     v1
+	11      (00000034) invoke-virtual       v8, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->getOnSurface()Lkx;
+	12      (0000003a) move-result-object   v7
+	13      (0000003c) move-wide            v3, v1
+	14      (0000003e) new-instance         v2, Lxp3;
+	15      (00000042) new-instance         v11, Lbq3;
+	16      (00000046) invoke-direct        v11, v3, v4, Lbq3;-><init>(J)V
+	17      (0000004c) new-instance         v13, Lgz0;
+	18      (00000050) const/16             v1, 700
+	19      (00000054) invoke-direct        v13, v1, Lgz0;-><init>(I)V
+	20      (0000005a) const/16             v1, 120
+	21      (0000005e) invoke-direct        v2, v7, v11, v13, v1, Lxp3;-><init>(Lkx; Lbq3; Lgz0; I)V
+	22      (00000064) const/4              v5, 0
+	23      (00000066) const/16             v6, 10
+	24      (0000006a) const/4              v1, 0
+	25      (0000006c) const/4              v3, 0
+	26      (0000006e) move-object          v4, v12
+	27      (00000070) invoke-static/range  v0 ... v6, Lzc1;->e(Ljava/lang/String; Lg31; Lxp3; I Lt10; I I)V
+	28      (00000076) move-object          v11, v4
+	29      (00000078) new-instance         v7, Lu04;
+	30      (0000007c) sget-object          v12, Lkh0;->a Lkh0;
+	31      (00000080) invoke-direct        v7, v12, Lu04;-><init>(Lph0;)V
+	32      (00000086) const/4              v12, 0
+	33      (00000088) invoke-static        v7, v11, v12, Led1;->c(Lg31; Lt10; I)V
+	34      (0000008e) new-instance         v7, Ljava/lang/StringBuilder;
+	35      (00000092) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	36      (00000098) invoke-virtual       v7, v9, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	37      (0000009e) const-string         v9, " / "
+	38      (000000a2) invoke-virtual       v7, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	39      (000000a8) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	40      (000000ae) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	41      (000000b4) move-result-object   v7
+	42      (000000b6) const-wide/high16    v9, 4623226492472524800
+	43      (000000ba) invoke-static        v9, v10, Lse1;->x(D)J
+	44      (000000c0) move-result-wide     v9
+	45      (000000c2) invoke-virtual       v8, Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;->getOutline()Lkx;
+	46      (000000c8) move-result-object   v8
+	47      (000000ca) move-wide            v12, v9
+	48      (000000cc) new-instance         v9, Lxp3;
+	49      (000000d0) new-instance         v10, Lbq3;
+	50      (000000d4) invoke-direct        v10, v12, v13, Lbq3;-><init>(J)V
+	51      (000000da) const/4              v12, 0
+	52      (000000dc) const/16             v13, 124
+	53      (000000e0) invoke-direct        v9, v8, v10, v12, v13, Lxp3;-><init>(Lkx; Lbq3; Lgz0; I)V
+	54      (000000e6) invoke-static        Lcom/lele/llmonitor/ui/widget/BatteryWidgetKeysKt;->access$getWIDGET_CAPACITY_TEXT_OFFSET$p()F
+	55      (000000ec) move-result          v8
+	56      (000000ee) const/4              v10, 0
+	57      (000000f0) const/16             v12, 13
+	58      (000000f4) invoke-static        v8, v10, v12, Lif1;->A(F F I)Lg31;
+	59      (000000fa) move-result-object   v8
+	60      (000000fc) const/4              v12, 0
+	61      (000000fe) const/16             v13, 8
+	62      (00000102) const/4              v10, 0
+	63      (00000104) invoke-static/range  v7 ... v13, Lzc1;->e(Ljava/lang/String; Lg31; Lxp3; I Lt10; I I)V
+	64      (0000010a) sget-object          v7, Lbw3;->a Lbw3;
+	65      (0000010e) return-object        v7
+

@@ -1,0 +1,222 @@
+# Lcom/lele/llmonitor/data/soc/SocSnapshot;->equals(Ljava/lang/Object;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:java.lang.Object
+#
+# - return:boolean
+
+equals-BB@0x0 : [ equals-BB@0x6 equals-BB@0x8 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) if-ne                v7, v8, +003h
+
+equals-BB@0x6 : 
+	2       (00000006) return               v0
+
+equals-BB@0x8 : [ equals-BB@0x12 equals-BB@0x14 ]
+	3       (00000008) instance-of          v1, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	4       (0000000c) const/4              v2, 0
+	5       (0000000e) if-nez               v1, +003h
+
+equals-BB@0x12 : 
+	6       (00000012) return               v2
+
+equals-BB@0x14 : [ equals-BB@0x28 equals-BB@0x2a ]
+	7       (00000014) check-cast           v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	8       (00000018) iget-wide            v3, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->timestamp J
+	9       (0000001c) iget-wide            v5, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->timestamp J
+	10      (00000020) cmp-long             v1, v3, v5
+	11      (00000024) if-eqz               v1, +003h
+
+equals-BB@0x28 : 
+	12      (00000028) return               v2
+
+equals-BB@0x2a : [ equals-BB@0x3e equals-BB@0x40 ]
+	13      (0000002a) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsagePercent Ljava/lang/Float;
+	14      (0000002e) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsagePercent Ljava/lang/Float;
+	15      (00000032) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	16      (00000038) move-result          v1
+	17      (0000003a) if-nez               v1, +003h
+
+equals-BB@0x3e : 
+	18      (0000003e) return               v2
+
+equals-BB@0x40 : [ equals-BB@0x4c equals-BB@0x4e ]
+	19      (00000040) iget                 v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->onlineCores I
+	20      (00000044) iget                 v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->onlineCores I
+	21      (00000048) if-eq                v1, v3, +003h
+
+equals-BB@0x4c : 
+	22      (0000004c) return               v2
+
+equals-BB@0x4e : [ equals-BB@0x5a equals-BB@0x5c ]
+	23      (0000004e) iget                 v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->totalCores I
+	24      (00000052) iget                 v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->totalCores I
+	25      (00000056) if-eq                v1, v3, +003h
+
+equals-BB@0x5a : 
+	26      (0000005a) return               v2
+
+equals-BB@0x5c : [ equals-BB@0x70 equals-BB@0x72 ]
+	27      (0000005c) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg1 Ljava/lang/Float;
+	28      (00000060) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg1 Ljava/lang/Float;
+	29      (00000064) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	30      (0000006a) move-result          v1
+	31      (0000006c) if-nez               v1, +003h
+
+equals-BB@0x70 : 
+	32      (00000070) return               v2
+
+equals-BB@0x72 : [ equals-BB@0x86 equals-BB@0x88 ]
+	33      (00000072) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg5 Ljava/lang/Float;
+	34      (00000076) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg5 Ljava/lang/Float;
+	35      (0000007a) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	36      (00000080) move-result          v1
+	37      (00000082) if-nez               v1, +003h
+
+equals-BB@0x86 : 
+	38      (00000086) return               v2
+
+equals-BB@0x88 : [ equals-BB@0x9c equals-BB@0x9e ]
+	39      (00000088) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg15 Ljava/lang/Float;
+	40      (0000008c) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvg15 Ljava/lang/Float;
+	41      (00000090) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	42      (00000096) move-result          v1
+	43      (00000098) if-nez               v1, +003h
+
+equals-BB@0x9c : 
+	44      (0000009c) return               v2
+
+equals-BB@0x9e : [ equals-BB@0xb2 equals-BB@0xb4 ]
+	45      (0000009e) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureC Ljava/lang/Float;
+	46      (000000a2) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureC Ljava/lang/Float;
+	47      (000000a6) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	48      (000000ac) move-result          v1
+	49      (000000ae) if-nez               v1, +003h
+
+equals-BB@0xb2 : 
+	50      (000000b2) return               v2
+
+equals-BB@0xb4 : [ equals-BB@0xc8 equals-BB@0xca ]
+	51      (000000b4) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureFractionDigits Ljava/lang/Integer;
+	52      (000000b8) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureFractionDigits Ljava/lang/Integer;
+	53      (000000bc) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	54      (000000c2) move-result          v1
+	55      (000000c4) if-nez               v1, +003h
+
+equals-BB@0xc8 : 
+	56      (000000c8) return               v2
+
+equals-BB@0xca : [ equals-BB@0xde equals-BB@0xe0 ]
+	57      (000000ca) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSource Ljava/lang/String;
+	58      (000000ce) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSource Ljava/lang/String;
+	59      (000000d2) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	60      (000000d8) move-result          v1
+	61      (000000da) if-nez               v1, +003h
+
+equals-BB@0xde : 
+	62      (000000de) return               v2
+
+equals-BB@0xe0 : [ equals-BB@0xf4 equals-BB@0xf6 ]
+	63      (000000e0) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsageSources Ljava/util/List;
+	64      (000000e4) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuUsageSources Ljava/util/List;
+	65      (000000e8) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	66      (000000ee) move-result          v1
+	67      (000000f0) if-nez               v1, +003h
+
+equals-BB@0xf4 : 
+	68      (000000f4) return               v2
+
+equals-BB@0xf6 : [ equals-BB@0x10a equals-BB@0x10c ]
+	69      (000000f6) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvgSources Ljava/util/List;
+	70      (000000fa) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->loadAvgSources Ljava/util/List;
+	71      (000000fe) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	72      (00000104) move-result          v1
+	73      (00000106) if-nez               v1, +003h
+
+equals-BB@0x10a : 
+	74      (0000010a) return               v2
+
+equals-BB@0x10c : [ equals-BB@0x120 equals-BB@0x122 ]
+	75      (0000010c) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSources Ljava/util/List;
+	76      (00000110) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->socTemperatureSources Ljava/util/List;
+	77      (00000114) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	78      (0000011a) move-result          v1
+	79      (0000011c) if-nez               v1, +003h
+
+equals-BB@0x120 : 
+	80      (00000120) return               v2
+
+equals-BB@0x122 : [ equals-BB@0x136 equals-BB@0x138 ]
+	81      (00000122) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryTotalBytes Ljava/lang/Long;
+	82      (00000126) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryTotalBytes Ljava/lang/Long;
+	83      (0000012a) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	84      (00000130) move-result          v1
+	85      (00000132) if-nez               v1, +003h
+
+equals-BB@0x136 : 
+	86      (00000136) return               v2
+
+equals-BB@0x138 : [ equals-BB@0x14c equals-BB@0x14e ]
+	87      (00000138) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryAvailableBytes Ljava/lang/Long;
+	88      (0000013c) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memoryAvailableBytes Ljava/lang/Long;
+	89      (00000140) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	90      (00000146) move-result          v1
+	91      (00000148) if-nez               v1, +003h
+
+equals-BB@0x14c : 
+	92      (0000014c) return               v2
+
+equals-BB@0x14e : [ equals-BB@0x162 equals-BB@0x164 ]
+	93      (0000014e) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memorySources Ljava/util/List;
+	94      (00000152) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->memorySources Ljava/util/List;
+	95      (00000156) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	96      (0000015c) move-result          v1
+	97      (0000015e) if-nez               v1, +003h
+
+equals-BB@0x162 : 
+	98      (00000162) return               v2
+
+equals-BB@0x164 : [ equals-BB@0x178 equals-BB@0x17a ]
+	99      (00000164) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelName Ljava/lang/String;
+	100     (00000168) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelName Ljava/lang/String;
+	101     (0000016c) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	102     (00000172) move-result          v1
+	103     (00000174) if-nez               v1, +003h
+
+equals-BB@0x178 : 
+	104     (00000178) return               v2
+
+equals-BB@0x17a : [ equals-BB@0x18e equals-BB@0x190 ]
+	105     (0000017a) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelSources Ljava/util/List;
+	106     (0000017e) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->cpuModelSources Ljava/util/List;
+	107     (00000182) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	108     (00000188) move-result          v1
+	109     (0000018a) if-nez               v1, +003h
+
+equals-BB@0x18e : 
+	110     (0000018e) return               v2
+
+equals-BB@0x190 : [ equals-BB@0x1a4 equals-BB@0x1a6 ]
+	111     (00000190) iget-object          v1, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->thermalZones Ljava/util/List;
+	112     (00000194) iget-object          v3, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->thermalZones Ljava/util/List;
+	113     (00000198) invoke-static        v1, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	114     (0000019e) move-result          v1
+	115     (000001a0) if-nez               v1, +003h
+
+equals-BB@0x1a4 : 
+	116     (000001a4) return               v2
+
+equals-BB@0x1a6 : [ equals-BB@0x1ba equals-BB@0x1bc ]
+	117     (000001a6) iget-object          v7, v7, Lcom/lele/llmonitor/data/soc/SocSnapshot;->coreFrequencies Ljava/util/List;
+	118     (000001aa) iget-object          v8, v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;->coreFrequencies Ljava/util/List;
+	119     (000001ae) invoke-static        v7, v8, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	120     (000001b4) move-result          v7
+	121     (000001b6) if-nez               v7, +003h
+
+equals-BB@0x1ba : 
+	122     (000001ba) return               v2
+
+equals-BB@0x1bc : 
+	123     (000001bc) return               v0
+

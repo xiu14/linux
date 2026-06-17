@@ -1,0 +1,14 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.Object
+# - v2:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;
+	1       (00000004) invoke-direct        v0, v2, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;-><init>(Ln60;)V
+	2       (0000000a) return-object        v0
+

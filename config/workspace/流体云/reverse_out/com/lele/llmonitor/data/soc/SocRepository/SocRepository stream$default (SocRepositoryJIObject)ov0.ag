@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository;->stream$default(Lcom/lele/llmonitor/data/soc/SocRepository; J I Ljava/lang/Object;)Lov0; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.lele.llmonitor.data.soc.SocRepository
+# - v2:long
+# - v3:int
+# - v4:java.lang.Object
+#
+# - return:ov0
+
+stream$default-BB@0x0 : [ stream$default-BB@0x8 stream$default-BB@0xc ]
+	0       (00000000) and-int/lit8         v3, v3, 1
+	1       (00000004) if-eqz               v3, +004h
+
+stream$default-BB@0x8 : [ stream$default-BB@0xc ]
+	2       (00000008) const-wide/16        v1, 1500
+
+stream$default-BB@0xc : 
+	3       (0000000c) invoke-virtual       v0, v1, v2, Lcom/lele/llmonitor/data/soc/SocRepository;->stream(J)Lov0;
+	4       (00000012) move-result-object   v0
+	5       (00000014) return-object        v0
+

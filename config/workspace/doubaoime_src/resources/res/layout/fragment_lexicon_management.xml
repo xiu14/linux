@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/ime_color_setting_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.common_biz.ui.widget.ImeTitleBar
+        android:id="@+id/settings_title_bar"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ime_dp_56"
+        app:ime_back_arrow_icon="@drawable/ic_arrow_left"
+        app:ime_title_text="@string/personal_lexicon_title"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lexicon_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ime_dp_12"
+        android:paddingHorizontal="@dimen/ime_dp_20">
+        <com.bytedance.common_biz.ui.widget.ImeListItemView
+            android:id="@+id/lexicon_item_del"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:accessoryType="horizontal_text"
+            app:auto_height="true"
+            app:containerBackgroundColor="@color/ime_color_setting_item_bg"
+            app:containerCornerRadius="@dimen/ime_dp_15"
+            app:horizontalRightIcon="@drawable/ic_ime_del"
+            app:horizontalTipText="@string/lexicon_item_top_clear_tip"
+            app:titleText="@string/lexicon_item_top_title"/>
+        <com.bytedance.common_biz.ui.widget.ImeListItemView
+            android:id="@+id/contacts_item_del"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ime_dp_6"
+            app:accessoryType="horizontal_text"
+            app:auto_height="true"
+            app:containerBackgroundColor="@color/ime_color_setting_item_bg"
+            app:containerCornerRadius="@dimen/ime_dp_15"
+            app:horizontalRightIcon="@drawable/ic_ime_del"
+            app:horizontalTipText="@string/lexicon_item_top_clear_tip"
+            app:titleText="@string/contacts_item_top_title"/>
+    </LinearLayout>
+</LinearLayout>

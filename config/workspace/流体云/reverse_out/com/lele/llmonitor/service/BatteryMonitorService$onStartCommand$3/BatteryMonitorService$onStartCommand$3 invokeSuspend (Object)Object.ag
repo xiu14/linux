@@ -1,0 +1,1658 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v85
+# - v86:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ D:invokeSuspend-BB@0x26 0:invokeSuspend-BB@0x4aa 1:invokeSuspend-BB@0x494 2:invokeSuspend-BB@0x372 3:invokeSuspend-BB@0x234 4:invokeSuspend-BB@0xe4 5:invokeSuspend-BB@0x62 6:invokeSuspend-BB@0x32 ]
+	0       (00000000) move-object/from16   v7, v85
+	1       (00000004) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	2       (00000008) move-object          v1, v0
+	3       (0000000a) check-cast           v1, Ld80;
+	4       (0000000e) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	5       (00000012) const-string         v8, "db"
+	6       (00000016) const-string         v12, "power"
+	7       (0000001a) const/4              v3, 0
+	8       (0000001c) sget-object          v4, Le80;->d Le80;
+	9       (00000020) packed-switch        v0, +000088ch
+
+invokeSuspend-BB@0x26 : 
+	10      (00000026) const-string         v0, "call to 'resume' before 'invoke' with coroutine"
+	11      (0000002a) invoke-static        v0, Lh;->m(Ljava/lang/String;)V
+	12      (00000030) return-object        v3
+
+invokeSuspend-BB@0x32 : [ invokeSuspend-BB@0x5c ]
+	13      (00000032) iget-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	14      (00000036) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	15      (0000003a) check-cast           v0, Landroid/os/PowerManager;
+	16      (0000003e) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	17      (00000044) move-object/from16   v0, v86
+	18      (00000048) move-object          v10, v1
+	19      (0000004a) move-object          v1, v4
+	20      (0000004c) move-object/from16   v36, v8
+	21      (00000050) move-object/from16   v38, v12
+	22      (00000054) const-wide/16        v16, 10000
+	23      (00000058) const-wide/16        v18, 0
+
+invokeSuspend-BB@0x5c : [ invokeSuspend-BB@0x10aa ]
+	24      (0000005c) move-wide            v11, v5
+	25      (0000005e) goto/16              +826h
+
+invokeSuspend-BB@0x62 : [ invokeSuspend-BB@0xae ]
+	26      (00000062) iget-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	27      (00000066) const-wide/16        v16, 10000
+	28      (0000006a) iget-wide            v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	29      (0000006e) const-wide/16        v18, 0
+	30      (00000072) iget-wide            v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	31      (00000076) move-object/from16   v20, v12
+	32      (0000007a) iget-wide            v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	33      (0000007e) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	34      (00000082) check-cast           v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	35      (00000086) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	36      (0000008a) check-cast           v0, Landroid/os/PowerManager;
+	37      (0000008e) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	38      (00000092) check-cast           v0, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	39      (00000096) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	40      (0000009a) check-cast           v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	41      (0000009e) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	42      (000000a2) check-cast           v0, Landroid/content/Intent;
+	43      (000000a6) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	44      (000000aa) check-cast           v0, Landroid/os/PowerManager;
+
+invokeSuspend-BB@0xae : [ invokeSuspend-BB@0xef0 ]
+	45      (000000ae) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	46      (000000b4) move-object/from16   v34, v1
+	47      (000000b8) move-object          v1, v4
+	48      (000000ba) move-object/from16   v36, v8
+	49      (000000be) move-object/from16   v38, v20
+	50      (000000c2) const/4              v2, 5
+	51      (000000c4) goto/16              +716h
+	ae:b3
+	(Ljava/lang/Exception; -> d0 invokeSuspend-BB@0xd0)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xc8 : [ invokeSuspend-BB@0x10fc ]
+	52      (000000c8) move-exception       v0
+	53      (000000ca) const/4              v4, 1
+	54      (000000cc) goto/16              +818h
+
+invokeSuspend-BB@0xd0 : [ invokeSuspend-BB@0xde ]
+	55      (000000d0) move-exception       v0
+	56      (000000d2) move-object          v10, v1
+	57      (000000d4) move-object          v1, v4
+	58      (000000d6) move-object/from16   v36, v8
+	59      (000000da) move-object/from16   v38, v20
+
+invokeSuspend-BB@0xde : [ invokeSuspend-BB@0xff2 ]
+	60      (000000de) const/4              v2, 5
+	61      (000000e0) goto/16              +789h
+
+invokeSuspend-BB@0xe4 : [ invokeSuspend-BB@0x1b4 ]
+	62      (000000e4) move-object/from16   v20, v12
+	63      (000000e8) const-wide/16        v16, 10000
+	64      (000000ec) const-wide/16        v18, 0
+	65      (000000f0) iget-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	66      (000000f4) iget-wide            v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	67      (000000f8) iget-wide            v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	68      (000000fc) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	69      (00000100) iget                 v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	70      (00000104) iget                 v14, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	71      (00000108) iget                 v3, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	72      (0000010c) iget                 v15, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	73      (00000110) iget-boolean         v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	74      (00000114) move/from16          v24, v0
+	75      (00000118) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	76      (0000011c) move/from16          v25, v0
+	77      (00000120) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	78      (00000124) move/from16          v26, v0
+	79      (00000128) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	80      (0000012c) move/from16          v27, v0
+	81      (00000130) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	82      (00000134) move/from16          v28, v0
+	83      (00000138) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	84      (0000013c) move/from16          v29, v0
+	85      (00000140) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	86      (00000144) move/from16          v30, v0
+	87      (00000148) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	88      (0000014c) move/from16          v31, v0
+	89      (00000150) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	90      (00000154) move/from16          v32, v0
+	91      (00000158) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	92      (0000015c) move/from16          v34, v2
+	93      (00000160) move/from16          v33, v3
+	94      (00000164) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	95      (00000168) move-wide/from16     v35, v2
+	96      (0000016c) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	97      (00000170) move-wide/from16     v37, v2
+	98      (00000174) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	99      (00000178) move-wide/from16     v39, v2
+	100     (0000017c) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	101     (00000180) move/from16          v41, v0
+	102     (00000184) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	103     (00000188) check-cast           v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	104     (0000018c) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	105     (00000190) check-cast           v0, Landroid/os/PowerManager;
+	106     (00000194) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	107     (00000198) check-cast           v0, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	108     (0000019c) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	109     (000001a0) check-cast           v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	110     (000001a4) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	111     (000001a8) check-cast           v0, Landroid/content/Intent;
+	112     (000001ac) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	113     (000001b0) check-cast           v0, Landroid/os/PowerManager;
+
+invokeSuspend-BB@0x1b4 : [ invokeSuspend-BB@0xdd8 ]
+	114     (000001b4) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	115     (000001ba) move-wide/from16     v75, v5
+	116     (000001be) move-wide/from16     v77, v9
+	117     (000001c2) move-wide/from16     v79, v11
+	118     (000001c6) move/from16          v23, v25
+	119     (000001ca) move/from16          v25, v28
+	120     (000001ce) move/from16          v22, v33
+	121     (000001d2) move-wide/from16     v10, v39
+	122     (000001d6) move/from16          v0, v41
+	123     (000001da) move-object          v12, v1
+	124     (000001dc) move-wide            v5, v2
+	125     (000001de) move                 v1, v15
+	126     (000001e0) move/from16          v28, v27
+	127     (000001e4) move/from16          v27, v29
+	128     (000001e8) move/from16          v3, v31
+	129     (000001ec) move/from16          v2, v32
+	130     (000001f0) move/from16          v29, v13
+	131     (000001f4) move/from16          v13, v34
+	132     (000001f8) move-wide/from16     v81, v35
+	133     (000001fc) move-object/from16   v35, v4
+	134     (00000200) move-object/from16   v36, v8
+	135     (00000204) move/from16          v4, v30
+	136     (00000208) move-wide/from16     v8, v37
+	137     (0000020c) move/from16          v30, v14
+	138     (00000210) move-object/from16   v38, v20
+	139     (00000214) move-wide/from16     v14, v81
+	140     (00000218) goto/16              +5e0h
+	1b4:1b9
+	(Ljava/lang/Exception; -> 21c invokeSuspend-BB@0x21c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x21c : [ invokeSuspend-BB@0xde ]
+	141     (0000021c) move-exception       v0
+	142     (0000021e) move-object          v10, v1
+	143     (00000220) move-wide            v11, v2
+	144     (00000222) move-object          v1, v4
+	145     (00000224) move-object/from16   v36, v8
+	146     (00000228) move-object/from16   v38, v20
+	147     (0000022c) move-wide/from16     v13, v39
+	148     (00000230) goto/16              -0a9h
+
+invokeSuspend-BB@0x234 : [ invokeSuspend-BB@0x304 ]
+	149     (00000234) move-object/from16   v20, v12
+	150     (00000238) const-wide/16        v16, 10000
+	151     (0000023c) const-wide/16        v18, 0
+	152     (00000240) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	153     (00000244) iget-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	154     (00000248) iget-wide            v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	155     (0000024c) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	156     (00000250) iget                 v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	157     (00000254) iget                 v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	158     (00000258) iget                 v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	159     (0000025c) iget                 v14, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	160     (00000260) iget-boolean         v15, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	161     (00000264) move/from16          v24, v0
+	162     (00000268) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	163     (0000026c) move/from16          v25, v0
+	164     (00000270) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	165     (00000274) move/from16          v26, v0
+	166     (00000278) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	167     (0000027c) move/from16          v27, v0
+	168     (00000280) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	169     (00000284) move/from16          v28, v0
+	170     (00000288) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	171     (0000028c) move/from16          v29, v0
+	172     (00000290) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	173     (00000294) move/from16          v30, v0
+	174     (00000298) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	175     (0000029c) move/from16          v31, v0
+	176     (000002a0) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	177     (000002a4) move/from16          v32, v0
+	178     (000002a8) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	179     (000002ac) move-wide/from16     v33, v2
+	180     (000002b0) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	181     (000002b4) move-wide/from16     v35, v2
+	182     (000002b8) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	183     (000002bc) move-wide/from16     v37, v2
+	184     (000002c0) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	185     (000002c4) move-wide/from16     v39, v2
+	186     (000002c8) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	187     (000002cc) move/from16          v41, v0
+	188     (000002d0) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	189     (000002d4) check-cast           v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	190     (000002d8) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	191     (000002dc) check-cast           v0, Landroid/os/PowerManager;
+	192     (000002e0) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	193     (000002e4) check-cast           v0, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	194     (000002e8) move-object/from16   v42, v0
+	195     (000002ec) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	196     (000002f0) check-cast           v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	197     (000002f4) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	198     (000002f8) check-cast           v0, Landroid/content/Intent;
+	199     (000002fc) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	200     (00000300) check-cast           v0, Landroid/os/PowerManager;
+
+invokeSuspend-BB@0x304 : [ invokeSuspend-BB@0xc68 ]
+	201     (00000304) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	202     (0000030a) move-wide/from16     v69, v5
+	203     (0000030e) move-wide/from16     v71, v9
+	204     (00000312) move/from16          v73, v11
+	205     (00000316) move/from16          v74, v12
+	206     (0000031a) move/from16          v23, v24
+	207     (0000031e) move/from16          v22, v25
+	208     (00000322) move/from16          v25, v26
+	209     (00000326) move/from16          v11, v27
+	210     (0000032a) move/from16          v27, v29
+	211     (0000032e) move-wide/from16     v67, v33
+	212     (00000332) move-wide/from16     v5, v39
+	213     (00000336) move-object/from16   v24, v42
+	214     (0000033a) move-object          v10, v1
+	215     (0000033c) move/from16          v29, v13
+	216     (00000340) move/from16          v26, v15
+	217     (00000344) move-wide/from16     v12, v35
+	218     (00000348) move/from16          v1, v41
+	219     (0000034c) move-object/from16   v35, v4
+	220     (00000350) move-object/from16   v36, v8
+	221     (00000354) move/from16          v4, v30
+	222     (00000358) move-wide            v8, v2
+	223     (0000035a) move/from16          v30, v14
+	224     (0000035e) move/from16          v3, v31
+	225     (00000362) move/from16          v2, v32
+	226     (00000366) move-wide/from16     v14, v37
+	227     (0000036a) move-object/from16   v38, v20
+	228     (0000036e) goto/16              +47dh
+	304:309
+	(Ljava/lang/Exception; -> 21c invokeSuspend-BB@0x21c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x372 : [ invokeSuspend-BB@0x442 ]
+	229     (00000372) move-object/from16   v20, v12
+	230     (00000376) const-wide/16        v16, 10000
+	231     (0000037a) const-wide/16        v18, 0
+	232     (0000037e) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	233     (00000382) iget-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	234     (00000386) iget-wide            v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	235     (0000038a) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	236     (0000038e) iget                 v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	237     (00000392) iget                 v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	238     (00000396) iget                 v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	239     (0000039a) iget                 v14, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	240     (0000039e) iget-boolean         v15, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	241     (000003a2) move/from16          v24, v0
+	242     (000003a6) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	243     (000003aa) move/from16          v25, v0
+	244     (000003ae) iget-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	245     (000003b2) move/from16          v26, v0
+	246     (000003b6) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	247     (000003ba) move/from16          v27, v0
+	248     (000003be) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	249     (000003c2) move/from16          v28, v0
+	250     (000003c6) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	251     (000003ca) move/from16          v29, v0
+	252     (000003ce) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	253     (000003d2) move/from16          v30, v0
+	254     (000003d6) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	255     (000003da) move/from16          v31, v0
+	256     (000003de) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	257     (000003e2) move/from16          v32, v0
+	258     (000003e6) iget                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	259     (000003ea) move-wide/from16     v33, v2
+	260     (000003ee) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	261     (000003f2) move-wide/from16     v35, v2
+	262     (000003f6) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	263     (000003fa) move-wide/from16     v37, v2
+	264     (000003fe) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	265     (00000402) move-wide/from16     v39, v2
+	266     (00000406) iget-wide            v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	267     (0000040a) move/from16          v41, v0
+	268     (0000040e) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	269     (00000412) check-cast           v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	270     (00000416) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	271     (0000041a) check-cast           v0, Landroid/os/PowerManager;
+	272     (0000041e) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	273     (00000422) check-cast           v0, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	274     (00000426) move-object/from16   v42, v0
+	275     (0000042a) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	276     (0000042e) check-cast           v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	277     (00000432) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	278     (00000436) check-cast           v0, Landroid/content/Intent;
+	279     (0000043a) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	280     (0000043e) check-cast           v0, Landroid/os/PowerManager;
+
+invokeSuspend-BB@0x442 : [ invokeSuspend-BB@0xa24 ]
+	281     (00000442) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	282     (00000448) move-wide/from16     v45, v9
+	283     (0000044c) move/from16          v21, v14
+	284     (00000450) move/from16          v22, v15
+	285     (00000454) move/from16          v23, v28
+	286     (00000458) move/from16          v15, v32
+	287     (0000045c) move-wide/from16     v47, v33
+	288     (00000460) move-wide/from16     v33, v37
+	289     (00000464) move/from16          v0, v41
+	290     (00000468) const/4              v9, 0
+	291     (0000046a) move-object          v10, v1
+	292     (0000046c) move-object/from16   v38, v20
+	293     (00000470) move/from16          v41, v26
+	294     (00000474) move-object/from16   v1, v42
+	295     (00000478) move/from16          v42, v27
+	296     (0000047c) move-wide/from16     v26, v35
+	297     (00000480) move-object/from16   v36, v8
+	298     (00000484) move-object          v8, v4
+	299     (00000486) move                 v4, v13
+	300     (00000488) move-wide/from16     v13, v39
+	301     (0000048c) move/from16          v39, v25
+	302     (00000490) goto/16              +2cah
+	442:447
+	(Ljava/lang/Exception; -> 21c invokeSuspend-BB@0x21c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x494 : [ invokeSuspend-BB@0x4dc ]
+	303     (00000494) move-object/from16   v20, v12
+	304     (00000498) const-wide/16        v16, 10000
+	305     (0000049c) const-wide/16        v18, 0
+	306     (000004a0) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	307     (000004a6) const/4              v2, 1
+	308     (000004a8) goto                 +1ah
+
+invokeSuspend-BB@0x4aa : [ invokeSuspend-BB@0x4d6 invokeSuspend-BB@0x4dc ]
+	309     (000004aa) move-object/from16   v20, v12
+	310     (000004ae) const-wide/16        v16, 10000
+	311     (000004b2) const-wide/16        v18, 0
+	312     (000004b6) invoke-static/range  v86, Lib1;->Q(Ljava/lang/Object;)V
+	313     (000004bc) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	314     (000004c0) iput-object          v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	315     (000004c4) const/4              v2, 1
+	316     (000004c6) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	317     (000004ca) invoke-static        v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$ensureDependenciesInitialized(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)Ljava/lang/Object;
+	318     (000004d0) move-result-object   v0
+	319     (000004d2) if-ne                v0, v4, +005h
+
+invokeSuspend-BB@0x4d6 : [ invokeSuspend-BB@0x10a2 ]
+	320     (000004d6) move-object          v1, v4
+	321     (000004d8) goto/16              +5e5h
+
+invokeSuspend-BB@0x4dc : [ invokeSuspend-BB@0x51a ]
+	322     (000004dc) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	323     (000004e0) move-object/from16   v9, v20
+	324     (000004e4) invoke-virtual       v0, v9, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	325     (000004ea) move-result-object   v0
+	326     (000004ec) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	327     (000004f2) check-cast           v0, Landroid/os/PowerManager;
+	328     (000004f6) iget-object          v3, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	329     (000004fa) const-string         v5, "LLMonitor::BatteryUpdate"
+	330     (000004fe) invoke-virtual       v0, v2, v5, Landroid/os/PowerManager;->newWakeLock(I Ljava/lang/String;)Landroid/os/PowerManager$WakeLock;
+	331     (00000504) move-result-object   v0
+	332     (00000506) const/4              v5, 0
+	333     (00000508) invoke-virtual       v0, v5, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
+	334     (0000050e) invoke-static        v3, v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService; Landroid/os/PowerManager$WakeLock;)V
+	335     (00000514) move-object          v10, v1
+	336     (00000516) move-wide/from16     v11, v18
+
+invokeSuspend-BB@0x51a : [ invokeSuspend-BB@0x526 invokeSuspend-BB@0x1130 ]
+	337     (0000051a) invoke-static        v10, Lr7;->I(Ld80;)Z
+	338     (00000520) move-result          v0
+	339     (00000522) if-eqz               v0, +607h
+
+invokeSuspend-BB@0x526 : [ invokeSuspend-BB@0x52e ]
+	340     (00000526) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	341     (0000052c) move-result-wide     v13
+
+invokeSuspend-BB@0x52e : [ invokeSuspend-BB@0x53e invokeSuspend-BB@0x562 ]
+	342     (0000052e) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	343     (00000532) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	344     (00000538) move-result-object   v0
+	345     (0000053a) if-eqz               v0, +014h
+	52e:539
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x53e : [ invokeSuspend-BB@0x542 ]
+	346     (0000053e) const-wide/16        v5, 5000
+
+invokeSuspend-BB@0x542 : [ invokeSuspend-BB@0x562 ]
+	347     (00000542) invoke-virtual       v0, v5, v6, Landroid/os/PowerManager$WakeLock;->acquire(J)V
+	348     (00000548) goto                 +dh
+	542:547
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> 54a invokeSuspend-BB@0x54a)
+
+invokeSuspend-BB@0x54a : [ invokeSuspend-BB@0x10fc ]
+	349     (0000054a) move-exception       v0
+	350     (0000054c) move                 v4, v2
+	351     (0000054e) goto/16              +5d7h
+
+invokeSuspend-BB@0x552 : [ invokeSuspend-BB@0xde ]
+	352     (00000552) move-exception       v0
+	353     (00000554) move-object          v1, v4
+	354     (00000556) move-object/from16   v36, v8
+	355     (0000055a) move-object/from16   v38, v9
+	356     (0000055e) goto/16              -240h
+
+invokeSuspend-BB@0x562 : [ invokeSuspend-BB@0x58c invokeSuspend-BB@0x59c ]
+	357     (00000562) invoke-static        Ljava/lang/System;->currentTimeMillis()J
+	358     (00000568) move-result-wide     v26
+	359     (0000056a) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	360     (0000056e) new-instance         v1, Landroid/content/IntentFilter;
+	361     (00000572) const-string         v3, "android.intent.action.BATTERY_CHANGED"
+	362     (00000576) invoke-direct        v1, v3, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+	363     (0000057c) const/4              v3, 0
+	364     (0000057e) invoke-virtual       v0, v3, v1, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	365     (00000584) move-result-object   v0
+	366     (00000586) const/4              v1, -1
+	367     (00000588) if-eqz               v0, +00ah
+	562:585
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x58c : [ invokeSuspend-BB@0x59e ]
+	368     (0000058c) const-string         v3, "level"
+	369     (00000590) invoke-virtual       v0, v3, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	370     (00000596) move-result          v3
+	371     (00000598) move                 v5, v3
+	372     (0000059a) goto                 +2h
+	58c:5af
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> 54a invokeSuspend-BB@0x54a)
+
+invokeSuspend-BB@0x59c : [ invokeSuspend-BB@0x59e ]
+	373     (0000059c) const/4              v5, 0
+	58c:5af
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> 54a invokeSuspend-BB@0x54a)
+
+invokeSuspend-BB@0x59e : [ invokeSuspend-BB@0x5a2 invokeSuspend-BB@0x5b4 ]
+	374     (0000059e) if-eqz               v0, +00bh
+	58c:5af
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> 54a invokeSuspend-BB@0x54a)
+
+invokeSuspend-BB@0x5a2 : [ invokeSuspend-BB@0x5b6 ]
+	375     (000005a2) const-string         v3, "temperature"
+	376     (000005a6) const/4              v6, 0
+	377     (000005a8) invoke-virtual       v0, v3, v6, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	378     (000005ae) move-result          v3
+	379     (000005b0) move                 v15, v3
+	380     (000005b2) goto                 +2h
+
+invokeSuspend-BB@0x5b4 : [ invokeSuspend-BB@0x5b6 ]
+	381     (000005b4) const/4              v15, 0
+
+invokeSuspend-BB@0x5b6 : [ invokeSuspend-BB@0x5e0 invokeSuspend-BB@0x5ec ]
+	382     (000005b6) sget-object          v3, Lcom/lele/llmonitor/data/BatteryEngine;->INSTANCE Lcom/lele/llmonitor/data/BatteryEngine;
+	383     (000005ba) invoke-virtual       v3, v15, Lcom/lele/llmonitor/data/BatteryEngine;->parseBatteryTemperature(I)Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	384     (000005c0) move-result-object   v6
+	385     (000005c2) invoke-virtual       v6, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->getCelsius()F
+	386     (000005c8) move-result          v32
+	387     (000005ca) iget-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	388     (000005ce) invoke-virtual       v6, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->getFractionDigits()I
+	389     (000005d4) move-result          v6
+	390     (000005d6) invoke-static        v2, v6, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setLastBatteryTempFractionDigits$p(Lcom/lele/llmonitor/service/BatteryMonitorService; I)V
+	391     (000005dc) if-eqz               v0, +008h
+	5b6:5fd
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x5e0 : [ invokeSuspend-BB@0x5ec ]
+	392     (000005e0) const-string         v2, "status"
+	393     (000005e4) invoke-virtual       v0, v2, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	394     (000005ea) move-result          v1
+	5b6:5fd
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x5ec : [ invokeSuspend-BB@0x5f0 invokeSuspend-BB@0x600 ]
+	395     (000005ec) if-eqz               v0, +00ah
+	5b6:5fd
+	(Ljava/lang/Exception; -> 552 invokeSuspend-BB@0x552)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x5f0 : [ invokeSuspend-BB@0x602 ]
+	396     (000005f0) const-string         v2, "plugged"
+	397     (000005f4) const/4              v6, 0
+	398     (000005f6) invoke-virtual       v0, v2, v6, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	399     (000005fc) move-result          v0
+	400     (000005fe) goto                 +2h
+
+invokeSuspend-BB@0x600 : [ invokeSuspend-BB@0x602 ]
+	401     (00000600) const/4              v0, 0
+
+invokeSuspend-BB@0x602 : [ invokeSuspend-BB@0x608 invokeSuspend-BB@0x614 ]
+	402     (00000602) const/4              v2, 2
+	403     (00000604) if-eq                v1, v2, +008h
+
+invokeSuspend-BB@0x608 : [ invokeSuspend-BB@0x60e invokeSuspend-BB@0x610 ]
+	404     (00000608) const/4              v6, 5
+	405     (0000060a) if-ne                v1, v6, +003h
+
+invokeSuspend-BB@0x60e : [ invokeSuspend-BB@0x614 ]
+	406     (0000060e) goto                 +3h
+
+invokeSuspend-BB@0x610 : [ invokeSuspend-BB@0x616 ]
+	407     (00000610) const/4              v6, 0
+	408     (00000612) goto                 +2h
+
+invokeSuspend-BB@0x614 : [ invokeSuspend-BB@0x616 ]
+	409     (00000614) const/4              v6, 1
+
+invokeSuspend-BB@0x616 : [ invokeSuspend-BB@0x61a invokeSuspend-BB@0x61e ]
+	410     (00000616) if-eqz               v0, +004h
+
+invokeSuspend-BB@0x61a : [ invokeSuspend-BB@0x620 ]
+	411     (0000061a) const/4              v2, 1
+	412     (0000061c) goto                 +2h
+
+invokeSuspend-BB@0x61e : [ invokeSuspend-BB@0x620 ]
+	413     (0000061e) const/4              v2, 0
+
+invokeSuspend-BB@0x620 : [ invokeSuspend-BB@0x624 invokeSuspend-BB@0x66a ]
+	414     (00000620) if-nez               v2, +025h
+
+invokeSuspend-BB@0x624 : [ invokeSuspend-BB@0x628 ]
+	415     (00000624) move-object/from16   v35, v4
+
+invokeSuspend-BB@0x628 : [ invokeSuspend-BB@0x638 invokeSuspend-BB@0x662 ]
+	416     (00000628) iget-object          v4, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	417     (0000062c) invoke-static        v4, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$isLiveSuppressedForCurrentSession$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Z
+	418     (00000632) move-result          v4
+	419     (00000634) if-eqz               v4, +017h
+	628:63b
+	(Ljava/lang/Exception; -> 658 invokeSuspend-BB@0x658)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x638 : [ invokeSuspend-BB@0x642 ]
+	420     (00000638) iget-object          v4, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	421     (0000063c) move-object/from16   v36, v8
+	422     (00000640) const/4              v8, 0
+
+invokeSuspend-BB@0x642 : [ invokeSuspend-BB@0x670 ]
+	423     (00000642) invoke-static        v4, v8, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setLiveSuppressedForCurrentSession$p(Lcom/lele/llmonitor/service/BatteryMonitorService; Z)V
+	424     (00000648) goto                 +14h
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x64a : [ invokeSuspend-BB@0x64c ]
+	425     (0000064a) move-exception       v0
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x64c : [ invokeSuspend-BB@0x650 ]
+	426     (0000064c) move-object/from16   v38, v9
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x650 : [ invokeSuspend-BB@0xde ]
+	427     (00000650) move-object/from16   v1, v35
+	428     (00000654) goto/16              -2bbh
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x658 : [ invokeSuspend-BB@0x64c ]
+	429     (00000658) move-exception       v0
+	430     (0000065a) move-object/from16   v36, v8
+	431     (0000065e) const/4              v8, 0
+	432     (00000660) goto                 -ah
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x662 : [ invokeSuspend-BB@0x670 ]
+	433     (00000662) move-object/from16   v36, v8
+	434     (00000666) const/4              v8, 0
+	435     (00000668) goto                 +4h
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x66a : [ invokeSuspend-BB@0x662 ]
+	436     (0000066a) move-object/from16   v35, v4
+	437     (0000066e) goto                 -6h
+	642:6f5
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x670 : [ invokeSuspend-BB@0x702 invokeSuspend-BB@0x744 ]
+	438     (00000670) sget-object          v4, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	439     (00000674) invoke-virtual       v4, Lcom/lele/llmonitor/data/SettingsManager;->isInvertCurrent()Ll52;
+	440     (0000067a) move-result-object   v22
+	441     (0000067c) invoke-interface/range v22, Lcg3;->getValue()Ljava/lang/Object;
+	442     (00000682) move-result-object   v22
+	443     (00000684) check-cast           v22, Ljava/lang/Boolean;
+	444     (00000688) invoke-virtual/range v22, Ljava/lang/Boolean;->booleanValue()Z
+	445     (0000068e) move-result          v8
+	446     (00000690) invoke-virtual       v4, Lcom/lele/llmonitor/data/SettingsManager;->isDoubleCell()Ll52;
+	447     (00000696) move-result-object   v22
+	448     (00000698) invoke-interface/range v22, Lcg3;->getValue()Ljava/lang/Object;
+	449     (0000069e) move-result-object   v22
+	450     (000006a0) check-cast           v22, Ljava/lang/Boolean;
+	451     (000006a4) move-object/from16   v38, v4
+	452     (000006a8) invoke-virtual/range v22, Ljava/lang/Boolean;->booleanValue()Z
+	453     (000006ae) move-result          v4
+	454     (000006b0) invoke-virtual/range v38, Lcom/lele/llmonitor/data/SettingsManager;->isVirtualVoltageEnabled()Ll52;
+	455     (000006b6) move-result-object   v22
+	456     (000006b8) invoke-interface/range v22, Lcg3;->getValue()Ljava/lang/Object;
+	457     (000006be) move-result-object   v22
+	458     (000006c0) check-cast           v22, Ljava/lang/Boolean;
+	459     (000006c4) move/from16          v39, v4
+	460     (000006c8) invoke-virtual/range v22, Ljava/lang/Boolean;->booleanValue()Z
+	461     (000006ce) move-result          v4
+	462     (000006d0) move/from16          v22, v4
+	463     (000006d4) iget-object          v4, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	464     (000006d8) invoke-virtual       v4, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	465     (000006de) move-result-object   v4
+	466     (000006e0) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	467     (000006e6) invoke-virtual       v3, v4, Lcom/lele/llmonitor/data/BatteryEngine;->getCurrentMa(Landroid/content/Context;)F
+	468     (000006ec) move-result          v4
+	469     (000006ee) invoke-virtual       v3, v4, v5, v1, v0, Lcom/lele/llmonitor/data/BatteryEngine;->sanitizeCurrentReading(F I I I)F
+	470     (000006f4) move-result          v30
+	471     (000006f6) move/from16          v40, v0
+	472     (000006fa) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	473     (000006fe) if-eqz               v22, +023h
+
+invokeSuspend-BB@0x702 : [ invokeSuspend-BB@0x73e ]
+	474     (00000702) invoke-virtual       v0, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	475     (00000708) move-result-object   v0
+	476     (0000070a) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	477     (00000710) invoke-virtual       v3, v0, Lcom/lele/llmonitor/data/BatteryEngine;->getBatteryDesignCapacity(Landroid/content/Context;)I
+	478     (00000716) move-result          v0
+	479     (00000718) move/from16          v28, v5
+	480     (0000071c) iget-object          v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	481     (00000720) invoke-virtual       v5, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	482     (00000726) move-result-object   v5
+	483     (00000728) invoke-virtual       v5, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	484     (0000072e) invoke-virtual       v3, v5, Lcom/lele/llmonitor/data/BatteryEngine;->getBatteryCurrentCapacity(Landroid/content/Context;)I
+	485     (00000734) move-result          v5
+	486     (00000736) invoke-virtual       v3, v5, v0, v6, Lcom/lele/llmonitor/data/BatteryEngine;->getVirtualVoltage(I I Z)F
+	487     (0000073c) move-result          v0
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x73e : [ invokeSuspend-BB@0x760 ]
+	488     (0000073e) move/from16          v29, v0
+	489     (00000742) goto                 +fh
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x744 : [ invokeSuspend-BB@0x73e ]
+	490     (00000744) move/from16          v28, v5
+	491     (00000748) invoke-virtual       v0, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	492     (0000074e) move-result-object   v0
+	493     (00000750) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	494     (00000756) invoke-virtual       v3, v0, Lcom/lele/llmonitor/data/BatteryEngine;->getVoltageV(Landroid/content/Context;)F
+	495     (0000075c) move-result          v0
+	496     (0000075e) goto                 -10h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x760 : [ invokeSuspend-BB@0x7cc invokeSuspend-BB@0x810 ]
+	497     (00000760) const/high16         v0, 1148846080
+	498     (00000764) div-float            v0, v30, v0
+	499     (00000768) mul-float            v31, v0, v29
+	500     (0000076c) new-instance         v23, Lcom/lele/llmonitor/data/local/BatteryEntity;
+	501     (00000770) const/16             v33, 1
+	502     (00000774) const/16             v34, 0
+	503     (00000778) const-wide/16        v24, 0
+	504     (0000077c) invoke-direct/range  v23 ... v34, Lcom/lele/llmonitor/data/local/BatteryEntity;-><init>(J J I F F F F I Lic0;)V
+	505     (00000782) move/from16          v41, v8
+	506     (00000786) move-object/from16   v8, v23
+	507     (0000078a) move/from16          v0, v28
+	508     (0000078e) move/from16          v33, v29
+	509     (00000792) move/from16          v34, v30
+	510     (00000796) move/from16          v5, v32
+	511     (0000079a) move/from16          v32, v31
+	512     (0000079e) move/from16          v31, v4
+	513     (000007a2) move-wide/from16     v3, v26
+	514     (000007a6) move/from16          v42, v2
+	515     (000007aa) iget-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	516     (000007ae) invoke-virtual       v2, v9, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	517     (000007b4) move-result-object   v2
+	518     (000007b6) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	519     (000007bc) check-cast           v2, Landroid/os/PowerManager;
+	520     (000007c0) invoke-virtual       v2, Landroid/os/PowerManager;->isInteractive()Z
+	521     (000007c6) move-result          v2
+	522     (000007c8) if-eqz               v42, +024h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x7cc : [ invokeSuspend-BB@0x7d0 invokeSuspend-BB@0x7f2 ]
+	523     (000007cc) if-eqz               v2, +013h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x7d0 : [ invokeSuspend-BB@0x7ec ]
+	524     (000007d0) invoke-virtual/range v38, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyCharging()Ll52;
+	525     (000007d6) move-result-object   v23
+	526     (000007d8) invoke-interface/range v23, Lcg3;->getValue()Ljava/lang/Object;
+	527     (000007de) move-result-object   v23
+	528     (000007e0) check-cast           v23, Ljava/lang/Number;
+	529     (000007e4) invoke-virtual/range v23, Ljava/lang/Number;->longValue()J
+	530     (000007ea) move-result-wide     v23
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x7ec : [ invokeSuspend-BB@0x850 ]
+	531     (000007ec) move-wide/from16     v26, v23
+	532     (000007f0) goto                 +30h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x7f2 : [ invokeSuspend-BB@0x7ec ]
+	533     (000007f2) invoke-virtual/range v38, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyChargingScreenOff()Ll52;
+	534     (000007f8) move-result-object   v23
+	535     (000007fa) invoke-interface/range v23, Lcg3;->getValue()Ljava/lang/Object;
+	536     (00000800) move-result-object   v23
+	537     (00000802) check-cast           v23, Ljava/lang/Number;
+	538     (00000806) invoke-virtual/range v23, Ljava/lang/Number;->longValue()J
+	539     (0000080c) move-result-wide     v23
+	540     (0000080e) goto                 -11h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x810 : [ invokeSuspend-BB@0x814 invokeSuspend-BB@0x832 ]
+	541     (00000810) if-eqz               v2, +011h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x814 : [ invokeSuspend-BB@0x7ec ]
+	542     (00000814) invoke-virtual/range v38, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyNotCharging()Ll52;
+	543     (0000081a) move-result-object   v23
+	544     (0000081c) invoke-interface/range v23, Lcg3;->getValue()Ljava/lang/Object;
+	545     (00000822) move-result-object   v23
+	546     (00000824) check-cast           v23, Ljava/lang/Number;
+	547     (00000828) invoke-virtual/range v23, Ljava/lang/Number;->longValue()J
+	548     (0000082e) move-result-wide     v23
+	549     (00000830) goto                 -22h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x832 : [ invokeSuspend-BB@0x7ec ]
+	550     (00000832) invoke-virtual/range v38, Lcom/lele/llmonitor/data/SettingsManager;->getRefreshRateNotifyNotChargingScreenOff()Ll52;
+	551     (00000838) move-result-object   v23
+	552     (0000083a) invoke-interface/range v23, Lcg3;->getValue()Ljava/lang/Object;
+	553     (00000840) move-result-object   v23
+	554     (00000842) check-cast           v23, Ljava/lang/Number;
+	555     (00000846) invoke-virtual/range v23, Ljava/lang/Number;->longValue()J
+	556     (0000084c) move-result-wide     v23
+	557     (0000084e) goto                 -31h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x850 : [ invokeSuspend-BB@0x854 invokeSuspend-BB@0x85a ]
+	558     (00000850) if-eqz               v2, +005h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x854 : [ invokeSuspend-BB@0x85e ]
+	559     (00000854) move-wide/from16     v29, v16
+	560     (00000858) goto                 +3h
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x85a : [ invokeSuspend-BB@0x85e ]
+	561     (0000085a) move-wide/from16     v29, v26
+	702:865
+	(Ljava/lang/Exception; -> 64a invokeSuspend-BB@0x64a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x85e : [ invokeSuspend-BB@0x86a ]
+	562     (0000085e) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	563     (00000864) move-result-wide     v24
+	564     (00000866) move-object/from16   v38, v9
+
+invokeSuspend-BB@0x86a : [ invokeSuspend-BB@0x8b2 invokeSuspend-BB@0xaa0 ]
+	565     (0000086a) iget-object          v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	566     (0000086e) invoke-static        v9, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getVisualRefreshScheduler$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/service/VisualRefreshScheduler;
+	567     (00000874) move-result-object   v23
+	568     (00000876) move/from16          v28, v40
+	569     (0000087a) invoke-virtual/range v23 ... v30, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->evaluate(J J I J)Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;
+	570     (00000880) move-result-object   v9
+	571     (00000882) move-object/from16   v23, v9
+	572     (00000886) move-wide/from16     v47, v24
+	573     (0000088a) move-wide/from16     v45, v26
+	574     (0000088e) move/from16          v9, v28
+	575     (00000892) move-wide/from16     v43, v29
+	576     (00000896) move/from16          v24, v1
+	577     (0000089a) move/from16          v25, v2
+	578     (0000089e) invoke-virtual/range v23, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;->getTargetDelayMs()J
+	579     (000008a4) move-result-wide     v1
+	580     (000008a6) invoke-virtual/range v23, Lcom/lele/llmonitor/service/VisualRefreshScheduler$Decision;->getShouldPublish()Z
+	581     (000008ac) move-result          v23
+	582     (000008ae) if-eqz               v23, +0f9h
+	86a:8ad
+	(Ljava/lang/Exception; -> fec invokeSuspend-BB@0xfec)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x8b2 : [ invokeSuspend-BB@0x8b6 ]
+	583     (000008b2) move/from16          v23, v6
+
+invokeSuspend-BB@0x8b6 : [ invokeSuspend-BB@0x8c4 ]
+	584     (000008b6) iget-object          v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	585     (000008ba) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	586     (000008be) move-object/from16   v26, v6
+	587     (000008c2) const/4              v6, 0
+	8b6:8bd
+	(Ljava/lang/Exception; -> a8c invokeSuspend-BB@0xa8c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x8c4 : [ invokeSuspend-BB@0x8fc ]
+	588     (000008c4) iput-object          v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	589     (000008c8) iput-object          v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	590     (000008cc) iput-object          v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	591     (000008d0) iput-object          v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	592     (000008d4) iput-object          v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	593     (000008d8) iput-object          v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	594     (000008dc) iput-wide            v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	595     (000008e0) iput-wide            v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	596     (000008e4) iput-wide            v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	597     (000008e8) iput-wide            v3, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	598     (000008ec) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	599     (000008f0) iput                 v15, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	600     (000008f4) iput                 v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	601     (000008f8) move/from16          v6, v24
+	8c4:8f7
+	(Ljava/lang/Exception; -> a96 invokeSuspend-BB@0xa96)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x8fc : [ invokeSuspend-BB@0x9dc ]
+	602     (000008fc) iput                 v6, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	603     (00000900) iput                 v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	604     (00000904) move/from16          v28, v0
+	605     (00000908) move/from16          v0, v23
+	606     (0000090c) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	607     (00000910) move/from16          v23, v0
+	608     (00000914) move/from16          v0, v42
+	609     (00000918) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	610     (0000091c) move-object/from16   v24, v8
+	611     (00000920) move/from16          v8, v41
+	612     (00000924) iput-boolean         v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	613     (00000928) move/from16          v42, v0
+	614     (0000092c) move/from16          v0, v39
+	615     (00000930) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	616     (00000934) move/from16          v39, v0
+	617     (00000938) move/from16          v0, v22
+	618     (0000093c) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	619     (00000940) move/from16          v22, v0
+	620     (00000944) move/from16          v0, v31
+	621     (00000948) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	622     (0000094c) move/from16          v31, v0
+	623     (00000950) move/from16          v0, v34
+	624     (00000954) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	625     (00000958) move/from16          v30, v0
+	626     (0000095c) move/from16          v0, v33
+	627     (00000960) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	628     (00000964) move/from16          v29, v0
+	629     (00000968) move/from16          v0, v32
+	630     (0000096c) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	631     (00000970) move/from16          v32, v0
+	632     (00000974) move/from16          v0, v25
+	633     (00000978) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	634     (0000097c) move/from16          v41, v8
+	635     (00000980) move/from16          v40, v9
+	636     (00000984) move-wide/from16     v8, v45
+	637     (00000988) iput-wide            v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	638     (0000098c) move-wide/from16     v45, v8
+	639     (00000990) move-wide/from16     v8, v43
+	640     (00000994) iput-wide            v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	641     (00000998) move/from16          v25, v0
+	642     (0000099c) move-wide/from16     v33, v1
+	643     (000009a0) move-wide/from16     v0, v47
+	644     (000009a4) iput-wide            v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	645     (000009a8) const/4              v2, 2
+	646     (000009aa) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	647     (000009ae) move-wide/from16     v43, v8
+	648     (000009b2) move/from16          v2, v28
+	649     (000009b6) move-object/from16   v8, v35
+	650     (000009ba) const/4              v9, 0
+	651     (000009bc) move-wide/from16     v81, v3
+	652     (000009c0) move                 v4, v5
+	653     (000009c2) move/from16          v3, v40
+	654     (000009c6) move-object/from16   v83, v24
+	655     (000009ca) move/from16          v24, v6
+	656     (000009ce) move-wide            v5, v0
+	657     (000009d0) move-object/from16   v1, v83
+	658     (000009d4) move-object/from16   v0, v26
+	659     (000009d8) move-wide/from16     v26, v81
+	8fc:9ad
+	(Ljava/lang/Exception; -> a8c invokeSuspend-BB@0xa8c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x9dc : [ invokeSuspend-BB@0x9f4 invokeSuspend-BB@0x9fa ]
+	660     (000009dc) invoke-static/range  v0 ... v7, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$publishVisuals(Lcom/lele/llmonitor/service/BatteryMonitorService; Lcom/lele/llmonitor/data/local/BatteryEntity; I I F J Ln60;)Ljava/lang/Object;
+	661     (000009e2) move-result-object   v0
+	662     (000009e4) move/from16          v28, v2
+	663     (000009e8) move/from16          v40, v3
+	664     (000009ec) move-wide/from16     v47, v5
+	665     (000009f0) if-ne                v0, v8, +005h
+	9dc:9e3
+	(Ljava/lang/Exception; -> a84 invokeSuspend-BB@0xa84)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0x9f4 : [ invokeSuspend-BB@0x10a2 ]
+	666     (000009f4) move-object          v1, v8
+	667     (000009f6) goto/16              +356h
+
+invokeSuspend-BB@0x9fa : [ invokeSuspend-BB@0xa24 ]
+	668     (000009fa) move-wide            v2, v11
+	669     (000009fc) move/from16          v0, v28
+	670     (00000a00) move/from16          v12, v29
+	671     (00000a04) move/from16          v21, v31
+	672     (00000a08) move/from16          v11, v32
+	673     (00000a0c) move/from16          v29, v40
+	674     (00000a10) move-wide/from16     v5, v43
+	675     (00000a14) move/from16          v31, v4
+	676     (00000a18) move/from16          v4, v30
+	677     (00000a1c) move/from16          v30, v24
+	678     (00000a20) move/from16          v24, v25
+
+invokeSuspend-BB@0xa24 : [ invokeSuspend-BB@0xa5a ]
+	679     (00000a24) move/from16          v49, v0
+	680     (00000a28) move-object          v0, v1
+	681     (00000a2a) move-wide/from16     v52, v2
+	682     (00000a2e) move/from16          v64, v4
+	683     (00000a32) move-wide/from16     v62, v5
+	684     (00000a36) move-object/from16   v35, v8
+	685     (00000a3a) move/from16          v65, v11
+	686     (00000a3e) move/from16          v61, v12
+	687     (00000a42) move/from16          v56, v15
+	688     (00000a46) move/from16          v15, v21
+	689     (00000a4a) move/from16          v12, v24
+	690     (00000a4e) move/from16          v1, v29
+	691     (00000a52) move/from16          v2, v30
+	692     (00000a56) move/from16          v66, v31
+
+invokeSuspend-BB@0xa5a : [ invokeSuspend-BB@0xaf6 ]
+	693     (00000a5a) move-wide/from16     v54, v13
+	694     (00000a5e) move/from16          v14, v22
+	695     (00000a62) move/from16          v50, v23
+	696     (00000a66) move-wide/from16     v5, v26
+	697     (00000a6a) move-wide/from16     v3, v33
+	698     (00000a6e) move/from16          v13, v39
+	699     (00000a72) move/from16          v51, v41
+	700     (00000a76) move/from16          v11, v42
+	701     (00000a7a) move-wide/from16     v59, v45
+	702     (00000a7e) move-wide/from16     v57, v47
+	703     (00000a82) goto                 +3ah
+
+invokeSuspend-BB@0xa84 : [ invokeSuspend-BB@0xa86 ]
+	704     (00000a84) move-exception       v0
+
+invokeSuspend-BB@0xa86 : [ invokeSuspend-BB@0xde ]
+	705     (00000a86) move-object          v1, v8
+	706     (00000a88) goto/16              -4d5h
+
+invokeSuspend-BB@0xa8c : [ invokeSuspend-BB@0xa86 ]
+	707     (00000a8c) move-exception       v0
+	708     (00000a8e) move-object/from16   v8, v35
+	709     (00000a92) const/4              v9, 0
+	710     (00000a94) goto                 -7h
+
+invokeSuspend-BB@0xa96 : [ invokeSuspend-BB@0xa86 ]
+	711     (00000a96) move-exception       v0
+	712     (00000a98) move-object          v9, v6
+	713     (00000a9a) move-object/from16   v8, v35
+	714     (00000a9e) goto                 -ch
+
+invokeSuspend-BB@0xaa0 : [ invokeSuspend-BB@0xa5a ]
+	715     (00000aa0) move/from16          v28, v0
+	716     (00000aa4) move-wide/from16     v26, v3
+	717     (00000aa8) move                 v4, v5
+	718     (00000aaa) move/from16          v23, v6
+	719     (00000aae) move/from16          v40, v9
+	720     (00000ab2) move/from16          v29, v33
+	721     (00000ab6) move/from16          v30, v34
+	722     (00000aba) const/4              v9, 0
+	723     (00000abc) move-wide/from16     v33, v1
+	724     (00000ac0) move-object          v1, v8
+	725     (00000ac2) move-object          v0, v1
+	726     (00000ac4) move/from16          v66, v4
+	727     (00000ac8) move-wide/from16     v52, v11
+	728     (00000acc) move/from16          v56, v15
+	729     (00000ad0) move/from16          v2, v24
+	730     (00000ad4) move/from16          v12, v25
+	731     (00000ad8) move/from16          v49, v28
+	732     (00000adc) move/from16          v61, v29
+	733     (00000ae0) move/from16          v64, v30
+	734     (00000ae4) move/from16          v15, v31
+	735     (00000ae8) move/from16          v65, v32
+	736     (00000aec) move/from16          v1, v40
+	737     (00000af0) move-wide/from16     v62, v43
+	738     (00000af4) goto                 -4dh
+
+invokeSuspend-BB@0xaf6 : [ invokeSuspend-BB@0xb24 ]
+	739     (00000af6) new-instance         v8, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$2;
+	740     (00000afa) invoke-direct        v8, v0, v9, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$2;-><init>(Lcom/lele/llmonitor/data/local/BatteryEntity; Ln60;)V
+	741     (00000b00) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	742     (00000b04) iput-object          v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	743     (00000b08) iput-object          v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	744     (00000b0c) iput-object          v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	745     (00000b10) iput-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	746     (00000b14) iput-object          v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	747     (00000b18) iput-object          v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	748     (00000b1c) move-object/from16   v22, v10
+	749     (00000b20) move-wide/from16     v9, v52
+	af6:b1b
+	(Ljava/lang/Exception; -> fdc invokeSuspend-BB@0xfdc)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xb24 : [ invokeSuspend-BB@0xb30 ]
+	750     (00000b24) iput-wide            v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	751     (00000b28) move-wide/from16     v23, v9
+	752     (00000b2c) move-wide/from16     v9, v54
+	b24:b27
+	(Ljava/lang/Exception; -> fcc invokeSuspend-BB@0xfcc)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xb30 : [ invokeSuspend-BB@0xbfe invokeSuspend-BB@0xc02 ]
+	753     (00000b30) iput-wide            v9, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	754     (00000b34) iput-wide            v3, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	755     (00000b38) iput-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	756     (00000b3c) move-object/from16   v25, v0
+	757     (00000b40) move/from16          v0, v49
+	758     (00000b44) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	759     (00000b48) move/from16          v26, v0
+	760     (00000b4c) move/from16          v0, v56
+	761     (00000b50) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	762     (00000b54) move/from16          v27, v0
+	763     (00000b58) move/from16          v0, v66
+	764     (00000b5c) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	765     (00000b60) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	766     (00000b64) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	767     (00000b68) move/from16          v28, v0
+	768     (00000b6c) move/from16          v0, v50
+	769     (00000b70) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	770     (00000b74) iput                 v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	771     (00000b78) move/from16          v29, v0
+	772     (00000b7c) move/from16          v0, v51
+	773     (00000b80) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	774     (00000b84) iput-boolean         v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	775     (00000b88) iput-boolean         v14, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	776     (00000b8c) iput                 v15, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	777     (00000b90) move/from16          v30, v0
+	778     (00000b94) move/from16          v0, v64
+	779     (00000b98) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	780     (00000b9c) move/from16          v31, v0
+	781     (00000ba0) move/from16          v0, v61
+	782     (00000ba4) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	783     (00000ba8) move/from16          v32, v0
+	784     (00000bac) move/from16          v0, v65
+	785     (00000bb0) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	786     (00000bb4) iput-boolean         v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	787     (00000bb8) move/from16          v34, v0
+	788     (00000bbc) move/from16          v33, v1
+	789     (00000bc0) move-wide/from16     v0, v59
+	790     (00000bc4) iput-wide            v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	791     (00000bc8) move-wide/from16     v39, v0
+	792     (00000bcc) move-wide/from16     v0, v62
+	793     (00000bd0) iput-wide            v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	794     (00000bd4) move-wide/from16     v41, v0
+	795     (00000bd8) move-wide/from16     v0, v57
+	796     (00000bdc) iput-wide            v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	797     (00000be0) move-wide/from16     v43, v0
+	798     (00000be4) const/4              v0, 3
+	799     (00000be6) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	800     (00000bea) const-wide/16        v0, 300
+	801     (00000bee) invoke-static        v0, v1, v8, v7, Lvc1;->d0(J Lh11; Lp60;)Ljava/lang/Object;
+	802     (00000bf4) move-result-object   v0
+	803     (00000bf6) move-object/from16   v8, v35
+	804     (00000bfa) if-ne                v0, v8, +004h
+	b30:bf5
+	(Ljava/lang/Exception; -> fb8 invokeSuspend-BB@0xfb8)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xbfe : [ invokeSuspend-BB@0x9f4 ]
+	805     (00000bfe) goto/16              -105h
+
+invokeSuspend-BB@0xc02 : [ invokeSuspend-BB@0xc68 ]
+	806     (00000c02) move-object/from16   v35, v8
+	807     (00000c06) move/from16          v1, v26
+	808     (00000c0a) move/from16          v74, v32
+	809     (00000c0e) move/from16          v73, v34
+	810     (00000c12) move-wide/from16     v71, v39
+	811     (00000c16) move-wide/from16     v69, v41
+	812     (00000c1a) move-wide/from16     v67, v43
+	813     (00000c1e) move/from16          v26, v14
+	814     (00000c22) move-wide/from16     v81, v3
+	815     (00000c26) move                 v4, v2
+	816     (00000c28) move/from16          v2, v27
+	817     (00000c2c) move/from16          v3, v28
+	818     (00000c30) move/from16          v28, v29
+	819     (00000c34) move/from16          v29, v31
+	820     (00000c38) move/from16          v27, v33
+	821     (00000c3c) move-wide/from16     v83, v23
+	822     (00000c40) move/from16          v23, v12
+	823     (00000c44) move-object/from16   v24, v25
+	824     (00000c48) move/from16          v25, v30
+	825     (00000c4c) move/from16          v30, v15
+	826     (00000c50) move-wide/from16     v14, v81
+	827     (00000c54) move-object/from16   v81, v22
+	828     (00000c58) move/from16          v22, v13
+	829     (00000c5c) move-wide            v12, v5
+	830     (00000c5e) move-wide            v5, v9
+	831     (00000c60) move-object/from16   v10, v81
+	832     (00000c64) move-wide/from16     v8, v83
+
+invokeSuspend-BB@0xc68 : [ invokeSuspend-BB@0xc78 invokeSuspend-BB@0xf9e ]
+	833     (00000c68) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	834     (00000c6c) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDb$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/data/local/AppDatabase;
+	835     (00000c72) move-result-object   v0
+	836     (00000c74) if-eqz               v0, +195h
+	c68:c83
+	(Ljava/lang/Exception; -> f8c invokeSuspend-BB@0xf8c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xc78 : [ invokeSuspend-BB@0xc8a ]
+	837     (00000c78) invoke-virtual       v0, Lcom/lele/llmonitor/data/local/AppDatabase;->batteryDao()Lcom/lele/llmonitor/data/local/BatteryDao;
+	838     (00000c7e) move-result-object   v0
+	839     (00000c80) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	840     (00000c84) move-object/from16   v31, v10
+	841     (00000c88) const/4              v10, 0
+
+invokeSuspend-BB@0xc8a : [ invokeSuspend-BB@0xd80 invokeSuspend-BB@0xd84 ]
+	842     (00000c8a) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	843     (00000c8e) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	844     (00000c92) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	845     (00000c96) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	846     (00000c9a) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	847     (00000c9e) iput-object          v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	848     (00000ca2) iput-wide            v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	849     (00000ca6) iput-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	850     (00000caa) iput-wide            v14, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	851     (00000cae) iput-wide            v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	852     (00000cb2) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	853     (00000cb6) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	854     (00000cba) iput                 v3, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	855     (00000cbe) iput                 v4, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	856     (00000cc2) move/from16          v10, v27
+	857     (00000cc6) iput                 v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	858     (00000cca) move/from16          v27, v1
+	859     (00000cce) move/from16          v1, v28
+	860     (00000cd2) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	861     (00000cd6) iput                 v11, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	862     (00000cda) move/from16          v28, v1
+	863     (00000cde) move/from16          v1, v25
+	864     (00000ce2) iput-boolean         v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	865     (00000ce6) move/from16          v25, v1
+	866     (00000cea) move/from16          v1, v22
+	867     (00000cee) iput-boolean         v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	868     (00000cf2) move/from16          v22, v1
+	869     (00000cf6) move/from16          v1, v26
+	870     (00000cfa) iput-boolean         v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	871     (00000cfe) move/from16          v26, v1
+	872     (00000d02) move/from16          v1, v30
+	873     (00000d06) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	874     (00000d0a) move/from16          v30, v1
+	875     (00000d0e) move/from16          v1, v29
+	876     (00000d12) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	877     (00000d16) move/from16          v29, v1
+	878     (00000d1a) move/from16          v1, v74
+	879     (00000d1e) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	880     (00000d22) move/from16          v32, v1
+	881     (00000d26) move/from16          v1, v73
+	882     (00000d2a) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	883     (00000d2e) move/from16          v33, v1
+	884     (00000d32) move/from16          v1, v23
+	885     (00000d36) iput-boolean         v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	886     (00000d3a) move/from16          v34, v1
+	887     (00000d3e) move/from16          v23, v2
+	888     (00000d42) move-wide/from16     v1, v71
+	889     (00000d46) iput-wide            v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	890     (00000d4a) move-wide/from16     v39, v1
+	891     (00000d4e) move-wide/from16     v1, v69
+	892     (00000d52) iput-wide            v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	893     (00000d56) move-wide/from16     v41, v1
+	894     (00000d5a) move-wide/from16     v1, v67
+	895     (00000d5e) iput-wide            v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	896     (00000d62) move-wide/from16     v43, v1
+	897     (00000d66) const/4              v1, 4
+	898     (00000d68) iput                 v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	899     (00000d6c) move-object/from16   v1, v24
+	900     (00000d70) invoke-interface     v0, v1, v7, Lcom/lele/llmonitor/data/local/BatteryDao;->insert(Lcom/lele/llmonitor/data/local/BatteryEntity; Ln60;)Ljava/lang/Object;
+	901     (00000d76) move-result-object   v0
+	902     (00000d78) move-object/from16   v1, v35
+	903     (00000d7c) if-ne                v0, v1, +004h
+	c8a:d77
+	(Ljava/lang/Exception; -> f7a invokeSuspend-BB@0xf7a)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xd80 : [ invokeSuspend-BB@0x10a2 ]
+	904     (00000d80) goto/16              +191h
+
+invokeSuspend-BB@0xd84 : [ invokeSuspend-BB@0xdd8 ]
+	905     (00000d84) move-object/from16   v35, v1
+	906     (00000d88) move/from16          v2, v23
+	907     (00000d8c) move/from16          v0, v27
+	908     (00000d90) move/from16          v1, v30
+	909     (00000d94) move/from16          v30, v32
+	910     (00000d98) move/from16          v24, v34
+	911     (00000d9c) move-wide/from16     v79, v39
+	912     (00000da0) move-wide/from16     v77, v41
+	913     (00000da4) move-wide/from16     v75, v43
+	914     (00000da8) move/from16          v27, v10
+	915     (00000dac) move/from16          v23, v22
+	916     (00000db0) move/from16          v22, v29
+	917     (00000db4) move/from16          v29, v33
+	918     (00000db8) move/from16          v81, v28
+	919     (00000dbc) move/from16          v28, v11
+	920     (00000dc0) move-wide            v10, v5
+	921     (00000dc2) move-wide            v5, v8
+	922     (00000dc4) move-wide            v8, v14
+	923     (00000dc6) move-wide            v14, v12
+	924     (00000dc8) move/from16          v13, v26
+	925     (00000dcc) move-object/from16   v12, v31
+	926     (00000dd0) move/from16          v26, v25
+	927     (00000dd4) move/from16          v25, v81
+
+invokeSuspend-BB@0xdd8 : [ invokeSuspend-BB@0xde4 invokeSuspend-BB@0xf38 ]
+	928     (00000dd8) sub-long             v31, v14, v5
+	929     (00000ddc) cmp-long             v31, v31, v16
+	930     (00000de0) if-ltz               v31, +0ach
+
+invokeSuspend-BB@0xde4 : [ invokeSuspend-BB@0xde8 ]
+	931     (00000de4) move/from16          v31, v1
+
+invokeSuspend-BB@0xde8 : [ invokeSuspend-BB@0xdf8 invokeSuspend-BB@0xf1e ]
+	932     (00000de8) iget-object          v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	933     (00000dec) invoke-static        v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDb$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/data/local/AppDatabase;
+	934     (00000df2) move-result-object   v1
+	935     (00000df4) if-eqz               v1, +095h
+	de8:e15
+	(Ljava/lang/Exception; -> f16 invokeSuspend-BB@0xf16)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xdf8 : [ invokeSuspend-BB@0xe1c ]
+	936     (00000df8) invoke-virtual       v1, Lcom/lele/llmonitor/data/local/AppDatabase;->batteryDao()Lcom/lele/llmonitor/data/local/BatteryDao;
+	937     (00000dfe) move-result-object   v1
+	938     (00000e00) move/from16          v32, v3
+	939     (00000e04) move/from16          v33, v4
+	940     (00000e08) const-wide/32        v39, 172800000
+	941     (00000e0e) sub-long             v3, v14, v39
+	942     (00000e12) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	943     (00000e16) move-object/from16   v34, v12
+	944     (00000e1a) const/4              v12, 0
+
+invokeSuspend-BB@0xe1c : [ invokeSuspend-BB@0xed2 ]
+	945     (00000e1c) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	946     (00000e20) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	947     (00000e24) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	948     (00000e28) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	949     (00000e2c) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	950     (00000e30) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	951     (00000e34) iput-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	952     (00000e38) iput-wide            v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	953     (00000e3c) iput-wide            v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	954     (00000e40) iput-wide            v14, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	955     (00000e44) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$0 I
+	956     (00000e48) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$1 I
+	957     (00000e4c) move/from16          v0, v32
+	958     (00000e50) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$0 F
+	959     (00000e54) move/from16          v0, v33
+	960     (00000e58) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$2 I
+	961     (00000e5c) move/from16          v0, v27
+	962     (00000e60) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$3 I
+	963     (00000e64) move/from16          v0, v25
+	964     (00000e68) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$4 I
+	965     (00000e6c) move/from16          v0, v28
+	966     (00000e70) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->I$5 I
+	967     (00000e74) move/from16          v0, v26
+	968     (00000e78) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$0 Z
+	969     (00000e7c) move/from16          v0, v23
+	970     (00000e80) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$1 Z
+	971     (00000e84) iput-boolean         v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$2 Z
+	972     (00000e88) move/from16          v0, v31
+	973     (00000e8c) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$1 F
+	974     (00000e90) move/from16          v0, v22
+	975     (00000e94) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$2 F
+	976     (00000e98) move/from16          v0, v30
+	977     (00000e9c) iput                 v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$3 F
+	978     (00000ea0) move/from16          v13, v29
+	979     (00000ea4) iput                 v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->F$4 F
+	980     (00000ea8) move/from16          v0, v24
+	981     (00000eac) iput-boolean         v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->Z$3 Z
+	982     (00000eb0) move-wide/from16     v12, v79
+	983     (00000eb4) iput-wide            v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	984     (00000eb8) move-wide/from16     v12, v77
+	985     (00000ebc) iput-wide            v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$5 J
+	986     (00000ec0) move-wide/from16     v12, v75
+	987     (00000ec4) iput-wide            v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$6 J
+	988     (00000ec8) move-wide/from16     v12, v39
+	989     (00000ecc) iput-wide            v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$7 J
+	990     (00000ed0) const/4              v2, 5
+	e1c:ecf
+	(Ljava/lang/Exception; -> f0c invokeSuspend-BB@0xf0c)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xed2 : [ invokeSuspend-BB@0xee6 invokeSuspend-BB@0xeea ]
+	991     (00000ed2) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	992     (00000ed6) invoke-interface     v1, v3, v4, v7, Lcom/lele/llmonitor/data/local/BatteryDao;->clearOldData(J Ln60;)Ljava/lang/Object;
+	993     (00000edc) move-result-object   v0
+	994     (00000ede) move-object/from16   v1, v35
+	995     (00000ee2) if-ne                v0, v1, +004h
+	ed2:edd
+	(Ljava/lang/Exception; -> efa invokeSuspend-BB@0xefa)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xee6 : [ invokeSuspend-BB@0x10a2 ]
+	996     (00000ee6) goto/16              +0deh
+
+invokeSuspend-BB@0xeea : [ invokeSuspend-BB@0xef0 ]
+	997     (00000eea) move-wide            v5, v14
+	998     (00000eec) move-wide            v13, v10
+	999     (00000eee) move-wide            v9, v8
+
+invokeSuspend-BB@0xef0 : [ invokeSuspend-BB@0xf42 ]
+	1000    (00000ef0) move-wide            v8, v9
+	1001    (00000ef2) move-wide            v10, v13
+	1002    (00000ef4) move-object/from16   v12, v34
+	1003    (00000ef8) goto                 +25h
+
+invokeSuspend-BB@0xefa : [ invokeSuspend-BB@0xf00 ]
+	1004    (00000efa) move-exception       v0
+	1005    (00000efc) move-object/from16   v1, v35
+
+invokeSuspend-BB@0xf00 : [ invokeSuspend-BB@0xff2 ]
+	1006    (00000f00) move-wide            v13, v10
+	1007    (00000f02) move-object/from16   v10, v34
+	1008    (00000f06) move-wide            v11, v5
+	1009    (00000f08) goto/16              +075h
+
+invokeSuspend-BB@0xf0c : [ invokeSuspend-BB@0xf0e ]
+	1010    (00000f0c) move-exception       v0
+
+invokeSuspend-BB@0xf0e : [ invokeSuspend-BB@0xf00 ]
+	1011    (00000f0e) move-object/from16   v1, v35
+	1012    (00000f12) const/4              v2, 5
+	1013    (00000f14) goto                 -ah
+
+invokeSuspend-BB@0xf16 : [ invokeSuspend-BB@0xf0e ]
+	1014    (00000f16) move-exception       v0
+	1015    (00000f18) move-object/from16   v34, v12
+	1016    (00000f1c) goto                 -7h
+
+invokeSuspend-BB@0xf1e : [ invokeSuspend-BB@0xf28 ]
+	1017    (00000f1e) move-object/from16   v34, v12
+	1018    (00000f22) move-object/from16   v1, v35
+	1019    (00000f26) const/4              v2, 5
+
+invokeSuspend-BB@0xf28 : 
+	1020    (00000f28) invoke-static/range  v36, Lni1;->U(Ljava/lang/String;)V
+	1021    (00000f2e) const/16             v21, 0
+	1022    (00000f32) throw                v21
+	f28:f33
+	(Ljava/lang/Exception; -> f34 invokeSuspend-BB@0xf34)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xf34 : [ invokeSuspend-BB@0xf00 ]
+	1023    (00000f34) move-exception       v0
+	1024    (00000f36) goto                 -1bh
+
+invokeSuspend-BB@0xf38 : [ invokeSuspend-BB@0xf42 ]
+	1025    (00000f38) move-object/from16   v34, v12
+	1026    (00000f3c) move-object/from16   v1, v35
+	1027    (00000f40) const/4              v2, 5
+
+invokeSuspend-BB@0xf42 : [ invokeSuspend-BB@0xf52 invokeSuspend-BB@0x1036 ]
+	1028    (00000f42) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1029    (00000f46) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	1030    (00000f4c) move-result-object   v0
+	1031    (00000f4e) if-eqz               v0, +074h
+	f42:f75
+	(Ljava/lang/Exception; -> 1036 invokeSuspend-BB@0x1036)
+
+invokeSuspend-BB@0xf52 : [ invokeSuspend-BB@0xf60 invokeSuspend-BB@0x1036 ]
+	1032    (00000f52) invoke-virtual       v0, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+	1033    (00000f58) move-result          v0
+	1034    (00000f5a) const/4              v3, 1
+	1035    (00000f5c) if-ne                v0, v3, +06dh
+	f42:f75
+	(Ljava/lang/Exception; -> 1036 invokeSuspend-BB@0x1036)
+
+invokeSuspend-BB@0xf60 : [ invokeSuspend-BB@0xf70 invokeSuspend-BB@0x1036 ]
+	1036    (00000f60) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1037    (00000f64) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	1038    (00000f6a) move-result-object   v0
+	1039    (00000f6c) if-eqz               v0, +065h
+	f42:f75
+	(Ljava/lang/Exception; -> 1036 invokeSuspend-BB@0x1036)
+
+invokeSuspend-BB@0xf70 : [ invokeSuspend-BB@0x1036 ]
+	1040    (00000f70) invoke-virtual       v0, Landroid/os/PowerManager$WakeLock;->release()V
+	1041    (00000f76) goto/16              +060h
+
+invokeSuspend-BB@0xf7a : [ invokeSuspend-BB@0xf82 ]
+	1042    (00000f7a) move-exception       v0
+	1043    (00000f7c) move-object/from16   v1, v35
+	1044    (00000f80) const/4              v2, 5
+
+invokeSuspend-BB@0xf82 : [ invokeSuspend-BB@0xff2 ]
+	1045    (00000f82) move-wide            v13, v5
+	1046    (00000f84) move-wide            v11, v8
+	1047    (00000f86) move-object/from16   v10, v31
+	1048    (00000f8a) goto                 +34h
+
+invokeSuspend-BB@0xf8c : [ invokeSuspend-BB@0xff2 ]
+	1049    (00000f8c) move-exception       v0
+	1050    (00000f8e) move-object/from16   v31, v10
+	1051    (00000f92) move-object/from16   v1, v35
+	1052    (00000f96) const/4              v2, 5
+	1053    (00000f98) move-wide            v13, v5
+	1054    (00000f9a) move-wide            v11, v8
+	1055    (00000f9c) goto                 +2bh
+
+invokeSuspend-BB@0xf9e : [ invokeSuspend-BB@0xfa8 ]
+	1056    (00000f9e) move-object/from16   v31, v10
+	1057    (00000fa2) move-object/from16   v1, v35
+	1058    (00000fa6) const/4              v2, 5
+
+invokeSuspend-BB@0xfa8 : 
+	1059    (00000fa8) invoke-static/range  v36, Lni1;->U(Ljava/lang/String;)V
+	1060    (00000fae) const/16             v21, 0
+	1061    (00000fb2) throw                v21
+	fa8:fb3
+	(Ljava/lang/Exception; -> fb4 invokeSuspend-BB@0xfb4)
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xfb4 : [ invokeSuspend-BB@0xf82 ]
+	1062    (00000fb4) move-exception       v0
+	1063    (00000fb6) goto                 -1ah
+
+invokeSuspend-BB@0xfb8 : [ invokeSuspend-BB@0xfbe ]
+	1064    (00000fb8) move-exception       v0
+	1065    (00000fba) move-object/from16   v1, v35
+
+invokeSuspend-BB@0xfbe : [ invokeSuspend-BB@0xff2 ]
+	1066    (00000fbe) const/4              v2, 5
+	1067    (00000fc0) move-wide            v13, v9
+	1068    (00000fc2) move-object/from16   v10, v22
+	1069    (00000fc6) move-wide/from16     v11, v23
+	1070    (00000fca) goto                 +14h
+
+invokeSuspend-BB@0xfcc : [ invokeSuspend-BB@0xfd6 ]
+	1071    (00000fcc) move-exception       v0
+	1072    (00000fce) move-wide/from16     v23, v9
+	1073    (00000fd2) move-object/from16   v1, v35
+
+invokeSuspend-BB@0xfd6 : [ invokeSuspend-BB@0xfbe ]
+	1074    (00000fd6) move-wide/from16     v9, v54
+	1075    (00000fda) goto                 -eh
+
+invokeSuspend-BB@0xfdc : [ invokeSuspend-BB@0xfd6 ]
+	1076    (00000fdc) move-exception       v0
+	1077    (00000fde) move-object/from16   v22, v10
+	1078    (00000fe2) move-object/from16   v1, v35
+	1079    (00000fe6) move-wide/from16     v23, v52
+	1080    (00000fea) goto                 -ah
+
+invokeSuspend-BB@0xfec : [ invokeSuspend-BB@0x650 ]
+	1081    (00000fec) move-exception       v0
+	1082    (00000fee) goto/16              -4cfh
+
+invokeSuspend-BB@0xff2 : [ invokeSuspend-BB@0xff8 ]
+	1083    (00000ff2) invoke-virtual       v0, Ljava/lang/Throwable;->printStackTrace()V
+	ff2:ff7
+	(Ljava/lang/Throwable; -> c8 invokeSuspend-BB@0xc8)
+
+invokeSuspend-BB@0xff8 : [ invokeSuspend-BB@0x1008 invokeSuspend-BB@0x102c ]
+	1084    (00000ff8) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1085    (00000ffc) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	1086    (00001002) move-result-object   v0
+	1087    (00001004) if-eqz               v0, +014h
+	ff8:102b
+	(Ljava/lang/Exception; -> 102c invokeSuspend-BB@0x102c)
+
+invokeSuspend-BB@0x1008 : [ invokeSuspend-BB@0x1016 invokeSuspend-BB@0x102c ]
+	1088    (00001008) invoke-virtual       v0, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+	1089    (0000100e) move-result          v0
+	1090    (00001010) const/4              v3, 1
+	1091    (00001012) if-ne                v0, v3, +00dh
+	ff8:102b
+	(Ljava/lang/Exception; -> 102c invokeSuspend-BB@0x102c)
+
+invokeSuspend-BB@0x1016 : [ invokeSuspend-BB@0x1026 invokeSuspend-BB@0x102c ]
+	1092    (00001016) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1093    (0000101a) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	1094    (00001020) move-result-object   v0
+	1095    (00001022) if-eqz               v0, +005h
+	ff8:102b
+	(Ljava/lang/Exception; -> 102c invokeSuspend-BB@0x102c)
+
+invokeSuspend-BB@0x1026 : [ invokeSuspend-BB@0x102c ]
+	1096    (00001026) invoke-virtual       v0, Landroid/os/PowerManager$WakeLock;->release()V
+	ff8:102b
+	(Ljava/lang/Exception; -> 102c invokeSuspend-BB@0x102c)
+
+invokeSuspend-BB@0x102c : [ invokeSuspend-BB@0x1036 ]
+	1097    (0000102c) const-wide/16        v8, 3000
+	1098    (00001030) move-wide            v5, v11
+	1099    (00001032) move-object          v12, v10
+	1100    (00001034) move-wide            v10, v13
+
+invokeSuspend-BB@0x1036 : [ invokeSuspend-BB@0x104c invokeSuspend-BB@0x1050 ]
+	1101    (00001036) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	1102    (0000103c) move-result-wide     v3
+	1103    (0000103e) sub-long/2addr       v3, v10
+	1104    (00001040) sub-long             v13, v8, v3
+	1105    (00001044) cmp-long             v0, v13, v18
+	1106    (00001048) if-gez               v0, +004h
+
+invokeSuspend-BB@0x104c : [ invokeSuspend-BB@0x1050 ]
+	1107    (0000104c) move-wide/from16     v13, v18
+
+invokeSuspend-BB@0x1050 : [ invokeSuspend-BB@0x10a2 invokeSuspend-BB@0x10a4 ]
+	1108    (00001050) new-instance         v0, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;
+	1109    (00001054) iget-object          v15, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1110    (00001058) const/4              v2, 0
+	1111    (0000105a) invoke-direct        v0, v15, v2, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3$triggered$1;-><init>(Lcom/lele/llmonitor/service/BatteryMonitorService; Ln60;)V
+	1112    (00001060) iput-object          v12, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$0 Ljava/lang/Object;
+	1113    (00001064) iput-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$1 Ljava/lang/Object;
+	1114    (00001068) iput-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$2 Ljava/lang/Object;
+	1115    (0000106c) iput-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$3 Ljava/lang/Object;
+	1116    (00001070) iput-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$4 Ljava/lang/Object;
+	1117    (00001074) iput-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$5 Ljava/lang/Object;
+	1118    (00001078) iput-object          v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->L$6 Ljava/lang/Object;
+	1119    (0000107c) iput-wide            v5, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$0 J
+	1120    (00001080) iput-wide            v10, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$1 J
+	1121    (00001084) iput-wide            v8, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$2 J
+	1122    (00001088) iput-wide            v3, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$3 J
+	1123    (0000108c) iput-wide            v13, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->J$4 J
+	1124    (00001090) const/4              v2, 6
+	1125    (00001092) iput                 v2, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->label I
+	1126    (00001096) invoke-static        v13, v14, v0, v7, Lvc1;->d0(J Lh11; Lp60;)Ljava/lang/Object;
+	1127    (0000109c) move-result-object   v0
+	1128    (0000109e) if-ne                v0, v1, +003h
+
+invokeSuspend-BB@0x10a2 : 
+	1129    (000010a2) return-object        v1
+
+invokeSuspend-BB@0x10a4 : [ invokeSuspend-BB@0x5c ]
+	1130    (000010a4) move-object          v10, v12
+	1131    (000010a6) goto/16              -825h
+
+invokeSuspend-BB@0x10aa : [ invokeSuspend-BB@0x10be invokeSuspend-BB@0x10d0 ]
+	1132    (000010aa) check-cast           v0, Ljava/lang/Boolean;
+	1133    (000010ae) sget-object          v2, Ljava/lang/Boolean;->TRUE Ljava/lang/Boolean;
+	1134    (000010b2) invoke-static        v0, v2, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	1135    (000010b8) move-result          v0
+	1136    (000010ba) if-eqz               v0, +00bh
+
+invokeSuspend-BB@0x10be : [ invokeSuspend-BB@0x10d0 ]
+	1137    (000010be) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1138    (000010c2) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getVisualRefreshScheduler$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/service/VisualRefreshScheduler;
+	1139    (000010c8) move-result-object   v0
+	1140    (000010ca) invoke-virtual       v0, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->onExternalTrigger()V
+
+invokeSuspend-BB@0x10d0 : [ invokeSuspend-BB@0x51a ]
+	1141    (000010d0) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1142    (000010d4) move-wide/from16     v2, v18
+	1143    (000010d8) const/4              v4, 1
+	1144    (000010da) const/4              v6, 0
+	1145    (000010dc) invoke-static        v0, v2, v3, v4, v6, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextKeepAliveKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	1146    (000010e2) iget-object          v0, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1147    (000010e6) invoke-static        v0, v2, v3, v4, v6, Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextHealthCheckKick$default(Lcom/lele/llmonitor/service/BatteryMonitorService; J I Ljava/lang/Object;)V
+	1148    (000010ec) move                 v2, v4
+	1149    (000010ee) move-object/from16   v8, v36
+	1150    (000010f2) move-object/from16   v9, v38
+	1151    (000010f6) move-object          v4, v1
+	1152    (000010f8) goto/16              -5efh
+
+invokeSuspend-BB@0x10fc : [ invokeSuspend-BB@0x110c invokeSuspend-BB@0x112e ]
+	1153    (000010fc) iget-object          v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1154    (00001100) invoke-static        v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	1155    (00001106) move-result-object   v1
+	1156    (00001108) if-eqz               v1, +013h
+	10fc:112d
+	(Ljava/lang/Exception; -> 112e invokeSuspend-BB@0x112e)
+
+invokeSuspend-BB@0x110c : [ invokeSuspend-BB@0x1118 invokeSuspend-BB@0x112e ]
+	1157    (0000110c) invoke-virtual       v1, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+	1158    (00001112) move-result          v1
+	1159    (00001114) if-ne                v1, v4, +00dh
+	10fc:112d
+	(Ljava/lang/Exception; -> 112e invokeSuspend-BB@0x112e)
+
+invokeSuspend-BB@0x1118 : [ invokeSuspend-BB@0x1128 invokeSuspend-BB@0x112e ]
+	1160    (00001118) iget-object          v1, v7, Lcom/lele/llmonitor/service/BatteryMonitorService$onStartCommand$3;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	1161    (0000111c) invoke-static        v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getWakeLock$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Landroid/os/PowerManager$WakeLock;
+	1162    (00001122) move-result-object   v1
+	1163    (00001124) if-eqz               v1, +005h
+	10fc:112d
+	(Ljava/lang/Exception; -> 112e invokeSuspend-BB@0x112e)
+
+invokeSuspend-BB@0x1128 : [ invokeSuspend-BB@0x112e ]
+	1164    (00001128) invoke-virtual       v1, Landroid/os/PowerManager$WakeLock;->release()V
+	10fc:112d
+	(Ljava/lang/Exception; -> 112e invokeSuspend-BB@0x112e)
+
+invokeSuspend-BB@0x112e : 
+	1165    (0000112e) throw                v0
+
+invokeSuspend-BB@0x1130 : 
+	1166    (00001130) sget-object          v0, Lbw3;->a Lbw3;
+	1167    (00001134) return-object        v0
+
+invokeSuspend-BB@0x1136 : 
+	1168    (00001136) nop                  
+	1169    (00001138) packed-switch-payload 0 1 2 3 4 5 6
+

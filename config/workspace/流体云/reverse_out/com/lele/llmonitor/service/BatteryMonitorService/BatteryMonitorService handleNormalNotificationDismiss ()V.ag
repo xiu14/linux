@@ -1,0 +1,39 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->handleNormalNotificationDismiss()V [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+handleNormalNotificationDismiss-BB@0x0 : [ handleNormalNotificationDismiss-BB@0x1e handleNormalNotificationDismiss-BB@0x2c ]
+	0       (00000000) new-instance         v0, Landroid/content/IntentFilter;
+	1       (00000004) const-string         v1, "android.intent.action.BATTERY_CHANGED"
+	2       (00000008) invoke-direct        v0, v1, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+	3       (0000000e) const/4              v1, 0
+	4       (00000010) invoke-virtual       v2, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	5       (00000016) move-result-object   v2
+	6       (00000018) const/4              v0, 0
+	7       (0000001a) if-eqz               v2, +009h
+
+handleNormalNotificationDismiss-BB@0x1e : [ handleNormalNotificationDismiss-BB@0x2e ]
+	8       (0000001e) const-string         v1, "plugged"
+	9       (00000022) invoke-virtual       v2, v1, v0, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	10      (00000028) move-result          v2
+	11      (0000002a) goto                 +2h
+
+handleNormalNotificationDismiss-BB@0x2c : [ handleNormalNotificationDismiss-BB@0x2e ]
+	12      (0000002c) move                 v2, v0
+
+handleNormalNotificationDismiss-BB@0x2e : [ handleNormalNotificationDismiss-BB@0x32 handleNormalNotificationDismiss-BB@0x3e ]
+	13      (0000002e) if-eqz               v2, +008h
+
+handleNormalNotificationDismiss-BB@0x32 : 
+	14      (00000032) sget-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	15      (00000036) invoke-virtual       v2, v0, Lcom/lele/llmonitor/data/SettingsManager;->toggleNotificationEnabled(Z)V
+	16      (0000003c) return-void          
+
+handleNormalNotificationDismiss-BB@0x3e : 
+	17      (0000003e) sget-object          v2, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	18      (00000042) invoke-virtual       v2, v0, Lcom/lele/llmonitor/data/SettingsManager;->toggleShowNotificationWhenNotCharging(Z)V
+	19      (00000048) return-void          
+

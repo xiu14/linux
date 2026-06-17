@@ -1,0 +1,18 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->v(Ljava/util/List; Ljava/util/List; Ljava/util/List; Lcom/lele/llmonitor/data/soc/SocSnapshot; Ll52; Lms1;)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:java.util.List
+# - v1:java.util.List
+# - v2:java.util.List
+# - v3:com.lele.llmonitor.data.soc.SocSnapshot
+# - v4:l52
+# - v5:ms1
+#
+# - return:bw3
+
+v-BB@0x0 : 
+	0       (00000000) invoke-static/range  v0 ... v5, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->SocScreen$lambda$7$0$0(Ljava/util/List; Ljava/util/List; Ljava/util/List; Lcom/lele/llmonitor/data/soc/SocSnapshot; Ll52; Lms1;)Lbw3;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

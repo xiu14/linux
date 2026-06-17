@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager$refreshState$1$resolvedHistory$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x8 invokeSuspend-BB@0x24 ]
+	0       (00000000) iget                 v0, v1, Lcom/lele/llmonitor/data/HomeWallpaperManager$refreshState$1$resolvedHistory$1;->label I
+	1       (00000004) if-nez               v0, +010h
+
+invokeSuspend-BB@0x8 : 
+	2       (00000008) invoke-static        v2, Lib1;->Q(Ljava/lang/Object;)V
+	3       (0000000e) sget-object          v2, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperStorage;
+	4       (00000012) iget-object          v0, v1, Lcom/lele/llmonitor/data/HomeWallpaperManager$refreshState$1$resolvedHistory$1;->$context Landroid/content/Context;
+	5       (00000016) iget-object          v1, v1, Lcom/lele/llmonitor/data/HomeWallpaperManager$refreshState$1$resolvedHistory$1;->$currentFile Ljava/io/File;
+	6       (0000001a) invoke-virtual       v2, v0, v1, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles(Landroid/content/Context; Ljava/io/File;)Ljava/util/List;
+	7       (00000020) move-result-object   v1
+	8       (00000022) return-object        v1
+
+invokeSuspend-BB@0x24 : 
+	9       (00000024) const-string         v1, "call to 'resume' before 'invoke' with coroutine"
+	10      (00000028) invoke-static        v1, Lh;->m(Ljava/lang/String;)V
+	11      (0000002e) const/4              v1, 0
+	12      (00000030) return-object        v1
+

@@ -1,0 +1,168 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->createInitialNotification()Landroid/app/Notification; [access_flags=private final]
+#
+# Parameters:
+# local registers: v0...v11
+#
+# - return:android.app.Notification
+
+createInitialNotification-BB@0x0 : [ createInitialNotification-BB@0x1e createInitialNotification-BB@0x2c ]
+	0       (00000000) new-instance         v0, Landroid/content/IntentFilter;
+	1       (00000004) const-string         v1, "android.intent.action.BATTERY_CHANGED"
+	2       (00000008) invoke-direct        v0, v1, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+	3       (0000000e) const/4              v1, 0
+	4       (00000010) invoke-virtual       v11, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	5       (00000016) move-result-object   v0
+	6       (00000018) const/4              v1, 0
+	7       (0000001a) if-eqz               v0, +009h
+
+createInitialNotification-BB@0x1e : [ createInitialNotification-BB@0x2e ]
+	8       (0000001e) const-string         v2, "level"
+	9       (00000022) invoke-virtual       v0, v2, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	10      (00000028) move-result          v2
+	11      (0000002a) goto                 +2h
+
+createInitialNotification-BB@0x2c : [ createInitialNotification-BB@0x2e ]
+	12      (0000002c) move                 v2, v1
+
+createInitialNotification-BB@0x2e : [ createInitialNotification-BB@0x32 createInitialNotification-BB@0x40 ]
+	13      (0000002e) if-eqz               v0, +009h
+
+createInitialNotification-BB@0x32 : [ createInitialNotification-BB@0x42 ]
+	14      (00000032) const-string         v3, "plugged"
+	15      (00000036) invoke-virtual       v0, v3, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	16      (0000003c) move-result          v3
+	17      (0000003e) goto                 +2h
+
+createInitialNotification-BB@0x40 : [ createInitialNotification-BB@0x42 ]
+	18      (00000040) move                 v3, v1
+
+createInitialNotification-BB@0x42 : [ createInitialNotification-BB@0x46 createInitialNotification-BB@0x54 ]
+	19      (00000042) if-eqz               v0, +009h
+
+createInitialNotification-BB@0x46 : [ createInitialNotification-BB@0x56 ]
+	20      (00000046) const-string         v4, "temperature"
+	21      (0000004a) invoke-virtual       v0, v4, v1, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	22      (00000050) move-result          v0
+	23      (00000052) goto                 +2h
+
+createInitialNotification-BB@0x54 : [ createInitialNotification-BB@0x56 ]
+	24      (00000054) move                 v0, v1
+
+createInitialNotification-BB@0x56 : [ createInitialNotification-BB@0xa8 createInitialNotification-BB@0xb6 ]
+	25      (00000056) sget-object          v4, Lcom/lele/llmonitor/data/BatteryEngine;->INSTANCE Lcom/lele/llmonitor/data/BatteryEngine;
+	26      (0000005a) invoke-virtual       v4, v0, Lcom/lele/llmonitor/data/BatteryEngine;->parseBatteryTemperature(I)Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;
+	27      (00000060) move-result-object   v0
+	28      (00000062) invoke-virtual       v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->getCelsius()F
+	29      (00000068) move-result          v5
+	30      (0000006a) invoke-virtual       v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->getFractionDigits()I
+	31      (00000070) move-result          v6
+	32      (00000072) iput                 v6, v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->lastBatteryTempFractionDigits I
+	33      (00000076) invoke-direct        v11, v3, Lcom/lele/llmonitor/service/BatteryMonitorService;->resolveSupplyTextForNotification(I)Ljava/lang/String;
+	34      (0000007c) move-result-object   v6
+	35      (0000007e) sget-object          v7, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	36      (00000082) invoke-virtual       v7, Lcom/lele/llmonitor/data/SettingsManager;->isLiveNotificationEnabled()Ll52;
+	37      (00000088) move-result-object   v7
+	38      (0000008a) invoke-interface     v7, Lcg3;->getValue()Ljava/lang/Object;
+	39      (00000090) move-result-object   v7
+	40      (00000092) check-cast           v7, Ljava/lang/Boolean;
+	41      (00000096) invoke-virtual       v7, Ljava/lang/Boolean;->booleanValue()Z
+	42      (0000009c) move-result          v7
+	43      (0000009e) const/16             v8, 36
+	44      (000000a2) const/4              v9, 1
+	45      (000000a4) if-eqz               v3, +009h
+
+createInitialNotification-BB@0xa8 : [ createInitialNotification-BB@0xac createInitialNotification-BB@0xb6 ]
+	46      (000000a8) if-eqz               v7, +007h
+
+createInitialNotification-BB@0xac : [ createInitialNotification-BB@0xb4 createInitialNotification-BB@0xb6 ]
+	47      (000000ac) sget                 v3, Landroid/os/Build$VERSION;->SDK_INT I
+	48      (000000b0) if-lt                v3, v8, +003h
+
+createInitialNotification-BB@0xb4 : [ createInitialNotification-BB@0xb6 ]
+	49      (000000b4) move                 v1, v9
+
+createInitialNotification-BB@0xb6 : [ createInitialNotification-BB@0xba createInitialNotification-BB@0xc0 ]
+	50      (000000b6) if-eqz               v1, +005h
+
+createInitialNotification-BB@0xba : [ createInitialNotification-BB@0xc4 ]
+	51      (000000ba) const-string         v3, "battery_live_update_v2"
+	52      (000000be) goto                 +3h
+
+createInitialNotification-BB@0xc0 : [ createInitialNotification-BB@0xc4 ]
+	53      (000000c0) const-string         v3, "battery_monitor"
+
+createInitialNotification-BB@0xc4 : [ createInitialNotification-BB@0xda createInitialNotification-BB@0xde ]
+	54      (000000c4) invoke-direct        v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->resolveNotificationSmallIconRes()I
+	55      (000000ca) move-result          v7
+	56      (000000cc) new-instance         v10, Landroid/app/Notification$Builder;
+	57      (000000d0) invoke-direct        v10, v11, v3, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context; Ljava/lang/String;)V
+	58      (000000d6) if-eqz               v1, +004h
+
+createInitialNotification-BB@0xda : [ createInitialNotification-BB@0xde ]
+	59      (000000da) sget                 v7, Lcom/lele/llmonitor/R$drawable;->ic_bolt I
+
+createInitialNotification-BB@0xde : [ createInitialNotification-BB@0x17a createInitialNotification-BB@0x1d6 ]
+	60      (000000de) invoke-virtual       v10, v7, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+	61      (000000e4) move-result-object   v1
+	62      (000000e6) const-string         v3, "--W"
+	63      (000000ea) invoke-virtual       v1, v3, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+	64      (000000f0) move-result-object   v1
+	65      (000000f2) invoke-virtual       v0, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->getFractionDigits()I
+	66      (000000f8) move-result          v0
+	67      (000000fa) invoke-virtual       v4, v5, v0, Lcom/lele/llmonitor/data/BatteryEngine;->formatTemperatureC(F I)Ljava/lang/String;
+	68      (00000100) move-result-object   v0
+	69      (00000102) new-instance         v3, Ljava/lang/StringBuilder;
+	70      (00000106) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	71      (0000010c) invoke-virtual       v3, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	72      (00000112) const-string         v4, "% • "
+	73      (00000116) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	74      (0000011c) invoke-virtual       v3, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	75      (00000122) const-string         v4, " • "
+	76      (00000126) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	77      (0000012c) invoke-virtual       v3, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	78      (00000132) const-string         v0, "℃"
+	79      (00000136) invoke-virtual       v3, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	80      (0000013c) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	81      (00000142) move-result-object   v0
+	82      (00000144) invoke-virtual       v1, v0, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+	83      (0000014a) move-result-object   v0
+	84      (0000014c) invoke-virtual       v0, v9, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
+	85      (00000152) move-result-object   v0
+	86      (00000154) invoke-virtual       v0, v9, Landroid/app/Notification$Builder;->setOnlyAlertOnce(Z)Landroid/app/Notification$Builder;
+	87      (0000015a) move-result-object   v0
+	88      (0000015c) invoke-direct        v11, Lcom/lele/llmonitor/service/BatteryMonitorService;->createPendingIntent()Landroid/app/PendingIntent;
+	89      (00000162) move-result-object   v1
+	90      (00000164) invoke-virtual       v0, v1, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
+	91      (0000016a) move-result-object   v0
+	92      (0000016c) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	93      (00000172) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	94      (00000176) if-lt                v1, v8, +030h
+
+createInitialNotification-BB@0x17a : [ createInitialNotification-BB@0x1d6 ]
+	95      (0000017a) invoke-static        Ltl;->e()Landroid/app/Notification$ProgressStyle;
+	96      (00000180) move-result-object   v1
+	97      (00000182) invoke-static        Ltl;->c()Landroid/app/Notification$ProgressStyle$Segment;
+	98      (00000188) move-result-object   v3
+	99      (0000018a) const                v4, 17170469
+	100     (00000190) invoke-virtual       v11, v4, Landroid/content/Context;->getColor(I)I
+	101     (00000196) move-result          v11
+	102     (00000198) invoke-static        v3, v11, Ltl;->d(Landroid/app/Notification$ProgressStyle$Segment; I)Landroid/app/Notification$ProgressStyle$Segment;
+	103     (0000019e) move-result-object   v11
+	104     (000001a0) invoke-static        v1, v11, Ltl;->g(Landroid/app/Notification$ProgressStyle; Landroid/app/Notification$ProgressStyle$Segment;)Landroid/app/Notification$ProgressStyle;
+	105     (000001a6) move-result-object   v11
+	106     (000001a8) invoke-static        v11, v2, Ltl;->f(Landroid/app/Notification$ProgressStyle; I)Landroid/app/Notification$ProgressStyle;
+	107     (000001ae) move-result-object   v11
+	108     (000001b0) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	109     (000001b6) invoke-virtual       v0, v11, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
+	110     (000001bc) new-instance         v11, Landroid/os/Bundle;
+	111     (000001c0) invoke-direct        v11, Landroid/os/Bundle;-><init>()V
+	112     (000001c6) const-string         v1, "android.requestPromotedOngoing"
+	113     (000001ca) invoke-virtual       v11, v1, v9, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String; Z)V
+	114     (000001d0) invoke-virtual       v0, v11, Landroid/app/Notification$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;
+
+createInitialNotification-BB@0x1d6 : 
+	115     (000001d6) invoke-virtual       v0, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+	116     (000001dc) move-result-object   v11
+	117     (000001de) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	118     (000001e4) return-object        v11
+

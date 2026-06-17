@@ -1,0 +1,22 @@
+# Lcom/lele/llmonitor/data/AppLocaleSupportKt;->applySupportedAppLocale$default(Landroid/content/Context; Lcom/lele/llmonitor/data/AppLanguageOption; I Ljava/lang/Object;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:android.content.Context
+# - v1:com.lele.llmonitor.data.AppLanguageOption
+# - v2:int
+# - v3:java.lang.Object
+#
+# - return:void
+
+applySupportedAppLocale$default-BB@0x0 : [ applySupportedAppLocale$default-BB@0x8 applySupportedAppLocale$default-BB@0xa ]
+	0       (00000000) and-int/lit8         v2, v2, 2
+	1       (00000004) if-eqz               v2, +003h
+
+applySupportedAppLocale$default-BB@0x8 : [ applySupportedAppLocale$default-BB@0xa ]
+	2       (00000008) const/4              v1, 0
+
+applySupportedAppLocale$default-BB@0xa : 
+	3       (0000000a) invoke-static        v0, v1, Lcom/lele/llmonitor/data/AppLocaleSupportKt;->applySupportedAppLocale(Landroid/content/Context; Lcom/lele/llmonitor/data/AppLanguageOption;)V
+	4       (00000010) return-void          
+

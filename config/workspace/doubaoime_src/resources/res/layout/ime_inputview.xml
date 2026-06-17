@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.input.keyboard.InputView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ime_inputview"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/keyboard_top_border"
+        android:background="@color/keyboard_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</com.bytedance.android.input.keyboard.InputView>

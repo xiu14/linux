@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">@color/darkThemeAccent</color>
+    <color name="background">@color/darkThemeBackground</color>
+    <color name="dividers">#1fffffff</color>
+    <color name="m3_accent">@color/m3_darkThemeAccent</color>
+    <color name="m3_background">@color/m3_darkThemeBackground</color>
+    <color name="m3_bottomNavActiveIndicator">@color/m3_darkThemeBottomNavActiveIndicator</color>
+    <color name="m3_onAccent">@color/m3_darkThemeOnAccent</color>
+    <color name="m3_onBackground">@color/m3_darkThemeOnBackground</color>
+    <color name="m3_onPrimary">@color/m3_darkThemeOnPrimary</color>
+    <color name="m3_onSecondaryContainer">@color/m3_darkThemeOnSecondaryContainer</color>
+    <color name="m3_onSurface">@color/m3_darkThemeOnSurface</color>
+    <color name="m3_onSurfaceVariant">@color/m3_darkThemeOnSurfaceVariant</color>
+    <color name="m3_onTertiaryContainer">@color/m3_darkThemeOnTertiaryContainer</color>
+    <color name="m3_primary">@color/m3_darkThemePrimary</color>
+    <color name="m3_primaryDark">@color/m3_darkThemePrimaryDark</color>
+    <color name="m3_secondaryContainer">@color/m3_darkThemeSecondaryContainer</color>
+    <color name="m3_snackbarBackgroundColor">@color/m3_darkThemeSnackbarBackgroundColor</color>
+    <color name="m3_snackbarButtonColor">@color/m3_darkThemeSnackbarButtonColor</color>
+    <color name="m3_snackbarTextColor">@color/m3_darkThemeSnackbarTextColor</color>
+    <color name="m3_surface">@color/m3_darkThemeSurface</color>
+    <color name="m3_tertiaryContainer">@color/m3_darkThemeTertiaryContainer</color>
+    <color name="onAccent">@color/darkThemeOnAccent</color>
+    <color name="onBackground">@color/darkThemeOnBackground</color>
+    <color name="onPrimary">@color/darkThemeOnPrimary</color>
+    <color name="onSurface">@color/darkThemeOnSurface</color>
+    <color name="onSurfaceVariant">@color/darkThemeOnSurfaceVariant</color>
+    <color name="primary">@color/darkThemePrimary</color>
+    <color name="primaryDark">@color/darkThemePrimaryDark</color>
+    <color name="snackbarBackgroundColor">@color/darkThemeSnackbarBackgroundColor</color>
+    <color name="snackbarButtonColor">@color/darkThemeSnackbarButtonColor</color>
+    <color name="snackbarTextColor">@color/darkThemeSnackbarTextColor</color>
+    <color name="surface">@color/darkThemeSurface</color>
+</resources>

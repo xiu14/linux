@@ -1,0 +1,66 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->collectBatteryVoltageCandidates$isChargerLike(Ljava/lang/String;)Z [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+#
+# - return:boolean
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x0 : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x2a collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	0       (00000000) sget-object          v0, Ljava/util/Locale;->ROOT Ljava/util/Locale;
+	1       (00000004) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000a) invoke-virtual       v2, v0, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+	3       (00000010) move-result-object   v2
+	4       (00000012) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	5       (00000018) const-string         v0, "usb"
+	6       (0000001c) const/4              v1, 0
+	7       (0000001e) invoke-static        v2, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	8       (00000024) move-result          v0
+	9       (00000026) if-nez               v0, +034h
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x2a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x3a collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	10      (0000002a) const-string         v0, "wireless"
+	11      (0000002e) invoke-static        v2, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	12      (00000034) move-result          v0
+	13      (00000036) if-nez               v0, +02ch
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x3a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x4a collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	14      (0000003a) const-string         v0, "charger"
+	15      (0000003e) invoke-static        v2, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	16      (00000044) move-result          v0
+	17      (00000046) if-nez               v0, +024h
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x4a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x5a collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	18      (0000004a) const-string         v0, "chrg"
+	19      (0000004e) invoke-static        v2, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	20      (00000054) move-result          v0
+	21      (00000056) if-nez               v0, +01ch
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x5a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x6a collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	22      (0000005a) const-string         v0, "primary"
+	23      (0000005e) invoke-static        v2, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	24      (00000064) move-result          v0
+	25      (00000066) if-nez               v0, +014h
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x6a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x7a collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	26      (0000006a) const-string         v0, "main"
+	27      (0000006e) invoke-virtual       v2, v0, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	28      (00000074) move-result          v0
+	29      (00000076) if-nez               v0, +00ch
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x7a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x8a collectBatteryVoltageCandidates$isChargerLike-BB@0x8c ]
+	30      (0000007a) const-string         v0, "ac"
+	31      (0000007e) invoke-virtual       v2, v0, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	32      (00000084) move-result          v2
+	33      (00000086) if-eqz               v2, +003h
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x8a : [ collectBatteryVoltageCandidates$isChargerLike-BB@0x8e ]
+	34      (0000008a) goto                 +2h
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x8c : 
+	35      (0000008c) return               v1
+
+collectBatteryVoltageCandidates$isChargerLike-BB@0x8e : 
+	36      (0000008e) const/4              v2, 1
+	37      (00000090) return               v2
+

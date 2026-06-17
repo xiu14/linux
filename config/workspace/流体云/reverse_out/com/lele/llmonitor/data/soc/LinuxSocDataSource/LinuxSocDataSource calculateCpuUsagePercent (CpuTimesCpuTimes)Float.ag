@@ -1,0 +1,63 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->calculateCpuUsagePercent(Lcom/lele/llmonitor/data/soc/CpuTimes; Lcom/lele/llmonitor/data/soc/CpuTimes;)Ljava/lang/Float; [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:com.lele.llmonitor.data.soc.CpuTimes
+# - v7:com.lele.llmonitor.data.soc.CpuTimes
+#
+# - return:java.lang.Float
+
+calculateCpuUsagePercent-BB@0x0 : [ calculateCpuUsagePercent-BB@0x6 calculateCpuUsagePercent-BB@0x6c ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) if-eqz               v6, +035h
+
+calculateCpuUsagePercent-BB@0x6 : [ calculateCpuUsagePercent-BB@0xa calculateCpuUsagePercent-BB@0xc ]
+	2       (00000006) if-nez               v7, +003h
+
+calculateCpuUsagePercent-BB@0xa : [ calculateCpuUsagePercent-BB@0x6c ]
+	3       (0000000a) goto                 +31h
+
+calculateCpuUsagePercent-BB@0xc : [ calculateCpuUsagePercent-BB@0x3c calculateCpuUsagePercent-BB@0x3e ]
+	4       (0000000c) invoke-virtual       v7, Lcom/lele/llmonitor/data/soc/CpuTimes;->getTotal()J
+	5       (00000012) move-result-wide     v0
+	6       (00000014) invoke-virtual       v6, Lcom/lele/llmonitor/data/soc/CpuTimes;->getTotal()J
+	7       (0000001a) move-result-wide     v2
+	8       (0000001c) sub-long/2addr       v0, v2
+	9       (0000001e) invoke-virtual       v7, Lcom/lele/llmonitor/data/soc/CpuTimes;->getIdle()J
+	10      (00000024) move-result-wide     v2
+	11      (00000026) invoke-virtual       v6, Lcom/lele/llmonitor/data/soc/CpuTimes;->getIdle()J
+	12      (0000002c) move-result-wide     v6
+	13      (0000002e) sub-long/2addr       v2, v6
+	14      (00000030) const-wide/16        v6, 0
+	15      (00000034) cmp-long             v4, v0, v6
+	16      (00000038) if-gtz               v4, +003h
+
+calculateCpuUsagePercent-BB@0x3c : 
+	17      (0000003c) return-object        v5
+
+calculateCpuUsagePercent-BB@0x3e : [ calculateCpuUsagePercent-BB@0x4a calculateCpuUsagePercent-BB@0x4c ]
+	18      (0000003e) sub-long             v2, v0, v2
+	19      (00000042) cmp-long             v5, v2, v6
+	20      (00000046) if-gez               v5, +003h
+
+calculateCpuUsagePercent-BB@0x4a : [ calculateCpuUsagePercent-BB@0x4e ]
+	21      (0000004a) goto                 +2h
+
+calculateCpuUsagePercent-BB@0x4c : [ calculateCpuUsagePercent-BB@0x4e ]
+	22      (0000004c) move-wide            v6, v2
+
+calculateCpuUsagePercent-BB@0x4e : [ calculateCpuUsagePercent-BB@0x6c ]
+	23      (0000004e) long-to-float        v5, v6
+	24      (00000050) long-to-float        v6, v0
+	25      (00000052) div-float/2addr      v5, v6
+	26      (00000054) const/high16         v6, 1120403456
+	27      (00000058) mul-float/2addr      v5, v6
+	28      (0000005a) const/4              v7, 0
+	29      (0000005c) invoke-static        v5, v7, v6, Lib1;->k(F F F)F
+	30      (00000062) move-result          v5
+	31      (00000064) invoke-static        v5, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	32      (0000006a) move-result-object   v5
+
+calculateCpuUsagePercent-BB@0x6c : 
+	33      (0000006c) return-object        v5
+

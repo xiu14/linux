@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/soc/TemperatureResult;-><init>(Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.Float
+# - v2:java.lang.Integer
+# - v3:java.lang.String
+# - v4:java.util.List
+# - v5:java.util.List
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v5, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	3       (00000012) iput-object          v1, v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;->temperatureC Ljava/lang/Float;
+	4       (00000016) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;->temperatureFractionDigits Ljava/lang/Integer;
+	5       (0000001a) iput-object          v3, v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;->selectedZone Ljava/lang/String;
+	6       (0000001e) iput-object          v4, v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;->probes Ljava/util/List;
+	7       (00000022) iput-object          v5, v0, Lcom/lele/llmonitor/data/soc/TemperatureResult;->zones Ljava/util/List;
+	8       (00000026) return-void          
+

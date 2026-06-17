@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_name"
+    android:key="@string/settings_screen">
+    <PreferenceCategory
+        android:title="@string/input_settings"
+        android:key="input_settings_category">
+        <PreferenceScreen
+            android:layout="@layout/prefs_item"
+            android:title="@string/fuzzy_title"
+            android:key="@string/fuzzy_screen"
+            android:summary="关闭"
+            android:widgetLayout="@layout/prefs_arrow">
+            <PreferenceCategory android:title="全局设置">
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="模糊音"
+                    android:key="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="声母">
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="z = zh"
+                    android:key="kZEqualToZh"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="true"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="c = ch"
+                    android:key="kCEqualToCh"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="true"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="s = sh"
+                    android:key="kSEqualToSh"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="true"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="h = f"
+                    android:key="kFEqualToH"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="n = l"
+                    android:key="kLEqualToN"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="r = l"
+                    android:key="kREqualToL"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="韵母">
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="an = ang"
+                    android:key="kAnEqualToAng"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="true"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="en = eng"
+                    android:key="kEnEqualToEng"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="true"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="in = ing"
+                    android:key="kInEqualToIng"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="true"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="ian = iang"
+                    android:key="kIanEqualToIang"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="uan = uang"
+                    android:key="kUanEqualToUang"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="un = ong"
+                    android:key="kUnEqualToOng"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="拼音音节">
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="hui = fei"
+                    android:key="kHuiEqualToFei"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+                <SwitchPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="huang = wang"
+                    android:key="kHuangEqualToWang"
+                    android:dependency="@string/enable_fuzzy"
+                    android:defaultValue="false"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/cloud_title"
+            android:key="@string/enable_cloud"
+            android:defaultValue="true"/>
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/correct_title"
+            android:key="@string/enable_correct"
+            android:defaultValue="true"/>
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/bot_correct_title"
+            android:key="@string/enable_bot_correct"
+            android:defaultValue="true"/>
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/first_letter_capitalization_title"
+            android:key="@string/enable_first_letter_capitalization"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/enable_double_click_space"
+            android:key="@string/enable_double_click_space"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:layout="@layout/prefs_item_upperdown"
+            android:title="@string/use_offline_asr"
+            android:key="@string/enable_offline_asr"
+            android:summary="@string/use_offline_asr_summary"
+            android:defaultValue="false"/>
+        <PreferenceScreen
+            android:layout="@layout/prefs_item"
+            android:title="@string/shuangpin_title"
+            android:key="@string/shuangpin_screen"
+            android:summary="搜狗双拼"
+            android:widgetLayout="@layout/prefs_arrow">
+            <PreferenceCategory android:title="全局设置">
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="搜狗双拼"
+                    android:key="kSogou"
+                    android:defaultValue="true"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="微软双拼"
+                    android:key="kMicrosoft"
+                    android:defaultValue="false"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="小鹤双拼"
+                    android:key="kXiaoHe"
+                    android:defaultValue="false"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="自然码"
+                    android:key="kZiRanMa"
+                    android:defaultValue="false"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="拼音加加"
+                    android:key="kPinYinJiaJia"
+                    android:defaultValue="false"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="紫光双拼"
+                    android:key="kZiGuang"
+                    android:defaultValue="false"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="智能ABC"
+                    android:key="kZhiNengABC"
+                    android:defaultValue="false"/>
+                <CheckBoxPreference
+                    android:layout="@layout/prefs_item"
+                    android:title="国标双拼"
+                    android:key="kGuoBiao"
+                    android:defaultValue="false"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/dict_settings">
+        <SwitchPreference
+            android:layout="@layout/prefs_item_upperdown"
+            android:title="@string/update_contacts_title"
+            android:key="@string/enable_update_contacts"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/keyboard_settings">
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/bubbles_title"
+            android:key="@string/enable_key_bubbles"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:layout="@layout/prefs_item"
+            android:title="@string/fusiyin_enable_title"
+            android:key="@string/enable_key_fusiyin"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="高级">
+        <Preference
+            android:layout="@layout/prefs_item"
+            android:title="@string/dict_clear_title"
+            android:key="@string/click_dict_clear"/>
+        <PreferenceScreen
+            android:layout="@layout/prefs_item"
+            android:title="@string/about_title"
+            android:key="@string/about_scree">
+            <Preference
+                android:title="软件信息"
+                android:key="@string/about_info"
+                android:summary="名称：豆包输入法\10版本：1.0"/>
+            <Preference
+                android:title=""
+                android:key="@string/about_info_hide"/>
+        </PreferenceScreen>
+        <Preference
+            android:layout="@layout/prefs_item"
+            android:title="@string/reset_title"
+            android:key="@string/click_reset"/>
+        <Preference
+            android:layout="@layout/prefs_item"
+            android:title="@string/feedback_title"
+            android:key="@string/click_feedback"/>
+    </PreferenceCategory>
+</PreferenceScreen>

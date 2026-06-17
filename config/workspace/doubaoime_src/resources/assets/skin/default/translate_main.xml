@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="input_main">
+    <Include source="style.xml" adaptive="true" />
+    <TranslateLayout width="match_parent" height="match_parent" name="input_translate_layout">
+        <Include desc="翻译区域" source="layout/input_translate.xml" />
+    </TranslateLayout>
+</Window>

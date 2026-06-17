@@ -1,0 +1,32 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager;->importWallpaper(Landroid/net/Uri; Z Ld11;)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.net.Uri
+# - v8:boolean
+# - v9:d11
+#
+# - return:void
+
+importWallpaper-BB@0x0 : [ importWallpaper-BB@0x14 importWallpaper-BB@0x16 ]
+	0       (00000000) invoke-virtual       v7, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v9, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) sget-object          v1, Lcom/lele/llmonitor/data/HomeWallpaperManager;->appContext Landroid/content/Context;
+	3       (00000010) if-nez               v1, +003h
+
+importWallpaper-BB@0x14 : 
+	4       (00000014) return-void          
+
+importWallpaper-BB@0x16 : 
+	5       (00000016) sget-object          v6, Lcom/lele/llmonitor/data/HomeWallpaperManager;->scope Ld80;
+	6       (0000001a) new-instance         v0, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;
+	7       (0000001e) const/4              v5, 0
+	8       (00000020) move-object          v2, v7
+	9       (00000022) move                 v3, v8
+	10      (00000024) move-object          v4, v9
+	11      (00000026) invoke-direct/range  v0 ... v5, Lcom/lele/llmonitor/data/HomeWallpaperManager$importWallpaper$2;-><init>(Landroid/content/Context; Landroid/net/Uri; Z Ld11; Ln60;)V
+	12      (0000002c) const/4              v7, 3
+	13      (0000002e) const/4              v8, 0
+	14      (00000030) invoke-static        v6, v8, v8, v0, v7, Lxt3;->I(Ld80; Lt70; Lg80; Lh11; I)Ltf3;
+	15      (00000036) return-void          
+

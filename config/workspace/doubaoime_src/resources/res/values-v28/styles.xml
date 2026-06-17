@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V28.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V28.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V14.ThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:checkedTextViewStyle">@style/Widget.MaterialComponents.CheckedTextView</item>
+        <item name="android:dialogCornerRadius">@null</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.MaterialComponents</item>
+        <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.MaterialComponents.Body.Text</item>
+        <item name="materialAlertDialogButtonSpacerVisibility">@integer/mtrl_view_invisible</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
+        <item name="dialogCornerRadius">?android:attr/dialogCornerRadius</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
+        <item name="dialogCornerRadius">?android:attr/dialogCornerRadius</item>
+    </style>
+    <style name="Body_L" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.25</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Body_L_Thick" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.22</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="Body_M" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Body_M_Thick" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="Body_S" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Body_S_Thick" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="Body_Super_L" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="BtnLabel_M1" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="BtnLabel_M1_Thin" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="BtnLabel_M2" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="BtnLabel_M2_Thin" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Label_L" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Label_L_Thick" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="Label_L_Thin" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Label_M" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingMultiplier">1.13</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Label_M_Thin" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingMultiplier">1.13</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Label_S" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Label_S_Thick" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="Label_S_Thin" parent="">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="OButton.ListItem.Center" parent="@style/OButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/oui_accent_fg</item>
+        <item name="android:background">@color/oui_fill_list_item_card</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/oui_h_list_item_settings</item>
+        <item name="android:lineHeight">22dp</item>
+        <item name="oui_radius">@dimen/oui_r_l3_rect</item>
+    </style>
+    <style name="OCalendarDataText" parent="@style/Label_L">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/o_data_text_color</item>
+    </style>
+    <style name="OIconButton.L2" parent="@style/OIconButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">@dimen/oui_h_l2</item>
+        <item name="android:lineHeight">24dp</item>
+        <item name="oui_radius">@dimen/oui_r_l2_rect</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OWeekLabel" parent="@style/Label_L">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/oui_text_3</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.BodyLarge" parent="@style/TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_regular</item>
+        <item name="android:letterSpacing">0.0312</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_regular</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.BodyMedium" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_regular</item>
+        <item name="android:letterSpacing">0.0179</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_regular</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.BodySmall" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_regular</item>
+        <item name="android:letterSpacing">0.0333</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_regular</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.DisplayLarge" parent="@style/TextAppearance.AppCompat.Display3">
+        <item name="android:textSize">57sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">-0.0044</item>
+        <item name="android:lineHeight">64sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">64sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.DisplayMedium" parent="@style/TextAppearance.AppCompat.Display2">
+        <item name="android:textSize">45sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">52sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.DisplaySmall" parent="@style/TextAppearance.AppCompat.Display1">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">44sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.HeadlineLarge" parent="@style/TextAppearance.AppCompat.Display1">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">40sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.HeadlineMedium" parent="@style/TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">36sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.HeadlineSmall" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">32sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.LabelLarge" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="android:letterSpacing">0.0071</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.LabelMedium" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="android:letterSpacing">0.0417</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.LabelSmall" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="android:letterSpacing">0.0455</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.TitleLarge" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">28sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_brand_regular</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.TitleMedium" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="android:letterSpacing">0.0094</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.TitleSmall" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="android:letterSpacing">0.0071</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="fontFamily">@string/m3_ref_typeface_plain_medium</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+    <style name="Title_Display" parent="">
+        <item name="android:textSize">40sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Title_Display_S" parent="">
+        <item name="android:textSize">32sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Title_Headline" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Title_Title_L" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Title_Title_L_Alt" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Title_Title_M" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.13</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_semi_prominent</item>
+    </style>
+    <style name="Title_Title_M_Thick" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.13</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_prominent</item>
+    </style>
+    <style name="Title_Title_M_Thin" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.13</item>
+        <item name="android:textFontWeight">@integer/oui_font_weight_regular</item>
+    </style>
+    <style name="Widget.Material3.AppBarLayout" parent="@style/Widget.MaterialComponents.AppBarLayout.Surface">
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+        <item name="android:outlineAmbientShadowColor">@android:color/transparent</item>
+        <item name="liftOnScroll">true</item>
+    </style>
+    <style name="Widget.Material3.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+        <item name="android:outlineAmbientShadowColor">@android:color/transparent</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="subtitleTextAppearance">?attr/textAppearanceTitleMedium</item>
+        <item name="titleTextAppearance">?attr/textAppearanceTitleLarge</item>
+    </style>
+    <style name="backspace_swipe_text" parent="">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/swipe_text</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+    <style name="emoji_btn_send" parent="">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+    <style name="emoji_tab_light_text" parent="@style/emoji_tab_text">
+        <item name="android:textColor">@color/emoji_btn_light_text</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+    <style name="emoji_tab_text" parent="">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/emoji_tab_text</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+    <style name="textview_speech_tip_text" parent="@style/textview_normal_middle">
+        <item name="android:textColor">@color/common_tip_text</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+    <style name="textview_speech_tip_title" parent="@style/textview_normal_middle_18">
+        <item name="android:textColor">@color/common_tip_title</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+</resources>

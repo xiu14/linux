@@ -1,0 +1,41 @@
+# Lcom/lele/llmonitor/data/soc/CpuUsageResult;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+hashCode-BB@0x0 : [ hashCode-BB@0xa hashCode-BB@0xe ]
+	0       (00000000) iget-object          v0, v3, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->usagePercent Ljava/lang/Float;
+	1       (00000004) const/4              v1, 0
+	2       (00000006) if-nez               v0, +004h
+
+hashCode-BB@0xa : [ hashCode-BB@0x16 ]
+	3       (0000000a) move                 v0, v1
+	4       (0000000c) goto                 +5h
+
+hashCode-BB@0xe : [ hashCode-BB@0x16 ]
+	5       (0000000e) invoke-virtual       v0, Ljava/lang/Object;->hashCode()I
+	6       (00000014) move-result          v0
+
+hashCode-BB@0x16 : [ hashCode-BB@0x22 hashCode-BB@0x24 ]
+	7       (00000016) mul-int/lit8         v0, v0, 31
+	8       (0000001a) iget-object          v2, v3, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->nextCpuTimes Lcom/lele/llmonitor/data/soc/CpuTimes;
+	9       (0000001e) if-nez               v2, +003h
+
+hashCode-BB@0x22 : [ hashCode-BB@0x2c ]
+	10      (00000022) goto                 +5h
+
+hashCode-BB@0x24 : [ hashCode-BB@0x2c ]
+	11      (00000024) invoke-virtual       v2, Lcom/lele/llmonitor/data/soc/CpuTimes;->hashCode()I
+	12      (0000002a) move-result          v1
+
+hashCode-BB@0x2c : 
+	13      (0000002c) add-int/2addr        v0, v1
+	14      (0000002e) mul-int/lit8         v0, v0, 31
+	15      (00000032) iget-object          v3, v3, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->probes Ljava/util/List;
+	16      (00000036) invoke-virtual       v3, Ljava/lang/Object;->hashCode()I
+	17      (0000003c) move-result          v3
+	18      (0000003e) add-int/2addr        v3, v0
+	19      (00000040) return               v3
+

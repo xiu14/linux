@@ -1,0 +1,91 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->ThermalZoneCard(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; Lt10; I)V [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:com.lele.llmonitor.data.soc.ThermalZoneReading
+# - v10:t10
+# - v11:int
+#
+# - return:void
+
+ThermalZoneCard-BB@0x0 : [ ThermalZoneCard-BB@0x1e ThermalZoneCard-BB@0x34 ]
+	0       (00000000) move-object          v5, v10
+	1       (00000002) check-cast           v5, Lb20;
+	2       (00000006) const                v10, 1673669575
+	3       (0000000c) invoke-virtual       v5, v10, Lb20;->a0(I)Lb20;
+	4       (00000012) and-int/lit8         v10, v11, 6
+	5       (00000016) const/4              v8, 4
+	6       (00000018) const/4              v0, 2
+	7       (0000001a) if-nez               v10, +00dh
+
+ThermalZoneCard-BB@0x1e : [ ThermalZoneCard-BB@0x2a ThermalZoneCard-BB@0x2e ]
+	8       (0000001e) invoke-virtual       v5, v9, Lb20;->f(Ljava/lang/Object;)Z
+	9       (00000024) move-result          v10
+	10      (00000026) if-eqz               v10, +004h
+
+ThermalZoneCard-BB@0x2a : [ ThermalZoneCard-BB@0x30 ]
+	11      (0000002a) move                 v10, v8
+	12      (0000002c) goto                 +2h
+
+ThermalZoneCard-BB@0x2e : [ ThermalZoneCard-BB@0x30 ]
+	13      (0000002e) move                 v10, v0
+
+ThermalZoneCard-BB@0x30 : [ ThermalZoneCard-BB@0x36 ]
+	14      (00000030) or-int/2addr         v10, v11
+	15      (00000032) goto                 +2h
+
+ThermalZoneCard-BB@0x34 : [ ThermalZoneCard-BB@0x36 ]
+	16      (00000034) move                 v10, v11
+
+ThermalZoneCard-BB@0x36 : [ ThermalZoneCard-BB@0x40 ThermalZoneCard-BB@0x44 ]
+	17      (00000036) and-int/lit8         v1, v10, 3
+	18      (0000003a) const/4              v2, 1
+	19      (0000003c) if-eq                v1, v0, +004h
+
+ThermalZoneCard-BB@0x40 : [ ThermalZoneCard-BB@0x46 ]
+	20      (00000040) move                 v0, v2
+	21      (00000042) goto                 +2h
+
+ThermalZoneCard-BB@0x44 : [ ThermalZoneCard-BB@0x46 ]
+	22      (00000044) const/4              v0, 0
+
+ThermalZoneCard-BB@0x46 : [ ThermalZoneCard-BB@0x54 ThermalZoneCard-BB@0x94 ]
+	23      (00000046) and-int/2addr        v10, v2
+	24      (00000048) invoke-virtual       v5, v10, v0, Lb20;->O(I Z)Z
+	25      (0000004e) move-result          v10
+	26      (00000050) if-eqz               v10, +022h
+
+ThermalZoneCard-BB@0x54 : [ ThermalZoneCard-BB@0x9a ]
+	27      (00000054) sget-object          v10, Lj22;->a Lj22;
+	28      (00000058) const/high16         v0, 1065353216
+	29      (0000005c) invoke-static        v10, v0, Lac3;->c(Lm22; F)Lm22;
+	30      (00000062) move-result-object   v0
+	31      (00000064) new-instance         v10, Lys;
+	32      (00000068) const/16             v1, 11
+	33      (0000006c) invoke-direct        v10, v1, v9, Lys;-><init>(I Ljava/lang/Object;)V
+	34      (00000072) const                v1, 435055293
+	35      (00000078) invoke-static        v1, v10, v5, Ln54;->K(I Lp11; Lt10;)Lc00;
+	36      (0000007e) move-result-object   v4
+	37      (00000080) const/16             v6, 3078
+	38      (00000084) const/4              v7, 6
+	39      (00000086) const-wide/16        v1, 0
+	40      (0000008a) const/4              v3, 0
+	41      (0000008c) invoke-static/range  v0 ... v7, Lcom/lele/llmonitor/ui/components/HomeCardKt;->HomeCard-sW7UJKQ(Lm22; J Z Li11; Lt10; I I)V
+	42      (00000092) goto                 +4h
+
+ThermalZoneCard-BB@0x94 : [ ThermalZoneCard-BB@0x9a ]
+	43      (00000094) invoke-virtual       v5, Lb20;->R()V
+
+ThermalZoneCard-BB@0x9a : [ ThermalZoneCard-BB@0xa6 ThermalZoneCard-BB@0xb4 ]
+	44      (0000009a) invoke-virtual       v5, Lb20;->r()Lat2;
+	45      (000000a0) move-result-object   v10
+	46      (000000a2) if-eqz               v10, +009h
+
+ThermalZoneCard-BB@0xa6 : [ ThermalZoneCard-BB@0xb4 ]
+	47      (000000a6) new-instance         v0, Lfs1;
+	48      (000000aa) invoke-direct        v0, v11, v8, v9, Lfs1;-><init>(I I Ljava/lang/Object;)V
+	49      (000000b0) iput-object          v0, v10, Lat2;->d Lh11;
+
+ThermalZoneCard-BB@0xb4 : 
+	50      (000000b4) return-void          
+

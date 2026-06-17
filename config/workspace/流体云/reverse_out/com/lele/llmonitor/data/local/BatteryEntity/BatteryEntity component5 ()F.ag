@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/local/BatteryEntity;->component5()F [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:float
+
+component5-BB@0x0 : 
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/data/local/BatteryEntity;->current F
+	1       (00000004) return               v0
+

@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperBlurSupportKt;->resolveHomeWallpaperBlurRadiusPx(F F)F [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:float
+# - v3:float
+#
+# - return:float
+
+resolveHomeWallpaperBlurRadiusPx-BB@0x0 : [ resolveHomeWallpaperBlurRadiusPx-BB@0x12 resolveHomeWallpaperBlurRadiusPx-BB@0x14 ]
+	0       (00000000) invoke-static        v2, Lcom/lele/llmonitor/data/HomeWallpaperBlurSupportKt;->resolveHomeWallpaperBlurRadiusDp(F)F
+	1       (00000006) move-result          v2
+	2       (00000008) const/4              v0, 0
+	3       (0000000a) cmpg-float           v1, v3, v0
+	4       (0000000e) if-gez               v1, +003h
+
+resolveHomeWallpaperBlurRadiusPx-BB@0x12 : [ resolveHomeWallpaperBlurRadiusPx-BB@0x14 ]
+	5       (00000012) move                 v3, v0
+
+resolveHomeWallpaperBlurRadiusPx-BB@0x14 : 
+	6       (00000014) mul-float/2addr      v2, v3
+	7       (00000016) return               v2
+

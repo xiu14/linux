@@ -1,0 +1,49 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->pruneHistory(Landroid/content/Context;)V [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+#
+# - return:void
+
+pruneHistory-BB@0x0 : [ pruneHistory-BB@0x14 pruneHistory-BB@0x7e ]
+	0       (00000000) invoke-direct        v2, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryDirectory(Landroid/content/Context;)Ljava/io/File;
+	1       (00000006) move-result-object   v2
+	2       (00000008) invoke-virtual       v2, Ljava/io/File;->listFiles()[Ljava/io/File;
+	3       (0000000e) move-result-object   v2
+	4       (00000010) if-eqz               v2, +037h
+
+pruneHistory-BB@0x14 : [ pruneHistory-BB@0x5e ]
+	5       (00000014) invoke-static        v2, Lwh;->R([Ljava/lang/Object;)Lz53;
+	6       (0000001a) move-result-object   v2
+	7       (0000001c) new-instance         v3, Lu70;
+	8       (00000020) const/16             v0, 21
+	9       (00000024) invoke-direct        v3, v0, Lu70;-><init>(I)V
+	10      (0000002a) new-instance         v0, Lbu0;
+	11      (0000002e) const/4              v1, 1
+	12      (00000030) invoke-direct        v0, v2, v1, v3, Lbu0;-><init>(Lz53; Z Ld11;)V
+	13      (00000036) new-instance         v2, Lcom/lele/llmonitor/data/HomeWallpaperStorage$pruneHistory$$inlined$sortedByDescending$1;
+	14      (0000003a) invoke-direct        v2, Lcom/lele/llmonitor/data/HomeWallpaperStorage$pruneHistory$$inlined$sortedByDescending$1;-><init>()V
+	15      (00000040) new-instance         v3, Lm21;
+	16      (00000044) invoke-direct        v3, v1, v0, v2, Lm21;-><init>(I Ljava/lang/Object; Ljava/lang/Object;)V
+	17      (0000004a) const/16             v2, 10
+	18      (0000004e) invoke-static        v3, v2, Lb63;->b0(Lz53; I)Lz53;
+	19      (00000054) move-result-object   v2
+	20      (00000056) invoke-interface     v2, Lz53;->iterator()Ljava/util/Iterator;
+	21      (0000005c) move-result-object   v2
+
+pruneHistory-BB@0x5e : [ pruneHistory-BB@0x6a pruneHistory-BB@0x7e ]
+	22      (0000005e) invoke-interface     v2, Ljava/util/Iterator;->hasNext()Z
+	23      (00000064) move-result          v3
+	24      (00000066) if-eqz               v3, +00ch
+
+pruneHistory-BB@0x6a : [ pruneHistory-BB@0x5e ]
+	25      (0000006a) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	26      (00000070) move-result-object   v3
+	27      (00000072) check-cast           v3, Ljava/io/File;
+	28      (00000076) invoke-virtual       v3, Ljava/io/File;->delete()Z
+	29      (0000007c) goto                 -fh
+
+pruneHistory-BB@0x7e : 
+	30      (0000007e) return-void          
+

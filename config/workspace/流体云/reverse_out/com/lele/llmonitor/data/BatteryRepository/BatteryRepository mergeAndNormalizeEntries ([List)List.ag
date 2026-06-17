@@ -1,0 +1,99 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->mergeAndNormalizeEntries([Ljava/util/List;)Ljava/util/List; [access_flags=private final varargs]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.util.List[]
+#
+# - return:java.util.List
+
+mergeAndNormalizeEntries-BB@0x0 : [ mergeAndNormalizeEntries-BB@0x1e mergeAndNormalizeEntries-BB@0x36 ]
+	0       (00000000) invoke-static        v5, Lwh;->R([Ljava/lang/Object;)Lz53;
+	1       (00000006) move-result-object   v4
+	2       (00000008) new-instance         v5, Lyz2;
+	3       (0000000c) const/16             v0, 27
+	4       (00000010) invoke-direct        v5, v0, Lyz2;-><init>(I)V
+	5       (00000016) instance-of          v0, v4, Lgs3;
+	6       (0000001a) if-eqz               v0, +00eh
+
+mergeAndNormalizeEntries-BB@0x1e : [ mergeAndNormalizeEntries-BB@0x4e ]
+	7       (0000001e) check-cast           v4, Lgs3;
+	8       (00000022) new-instance         v0, Lxu0;
+	9       (00000026) iget-object          v1, v4, Lgs3;->a Lz53;
+	10      (0000002a) iget-object          v4, v4, Lgs3;->b Ld11;
+	11      (0000002e) invoke-direct        v0, v1, v4, v5, Lxu0;-><init>(Lz53; Ld11; Ld11;)V
+	12      (00000034) goto                 +dh
+
+mergeAndNormalizeEntries-BB@0x36 : [ mergeAndNormalizeEntries-BB@0x4e ]
+	13      (00000036) new-instance         v0, Lxu0;
+	14      (0000003a) new-instance         v1, La72;
+	15      (0000003e) const/16             v2, 13
+	16      (00000042) invoke-direct        v1, v2, La72;-><init>(I)V
+	17      (00000048) invoke-direct        v0, v4, v1, v5, Lxu0;-><init>(Lz53; Ld11; Ld11;)V
+
+mergeAndNormalizeEntries-BB@0x4e : [ mergeAndNormalizeEntries-BB@0x7c ]
+	18      (0000004e) new-instance         v4, Lcom/lele/llmonitor/data/BatteryRepository$mergeAndNormalizeEntries$$inlined$sortedBy$1;
+	19      (00000052) invoke-direct        v4, Lcom/lele/llmonitor/data/BatteryRepository$mergeAndNormalizeEntries$$inlined$sortedBy$1;-><init>()V
+	20      (00000058) new-instance         v5, Ll;
+	21      (0000005c) const/16             v1, 14
+	22      (00000060) invoke-direct        v5, v1, Ll;-><init>(I)V
+	23      (00000066) new-instance         v1, Lyi0;
+	24      (0000006a) new-instance         v2, Ljava/util/ArrayList;
+	25      (0000006e) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	26      (00000074) invoke-interface     v0, Lz53;->iterator()Ljava/util/Iterator;
+	27      (0000007a) move-result-object   v0
+
+mergeAndNormalizeEntries-BB@0x7c : [ mergeAndNormalizeEntries-BB@0x88 mergeAndNormalizeEntries-BB@0x98 ]
+	28      (0000007c) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	29      (00000082) move-result          v3
+	30      (00000084) if-eqz               v3, +00ah
+
+mergeAndNormalizeEntries-BB@0x88 : [ mergeAndNormalizeEntries-BB@0x7c ]
+	31      (00000088) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	32      (0000008e) move-result-object   v3
+	33      (00000090) invoke-virtual       v2, v3, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	34      (00000096) goto                 -dh
+
+mergeAndNormalizeEntries-BB@0x98 : [ mergeAndNormalizeEntries-BB@0xb8 mergeAndNormalizeEntries-BB@0xbe ]
+	35      (00000098) invoke-static        v2, v4, Lcx;->l0(Ljava/util/List; Ljava/util/Comparator;)V
+	36      (0000009e) invoke-virtual       v2, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+	37      (000000a4) move-result-object   v4
+	38      (000000a6) invoke-direct        v1, v4, v5, Lyi0;-><init>(Ljava/util/Iterator; Ll;)V
+	39      (000000ac) invoke-virtual       v1, Lq0;->hasNext()Z
+	40      (000000b2) move-result          v4
+	41      (000000b4) if-nez               v4, +005h
+
+mergeAndNormalizeEntries-BB@0xb8 : 
+	42      (000000b8) sget-object          v4, Luo0;->d Luo0;
+	43      (000000bc) return-object        v4
+
+mergeAndNormalizeEntries-BB@0xbe : [ mergeAndNormalizeEntries-BB@0xd2 mergeAndNormalizeEntries-BB@0xdc ]
+	44      (000000be) invoke-virtual       v1, Lq0;->next()Ljava/lang/Object;
+	45      (000000c4) move-result-object   v4
+	46      (000000c6) invoke-virtual       v1, Lq0;->hasNext()Z
+	47      (000000cc) move-result          v5
+	48      (000000ce) if-nez               v5, +007h
+
+mergeAndNormalizeEntries-BB@0xd2 : 
+	49      (000000d2) invoke-static        v4, Lr7;->L(Ljava/lang/Object;)Ljava/util/List;
+	50      (000000d8) move-result-object   v4
+	51      (000000da) return-object        v4
+
+mergeAndNormalizeEntries-BB@0xdc : [ mergeAndNormalizeEntries-BB@0xec ]
+	52      (000000dc) new-instance         v5, Ljava/util/ArrayList;
+	53      (000000e0) invoke-direct        v5, Ljava/util/ArrayList;-><init>()V
+	54      (000000e6) invoke-virtual       v5, v4, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+mergeAndNormalizeEntries-BB@0xec : [ mergeAndNormalizeEntries-BB@0xf8 mergeAndNormalizeEntries-BB@0x108 ]
+	55      (000000ec) invoke-virtual       v1, Lq0;->hasNext()Z
+	56      (000000f2) move-result          v4
+	57      (000000f4) if-eqz               v4, +00ah
+
+mergeAndNormalizeEntries-BB@0xf8 : [ mergeAndNormalizeEntries-BB@0xec ]
+	58      (000000f8) invoke-virtual       v1, Lq0;->next()Ljava/lang/Object;
+	59      (000000fe) move-result-object   v4
+	60      (00000100) invoke-virtual       v5, v4, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	61      (00000106) goto                 -dh
+
+mergeAndNormalizeEntries-BB@0x108 : 
+	62      (00000108) return-object        v5
+

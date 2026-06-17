@@ -1,0 +1,29 @@
+# Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$currentSnapshot$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x8 invokeSuspend-BB@0x2e ]
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/data/BatteryRepository$loadInitialData$currentSnapshot$1;->label I
+	1       (00000004) if-nez               v0, +015h
+
+invokeSuspend-BB@0x8 : 
+	2       (00000008) invoke-static        v1, Lib1;->Q(Ljava/lang/Object;)V
+	3       (0000000e) sget-object          v0, Lcom/lele/llmonitor/data/BatteryRepository;->INSTANCE Lcom/lele/llmonitor/data/BatteryRepository;
+	4       (00000012) invoke-virtual       v0, Lcom/lele/llmonitor/data/BatteryRepository;->getLatestHistory()Lle3;
+	5       (00000018) move-result-object   v0
+	6       (0000001a) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	7       (00000020) invoke-static        v0, Ljn;->D(Lle3;)Lig3;
+	8       (00000026) move-result-object   v0
+	9       (00000028) iget-object          v0, v0, Lig3;->c Ld1;
+	10      (0000002c) return-object        v0
+
+invokeSuspend-BB@0x2e : 
+	11      (0000002e) const-string         v0, "call to 'resume' before 'invoke' with coroutine"
+	12      (00000032) invoke-static        v0, Lh;->m(Ljava/lang/String;)V
+	13      (00000038) const/4              v0, 0
+	14      (0000003a) return-object        v0
+

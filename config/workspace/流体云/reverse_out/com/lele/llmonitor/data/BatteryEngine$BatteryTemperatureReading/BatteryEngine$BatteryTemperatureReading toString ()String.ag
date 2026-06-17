@@ -1,0 +1,31 @@
+# Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) iget                 v0, v5, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->celsius F
+	1       (00000004) iget                 v1, v5, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->fractionDigits I
+	2       (00000008) iget                 v2, v5, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->raw I
+	3       (0000000c) iget                 v5, v5, Lcom/lele/llmonitor/data/BatteryEngine$BatteryTemperatureReading;->divisor I
+	4       (00000010) new-instance         v3, Ljava/lang/StringBuilder;
+	5       (00000014) const-string         v4, "BatteryTemperatureReading(celsius="
+	6       (00000018) invoke-direct        v3, v4, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	7       (0000001e) invoke-virtual       v3, v0, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+	8       (00000024) const-string         v0, ", fractionDigits="
+	9       (00000028) invoke-virtual       v3, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002e) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	11      (00000034) const-string         v0, ", raw="
+	12      (00000038) invoke-virtual       v3, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (0000003e) invoke-virtual       v3, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	14      (00000044) const-string         v0, ", divisor="
+	15      (00000048) invoke-virtual       v3, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (0000004e) invoke-virtual       v3, v5, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	17      (00000054) const-string         v5, ")"
+	18      (00000058) invoke-virtual       v3, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (0000005e) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	20      (00000064) move-result-object   v5
+	21      (00000066) return-object        v5
+

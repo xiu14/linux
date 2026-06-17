@@ -1,0 +1,17 @@
+# Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->o2(Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Landroid/content/Context; Ll52; Lt10; I)Lbw3; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v1:android.content.Context
+# - v2:l52
+# - v3:t10
+# - v4:int
+#
+# - return:bw3
+
+o2-BB@0x0 : 
+	0       (00000000) invoke-static        v0, v1, v2, v3, v4, Lcom/lele/llmonitor/ui/settings/SettingsScreenKt;->SettingsScreen$lambda$31$1(Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Landroid/content/Context; Ll52; Lt10; I)Lbw3;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

@@ -1,0 +1,88 @@
+# Lcom/lele/llmonitor/data/BatteryRepository;->clearAll(Ln60;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:n60
+#
+# - return:java.lang.Object
+
+clearAll-BB@0x0 : [ clearAll-BB@0x8 clearAll-BB@0x26 ]
+	0       (00000000) instance-of          v0, v6, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;
+	1       (00000004) if-eqz               v0, +011h
+
+clearAll-BB@0x8 : [ clearAll-BB@0x1e clearAll-BB@0x26 ]
+	2       (00000008) move-object          v0, v6
+	3       (0000000a) check-cast           v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;
+	4       (0000000e) iget                 v1, v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;->label I
+	5       (00000012) const/high16         v2, -2147483648
+	6       (00000016) and-int              v3, v1, v2
+	7       (0000001a) if-eqz               v3, +006h
+
+clearAll-BB@0x1e : [ clearAll-BB@0x30 ]
+	8       (0000001e) sub-int/2addr        v1, v2
+	9       (00000020) iput                 v1, v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;->label I
+	10      (00000024) goto                 +6h
+
+clearAll-BB@0x26 : [ clearAll-BB@0x30 ]
+	11      (00000026) new-instance         v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;
+	12      (0000002a) invoke-direct        v0, v5, v6, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;-><init>(Lcom/lele/llmonitor/data/BatteryRepository; Ln60;)V
+
+clearAll-BB@0x30 : [ clearAll-BB@0x46 clearAll-BB@0x6a ]
+	13      (00000030) iget-object          v5, v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;->result Ljava/lang/Object;
+	14      (00000034) iget                 v6, v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;->label I
+	15      (00000038) const/4              v1, 0
+	16      (0000003a) const/4              v2, 2
+	17      (0000003c) const/4              v3, 1
+	18      (0000003e) sget-object          v4, Le80;->d Le80;
+	19      (00000042) if-eqz               v6, +014h
+
+clearAll-BB@0x46 : [ clearAll-BB@0x4a clearAll-BB@0x62 ]
+	20      (00000046) if-eq                v6, v3, +00eh
+
+clearAll-BB@0x4a : [ clearAll-BB@0x4e clearAll-BB@0x56 ]
+	21      (0000004a) if-ne                v6, v2, +006h
+
+clearAll-BB@0x4e : [ clearAll-BB@0xb8 ]
+	22      (0000004e) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	23      (00000054) goto                 +32h
+
+clearAll-BB@0x56 : 
+	24      (00000056) const-string         v5, "call to 'resume' before 'invoke' with coroutine"
+	25      (0000005a) invoke-static        v5, Lh;->m(Ljava/lang/String;)V
+	26      (00000060) return-object        v1
+
+clearAll-BB@0x62 : [ clearAll-BB@0x94 ]
+	27      (00000062) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	28      (00000068) goto                 +16h
+
+clearAll-BB@0x6a : [ clearAll-BB@0x92 clearAll-BB@0x94 ]
+	29      (0000006a) invoke-static        v5, Lib1;->Q(Ljava/lang/Object;)V
+	30      (00000070) sget-object          v5, Lii0;->a Lod0;
+	31      (00000074) sget-object          v5, Lzy1;->a Li51;
+	32      (00000078) new-instance         v6, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$2;
+	33      (0000007c) invoke-direct        v6, v1, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$2;-><init>(Ln60;)V
+	34      (00000082) iput                 v3, v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;->label I
+	35      (00000086) invoke-static        v5, v6, v0, Lxt3;->k0(Lt70; Lh11; Ln60;)Ljava/lang/Object;
+	36      (0000008c) move-result-object   v5
+	37      (0000008e) if-ne                v5, v4, +003h
+
+clearAll-BB@0x92 : [ clearAll-BB@0xb6 ]
+	38      (00000092) goto                 +12h
+
+clearAll-BB@0x94 : [ clearAll-BB@0xb6 clearAll-BB@0xb8 ]
+	39      (00000094) sget-object          v5, Lii0;->a Lod0;
+	40      (00000098) sget-object          v5, Lbd0;->f Lbd0;
+	41      (0000009c) new-instance         v6, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;
+	42      (000000a0) invoke-direct        v6, v1, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$3;-><init>(Ln60;)V
+	43      (000000a6) iput                 v2, v0, Lcom/lele/llmonitor/data/BatteryRepository$clearAll$1;->label I
+	44      (000000aa) invoke-static        v5, v6, v0, Lxt3;->k0(Lt70; Lh11; Ln60;)Ljava/lang/Object;
+	45      (000000b0) move-result-object   v5
+	46      (000000b2) if-ne                v5, v4, +003h
+
+clearAll-BB@0xb6 : 
+	47      (000000b6) return-object        v4
+
+clearAll-BB@0xb8 : 
+	48      (000000b8) sget-object          v5, Lbw3;->a Lbw3;
+	49      (000000bc) return-object        v5
+

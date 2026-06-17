@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/PolicyFrequency;->component2()Ljava/util/Set; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.util.Set
+
+component2-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/PolicyFrequency;->relatedCores Ljava/util/Set;
+	1       (00000004) return-object        v0
+

@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getDb$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/data/local/AppDatabase; [access_flags=public static final synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.service.BatteryMonitorService
+#
+# - return:com.lele.llmonitor.data.local.AppDatabase
+
+access$getDb$p-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->db Lcom/lele/llmonitor/data/local/AppDatabase;
+	1       (00000004) return-object        v0
+

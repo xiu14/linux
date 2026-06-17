@@ -1,0 +1,11 @@
+package com.ttnet.org.chromium.base;
+
+import com.ttnet.org.chromium.base.annotations.CalledByNative;
+
+/* loaded from: classes2.dex */
+public class EventLog {
+    @CalledByNative
+    public static void writeEvent(int i, int i2) {
+        android.util.EventLog.writeEvent(i, i2);
+    }
+}

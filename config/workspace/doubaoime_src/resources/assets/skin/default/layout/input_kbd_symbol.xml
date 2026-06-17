@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <SymbolLayout name="input_kbd_symbol" class="cls_input_kbd"
+        slidable_control="symbol_tab_container,symbol_container">
+        <HorizontalLayout width="match_parent" height_weight="48" name="symbol_line_0">
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+        </HorizontalLayout>
+
+        <HorizontalLayout width="match_parent" height_weight="48" name="symbol_line_1">
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            <ButtonSymbol class="cls_symbol_keyboard_button"/>
+        </HorizontalLayout>
+
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonSwitchBoard class="cls_keyboard_button_func" target="5"
+                text="123" name="button_switch_123"/>
+            <HorizontalLayout width_weight="70" height="match_parent" name="symbol_line_2">
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+                <ButtonSymbol class="cls_symbol_keyboard_button"/>
+            </HorizontalLayout>
+            <ButtonBackspace class="cls_button_backspace, cls_button_right_big" name="backspace" />
+        </HorizontalLayout>
+        <HorizontalLayout width="match_parent" height_weight="48">
+            <ButtonSwitchCurrentMode name="button_symbol_back" label="symbol" class="cls_button_back_symbol" />
+            <HorizontalLayout name="symbol_tab_container" class="cls_symbol_tab_container" />
+        </HorizontalLayout>
+    </SymbolLayout>
+</Window>

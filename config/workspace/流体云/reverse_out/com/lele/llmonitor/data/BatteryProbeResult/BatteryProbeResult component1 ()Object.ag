@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/BatteryProbeResult;->component1()Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.lang.Object
+
+component1-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/BatteryProbeResult;->value Ljava/lang/Object;
+	1       (00000004) return-object        v0
+

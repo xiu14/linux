@@ -1,0 +1,59 @@
+# Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String; I Lic0;)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v25
+# - v26:java.lang.String
+# - v27:int
+# - v28:java.lang.String
+# - v29:int
+# - v30:long
+# - v31:long
+# - v32:long
+# - v33:long
+# - v34:int
+# - v35:int
+# - v36:int
+# - v37:int
+# - v38:int
+# - v39:java.lang.String
+# - v40:java.lang.String
+# - v41:int
+# - v42:ic0
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xc <init>-BB@0x50 ]
+	0       (00000000) move/from16          v0, v41
+	1       (00000004) and-int/lit16        v0, v0, 4096
+	2       (00000008) if-eqz               v0, +024h
+
+<init>-BB@0xc : [ <init>-BB@0x12 ]
+	3       (0000000c) const/4              v0, 0
+	4       (0000000e) move-object/from16   v20, v0
+
+<init>-BB@0x12 : [ <init>-BB@0x56 ]
+	5       (00000012) move-object/from16   v1, v21
+	6       (00000016) move-object/from16   v2, v22
+	7       (0000001a) move/from16          v3, v23
+	8       (0000001e) move-object/from16   v4, v24
+	9       (00000022) move/from16          v5, v25
+	10      (00000026) move-wide/from16     v6, v26
+	11      (0000002a) move-wide/from16     v8, v28
+	12      (0000002e) move-wide/from16     v10, v30
+	13      (00000032) move-wide/from16     v12, v32
+	14      (00000036) move/from16          v14, v34
+	15      (0000003a) move/from16          v15, v35
+	16      (0000003e) move/from16          v16, v36
+	17      (00000042) move/from16          v17, v37
+	18      (00000046) move/from16          v18, v38
+	19      (0000004a) move-object/from16   v19, v39
+	20      (0000004e) goto                 +4h
+
+<init>-BB@0x50 : [ <init>-BB@0x12 ]
+	21      (00000050) move-object/from16   v20, v40
+	22      (00000054) goto                 -21h
+
+<init>-BB@0x56 : 
+	23      (00000056) invoke-direct/range  v1 ... v20, Lcom/lele/llmonitor/data/AppIconPalette;-><init>(Ljava/lang/String; I Ljava/lang/String; I J J J J I I I I I Ljava/lang/String; Ljava/lang/String;)V
+	24      (0000005c) return-void          
+

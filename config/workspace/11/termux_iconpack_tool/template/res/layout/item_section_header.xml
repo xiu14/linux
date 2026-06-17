@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/divider_layout" layout="@layout/item_divider" />
+    <com.google.android.material.textview.MaterialTextView android:textColor="?colorSecondary" android:id="@id/section_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:firstBaselineToTopHeight="36.0sp" app:lastBaselineToBottomHeight="20.0sp" style="@style/TextStyle.Frames.Subtitle2" />
+    <com.google.android.material.textview.MaterialTextView android:textColor="?colorOnSurface" android:textColorLink="?colorSecondary" android:id="@id/section_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:lastBaselineToBottomHeight="20.0sp" style="@style/TextStyle.Frames.Body2" />
+</LinearLayout>

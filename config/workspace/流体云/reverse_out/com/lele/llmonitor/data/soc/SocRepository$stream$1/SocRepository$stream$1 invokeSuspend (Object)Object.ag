@@ -1,0 +1,606 @@
+# Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v50
+# - v51:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x24 invokeSuspend-BB@0x24a ]
+	0       (00000000) move-object/from16   v0, v50
+	1       (00000004) iget-object          v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$0 Ljava/lang/Object;
+	2       (00000008) check-cast           v1, Lpv0;
+	3       (0000000c) iget                 v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->label I
+	4       (00000010) const/4              v3, 5
+	5       (00000012) const/4              v4, 4
+	6       (00000014) const/4              v5, 3
+	7       (00000016) const/4              v6, 2
+	8       (00000018) const/4              v7, 1
+	9       (0000001a) const/4              v8, 0
+	10      (0000001c) sget-object          v9, Le80;->d Le80;
+	11      (00000020) if-eqz               v2, +115h
+
+invokeSuspend-BB@0x24 : [ invokeSuspend-BB@0x28 invokeSuspend-BB@0x202 ]
+	12      (00000024) if-eq                v2, v7, +0efh
+
+invokeSuspend-BB@0x28 : [ invokeSuspend-BB@0x2c invokeSuspend-BB@0x192 ]
+	13      (00000028) if-eq                v2, v6, +0b5h
+
+invokeSuspend-BB@0x2c : [ invokeSuspend-BB@0x30 invokeSuspend-BB@0x124 ]
+	14      (0000002c) if-eq                v2, v5, +07ch
+
+invokeSuspend-BB@0x30 : [ invokeSuspend-BB@0x34 invokeSuspend-BB@0xae ]
+	15      (00000030) if-eq                v2, v4, +03fh
+
+invokeSuspend-BB@0x34 : [ invokeSuspend-BB@0x38 invokeSuspend-BB@0xa2 ]
+	16      (00000034) if-ne                v2, v3, +037h
+
+invokeSuspend-BB@0x38 : [ invokeSuspend-BB@0x9a ]
+	17      (00000038) iget-wide            v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	18      (0000003c) iget-wide            v12, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	19      (00000040) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$9 Ljava/lang/Object;
+	20      (00000044) check-cast           v2, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	21      (00000048) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$8 Ljava/lang/Object;
+	22      (0000004c) check-cast           v2, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;
+	23      (00000050) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$7 Ljava/lang/Object;
+	24      (00000054) check-cast           v2, Lcom/lele/llmonitor/data/soc/TemperatureResult;
+	25      (00000058) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	26      (0000005c) check-cast           v2, Lcom/lele/llmonitor/data/soc/LoadAvgResult;
+	27      (00000060) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	28      (00000064) check-cast           v2, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	29      (00000068) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	30      (0000006c) check-cast           v2, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	31      (00000070) iget-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	32      (00000074) check-cast           v14, Ljava/util/List;
+	33      (00000078) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	34      (0000007c) check-cast           v15, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	35      (00000080) iget-object          v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	36      (00000084) check-cast           v3, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	37      (00000088) invoke-static/range  v51, Lib1;->Q(Ljava/lang/Object;)V
+	38      (0000008e) move-object/from16   v18, v1
+	39      (00000092) move-object          v7, v2
+	40      (00000094) move-object          v2, v8
+	41      (00000096) move-object          v1, v9
+	42      (00000098) const/4              v4, 5
+
+invokeSuspend-BB@0x9a : [ invokeSuspend-BB@0x722 ]
+	43      (0000009a) move-wide            v5, v12
+	44      (0000009c) move-object          v8, v14
+	45      (0000009e) goto/16              +342h
+
+invokeSuspend-BB@0xa2 : 
+	46      (000000a2) const-string         v0, "call to 'resume' before 'invoke' with coroutine"
+	47      (000000a6) invoke-static        v0, Lh;->m(Ljava/lang/String;)V
+	48      (000000ac) return-object        v8
+
+invokeSuspend-BB@0xae : [ invokeSuspend-BB@0x676 ]
+	49      (000000ae) iget                 v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$2 I
+	50      (000000b2) iget                 v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	51      (000000b6) iget                 v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	52      (000000ba) iget-wide            v11, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	53      (000000be) iget-wide            v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	54      (000000c2) iget-wide            v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	55      (000000c6) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$9 Ljava/lang/Object;
+	56      (000000ca) check-cast           v15, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	57      (000000ce) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$8 Ljava/lang/Object;
+	58      (000000d2) check-cast           v6, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;
+	59      (000000d6) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$7 Ljava/lang/Object;
+	60      (000000da) check-cast           v6, Lcom/lele/llmonitor/data/soc/TemperatureResult;
+	61      (000000de) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	62      (000000e2) check-cast           v6, Lcom/lele/llmonitor/data/soc/LoadAvgResult;
+	63      (000000e6) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	64      (000000ea) check-cast           v6, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	65      (000000ee) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	66      (000000f2) check-cast           v6, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	67      (000000f6) iget-object          v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	68      (000000fa) check-cast           v7, Ljava/util/List;
+	69      (000000fe) iget-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	70      (00000102) check-cast           v8, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	71      (00000106) iget-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	72      (0000010a) check-cast           v8, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	73      (0000010e) invoke-static/range  v51, Lib1;->Q(Ljava/lang/Object;)V
+	74      (00000114) move/from16          v46, v2
+	75      (00000118) move-object          v2, v1
+	76      (0000011a) move-object          v1, v9
+	77      (0000011c) move/from16          v9, v46
+	78      (00000120) goto/16              +2abh
+
+invokeSuspend-BB@0x124 : [ invokeSuspend-BB@0x434 ]
+	79      (00000124) iget                 v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	80      (00000128) iget                 v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	81      (0000012c) iget-wide            v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	82      (00000130) iget-wide            v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	83      (00000134) iget-wide            v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	84      (00000138) iget-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	85      (0000013c) check-cast           v8, Lcom/lele/llmonitor/data/soc/LoadAvgResult;
+	86      (00000140) iget-object          v12, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	87      (00000144) check-cast           v12, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	88      (00000148) iget-object          v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	89      (0000014c) check-cast           v13, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	90      (00000150) iget-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	91      (00000154) check-cast           v14, Ljava/util/List;
+	92      (00000158) iget-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	93      (0000015c) check-cast           v15, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	94      (00000160) move-object/from16   v16, v1
+	95      (00000164) iget-object          v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	96      (00000168) check-cast           v1, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	97      (0000016c) invoke-static/range  v51, Lib1;->Q(Ljava/lang/Object;)V
+	98      (00000172) move-object/from16   v20, v15
+	99      (00000176) move-object          v15, v1
+	100     (00000178) move-object          v1, v9
+	101     (0000017a) move-object/from16   v9, v20
+	102     (0000017e) move/from16          v21, v2
+	103     (00000182) move/from16          v20, v3
+	104     (00000186) move-object/from16   v2, v16
+	105     (0000018a) move-object/from16   v3, v51
+	106     (0000018e) goto/16              +153h
+
+invokeSuspend-BB@0x192 : [ invokeSuspend-BB@0x3b0 ]
+	107     (00000192) move-object/from16   v16, v1
+	108     (00000196) iget                 v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	109     (0000019a) iget                 v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	110     (0000019e) iget-wide            v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	111     (000001a2) iget-wide            v5, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	112     (000001a6) iget-wide            v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	113     (000001aa) iget-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	114     (000001ae) check-cast           v10, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	115     (000001b2) iget-object          v11, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	116     (000001b6) check-cast           v11, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	117     (000001ba) iget-object          v12, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	118     (000001be) check-cast           v12, Ljava/util/List;
+	119     (000001c2) iget-object          v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	120     (000001c6) check-cast           v13, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	121     (000001ca) iget-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	122     (000001ce) check-cast           v14, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	123     (000001d2) invoke-static/range  v51, Lib1;->Q(Ljava/lang/Object;)V
+	124     (000001d8) move-object          v15, v14
+	125     (000001da) move                 v14, v2
+	126     (000001dc) move-object/from16   v2, v16
+	127     (000001e0) move-object/from16   v16, v9
+	128     (000001e4) move-object          v9, v13
+	129     (000001e6) move-object          v13, v11
+	130     (000001e8) move-wide/from16     v46, v3
+	131     (000001ec) move                 v3, v1
+	132     (000001ee) move-wide/from16     v48, v7
+	133     (000001f2) move-object          v8, v12
+	134     (000001f4) move-wide/from16     v11, v46
+	135     (000001f8) move-wide            v6, v5
+	136     (000001fa) move-wide/from16     v4, v48
+	137     (000001fe) goto/16              +0d9h
+
+invokeSuspend-BB@0x202 : [ invokeSuspend-BB@0x2ec ]
+	138     (00000202) move-object/from16   v16, v1
+	139     (00000206) iget-wide            v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	140     (0000020a) iget-wide            v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	141     (0000020e) iget-wide            v5, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	142     (00000212) iget-object          v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	143     (00000216) check-cast           v7, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	144     (0000021a) iget-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	145     (0000021e) check-cast           v8, Ljava/util/List;
+	146     (00000222) iget-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	147     (00000226) check-cast           v10, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	148     (0000022a) iget-object          v11, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	149     (0000022e) check-cast           v11, Lcom/lele/llmonitor/data/soc/CpuTimes;
+	150     (00000232) invoke-static/range  v51, Lib1;->Q(Ljava/lang/Object;)V
+	151     (00000238) move-wide            v13, v1
+	152     (0000023a) move-object          v2, v11
+	153     (0000023c) move-wide            v11, v13
+	154     (0000023e) move-object/from16   v13, v51
+	155     (00000242) move-object/from16   v1, v16
+	156     (00000246) const/4              v14, 1
+	157     (00000248) goto                 +52h
+
+invokeSuspend-BB@0x24a : [ invokeSuspend-BB@0x276 ]
+	158     (0000024a) move-object/from16   v16, v1
+	159     (0000024e) invoke-static/range  v51, Lib1;->Q(Ljava/lang/Object;)V
+	160     (00000254) new-instance         v1, Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	161     (00000258) sget-object          v2, Luo0;->d Luo0;
+	162     (0000025c) const/4              v3, 0
+	163     (0000025e) invoke-direct        v1, v3, v2, Lcom/lele/llmonitor/data/soc/CpuModelResult;-><init>(Ljava/lang/String; Ljava/util/List;)V
+	164     (00000264) const-wide/16        v3, 0
+	165     (00000268) move-object          v7, v1
+	166     (0000026a) move-object          v8, v2
+	167     (0000026c) move-wide            v5, v3
+	168     (0000026e) move-object/from16   v1, v16
+	169     (00000272) const/4              v2, 0
+	170     (00000274) const/4              v10, 0
+
+invokeSuspend-BB@0x276 : [ invokeSuspend-BB@0x28a invokeSuspend-BB@0x732 ]
+	171     (00000276) invoke-interface     v0, Ln60;->getContext()Lt70;
+	172     (0000027c) move-result-object   v11
+	173     (0000027e) invoke-static        v11, Lib1;->G(Lt70;)Z
+	174     (00000284) move-result          v11
+	175     (00000286) if-eqz               v11, +256h
+
+invokeSuspend-BB@0x28a : [ invokeSuspend-BB@0x2e6 invokeSuspend-BB@0x2ec ]
+	176     (0000028a) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	177     (00000290) move-result-wide     v11
+	178     (00000292) iget-object          v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	179     (00000296) invoke-static        v13, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	180     (0000029c) move-result-object   v13
+	181     (0000029e) iput-object          v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$0 Ljava/lang/Object;
+	182     (000002a2) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	183     (000002a6) iput-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	184     (000002aa) iput-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	185     (000002ae) iput-object          v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	186     (000002b2) const/4              v14, 0
+	187     (000002b4) iput-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	188     (000002b8) iput-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	189     (000002bc) iput-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$7 Ljava/lang/Object;
+	190     (000002c0) iput-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$8 Ljava/lang/Object;
+	191     (000002c4) iput-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$9 Ljava/lang/Object;
+	192     (000002c8) iput-wide            v5, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	193     (000002cc) iput-wide            v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	194     (000002d0) iput-wide            v11, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	195     (000002d4) const/4              v14, 1
+	196     (000002d6) iput                 v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->label I
+	197     (000002da) invoke-interface     v13, v2, v0, Lcom/lele/llmonitor/data/soc/SocDataSource;->probeCpuUsage(Lcom/lele/llmonitor/data/soc/CpuTimes; Ln60;)Ljava/lang/Object;
+	198     (000002e0) move-result-object   v13
+	199     (000002e2) if-ne                v13, v9, +005h
+
+invokeSuspend-BB@0x2e6 : [ invokeSuspend-BB@0x71a ]
+	200     (000002e6) move-object          v1, v9
+	201     (000002e8) goto/16              +219h
+
+invokeSuspend-BB@0x2ec : [ invokeSuspend-BB@0x2fc invokeSuspend-BB@0x2fe ]
+	202     (000002ec) check-cast           v13, Lcom/lele/llmonitor/data/soc/CpuUsageResult;
+	203     (000002f0) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->getNextCpuTimes()Lcom/lele/llmonitor/data/soc/CpuTimes;
+	204     (000002f6) move-result-object   v15
+	205     (000002f8) if-nez               v15, +003h
+
+invokeSuspend-BB@0x2fc : [ invokeSuspend-BB@0x2fe ]
+	206     (000002fc) move-object          v15, v2
+
+invokeSuspend-BB@0x2fe : [ invokeSuspend-BB@0x388 invokeSuspend-BB@0x38c ]
+	207     (000002fe) iget-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	208     (00000302) invoke-static        v2, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	209     (00000308) move-result-object   v2
+	210     (0000030a) invoke-interface     v2, Lcom/lele/llmonitor/data/soc/SocDataSource;->readOnlineAndTotalCores()Lqh2;
+	211     (00000310) move-result-object   v2
+	212     (00000312) iget-object          v14, v2, Lqh2;->d Ljava/lang/Object;
+	213     (00000316) check-cast           v14, Ljava/lang/Number;
+	214     (0000031a) invoke-virtual       v14, Ljava/lang/Number;->intValue()I
+	215     (00000320) move-result          v14
+	216     (00000322) iget-object          v2, v2, Lqh2;->e Ljava/lang/Object;
+	217     (00000326) check-cast           v2, Ljava/lang/Number;
+	218     (0000032a) invoke-virtual       v2, Ljava/lang/Number;->intValue()I
+	219     (00000330) move-result          v2
+	220     (00000332) move-object/from16   v16, v9
+	221     (00000336) iget-object          v9, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	222     (0000033a) invoke-static        v9, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	223     (00000340) move-result-object   v9
+	224     (00000342) iput-object          v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$0 Ljava/lang/Object;
+	225     (00000346) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	226     (0000034a) iput-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	227     (0000034e) iput-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	228     (00000352) iput-object          v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	229     (00000356) iput-object          v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	230     (0000035a) iput-wide            v5, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	231     (0000035e) iput-wide            v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	232     (00000362) iput-wide            v11, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	233     (00000366) iput                 v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	234     (0000036a) iput                 v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	235     (0000036e) move-object/from16   v51, v1
+	236     (00000372) const/4              v1, 2
+	237     (00000374) iput                 v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->label I
+	238     (00000378) invoke-interface     v9, v0, Lcom/lele/llmonitor/data/soc/SocDataSource;->probeLoadAverages(Ln60;)Ljava/lang/Object;
+	239     (0000037e) move-result-object   v9
+	240     (00000380) move-object/from16   v1, v16
+	241     (00000384) if-ne                v9, v1, +004h
+
+invokeSuspend-BB@0x388 : [ invokeSuspend-BB@0x71a ]
+	242     (00000388) goto/16              +1c9h
+
+invokeSuspend-BB@0x38c : [ invokeSuspend-BB@0x3b0 ]
+	243     (0000038c) move-object/from16   v16, v1
+	244     (00000390) move/from16          v46, v2
+	245     (00000394) move-object/from16   v2, v51
+	246     (00000398) move-object/from16   v51, v9
+	247     (0000039c) move-object          v9, v10
+	248     (0000039e) move-object          v10, v13
+	249     (000003a0) move-object          v13, v7
+	250     (000003a2) move-wide/from16     v47, v3
+	251     (000003a6) move/from16          v3, v46
+	252     (000003aa) move-wide            v4, v5
+	253     (000003ac) move-wide/from16     v6, v47
+
+invokeSuspend-BB@0x3b0 : [ invokeSuspend-BB@0x416 invokeSuspend-BB@0x41a ]
+	254     (000003b0) move-object/from16   v1, v51
+	255     (000003b4) check-cast           v1, Lcom/lele/llmonitor/data/soc/LoadAvgResult;
+	256     (000003b8) move/from16          v51, v3
+	257     (000003bc) iget-object          v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	258     (000003c0) invoke-static        v3, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	259     (000003c6) move-result-object   v3
+	260     (000003c8) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$0 Ljava/lang/Object;
+	261     (000003cc) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	262     (000003d0) iput-object          v9, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	263     (000003d4) iput-object          v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	264     (000003d8) iput-object          v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	265     (000003dc) iput-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	266     (000003e0) iput-object          v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	267     (000003e4) iput-wide            v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	268     (000003e8) iput-wide            v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	269     (000003ec) iput-wide            v11, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	270     (000003f0) iput                 v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	271     (000003f4) move-object/from16   v17, v1
+	272     (000003f8) move/from16          v1, v51
+	273     (000003fc) iput                 v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	274     (00000400) const/4              v1, 3
+	275     (00000402) iput                 v1, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->label I
+	276     (00000406) invoke-interface     v3, v0, Lcom/lele/llmonitor/data/soc/SocDataSource;->probeSocTemperatureC(Ln60;)Ljava/lang/Object;
+	277     (0000040c) move-result-object   v3
+	278     (0000040e) move-object/from16   v1, v16
+	279     (00000412) if-ne                v3, v1, +004h
+
+invokeSuspend-BB@0x416 : [ invokeSuspend-BB@0x71a ]
+	280     (00000416) goto/16              +182h
+
+invokeSuspend-BB@0x41a : [ invokeSuspend-BB@0x434 ]
+	281     (0000041a) move-wide/from16     v20, v11
+	282     (0000041e) move-object          v12, v10
+	283     (00000420) move-wide            v10, v4
+	284     (00000422) move-wide/from16     v4, v20
+	285     (00000426) move/from16          v21, v51
+	286     (0000042a) move/from16          v20, v14
+	287     (0000042e) move-object          v14, v8
+	288     (00000430) move-object/from16   v8, v17
+
+invokeSuspend-BB@0x434 : [ invokeSuspend-BB@0x45c invokeSuspend-BB@0x474 ]
+	289     (00000434) check-cast           v3, Lcom/lele/llmonitor/data/soc/TemperatureResult;
+	290     (00000438) move-object/from16   v51, v3
+	291     (0000043c) iget-object          v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	292     (00000440) invoke-static        v3, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	293     (00000446) move-result-object   v3
+	294     (00000448) invoke-interface     v3, Lcom/lele/llmonitor/data/soc/SocDataSource;->probeMemoryInfo()Lcom/lele/llmonitor/data/soc/MemoryInfoResult;
+	295     (0000044e) move-result-object   v3
+	296     (00000450) invoke-interface     v14, Ljava/util/List;->isEmpty()Z
+	297     (00000456) move-result          v16
+	298     (00000458) if-nez               v16, +00eh
+
+invokeSuspend-BB@0x45c : [ invokeSuspend-BB@0x46c invokeSuspend-BB@0x46e ]
+	299     (0000045c) sub-long             v16, v4, v10
+	300     (00000460) const-wide/16        v18, 2500
+	301     (00000464) cmp-long             v16, v16, v18
+	302     (00000468) if-ltz               v16, +003h
+
+invokeSuspend-BB@0x46c : [ invokeSuspend-BB@0x474 ]
+	303     (0000046c) goto                 +4h
+
+invokeSuspend-BB@0x46e : [ invokeSuspend-BB@0x48c ]
+	304     (0000046e) move-object/from16   v37, v14
+	305     (00000472) goto                 +dh
+
+invokeSuspend-BB@0x474 : [ invokeSuspend-BB@0x46e ]
+	306     (00000474) iget-object          v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	307     (00000478) invoke-static        v10, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	308     (0000047e) move-result-object   v10
+	309     (00000480) invoke-interface     v10, Lcom/lele/llmonitor/data/soc/SocDataSource;->readCpuCoreFrequencies()Ljava/util/List;
+	310     (00000486) move-result-object   v14
+	311     (00000488) move-wide            v10, v4
+	312     (0000048a) goto                 -eh
+
+invokeSuspend-BB@0x48c : [ invokeSuspend-BB@0x498 invokeSuspend-BB@0x4c6 ]
+	313     (0000048c) invoke-virtual       v13, Lcom/lele/llmonitor/data/soc/CpuModelResult;->getModelName()Ljava/lang/String;
+	314     (00000492) move-result-object   v14
+	315     (00000494) if-eqz               v14, +019h
+
+invokeSuspend-BB@0x498 : [ invokeSuspend-BB@0x4a4 invokeSuspend-BB@0x4a6 ]
+	316     (00000498) invoke-static        v14, Lhh3;->w0(Ljava/lang/CharSequence;)Z
+	317     (0000049e) move-result          v14
+	318     (000004a0) if-eqz               v14, +003h
+
+invokeSuspend-BB@0x4a4 : [ invokeSuspend-BB@0x4c6 ]
+	319     (000004a4) goto                 +11h
+
+invokeSuspend-BB@0x4a6 : [ invokeSuspend-BB@0x4b8 invokeSuspend-BB@0x4ba ]
+	320     (000004a6) sub-long             v16, v4, v6
+	321     (000004aa) const-wide/32        v18, 300000
+	322     (000004b0) cmp-long             v14, v16, v18
+	323     (000004b4) if-ltz               v14, +003h
+
+invokeSuspend-BB@0x4b8 : [ invokeSuspend-BB@0x4c6 ]
+	324     (000004b8) goto                 +7h
+
+invokeSuspend-BB@0x4ba : [ invokeSuspend-BB@0x4dc ]
+	325     (000004ba) move-wide/from16     v46, v6
+	326     (000004be) move-object          v6, v13
+	327     (000004c0) move-wide/from16     v13, v46
+	328     (000004c4) goto                 +ch
+
+invokeSuspend-BB@0x4c6 : [ invokeSuspend-BB@0x4dc ]
+	329     (000004c6) iget-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->this$0 Lcom/lele/llmonitor/data/soc/SocRepository;
+	330     (000004ca) invoke-static        v6, Lcom/lele/llmonitor/data/soc/SocRepository;->access$getDataSource$p(Lcom/lele/llmonitor/data/soc/SocRepository;)Lcom/lele/llmonitor/data/soc/SocDataSource;
+	331     (000004d0) move-result-object   v6
+	332     (000004d2) invoke-interface     v6, Lcom/lele/llmonitor/data/soc/SocDataSource;->probeCpuModel()Lcom/lele/llmonitor/data/soc/CpuModelResult;
+	333     (000004d8) move-result-object   v6
+	334     (000004da) move-wide            v13, v4
+
+invokeSuspend-BB@0x4dc : [ invokeSuspend-BB@0x582 invokeSuspend-BB@0x5ee ]
+	335     (000004dc) new-instance         v16, Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	336     (000004e0) invoke-static        Ljava/lang/System;->currentTimeMillis()J
+	337     (000004e6) move-result-wide     v17
+	338     (000004e8) invoke-virtual       v12, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->getUsagePercent()Ljava/lang/Float;
+	339     (000004ee) move-result-object   v19
+	340     (000004f0) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->getLoadAvg1()Ljava/lang/Float;
+	341     (000004f6) move-result-object   v22
+	342     (000004f8) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->getLoadAvg5()Ljava/lang/Float;
+	343     (000004fe) move-result-object   v23
+	344     (00000500) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->getLoadAvg15()Ljava/lang/Float;
+	345     (00000506) move-result-object   v24
+	346     (00000508) invoke-virtual/range v51, Lcom/lele/llmonitor/data/soc/TemperatureResult;->getTemperatureC()Ljava/lang/Float;
+	347     (0000050e) move-result-object   v25
+	348     (00000510) invoke-virtual/range v51, Lcom/lele/llmonitor/data/soc/TemperatureResult;->getTemperatureFractionDigits()Ljava/lang/Integer;
+	349     (00000516) move-result-object   v26
+	350     (00000518) invoke-virtual/range v51, Lcom/lele/llmonitor/data/soc/TemperatureResult;->getSelectedZone()Ljava/lang/String;
+	351     (0000051e) move-result-object   v27
+	352     (00000520) invoke-virtual       v12, Lcom/lele/llmonitor/data/soc/CpuUsageResult;->getProbes()Ljava/util/List;
+	353     (00000526) move-result-object   v28
+	354     (00000528) invoke-virtual       v8, Lcom/lele/llmonitor/data/soc/LoadAvgResult;->getProbes()Ljava/util/List;
+	355     (0000052e) move-result-object   v29
+	356     (00000530) invoke-virtual/range v51, Lcom/lele/llmonitor/data/soc/TemperatureResult;->getProbes()Ljava/util/List;
+	357     (00000536) move-result-object   v30
+	358     (00000538) invoke-virtual       v3, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->getTotalBytes()Ljava/lang/Long;
+	359     (0000053e) move-result-object   v31
+	360     (00000540) invoke-virtual       v3, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->getAvailableBytes()Ljava/lang/Long;
+	361     (00000546) move-result-object   v32
+	362     (00000548) invoke-virtual       v3, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->getProbes()Ljava/util/List;
+	363     (0000054e) move-result-object   v33
+	364     (00000550) invoke-virtual       v6, Lcom/lele/llmonitor/data/soc/CpuModelResult;->getModelName()Ljava/lang/String;
+	365     (00000556) move-result-object   v34
+	366     (00000558) invoke-virtual       v6, Lcom/lele/llmonitor/data/soc/CpuModelResult;->getProbes()Ljava/util/List;
+	367     (0000055e) move-result-object   v35
+	368     (00000560) invoke-virtual/range v51, Lcom/lele/llmonitor/data/soc/TemperatureResult;->getZones()Ljava/util/List;
+	369     (00000566) move-result-object   v36
+	370     (00000568) invoke-direct/range  v16 ... v37, Lcom/lele/llmonitor/data/soc/SocSnapshot;-><init>(J Ljava/lang/Float; I I Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List; Ljava/lang/Long; Ljava/lang/Long; Ljava/util/List; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List;)V
+	371     (0000056e) move-object/from16   v12, v16
+	372     (00000572) move/from16          v8, v20
+	373     (00000576) move/from16          v3, v21
+	374     (0000057a) move-object/from16   v7, v37
+	375     (0000057e) if-eqz               v9, +038h
+
+invokeSuspend-BB@0x582 : [ invokeSuspend-BB@0x5f4 ]
+	376     (00000582) invoke-virtual       v12, Lcom/lele/llmonitor/data/soc/SocSnapshot;->getTimestamp()J
+	377     (00000588) move-result-wide     v23
+	378     (0000058a) const                v44, 1048574
+	379     (00000590) const/16             v45, 0
+	380     (00000594) const/16             v25, 0
+	381     (00000598) const/16             v26, 0
+	382     (0000059c) const/16             v27, 0
+	383     (000005a0) const/16             v28, 0
+	384     (000005a4) const/16             v29, 0
+	385     (000005a8) const/16             v30, 0
+	386     (000005ac) const/16             v31, 0
+	387     (000005b0) const/16             v32, 0
+	388     (000005b4) const/16             v33, 0
+	389     (000005b8) const/16             v34, 0
+	390     (000005bc) const/16             v35, 0
+	391     (000005c0) const/16             v36, 0
+	392     (000005c4) const/16             v37, 0
+	393     (000005c8) const/16             v38, 0
+	394     (000005cc) const/16             v39, 0
+	395     (000005d0) const/16             v40, 0
+	396     (000005d4) const/16             v41, 0
+	397     (000005d8) const/16             v42, 0
+	398     (000005dc) const/16             v43, 0
+	399     (000005e0) move-object/from16   v22, v9
+	400     (000005e4) invoke-static/range  v22 ... v45, Lcom/lele/llmonitor/data/soc/SocSnapshot;->copy$default(Lcom/lele/llmonitor/data/soc/SocSnapshot; J Ljava/lang/Float; I I Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Float; Ljava/lang/Integer; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List; Ljava/lang/Long; Ljava/lang/Long; Ljava/util/List; Ljava/lang/String; Ljava/util/List; Ljava/util/List; Ljava/util/List; I Ljava/lang/Object;)Lcom/lele/llmonitor/data/soc/SocSnapshot;
+	401     (000005ea) move-result-object   v9
+	402     (000005ec) goto                 +4h
+
+invokeSuspend-BB@0x5ee : [ invokeSuspend-BB@0x5f4 ]
+	403     (000005ee) move-object/from16   v22, v9
+	404     (000005f2) const/4              v9, 0
+
+invokeSuspend-BB@0x5f4 : [ invokeSuspend-BB@0x608 invokeSuspend-BB@0x696 ]
+	405     (000005f4) invoke-static        v9, v12, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	406     (000005fa) move-result          v9
+	407     (000005fc) move/from16          v51, v9
+	408     (00000600) xor-int/lit8         v9, v51, 1
+	409     (00000604) if-nez               v51, +049h
+
+invokeSuspend-BB@0x608 : [ invokeSuspend-BB@0x660 invokeSuspend-BB@0x664 ]
+	410     (00000608) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$0 Ljava/lang/Object;
+	411     (0000060c) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	412     (00000610) move-object/from16   v16, v15
+	413     (00000614) const/4              v15, 0
+	414     (00000616) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	415     (0000061a) iput-object          v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	416     (0000061e) iput-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	417     (00000622) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	418     (00000626) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	419     (0000062a) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$7 Ljava/lang/Object;
+	420     (0000062e) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$8 Ljava/lang/Object;
+	421     (00000632) iput-object          v12, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$9 Ljava/lang/Object;
+	422     (00000636) iput-wide            v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	423     (0000063a) iput-wide            v13, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	424     (0000063e) iput-wide            v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	425     (00000642) iput                 v8, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	426     (00000646) iput                 v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	427     (0000064a) iput                 v9, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$2 I
+	428     (0000064e) const/4              v15, 4
+	429     (00000650) iput                 v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->label I
+	430     (00000654) invoke-interface     v2, v12, v0, Lpv0;->emit(Ljava/lang/Object; Ln60;)Ljava/lang/Object;
+	431     (0000065a) move-result-object   v15
+	432     (0000065c) if-ne                v15, v1, +004h
+
+invokeSuspend-BB@0x660 : [ invokeSuspend-BB@0x71a ]
+	433     (00000660) goto/16              +05dh
+
+invokeSuspend-BB@0x664 : [ invokeSuspend-BB@0x676 ]
+	434     (00000664) move-object          v15, v12
+	435     (00000666) move-wide/from16     v46, v10
+	436     (0000066a) move                 v10, v8
+	437     (0000066c) move-wide            v11, v4
+	438     (0000066e) move-wide/from16     v4, v46
+	439     (00000672) move-object/from16   v8, v16
+
+invokeSuspend-BB@0x676 : [ invokeSuspend-BB@0x6b6 ]
+	440     (00000676) move/from16          v17, v3
+	441     (0000067a) move-object          v3, v8
+	442     (0000067c) move/from16          v16, v10
+	443     (00000680) move-wide/from16     v46, v13
+	444     (00000684) move-wide/from16     v48, v11
+	445     (00000688) move-wide            v12, v4
+	446     (0000068a) move-wide/from16     v4, v48
+	447     (0000068e) move-object          v14, v7
+	448     (00000690) move-wide/from16     v10, v46
+	449     (00000694) goto                 +11h
+
+invokeSuspend-BB@0x696 : [ invokeSuspend-BB@0x6b6 ]
+	450     (00000696) move-object/from16   v16, v15
+	451     (0000069a) move-wide/from16     v46, v13
+	452     (0000069e) move-wide            v12, v10
+	453     (000006a0) move/from16          v17, v3
+	454     (000006a4) move-object/from16   v3, v16
+	455     (000006a8) move-object/from16   v15, v22
+	456     (000006ac) move/from16          v16, v8
+	457     (000006b0) move-wide/from16     v10, v46
+	458     (000006b4) move-object          v14, v7
+
+invokeSuspend-BB@0x6b6 : [ invokeSuspend-BB@0x71a invokeSuspend-BB@0x71c ]
+	459     (000006b6) iget-wide            v7, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->$intervalMs J
+	460     (000006ba) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$0 Ljava/lang/Object;
+	461     (000006be) iput-object          v3, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$1 Ljava/lang/Object;
+	462     (000006c2) iput-object          v15, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$2 Ljava/lang/Object;
+	463     (000006c6) iput-object          v14, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$3 Ljava/lang/Object;
+	464     (000006ca) iput-object          v6, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$4 Ljava/lang/Object;
+	465     (000006ce) move-object/from16   v18, v2
+	466     (000006d2) const/4              v2, 0
+	467     (000006d4) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$5 Ljava/lang/Object;
+	468     (000006d8) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$6 Ljava/lang/Object;
+	469     (000006dc) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$7 Ljava/lang/Object;
+	470     (000006e0) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$8 Ljava/lang/Object;
+	471     (000006e4) iput-object          v2, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->L$9 Ljava/lang/Object;
+	472     (000006e8) iput-wide            v12, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$0 J
+	473     (000006ec) iput-wide            v10, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$1 J
+	474     (000006f0) iput-wide            v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->J$2 J
+	475     (000006f4) move/from16          v4, v16
+	476     (000006f8) iput                 v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$0 I
+	477     (000006fc) move/from16          v4, v17
+	478     (00000700) iput                 v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$1 I
+	479     (00000704) iput                 v9, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->I$2 I
+	480     (00000708) const/4              v4, 5
+	481     (0000070a) iput                 v4, v0, Lcom/lele/llmonitor/data/soc/SocRepository$stream$1;->label I
+	482     (0000070e) invoke-static        v7, v8, v0, Ln54;->r(J Ln60;)Ljava/lang/Object;
+	483     (00000714) move-result-object   v5
+	484     (00000716) if-ne                v5, v1, +003h
+
+invokeSuspend-BB@0x71a : 
+	485     (0000071a) return-object        v1
+
+invokeSuspend-BB@0x71c : [ invokeSuspend-BB@0x9a ]
+	486     (0000071c) move-object          v7, v6
+	487     (0000071e) goto/16              -342h
+
+invokeSuspend-BB@0x722 : [ invokeSuspend-BB@0x276 ]
+	488     (00000722) move-object          v9, v1
+	489     (00000724) move-object          v2, v3
+	490     (00000726) move-wide            v3, v10
+	491     (00000728) move-object          v10, v15
+	492     (0000072a) move-object/from16   v1, v18
+	493     (0000072e) goto/16              -25ch
+
+invokeSuspend-BB@0x732 : 
+	494     (00000732) sget-object          v0, Lbw3;->a Lbw3;
+	495     (00000736) return-object        v0
+

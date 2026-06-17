@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->getCoreId()I [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:int
+
+getCoreId-BB@0x0 : 
+	0       (00000000) iget                 v0, v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->coreId I
+	1       (00000004) return               v0
+

@@ -1,0 +1,15 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->c(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/graphics/ImageDecoder; Landroid/graphics/ImageDecoder$ImageInfo; Landroid/graphics/ImageDecoder$Source;)V [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.HomeWallpaperStorage
+# - v1:android.graphics.ImageDecoder
+# - v2:android.graphics.ImageDecoder$ImageInfo
+# - v3:android.graphics.ImageDecoder$Source
+#
+# - return:void
+
+c-BB@0x0 : 
+	0       (00000000) invoke-static        v0, v1, v2, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->decodeStartupPreviewBitmap$lambda$0$0(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/graphics/ImageDecoder; Landroid/graphics/ImageDecoder$ImageInfo; Landroid/graphics/ImageDecoder$Source;)V
+	1       (00000006) return-void          
+

@@ -1,0 +1,36 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->normalizeHomeCardOpacity(F)F [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:float
+#
+# - return:float
+
+normalizeHomeCardOpacity-BB@0x0 : [ normalizeHomeCardOpacity-BB@0x1a normalizeHomeCardOpacity-BB@0x3e ]
+	0       (00000000) invoke-static        v3, Ljava/lang/Math;->abs(F)F
+	1       (00000006) move-result          v2
+	2       (00000008) const                v0, 2139095039
+	3       (0000000e) cmpg-float           v2, v2, v0
+	4       (00000012) const/high16         v0, 1065353216
+	5       (00000016) if-gtz               v2, +014h
+
+normalizeHomeCardOpacity-BB@0x1a : [ normalizeHomeCardOpacity-BB@0x24 normalizeHomeCardOpacity-BB@0x34 ]
+	6       (0000001a) cmpl-float           v2, v3, v0
+	7       (0000001e) const/4              v1, 0
+	8       (00000020) if-lez               v2, +00ah
+
+normalizeHomeCardOpacity-BB@0x24 : 
+	9       (00000024) const/high16         v2, 1120403456
+	10      (00000028) div-float/2addr      v3, v2
+	11      (0000002a) invoke-static        v3, v1, v0, Lib1;->k(F F F)F
+	12      (00000030) move-result          v2
+	13      (00000032) return               v2
+
+normalizeHomeCardOpacity-BB@0x34 : 
+	14      (00000034) invoke-static        v3, v1, v0, Lib1;->k(F F F)F
+	15      (0000003a) move-result          v2
+	16      (0000003c) return               v2
+
+normalizeHomeCardOpacity-BB@0x3e : 
+	17      (0000003e) return               v0
+

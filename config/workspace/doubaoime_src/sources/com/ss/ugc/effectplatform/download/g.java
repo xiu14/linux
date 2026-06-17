@@ -1,0 +1,6 @@
+package com.ss.ugc.effectplatform.download;
+
+/* loaded from: classes2.dex */
+public interface g {
+    String a(bytekn.foundation.io.file.b bVar, long j, c cVar);
+}

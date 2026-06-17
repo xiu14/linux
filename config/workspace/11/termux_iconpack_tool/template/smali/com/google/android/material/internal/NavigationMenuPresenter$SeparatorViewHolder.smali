@@ -1,0 +1,14 @@
+.class Lcom/google/android/material/internal/NavigationMenuPresenter$SeparatorViewHolder;
+.super Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;
+.source "r8-map-id-5389b39850ea3af500c7854811bd81da73ae8b6ea4d88eb7ca022411f1b5d3c1"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/internal/NavigationMenuPresenter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "SeparatorViewHolder"
+.end annotation

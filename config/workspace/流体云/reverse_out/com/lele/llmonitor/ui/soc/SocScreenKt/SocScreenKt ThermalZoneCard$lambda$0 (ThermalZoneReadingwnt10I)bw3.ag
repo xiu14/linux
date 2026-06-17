@@ -1,0 +1,155 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->ThermalZoneCard$lambda$0(Lcom/lele/llmonitor/data/soc/ThermalZoneReading; Lwn; Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v25
+# - v26:com.lele.llmonitor.data.soc.ThermalZoneReading
+# - v27:wn
+# - v28:t10
+# - v29:int
+#
+# - return:bw3
+
+ThermalZoneCard$lambda$0-BB@0x0 : [ ThermalZoneCard$lambda$0-BB@0x16 ThermalZoneCard$lambda$0-BB@0x1a ]
+	0       (00000000) invoke-virtual/range v27, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) and-int/lit8         v0, v29, 17
+	2       (0000000a) const/16             v1, 16
+	3       (0000000e) const/4              v2, 1
+	4       (00000010) const/4              v3, 0
+	5       (00000012) if-eq                v0, v1, +004h
+
+ThermalZoneCard$lambda$0-BB@0x16 : [ ThermalZoneCard$lambda$0-BB@0x1c ]
+	6       (00000016) move                 v0, v2
+	7       (00000018) goto                 +2h
+
+ThermalZoneCard$lambda$0-BB@0x1a : [ ThermalZoneCard$lambda$0-BB@0x1c ]
+	8       (0000001a) move                 v0, v3
+
+ThermalZoneCard$lambda$0-BB@0x1c : [ ThermalZoneCard$lambda$0-BB@0x34 ThermalZoneCard$lambda$0-BB@0x1da ]
+	9       (0000001c) and-int/lit8         v1, v29, 1
+	10      (00000020) move-object/from16   v4, v28
+	11      (00000024) check-cast           v4, Lb20;
+	12      (00000028) invoke-virtual       v4, v1, v0, Lb20;->O(I Z)Z
+	13      (0000002e) move-result          v0
+	14      (00000030) if-eqz               v0, +0d5h
+
+ThermalZoneCard$lambda$0-BB@0x34 : [ ThermalZoneCard$lambda$0-BB@0x88 ThermalZoneCard$lambda$0-BB@0x90 ]
+	15      (00000034) const/high16         v0, 1098907648
+	16      (00000038) sget-object          v1, Lj22;->a Lj22;
+	17      (0000003c) invoke-static        v1, v0, Ln54;->D(Lm22; F)Lm22;
+	18      (00000042) move-result-object   v0
+	19      (00000044) sget-object          v5, Ln54;->c Lfh;
+	20      (00000048) sget-object          v6, Lpx2;->r Lam;
+	21      (0000004c) invoke-static        v5, v6, v4, v3, Lxx;->a(Lih; Lam; Lt10; I)Lzx;
+	22      (00000052) move-result-object   v3
+	23      (00000054) invoke-static        v4, Lp34;->x(Lt10;)I
+	24      (0000005a) move-result          v5
+	25      (0000005c) invoke-virtual       v4, Lb20;->l()Lzj2;
+	26      (00000062) move-result-object   v6
+	27      (00000064) invoke-static        v4, v0, Ljn;->K(Lt10; Lm22;)Lm22;
+	28      (0000006a) move-result-object   v0
+	29      (0000006c) sget-object          v7, Lo10;->b Ln10;
+	30      (00000070) invoke-virtual       v7, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	31      (00000076) sget-object          v7, Ln10;->b Lq20;
+	32      (0000007a) invoke-virtual       v4, Lb20;->c0()V
+	33      (00000080) iget-boolean         v8, v4, Lb20;->S Z
+	34      (00000084) if-eqz               v8, +006h
+
+ThermalZoneCard$lambda$0-BB@0x88 : [ ThermalZoneCard$lambda$0-BB@0x96 ]
+	35      (00000088) invoke-virtual       v4, v7, Lb20;->k(Ls01;)V
+	36      (0000008e) goto                 +4h
+
+ThermalZoneCard$lambda$0-BB@0x90 : [ ThermalZoneCard$lambda$0-BB@0x96 ]
+	37      (00000090) invoke-virtual       v4, Lb20;->m0()V
+
+ThermalZoneCard$lambda$0-BB@0x96 : [ ThermalZoneCard$lambda$0-BB@0xb6 ThermalZoneCard$lambda$0-BB@0xd2 ]
+	38      (00000096) sget-object          v7, Ln10;->f Lxc;
+	39      (0000009a) invoke-static        v4, v7, v3, Lse1;->L(Lt10; Lh11; Ljava/lang/Object;)V
+	40      (000000a0) sget-object          v3, Ln10;->e Lxc;
+	41      (000000a4) invoke-static        v4, v3, v6, Lse1;->L(Lt10; Lh11; Ljava/lang/Object;)V
+	42      (000000aa) sget-object          v3, Ln10;->g Lxc;
+	43      (000000ae) iget-boolean         v6, v4, Lb20;->S Z
+	44      (000000b2) if-nez               v6, +010h
+
+ThermalZoneCard$lambda$0-BB@0xb6 : [ ThermalZoneCard$lambda$0-BB@0xd2 ThermalZoneCard$lambda$0-BB@0xd8 ]
+	45      (000000b6) invoke-virtual       v4, Lb20;->L()Ljava/lang/Object;
+	46      (000000bc) move-result-object   v6
+	47      (000000be) invoke-static        v5, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	48      (000000c4) move-result-object   v7
+	49      (000000c6) invoke-static        v6, v7, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	50      (000000cc) move-result          v6
+	51      (000000ce) if-nez               v6, +005h
+
+ThermalZoneCard$lambda$0-BB@0xd2 : [ ThermalZoneCard$lambda$0-BB@0xd8 ]
+	52      (000000d2) invoke-static        v5, v4, v5, v3, Lve2;->v(I Lb20; I Lxc;)V
+
+ThermalZoneCard$lambda$0-BB@0xd8 : [ ThermalZoneCard$lambda$0-BB@0x1e2 ]
+	53      (000000d8) sget-object          v3, Ln10;->d Lxc;
+	54      (000000dc) invoke-static        v4, v3, v0, Lse1;->L(Lt10; Lh11; Ljava/lang/Object;)V
+	55      (000000e2) invoke-virtual/range v26, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getZone()Ljava/lang/String;
+	56      (000000e8) move-result-object   v0
+	57      (000000ea) invoke-virtual/range v26, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getType()Ljava/lang/String;
+	58      (000000f0) move-result-object   v3
+	59      (000000f2) new-instance         v5, Ljava/lang/StringBuilder;
+	60      (000000f6) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	61      (000000fc) invoke-virtual       v5, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	62      (00000102) const-string         v0, " / "
+	63      (00000106) invoke-virtual       v5, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	64      (0000010c) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	65      (00000112) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	66      (00000118) move-result-object   v0
+	67      (0000011a) const/16             v3, 12
+	68      (0000011e) invoke-static        v3, Lse1;->y(I)J
+	69      (00000124) move-result-wide     v8
+	70      (00000126) sget-object          v3, Lox;->a Lmg3;
+	71      (0000012a) invoke-virtual       v4, v3, Lb20;->j(Lrq2;)Ljava/lang/Object;
+	72      (00000130) move-result-object   v5
+	73      (00000132) check-cast           v5, Lmx;
+	74      (00000136) iget-wide            v6, v5, Lmx;->s J
+	75      (0000013a) sget-object          v10, Lhz0;->h Lhz0;
+	76      (0000013e) const/16             v24, 28032
+	77      (00000142) const                v25, 233386
+	78      (00000148) const/4              v5, 0
+	79      (0000014a) const-wide/16        v11, 0
+	80      (0000014e) const/4              v13, 0
+	81      (00000150) const-wide/16        v14, 0
+	82      (00000154) const/16             v16, 1
+	83      (00000158) const/16             v17, 0
+	84      (0000015c) const/16             v18, 1
+	85      (00000160) const/16             v19, 0
+	86      (00000164) const/16             v20, 0
+	87      (00000168) const/16             v21, 0
+	88      (0000016c) const                v23, 1597440
+	89      (00000172) move-object/from16   v22, v4
+	90      (00000176) move-object          v4, v0
+	91      (00000178) invoke-static/range  v4 ... v25, Lbp3;->b(Ljava/lang/String; Lm22; J J Lhz0; J Lyl3; J I Z I I Ld11; Lyp3; Lt10; I I I)V
+	92      (0000017e) move-object/from16   v0, v22
+	93      (00000182) const/high16         v4, 1090519040
+	94      (00000186) invoke-static        v1, v4, Lac3;->d(Lm22; F)Lm22;
+	95      (0000018c) move-result-object   v1
+	96      (0000018e) invoke-static        v0, v1, Lid1;->f(Lt10; Lm22;)V
+	97      (00000194) invoke-virtual/range v26, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempC()F
+	98      (0000019a) move-result          v1
+	99      (0000019c) invoke-virtual/range v26, Lcom/lele/llmonitor/data/soc/ThermalZoneReading;->getTempFractionDigits()I
+	100     (000001a2) move-result          v4
+	101     (000001a4) invoke-static        v1, v4, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->formatTemp(F I)Ljava/lang/String;
+	102     (000001aa) move-result-object   v4
+	103     (000001ac) const/16             v1, 22
+	104     (000001b0) invoke-static        v1, Lse1;->y(I)J
+	105     (000001b6) move-result-wide     v8
+	106     (000001b8) invoke-virtual       v0, v3, Lb20;->j(Lrq2;)Ljava/lang/Object;
+	107     (000001be) move-result-object   v1
+	108     (000001c0) check-cast           v1, Lmx;
+	109     (000001c4) iget-wide            v6, v1, Lmx;->q J
+	110     (000001c8) sget-object          v10, Lhz0;->i Lhz0;
+	111     (000001cc) invoke-static/range  v4 ... v25, Lbp3;->b(Ljava/lang/String; Lm22; J J Lhz0; J Lyl3; J I Z I I Ld11; Lyp3; Lt10; I I I)V
+	112     (000001d2) invoke-virtual       v0, v2, Lb20;->p(Z)V
+	113     (000001d8) goto                 +5h
+
+ThermalZoneCard$lambda$0-BB@0x1da : [ ThermalZoneCard$lambda$0-BB@0x1e2 ]
+	114     (000001da) move-object          v0, v4
+	115     (000001dc) invoke-virtual       v0, Lb20;->R()V
+
+ThermalZoneCard$lambda$0-BB@0x1e2 : 
+	116     (000001e2) sget-object          v0, Lbw3;->a Lbw3;
+	117     (000001e6) return-object        v0
+

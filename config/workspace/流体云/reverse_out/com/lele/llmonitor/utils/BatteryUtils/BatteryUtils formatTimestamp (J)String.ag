@@ -1,0 +1,21 @@
+# Lcom/lele/llmonitor/utils/BatteryUtils;->formatTimestamp(J)Ljava/lang/String; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:long
+#
+# - return:java.lang.String
+
+formatTimestamp-BB@0x0 : 
+	0       (00000000) new-instance         v2, Ljava/text/SimpleDateFormat;
+	1       (00000004) const-string         v0, "HH:mm"
+	2       (00000008) invoke-static        Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) invoke-direct        v2, v0, v1, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String; Ljava/util/Locale;)V
+	5       (00000016) new-instance         v0, Ljava/util/Date;
+	6       (0000001a) invoke-direct        v0, v3, v4, Ljava/util/Date;-><init>(J)V
+	7       (00000020) invoke-virtual       v2, v0, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+	8       (00000026) move-result-object   v2
+	9       (00000028) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	10      (0000002e) return-object        v2
+

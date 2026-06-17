@@ -1,0 +1,65 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage$deleteHistoryWallpaper$2;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x88 ]
+	0       (00000000) iget                 v0, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage$deleteHistoryWallpaper$2;->label I
+	1       (00000004) const/4              v1, 0
+	2       (00000006) if-nez               v0, +041h
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0x38 ]
+	3       (0000000a) invoke-static        v4, Lib1;->Q(Ljava/lang/Object;)V
+	4       (00000010) sget-object          v4, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperStorage;
+	5       (00000014) iget-object          v0, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage$deleteHistoryWallpaper$2;->$context Landroid/content/Context;
+	6       (00000018) invoke-static        v4, v0, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->access$ensureWallpaperDirectories(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/content/Context;)V
+	7       (0000001e) iget-object          v0, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage$deleteHistoryWallpaper$2;->$context Landroid/content/Context;
+	8       (00000022) const/4              v2, 2
+	9       (00000024) invoke-static        v4, v0, v1, v2, v1, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles$default(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/content/Context; Ljava/io/File; I Ljava/lang/Object;)Ljava/util/List;
+	10      (0000002a) move-result-object   v4
+	11      (0000002c) iget-object          v3, v3, Lcom/lele/llmonitor/data/HomeWallpaperStorage$deleteHistoryWallpaper$2;->$historyFileName Ljava/lang/String;
+	12      (00000030) invoke-interface     v4, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	13      (00000036) move-result-object   v4
+
+invokeSuspend-BB@0x38 : [ invokeSuspend-BB@0x44 invokeSuspend-BB@0x68 ]
+	14      (00000038) invoke-interface     v4, Ljava/util/Iterator;->hasNext()Z
+	15      (0000003e) move-result          v0
+	16      (00000040) if-eqz               v0, +014h
+
+invokeSuspend-BB@0x44 : [ invokeSuspend-BB@0x66 invokeSuspend-BB@0x38 ]
+	17      (00000044) invoke-interface     v4, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	18      (0000004a) move-result-object   v0
+	19      (0000004c) move-object          v2, v0
+	20      (0000004e) check-cast           v2, Ljava/io/File;
+	21      (00000052) invoke-virtual       v2, Ljava/io/File;->getName()Ljava/lang/String;
+	22      (00000058) move-result-object   v2
+	23      (0000005a) invoke-static        v2, v3, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	24      (00000060) move-result          v2
+	25      (00000062) if-eqz               v2, -015h
+
+invokeSuspend-BB@0x66 : [ invokeSuspend-BB@0x68 ]
+	26      (00000066) move-object          v1, v0
+
+invokeSuspend-BB@0x68 : [ invokeSuspend-BB@0x70 invokeSuspend-BB@0x76 ]
+	27      (00000068) check-cast           v1, Ljava/io/File;
+	28      (0000006c) if-nez               v1, +005h
+
+invokeSuspend-BB@0x70 : 
+	29      (00000070) sget-object          v3, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+	30      (00000074) return-object        v3
+
+invokeSuspend-BB@0x76 : 
+	31      (00000076) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	32      (0000007c) move-result          v3
+	33      (0000007e) invoke-static        v3, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	34      (00000084) move-result-object   v3
+	35      (00000086) return-object        v3
+
+invokeSuspend-BB@0x88 : 
+	36      (00000088) const-string         v3, "call to 'resume' before 'invoke' with coroutine"
+	37      (0000008c) invoke-static        v3, Lh;->m(Ljava/lang/String;)V
+	38      (00000092) return-object        v1
+

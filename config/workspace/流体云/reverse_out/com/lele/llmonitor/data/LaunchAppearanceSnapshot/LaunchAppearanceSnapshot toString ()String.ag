@@ -1,0 +1,49 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v12
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) iget                 v0, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->backgroundArgb I
+	1       (00000004) iget                 v1, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->themeMode I
+	2       (00000008) iget-object          v2, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->themePalettePreset Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	3       (0000000c) iget-boolean         v3, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperEnabled Z
+	4       (00000010) iget                 v4, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperAlpha F
+	5       (00000014) iget                 v5, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperBlur F
+	6       (00000018) iget-wide            v6, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->wallpaperVersion J
+	7       (0000001c) iget-wide            v8, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->startupPreviewVersion J
+	8       (00000020) iget-object          v12, v12, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->startupPreviewRenderSpec Ljava/lang/String;
+	9       (00000024) new-instance         v10, Ljava/lang/StringBuilder;
+	10      (00000028) const-string         v11, "LaunchAppearanceSnapshot(backgroundArgb="
+	11      (0000002c) invoke-direct        v10, v11, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	12      (00000032) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	13      (00000038) const-string         v0, ", themeMode="
+	14      (0000003c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (00000042) invoke-virtual       v10, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	16      (00000048) const-string         v0, ", themePalettePreset="
+	17      (0000004c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (00000052) invoke-virtual       v10, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	19      (00000058) const-string         v0, ", wallpaperEnabled="
+	20      (0000005c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000062) invoke-virtual       v10, v3, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+	22      (00000068) const-string         v0, ", wallpaperAlpha="
+	23      (0000006c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000072) invoke-virtual       v10, v4, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+	25      (00000078) const-string         v0, ", wallpaperBlur="
+	26      (0000007c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	27      (00000082) invoke-virtual       v10, v5, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+	28      (00000088) const-string         v0, ", wallpaperVersion="
+	29      (0000008c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	30      (00000092) invoke-virtual       v10, v6, v7, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	31      (00000098) const-string         v0, ", startupPreviewVersion="
+	32      (0000009c) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	33      (000000a2) invoke-virtual       v10, v8, v9, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	34      (000000a8) const-string         v0, ", startupPreviewRenderSpec="
+	35      (000000ac) invoke-virtual       v10, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	36      (000000b2) const-string         v0, ")"
+	37      (000000b6) invoke-static        v10, v12, v0, Lve2;->r(Ljava/lang/StringBuilder; Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	38      (000000bc) move-result-object   v12
+	39      (000000be) return-object        v12
+

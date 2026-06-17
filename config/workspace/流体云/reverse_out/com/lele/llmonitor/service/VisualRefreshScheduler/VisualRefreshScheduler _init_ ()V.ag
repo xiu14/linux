@@ -1,0 +1,16 @@
+# Lcom/lele/llmonitor/service/VisualRefreshScheduler;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v5, 3
+	1       (00000002) const/4              v6, 0
+	2       (00000004) const-wide/16        v1, 0
+	3       (00000008) const-wide/16        v3, 0
+	4       (0000000c) move-object          v0, v7
+	5       (0000000e) invoke-direct/range  v0 ... v6, Lcom/lele/llmonitor/service/VisualRefreshScheduler;-><init>(J J I Lic0;)V
+	6       (00000014) return-void          
+

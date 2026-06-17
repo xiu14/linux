@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Frames.BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/Frames.BottomSheet.Modal.Animation</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">?colorSurface</item>
+        <item name="android:navigationBarDividerColor">@color/transparent</item>
+        <item name="bottomSheetStyle">@style/Frames.BottomSheet.Modal</item>
+    </style>
+    <style name="Frames.BottomSheetDialog.MaterialYou" parent="@style/ThemeOverlay.Material3.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/Frames.BottomSheet.Modal.Animation</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">?colorSurface</item>
+        <item name="android:navigationBarDividerColor">@color/transparent</item>
+        <item name="bottomSheetStyle">@style/Frames.BottomSheet.Modal</item>
+    </style>
+    <style name="Frames.SplashScreen" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">?colorOnSurface</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+        <item name="android:navigationBarColor">?colorSurface</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:colorEdgeEffect">?colorSecondary</item>
+        <item name="android:navigationBarDividerColor">@color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:forceDarkAllowed">true</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorBackgroundFloating">@color/background</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorOnSecondary">@color/onAccent</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorPrimaryVariant">@color/primaryDark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="customFontBold">@font/manrope_bold_fam</item>
+        <item name="customFontNormal">@font/manrope_normal_fam</item>
+        <item name="popupMenuBackground">@drawable/menu_background</item>
+        <item name="snackbarBackgroundColor">@color/snackbarBackgroundColor</item>
+        <item name="snackbarButtonColor">@color/snackbarButtonColor</item>
+        <item name="snackbarTextColor">@color/snackbarTextColor</item>
+    </style>
+    <style name="Frames.SplashScreen.MaterialYou" parent="@style/Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">?colorOnSurface</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+        <item name="android:navigationBarColor">?colorSurface</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:colorEdgeEffect">?colorSecondary</item>
+        <item name="android:navigationBarDividerColor">@color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:forceDarkAllowed">true</item>
+        <item name="colorAccent">@color/m3_accent</item>
+        <item name="colorBackgroundFloating">@color/m3_background</item>
+        <item name="colorOnBackground">@color/m3_onBackground</item>
+        <item name="colorOnPrimary">@color/m3_onPrimary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_onAccent</item>
+        <item name="colorOnSecondary">@color/m3_onAccent</item>
+        <item name="colorOnSecondaryContainer">@color/m3_onSecondaryContainer</item>
+        <item name="colorOnSurface">@color/m3_onSurface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_onSurfaceVariant</item>
+        <item name="colorOnTertiaryContainer">@color/m3_onTertiaryContainer</item>
+        <item name="colorPrimary">@color/m3_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_accent</item>
+        <item name="colorPrimaryDark">@color/m3_primaryDark</item>
+        <item name="colorPrimaryVariant">@color/m3_primaryDark</item>
+        <item name="colorSecondary">@color/m3_accent</item>
+        <item name="colorSecondaryContainer">@color/m3_secondaryContainer</item>
+        <item name="colorSecondaryVariant">@color/m3_accent</item>
+        <item name="colorSurface">@color/m3_surface</item>
+        <item name="colorTertiaryContainer">@color/m3_tertiaryContainer</item>
+        <item name="customFontBold">@font/manrope_bold_fam</item>
+        <item name="customFontNormal">@font/manrope_normal_fam</item>
+        <item name="popupMenuBackground">@drawable/menu_background</item>
+        <item name="preferenceTheme">@style/Widget.Frames.PreferenceThemeOverlay.MaterialYou</item>
+        <item name="snackbarBackgroundColor">@color/m3_snackbarBackgroundColor</item>
+        <item name="snackbarButtonColor">@color/m3_snackbarButtonColor</item>
+        <item name="snackbarTextColor">@color/m3_snackbarTextColor</item>
+    </style>
+</resources>

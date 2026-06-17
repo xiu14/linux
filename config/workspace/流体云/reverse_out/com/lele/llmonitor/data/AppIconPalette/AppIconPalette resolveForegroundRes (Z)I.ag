@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/data/AppIconPalette;->resolveForegroundRes(Z)I [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:boolean
+#
+# - return:int
+
+resolveForegroundRes-BB@0x0 : [ resolveForegroundRes-BB@0x4 resolveForegroundRes-BB@0xa ]
+	0       (00000000) if-eqz               v1, +005h
+
+resolveForegroundRes-BB@0x4 : 
+	1       (00000004) iget                 v0, v0, Lcom/lele/llmonitor/data/AppIconPalette;->notificationDarkForegroundRes I
+	2       (00000008) return               v0
+
+resolveForegroundRes-BB@0xa : 
+	3       (0000000a) iget                 v0, v0, Lcom/lele/llmonitor/data/AppIconPalette;->notificationForegroundRes I
+	4       (0000000e) return               v0
+

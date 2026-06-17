@@ -1,0 +1,5 @@
+package e.c.e.e;
+
+/* loaded from: classes2.dex */
+public interface d {
+}

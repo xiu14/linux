@@ -1,0 +1,21 @@
+# Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;-><init>(I Z Ljava/lang/String; Ljava/lang/Integer; Ljava/lang/Integer;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:int
+# - v2:boolean
+# - v3:java.lang.String
+# - v4:java.lang.Integer
+# - v5:java.lang.Integer
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	1       (00000006) iput                 v1, v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->coreId I
+	2       (0000000a) iput-boolean         v2, v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->online Z
+	3       (0000000e) iput-object          v3, v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->policy Ljava/lang/String;
+	4       (00000012) iput-object          v4, v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->currentMHz Ljava/lang/Integer;
+	5       (00000016) iput-object          v5, v0, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->maxMHz Ljava/lang/Integer;
+	6       (0000001a) return-void          
+

@@ -1,0 +1,23 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->create(Ljava/lang/Object; Ln60;)Ln60; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:java.lang.Object
+# - v11:n60
+#
+# - return:n60
+
+create-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;
+	1       (00000004) iget                 v1, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$displayPower F
+	2       (00000008) iget                 v2, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$displayCurrent F
+	3       (0000000c) iget                 v3, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$currentCapacity I
+	4       (00000010) iget                 v4, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$totalCapacity I
+	5       (00000014) iget                 v5, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$tempC F
+	6       (00000018) iget                 v6, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$tempFractionDigits I
+	7       (0000001c) iget-object          v7, v9, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->$updateTimeStr Ljava/lang/String;
+	8       (00000020) move-object          v8, v11
+	9       (00000022) invoke-direct/range  v0 ... v8, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;-><init>(F F I I F I Ljava/lang/String; Ln60;)V
+	10      (00000028) iput-object          v10, v0, Lcom/lele/llmonitor/ui/widget/BatteryWidgetRefreshSupportKt$forceRefreshBatteryWidgetsOnce$2$1;->L$0 Ljava/lang/Object;
+	11      (0000002c) return-object        v0
+

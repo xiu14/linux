@@ -1,0 +1,64 @@
+# Lcom/lele/llmonitor/data/LaunchAppearanceSnapshotKt;->persistLaunchAppearanceSnapshot(Landroid/content/SharedPreferences; Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;)V [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.SharedPreferences
+# - v4:com.lele.llmonitor.data.LaunchAppearanceSnapshot
+#
+# - return:void
+
+persistLaunchAppearanceSnapshot-BB@0x0 : 
+	0       (00000000) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) invoke-interface     v3, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	3       (00000012) move-result-object   v3
+	4       (00000014) const-string         v0, "launch_background_argb"
+	5       (00000018) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getBackgroundArgb()I
+	6       (0000001e) move-result          v1
+	7       (00000020) invoke-interface     v3, v0, v1, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	8       (00000026) move-result-object   v3
+	9       (00000028) const-string         v0, "launch_theme_mode"
+	10      (0000002c) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getThemeMode()I
+	11      (00000032) move-result          v1
+	12      (00000034) invoke-interface     v3, v0, v1, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	13      (0000003a) move-result-object   v3
+	14      (0000003c) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getThemePalettePreset()Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	15      (00000042) move-result-object   v0
+	16      (00000044) invoke-virtual       v0, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;->getPreferenceValue()Ljava/lang/String;
+	17      (0000004a) move-result-object   v0
+	18      (0000004c) const-string         v1, "launch_theme_palette"
+	19      (00000050) invoke-interface     v3, v1, v0, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+	20      (00000056) move-result-object   v3
+	21      (00000058) const-string         v0, "launch_wallpaper_enabled"
+	22      (0000005c) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getWallpaperEnabled()Z
+	23      (00000062) move-result          v1
+	24      (00000064) invoke-interface     v3, v0, v1, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String; Z)Landroid/content/SharedPreferences$Editor;
+	25      (0000006a) move-result-object   v3
+	26      (0000006c) const-string         v0, "launch_wallpaper_alpha"
+	27      (00000070) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getWallpaperAlpha()F
+	28      (00000076) move-result          v1
+	29      (00000078) invoke-interface     v3, v0, v1, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String; F)Landroid/content/SharedPreferences$Editor;
+	30      (0000007e) move-result-object   v3
+	31      (00000080) const-string         v0, "launch_wallpaper_blur"
+	32      (00000084) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getWallpaperBlur()F
+	33      (0000008a) move-result          v1
+	34      (0000008c) invoke-interface     v3, v0, v1, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String; F)Landroid/content/SharedPreferences$Editor;
+	35      (00000092) move-result-object   v3
+	36      (00000094) const-string         v0, "launch_wallpaper_version"
+	37      (00000098) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getWallpaperVersion()J
+	38      (0000009e) move-result-wide     v1
+	39      (000000a0) invoke-interface     v3, v0, v1, v2, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String; J)Landroid/content/SharedPreferences$Editor;
+	40      (000000a6) move-result-object   v3
+	41      (000000a8) const-string         v0, "launch_startup_preview_version"
+	42      (000000ac) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getStartupPreviewVersion()J
+	43      (000000b2) move-result-wide     v1
+	44      (000000b4) invoke-interface     v3, v0, v1, v2, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String; J)Landroid/content/SharedPreferences$Editor;
+	45      (000000ba) move-result-object   v3
+	46      (000000bc) const-string         v0, "launch_startup_preview_render_spec"
+	47      (000000c0) invoke-virtual       v4, Lcom/lele/llmonitor/data/LaunchAppearanceSnapshot;->getStartupPreviewRenderSpec()Ljava/lang/String;
+	48      (000000c6) move-result-object   v4
+	49      (000000c8) invoke-interface     v3, v0, v4, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+	50      (000000ce) move-result-object   v3
+	51      (000000d0) invoke-interface     v3, Landroid/content/SharedPreferences$Editor;->commit()Z
+	52      (000000d6) return-void          
+

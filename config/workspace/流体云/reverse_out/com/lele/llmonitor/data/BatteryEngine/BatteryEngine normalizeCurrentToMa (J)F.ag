@@ -1,0 +1,25 @@
+# Lcom/lele/llmonitor/data/BatteryEngine;->normalizeCurrentToMa(J)F [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:long
+#
+# - return:float
+
+normalizeCurrentToMa-BB@0x0 : [ normalizeCurrentToMa-BB@0x14 normalizeCurrentToMa-BB@0x1e ]
+	0       (00000000) invoke-static        v5, v6, Ljava/lang/Math;->abs(J)J
+	1       (00000006) move-result-wide     v0
+	2       (00000008) const-wide/16        v2, 20000
+	3       (0000000c) cmp-long             v4, v0, v2
+	4       (00000010) if-lez               v4, +007h
+
+normalizeCurrentToMa-BB@0x14 : 
+	5       (00000014) long-to-float        v4, v5
+	6       (00000016) const/high16         v5, 1148846080
+	7       (0000001a) div-float/2addr      v4, v5
+	8       (0000001c) return               v4
+
+normalizeCurrentToMa-BB@0x1e : 
+	9       (0000001e) long-to-float        v4, v5
+	10      (00000020) return               v4
+

@@ -1,0 +1,59 @@
+# Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:int
+
+hashCode-BB@0x0 : [ hashCode-BB@0x28 hashCode-BB@0x2c ]
+	0       (00000000) iget                 v0, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->coreId I
+	1       (00000004) invoke-static        v0, Ljava/lang/Integer;->hashCode(I)I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/16             v1, 31
+	4       (00000010) mul-int/2addr        v0, v1
+	5       (00000012) iget-boolean         v2, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->online Z
+	6       (00000016) invoke-static        v0, v1, v2, Ls42;->c(I I Z)I
+	7       (0000001c) move-result          v0
+	8       (0000001e) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->policy Ljava/lang/String;
+	9       (00000022) const/4              v3, 0
+	10      (00000024) if-nez               v2, +004h
+
+hashCode-BB@0x28 : [ hashCode-BB@0x34 ]
+	11      (00000028) move                 v2, v3
+	12      (0000002a) goto                 +5h
+
+hashCode-BB@0x2c : [ hashCode-BB@0x34 ]
+	13      (0000002c) invoke-virtual       v2, Ljava/lang/String;->hashCode()I
+	14      (00000032) move-result          v2
+
+hashCode-BB@0x34 : [ hashCode-BB@0x40 hashCode-BB@0x44 ]
+	15      (00000034) add-int/2addr        v0, v2
+	16      (00000036) mul-int/2addr        v0, v1
+	17      (00000038) iget-object          v2, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->currentMHz Ljava/lang/Integer;
+	18      (0000003c) if-nez               v2, +004h
+
+hashCode-BB@0x40 : [ hashCode-BB@0x4c ]
+	19      (00000040) move                 v2, v3
+	20      (00000042) goto                 +5h
+
+hashCode-BB@0x44 : [ hashCode-BB@0x4c ]
+	21      (00000044) invoke-virtual       v2, Ljava/lang/Object;->hashCode()I
+	22      (0000004a) move-result          v2
+
+hashCode-BB@0x4c : [ hashCode-BB@0x58 hashCode-BB@0x5a ]
+	23      (0000004c) add-int/2addr        v0, v2
+	24      (0000004e) mul-int/2addr        v0, v1
+	25      (00000050) iget-object          v4, v4, Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample;->maxMHz Ljava/lang/Integer;
+	26      (00000054) if-nez               v4, +003h
+
+hashCode-BB@0x58 : [ hashCode-BB@0x62 ]
+	27      (00000058) goto                 +5h
+
+hashCode-BB@0x5a : [ hashCode-BB@0x62 ]
+	28      (0000005a) invoke-virtual       v4, Ljava/lang/Object;->hashCode()I
+	29      (00000060) move-result          v3
+
+hashCode-BB@0x62 : 
+	30      (00000062) add-int/2addr        v0, v3
+	31      (00000064) return               v0
+

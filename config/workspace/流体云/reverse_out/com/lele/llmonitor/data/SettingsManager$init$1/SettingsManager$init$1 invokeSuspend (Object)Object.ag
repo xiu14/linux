@@ -1,0 +1,44 @@
+# Lcom/lele/llmonitor/data/SettingsManager$init$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0x8 invokeSuspend-BB@0x6a ]
+	0       (00000000) iget                 v0, v3, Lcom/lele/llmonitor/data/SettingsManager$init$1;->label I
+	1       (00000004) if-nez               v0, +033h
+
+invokeSuspend-BB@0x8 : 
+	2       (00000008) invoke-static        v4, Lib1;->Q(Ljava/lang/Object;)V
+	3       (0000000e) sget-object          v4, Lcom/lele/llmonitor/data/AppIconPaletteManager;->INSTANCE Lcom/lele/llmonitor/data/AppIconPaletteManager;
+	4       (00000012) iget-object          v3, v3, Lcom/lele/llmonitor/data/SettingsManager$init$1;->$context Landroid/content/Context;
+	5       (00000016) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->INSTANCE Lcom/lele/llmonitor/data/SettingsManager;
+	6       (0000001a) invoke-virtual       v0, Lcom/lele/llmonitor/data/SettingsManager;->getThemeMode()Ll52;
+	7       (00000020) move-result-object   v1
+	8       (00000022) invoke-interface     v1, Lcg3;->getValue()Ljava/lang/Object;
+	9       (00000028) move-result-object   v1
+	10      (0000002a) check-cast           v1, Ljava/lang/Number;
+	11      (0000002e) invoke-virtual       v1, Ljava/lang/Number;->intValue()I
+	12      (00000034) move-result          v1
+	13      (00000036) invoke-virtual       v0, Lcom/lele/llmonitor/data/SettingsManager;->getThemePalettePreset()Ll52;
+	14      (0000003c) move-result-object   v2
+	15      (0000003e) invoke-interface     v2, Lcg3;->getValue()Ljava/lang/Object;
+	16      (00000044) move-result-object   v2
+	17      (00000046) check-cast           v2, Lcom/lele/llmonitor/ui/theme/ThemePalettePreset;
+	18      (0000004a) invoke-virtual       v0, Lcom/lele/llmonitor/data/SettingsManager;->getFollowSystemAppIconMode()Ll52;
+	19      (00000050) move-result-object   v0
+	20      (00000052) invoke-interface     v0, Lcg3;->getValue()Ljava/lang/Object;
+	21      (00000058) move-result-object   v0
+	22      (0000005a) check-cast           v0, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;
+	23      (0000005e) invoke-virtual       v4, v3, v1, v2, v0, Lcom/lele/llmonitor/data/AppIconPaletteManager;->syncOnAppStart(Landroid/content/Context; I Lcom/lele/llmonitor/ui/theme/ThemePalettePreset; Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)V
+	24      (00000064) sget-object          v3, Lbw3;->a Lbw3;
+	25      (00000068) return-object        v3
+
+invokeSuspend-BB@0x6a : 
+	26      (0000006a) const-string         v3, "call to 'resume' before 'invoke' with coroutine"
+	27      (0000006e) invoke-static        v3, Lh;->m(Ljava/lang/String;)V
+	28      (00000074) const/4              v3, 0
+	29      (00000076) return-object        v3
+

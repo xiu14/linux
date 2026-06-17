@@ -1,0 +1,37 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService;->scheduleNextKeepAliveKick(J)V [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:long
+#
+# - return:void
+
+scheduleNextKeepAliveKick-BB@0x0 : [ scheduleNextKeepAliveKick-BB@0x60 ]
+	0       (00000000) const-string         v0, "alarm"
+	1       (00000004) invoke-virtual       v4, v0, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	4       (00000012) check-cast           v0, Landroid/app/AlarmManager;
+	5       (00000016) new-instance         v1, Landroid/content/Intent;
+	6       (0000001a) const-class          v2, Lcom/lele/llmonitor/service/BatteryMonitorService;
+	7       (0000001e) invoke-direct        v1, v4, v2, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
+	8       (00000024) const-string         v2, "com.lele.llmonitor.ACTION_KEEP_ALIVE_KICK"
+	9       (00000028) invoke-virtual       v1, v2, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+	10      (0000002e) move-result-object   v1
+	11      (00000030) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	12      (00000036) const                v2, 20260306
+	13      (0000003c) const/high16         v3, 201326592
+	14      (00000040) invoke-static        v4, v2, v1, v3, Landroid/app/PendingIntent;->getForegroundService(Landroid/content/Context; I Landroid/content/Intent; I)Landroid/app/PendingIntent;
+	15      (00000046) move-result-object   v4
+	16      (00000048) invoke-virtual       v0, v4, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+	17      (0000004e) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	18      (00000054) move-result-wide     v1
+	19      (00000056) add-long/2addr       v1, v5
+	20      (00000058) const/4              v5, 2
+	21      (0000005a) invoke-virtual       v0, v5, v1, v2, v4, Landroid/app/AlarmManager;->setAndAllowWhileIdle(I J Landroid/app/PendingIntent;)V
+	0:5f
+	(Ljava/lang/Exception; -> 60 scheduleNextKeepAliveKick-BB@0x60)
+
+scheduleNextKeepAliveKick-BB@0x60 : 
+	22      (00000060) return-void          
+

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Class name="cls_input_kbd_inset_adaptive"
+        inset_decimal="0.095,0,0.095,0"
+        inset="0,0,0,0"/>
+
+    <Class name="cls_input_kbd_morecand_inset_adaptive"
+        inset_decimal="0.095,0.008,0.095,0"
+        inset="0,0,0,0"/>
+
+    <Class name="cls_input_kbd9_inset_adaptive"
+        inset_decimal="0.095,0,0.095,0"
+        inset="0,0,0,0"/>
+
+    <Class name="cls_input_kbd_adaptive"
+        padding1x="0,0,0,0"
+        padding_decimal="0,0.226,0,0" />
+
+    <Class name="cls_input_kbd_adaptive_editor"
+        padding1x="0,0,0,0"
+        padding_decimal="0,0.226,0,0" />
+
+    <Class name="cls_input_kbd9_adaptive"
+        padding1x="0,0,0,0"
+        padding_decimal="0,0.226,0,0" />
+
+    <Class name="cls_input_kbd9_adaptive_editor"
+        padding1x="0,0,0,0"
+        padding_decimal="0,0.226,0,0" />
+
+    <Class name="cls_toolbar_adaptive" inset_decimal="0.082,0,0.082,0" />
+    <Class name="cls_toolbar_no_typing_adaptive" inset_decimal="0.082,0.3571,0.082,0" />
+    <Class name="cls_toolbar_no_typing_adaptive_editor" inset_decimal="0.082,0.2,0.082,0.2" />
+    <Class name="cls_toolbar_idle_adaptive" inset_decimal="0.109,0,0.109,0" />
+    <Class name="cls_toolbar_tip_adaptive" padding_decimal="0.1,0.17857,0.1,0.10714" />
+    <Class name="cls_toolbar_tip_quick_adaptive" padding_decimal="0.09,0.34,0.09,0" />
+
+    <Class name="cls_translate_container_adaptive" inset_decimal="0.109, 0.16667, 0.109, 0" />
+
+    <Class name="cls_toolbar_bk_adaptive" height_weight="0.23" />
+    <Class name="cls_toolbar_bk_adaptive_editor" height_weight="0.23" />
+    <Class name="cld_toolbar_second_page_button_adaptive" padding_decimal="0.01,0.22,0.01,0.06564" />
+
+    <!-- 26键 中英切换/123 按钮 -->
+    <Class name="cls_button_123_width_adaptive" width_weight="59.4" />
+
+    <!-- 26键 符号123分开模式中，符号 按钮-->
+    <Class name="cls_26key_button_symble_width_adaptive_s" width_weight="47.5" />
+
+    <!-- 26键 符号123分开模式中，123 按钮 -->
+    <Class name="cls_26key_button_123_width_adaptive_s" width_weight="41.5" target="5"/>
+
+    <!-- 26键 符号123分开模式中, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_width_adaptive_s" width_weight="35.5" />
+
+    <Class name="cls_button_comma_width_adaptive_s" width_weight="35.5" />
+
+    <Class name="cls_button_period_width_adaptive_s" width_weight="35.5" />
+
+    <!-- 26键 符号123分开模式中，空格 按钮 -->
+    <Class name="cls_26key_button_space_width_adaptive_s" width_weight="106.5" />
+
+    <!-- 26键 符号123分开模式中，中英 按钮 -->
+    <Class name="cls_26key_button_cn2en_width_adaptive_s" width_weight="44.5" />
+
+    <!-- 26键 符号123分开模式中，enter 按钮 -->
+    <Class name="cls_26key_button_enter_width_adaptive_s" width_weight="79.5" />
+
+    <!-- 26键 符号123合并模式中，123 按钮 -->
+    <Class name="cls_26key_button_123_width_adaptive" width_weight="70.6" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_26key_button_space_width_adaptive" width_weight="133.6" />
+
+    <!-- 26键 符号123合并模式中，中英 按钮 -->
+    <Class name="cls_26key_button_cn2en_width_adaptive" width_weight="38.6" />
+
+    <!-- 26键 符号123合并模式中，enter 按钮 -->
+    <Class name="cls_26key_button_enter_width_adaptive" width_weight="74.6" />
+
+    <!-- 26键 符号123合并模式中，返回按钮 -->
+    <Class name="cls_123symbol_button_back_width_adaptive" width_weight="66.5" />
+
+    <!-- 26键 符号123合并模式中，123 按钮 -->
+    <Class name="cls_123symbol_button_123_width_adaptive" width_weight="41.3" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_123symbol_button_space_width_adaptive" width_weight="172.5" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_123symbol_button_cn2en_width_adaptive" width_weight="38.6" />
+
+    <!-- 26键 符号123合并模式中，空格 按钮 -->
+    <Class name="cls_123symbol_button_enter_width_adaptive" width_weight="74.5" />
+
+    <!-- 26键 符号123合并模式中, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_width_adaptive" width_weight="37.6" />
+
+    <Class name="cls_button_comma_width_adaptive" width_weight="35.5" />
+
+    <Class name="cls_button_period_width_adaptive" width_weight="35.5" />
+
+    <!-- 26键 符号123合并模式中, 逗号句号合并键 -->
+    <Class name="cls_button_period_comma_cn_text_adaptive"  ficon_text_offset_tobox="0,-4" textpadding="0,5,0,6" />
+
+    <!-- 26键 句号、逗号 按钮 -->
+    <Class name="cls_keyboard_button_comma_width_adaptive"
+        width_weight="59.4" />
+
+    <!-- 26键 空格按钮 -->
+    <Class name="cls_button_space26_adaptive"
+        width_weight="182.2"/>
+
+    <Class name="cls_candidate_split_adaptive" margin_decimal="0.05,0.5,0.25,0.5" margin_center="0,20"/>
+    <Class name="cls_candidate_split_adaptive_editor" margin_decimal="0.05,0.5488,0.25,0.4512" margin_center="0,20"/>
+
+    <Class name="cls_settings_bk_adaptive"
+        width_weight="0.7606" padding_decimal="0.11968,0.04255,0.11968,0.1755"
+        columns="7" rows="2" maxheight="192"
+        childpadding_decimal="0.02797" childvpadding_decimal="0.07483"/>
+
+    <Class name="cls_btn_more_cand_button_adaptive" width_weight="23"
+        margin_decimal="0,0.5,0.18,0.5" margin_center="0,30"/>
+    <Class name="cls_btn_more_cand_button_adaptive_editor" width_weight="40"
+        margin_decimal="0,0.6154,0.18,0.3846" margin_center="0,30"/>
+
+    <Class name="cls_btn_morecand_back_adaptive"
+        width_weight="2.4" margin_decimal="0.8,0,0,0" />
+
+    <Class name="number_symbol_list_adaptive"
+        inset_decimal="0.026,0.015,0.026,0.05"/>
+
+    <Class name="cls_option_canditem_loading_adaptive" textpadding="0.08,0,0.04,0" ficon_width="0.6" />
+
+    <Class name="cls_symbol_tab_container_adaptive"
+        padding_decimal="0.006,0,0,0" inset_decimal="0.006,0,0,0" />
+
+    <Class name="cls_ai_writing_btn_func_adaptive"
+        width_weight="0.1" padding_decimal="0.0095,0.28571,0.0095,0.14285" textpadding="0.03,0,0,0" />
+
+    <Class name="cls_ai_writing_btn_close_adaptive"
+        width_weight="0.0576" padding_decimal="0.0095,0.28571,0.0095,0.14285" />
+
+    <Class name="cls_toolbar_tip_leading_space_adaptive" width_weight="0" width1x="12" />
+
+    <Class name="cls_toolbar_tip_leading_icon_adaptive"
+        padding_decimal="0,0,0,0" padding1x="0,10,0,10" />
+
+    <Class name="cls_toolbar_tip_label_adaptive" padding_decimal="0,0,0,0" padding1x="4,0,0,0" />
+
+    <Class name="cls_toolbar_tip_action_button_adaptive" textpadding="0.0366,0,0.0366,0"
+        padding_decimal="0,0,0,0" padding1x="4,6,4,6" />
+
+    <Class name="cls_toolbar_tip_close_button_adaptive"
+        padding_decimal="0,0,0,0" padding1x="4,6,6,6" />
+
+    <Class name="cls_trans_lang_button_adaptive"
+        padding_decimal="0,0,0,0" padding1x="4,4,8,4" />
+
+    <Class name="cls_trans_action_button_adaptive" width1x="52"
+        padding_decimal="0,0,0,0" padding1x="12,4,0,4" />
+
+    <Class name="cls_btn_trans_reset_adaptive"
+        padding_decimal="0,0,0,0" padding1x="6,6,6,6" />
+
+
+</Window>

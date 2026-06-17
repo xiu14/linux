@@ -1,0 +1,49 @@
+# Lcom/lele/llmonitor/data/local/BatteryEntity;-><init>(J J I F F F F I Lic0;)V [access_flags=public synthetic constructor]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:long
+# - v14:long
+# - v15:int
+# - v16:float
+# - v17:float
+# - v18:float
+# - v19:float
+# - v20:int
+# - v21:ic0
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x8 <init>-BB@0xc ]
+	0       (00000000) and-int/lit8         v0, v20, 1
+	1       (00000004) if-eqz               v0, +004h
+
+<init>-BB@0x8 : [ <init>-BB@0xc ]
+	2       (00000008) const-wide/16        v11, 0
+
+<init>-BB@0xc : [ <init>-BB@0x16 <init>-BB@0x2e ]
+	3       (0000000c) move-wide            v1, v11
+	4       (0000000e) and-int/lit8         v11, v20, 64
+	5       (00000012) if-eqz               v11, +00eh
+
+<init>-BB@0x16 : [ <init>-BB@0x1a ]
+	6       (00000016) const/4              v11, 0
+	7       (00000018) move                 v9, v11
+
+<init>-BB@0x1a : [ <init>-BB@0x34 ]
+	8       (0000001a) move-object          v0, v10
+	9       (0000001c) move-wide            v3, v13
+	10      (0000001e) move                 v5, v15
+	11      (00000020) move/from16          v6, v16
+	12      (00000024) move/from16          v7, v17
+	13      (00000028) move/from16          v8, v18
+	14      (0000002c) goto                 +4h
+
+<init>-BB@0x2e : [ <init>-BB@0x1a ]
+	15      (0000002e) move/from16          v9, v19
+	16      (00000032) goto                 -ch
+
+<init>-BB@0x34 : 
+	17      (00000034) invoke-direct/range  v0 ... v9, Lcom/lele/llmonitor/data/local/BatteryEntity;-><init>(J J I F F F F)V
+	18      (0000003a) return-void          
+

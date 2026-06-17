@@ -1,0 +1,22 @@
+# Lcom/lele/llmonitor/data/soc/SourceProbe;->hashCode()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+hashCode-BB@0x0 : 
+	0       (00000000) iget-object          v0, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;->source Ljava/lang/String;
+	1       (00000004) invoke-virtual       v0, Ljava/lang/String;->hashCode()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/16             v1, 31
+	4       (00000010) mul-int/2addr        v0, v1
+	5       (00000012) iget-object          v2, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;->value Ljava/lang/String;
+	6       (00000016) invoke-static        v2, v0, v1, Ls42;->d(Ljava/lang/String; I I)I
+	7       (0000001c) move-result          v0
+	8       (0000001e) iget-boolean         v3, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;->success Z
+	9       (00000022) invoke-static        v3, Ljava/lang/Boolean;->hashCode(Z)I
+	10      (00000028) move-result          v3
+	11      (0000002a) add-int/2addr        v3, v0
+	12      (0000002c) return               v3
+

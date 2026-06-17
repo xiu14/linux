@@ -1,0 +1,70 @@
+# Lcom/lele/llmonitor/ui/widget/BatteryWidget;->provideGlance(Landroid/content/Context; Ld31; Ln60;)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+# - v4:d31
+# - v5:n60
+#
+# - return:java.lang.Object
+
+provideGlance-BB@0x0 : [ provideGlance-BB@0x8 provideGlance-BB@0x26 ]
+	0       (00000000) instance-of          v3, v5, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;
+	1       (00000004) if-eqz               v3, +011h
+
+provideGlance-BB@0x8 : [ provideGlance-BB@0x1e provideGlance-BB@0x26 ]
+	2       (00000008) move-object          v3, v5
+	3       (0000000a) check-cast           v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;
+	4       (0000000e) iget                 v4, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->label I
+	5       (00000012) const/high16         v0, -2147483648
+	6       (00000016) and-int              v1, v4, v0
+	7       (0000001a) if-eqz               v1, +006h
+
+provideGlance-BB@0x1e : [ provideGlance-BB@0x30 ]
+	8       (0000001e) sub-int/2addr        v4, v0
+	9       (00000020) iput                 v4, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->label I
+	10      (00000024) goto                 +6h
+
+provideGlance-BB@0x26 : [ provideGlance-BB@0x30 ]
+	11      (00000026) new-instance         v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;
+	12      (0000002a) invoke-direct        v3, v2, v5, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;-><init>(Lcom/lele/llmonitor/ui/widget/BatteryWidget; Ln60;)V
+
+provideGlance-BB@0x30 : [ provideGlance-BB@0x40 provideGlance-BB@0x6e ]
+	13      (00000030) iget-object          v4, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->result Ljava/lang/Object;
+	14      (00000034) iget                 v5, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->label I
+	15      (00000038) const/4              v0, 0
+	16      (0000003a) const/4              v1, 1
+	17      (0000003c) if-eqz               v5, +019h
+
+provideGlance-BB@0x40 : [ provideGlance-BB@0x44 provideGlance-BB@0x50 ]
+	18      (00000040) if-eq                v5, v1, +008h
+
+provideGlance-BB@0x44 : 
+	19      (00000044) const-string         v2, "call to 'resume' before 'invoke' with coroutine"
+	20      (00000048) invoke-static        v2, Lh;->m(Ljava/lang/String;)V
+	21      (0000004e) return-object        v0
+
+provideGlance-BB@0x50 : 
+	22      (00000050) iget-object          v2, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->L$1 Ljava/lang/Object;
+	23      (00000054) check-cast           v2, Ld31;
+	24      (00000058) iget-object          v2, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->L$0 Ljava/lang/Object;
+	25      (0000005c) check-cast           v2, Landroid/content/Context;
+	26      (00000060) invoke-static        v4, Lib1;->Q(Ljava/lang/Object;)V
+	27      (00000066) invoke-static        Lh;->l()V
+	28      (0000006c) return-object        v0
+
+provideGlance-BB@0x6e : 
+	29      (0000006e) invoke-static        v4, Lib1;->Q(Ljava/lang/Object;)V
+	30      (00000074) new-instance         v4, Lvl;
+	31      (00000078) const/4              v5, 0
+	32      (0000007a) invoke-direct        v4, v2, v5, Lvl;-><init>(Lcom/lele/llmonitor/ui/widget/BatteryWidget; I)V
+	33      (00000080) new-instance         v2, Lc00;
+	34      (00000084) const                v5, 1988420461
+	35      (0000008a) invoke-direct        v2, v5, v4, v1, Lc00;-><init>(I Ljava/lang/Object; Z)V
+	36      (00000090) iput-object          v0, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->L$0 Ljava/lang/Object;
+	37      (00000094) iput-object          v0, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->L$1 Ljava/lang/Object;
+	38      (00000098) iput                 v1, v3, Lcom/lele/llmonitor/ui/widget/BatteryWidget$provideGlance$1;->label I
+	39      (0000009c) invoke-static        v2, v3, Lni1;->M(Lc00; Lp60;)V
+	40      (000000a2) sget-object          v2, Le80;->d Le80;
+	41      (000000a6) return-object        v2
+

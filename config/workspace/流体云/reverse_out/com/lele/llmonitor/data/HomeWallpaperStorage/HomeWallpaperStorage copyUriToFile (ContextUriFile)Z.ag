@@ -1,0 +1,161 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->copyUriToFile(Landroid/content/Context; Landroid/net/Uri; Ljava/io/File;)Z [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.Context
+# - v5:android.net.Uri
+# - v6:java.io.File
+#
+# - return:boolean
+
+copyUriToFile-BB@0x0 : [ copyUriToFile-BB@0x1a copyUriToFile-BB@0x42 ]
+	0       (00000000) invoke-virtual       v5, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+	1       (00000006) move-result-object   v3
+	2       (00000008) const-string         v0, "file"
+	3       (0000000c) invoke-static        v3, v0, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	4       (00000012) move-result          v3
+	5       (00000014) const/4              v0, 0
+	6       (00000016) if-eqz               v3, +016h
+	0:51
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x1a : [ copyUriToFile-BB@0x26 copyUriToFile-BB@0x28 ]
+	7       (0000001a) invoke-virtual       v5, Landroid/net/Uri;->getPath()Ljava/lang/String;
+	8       (00000020) move-result-object   v3
+	9       (00000022) if-nez               v3, +003h
+	0:51
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x26 : [ copyUriToFile-BB@0x56 ]
+	10      (00000026) goto                 +18h
+	0:51
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x28 : [ copyUriToFile-BB@0x52 ]
+	11      (00000028) new-instance         v4, Ljava/io/FileInputStream;
+	12      (0000002c) new-instance         v5, Ljava/io/File;
+	13      (00000030) invoke-direct        v5, v3, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	14      (00000036) invoke-direct        v4, v5, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+	15      (0000003c) goto                 +bh
+	0:51
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x3e : [ copyUriToFile-BB@0xb2 ]
+	16      (0000003e) move-exception       v3
+	17      (00000040) goto                 +39h
+	0:51
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x42 : [ copyUriToFile-BB@0x52 ]
+	18      (00000042) invoke-virtual       v4, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	19      (00000048) move-result-object   v3
+	20      (0000004a) invoke-virtual       v3, v5, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+	21      (00000050) move-result-object   v4
+	0:51
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x52 : [ copyUriToFile-BB@0x56 copyUriToFile-BB@0x58 ]
+	22      (00000052) if-nez               v4, +003h
+
+copyUriToFile-BB@0x56 : 
+	23      (00000056) return               v0
+
+copyUriToFile-BB@0x58 : [ copyUriToFile-BB@0x62 ]
+	24      (00000058) new-instance         v3, Ljava/io/FileOutputStream;
+	25      (0000005c) invoke-direct        v3, v6, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+	58:61
+	(Ljava/lang/Throwable; -> 94 copyUriToFile-BB@0x94)
+
+copyUriToFile-BB@0x62 : [ copyUriToFile-BB@0x68 ]
+	26      (00000062) invoke-static        v4, v3, Lni1;->x(Ljava/io/InputStream; Ljava/io/FileOutputStream;)J
+	62:67
+	(Ljava/lang/Throwable; -> 98 copyUriToFile-BB@0x98)
+
+copyUriToFile-BB@0x68 : [ copyUriToFile-BB@0x6e ]
+	27      (00000068) invoke-virtual       v3, Ljava/io/FileOutputStream;->close()V
+	68:6d
+	(Ljava/lang/Throwable; -> 94 copyUriToFile-BB@0x94)
+
+copyUriToFile-BB@0x6e : [ copyUriToFile-BB@0x88 copyUriToFile-BB@0x8a ]
+	28      (0000006e) invoke-interface     v4, Ljava/io/Closeable;->close()V
+	29      (00000074) invoke-virtual       v6, Ljava/io/File;->length()J
+	30      (0000007a) move-result-wide     v3
+	31      (0000007c) const-wide/16        v1, 0
+	32      (00000080) cmp-long             v3, v3, v1
+	33      (00000084) if-lez               v3, +003h
+	6e:91
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x88 : [ copyUriToFile-BB@0x8a ]
+	34      (00000088) const/4              v0, 1
+	6e:91
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0x8a : [ copyUriToFile-BB@0xbe ]
+	35      (0000008a) invoke-static        v0, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	36      (00000090) move-result-object   v3
+	37      (00000092) goto                 +16h
+
+copyUriToFile-BB@0x94 : [ copyUriToFile-BB@0xa6 ]
+	38      (00000094) move-exception       v3
+	39      (00000096) goto                 +8h
+
+copyUriToFile-BB@0x98 : [ copyUriToFile-BB@0x9a ]
+	40      (00000098) move-exception       v5
+
+copyUriToFile-BB@0x9a : 
+	41      (0000009a) throw                v5
+	9a:9b
+	(Ljava/lang/Throwable; -> 9c copyUriToFile-BB@0x9c)
+
+copyUriToFile-BB@0x9c : [ copyUriToFile-BB@0x9e ]
+	42      (0000009c) move-exception       v0
+
+copyUriToFile-BB@0x9e : 
+	43      (0000009e) invoke-static        v3, v5, Lp34;->j(Ljava/io/Closeable; Ljava/lang/Throwable;)V
+	44      (000000a4) throw                v0
+	9e:a5
+	(Ljava/lang/Throwable; -> 94 copyUriToFile-BB@0x94)
+
+copyUriToFile-BB@0xa6 : 
+	45      (000000a6) throw                v3
+	a6:a7
+	(Ljava/lang/Throwable; -> a8 copyUriToFile-BB@0xa8)
+
+copyUriToFile-BB@0xa8 : [ copyUriToFile-BB@0xaa ]
+	46      (000000a8) move-exception       v5
+
+copyUriToFile-BB@0xaa : 
+	47      (000000aa) invoke-static        v4, v3, Lp34;->j(Ljava/io/Closeable; Ljava/lang/Throwable;)V
+	48      (000000b0) throw                v5
+	aa:b1
+	(Ljava/lang/Throwable; -> 3e copyUriToFile-BB@0x3e)
+
+copyUriToFile-BB@0xb2 : [ copyUriToFile-BB@0xbe ]
+	49      (000000b2) new-instance         v4, Lcw2;
+	50      (000000b6) invoke-direct        v4, v3, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	51      (000000bc) move-object          v3, v4
+
+copyUriToFile-BB@0xbe : [ copyUriToFile-BB@0xca copyUriToFile-BB@0xcc ]
+	52      (000000be) invoke-static        v3, Ldw2;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+	53      (000000c4) move-result-object   v4
+	54      (000000c6) if-nez               v4, +003h
+
+copyUriToFile-BB@0xca : [ copyUriToFile-BB@0xd0 ]
+	55      (000000ca) goto                 +3h
+
+copyUriToFile-BB@0xcc : [ copyUriToFile-BB@0xd0 ]
+	56      (000000cc) sget-object          v3, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+
+copyUriToFile-BB@0xd0 : [ copyUriToFile-BB@0xe0 copyUriToFile-BB@0xe6 ]
+	57      (000000d0) check-cast           v3, Ljava/lang/Boolean;
+	58      (000000d4) invoke-virtual       v3, Ljava/lang/Boolean;->booleanValue()Z
+	59      (000000da) move-result          v3
+	60      (000000dc) if-nez               v3, +005h
+
+copyUriToFile-BB@0xe0 : [ copyUriToFile-BB@0xe6 ]
+	61      (000000e0) invoke-virtual       v6, Ljava/io/File;->delete()Z
+
+copyUriToFile-BB@0xe6 : 
+	62      (000000e6) return               v3
+

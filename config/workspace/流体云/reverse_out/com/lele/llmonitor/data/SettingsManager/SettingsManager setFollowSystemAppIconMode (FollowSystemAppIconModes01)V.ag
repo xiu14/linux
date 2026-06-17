@@ -1,0 +1,52 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->setFollowSystemAppIconMode(Lcom/lele/llmonitor/data/FollowSystemAppIconMode; Ls01;)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:com.lele.llmonitor.data.FollowSystemAppIconMode
+# - v5:s01
+#
+# - return:void
+
+setFollowSystemAppIconMode-BB@0x0 : [ setFollowSystemAppIconMode-BB@0x18 setFollowSystemAppIconMode-BB@0x42 ]
+	0       (00000000) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->followSystemAppIconMode Ll52;
+	2       (0000000a) invoke-interface     v0, v4, Ll52;->setValue(Ljava/lang/Object;)V
+	3       (00000010) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->prefs Landroid/content/SharedPreferences;
+	4       (00000014) if-eqz               v0, +017h
+
+setFollowSystemAppIconMode-BB@0x18 : [ setFollowSystemAppIconMode-BB@0x24 setFollowSystemAppIconMode-BB@0x42 ]
+	5       (00000018) invoke-interface     v0, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	6       (0000001e) move-result-object   v0
+	7       (00000020) if-eqz               v0, +011h
+
+setFollowSystemAppIconMode-BB@0x24 : [ setFollowSystemAppIconMode-BB@0x3c setFollowSystemAppIconMode-BB@0x42 ]
+	8       (00000024) const-string         v1, "follow_system_app_icon_mode"
+	9       (00000028) invoke-virtual       v4, Lcom/lele/llmonitor/data/FollowSystemAppIconMode;->getPreferenceValue()I
+	10      (0000002e) move-result          v2
+	11      (00000030) invoke-interface     v0, v1, v2, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	12      (00000036) move-result-object   v0
+	13      (00000038) if-eqz               v0, +005h
+
+setFollowSystemAppIconMode-BB@0x3c : [ setFollowSystemAppIconMode-BB@0x42 ]
+	14      (0000003c) invoke-interface     v0, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+setFollowSystemAppIconMode-BB@0x42 : [ setFollowSystemAppIconMode-BB@0x74 setFollowSystemAppIconMode-BB@0x7a ]
+	15      (00000042) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->themeMode Ll52;
+	16      (00000046) invoke-interface     v0, Lcg3;->getValue()Ljava/lang/Object;
+	17      (0000004c) move-result-object   v0
+	18      (0000004e) check-cast           v0, Ljava/lang/Number;
+	19      (00000052) invoke-virtual       v0, Ljava/lang/Number;->intValue()I
+	20      (00000058) move-result          v0
+	21      (0000005a) invoke-static        v0, v4, Lcom/lele/llmonitor/data/UiAppearanceSupportKt;->resolveAppIconDarkModeEnabled(I Lcom/lele/llmonitor/data/FollowSystemAppIconMode;)Z
+	22      (00000060) move-result          v4
+	23      (00000062) invoke-static        v4, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	24      (00000068) move-result-object   v4
+	25      (0000006a) invoke-virtual       v3, v4, Lcom/lele/llmonitor/data/SettingsManager;->syncAppIcon(Ljava/lang/Boolean;)V
+	26      (00000070) if-eqz               v5, +005h
+
+setFollowSystemAppIconMode-BB@0x74 : [ setFollowSystemAppIconMode-BB@0x7a ]
+	27      (00000074) invoke-interface     v5, Ls01;->invoke()Ljava/lang/Object;
+
+setFollowSystemAppIconMode-BB@0x7a : 
+	28      (0000007a) return-void          
+

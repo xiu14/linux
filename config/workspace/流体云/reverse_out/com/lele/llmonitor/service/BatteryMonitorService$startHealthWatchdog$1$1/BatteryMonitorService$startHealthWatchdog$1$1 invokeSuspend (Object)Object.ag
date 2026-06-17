@@ -1,0 +1,54 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.Object
+#
+# - return:java.lang.Object
+
+invokeSuspend-BB@0x0 : [ invokeSuspend-BB@0xa invokeSuspend-BB@0x24 ]
+	0       (00000000) iget                 v0, v3, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;->label I
+	1       (00000004) const/4              v1, 1
+	2       (00000006) if-eqz               v0, +00fh
+
+invokeSuspend-BB@0xa : [ invokeSuspend-BB@0xe invokeSuspend-BB@0x16 ]
+	3       (0000000a) if-ne                v0, v1, +006h
+
+invokeSuspend-BB@0xe : [ invokeSuspend-BB@0x5a ]
+	4       (0000000e) invoke-static        v4, Lib1;->Q(Ljava/lang/Object;)V
+	5       (00000014) goto                 +23h
+
+invokeSuspend-BB@0x16 : 
+	6       (00000016) const-string         v3, "call to 'resume' before 'invoke' with coroutine"
+	7       (0000001a) invoke-static        v3, Lh;->m(Ljava/lang/String;)V
+	8       (00000020) const/4              v3, 0
+	9       (00000022) return-object        v3
+
+invokeSuspend-BB@0x24 : [ invokeSuspend-BB@0x36 invokeSuspend-BB@0x38 ]
+	10      (00000024) invoke-static        v4, Lib1;->Q(Ljava/lang/Object;)V
+	11      (0000002a) iget-object          v4, v3, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	12      (0000002e) iget                 v0, v3, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;->$plugged I
+	13      (00000032) if-eqz               v0, +003h
+
+invokeSuspend-BB@0x36 : [ invokeSuspend-BB@0x3a ]
+	14      (00000036) goto                 +2h
+
+invokeSuspend-BB@0x38 : [ invokeSuspend-BB@0x3a ]
+	15      (00000038) const/4              v0, 0
+
+invokeSuspend-BB@0x3a : [ invokeSuspend-BB@0x58 invokeSuspend-BB@0x5a ]
+	16      (0000003a) new-instance         v2, Ljava/lang/Integer;
+	17      (0000003e) invoke-direct        v2, v0, Ljava/lang/Integer;-><init>(I)V
+	18      (00000044) iput                 v1, v3, Lcom/lele/llmonitor/service/BatteryMonitorService$startHealthWatchdog$1$1;->label I
+	19      (00000048) invoke-static        v4, v2, v3, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$forceImmediateNotificationRefresh(Lcom/lele/llmonitor/service/BatteryMonitorService; Ljava/lang/Integer; Ln60;)Ljava/lang/Object;
+	20      (0000004e) move-result-object   v3
+	21      (00000050) sget-object          v4, Le80;->d Le80;
+	22      (00000054) if-ne                v3, v4, +003h
+
+invokeSuspend-BB@0x58 : 
+	23      (00000058) return-object        v4
+
+invokeSuspend-BB@0x5a : 
+	24      (0000005a) sget-object          v3, Lbw3;->a Lbw3;
+	25      (0000005e) return-object        v3
+

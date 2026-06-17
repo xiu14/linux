@@ -1,0 +1,20 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl$createOpenDelegate$_openDelegate$1;->createAllTables(Lmy2;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:my2
+#
+# - return:void
+
+createAllTables-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	1       (00000006) const-string         v0, "CREATE TABLE IF NOT EXISTS `battery_history` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `level` INTEGER NOT NULL, `voltage` REAL NOT NULL, `current` REAL NOT NULL, `power` REAL NOT NULL, `temperature` REAL NOT NULL)"
+	2       (0000000a) invoke-static        v0, v1, Lqc1;->r(Ljava/lang/String; Lmy2;)V
+	3       (00000010) const-string         v0, "CREATE INDEX IF NOT EXISTS `index_battery_history_timestamp` ON `battery_history` (`timestamp`)"
+	4       (00000014) invoke-static        v0, v1, Lqc1;->r(Ljava/lang/String; Lmy2;)V
+	5       (0000001a) const-string         v0, "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)"
+	6       (0000001e) invoke-static        v0, v1, Lqc1;->r(Ljava/lang/String; Lmy2;)V
+	7       (00000024) const-string         v0, "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5c1ddbf13994b871c5b6a06bbbc2d6bc')"
+	8       (00000028) invoke-static        v0, v1, Lqc1;->r(Ljava/lang/String; Lmy2;)V
+	9       (0000002e) return-void          
+

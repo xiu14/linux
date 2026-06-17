@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/SettingsManager;->getShowNotificationSupply()Ll52; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:l52
+
+getShowNotificationSupply-BB@0x0 : 
+	0       (00000000) sget-object          v0, Lcom/lele/llmonitor/data/SettingsManager;->showNotificationSupply Ll52;
+	1       (00000004) return-object        v0
+

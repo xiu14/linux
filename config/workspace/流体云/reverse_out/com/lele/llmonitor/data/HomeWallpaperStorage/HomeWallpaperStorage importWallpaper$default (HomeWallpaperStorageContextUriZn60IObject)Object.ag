@@ -1,0 +1,26 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->importWallpaper$default(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/content/Context; Landroid/net/Uri; Z Ln60; I Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.HomeWallpaperStorage
+# - v1:android.content.Context
+# - v2:android.net.Uri
+# - v3:boolean
+# - v4:n60
+# - v5:int
+# - v6:java.lang.Object
+#
+# - return:java.lang.Object
+
+importWallpaper$default-BB@0x0 : [ importWallpaper$default-BB@0x8 importWallpaper$default-BB@0xa ]
+	0       (00000000) and-int/lit8         v5, v5, 4
+	1       (00000004) if-eqz               v5, +003h
+
+importWallpaper$default-BB@0x8 : [ importWallpaper$default-BB@0xa ]
+	2       (00000008) const/4              v3, 0
+
+importWallpaper$default-BB@0xa : 
+	3       (0000000a) invoke-virtual       v0, v1, v2, v3, v4, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->importWallpaper(Landroid/content/Context; Landroid/net/Uri; Z Ln60;)Ljava/lang/Object;
+	4       (00000010) move-result-object   v0
+	5       (00000012) return-object        v0
+

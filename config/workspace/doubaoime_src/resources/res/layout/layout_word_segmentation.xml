@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/navigation_bar_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.input.keyboard.ImeKeyboardTitleBar
+        android:id="@+id/word_segmentation_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/bg_corner_12"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/ime_dp_6"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/ime_dp_11"
+        android:layout_marginEnd="@dimen/ime_dp_11">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/word_segmentation_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/ime_dp_11"
+            android:layout_marginEnd="@dimen/ime_dp_11"/>
+        <TextView
+            android:textSize="@dimen/ime_dp_12"
+            android:textColor="@color/word_segmentation_add_to_common_phrase_text"
+            android:gravity="center"
+            android:id="@+id/word_segmentation_add_to_common_phrase"
+            android:background="@drawable/bg_word_segmentation_add_to_common_phrase"
+            android:paddingLeft="@dimen/ime_dp_11"
+            android:paddingTop="@dimen/ime_dp_8"
+            android:paddingRight="@dimen/ime_dp_11"
+            android:paddingBottom="@dimen/ime_dp_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/word_segmentation_add_to_common_phrase"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

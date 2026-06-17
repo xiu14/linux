@@ -1,0 +1,19 @@
+# Lcom/lele/llmonitor/data/local/AppDatabase_Impl;->createInvalidationTracker()Lej1; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:ej1
+
+createInvalidationTracker-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/util/LinkedHashMap;
+	1       (00000004) invoke-direct        v0, Ljava/util/LinkedHashMap;-><init>()V
+	2       (0000000a) new-instance         v1, Ljava/util/LinkedHashMap;
+	3       (0000000e) invoke-direct        v1, Ljava/util/LinkedHashMap;-><init>()V
+	4       (00000014) new-instance         v2, Lej1;
+	5       (00000018) const-string         v3, "battery_history"
+	6       (0000001c) filled-new-array     v3, [Ljava/lang/String;
+	7       (00000022) move-result-object   v3
+	8       (00000024) invoke-direct        v2, v4, v0, v1, v3, Lej1;-><init>(Lhx2; Ljava/util/LinkedHashMap; Ljava/util/LinkedHashMap; [Ljava/lang/String;)V
+	9       (0000002a) return-object        v2
+

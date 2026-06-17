@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->clearOldData(J Ln60;)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:long
+# - v5:n60
+#
+# - return:java.lang.Object
+
+clearOldData-BB@0x0 : [ clearOldData-BB@0x22 clearOldData-BB@0x24 ]
+	0       (00000000) iget-object          v2, v2, Lcom/lele/llmonitor/data/local/BatteryDao_Impl;->__db Lhx2;
+	1       (00000004) new-instance         v0, Lh8;
+	2       (00000008) const/4              v1, 1
+	3       (0000000a) invoke-direct        v0, v3, v4, v1, Lh8;-><init>(J I)V
+	4       (00000010) const/4              v3, 0
+	5       (00000012) invoke-static        v5, v2, v3, v1, v0, Lni1;->L(Ln60; Lhx2; Z Z Ld11;)Ljava/lang/Object;
+	6       (00000018) move-result-object   v2
+	7       (0000001a) sget-object          v3, Le80;->d Le80;
+	8       (0000001e) if-ne                v2, v3, +003h
+
+clearOldData-BB@0x22 : 
+	9       (00000022) return-object        v2
+
+clearOldData-BB@0x24 : 
+	10      (00000024) sget-object          v2, Lbw3;->a Lbw3;
+	11      (00000028) return-object        v2
+

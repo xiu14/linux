@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/ime_toolbar_clipboard_text_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/tv_clipboard_origin_text_item"
+        android:background="@drawable/bg_toolbar_clipboard_item_selector"
+        android:paddingTop="@dimen/ime_dp_2"
+        android:paddingBottom="@dimen/ime_dp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ime_dp_36"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:paddingEnd="@dimen/ime_dp_8"
+        android:layout_marginEnd="@dimen/ime_dp_2"/>
+</LinearLayout>

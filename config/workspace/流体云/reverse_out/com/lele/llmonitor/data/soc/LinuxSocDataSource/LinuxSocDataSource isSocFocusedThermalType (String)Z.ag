@@ -1,0 +1,84 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isSocFocusedThermalType(Ljava/lang/String;)Z [access_flags=private final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+#
+# - return:boolean
+
+isSocFocusedThermalType-BB@0x0 : [ isSocFocusedThermalType-BB@0x12 isSocFocusedThermalType-BB@0xb2 ]
+	0       (00000000) const-string         v0, "soc"
+	1       (00000004) const/4              v1, 0
+	2       (00000006) invoke-static        v3, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	3       (0000000c) move-result          v0
+	4       (0000000e) if-nez               v0, +052h
+
+isSocFocusedThermalType-BB@0x12 : [ isSocFocusedThermalType-BB@0x22 isSocFocusedThermalType-BB@0xb2 ]
+	5       (00000012) const-string         v0, "cpu"
+	6       (00000016) invoke-static        v3, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	7       (0000001c) move-result          v0
+	8       (0000001e) if-nez               v0, +04ah
+
+isSocFocusedThermalType-BB@0x22 : [ isSocFocusedThermalType-BB@0x32 isSocFocusedThermalType-BB@0xb2 ]
+	9       (00000022) const-string         v0, "cpuss"
+	10      (00000026) invoke-static        v3, v0, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	11      (0000002c) move-result          v0
+	12      (0000002e) if-nez               v0, +042h
+
+isSocFocusedThermalType-BB@0x32 : [ isSocFocusedThermalType-BB@0x3e isSocFocusedThermalType-BB@0xb2 ]
+	13      (00000032) invoke-direct        v2, v3, Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->isApThermalType(Ljava/lang/String;)Z
+	14      (00000038) move-result          v2
+	15      (0000003a) if-nez               v2, +03ch
+
+isSocFocusedThermalType-BB@0x3e : [ isSocFocusedThermalType-BB@0x4e isSocFocusedThermalType-BB@0xb2 ]
+	16      (0000003e) const-string         v2, "tsens"
+	17      (00000042) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	18      (00000048) move-result          v2
+	19      (0000004a) if-nez               v2, +034h
+
+isSocFocusedThermalType-BB@0x4e : [ isSocFocusedThermalType-BB@0x5e isSocFocusedThermalType-BB@0xb2 ]
+	20      (0000004e) const-string         v2, "cluster"
+	21      (00000052) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	22      (00000058) move-result          v2
+	23      (0000005a) if-nez               v2, +02ch
+
+isSocFocusedThermalType-BB@0x5e : [ isSocFocusedThermalType-BB@0x6e isSocFocusedThermalType-BB@0xb2 ]
+	24      (0000005e) const-string         v2, "little"
+	25      (00000062) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	26      (00000068) move-result          v2
+	27      (0000006a) if-nez               v2, +024h
+
+isSocFocusedThermalType-BB@0x6e : [ isSocFocusedThermalType-BB@0x7e isSocFocusedThermalType-BB@0xb2 ]
+	28      (0000006e) const-string         v2, "big"
+	29      (00000072) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	30      (00000078) move-result          v2
+	31      (0000007a) if-nez               v2, +01ch
+
+isSocFocusedThermalType-BB@0x7e : [ isSocFocusedThermalType-BB@0x8e isSocFocusedThermalType-BB@0xb2 ]
+	32      (0000007e) const-string         v2, "gold"
+	33      (00000082) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	34      (00000088) move-result          v2
+	35      (0000008a) if-nez               v2, +014h
+
+isSocFocusedThermalType-BB@0x8e : [ isSocFocusedThermalType-BB@0x9e isSocFocusedThermalType-BB@0xb2 ]
+	36      (0000008e) const-string         v2, "silver"
+	37      (00000092) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	38      (00000098) move-result          v2
+	39      (0000009a) if-nez               v2, +00ch
+
+isSocFocusedThermalType-BB@0x9e : [ isSocFocusedThermalType-BB@0xae isSocFocusedThermalType-BB@0xb0 ]
+	40      (0000009e) const-string         v2, "prime"
+	41      (000000a2) invoke-static        v3, v2, v1, Lhh3;->m0(Ljava/lang/CharSequence; Ljava/lang/CharSequence; Z)Z
+	42      (000000a8) move-result          v2
+	43      (000000aa) if-eqz               v2, +003h
+
+isSocFocusedThermalType-BB@0xae : [ isSocFocusedThermalType-BB@0xb2 ]
+	44      (000000ae) goto                 +2h
+
+isSocFocusedThermalType-BB@0xb0 : 
+	45      (000000b0) return               v1
+
+isSocFocusedThermalType-BB@0xb2 : 
+	46      (000000b2) const/4              v2, 1
+	47      (000000b4) return               v2
+

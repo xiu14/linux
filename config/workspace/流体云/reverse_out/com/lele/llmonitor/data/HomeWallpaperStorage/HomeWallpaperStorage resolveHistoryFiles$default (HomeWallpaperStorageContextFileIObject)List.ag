@@ -1,0 +1,24 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles$default(Lcom/lele/llmonitor/data/HomeWallpaperStorage; Landroid/content/Context; Ljava/io/File; I Ljava/lang/Object;)Ljava/util/List; [access_flags=public static synthetic]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:com.lele.llmonitor.data.HomeWallpaperStorage
+# - v1:android.content.Context
+# - v2:java.io.File
+# - v3:int
+# - v4:java.lang.Object
+#
+# - return:java.util.List
+
+resolveHistoryFiles$default-BB@0x0 : [ resolveHistoryFiles$default-BB@0x8 resolveHistoryFiles$default-BB@0xa ]
+	0       (00000000) and-int/lit8         v3, v3, 2
+	1       (00000004) if-eqz               v3, +003h
+
+resolveHistoryFiles$default-BB@0x8 : [ resolveHistoryFiles$default-BB@0xa ]
+	2       (00000008) const/4              v2, 0
+
+resolveHistoryFiles$default-BB@0xa : 
+	3       (0000000a) invoke-virtual       v0, v1, v2, Lcom/lele/llmonitor/data/HomeWallpaperStorage;->resolveHistoryFiles(Landroid/content/Context; Ljava/io/File;)Ljava/util/List;
+	4       (00000010) move-result-object   v0
+	5       (00000012) return-object        v0
+

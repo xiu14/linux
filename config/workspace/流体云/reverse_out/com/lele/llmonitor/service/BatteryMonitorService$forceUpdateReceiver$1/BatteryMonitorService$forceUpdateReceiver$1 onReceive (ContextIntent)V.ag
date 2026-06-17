@@ -1,0 +1,40 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$forceUpdateReceiver$1;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:android.content.Context
+# - v2:android.content.Intent
+#
+# - return:void
+
+onReceive-BB@0x0 : [ onReceive-BB@0x4 onReceive-BB@0xe ]
+	0       (00000000) if-eqz               v2, +007h
+
+onReceive-BB@0x4 : [ onReceive-BB@0x10 ]
+	1       (00000004) invoke-virtual       v2, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) goto                 +2h
+
+onReceive-BB@0xe : [ onReceive-BB@0x10 ]
+	4       (0000000e) const/4              v1, 0
+
+onReceive-BB@0x10 : [ onReceive-BB@0x20 onReceive-BB@0x48 ]
+	5       (00000010) const-string         v2, "com.lele.llmonitor.ACTION_FORCE_UPDATE"
+	6       (00000014) invoke-static        v1, v2, Lni1;->o(Ljava/lang/Object; Ljava/lang/Object;)Z
+	7       (0000001a) move-result          v1
+	8       (0000001c) if-eqz               v1, +016h
+
+onReceive-BB@0x20 : [ onReceive-BB@0x48 ]
+	9       (00000020) iget-object          v1, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$forceUpdateReceiver$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	10      (00000024) invoke-static        v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getVisualRefreshScheduler$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lcom/lele/llmonitor/service/VisualRefreshScheduler;
+	11      (0000002a) move-result-object   v1
+	12      (0000002c) invoke-virtual       v1, Lcom/lele/llmonitor/service/VisualRefreshScheduler;->onExternalTrigger()V
+	13      (00000032) iget-object          v0, v0, Lcom/lele/llmonitor/service/BatteryMonitorService$forceUpdateReceiver$1;->this$0 Lcom/lele/llmonitor/service/BatteryMonitorService;
+	14      (00000036) invoke-static        v0, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$getUpdateTrigger$p(Lcom/lele/llmonitor/service/BatteryMonitorService;)Lvt;
+	15      (0000003c) move-result-object   v0
+	16      (0000003e) sget-object          v1, Lbw3;->a Lbw3;
+	17      (00000042) invoke-interface     v0, v1, Lw53;->l(Ljava/lang/Object;)Ljava/lang/Object;
+
+onReceive-BB@0x48 : 
+	18      (00000048) return-void          
+

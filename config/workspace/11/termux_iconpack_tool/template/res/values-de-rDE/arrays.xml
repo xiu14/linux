@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <item>Du benötigst einen Launcher mit Support für Icon-Packs. Die Liste der unterstützten Launcher könnte in der App im \"Anwenden\"-Abschnitt oder der Play Store Beschreibung gefunden werden.</item>
+        <item>Abhängig von der Art der Navigation der App musst du entweder von der linken Seite das Navigationsmenü öffnen und den Abschnitt \"Anwenden\" antippen, oder du musst das vierte Icon in der unteren Navigationsleiste antippen. Dort kannst du einen Launcher auswählen, für welchen du die Icons anwenden möchtest. Einige Launcher unterstützen keine automatische Anwendung und du musst dies manuell in den Einstellungen des Launcher tun.</item>
+        <item>Gehe zurück zur Hauptseite der App und klicke auf die Karte mit dem Titel \"Icons\".</item>
+        <item>Abhängig vom Launcher, den du verwendest, musst du entweder lange auf das Icon tippen und auf \"Bearbeiten\" im Pop-up-Menü tippen oder das Icon auf ein \"Bearbeiten\"-Feld ziehen.</item>
+        <item>Abhängig von der Art der Navigation der App musst du entweder von der linken Seite das Navigationsmenü öffnen und den Abschnitt \"Anfragen\" antippen, oder du musst das entsprechende Icon in der unteren Navigationsleiste antippen.</item>
+        <item>Das ist passiert, weil das Icon Pack auf die SD-Karte verschoben wurde. Du solltest es auf dem internen Speicher installieren.</item>
+        <item>Dieses Problem wird durch den Launcher bedingt und dessen Handhabung bei hohen Auflösungen. Du kannst das Problem lösen, indem du die Icon-Größe auf 115 - 120 % erhöhst. Du kannst auch versuchen, einen anderen Launcher zu verwenden.</item>
+        <item>Eine Icon-Anfrage senden.</item>
+        <item>Diese wird verwendet, um Daten für Icon-Anfragen speichern zu können, genauso wie für das Speichern der Hintergrundbildern und zur Änderung des Download-Verzeichnisses.</item>
+        <item>Diese wird verwendet, um Hintergrundbilder aus der Cloud herunterladen zu können.</item>
+        <item>Diese wird verwendet, um zu prüfen, ob dein Gerät eine Internet-Verbindung besitzt.</item>
+        <item>Diese wird verwendet, um das Hintergrundbild direkt aus der App heraus anwenden zu können.</item>
+        <item>Diese wird verwendet, um die Größe des Hintergrundbildes an deine Bildschirmauflösung anzupassen.</item>
+        <item>Dies wird von „Muzei Live Wallpaper” benötigt.</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Wie verwende ich dieses Icon-Pack?</item>
+        <item>Wie wende ich das Icon-Pack an?</item>
+        <item>Wie kann ich alle enthaltenen Icons anzeigen?</item>
+        <item>Wie kann ich bestimmte Icons durch Alternativen ersetzen?</item>
+        <item>Wie kann ich Icons ohne Theme anfragen?</item>
+        <item>Nach einem Neustart meines Geräts ist das Icon Pack nicht mehr angewendet. Die Icons wurden auf den Standard zurückgesetzt.</item>
+        <item>Warum sind die Icons auf meinem Gerät verpixelt?</item>
+        <item>Ich sehe ein Icon für eine App in den enthaltenen Icons, aber es wird nicht angewendet.</item>
+        <item>Wieso braucht die App die Berechtigung, um meinen Speicher anzupassen oder zu löschen?</item>
+        <item>Wieso braucht die App die Berechtigung zu vollem Zugang zum Netzwerk?</item>
+        <item>Wieso braucht die App die Berechtigung, Verbindungen anzuzeigen?</item>
+        <item>Wieso braucht die App die Berechtigung ein Hintergrundbild festzulegen?</item>
+        <item>Wieso braucht die App die Berechtigung die Hintergrundbildgröße zu verändern?</item>
+        <item>Wieso braucht die App die Berechtigung das Telefon am Ausschalten zu hindern?</item>
+    </string-array>
+</resources>

@@ -1,0 +1,50 @@
+# Lcom/lele/llmonitor/ui/widget/a;->invoke(Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.lang.Object
+# - v10:java.lang.Object
+# - v11:java.lang.Object
+#
+# - return:java.lang.Object
+
+invoke-BB@0x0 : [ D:invoke-BB@0xa 0:invoke-BB@0x3c ]
+	0       (00000000) iget                 v0, v8, Lcom/lele/llmonitor/ui/widget/a;->d I
+	1       (00000004) packed-switch        v0, +0000036h
+
+invoke-BB@0xa : 
+	2       (0000000a) move-object          v5, v9
+	3       (0000000c) check-cast           v5, Lgy2;
+	4       (00000010) move-object          v6, v10
+	5       (00000012) check-cast           v6, Lt10;
+	6       (00000016) check-cast           v11, Ljava/lang/Integer;
+	7       (0000001a) invoke-virtual       v11, Ljava/lang/Integer;->intValue()I
+	8       (00000020) move-result          v7
+	9       (00000022) iget                 v1, v8, Lcom/lele/llmonitor/ui/widget/a;->e I
+	10      (00000026) iget-object          v2, v8, Lcom/lele/llmonitor/ui/widget/a;->f Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;
+	11      (0000002a) iget                 v3, v8, Lcom/lele/llmonitor/ui/widget/a;->g I
+	12      (0000002e) iget                 v4, v8, Lcom/lele/llmonitor/ui/widget/a;->h I
+	13      (00000032) invoke-static/range  v1 ... v7, Lcom/lele/llmonitor/ui/widget/BatteryWidget;->n(I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; I I Lgy2; Lt10; I)Lbw3;
+	14      (00000038) move-result-object   v8
+	15      (0000003a) return-object        v8
+
+invoke-BB@0x3c : 
+	16      (0000003c) move-object          v4, v9
+	17      (0000003e) check-cast           v4, Lgy2;
+	18      (00000042) move-object          v5, v10
+	19      (00000044) check-cast           v5, Lt10;
+	20      (00000048) check-cast           v11, Ljava/lang/Integer;
+	21      (0000004c) invoke-virtual       v11, Ljava/lang/Integer;->intValue()I
+	22      (00000052) move-result          v6
+	23      (00000054) iget                 v0, v8, Lcom/lele/llmonitor/ui/widget/a;->e I
+	24      (00000058) iget-object          v1, v8, Lcom/lele/llmonitor/ui/widget/a;->f Lcom/lele/llmonitor/ui/widget/WidgetThemeColors;
+	25      (0000005c) iget                 v2, v8, Lcom/lele/llmonitor/ui/widget/a;->g I
+	26      (00000060) iget                 v3, v8, Lcom/lele/llmonitor/ui/widget/a;->h I
+	27      (00000064) invoke-static/range  v0 ... v6, Lcom/lele/llmonitor/ui/widget/BatteryWidget;->h(I Lcom/lele/llmonitor/ui/widget/WidgetThemeColors; I I Lgy2; Lt10; I)Lbw3;
+	28      (0000006a) move-result-object   v8
+	29      (0000006c) return-object        v8
+
+invoke-BB@0x6e : 
+	30      (0000006e) nop                  
+	31      (00000070) packed-switch-payload 0
+

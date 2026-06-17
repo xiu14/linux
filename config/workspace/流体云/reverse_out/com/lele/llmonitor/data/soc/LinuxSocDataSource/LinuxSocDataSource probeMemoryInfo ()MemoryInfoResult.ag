@@ -1,0 +1,266 @@
+# Lcom/lele/llmonitor/data/soc/LinuxSocDataSource;->probeMemoryInfo()Lcom/lele/llmonitor/data/soc/MemoryInfoResult; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v17
+#
+# - return:com.lele.llmonitor.data.soc.MemoryInfoResult
+
+probeMemoryInfo-BB@0x0 : [ probeMemoryInfo-BB@0xe ]
+	0       (00000000) const-string         v1, "/proc/meminfo"
+	1       (00000004) new-instance         v2, Ljava/util/ArrayList;
+	2       (00000008) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+
+probeMemoryInfo-BB@0xe : [ probeMemoryInfo-BB@0x30 ]
+	3       (0000000e) new-instance         v0, Ljava/io/File;
+	4       (00000012) invoke-direct        v0, v1, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	5       (00000018) invoke-static        v0, Lwt0;->U(Ljava/io/File;)Ljava/util/ArrayList;
+	6       (0000001e) move-result-object   v0
+	7       (00000020) goto                 +8h
+	e:1f
+	(Ljava/lang/Throwable; -> 22 probeMemoryInfo-BB@0x22)
+
+probeMemoryInfo-BB@0x22 : [ probeMemoryInfo-BB@0x30 ]
+	8       (00000022) move-exception       v0
+	9       (00000024) new-instance         v3, Lcw2;
+	10      (00000028) invoke-direct        v3, v0, Lcw2;-><init>(Ljava/lang/Throwable;)V
+	11      (0000002e) move-object          v0, v3
+
+probeMemoryInfo-BB@0x30 : [ probeMemoryInfo-BB@0x3c probeMemoryInfo-BB@0x3e ]
+	12      (00000030) nop                  
+	13      (00000032) instance-of          v3, v0, Lcw2;
+	14      (00000036) const/4              v4, 0
+	15      (00000038) if-eqz               v3, +003h
+
+probeMemoryInfo-BB@0x3c : [ probeMemoryInfo-BB@0x3e ]
+	16      (0000003c) move-object          v0, v4
+
+probeMemoryInfo-BB@0x3e : [ probeMemoryInfo-BB@0x48 probeMemoryInfo-BB@0x68 ]
+	17      (0000003e) check-cast           v0, Ljava/util/List;
+	18      (00000042) const/4              v3, 0
+	19      (00000044) if-nez               v0, +012h
+
+probeMemoryInfo-BB@0x48 : 
+	20      (00000048) new-instance         v0, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	21      (0000004c) const-string         v5, "read failed"
+	22      (00000050) invoke-direct        v0, v1, v5, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	23      (00000056) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	24      (0000005c) new-instance         v0, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;
+	25      (00000060) invoke-direct        v0, v4, v4, v2, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;-><init>(Ljava/lang/Long; Ljava/lang/Long; Ljava/util/List;)V
+	26      (00000066) return-object        v0
+
+probeMemoryInfo-BB@0x68 : [ probeMemoryInfo-BB@0x7a ]
+	27      (00000068) new-instance         v5, Ljava/util/LinkedHashMap;
+	28      (0000006c) invoke-direct        v5, Ljava/util/LinkedHashMap;-><init>()V
+	29      (00000072) invoke-interface     v0, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+	30      (00000078) move-result-object   v0
+
+probeMemoryInfo-BB@0x7a : [ probeMemoryInfo-BB@0x86 probeMemoryInfo-BB@0x100 ]
+	31      (0000007a) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	32      (00000080) move-result          v6
+	33      (00000082) if-eqz               v6, +03fh
+
+probeMemoryInfo-BB@0x86 : [ probeMemoryInfo-BB@0xda probeMemoryInfo-BB@0x7a ]
+	34      (00000086) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	35      (0000008c) move-result-object   v6
+	36      (0000008e) check-cast           v6, Ljava/lang/String;
+	37      (00000092) const/16             v7, 58
+	38      (00000096) invoke-static        v6, v7, Lhh3;->L0(Ljava/lang/String; C)Ljava/lang/String;
+	39      (0000009c) move-result-object   v7
+	40      (0000009e) invoke-static        v7, Lhh3;->O0(Ljava/lang/String;)Ljava/lang/CharSequence;
+	41      (000000a4) move-result-object   v7
+	42      (000000a6) invoke-virtual       v7, Ljava/lang/Object;->toString()Ljava/lang/String;
+	43      (000000ac) move-result-object   v7
+	44      (000000ae) const-string         v8, "\d+"
+	45      (000000b2) invoke-static        v8, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+	46      (000000b8) move-result-object   v8
+	47      (000000ba) invoke-virtual       v8, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	48      (000000c0) invoke-virtual       v8, v6, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+	49      (000000c6) move-result-object   v8
+	50      (000000c8) invoke-virtual       v8, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	51      (000000ce) invoke-static        v8, v3, v6, Ldf2;->h(Ljava/util/regex/Matcher; I Ljava/lang/CharSequence;)Lg02;
+	52      (000000d4) move-result-object   v6
+	53      (000000d6) if-eqz               v6, -02eh
+
+probeMemoryInfo-BB@0xda : [ probeMemoryInfo-BB@0xf8 probeMemoryInfo-BB@0x7a ]
+	54      (000000da) iget-object          v6, v6, Lg02;->a Ljava/util/regex/Matcher;
+	55      (000000de) invoke-virtual       v6, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+	56      (000000e4) move-result-object   v6
+	57      (000000e6) invoke-virtual       v6, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	58      (000000ec) invoke-static        v6, Loh3;->l0(Ljava/lang/String;)Ljava/lang/Long;
+	59      (000000f2) move-result-object   v6
+	60      (000000f4) if-eqz               v6, -03dh
+
+probeMemoryInfo-BB@0xf8 : [ probeMemoryInfo-BB@0x7a ]
+	61      (000000f8) invoke-interface     v5, v7, v6, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	62      (000000fe) goto                 -42h
+
+probeMemoryInfo-BB@0x100 : [ probeMemoryInfo-BB@0x124 probeMemoryInfo-BB@0x132 ]
+	63      (00000100) const-string         v0, "MemTotal"
+	64      (00000104) invoke-virtual       v5, v0, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	65      (0000010a) move-result-object   v0
+	66      (0000010c) check-cast           v0, Ljava/lang/Long;
+	67      (00000110) const-string         v6, "MemAvailable"
+	68      (00000114) invoke-virtual       v5, v6, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	69      (0000011a) move-result-object   v6
+	70      (0000011c) check-cast           v6, Ljava/lang/Long;
+	71      (00000120) if-eqz               v6, +009h
+
+probeMemoryInfo-BB@0x124 : [ probeMemoryInfo-BB@0x12c ]
+	72      (00000124) invoke-virtual       v6, Ljava/lang/Long;->longValue()J
+	73      (0000012a) move-result-wide     v5
+
+probeMemoryInfo-BB@0x12c : [ probeMemoryInfo-BB@0x1ee ]
+	74      (0000012c) move-wide            v7, v5
+	75      (0000012e) goto/16              +060h
+
+probeMemoryInfo-BB@0x132 : [ probeMemoryInfo-BB@0x14a probeMemoryInfo-BB@0x154 ]
+	76      (00000132) const-string         v6, "MemFree"
+	77      (00000136) invoke-virtual       v5, v6, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	78      (0000013c) move-result-object   v6
+	79      (0000013e) check-cast           v6, Ljava/lang/Long;
+	80      (00000142) const-wide/16        v7, 0
+	81      (00000146) if-eqz               v6, +007h
+
+probeMemoryInfo-BB@0x14a : [ probeMemoryInfo-BB@0x156 ]
+	82      (0000014a) invoke-virtual       v6, Ljava/lang/Long;->longValue()J
+	83      (00000150) move-result-wide     v9
+	84      (00000152) goto                 +2h
+
+probeMemoryInfo-BB@0x154 : [ probeMemoryInfo-BB@0x156 ]
+	85      (00000154) move-wide            v9, v7
+
+probeMemoryInfo-BB@0x156 : [ probeMemoryInfo-BB@0x16a probeMemoryInfo-BB@0x174 ]
+	86      (00000156) const-string         v6, "Buffers"
+	87      (0000015a) invoke-virtual       v5, v6, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	88      (00000160) move-result-object   v6
+	89      (00000162) check-cast           v6, Ljava/lang/Long;
+	90      (00000166) if-eqz               v6, +007h
+
+probeMemoryInfo-BB@0x16a : [ probeMemoryInfo-BB@0x176 ]
+	91      (0000016a) invoke-virtual       v6, Ljava/lang/Long;->longValue()J
+	92      (00000170) move-result-wide     v11
+	93      (00000172) goto                 +2h
+
+probeMemoryInfo-BB@0x174 : [ probeMemoryInfo-BB@0x176 ]
+	94      (00000174) move-wide            v11, v7
+
+probeMemoryInfo-BB@0x176 : [ probeMemoryInfo-BB@0x18a probeMemoryInfo-BB@0x194 ]
+	95      (00000176) const-string         v6, "Cached"
+	96      (0000017a) invoke-virtual       v5, v6, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	97      (00000180) move-result-object   v6
+	98      (00000182) check-cast           v6, Ljava/lang/Long;
+	99      (00000186) if-eqz               v6, +007h
+
+probeMemoryInfo-BB@0x18a : [ probeMemoryInfo-BB@0x196 ]
+	100     (0000018a) invoke-virtual       v6, Ljava/lang/Long;->longValue()J
+	101     (00000190) move-result-wide     v13
+	102     (00000192) goto                 +2h
+
+probeMemoryInfo-BB@0x194 : [ probeMemoryInfo-BB@0x196 ]
+	103     (00000194) move-wide            v13, v7
+
+probeMemoryInfo-BB@0x196 : [ probeMemoryInfo-BB@0x1aa probeMemoryInfo-BB@0x1b4 ]
+	104     (00000196) const-string         v6, "SReclaimable"
+	105     (0000019a) invoke-virtual       v5, v6, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	106     (000001a0) move-result-object   v6
+	107     (000001a2) check-cast           v6, Ljava/lang/Long;
+	108     (000001a6) if-eqz               v6, +007h
+
+probeMemoryInfo-BB@0x1aa : [ probeMemoryInfo-BB@0x1b6 ]
+	109     (000001aa) invoke-virtual       v6, Ljava/lang/Long;->longValue()J
+	110     (000001b0) move-result-wide     v15
+	111     (000001b2) goto                 +2h
+
+probeMemoryInfo-BB@0x1b4 : [ probeMemoryInfo-BB@0x1b6 ]
+	112     (000001b4) move-wide            v15, v7
+
+probeMemoryInfo-BB@0x1b6 : [ probeMemoryInfo-BB@0x1ca probeMemoryInfo-BB@0x1d4 ]
+	113     (000001b6) const-string         v6, "Shmem"
+	114     (000001ba) invoke-virtual       v5, v6, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	115     (000001c0) move-result-object   v5
+	116     (000001c2) check-cast           v5, Ljava/lang/Long;
+	117     (000001c6) if-eqz               v5, +007h
+
+probeMemoryInfo-BB@0x1ca : [ probeMemoryInfo-BB@0x1d6 ]
+	118     (000001ca) invoke-virtual       v5, Ljava/lang/Long;->longValue()J
+	119     (000001d0) move-result-wide     v5
+	120     (000001d2) goto                 +2h
+
+probeMemoryInfo-BB@0x1d4 : [ probeMemoryInfo-BB@0x1d6 ]
+	121     (000001d4) move-wide            v5, v7
+
+probeMemoryInfo-BB@0x1d6 : [ probeMemoryInfo-BB@0x1e6 probeMemoryInfo-BB@0x1ea ]
+	122     (000001d6) add-long/2addr       v9, v11
+	123     (000001d8) add-long/2addr       v9, v13
+	124     (000001da) add-long/2addr       v9, v15
+	125     (000001dc) sub-long/2addr       v9, v5
+	126     (000001de) cmp-long             v5, v9, v7
+	127     (000001e2) if-gez               v5, +004h
+
+probeMemoryInfo-BB@0x1e6 : [ probeMemoryInfo-BB@0x12c ]
+	128     (000001e6) move-wide            v5, v7
+	129     (000001e8) goto                 -5eh
+
+probeMemoryInfo-BB@0x1ea : [ probeMemoryInfo-BB@0x12c ]
+	130     (000001ea) move-wide            v5, v9
+	131     (000001ec) goto                 -60h
+
+probeMemoryInfo-BB@0x1ee : [ probeMemoryInfo-BB@0x1f6 probeMemoryInfo-BB@0x1fc ]
+	132     (000001ee) new-instance         v5, Lcom/lele/llmonitor/data/soc/SourceProbe;
+	133     (000001f2) if-nez               v0, +005h
+
+probeMemoryInfo-BB@0x1f6 : [ probeMemoryInfo-BB@0x1fe ]
+	134     (000001f6) const-string         v6, "?"
+	135     (000001fa) goto                 +2h
+
+probeMemoryInfo-BB@0x1fc : [ probeMemoryInfo-BB@0x1fe ]
+	136     (000001fc) move-object          v6, v0
+
+probeMemoryInfo-BB@0x1fe : [ probeMemoryInfo-BB@0x238 probeMemoryInfo-BB@0x23a ]
+	137     (000001fe) new-instance         v9, Ljava/lang/StringBuilder;
+	138     (00000202) const-string         v10, "MemTotal="
+	139     (00000206) invoke-direct        v9, v10, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	140     (0000020c) invoke-virtual       v9, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	141     (00000212) const-string         v6, "kB, MemAvailable="
+	142     (00000216) invoke-virtual       v9, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	143     (0000021c) invoke-virtual       v9, v7, v8, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	144     (00000222) const-string         v6, "kB"
+	145     (00000226) invoke-virtual       v9, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	146     (0000022c) invoke-virtual       v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	147     (00000232) move-result-object   v6
+	148     (00000234) if-eqz               v0, +003h
+
+probeMemoryInfo-BB@0x238 : [ probeMemoryInfo-BB@0x23a ]
+	149     (00000238) const/4              v3, 1
+
+probeMemoryInfo-BB@0x23a : [ probeMemoryInfo-BB@0x24e probeMemoryInfo-BB@0x260 ]
+	150     (0000023a) invoke-direct        v5, v1, v6, v3, Lcom/lele/llmonitor/data/soc/SourceProbe;-><init>(Ljava/lang/String; Ljava/lang/String; Z)V
+	151     (00000240) invoke-virtual       v2, v5, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	152     (00000246) const-wide/16        v5, 1024
+	153     (0000024a) if-eqz               v0, +00bh
+
+probeMemoryInfo-BB@0x24e : [ probeMemoryInfo-BB@0x260 ]
+	154     (0000024e) invoke-virtual       v0, Ljava/lang/Long;->longValue()J
+	155     (00000254) move-result-wide     v3
+	156     (00000256) mul-long/2addr       v3, v5
+	157     (00000258) invoke-static        v3, v4, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	158     (0000025e) move-result-object   v4
+
+probeMemoryInfo-BB@0x260 : [ probeMemoryInfo-BB@0x264 probeMemoryInfo-BB@0x278 ]
+	159     (00000260) if-eqz               v0, +00ch
+
+probeMemoryInfo-BB@0x264 : [ probeMemoryInfo-BB@0x278 ]
+	160     (00000264) const-wide/16        v9, 0
+	161     (00000268) invoke-virtual       v0, Ljava/lang/Long;->longValue()J
+	162     (0000026e) move-result-wide     v11
+	163     (00000270) invoke-static/range  v7 ... v12, Lib1;->m(J J J)J
+	164     (00000276) move-result-wide     v7
+
+probeMemoryInfo-BB@0x278 : 
+	165     (00000278) new-instance         v0, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;
+	166     (0000027c) mul-long/2addr       v7, v5
+	167     (0000027e) invoke-static        v7, v8, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	168     (00000284) move-result-object   v1
+	169     (00000286) invoke-direct        v0, v4, v1, v2, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;-><init>(Ljava/lang/Long; Ljava/lang/Long; Ljava/util/List;)V
+	170     (0000028c) return-object        v0
+

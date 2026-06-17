@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/data/AppLanguageOption$Companion;->getDefault()Lcom/lele/llmonitor/data/AppLanguageOption; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:com.lele.llmonitor.data.AppLanguageOption
+
+getDefault-BB@0x0 : 
+	0       (00000000) invoke-static        Lcom/lele/llmonitor/data/AppLanguageOption;->access$getDefault$cp()Lcom/lele/llmonitor/data/AppLanguageOption;
+	1       (00000006) move-result-object   v0
+	2       (00000008) return-object        v0
+

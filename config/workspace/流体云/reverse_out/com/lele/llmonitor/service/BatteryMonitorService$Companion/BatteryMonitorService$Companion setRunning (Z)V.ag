@@ -1,0 +1,12 @@
+# Lcom/lele/llmonitor/service/BatteryMonitorService$Companion;->setRunning(Z)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:boolean
+#
+# - return:void
+
+setRunning-BB@0x0 : 
+	0       (00000000) invoke-static        v1, Lcom/lele/llmonitor/service/BatteryMonitorService;->access$setRunning$cp(Z)V
+	1       (00000006) return-void          
+

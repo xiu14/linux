@@ -1,0 +1,11 @@
+# Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->getTotalBytes()Ljava/lang/Long; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v0
+#
+# - return:java.lang.Long
+
+getTotalBytes-BB@0x0 : 
+	0       (00000000) iget-object          v0, v0, Lcom/lele/llmonitor/data/soc/MemoryInfoResult;->totalBytes Ljava/lang/Long;
+	1       (00000004) return-object        v0
+

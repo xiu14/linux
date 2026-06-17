@@ -1,0 +1,49 @@
+# Lcom/lele/llmonitor/data/HomeWallpaperManager;-><clinit>()V [access_flags=static constructor]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+<clinit>-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;
+	1       (00000004) invoke-direct        v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;-><init>()V
+	2       (0000000a) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->INSTANCE Lcom/lele/llmonitor/data/HomeWallpaperManager;
+	3       (0000000e) invoke-static        Lid1;->g()Lli3;
+	4       (00000014) move-result-object   v0
+	5       (00000016) sget-object          v1, Lii0;->a Lod0;
+	6       (0000001a) sget-object          v1, Lzy1;->a Li51;
+	7       (0000001e) iget-object          v1, v1, Li51;->i Li51;
+	8       (00000022) invoke-static        v0, v1, Lix2;->P(Lr70; Lt70;)Lt70;
+	9       (00000028) move-result-object   v0
+	10      (0000002a) invoke-static        v0, Lr7;->b(Lt70;)Lm60;
+	11      (00000030) move-result-object   v0
+	12      (00000032) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->scope Ld80;
+	13      (00000036) sget-object          v0, Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;
+	14      (0000003a) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	15      (00000040) move-result-object   v0
+	16      (00000042) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->isEnabled Ll52;
+	17      (00000046) const                v0, 1051931443
+	18      (0000004c) invoke-static        v0, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	19      (00000052) move-result-object   v0
+	20      (00000054) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	21      (0000005a) move-result-object   v0
+	22      (0000005c) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->wallpaperAlpha Ll52;
+	23      (00000060) const/4              v0, 0
+	24      (00000062) invoke-static        v0, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+	25      (00000068) move-result-object   v0
+	26      (0000006a) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	27      (00000070) move-result-object   v0
+	28      (00000072) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->wallpaperBlur Ll52;
+	29      (00000076) const/4              v0, 0
+	30      (00000078) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	31      (0000007e) move-result-object   v0
+	32      (00000080) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->wallpaperFile Ll52;
+	33      (00000084) sget-object          v0, Luo0;->d Luo0;
+	34      (00000088) invoke-static        v0, Lqc1;->G(Ljava/lang/Object;)Lgi2;
+	35      (0000008e) move-result-object   v0
+	36      (00000090) sput-object          v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->historyFiles Ll52;
+	37      (00000094) const/16             v0, 8
+	38      (00000098) sput                 v0, Lcom/lele/llmonitor/data/HomeWallpaperManager;->$stable I
+	39      (0000009c) return-void          
+

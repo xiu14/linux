@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_fill_list_item_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    app:oui_radius="8dp">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_0"
+        android:id="@+id/ai_btn_rewrite_chat_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/Body_M_Thick"/>
+</com.obric.oui.layout.OUIFrameLayout>

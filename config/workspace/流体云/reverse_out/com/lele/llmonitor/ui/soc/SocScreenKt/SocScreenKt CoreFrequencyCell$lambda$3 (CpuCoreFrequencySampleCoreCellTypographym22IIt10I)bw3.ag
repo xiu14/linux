@@ -1,0 +1,27 @@
+# Lcom/lele/llmonitor/ui/soc/SocScreenKt;->CoreFrequencyCell$lambda$3(Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample; Lcom/lele/llmonitor/ui/soc/CoreCellTypography; Lm22; I I Lt10; I)Lbw3; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:com.lele.llmonitor.data.soc.CpuCoreFrequencySample
+# - v7:com.lele.llmonitor.ui.soc.CoreCellTypography
+# - v8:m22
+# - v9:int
+# - v10:int
+# - v11:t10
+# - v12:int
+#
+# - return:bw3
+
+CoreFrequencyCell$lambda$3-BB@0x0 : 
+	0       (00000000) or-int/lit8          v9, v9, 1
+	1       (00000004) invoke-static        v9, Lvc1;->b0(I)I
+	2       (0000000a) move-result          v4
+	3       (0000000c) move-object          v0, v6
+	4       (0000000e) move-object          v1, v7
+	5       (00000010) move-object          v2, v8
+	6       (00000012) move                 v5, v10
+	7       (00000014) move-object          v3, v11
+	8       (00000016) invoke-static/range  v0 ... v5, Lcom/lele/llmonitor/ui/soc/SocScreenKt;->CoreFrequencyCell(Lcom/lele/llmonitor/data/soc/CpuCoreFrequencySample; Lcom/lele/llmonitor/ui/soc/CoreCellTypography; Lm22; Lt10; I I)V
+	9       (0000001c) sget-object          v6, Lbw3;->a Lbw3;
+	10      (00000020) return-object        v6
+

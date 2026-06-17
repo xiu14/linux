@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  xvideo-bot:
+    build: .
+    container_name: xvideo_bot
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"    # 单个日志文件最大 10MB
+        max-file: "3"      # 最多保留 3 个日志文件
+    environment:
+      # Telegram Bot Configuration
+      - BOT_TOKEN=7735812062:AAGTlz39K3P3VzuVfu6QHsYvuqhFRQh6wec
+      - ADMIN_ID=7181386196
+      
+      # AList Configuration
+      # IMPORTANT: If AList is running on the host machine, use host.docker.internal instead of 127.0.0.1
+      - ALIST_HOST=http://host.docker.internal:5244
+      - ALIST_TOKEN=alist-6c1a4f0a-3710-4ef6-b55f-90ea816bc7b1hKAPXqhoN5adpwRQElLZdRar0UuW5gvj0YcvFPtGfpBg0GEpHtVfAzLFRs0Iiv64
+      - ALIST_UPLOAD_PATH=/2R2/Download
+      - ALIST_IMAGE_PATH=/2R2/Images
+      
+      # Paths (Matches internal container paths)
+      - COOKIE_FILE=/root/cookies.txt
+      - COOKIE_DIR=/root/cookies
+      - DOWNLOAD_DIR=/root/downloads/bot_temp
+      - LOG_FILE=/app/bot.log
+      
+    volumes:
+      # Mount cookies.txt from host (Must exist!)
+      - ./cookies.txt:/root/cookies.txt
+      # Site-specific cookie files, e.g. ./cookies/tt1069.com.txt
+      - ./cookies:/root/cookies
+      # Persist logs to host
+      - ./bot.log:/app/bot.log
+      # (Optional) Map downloads for debugging
+      - ./downloads:/root/downloads/bot_temp
+      
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Ensures host.docker.internal works on Linux too

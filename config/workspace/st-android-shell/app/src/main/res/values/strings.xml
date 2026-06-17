@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tavern</string>
+    <string name="shortcut_settings_short">Tavern 设置</string>
+    <string name="shortcut_settings_long">打开 Tavern 设置</string>
+</resources>

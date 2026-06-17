@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="launcher_background">#111111</color>
+    <color name="launcher_foreground">#F5F5F5</color>
+    <string name="app_name">Tavern</string>
+    <string name="shortcut_settings_long">打开 Tavern 设置</string>
+    <string name="shortcut_settings_short">Tavern 设置</string>
+    <style name="Theme.STShell" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">false</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" ns1:targetApi="35">true</item>
+    </style>
+</resources>

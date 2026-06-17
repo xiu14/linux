@@ -1,0 +1,30 @@
+services:
+  # 服务 1: NapCat (QQ 客户端)
+  napcat:
+    image: mlikiowa/napcat-docker:latest
+    container_name: napcat
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./napcat/config:/app/napcat/config
+      - ./napcat/qq:/app/.config/QQ
+    environment:
+      - ACCOUNT=2185729859  # <--- 直接填在这里！
+      - WS_ENABLE=true      # 建议确认是否需要开启 WebSocket，通常都需要
+
+  # 服务 2: NoneBot (你的 Python 逻辑)
+  nonebot:
+    build: . 
+    container_name: qqbot
+    restart: always
+    network_mode: "host"
+    # 【关键】记忆持久化配置
+    # 将当前目录(宿主机)挂载到容器的 /app 目录
+    # 这样 qqbot.py 生成的 chat_memory.json 会直接保存到你电脑的当前文件夹下
+    volumes:
+      - .:/app
+      - /etc/localtime:/etc/localtime:ro # 同步宿主机时间
+    depends_on:
+      - napcat
+    command: python qqbot.py
+

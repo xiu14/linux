@@ -1,0 +1,14 @@
+services:
+  memo-bot:
+    build: .
+    container_name: memo-bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_ID=${ADMIN_ID}
+      - DOCS=${DOCS}
+      - DEFAULT_DOC=${DEFAULT_DOC}
+      - GOOGLE_CREDENTIALS_PATH=/app/credentials.json
+    volumes:
+      # 挂载 Google 服务账号凭证文件
+      - ./credentials.json:/app/credentials.json:ro

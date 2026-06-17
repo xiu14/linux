@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Taipei
+      - PASSWORD=960718
+    volumes:
+      - ./config:/config
+      - ./workspace:/workspace
+    ports:
+      - "10000:8443"
+      - "7000-7100:7000-7100"
+    restart: unless-stopped

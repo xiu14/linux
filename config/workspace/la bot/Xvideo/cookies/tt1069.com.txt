@@ -1,0 +1,16 @@
+# Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file! Do not edit.
+
+www.tt1069.com	FALSE	/	FALSE	1806577767	KMkA_2132_smile	2D1
+www.tt1069.com	FALSE	/	TRUE	1777633442	KMkA_2132_saltkey	s3dXFDaY
+www.tt1069.com	FALSE	/	TRUE	1777633442	KMkA_2132_lastvisit	1775037843
+www.tt1069.com	FALSE	/	TRUE	1775128161	KMkA_2132_sid	X50020
+www.tt1069.com	FALSE	/	FALSE	1809601814	__suvt	b6d0109f1d8fa93763b37e960e20707a
+www.tt1069.com	FALSE	/	FALSE	1809601814	__nuvt	7e3d0268f73bdea0ecf69d4c82a92efc
+www.tt1069.com	FALSE	/	TRUE	1806577759	KMkA_2132_ulastactivity	a257p8sO5qOtfREhdYNxiNf07MJA0iRwWy5vJ987JOtnEFOw3%2FWb
+www.tt1069.com	FALSE	/	TRUE	1777633759	KMkA_2132_auth	c3d8dJhlGa6gY6ROc2y5PnQfXepEme7s%2FUeKrkQOkj6xaRHWJVkM%2BvwTweUaMg49U6nqZnylWNaTBjgmOe5sPG0teZht
+www.tt1069.com	FALSE	/	TRUE	1806577759	KMkA_2132_lastcheckfeed	1432770%7C1775041760
+www.tt1069.com	FALSE	/	TRUE	0	KMkA_2132_viewid	tid_5825419
+www.tt1069.com	FALSE	/	TRUE	1775128163	KMkA_2132_lastact	1775041764%09home.php%09misc
+www.tt1069.com	FALSE	/	TRUE	1775042063	KMkA_2132_sendmail	1

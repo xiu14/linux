@@ -1,0 +1,6 @@
+[
+    "nonebot2[fastapi,websockets]",
+    "nonebot-adapter-onebot",
+    "requests",
+    "httpx"
+]

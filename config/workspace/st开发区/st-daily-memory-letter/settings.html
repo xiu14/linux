@@ -1,0 +1,148 @@
+<div id="dml-settings" class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+        <b>故人来信</b>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down"></div>
+    </div>
+
+    <div class="inline-drawer-content">
+        <div class="dml-panel">
+            <div class="dml-status-card">
+                <div>
+                    <div id="dml-status-kicker" class="dml-status-kicker"><span class="dml-status-kicker-label">静默推荐</span><span class="dml-status-kicker-icon fa-solid fa-hourglass-half" aria-hidden="true"></span></div>
+                    <div id="dml-status-text" class="dml-status-title">正在读取状态...</div>
+                    <div id="dml-status-meta" class="dml-status-meta">扩展启动后会在后台检查今天是否已经收到故人来信。</div>
+                </div>
+                <button id="dml-view-letter" class="menu_button dml-primary-button" type="button">查看来信</button>
+            </div>
+
+            <div class="dml-toolbar">
+                <button id="dml-generate-now" class="menu_button dml-toolbar-button" type="button">立即生成</button>
+                <button id="dml-rewrite-ai-now" class="menu_button dml-toolbar-button" type="button">重新发送给 AI</button>
+                <button id="dml-reshuffle-now" class="menu_button dml-toolbar-button" type="button">重新抽取</button>
+                <button id="dml-save-settings" class="menu_button dml-toolbar-button" type="button">保存设置</button>
+            </div>
+
+            <details class="dml-fold">
+                <summary class="dml-fold-summary"><span>收件箱<span id="dml-favorites-count"></span></span></summary>
+                <div class="dml-fold-body">
+                    <div id="dml-favorites-list" class="dml-favorites-list"></div>
+                    <div id="dml-favorites-overflow" class="dml-help-text"></div>
+                    <button id="dml-view-all-favorites" class="menu_button dml-toolbar-button" type="button">打开收件箱</button>
+                </div>
+            </details>
+
+            <details class="dml-fold">
+                <summary class="dml-fold-summary">API 信息</summary>
+                <div class="dml-fold-body">
+                    <div class="settings_section">
+                        <label>生成来源</label>
+                        <div class="dml-source-group" id="dml-generation-source-group">
+                            <label class="dml-source-option" for="dml-generation-source-st">
+                                <input id="dml-generation-source-st" type="radio" name="dml-generation-source" value="st" />
+                                <span class="dml-source-option-title">酒馆当前连接</span>
+                                <span class="dml-source-option-desc">复用当前 SillyTavern 已连接的模型与预设</span>
+                            </label>
+                            <label class="dml-source-option" for="dml-generation-source-external">
+                                <input id="dml-generation-source-external" type="radio" name="dml-generation-source" value="external" />
+                                <span class="dml-source-option-title">外部 AI</span>
+                                <span class="dml-source-option-desc">手动填写 OpenAI 兼容 URL、Key 和模型</span>
+                            </label>
+                            <label class="dml-source-option" for="dml-generation-source-local">
+                                <input id="dml-generation-source-local" type="radio" name="dml-generation-source" value="local" />
+                                <span class="dml-source-option-title">本地生成</span>
+                                <span class="dml-source-option-desc">不调用模型，直接生成一封本地回忆草稿</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="dml-st-source-note" class="settings_section dml-source-note" hidden>
+                        <div class="dml-help-text">将复用当前 SillyTavern 已连接的模型与预设来生成故人来信，无需单独填写 URL、Key 或模型。</div>
+                    </div>
+
+                    <div id="dml-local-source-note" class="settings_section dml-source-note" hidden>
+                        <div class="dml-help-text">当前会直接使用扩展内置的本地回忆草稿，不会调用外部模型。</div>
+                    </div>
+
+                    <div id="dml-external-api-fields">
+                    <div class="settings_section">
+                        <label for="dml-api-url">外部 AI URL</label>
+                        <input id="dml-api-url" class="text_pole" type="text" placeholder="可填基础 /v1 地址或完整 /chat/completions 地址" />
+                    </div>
+
+                    <div class="settings_section">
+                        <label for="dml-api-key">API Key</label>
+                        <input id="dml-api-key" class="text_pole" type="password" placeholder="会保存在扩展设置里；如果你的 URL 已经处理鉴权，可以留空" />
+                        <div id="dml-api-key-status" class="dml-help-text">当前没有保存 API Key。</div>
+                    </div>
+
+                    <div class="settings_section dml-model-row">
+                        <div class="dml-model-field">
+                            <label for="dml-model">模型名</label>
+                            <select id="dml-model" class="text_pole"></select>
+                        </div>
+                        <button id="dml-fetch-models" class="menu_button dml-toolbar-button" type="button">获取模型</button>
+                    </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dml-fold">
+                <summary class="dml-fold-summary"><span>系统设置</span><span class="dml-author-tag">@黎吧啦</span></summary>
+                <div class="dml-fold-body">
+                    <div class="settings_section">
+                        <label class="checkbox_label" for="dml-enabled">
+                            <input id="dml-enabled" type="checkbox" />
+                            启用故人来信
+                        </label>
+                    </div>
+
+                    <div class="settings_section">
+                        <label class="checkbox_label" for="dml-auto-run">
+                            <input id="dml-auto-run" type="checkbox" />
+                            启动后静默检查，24 小时内只执行一次
+                        </label>
+                    </div>
+
+                    <div class="settings_section">
+                        <label class="checkbox_label" for="dml-use-in-character-mode">
+                            <input id="dml-use-in-character-mode" type="checkbox" />
+                            使用角色第一人称书信模式
+                        </label>
+                    </div>
+
+                    <div class="settings_section dml-grid">
+                        <div>
+                            <label for="dml-inactive-days">不活跃天数</label>
+                            <input id="dml-inactive-days" class="text_pole" type="number" min="1" step="1" />
+                        </div>
+                        <div>
+                            <label for="dml-snippets-per-letter">每封信片段数</label>
+                            <input id="dml-snippets-per-letter" class="text_pole" type="number" min="1" max="5" step="1" />
+                        </div>
+                    </div>
+
+                    <div class="settings_section">
+                        <label for="dml-cooldown-days">同角色冷却天数</label>
+                        <input id="dml-cooldown-days" class="text_pole" type="number" min="1" max="90" step="1" />
+                    </div>
+
+                    <div class="settings_section">
+                        <label for="dml-content-tag-name">正文标签名</label>
+                        <input id="dml-content-tag-name" class="text_pole" type="text" placeholder="默认 content；留空则不过滤标签" />
+                        <div class="dml-help-text">抽取聊天片段时，只保留这个标签里的文本。默认会读取 <code>&lt;content&gt;...&lt;/content&gt;</code>。</div>
+                    </div>
+
+                    <div class="settings_section">
+                        <label for="dml-analysis-system-prompt">分析模式提示词</label>
+                        <textarea id="dml-analysis-system-prompt" class="text_pole textarea_compact" rows="6"></textarea>
+                    </div>
+
+                    <div class="settings_section">
+                        <label for="dml-in-character-system-prompt">角色第一人称提示词</label>
+                        <textarea id="dml-in-character-system-prompt" class="text_pole textarea_compact" rows="6"></textarea>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+</div>

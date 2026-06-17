@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>QQ Bot 管理面板</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🤖 QQ Bot 管理面板</h1>
+            <div class="header-actions">
+                <span id="status-indicator" class="status-dot offline"></span>
+                <button id="btn-restart" class="btn btn-danger">🔄 重启 Bot</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="container">
+        <!-- 状态卡片 -->
+        <section class="card status-card">
+            <h2>📊 运行状态</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <span class="label">容器状态</span>
+                    <span id="container-status" class="value">检测中...</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">上次互动</span>
+                    <span id="last-chat" class="value">-</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">记忆条数</span>
+                    <span id="memory-count" class="value">0</span>
+                </div>
+                <div class="status-item action-buttons">
+                    <button id="btn-view-memory" class="btn btn-secondary btn-sm">📖 查看记忆</button>
+                    <button id="btn-view-logs" class="btn btn-secondary btn-sm">📋 查看日志</button>
+                    <button id="btn-clear-memory" class="btn btn-secondary btn-sm">🧠 清空记忆</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 基础配置 -->
+        <section class="card">
+            <h2>⚙️ 基础配置</h2>
+            <div class="form-group">
+                <label for="admin-id">管理员 QQ</label>
+                <input type="text" id="admin-id" placeholder="QQ号">
+            </div>
+        </section>
+
+        <!-- AI Agent 配置 -->
+        <section class="card">
+            <h2>🤖 AI Agent (DeepSeek)</h2>
+            <div class="form-group">
+                <label for="deepseek-key">API Key</label>
+                <div class="input-with-toggle">
+                    <input type="password" id="deepseek-key" placeholder="sk-xxx">
+                    <button class="btn-toggle-pwd" data-target="deepseek-key">👁</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="deepseek-url">Base URL</label>
+                <input type="text" id="deepseek-url" placeholder="https://api.xxx.com/v1">
+            </div>
+            <div class="form-group">
+                <label for="deepseek-model">Model</label>
+                <input type="text" id="deepseek-model" placeholder="模型名称">
+            </div>
+        </section>
+
+        <!-- 闲聊 API 配置 -->
+        <section class="card">
+            <h2>💬 闲聊 API (Gemini)</h2>
+            <div class="form-group">
+                <label for="chat-key">API Key</label>
+                <div class="input-with-toggle">
+                    <input type="password" id="chat-key" placeholder="API Key">
+                    <button class="btn-toggle-pwd" data-target="chat-key">👁</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="chat-url">Base URL</label>
+                <input type="text" id="chat-url" placeholder="https://xxx">
+            </div>
+            <div class="form-group">
+                <label for="chat-model">Model</label>
+                <input type="text" id="chat-model" placeholder="gemini-xxx">
+            </div>
+        </section>
+
+        <!-- 人设管理 -->
+        <section class="card">
+            <h2>🎭 人设管理</h2>
+            <div class="form-group">
+                <label for="persona-default">默认人设 (核心性格)</label>
+                <textarea id="persona-default" rows="5" placeholder="你是一个..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="persona-suffix">格式约束 (自动附加)</label>
+                <textarea id="persona-suffix" rows="4" placeholder="聊天时..."></textarea>
+            </div>
+        </section>
+
+        <!-- 主动聊天配置 -->
+        <section class="card">
+            <h2>💬 主动聊天</h2>
+            <div class="form-row">
+                <div class="form-group flex-1">
+                    <label for="proactive-enabled">启用</label>
+                    <label class="switch">
+                        <input type="checkbox" id="proactive-enabled">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group flex-1">
+                    <label for="proactive-prob">触发概率</label>
+                    <input type="number" id="proactive-prob" min="0" max="1" step="0.1" placeholder="0.4">
+                </div>
+                <div class="form-group flex-1">
+                    <label for="proactive-hours">沉默阈值(小时)</label>
+                    <input type="number" id="proactive-hours" min="1" max="48" placeholder="12">
+                </div>
+            </div>
+        </section>
+
+        <!-- 记忆设置 -->
+        <section class="card">
+            <h2>🧠 记忆设置</h2>
+            <div class="form-group">
+                <label for="memory-threshold">总结阈值 (消息条数)</label>
+                <input type="number" id="memory-threshold" min="20" max="500" placeholder="50">
+            </div>
+        </section>
+
+        <!-- TTS 账号管理 -->
+        <section class="card">
+            <h2>🔊 TTS 账号 (火山引擎)</h2>
+            <div id="volc-list" class="account-list">
+                <!-- 动态填充 -->
+            </div>
+            <button id="btn-add-volc" class="btn btn-secondary btn-block">+ 添加 TTS 账号</button>
+        </section>
+
+        <!-- Gmail 账号管理 -->
+        <section class="card">
+            <h2>📧 Gmail 账号</h2>
+            <div id="gmail-list" class="account-list">
+                <!-- 动态填充 -->
+            </div>
+            <button id="btn-add-gmail" class="btn btn-secondary btn-block">+ 添加 Gmail 账号</button>
+        </section>
+    </main>
+
+    <!-- 底部固定保存按钮 -->
+    <footer class="footer">
+        <button id="btn-save" class="btn btn-primary btn-block">💾 保存所有配置</button>
+    </footer>
+
+    <!-- Toast 提示 -->
+    <div id="toast" class="toast"></div>
+
+    <!-- 确认弹窗 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">确认操作</h3>
+            <p id="modal-message">确定要执行此操作吗？</p>
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn btn-secondary">取消</button>
+                <button id="modal-confirm" class="btn btn-danger">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加 TTS 账号弹窗 -->
+    <div id="modal-volc" class="modal">
+        <div class="modal-content modal-large">
+            <h3>添加 TTS 账号</h3>
+            <div class="form-group">
+                <label>App ID</label>
+                <input type="text" id="volc-appid" placeholder="App ID">
+            </div>
+            <div class="form-group">
+                <label>Token</label>
+                <input type="text" id="volc-token" placeholder="Token">
+            </div>
+            <div class="form-group">
+                <label>Cluster</label>
+                <input type="text" id="volc-cluster" value="volcano_icl" placeholder="Cluster">
+            </div>
+            <div class="form-group">
+                <label>Voice ID</label>
+                <input type="text" id="volc-voice" placeholder="Voice ID">
+            </div>
+            <div class="form-group">
+                <label>备注名</label>
+                <input type="text" id="volc-remark" placeholder="用于识别的名称">
+            </div>
+            <div class="modal-actions">
+                <button id="volc-cancel" class="btn btn-secondary">取消</button>
+                <button id="volc-submit" class="btn btn-primary">添加</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加 Gmail 账号弹窗 -->
+    <div id="modal-gmail" class="modal">
+        <div class="modal-content">
+            <h3>添加 Gmail 账号</h3>
+            <div class="form-group">
+                <label>邮箱地址</label>
+                <input type="email" id="gmail-user" placeholder="xxx@gmail.com">
+            </div>
+            <div class="form-group">
+                <label>应用专用密码</label>
+                <input type="text" id="gmail-password" placeholder="xxxx xxxx xxxx xxxx">
+            </div>
+            <div class="modal-actions">
+                <button id="gmail-cancel" class="btn btn-secondary">取消</button>
+                <button id="gmail-submit" class="btn btn-primary">添加</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 记忆查看弹窗 -->
+    <div id="modal-memory" class="modal">
+        <div class="modal-content modal-fullscreen">
+            <div class="modal-header">
+                <h3>📖 聊天记忆</h3>
+                <button id="memory-close" class="btn-close">✕</button>
+            </div>
+            <div id="memory-content" class="modal-scroll-content">
+                <div class="empty-state">加载中...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 日志查看弹窗 -->
+    <div id="modal-logs" class="modal">
+        <div class="modal-content modal-fullscreen">
+            <div class="modal-header">
+                <h3>📋 Bot 日志</h3>
+                <div class="modal-header-actions">
+                    <button id="logs-refresh" class="btn btn-secondary btn-sm">🔄 刷新</button>
+                    <button id="logs-close" class="btn-close">✕</button>
+                </div>
+            </div>
+            <div id="logs-content" class="modal-scroll-content logs-container">
+                <div class="empty-state">加载中...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

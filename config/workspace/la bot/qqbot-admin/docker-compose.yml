@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  qqbot-admin:
+    build: .
+    container_name: qqbot-admin
+    ports:
+      - "9090:5000"
+    volumes:
+      # 挂载 qqbot 目录以读写配置文件
+      - ../qqbot:/app/qqbot:rw
+      # 挂载 Docker Socket 用于重启容器
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

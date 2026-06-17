@@ -1,0 +1,169 @@
+Node version: v24.14.1. Running in undefined environment. Server directory: /config/workspace/st开发区/st
+Using config path: ./config.yaml
+Using data root: ./data
+Preferring IPv4 for DNS resolution
+Your current SillyTavern configuration is insecure (listening to non-localhost). Enable whitelisting, basic authentication or user accounts.
+Security has been overridden. If it's not a trusted network, change the settings.
+
+SillyTavern 1.18.0
+Running 'release' (51ad27fb8) - 5/3/2026, 11:45:46 PM GMT+8
+
+
+Warning: listen is enabled but private request filter is disabled. This may expose your server to SSRF attacks.
+To enable, provide trusted addresses in privateAddressWhitelist.allowedRanges and set privateAddressWhitelist.enabled to true in config.yaml and restart the server.
+
+Compiling frontend libraries...
+webpack 5.105.4 compiled [1m[32msuccessfully[39m[22m in 1082 ms
+
+]2;SillyTavern WebServer\SillyTavern is listening on IPv4: 0.0.0.0:7000
+
+To limit connections to internal localhost only ([::1] or 127.0.0.1), change the setting in config.yaml to "listen: false".
+Check the "access.log" file in the data directory to inspect incoming connections: data/access.log
+
+=================================================
+
+Go to: http://127.0.0.1:7000/ to open SillyTavern
+
+=================================================
+
+New connection from 127.0.0.1; User Agent: curl/8.5.0
+
+New connection from 172.18.0.3; User Agent: curl/8.5.0
+
+New connection from 34.80.74.211; User Agent: curl/8.5.0
+
+New connection from 120.230.77.184; User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36
+
+Extensions available for default-user [
+  { type: 'system', name: 'assets' },
+  { type: 'system', name: 'attachments' },
+  { type: 'system', name: 'caption' },
+  { type: 'system', name: 'connection-manager' },
+  { type: 'system', name: 'expressions' },
+  { type: 'system', name: 'gallery' },
+  { type: 'system', name: 'memory' },
+  { type: 'system', name: 'quick-reply' },
+  { type: 'system', name: 'regex' },
+  { type: 'system', name: 'stable-diffusion' },
+  { type: 'system', name: 'token-counter' },
+  { type: 'system', name: 'translate' },
+  { type: 'system', name: 'tts' },
+  { type: 'system', name: 'vectors' },
+  { type: 'global', name: 'third-party/JS-Slash-Runner' },
+  { type: 'global', name: 'third-party/ST-Grouping' },
+  { type: 'global', name: 'third-party/st-daily-memory-letter' },
+  { type: 'global', name: 'third-party/st-first-message-generator' },
+  { type: 'global', name: 'third-party/st-performance-doctor' },
+  { type: 'global', name: 'third-party/st-random-chat-preview' },
+  { type: 'global', name: 'third-party/tavern-native-bridge' },
+  { type: 'global', name: 'third-party/worldinfo' }
+]
+Instantiated the tokenizer for gemma
+Extension is up to date at public/scripts/extensions/third-party/JS-Slash-Runner
+worldinfo main a6b7e57d2aaa4308f7bc1035659b695aad6cc9de
+ST-Grouping main 4c75543d1c40a09a9c306a584e5057dab6a1334f
+JS-Slash-Runner main 48df0561949097232d6852255fa8fef3c41aeabd
+st-first-message-generator main 8a6e25d0045028565733bf00306517396f14709c
+New connection from 66.132.195.123; User Agent: undefined
+
+Extension has been cloned to public/scripts/extensions/third-party/st-chatu8 from https://github.com/damoshen123/st-chatu8.git at (default) branch
+Extensions available for default-user [
+  { type: 'system', name: 'assets' },
+  { type: 'system', name: 'attachments' },
+  { type: 'system', name: 'caption' },
+  { type: 'system', name: 'connection-manager' },
+  { type: 'system', name: 'expressions' },
+  { type: 'system', name: 'gallery' },
+  { type: 'system', name: 'memory' },
+  { type: 'system', name: 'quick-reply' },
+  { type: 'system', name: 'regex' },
+  { type: 'system', name: 'stable-diffusion' },
+  { type: 'system', name: 'token-counter' },
+  { type: 'system', name: 'translate' },
+  { type: 'system', name: 'tts' },
+  { type: 'system', name: 'vectors' },
+  { type: 'global', name: 'third-party/JS-Slash-Runner' },
+  { type: 'global', name: 'third-party/ST-Grouping' },
+  { type: 'global', name: 'third-party/st-chatu8' },
+  { type: 'global', name: 'third-party/st-daily-memory-letter' },
+  { type: 'global', name: 'third-party/st-first-message-generator' },
+  { type: 'global', name: 'third-party/st-performance-doctor' },
+  { type: 'global', name: 'third-party/st-random-chat-preview' },
+  { type: 'global', name: 'third-party/tavern-native-bridge' },
+  { type: 'global', name: 'third-party/worldinfo' }
+]
+st-first-message-generator main 8a6e25d0045028565733bf00306517396f14709c
+worldinfo main a6b7e57d2aaa4308f7bc1035659b695aad6cc9de
+JS-Slash-Runner main 48df0561949097232d6852255fa8fef3c41aeabd
+ST-Grouping main 4c75543d1c40a09a9c306a584e5057dab6a1334f
+st-chatu8 main 0ea36859875a3699d64ed7d559b8e2fa498b41ca
+st-first-message-generator main 8a6e25d0045028565733bf00306517396f14709c
+worldinfo main a6b7e57d2aaa4308f7bc1035659b695aad6cc9de
+ST-Grouping main 4c75543d1c40a09a9c306a584e5057dab6a1334f
+st-chatu8 main 0ea36859875a3699d64ed7d559b8e2fa498b41ca
+JS-Slash-Runner main 48df0561949097232d6852255fa8fef3c41aeabd
+Extensions available for default-user [
+  { type: 'system', name: 'assets' },
+  { type: 'system', name: 'attachments' },
+  { type: 'system', name: 'caption' },
+  { type: 'system', name: 'connection-manager' },
+  { type: 'system', name: 'expressions' },
+  { type: 'system', name: 'gallery' },
+  { type: 'system', name: 'memory' },
+  { type: 'system', name: 'quick-reply' },
+  { type: 'system', name: 'regex' },
+  { type: 'system', name: 'stable-diffusion' },
+  { type: 'system', name: 'token-counter' },
+  { type: 'system', name: 'translate' },
+  { type: 'system', name: 'tts' },
+  { type: 'system', name: 'vectors' },
+  { type: 'global', name: 'third-party/JS-Slash-Runner' },
+  { type: 'global', name: 'third-party/ST-Grouping' },
+  { type: 'global', name: 'third-party/st-chatu8' },
+  { type: 'global', name: 'third-party/st-daily-memory-letter' },
+  { type: 'global', name: 'third-party/st-first-message-generator' },
+  { type: 'global', name: 'third-party/st-performance-doctor' },
+  { type: 'global', name: 'third-party/st-random-chat-preview' },
+  { type: 'global', name: 'third-party/tavern-native-bridge' },
+  { type: 'global', name: 'third-party/worldinfo' }
+]
+File not found: data/default-user/chats/曙光小队/曙光小队 - 2026-06-10@18h45m24s156ms.jsonl. The chat does not exist or is empty.
+Extensions available for default-user [
+  { type: 'system', name: 'assets' },
+  { type: 'system', name: 'attachments' },
+  { type: 'system', name: 'caption' },
+  { type: 'system', name: 'connection-manager' },
+  { type: 'system', name: 'expressions' },
+  { type: 'system', name: 'gallery' },
+  { type: 'system', name: 'memory' },
+  { type: 'system', name: 'quick-reply' },
+  { type: 'system', name: 'regex' },
+  { type: 'system', name: 'stable-diffusion' },
+  { type: 'system', name: 'token-counter' },
+  { type: 'system', name: 'translate' },
+  { type: 'system', name: 'tts' },
+  { type: 'system', name: 'vectors' },
+  { type: 'global', name: 'third-party/JS-Slash-Runner' },
+  { type: 'global', name: 'third-party/ST-Grouping' },
+  { type: 'global', name: 'third-party/st-chatu8' },
+  { type: 'global', name: 'third-party/st-daily-memory-letter' },
+  { type: 'global', name: 'third-party/st-first-message-generator' },
+  { type: 'global', name: 'third-party/st-performance-doctor' },
+  { type: 'global', name: 'third-party/st-random-chat-preview' },
+  { type: 'global', name: 'third-party/tavern-native-bridge' },
+  { type: 'global', name: 'third-party/worldinfo' }
+]
+Available models: [
+  'claude-opus-4.6',
+  'claude-opus-4.7',
+  'claude-sonnet-4-20250514-think',
+  'deepseek-ai/DeepSeek-V4-Flash',
+  'deepseek-v4-pro',
+  'doubao2.0pro',
+  'gemini-3.1-pro-preview',
+  'gemini-3.5-flash',
+  'glm4.7',
+  'gpt-5.5',
+  'mimo-v2.5-pro'
+]
+]2;node\

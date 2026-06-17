@@ -1,0 +1,18 @@
+name: GitHub Repo Stats
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+jobs:
+  repo-stats:
+    name: Collect repo traffic stats
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run github-repo-stats
+        uses: jgehrcke/github-repo-stats@v1.4.2
+        with:
+          repository: xiu14/st-daily-memory-letter
+          databranch: github-repo-stats
+          ghtoken: ${{ secrets.GHRS_GITHUB_API_TOKEN }}

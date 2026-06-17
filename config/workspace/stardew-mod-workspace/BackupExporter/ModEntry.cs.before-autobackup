@@ -1,0 +1,134 @@
+using System.IO.Compression;
+using System.Text;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
+using StardewValley;
+
+namespace Libala.BackupExporter;
+
+public sealed class ModEntry : Mod
+{
+    private const string ExportsFolderName = "Exports";
+    private bool exporting;
+
+    public override void Entry(IModHelper helper)
+    {
+        helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
+    }
+
+    private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
+    {
+        IMobileToolbarApi? toolbar = this.Helper.ModRegistry.GetApi<IMobileToolbarApi>("libala.MobileToolbar");
+        if (toolbar is null)
+        {
+            this.Monitor.Log("Could not access Mobile Toolbar API. The backup button won't be available.", LogLevel.Warn);
+            return;
+        }
+
+        toolbar.RegisterButton("libala.BackupExporter.export", "备份", 90, this.ExportBackup, CanOpenMenu);
+    }
+
+    private void ExportBackup()
+    {
+        if (this.exporting)
+            return;
+
+        this.exporting = true;
+        try
+        {
+            string? modsPath = Directory.GetParent(this.Helper.DirectoryPath)?.FullName;
+            if (modsPath is null || !Directory.Exists(modsPath))
+                throw new DirectoryNotFoundException("Mods folder could not be resolved.");
+
+            string exportsPath = Path.Combine(this.Helper.DirectoryPath, ExportsFolderName);
+            Directory.CreateDirectory(exportsPath);
+            string fileName = $"SMAPI-FULL-BACKUP-{DateTime.Now:yyyyMMdd-HHmmss}.zip";
+            string archivePath = Path.Combine(exportsPath, fileName);
+            List<string> skippedFiles = new();
+
+            using (FileStream output = File.Create(archivePath))
+            using (ZipArchive archive = new(output, ZipArchiveMode.Create))
+            {
+                this.AddFolder(archive, modsPath, "Mods", exportsPath, skippedFiles);
+                this.AddFolder(archive, Constants.SavesPath, "Saves", excludedPath: null, skippedFiles);
+                this.AddReport(archive, fileName, skippedFiles);
+            }
+
+            this.Monitor.Log($"Created complete transfer backup: {archivePath}", LogLevel.Info);
+            string exportLocation = $"Mods/{Path.GetFileName(this.Helper.DirectoryPath)}/{ExportsFolderName}";
+            string message = skippedFiles.Count == 0
+                ? $"备份成功：{fileName}。请在 {exportLocation} 中取出"
+                : $"备份已生成，但跳过 {skippedFiles.Count} 个文件，请查看 ZIP 内报告";
+            Game1.addHUDMessage(HUDMessage.ForCornerTextbox(message));
+        }
+        catch (Exception ex)
+        {
+            this.Monitor.Log($"Creating backup failed: {ex}", LogLevel.Error);
+            Game1.addHUDMessage(HUDMessage.ForCornerTextbox("备份失败，请查看 SMAPI 日志"));
+        }
+        finally
+        {
+            this.exporting = false;
+        }
+    }
+
+    private void AddFolder(ZipArchive archive, string sourcePath, string archiveFolder, string? excludedPath, List<string> skippedFiles)
+    {
+        if (!Directory.Exists(sourcePath))
+        {
+            skippedFiles.Add($"{archiveFolder}/ (folder was not found)");
+            return;
+        }
+
+        string? normalizedExcludedPath = excludedPath is null
+            ? null
+            : Path.GetFullPath(excludedPath).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+        foreach (string filePath in Directory.EnumerateFiles(sourcePath, "*", SearchOption.AllDirectories))
+        {
+            string fullFilePath = Path.GetFullPath(filePath);
+            if (normalizedExcludedPath is not null && fullFilePath.StartsWith(normalizedExcludedPath, StringComparison.OrdinalIgnoreCase))
+                continue;
+
+            string relativePath = Path.GetRelativePath(sourcePath, filePath).Replace(Path.DirectorySeparatorChar, '/');
+            string entryName = $"{archiveFolder}/{relativePath}";
+            try
+            {
+                archive.CreateEntryFromFile(filePath, entryName, CompressionLevel.Optimal);
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                skippedFiles.Add($"{entryName} ({ex.Message})");
+                this.Monitor.Log($"Skipped backup file '{filePath}': {ex.Message}", LogLevel.Warn);
+            }
+        }
+    }
+
+    private void AddReport(ZipArchive archive, string fileName, List<string> skippedFiles)
+    {
+        ZipArchiveEntry reportEntry = archive.CreateEntry("BackupInfo.txt", CompressionLevel.Optimal);
+        using StreamWriter writer = new(reportEntry.Open(), Encoding.UTF8);
+        writer.WriteLine($"Archive: {fileName}");
+        writer.WriteLine($"Created: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+        writer.WriteLine("Contents: Mods and Saves");
+        writer.WriteLine("Note: mod configuration files may contain private API keys. Keep this archive private.");
+        writer.WriteLine();
+        if (skippedFiles.Count == 0)
+        {
+            writer.WriteLine("Result: Complete; no files were skipped.");
+            return;
+        }
+
+        writer.WriteLine($"Result: Incomplete; skipped {skippedFiles.Count} file(s):");
+        foreach (string skippedFile in skippedFiles)
+            writer.WriteLine($"- {skippedFile}");
+    }
+
+    private static bool CanOpenMenu()
+    {
+        return Context.IsWorldReady
+            && Game1.currentLocation is not null
+            && Game1.activeClickableMenu is null
+            && Game1.currentMinigame is null
+            && !Game1.eventUp;
+    }
+}

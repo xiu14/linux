@@ -1,0 +1,260 @@
+{
+	"Changes": [
+		{
+			"LogName": "Shane Letter Trigger - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farm_letter_2heart/e 611944/f Shane 500": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneLetter_2heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farm_letter_4heart/e 3910674/f Shane 1500/e 2heart_ext_001": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneLetter_4heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farm_letter_6heart/e 3910975/f Shane 2500/e 4heart_ext_001": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneLetter_6heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farm_letter_8heart/e 3900074/f Shane 3500/e 6heart_ext_001": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneLetter_8heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 14 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farmhouse_letter_14heart/f Shane 3500/O Shane/d Thu/!e 3917584": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneLetter_14heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_2heart/f Shane 500/!e 611944": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_2heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_4heart/f Shane 1000/!e 3910674": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_4heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_6heart/f Shane 1500/!e 3910975": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_6heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 6 Heart Followup",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_6heart_followup/e 3910975/!e 2118991": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_6heart_followup/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 7 Heart A",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_7heart_a/f Shane 1750/e 2118991/!e 3910974": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_7heart_a/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 7 Heart B",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_7heart_b/f Shane 1750/f Clint 500/f Emily 500/!e 831125": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_7heart_b/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_8heart/f Shane 2000/e 2118991/!e 3900074": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_8heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 10 Heart Setup",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_10heart_setup/f Shane 2500/D Shane/e 3900074/!e 2128292": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneLetter_10heart/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 10 Heart Date",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_10heart_date/e 2128292/!e 9581348": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_10heart_date/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 14 Heart Part 2",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_14heart_2/O Shane/e 3917584/!e 3917585": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_14heart_2/end"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder - 14 Heart Part 3",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"shane_vanilla_notice_14heart_3/O Shane/e 3917585/!e 3917586": "none/-1000 -1000/farmer -1000 -1000 0/mail shaneVanillaNotice_14heart_3/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_2heart": "嘿，@。^最近在酒吧总能看到你……嗯，我不是在偷看你什么的。$10^只是……有空的话，晚上来坐坐？我有些话想说。^大概6点到11点之间吧，我一般都在那儿。^……算了，你要是忙就算了。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_4heart": "@……^你有空来山区一趟吗？就是悬崖那边。^我有时候早上会在那儿坐坐，看看风景什么的。^6点到中午12点之间吧。^有些事情……我想当面和你说。^……别问是什么事，来了就知道了。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_6heart": "@……^我住院了。^别担心，没什么大事。只是……老毛病。^如果你有空的话，能来看看我吗？^哈维说探视时间是早上8点到下午6点。^……我其实不太想让你看到我现在这样子。但……我还是想见你。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_8heart": "@……^贾斯生病了，我在家照顾她。^玛妮去进货了，家里就我一个人。^如果你有空，能来帮帮忙吗？^我……不太会照顾小孩。^早上8点到晚上8点之间吧，我在家等你。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 10 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_10heart": "@，^如果你明天早上有空的话，能在农场外面等我一下吗？^大概早上6点到6点半之间。我有件事想当面邀请你。^别想太多，不是什么坏事……只是我有点紧张。^ -谢恩 [#]谢恩的邀请"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 14 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_14heart": "@，^明天是周五。如果你有空的话，白天来镇上一趟吧。^我大概早上8点到下午5点之间会在镇上。^有些事我想让你知道……也许你已经注意到了。^ -谢恩 [#]关于明天"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_2heart": "@，^如果你晚上有空，可以去煤矿森林的湖边走走。^晚上8点到午夜之间，谢恩有时会在那里。^也许你们能好好聊聊。^ -提醒 [#]谢恩 2 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_4heart": "@，^你和谢恩已经熟悉一些了。^有空的话去玛妮牧场看看吧，任何时间都可以。^不过最好挑他在家的时候。^ -提醒 [#]谢恩 4 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_6heart": "@，^下雨或暴风雨的时候，可以去煤矿森林看看。^早上9点到晚上8点之间，那里可能会发生重要的事。^ -提醒 [#]谢恩 6 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 6 Heart Followup",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_6heart_followup": "@，^那天之后，谢恩可能会来农场找你。^明早出门时留意一下。^ -提醒 [#]谢恩 6 心后续"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 7 Heart A",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_7heart_a": "@，^谢恩最近好像有些变化。^有空的话去玛妮牧场看看，趁他在家的时候。^ -提醒 [#]谢恩 7 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 7 Heart B",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_7heart_b": "@，^如果天气晴朗，上午10点到下午4点之间去镇上看看吧。^谢恩、克林特和艾米丽可能会在那里拍点东西。^ -提醒 [#]谢恩 7 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_8heart": "@，^如果想更了解谢恩现在重视的东西，可以去玛妮牧场看看。^趁他在家的时候进去，也许会看到特别的一幕。^ -提醒 [#]谢恩 8 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 10 Heart Date",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_10heart_date": "@，^别忘了谢恩的邀请。^下午4点到6点之间去巴士站，他会在那里等你。^ -提醒 [#]谢恩 10 心事件"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 14 Heart Part 2",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_14heart_2": "@，^昨天的事好像还没结束。^今天再去镇上一趟吧，谢恩可能还会出现在那里。^ -提醒 [#]谢恩 14 心事件 二"
+			}
+		},
+		{
+			"LogName": "Shane Vanilla Reminder Content - 14 Heart Part 3",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneVanillaNotice_14heart_3": "@，^还差最后一次确认。^今天再去镇上看看吧，事情应该会有答案。^ -提醒 [#]谢恩 14 心事件 三"
+			}
+		}
+	]
+}

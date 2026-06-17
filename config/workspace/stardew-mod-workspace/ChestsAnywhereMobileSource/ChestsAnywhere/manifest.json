@@ -1,0 +1,10 @@
+﻿{
+    "Name": "Chests Anywhere Mobile",
+    "Author": "Pathoschild; mobile adaptation by libala",
+    "Version": "%ProjectVersion%",
+    "MinimumApiVersion": "4.1.10",
+    "Description": "Mobile-adapted Chests Anywhere with a touch selector and native mobile storage UI.",
+    "UniqueID": "Pathoschild.ChestsAnywhere",
+    "EntryDll": "ChestsAnywhere.dll",
+    "UpdateKeys": []
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "NPC CHAT",
+  "Author": "libala",
+  "Version": "0.3.7",
+  "Description": "Adds a separate API-powered chat window when speaking with NPCs.",
+  "UniqueID": "libala.NpcChat",
+  "EntryDll": "NpcChat.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

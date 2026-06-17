@@ -1,0 +1,55 @@
+{
+	"Format": "2.0.0",
+	"Changes": [
+		{
+			"LogName": "GLS Shane Dialogue",
+			"Action": "Include",
+			"FromFile": "assets/Dialogue/Shane.json"
+		},
+		{
+			"LogName": "GLS NPC Dialogue",
+			"Action": "Include",
+			"FromFile": "assets/Dialogue/NPCs.json"
+		},
+		{
+			"LogName": "10-Heart Events And Letter",
+			"Action": "Include",
+			"FromFile": "assets/Events/10HEC.json"
+		},
+		{
+			"LogName": "14-Heart Events",
+			"Action": "Include",
+			"FromFile": "assets/Events/14HEC.json"
+		},
+		{
+			"LogName": "2-Heart Extension Event",
+			"Action": "Include",
+			"FromFile": "assets/Events/2HEC.json"
+		},
+		{
+			"LogName": "4-Heart Extension Event",
+			"Action": "Include",
+			"FromFile": "assets/Events/4HEC.json"
+		},
+		{
+			"LogName": "6-Heart Extension Event",
+			"Action": "Include",
+			"FromFile": "assets/Events/6HEC.json"
+		},
+		{
+			"LogName": "8-Heart Extension Event",
+			"Action": "Include",
+			"FromFile": "assets/Events/8HEC.json"
+		},
+		{
+			"LogName": "Marriage Events",
+			"Action": "Include",
+			"FromFile": "assets/Events/marriage_events.json"
+		},
+		{
+			"LogName": "Shane Letter Notices",
+			"Action": "Include",
+			"FromFile": "assets/Events/letters.json"
+		}
+	]
+}

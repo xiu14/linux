@@ -1,0 +1,288 @@
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using HarmonyLib;
+using Microsoft.Xna.Framework;
+using StardewModdingAPI.Framework;
+using StardewModdingAPI.Internal;
+using StardewValley.Extensions;
+
+namespace StardewModdingAPI.Mobile;
+
+[HarmonyPatch]
+internal static class AndroidSModHooks
+{
+    static IMonitor Monitor => SCore.Instance.SMAPIMonitor;
+
+    internal static void Init()
+    {
+        AndroidGameLoopManager.RegisterOnGameUpdating(OnGameUpdating_TaskUpdate);
+    }
+
+    internal static bool OnGameUpdating_TaskUpdate(GameTime time)
+    {
+
+#if false
+        //debug only
+        if (SCore.ProcessTicksElapsed % 30 == 0 && queueTaskNeedToStartOnMainThread.IsEmpty is false)
+        {
+            Console.WriteLine();
+            Console.WriteLine("SMod Hook Updating..");
+            Console.WriteLine("task: " + queueTaskNeedToStartOnMainThread.Count);
+            //foreach (var task in tasks)
+            //{
+            //    Console.WriteLine($"status task ID: {task.Id}");
+            //    Console.WriteLine($"  status: {task.Status}");
+            //    Console.WriteLine($"  IsCanceled: {task.IsCanceled}");
+            //    Console.WriteLine($"  IsCompleted: {task.IsCompleted}");
+            //    Console.WriteLine($"  IsCompletedSuccessfully: {task.IsCompletedSuccessfully}");
+            //    Console.WriteLine($"  IsFaulted: {task.IsFaulted}");
+            //}
+        }
+#endif
+
+        bool markSkipGameUpdating = false;
+
+        //process task on main thread
+        //update main thread task
+
+        // millisecond 1000.0 == 1 sec
+        double runTaskOnMainThreadTotalTime = 0;
+        int runTaskOnMainThreadCount = 0;
+        bool isInGame = false;
+        while (queueTaskNeedToStartOnMainThread.TryDequeue(out var task))
+        {
+            bool shouldShowLogTask = task.name is not null;
+            markSkipGameUpdating = true;
+            var stopwatch = Stopwatch.StartNew();
+            //if (shouldShowLogTask)
+            //    Monitor.Log($"Start taskOnMainThread: '{task.name}'");
+
+            task.task.RunSynchronously();
+            stopwatch.Stop();
+            runTaskOnMainThreadCount++;
+            runTaskOnMainThreadTotalTime += stopwatch.Elapsed.TotalMilliseconds;
+            if (shouldShowLogTask)
+            {
+                Monitor.Log($"Done taskOnMainThread: '{task.name}' in {stopwatch.Elapsed.TotalMilliseconds}ms");
+            }
+
+            //debug
+            if (runTaskOnMainThreadTotalTime > 2000)
+            {
+                Monitor.Log($"Warn!!, current task MainThread '{task.name}' " +
+                    $"it's very long time in {runTaskOnMainThreadTotalTime:F3}ms", LogLevel.Warn);
+            }
+
+            //limit run task
+            //maybe 1-2 frame, or 16ms or 32ms
+            if (runTaskOnMainThreadTotalTime > 32)
+            {
+                break;
+            }
+        }
+
+        //process task background thread
+        lock (listTaskOnThreadBackground)
+        {
+            if (listTaskOnThreadBackground.Count > 0)
+            {
+                int removeCount = listTaskOnThreadBackground.RemoveAll(task => task.IsCompleted);
+            }
+            if (listTaskOnThreadBackground.Count > 0)
+            {
+                markSkipGameUpdating = true;
+            }
+        }
+
+        return markSkipGameUpdating;
+    }
+    internal class TaskOnMainThread
+    {
+        public readonly string? name;
+        public readonly Task task;
+        public TaskOnMainThread(Task task, string? name)
+        {
+            this.task = task;
+            this.name = name;
+        }
+    }
+    static List<Task> listTaskOnThreadBackground = new();
+    static ConcurrentQueue<TaskOnMainThread> queueTaskNeedToStartOnMainThread = new();
+
+    internal static Task AddTaskRunOnMainThread(Action callback, string name)
+        => AddTaskRunOnMainThread(new Task(callback), name);
+
+    internal static Task AddTaskRunOnMainThread(Task yourTask, string? taskName)
+    {
+        var taskOnMainThread = new TaskOnMainThread(yourTask, taskName);
+        queueTaskNeedToStartOnMainThread.Enqueue(taskOnMainThread);
+        return yourTask;
+    }
+    internal static Task StartTaskBackground(Action callback, string nameID)
+    {
+        return StartTaskBackground(new Task(callback), nameID);
+    }
+    internal static Task StartTaskBackground(Task gameTask, string nameID)
+    {
+        Monitor.Log($"Try StartTask name: '{nameID}' on Android SModHook");
+        bool ftmSaveCompatStarted = FarmTypeManagerSaveBackupCompat.TryBegin(nameID);
+#if false
+        //debug only
+        Console.WriteLine("Debug try start task background in main thread");
+        var st = Stopwatch.StartNew();
+        gameTask.RunSynchronously();
+        st.Stop();
+        Console.WriteLine($"done task: {nameID} in {st.Elapsed.TotalMilliseconds}ms");
+        return gameTask;
+#endif
+
+        //setup
+        var currentModHookTask = new Task(() =>
+        {
+            try
+            {
+                var st = Stopwatch.StartNew();
+                Monitor.Log($"Starting Task On Background id: '{nameID}'");
+                gameTask.RunSynchronously();
+                st.Stop();
+                Monitor.Log($"Completed Task On Background id: {nameID} in {st.Elapsed.TotalMilliseconds}ms");
+            }
+            catch (Exception ex)
+            {
+                Monitor.Log($"Exception on task id: {nameID}");
+                Monitor.Log($"{ex.GetLogSummary()}");
+            }
+            finally
+            {
+                FarmTypeManagerSaveBackupCompat.QueueEnd(ftmSaveCompatStarted);
+            }
+        });
+
+        //Console.WriteLine("try add new task, current task count: " + listTaskOnThreadBackground.Count);
+        lock (listTaskOnThreadBackground)
+        {
+            listTaskOnThreadBackground.Add(currentModHookTask);
+        }
+
+        //ready
+        currentModHookTask.Start();
+
+        //Console.WriteLine($"End & return StartTask name: '{nameID}', taskIDNumber: {currentModHookTask.Id}");
+        return currentModHookTask;
+    }
+
+}
+
+internal static class FarmTypeManagerSaveBackupCompat
+{
+    private const string FarmTypeManagerId = "Esca.FarmTypeManager";
+    private static readonly BindingFlags InstanceMethodFlags = BindingFlags.Instance | BindingFlags.NonPublic;
+    private static readonly BindingFlags StaticMemberFlags = BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
+
+    private static IMonitor Monitor => SCore.Instance.SMAPIMonitor;
+
+    internal static bool TryBegin(string taskName)
+    {
+        if (!string.Equals(taskName, "Save", StringComparison.OrdinalIgnoreCase))
+            return false;
+
+        try
+        {
+            if (!TryGetFarmTypeManager(out object mod, out Type utilityType))
+                return false;
+
+            if (GetGameIsSaving(utilityType))
+                return false;
+
+            SetGameIsSaving(utilityType, true);
+            try
+            {
+                InvokeFtmMethod(mod, "BeforeMidDaySave");
+                Monitor.Log("FTM SaveBackup compatibility: prepared custom objects before Android save task.");
+                return true;
+            }
+            catch
+            {
+                SetGameIsSaving(utilityType, false);
+                throw;
+            }
+        }
+        catch (Exception ex)
+        {
+            Monitor.Log($"FTM SaveBackup compatibility failed before save: {ex.GetLogSummary()}", LogLevel.Warn);
+            return false;
+        }
+    }
+
+    internal static void QueueEnd(bool started)
+    {
+        if (!started)
+            return;
+
+        AndroidSModHooks.AddTaskRunOnMainThread(End, "FTM save compatibility cleanup");
+    }
+
+    private static void End()
+    {
+        try
+        {
+            if (TryGetFarmTypeManager(out object mod, out Type utilityType))
+            {
+                try
+                {
+                    InvokeFtmMethod(mod, "AfterMidDaySave");
+                    Monitor.Log("FTM SaveBackup compatibility: restored custom objects after Android save task.");
+                }
+                finally
+                {
+                    SetGameIsSaving(utilityType, false);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Monitor.Log($"FTM SaveBackup compatibility failed after save: {ex.GetLogSummary()}", LogLevel.Warn);
+        }
+    }
+
+    private static bool TryGetFarmTypeManager(out object mod, out Type utilityType)
+    {
+        mod = null!;
+        utilityType = null!;
+
+        mod = SCore.Instance.GetModRegistry().Get(FarmTypeManagerId)?.Mod!;
+        if (mod is null)
+            return false;
+
+        utilityType = mod.GetType().GetNestedType("Utility", BindingFlags.NonPublic)!;
+        return utilityType is not null;
+    }
+
+    private static bool GetGameIsSaving(Type utilityType)
+    {
+        var property = utilityType.GetProperty("GameIsSaving", StaticMemberFlags);
+        return property is not null && property.GetValue(null) is true;
+    }
+
+    private static void SetGameIsSaving(Type utilityType, bool value)
+    {
+        utilityType.GetProperty("GameIsSaving", StaticMemberFlags)?.SetValue(null, value);
+    }
+
+    private static void InvokeFtmMethod(object mod, string methodName)
+    {
+        MethodInfo? method = mod.GetType().GetMethod(methodName, InstanceMethodFlags);
+        if (method is null)
+            throw new MissingMethodException(mod.GetType().FullName, methodName);
+
+        method.Invoke(mod, Array.Empty<object>());
+    }
+}
+

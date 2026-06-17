@@ -1,0 +1,12 @@
+{
+  "ApiBaseUrl": "https://newww.koyeb.app/v1",
+  "ApiKey": "sk-aIkDbeTMBw3YaNidyPr48ycl1IX3dGzQW7voDaS8ijNucyLk",
+  "Model": "gemini-3.5-flash",
+  "ButtonText": "聊天",
+  "Language": "zh-CN",
+  "TimeoutSeconds": 45,
+  "Temperature": 0.85,
+  "MaxHistoryMessages": 18,
+  "EnableMemory": true,
+  "EnableSummaries": true
+}

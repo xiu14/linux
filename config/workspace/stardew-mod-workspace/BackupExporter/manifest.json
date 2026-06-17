@@ -1,0 +1,17 @@
+{
+  "Name": "BACKUP EXPORTER",
+  "Author": "libala",
+  "Version": "0.2.1",
+  "Description": "Exports all SMAPI mods and mobile saves, with rotating automatic morning backups.",
+  "UniqueID": "libala.BackupExporter",
+  "EntryDll": "BackupExporter.dll",
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [
+    {
+      "UniqueID": "libala.MobileToolbar",
+      "MinimumVersion": "0.1.1",
+      "IsRequired": true
+    }
+  ],
+  "UpdateKeys": []
+}

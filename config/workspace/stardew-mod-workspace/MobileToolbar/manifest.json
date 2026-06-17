@@ -1,0 +1,10 @@
+{
+  "Name": "MOBILE TOOLBAR",
+  "Author": "libala",
+  "Version": "0.1.7",
+  "Description": "Provides a movable, lockable mobile shortcut bar for compatible mods.",
+  "UniqueID": "libala.MobileToolbar",
+  "EntryDll": "MobileToolbar.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

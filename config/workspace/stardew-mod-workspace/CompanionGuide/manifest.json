@@ -1,0 +1,10 @@
+{
+  "Name": "COMPANION GUIDE",
+  "Author": "libala",
+  "Version": "0.8.9",
+  "Description": "Adds a player-style companion who can chat, teleport with you, and perform selected work nearby.",
+  "UniqueID": "libala.CompanionGuide",
+  "EntryDll": "CompanionGuide.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

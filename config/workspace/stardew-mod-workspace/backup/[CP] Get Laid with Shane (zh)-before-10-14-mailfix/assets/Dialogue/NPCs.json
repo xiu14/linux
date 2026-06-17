@@ -1,0 +1,60 @@
+{
+	"Changes": [
+		{
+			"LogName": "GLS Penny Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Penny",
+			"Entries": {
+				"penny_marriage_blessing": "恭喜你和谢恩结婚了！$1#$b#我从来没想过谢恩会结婚……$3#$b#但他看起来真的很幸福。$1#$b#你一定是他一直在等待的人。$6#$b#%潘妮微笑着看着你，眼神里充满了祝福。",
+				"penny_shane_change": "你有没有注意到谢恩变了？$6#$b#以前他总是阴沉沉的，现在……$1#$b#他会笑了。是真的笑，不是那种敷衍的笑。$3#$b#这一定是你的功劳。$6#$b#%潘妮的眼神里充满了感激。",
+				"penny_shane_sober": "谢恩戒酒了，你知道吗？$6#$b#我前几天在酒吧看到他，他居然在喝果汁！$1#$b#我差点认不出来。$3#$b#%潘妮捂着嘴偷笑。#$b#你一定给了他很大的勇气。$6",
+				"penny_invite": "@，你和谢恩有空吗？$6#$b#我和山姆打算周末去野餐。$1#$b#想邀请你们一起来。$3#$b#谢恩最近心情看起来不错，正好可以一起放松一下。$6#$b#%潘妮期待地看着你。"
+			}
+		},
+		{
+			"LogName": "GLS Lewis Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lewis",
+			"Entries": {
+				"lewis_shane_work": "我得说，谢恩最近工作认真多了。$6#$b#以前他总是迟到早退，现在……$1#$b#他每天准时到岗，还会主动帮忙。$3#$b#%刘易斯摸着胡子，露出了欣慰的笑容。#$b#这一定是你的功劳，@。$6",
+				"lewis_marriage": "看到你和谢恩结婚，我真的很高兴。$6#$b#谢恩这孩子……一直都很孤独。$3#$b#他需要一个能理解他的人。$1#$b#%刘易斯拍了拍你的肩膀。#$b#好好照顾他，@。$6",
+				"lewis_town_change": "你有没有注意到小镇的变化？$6#$b#谢恩最近经常和其他村民打招呼。$1#$b#以前他总是独来独往，现在……$3#$b#%刘易斯看着远处的谢恩，露出了欣慰的笑容。#$b#这个小镇因为有你们而变得更温暖了。$6"
+			}
+		},
+		{
+			"LogName": "GLS Harvey Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries": {
+				"harvey_shane_health": "谢恩最近的体检结果好了很多。$6#$b#他的肝功能指标明显改善。$1#$b#这一定是因为戒酒。$3#$b#%哈维推了推眼镜，露出了欣慰的笑容。#$b#你对他产生了很好的影响，@。$6",
+				"harvey_shane_sober": "我得说，谢恩戒酒的决心让我印象深刻。$6#$b#以前我总是劝他少喝点，他从来不听。$3#$b#但现在……$1#$b#%哈维看着远处的谢恩，露出了欣慰的笑容。#$b#他找到了比酒精更重要的东西。$6",
+				"harvey_advice": "@，我想给你一些建议。$6#$b#谢恩的康复之路还很长。$3#$b#他可能会有反复，但请不要放弃他。$1#$b#%哈维认真地看着你。#$b#有你在身边，他会好起来的。$6"
+			}
+		},
+		{
+			"LogName": "GLS Other NPCs Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",
+			"Entries": {
+				"gus_saloon_change": "嘿，@！$6#$b#你有没有注意到酒吧的变化？$1#$b#谢恩最近经常来，但他只喝果汁。$3#$b#%格斯擦着杯子，脸上带着欣慰的笑容。#$b#他还帮忙收拾桌子，比以前勤快多了。$6#$b#这一定是你的功劳。$1"
+			}
+		},
+		{
+			"LogName": "GLS Marnie Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries": {
+				"marnie_pride": "我得说，我为谢恩感到骄傲。$6#$b#他以前总是让我担心……$3#$b#但现在，他找到了自己的幸福。$1#$b#%玛妮擦了擦眼角的泪水。#$b#谢谢你，@。谢谢你让他重新振作起来。$6"
+			}
+		},
+		{
+			"LogName": "GLS Jas Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jas",
+			"Entries": {
+				"jas_dependency": "谢恩最近心情很好。$6#$b#他以前总是不开心，但现在……$1#$b#他会笑了。$3#$b#%贾斯看着远处的谢恩，露出了天真的笑容。#$b#@先生，谢谢你照顾他。^@小姐，谢谢你照顾他。$6",
+				"jas_play": "@先生，你有空吗？^@小姐，你有空吗？$6#$b#我想和你一起玩。$1#$b#谢恩说你很会玩游戏。$3#$b#%贾斯期待地看着你。#$b#我们可以一起玩吗？$6"
+			}
+		}
+	]
+}

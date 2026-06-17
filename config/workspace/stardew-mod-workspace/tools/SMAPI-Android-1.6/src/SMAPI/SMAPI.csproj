@@ -1,0 +1,133 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-android35.0</TargetFramework>
+    <AssemblyName>StardewModdingAPI</AssemblyName>
+    <RootNamespace>StardewModdingAPI</RootNamespace>
+    <Description>The modding API for Stardew Valley.</Description>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+
+    <!--copy dependency DLLs to bin folder so we can include them in installer bundle -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+    <!-- tiered compilation breaks Harmony -->
+    <TieredCompilation>false</TieredCompilation>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>AnyCPU;ARM64</Platforms>
+    <Configurations>Debug;Release;Android Debug;Android Release</Configurations>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+
+  </PropertyGroup>
+
+  <!--SMAPI Android Build-->
+  <ItemGroup>
+    <Constant Include="SMAPIAndroidBuild.BuildCode" Value="$([System.DateTimeOffset]::Now.ToUnixTimeSeconds())" />
+  </ItemGroup>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_ANDROID</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_ANDROID</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_ANDROID</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android Debug|ARM64'">
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_ANDROID</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_ANDROID</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android Release|ARM64'">
+    <DefineConstants>$(DefineConstants);SMAPI_FOR_ANDROID</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="..\..\build\common.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="DeepCloner" />
+    <PackageReference Include="Lib.Harmony" />
+    <PackageReference Include="Mono.Cecil" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="NVorbis" />
+    <PackageReference Include="Pathoschild.Http.FluentClient" />
+    <PackageReference Include="Pintail" />
+    <PackageReference Include="Platonymous.TMXTile" />
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="StbImageWriteSharp" />
+    <PackageReference Include="System.Reflection.Emit" />
+    <PackageReference Include="TextCopy" />
+    <PackageReference Include="ThisAssembly.Constants">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BmFont">
+      <HintPath>..\DependenciesDll\BmFont.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\DependenciesDll\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\DependenciesDll\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Backports">
+      <HintPath>..\DependenciesDll\MonoMod.Backports.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Core">
+      <HintPath>..\DependenciesDll\MonoMod.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Iced">
+      <HintPath>..\DependenciesDll\MonoMod.Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.ILHelpers">
+      <HintPath>..\DependenciesDll\MonoMod.ILHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\DependenciesDll\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\DependenciesDll\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewValley">
+      <HintPath>..\DependenciesDll\StardewValley.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewValley.GameData">
+      <HintPath>..\DependenciesDll\StardewValley.GameData.dll</HintPath>
+    </Reference>
+    <Reference Include="xTile">
+      <HintPath>..\DependenciesDll\xTile.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SMAPI.Toolkit.CoreInterfaces\SMAPI.Toolkit.CoreInterfaces.csproj" />
+    <ProjectReference Include="..\SMAPI.Toolkit\SMAPI.Toolkit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SMAPI.config.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\SMAPI.Web\wwwroot\SMAPI.blacklist.json" Link="SMAPI.blacklist.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\SMAPI.Web\wwwroot\SMAPI.metadata.json" Link="SMAPI.metadata.json" CopyToOutputDirectory="PreserveNewest" />
+
+    <None Update="i18n\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="steam_appid.txt" CopyToOutputDirectory="PreserveNewest" />
+
+    <Compile Include="..\SMAPI.Toolkit\Framework\LowLevelEnvironmentUtility.cs" Link="Framework\Utilities\LowLevelEnvironmentUtility.cs" />
+
+    <!-- app icon on Linux/macOS, and for some Windows users -->
+    <EmbeddedResource Include="Icon.bmp" LogicalName="Icon.bmp" />
+  </ItemGroup>
+
+  <Import Project="..\SMAPI.Internal\SMAPI.Internal.projitems" Label="Shared" />
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call &quot;$(ProjectDir)post-build.cmd&quot; || exit /b 0" />
+  </Target>
+</Project>

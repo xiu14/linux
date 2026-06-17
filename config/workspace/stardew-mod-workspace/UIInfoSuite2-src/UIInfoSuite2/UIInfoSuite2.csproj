@@ -1,0 +1,87 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>2.3.7-mobile.4</Version>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ModZipPath>$(SolutionDir)\Releases</ModZipPath>
+    <EnableHarmony>true</EnableHarmony>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <TranslationClassBuilder_AddGetByKey>true</TranslationClassBuilder_AddGetByKey>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+
+    <ModZipPath>$(SolutionDir)\DebugBuilds</ModZipPath>
+  </PropertyGroup>
+
+  <ItemGroup Label="ExplicitCompileItems">
+    <Compile Include="AdditionalFeatures/SkipIntro.cs" />
+    <Compile Include="Compatibility/ApiManager.cs" />
+    <Compile Include="Compatibility/CustomBush/CustomBushExtensions.cs" />
+    <Compile Include="Compatibility/CustomBush/ICustomBush.cs" />
+    <Compile Include="Compatibility/CustomBush/ICustomBushApi.cs" />
+    <Compile Include="Compatibility/CustomBush/ICustomBushDrop.cs" />
+    <Compile Include="Compatibility/ExperienceBar.cs" />
+    <Compile Include="Compatibility/IGenericModConfigMenuApi.cs" />
+    <Compile Include="Compatibility/ILevelExtender.cs" />
+    <Compile Include="Compatibility/IMobileToolbarApi.cs" />
+    <Compile Include="Infrastructure/Extensions/CollectionExtensions.cs" />
+    <Compile Include="Infrastructure/Extensions/ColorExtensions.cs" />
+    <Compile Include="Infrastructure/Extensions/ObjectExtensions.cs" />
+    <Compile Include="Infrastructure/Extensions/StringExtensions.cs" />
+    <Compile Include="Infrastructure/Helpers/BundleHelper.cs" />
+    <Compile Include="Infrastructure/Helpers/DropsHelper.cs" />
+    <Compile Include="Infrastructure/Helpers/MachineHelper.cs" />
+    <Compile Include="Infrastructure/IconHandler.cs" />
+    <Compile Include="Infrastructure/MobileTapTooltip.cs" />
+    <Compile Include="Infrastructure/Reflection.cs" />
+    <Compile Include="Infrastructure/SoundHelper.cs" />
+    <Compile Include="Infrastructure/Structures/DataCache.cs" />
+    <Compile Include="Infrastructure/Tools.cs" />
+    <Compile Include="ModEntry.cs" />
+    <Compile Include="Options/MobileUiInfoMenu.cs" />
+    <Compile Include="Options/ModConfig.cs" />
+    <Compile Include="Options/ModOptions.cs" />
+    <Compile Include="Options/ModOptionsCheckbox.cs" />
+    <Compile Include="Options/ModOptionsElement.cs" />
+    <Compile Include="Options/ModOptionsPage.cs" />
+    <Compile Include="Options/ModOptionsPageButton.cs" />
+    <Compile Include="Options/ModOptionsPageHandler.cs" />
+    <Compile Include="Options/ModOptionsPageIcon.cs" />
+    <Compile Include="UIElements/ExperienceBar.cs" />
+    <Compile Include="UIElements/ExperienceElements/DisplayedExperienceBar.cs" />
+    <Compile Include="UIElements/ExperienceElements/DisplayedExperienceValue.cs" />
+    <Compile Include="UIElements/ExperienceElements/DisplayedLevelUpMessage.cs" />
+    <Compile Include="UIElements/LocationOfTownsfolk.cs" />
+    <Compile Include="UIElements/LuckOfDay.cs" />
+    <Compile Include="UIElements/MobileBillboardLongPress.cs" />
+    <Compile Include="UIElements/ShopHarvestPrices.cs" />
+    <Compile Include="UIElements/ShowAccurateHearts.cs" />
+    <Compile Include="UIElements/ShowBirthdayIcon.cs" />
+    <Compile Include="UIElements/ShowCalendarAndBillboardOnGameMenuButton.cs" />
+    <Compile Include="UIElements/ShowCropAndBarrelTime.cs" />
+    <Compile Include="UIElements/ShowItemEffectRanges.cs" />
+    <Compile Include="UIElements/ShowItemHoverInformation.cs" />
+    <Compile Include="UIElements/ShowQueenOfSauceIcon.cs" />
+    <Compile Include="UIElements/ShowRainyDayIcon.cs" />
+    <Compile Include="UIElements/ShowRobinBuildingStatusIcon.cs" />
+    <Compile Include="UIElements/ShowSeasonalBerry.cs" />
+    <Compile Include="UIElements/ShowTodaysGifts.cs" />
+    <Compile Include="UIElements/ShowToolUpgradeStatus.cs" />
+    <Compile Include="UIElements/ShowTravelingMerchant.cs" />
+    <Compile Include="UIElements/ShowWhenAnimalNeedsPet.cs" />
+    <Compile Include="UIElements/UIElementUtils.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.2" />
+    <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.2.0" />
+  </ItemGroup>
+
+  <Import Project="UIInfoSuite2.csproj.local" Condition="Exists('UIInfoSuite2.csproj.local')"/>
+</Project>

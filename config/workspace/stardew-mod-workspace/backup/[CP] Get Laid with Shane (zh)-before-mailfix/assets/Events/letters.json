@@ -1,0 +1,68 @@
+{
+	"Changes": [
+		{
+			"LogName": "Shane Letter Trigger - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_2heart/f Shane 450": "pause 500/mail shaneLetter_2heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_4heart/f Shane 1250/e 2heart_ext_001": "pause 500/mail shaneLetter_4heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_6heart/f Shane 2250/e 4heart_ext_001": "pause 500/mail shaneLetter_6heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_8heart/f Shane 3250/e 6heart_ext_001": "pause 500/mail shaneLetter_8heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_2heart": "嘿，@。^最近在酒吧总能看到你……嗯，我不是在偷看你什么的。$10^只是……有空的话，晚上来坐坐？我有些话想说。^大概6点到11点之间吧，我一般都在那儿。^……算了，你要是忙就算了。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_4heart": "@……^你有空来山区一趟吗？就是悬崖那边。^我有时候早上会在那儿坐坐，看看风景什么的。^6点到中午12点之间吧。^有些事情……我想当面和你说。^……别问是什么事，来了就知道了。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_6heart": "@……^我住院了。^别担心，没什么大事。只是……老毛病。^如果你有空的话，能来看看我吗？^哈维说探视时间是早上8点到下午6点。^……我其实不太想让你看到我现在这样子。但……我还是想见你。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_8heart": "@……^贾斯生病了，我在家照顾她。^玛妮去进货了，家里就我一个人。^如果你有空，能来帮帮忙吗？^我……不太会照顾小孩。^早上8点到晚上8点之间吧，我在家等你。^ -谢恩 [#]关于谢恩"
+			}
+		}
+	]
+}

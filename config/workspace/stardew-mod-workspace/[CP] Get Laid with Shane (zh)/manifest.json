@@ -1,0 +1,13 @@
+{
+	"Name": "Get Laid with Shane",
+	"Author": "elffunction",
+	"Version": "2.1.6",
+	"Description": "[NSFW] Brings changes to Shane heart events, letters and dialogue. Chinese mobile same-day mail-reminder build.",
+	"UniqueID": "elffunction.GetLaidwithShane",
+	"UpdateKeys": [
+		"Nexus:17464"
+	],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	}
+}

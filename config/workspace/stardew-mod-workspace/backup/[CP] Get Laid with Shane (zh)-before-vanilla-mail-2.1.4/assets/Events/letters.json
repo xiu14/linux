@@ -1,0 +1,100 @@
+{
+	"Changes": [
+		{
+			"LogName": "Shane Letter Trigger - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_2heart/e 66/f Shane 500": "pause 500/addMailForTomorrow shaneLetter_2heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_4heart/e 102/f Shane 1500/e 2heart_ext_001": "pause 500/addMailForTomorrow shaneLetter_4heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_6heart/e 523/f Shane 2500/e 4heart_ext_001": "pause 500/addMailForTomorrow shaneLetter_6heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				"farm_letter_8heart/e 524/f Shane 3500/e 6heart_ext_001": "pause 500/addMailForTomorrow shaneLetter_8heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 10 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farmhouse_letter_10heart/e 3900074/e 8heart_ext_001/f Shane 2500/D Shane": "pause 500/addMailForTomorrow shaneLetter_10heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Trigger - 14 Heart",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Entries": {
+				"farmhouse_letter_14heart/f Shane 3500/O Shane/d Thu": "pause 500/addMailForTomorrow shaneLetter_14heart/pause 500/end"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 2 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_2heart": "嘿，@。^最近在酒吧总能看到你……嗯，我不是在偷看你什么的。$10^只是……有空的话，晚上来坐坐？我有些话想说。^大概6点到11点之间吧，我一般都在那儿。^……算了，你要是忙就算了。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 4 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_4heart": "@……^你有空来山区一趟吗？就是悬崖那边。^我有时候早上会在那儿坐坐，看看风景什么的。^6点到中午12点之间吧。^有些事情……我想当面和你说。^……别问是什么事，来了就知道了。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 6 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_6heart": "@……^我住院了。^别担心，没什么大事。只是……老毛病。^如果你有空的话，能来看看我吗？^哈维说探视时间是早上8点到下午6点。^……我其实不太想让你看到我现在这样子。但……我还是想见你。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 8 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_8heart": "@……^贾斯生病了，我在家照顾她。^玛妮去进货了，家里就我一个人。^如果你有空，能来帮帮忙吗？^我……不太会照顾小孩。^早上8点到晚上8点之间吧，我在家等你。^ -谢恩 [#]关于谢恩"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 10 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_10heart": "@，^如果你明天早上有空的话，能在农场外面等我一下吗？^大概早上6点到6点半之间。我有件事想当面邀请你。^别想太多，不是什么坏事……只是我有点紧张。^ -谢恩 [#]谢恩的邀请"
+			}
+		},
+		{
+			"LogName": "Shane Letter Content - 14 Heart",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"shaneLetter_14heart": "@，^明天是周五。如果你有空的话，白天来镇上一趟吧。^我大概早上8点到下午5点之间会在镇上。^有些事我想让你知道……也许你已经注意到了。^ -谢恩 [#]关于明天"
+			}
+		}
+	]
+}

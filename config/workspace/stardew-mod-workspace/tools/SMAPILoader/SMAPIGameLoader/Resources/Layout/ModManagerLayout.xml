@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+    >
+        <TextView
+            android:gravity="center"
+            android:id="@+id/foundModsText"
+            android:textSize="20sp"
+            android:text="已安装 MOD："
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/modsListViews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="2dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="12dp">
+        <Button
+            android:id="@+id/InstallModBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="导入 MOD"
+            android:layout_weight="1"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/OpenFolderModsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="打开 MOD 目录"
+            android:layout_weight="1"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
